@@ -66,3 +66,51 @@ for i in similarity.argsort(descending = True)[0]:
 
 ## When some annotated data is available
 
+이러한 technique은 제한된 양의 레이블데이터를 사용할때(FSL)나 오직 subset of class 데이터셋을 가지고 있을때(전통적인 ZSL) 유연하며 쉽게 적용시킬 수 있습니다. 
+
+## Classification as NLI
+
+문장은 embedding하거나 같은 latent 공간에 레이블하는 경우뿐만 아니라 2개의 분명한 문장의 호환성에 대해서도 다룰 수 있습니다. *NLI* 2개의 문장이 존재합니다. `premise` 와 `hypothesis`가 그것입니다. 이 task는 가설이 참인지 거짓인지 주어진 premise를 통해 결정하는 task라 할 수 있습니다.
+
+![KorNLI](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbygAHU%2FbtqGdAgd8dc%2FdXUblrTecDNUnu0PaFRah0%2Fimg.png)
+
+BERT와 같은 transformer 구조를 사용할때 NLI 데이터셋은 전형적으로 `sequence-pair classification`을 통해 모델링 되어집니다. 즉, 우리는 모델을 통해 전제와 가설을 함께 별개의 세그먼트로 제공하고 [반복, 중립, 수반] 중 하나를 예측하는 classification head를 학습합니다.
+
+[Yin et al. (2019)](https://arxiv.org/abs/1909.00161)에서 제안된 접근법은 사전학습된 MNLI sequence-pair classifier(Zero-shot text classifier)를 사용합니다. 이 아이디어는 우리가 관심있는 순서를 `premise`로 표시하고 각 후보 레이블을 `hypothesis`로 바꾸는 것입니다. 만약 NLI 모델이 premise가 hypothesis를 `entailment`로 예측했다면 우린 true 레이블을 얻을것입니다. 
+
+아래 코드는 🤗Huggingface Transformer로 구현한 예제 소스코드입니다.
+
+```python
+
+from transformers import BartForSequenceClassification, BartTokenizer
+
+tokenizer = BartTokenizer.from_pretrained('facebook/bart-large-mnli')
+model = BartForSequenceClassification.from_pretrained('facebook/bart-large-mnli')
+
+# NLI dataset
+premise = 'Who are you voting for in 2020?'
+hypothesis = 'This text is about politics.'
+
+input_ids = tokenizer.encode(premise, hypothesis, return_tensors = 'pt')
+logits = model(input_ids)[0] ## [entailment, netrual, contradiction]
+
+entail_contradiction_logits = logits[:, [0, 2]] ## [entailment, contradiction]
+probs = entail_contradiction_logits.softmax(dim = 1)
+true_prob = prob[:, 1].item() * 100
+
+print(f'레이블이 참일 확률: {true_prob:0.2f}%')
+
+# 결과
+레이블이 참일 확률: 98.08%
+
+```
+
+
+저자는 논문에서 BERT의 가장 작은 버젼을 사용하여 MNLI(Multi-Genre NLI) 코퍼스를 통해 파인튜닝 했다고 밝혔습니다. 더 크고 더 최근의 MNLI으로 사전학습한 Bart model을 간단하게 사용함으로써 우린 괜찮은 성능을 뽑아냈습니다.
+
+
+## When some annotated data is available
+
+파인튜닝 모델로 적은 수의 레이블 데이터를 다루게되면 효율이 낮기에 Few-shot 셋팅에는 적절하지 않습니다. 그러나 제한된 수의 class를 통한 데이터를 위한 전통적인 zero-shot 셋팅은 예외입니다. 트레이닝은 sequence를 통과함으로써 완성될 수 있습니다. 모델을 총 2번 지나는데 한 번은 정상적인 label을 또 한 번은 무작위로 선택되어진 비정상적인 레이블을 통과합니다.
+
+파인튜닝 후에 발생하는 한 가지 문제는 모델이 보지 못한 레이블보다 레이블에 대해 훨씬 더 높은 확률을 예측한다는 것입니다. 이러한 이슈를 완화시키기위해 저자는 학습떄 보여지는 레이블들에 대해 un-reward하는 방식의 절차를 소개하였습니다. 

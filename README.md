@@ -94,7 +94,7 @@ I will respect your crucial support and say THANK YOU!
 - Media (Youtube, Spotify, etc.) support using [Jekyll Spaceship][jekyll-spaceship] gem.
 - Diagram (PlantUML, Mermaid) support using [Jekyll Spaceship][jekyll-spaceship] gem.
 - Google Translation support.
-- New post tag support.
+- New post tag support..
 
 Also, visit the [Live Demo][yat-live-demo] site for the theme.
 

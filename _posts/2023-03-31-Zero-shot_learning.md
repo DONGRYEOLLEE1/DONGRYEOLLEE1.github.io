@@ -78,7 +78,7 @@ BERT와 같은 transformer 구조를 사용할때 NLI 데이터셋은 전형적�
 
 [Yin et al. (2019)](https://arxiv.org/abs/1909.00161)에서 제안된 접근법은 사전학습된 MNLI sequence-pair classifier(Zero-shot text classifier)를 사용합니다. 이 아이디어는 우리가 관심있는 순서를 `premise`로 표시하고 각 후보 레이블을 `hypothesis`로 바꾸는 것입니다. 만약 NLI 모델이 premise가 hypothesis를 `entailment`로 예측했다면 우린 true 레이블을 얻을것입니다. 
 
-아래 코드는 🤗Huggingface Transformer로 구현한 예제 소스코드입니다.
+아래 코드는 🤗Huggingface로 구현한 예제 소스코드입니다.
 
 ```python
 

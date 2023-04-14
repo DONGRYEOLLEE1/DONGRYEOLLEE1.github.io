@@ -256,6 +256,76 @@ def train(
             optimizer.step()
 ```
 
+### Single GPU 환경에서 offloadmodel 사용
+
+`fairscale.experimental.nn.offload.OffloadModel` API는 사용자들이 제한된 GPU resource로 큰 모델을 학습하는것을 가능케함으로써 엄청난 양의 분산 학습을 가능케합니다. `OffloadModel` API는 주어진 모델을 wrap하고 거의 동등하게 shard 합니다. 각각 분산된 모델은 CPU에서 GPU로 forward pass를 통해 복사되어집니다. 그러고나서 다시 역으로 복사되어집니다. 이와 같은 과정은 backward pass동안 반복되어집니다. 또한 `OffloadModel`은 `mixed 정확도 학습`과 메모리를 줄이기 위한 `활성화함수 checkpointing`, 처리량을 줄이기 위한 `초정밀 batches`들을 지원합니다.
+
+`torch.nn.Sequential` 모델에서 작동 가능합니다.
+
+```python
+from torch.utils.data.dataloader import DataLoader
+from torchvision.datasets import FakeData
+from torchvision.transforms import ToTensor
+
+from fairscale.experimental.nn.offload import OffloadModel
+
+um_inputs = 8
+num_outputs = 8
+num_hidden =  4
+num_layers =  2
+batch_size =  8
+
+transform = ToTensor()
+dataloader = DataLoader(
+    FakeData(
+        image_size=(1, num_inputs, num_inputs),
+        num_classes=num_outputs,
+        transform=transform,
+    ),
+    batch_size=batch_size,
+)
+
+model = torch.nn.Sequential(
+    torch.nn.Linear(num_inputs * num_inputs, num_hidden),
+    *([torch.nn.Linear(num_hidden, num_hidden) for _ in range(num_layers)]),
+    torch.nn.Linear(num_hidden, num_outputs),
+)
+```
+
+`OffloadModel` API를 사용하기위해 model을 감싸줘야함. forward / backward pass 연산을 위해 원하는 device를 명시해줘야함. `OffloadModel`에 sharding할 숫자를 설정해줄 수 있음. 여기선 3으로 설정. 활성화함수 체크포인팅의 디폴트 값은 off고 microbatches 값은 1임.
+
+```python
+offload_model = OffloadModel(
+    model=model,
+    device=torch.device("cuda"),
+    offload_device=torch.device("cpu"),
+    num_slices=3,
+    checkpoint_activation=True,
+    num_microbatches=1,
+)
+
+torch.cuda.set_device(0)
+device = torch.device("cuda")
+
+criterion = torch.nn.CrossEntropyLoss()
+optimizer = torch.optim.SGD(offload_model.parameters(), lr=0.001)
+
+# To train 1 epoch.
+offload_model.train()
+for batch_inputs, batch_outputs in dataloader:
+    batch_inputs, batch_outputs = batch_inputs.to("cuda"), batch_outputs.to("cuda")
+    start = time.time_ns()
+    optimizer.zero_grad()
+    inputs = batch_inputs.reshape(-1, num_inputs * num_inputs)
+    with torch.cuda.amp.autocast():
+        output = offload_model(inputs)
+        loss = criterion(output, target=batch_outputs)
+        loss.backward()
+    optimizer.step()
+```
+
+이 외에도 메모리 cost effencienty를 위해 `fairscale.nn.checkpoint_activations.checkpoint_wrapper`, `fairscale.optim.adascale.AdaScale`, `fairscale.nn.Pipe` 등과 같은 방법이 있음.
+
 
 ## Reference
 - [FairScaleDocumentation](https://fairscale.readthedocs.io/en/latest/)

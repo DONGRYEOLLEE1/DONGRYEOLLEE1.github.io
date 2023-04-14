@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DL Framework - GPU Training
+title: Training for DeepSpeed and FairScale
 subtitle: DeepSpeed & FairScale
 tags: [FairScale, DeepSpeed, Finetuning]
 categories: Finetuning

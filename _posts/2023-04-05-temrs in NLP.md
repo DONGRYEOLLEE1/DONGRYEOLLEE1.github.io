@@ -49,3 +49,13 @@ comments: true
 
 ![ex](https://hryang06.github.io/assets/images/post/nlp/nlu-ex.png)
 출처 : [https://hryang06.github.io/nlp/NLP/#nlpnatural-language-processing-%EC%9E%90%EC%97%B0%EC%96%B4-%EC%B2%98%EB%A6%AC](https://hryang06.github.io/nlp/NLP/#nlpnatural-language-processing-%EC%9E%90%EC%97%B0%EC%96%B4-%EC%B2%98%EB%A6%AC)
+
+
+## Perplexity 
+
+- **외부 평가보다 조금 부정확할 수는 있어도 테스트 데이터에 대해서 빠르게 식으로 계산되는 더 간단한 평가 방법**
+- 모델 내에서 자신의 성능을 수치화하여 결과를 내놓는 내부 평가에 해당되는 것
+- 언어 모델을 평가하기 위한 내부 평가지표 (헷갈리는 정도)
+- Lower Better
+- PPL은 선택할 수 있는 가능한 경우의 수를 의미하는 분기계수(branching factor)
+- PPL의 값이 낮으면 높은 정확도를 보이는 것이지 사람이 직접 느끼기에 좋은 언어 모델이라는 것을 의미하진 않음

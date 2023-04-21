@@ -17,7 +17,7 @@ comments: true
 
 ![figure2](/img/cot/ex1.png)
 
-전통적인 ![FSL](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://proceedings.neurips.cc/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf)은 추론 능력에서 형편없는 결과를 내놓았고 종종 모델 scale을 늘렸음에도 불구하고 성능이 올라가지 않았음. 이에 연구진은 위의 2가지 아이디어를 통해 그들의 한계점을 타파한 해결책을 제시하고 특히 추론 능력 task에서의 Few-shot prompting 능력에 대해 발견하고 prommpt를 `input`, `CoT`, `output` 총 3가지 요소로 구성하였음. 위는 그 예시임.
+전통적인 [FSL](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://proceedings.neurips.cc/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf)은 추론 능력에서 형편없는 결과를 내놓았고 종종 모델 scale을 늘렸음에도 불구하고 성능이 올라가지 않았음. 이에 연구진은 위의 2가지 아이디어를 통해 그들의 한계점을 타파한 해결책을 제시하고 특히 추론 능력 task에서의 Few-shot prompting 능력에 대해 발견하고 prommpt를 `input`, `CoT`, `output` 총 3가지 요소로 구성하였음. 위는 그 예시임.
 
 ![figure2](/img/cot/figure2.png)
 

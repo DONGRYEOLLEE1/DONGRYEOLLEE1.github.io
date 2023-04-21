@@ -15,11 +15,11 @@ comments: true
 1. 산술적 추론 기술은 자연어 생성의 이점을 누릴 수 있다. 근거를 생성하는 데 도움이 될 수 있다. 
 2. LLM은 prompting을 통해 in-context FSL의 흥미로운 전망을 제공한다. 매 다른 task를 위한 model checkpoint (FT) 대신에 단조로운 prompt를 모델에 질의할 수 있음. 놀랍게도 단순한 QA task에서 성공적적인 실험을 거뒀음.
 
-![figure2](../img/cot/ex1.png)
+![figure2](./img/cot/ex1.png)
 
 전통적인 ![FSL](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://proceedings.neurips.cc/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf)은 추론 능력에서 형편없는 결과를 내놓았고 종종 모델 scale을 늘렸음에도 불구하고 성능이 올라가지 않았음. 이에 연구진은 위의 2가지 아이디어를 통해 그들의 한계점을 타파한 해결책을 제시하고 특히 추론 능력 task에서의 Few-shot prompting 능력에 대해 발견하고 prommpt를 `input`, `CoT`, `output` 총 3가지 요소로 구성하였음. 위는 그 예시임.
 
-![figure2](../img/cot/figure2.png)
+![figure2](./img/cot/figure2.png)
 
 arithmetic, commonsense, symbolic reasoning 총 3개의 benchmark에서 평가하였음. GSM8K benchmark 환경에서 PaLM 540B 모델을 사용한 결과 새로운 SOTA performance를 달성하였음. 이 prompting 능력의 접근법이 중요한 이유는 새로운 큰 데이터셋과 큰 모델의 checkpoint 없이 많은 task에서 자랑할만한 성능을 뽑아줌에 있음. 
 

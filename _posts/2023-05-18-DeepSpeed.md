@@ -13,14 +13,23 @@ DeepSpeed를 통한 FT 구동중, 직면한 여러가지 오류에 대해 기술
 
 # Env
 ubuntu 22.04
+
 python3.10.6
+
 cuda 11.8
+
 pytorch 2.0.1+cu118
+
 transformers 4.28.1
+
 accelerate 0.19.0
+
 sentencepiece 0.1.99
+
 tokenizers 0.13.3
+
 ninja 1.11.1
+
 deepspeed 0.9.2
 
 
@@ -78,7 +87,7 @@ fused_adam/fused_adam.so: cannot open shared object file: No such file or direct
 - 내 문제는 CUDA 버젼 문제였음 >> 환경변수 설정 안해줬었음...😥
 - 또한 스오택에서 확인 결과, 두 가지 원인으로 조사되었음
   - ninja 패키지 설치 문제
-    - https://github.com/zhanghang1989/PyTorch-Encoding/issues/167
+    - [https://github.com/zhanghang1989/PyTorch-Encoding/issues/167](https://github.com/zhanghang1989/PyTorch-Encoding/issues/167)
   - CUDA 버젼 오류 
     - issue 제기한 유저의 cuda 버젼 11.6 -> 11.5 re-version하니까 오류 안나왔다고 함
 
@@ -95,6 +104,3 @@ export LD_LIBRARY_PATH="/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH"
 ```python
 source ~/.bashrc
 ```
-
-
-## 4️⃣

@@ -66,9 +66,9 @@ tokenizer.pad_token_id = (
 
 ## Ref.
 
-[tloen/alpaca-lora](https://github.com/Beomi/KoAlpaca/issues/42)
-[peft Issue #40](https://github.com/huggingface/peft/issues/40)
-[tloen/alpaca-lora Issue #251](https://github.com/tloen/alpaca-lora/issues/251)
-[아카라이브 AI언어모델](https://arca.live/b/alpaca/75354696/361828881#c_361828881)
+- [tloen/alpaca-lora](https://github.com/Beomi/KoAlpaca/issues/42)
+- [peft Issue #40](https://github.com/huggingface/peft/issues/40)
+- [tloen/alpaca-lora Issue #251](https://github.com/tloen/alpaca-lora/issues/251)
+- [아카라이브 AI언어모델](https://arca.live/b/alpaca/75354696/361828881#c_361828881)
 
 

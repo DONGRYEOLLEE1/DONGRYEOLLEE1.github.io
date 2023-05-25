@@ -64,11 +64,21 @@ tokenizer.pad_token_id = (
 > GPT-NeoX tokenizer의 pad_token_id는 2로 설정되어있는데 무시해도 될까?
 > 학습 후, 모델의 성능을 보고 추후에 수정해야 될 듯
 
+- 3️⃣
+`adapter_model.bin` 파일의 용량이 443kb로 저장되었고 해당 이슈 조사 결과, peft의 버젼 문제로 인한 버그가 생긴듯함
+
+```python
+!pip install -q git+https://github.com/huggingface/peft.git@e536616888d51b453ed354a6f1e243fecb02ea08
+```
+
+[Issue #317 참고](https://github.com/huggingface/peft/issues/317)
+
 ## Ref.
 
 - [tloen/alpaca-lora](https://github.com/Beomi/KoAlpaca/issues/42)
 - [peft Issue #40](https://github.com/huggingface/peft/issues/40)
 - [tloen/alpaca-lora Issue #251](https://github.com/tloen/alpaca-lora/issues/251)
 - [아카라이브 AI언어모델](https://arca.live/b/alpaca/75354696/361828881#c_361828881)
+- [빵형의 개발도상국 - Alpaca LoRA 파인튜닝](https://www.youtube.com/watch?v=aUXwVp4eUH4&ab_channel=%EB%B9%B5%ED%98%95%EC%9D%98%EA%B0%9C%EB%B0%9C%EB%8F%84%EC%83%81%EA%B5%AD)
 
 

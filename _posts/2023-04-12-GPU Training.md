@@ -8,7 +8,6 @@ use_math: true
 comments: true
 ---
 
-LLaMA는 `Fairscale`, GPT 계열은 `Deepspeed`를 통해 학습을 진행할 수 있음
 
 ## DeepSpeed
 

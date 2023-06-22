@@ -90,7 +90,7 @@ Table 1에 EfficientNet-B0의 구조가 나타나있고 main building block은 M
 - STEP1:
     - $\phi == 1$, $\alpha = 1.2$, $\beta = 1.1$, $\gamma = 1.15$, 각각의 squared 값이 2가 안넘게!
 - STEP2:
-  - $\alpha$, $\beta$, $\gamma$ 값을 고정하고 Equation 3을 적용해 다른 $\phi$ 값과 함께 베이스라인 network를 scal up 하였음
+  - $\alpha$, $\beta$, $\gamma$ 값을 고정하고 Equation 3을 적용해 다른 $\phi$ 값과 함께 베이스라인 network를 scale up 하였음
 
 
 ## Experiments

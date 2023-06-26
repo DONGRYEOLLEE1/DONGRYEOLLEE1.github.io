@@ -125,3 +125,45 @@ mainly three types of regularizations
 
 ## Main Results
 
+![table7](/img/efficientv2/table7.png)
+
+![figure5](/img/efficientv2/figure5.png)
+
+성능에 대한 내용으로 생략
+
+## Ablation Studies
+
+### Comparison to EfficientNet
+
+![table10](/img/efficientv2/table10.png)
+
+Progressive learning을 EfficientNet에 적용한 결과, 학습 속도와 정확도가 과거 연구했을 때보다 더 향상되었음. 그러나 V2 모델 만큼은 아니었음. V2모델은 전 모델에 비해 파라미터가 17% 줄었음에도 불구하고 FLOPs는 37% 더 낮았고 학습 속도는 4.1배 빨랐으며 추론 속도는 4.1배 더 빨랐음. 
+
+**Scaling Down** : 대개 큰 scale을 가지는 모델에 대해 집중하였음. 규모를 줄인 EfficientNetV2을 더 작은 모델과 비교해보자. 쉬운 비교를 위해, 모든 모델들은 progressive learning없이 학습되어졌음. 
+
+![table11](/img/efficientv2/table11.png)
+
+### Progressive Learning for Different Networks
+
+![table12](/img/efficientv2/table12.png)
+
+다른 네트워크 에서도 ablation study를 진행하였음. 위 결과는 baseline model과 ResNet을 비교한 결과임. 그 결과 학습시간에서 뚜렷한 차이를 보였으며 모델의 정확도 또한 소폭 증가하였음을 확인할 수 있다. 또한 더 확장성과 모델의 정확도를 위해 이미지 사이즈를 224에서 380으로 증가시켜 연구를 진행하였음. 
+
+### Importance of Adaptive Regularization
+
+![table13](/img/efficientv2/table13.png)
+
+본 연구의 main insight는 Adaptive Regularization으로 이는 급격하게 이미지 사이즈 규격을 조정하는 방법. 본 논문에선 간결함을 위해 단순한 progressive approach을 사용하였지만 다른 접근법과도 결합할 수 있는 일반적인 방법을 사용할 수도 있음. 
+
+2가지 셋팅을 통해 Adaptive Regularization울 연구하였음.
+1. 이미지 사이즈를 점진적으로 증가
+2. 각각의 배치에서 다른 이미지 사이즈를 가진 데이터를 무작위하게 샘플링
+
+![figure6](/img/efficientv2/figure6.png)
+
+
+## 의의
+
+1. Regularization을 통해 모델 성능 향상. 더불어서 모델링 관점에서 구조의 변화를 시도
+2. 적은 파라미터를 가짐에도 가공할만한 성능을 뽑아냄
+3. 새로운 backbon 모델을 ideation 해냈음

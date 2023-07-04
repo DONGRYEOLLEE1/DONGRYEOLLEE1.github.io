@@ -3,7 +3,7 @@ layout: post
 title: SwinTransformer
 subtitle: SwinTransformer
 tags: [SwinTransformer, Transformer, Computer Vision]
-categories: ComputerVision
+categories: CV
 use_math: true
 comments: true
 ---

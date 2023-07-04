@@ -2,7 +2,7 @@
 layout: post
 title: Faster R-CNN
 tags: [Faster R-CNN, Object Detection]
-categories: ComputerVision
+categories: CV
 use_math: true
 comments: true
 ---

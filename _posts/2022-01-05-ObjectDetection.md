@@ -2,7 +2,7 @@
 layout: post
 title: The idea you need to understand about the Object Detection Model
 tags: [Backbone, CNN, Sliding Window, Region Proposal, RPN, RoI Pooling, end-to-end, Anchor Box, CSPNet, Selective Search]
-categories: ComputerVision
+categories: CV
 use_math: true
 comments: true
 ---

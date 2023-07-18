@@ -12,12 +12,14 @@ published: true
 # Docker
 
 - 컨테이너 확인
-```docker 
+
+```
 $ docker ps -a
 ```
 
 - 컨테이너 제거
-```docker
+
+```
 $ docker stop <container ID> 또는
 $ docker rm <container ID>  또는
 
@@ -34,7 +36,7 @@ $ docker container prune
 }
 ```
 
-```docker
+```
 $ docker info
 ```
 

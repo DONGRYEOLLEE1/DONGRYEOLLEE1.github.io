@@ -12,7 +12,8 @@ published: true
 ## Gradio
 
 - `Stream`
-  - `Gradio` : `transformers.TextIteratorStreamer`
+
+1. `Gradio` : `transformers.TextIteratorStreamer`
 
 ```python
 def generate(user_message):
@@ -30,13 +31,13 @@ def generate(user_message):
         do_sample=True,
     )
 
-    TextIteratorStreamer    
     t = Thread(target=model.generate, kwargs=generate_kwargs)
     t.start()
 
     ...
 ```
-    - `TGI` : `Client.generate_stream`
+
+2. `TGI` : `text-generation.Client.generate_stream`
 
 ```python
 def generate(...):

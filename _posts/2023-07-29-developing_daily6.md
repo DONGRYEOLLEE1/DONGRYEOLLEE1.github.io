@@ -9,7 +9,7 @@ comments: true
 published: true
 ---
 
-# Error
+# Error1
 
 > undefined symbol: cget_col_row_stats
 
@@ -23,6 +23,20 @@ $ cp libbitsandbytes_cuda118.so libbitsandbytes_cpu.so
 
 - cuda 버전에 맞게 파일을 복사해주면 됨
 
+# Error2
+
+> no gpu detected! check your cuda paths. proceeding to load cpu-only library...
+
+- 갑자기 GPU를 인식 못함
+
+# Solution
+![Alt text](image.png)
+
+```
+$ pip install bitsandbytes --upgrade
+```
+
+- 버젼 업데이터로 해결
 
 # Ref
 

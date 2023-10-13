@@ -3,7 +3,7 @@ layout: post
 title: Daily of Developing [8/1]
 subtitle: Finetuning, QG, Translate
 tags: [Finetuning]
-categories: Finetuning
+categories: Developing
 use_math: true
 comments: true
 published: true

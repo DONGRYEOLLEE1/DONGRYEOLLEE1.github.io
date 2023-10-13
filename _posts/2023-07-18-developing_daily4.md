@@ -3,7 +3,7 @@ layout: post
 title: Daily of Developing [7/21]
 subtitle: Git, Ubuntu
 tags: [Git, Ubuntu]
-categories: Finetuning
+categories: Developing
 use_math: true
 comments: true
 published: true

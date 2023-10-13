@@ -3,7 +3,7 @@ layout: post
 title: Daily of Developing [7/19]
 subtitle: Gradio, TGI
 tags: [NLP, Finetuning, Gradio]
-categories: Finetuning
+categories: Developing
 use_math: true
 comments: true
 published: true

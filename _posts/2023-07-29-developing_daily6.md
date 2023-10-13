@@ -3,7 +3,7 @@ layout: post
 title: Daily of Developing [7/29]
 subtitle: LoRA, bitsandbytes
 tags: [Finetuning, LoRA]
-categories: Finetuning
+categories: Developing
 use_math: true
 comments: true
 published: true

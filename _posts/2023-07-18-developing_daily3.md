@@ -3,7 +3,7 @@ layout: post
 title: Daily of Developing [7/20]
 subtitle: TGI, LocalLLM
 tags: [NLP, Finetuning, Docker]
-categories: Finetuning
+categories: Developing
 use_math: true
 comments: true
 published: true

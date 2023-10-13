@@ -3,7 +3,7 @@ layout: post
 title: Daily of Developing [7/27]
 subtitle: 정규표현식, QG, QA, Data-Preprocessing
 tags: [python, Question-Generation]
-categories: Finetuning
+categories: Developing
 use_math: true
 comments: true
 published: true

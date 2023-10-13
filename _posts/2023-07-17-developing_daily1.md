@@ -3,7 +3,7 @@ layout: post
 title: Daily of Developing [7/17]
 subtitle: Docker, Text-generation Inference
 tags: [NLP, Finetuning, Docker]
-categories: Finetuning
+categories: Developing
 use_math: true
 comments: true
 published: true

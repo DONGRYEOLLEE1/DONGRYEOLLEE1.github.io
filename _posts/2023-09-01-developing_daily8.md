@@ -15,7 +15,7 @@ published: true
 - Nvidia A100 * 8
 - nvidia-driver : 535.xxx.xx
 
-## Issue1
+## Issue
 
 - `nvidia-smi` 입력시 평소와 다르게 그래픽카드 정보가 나타나는 현상 발생
 

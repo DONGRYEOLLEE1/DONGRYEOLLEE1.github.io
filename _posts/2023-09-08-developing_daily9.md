@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pytorch에서 CUDA 및 그래픽카드 인식 문제
+title: Pytorch에서 CUDA 및 그래픽카드 인식 문제 - Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error?
 subtitle: 
 tags: [Pytorch, CUDA, Fabricmanager, Ubuntu]
 categories: Developing
@@ -17,7 +17,7 @@ published: true
 - cuda : 11.8
 - pytorch : 2.1.0+cu118
 
-## Issue1
+## Issue
 
 - `torch` 설치 후, 그래픽드라이버 checking하는 과정에서 cuda 및 그래픽드라이버 인식 ❌
 - `nvcc -V` -> 11.8 정상적으로 출력

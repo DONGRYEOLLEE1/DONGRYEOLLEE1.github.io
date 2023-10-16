@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 가상환경 이슈
+title: 가상환경 이슈 - Command '['/home/ubuntu/test/bin/python3', '-m', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
 subtitle: 
 tags: [python]
 categories: Developing

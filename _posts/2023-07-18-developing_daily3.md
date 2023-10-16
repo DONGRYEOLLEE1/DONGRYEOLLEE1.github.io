@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Daily of Developing [7/20]
+title: Daily of Developing [7/20] - Repo id must be in the form 'repo_name' or 'namespace/repo_name'
 subtitle: TGI, LocalLLM
 tags: [NLP, Finetuning, Docker]
 categories: Developing

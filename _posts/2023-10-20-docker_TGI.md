@@ -78,7 +78,7 @@ if __name__ == "__main__":
     
     main(
         base_model_id = args.base_model_id,
-        peft_model_id = args.lora_model_id,
+        lora_model_id = args.lora_model_id,
         output_dir = args.output_dir
     )
 ```

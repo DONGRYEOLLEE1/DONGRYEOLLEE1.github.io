@@ -18,6 +18,8 @@ published: true
 
 # Error
 
+- `(ko)bart` 베이스모델에서 tokenization -> model generation 할때 오류 발생
+
 ```python
 from transformers import PreTrainedTokenizerFast, BartForConditionalGeneration
 import torch
@@ -62,7 +64,17 @@ RuntimeError: CUDA error: device-side assert triggered Compile with `TORCH_USE_C
 
 # Solution
 
-- `max_length = 1024` 추가해주기
+```python
+/usr/local/lib/python3.10/dist-packages/torch/nn/functional.py in embedding(input, weight, padding_idx, max_norm, norm_type, scale_grad_by_freq, sparse)
+   2231         # remove once script supports set_grad_enabled
+   2232         _no_grad_embedding_renorm_(weight, input, max_norm, norm_type)
+-> 2233     return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+   2234 
+   2235 
+```
+
+- embedding 과정에서 dimension error로 추정
+- `max_length = 1024` cut-off length 지정 & 추가해주기
 
 ```python
 for i in tqdm(range(50), desc = 'test'):

@@ -2,7 +2,7 @@
 layout: post
 title: Transformer
 subtitle: Transformer
-tags: [Transformer, Attention, NLP]
+tags: [Transformer, Attention, NLP, paper-review]
 categories: NLP
 use_math: true
 comments: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Faster R-CNN
-tags: [Faster R-CNN, Object Detection]
+tags: [Faster R-CNN, Object Detection, paper-review]
 categories: CV
 use_math: true
 comments: true

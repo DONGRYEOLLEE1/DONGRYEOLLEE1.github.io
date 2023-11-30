@@ -2,7 +2,7 @@
 layout: post
 title: EfficientNetV2 - Smaller Models and Faster Training [2021]
 subtitle: 
-tags: [CV, EfficientnetV2]
+tags: [CV, EfficientnetV2, paper-review]
 categories: CV
 use_math: true
 comments: true

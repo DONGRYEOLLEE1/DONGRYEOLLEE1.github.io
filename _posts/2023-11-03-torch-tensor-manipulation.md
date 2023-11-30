@@ -1,6 +1,6 @@
 ---
 layout: post
-title: torch tensor manipulation
+title: torch tensor manipulation1
 subtitle: view, reshape, transpose
 tags: [python, Pytorch]
 categories: python

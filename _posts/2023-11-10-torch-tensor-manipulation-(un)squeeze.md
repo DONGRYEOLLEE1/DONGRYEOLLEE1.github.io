@@ -116,6 +116,5 @@ IndexError: Dimension out of range (expected to be in range of [-4, 3], but got 
 
 ## Reference
 
-- 
-- 
-- 
+- [[PyTorch] squeeze, unsqueeze함수: 차원 삭제와 차원 삽입](https://sanghyu.tistory.com/86)
+- [pytorch-documentation](https://pytorch.org/docs/stable/generated/torch.squeeze.html)

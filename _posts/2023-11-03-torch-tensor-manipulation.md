@@ -276,6 +276,7 @@ tt.reshape(4, 3, 2).is_contiguous()
 ```
 
 - `shape` 파라미터에 tuple형태로 입력 가능
+- 당연한 얘기겠지만 tuple(=shape)값은 input tensor의 `W x H x B` 값의 Factor(인수)값을 조합해 입력해줘야함
 
 ```python
 a = torch.arange(4.)
@@ -319,3 +320,10 @@ torch.reshape(b, (-1,)).is_contiguous()
 - `view` : tensor에 저장된 데이터의 물리적 위치 순서와 index순서가 일치할 때 contiguous shape을 재구성한다. 때문에 항상 contiguous하다는 성질이 보유
 - `transpose` : tensor에 저장된 데이터의 물리적 위치 순서와 상관없이 수학적 의미의 transpose를 수행. 물리적 위치와 transpose가 수행된 tensor의 index순서는 같다는 보장이 없으므로 항상 contiguous하지 않음
 - `reshape` : tensor에 저장된 데이터의 물리적 위치 순서와 index순서가 일치하지 않도록 shape을 재구성한 이후에 강제로 일치시킴. 때문에 항상 contiguous하다는 성질이 보유
+
+
+## Reference
+
+- [pytorch-documentation](https://pytorch.org/docs/stable/tensors.html)
+- [PyTorch의 view, transpose, reshape 함수의 차이점 이해하기](https://inmoonlight.github.io/2021/03/03/PyTorch-view-transpose-reshape/)
+- [파이토치 view 텐서 차원 변경 (torch.view, shape 변경)](https://noanomal.tistory.com/entry/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98-view-%ED%85%90%EC%84%9C-%EC%B0%A8%EC%9B%90-%EB%B3%80%EA%B2%BD-torchview-shape-%EB%B3%80%EA%B2%BD)

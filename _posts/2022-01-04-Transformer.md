@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Transformer
-subtitle: Transformer
-tags: [Transformer, Attention, NLP, paper-review]
-categories: NLP
+title: Transformer - Attention Is All You Need [2017]
+subtitle: 
+tags: [paper-review]
+categories: PaperReview
 use_math: true
 comments: true
 ---

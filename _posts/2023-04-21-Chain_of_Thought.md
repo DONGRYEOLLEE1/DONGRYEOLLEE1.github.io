@@ -2,8 +2,8 @@
 layout: post
 title: CoT - Chain-of-Thought Prompting Elicits Reasoning in Large Language Models [2023]
 subtitle: CoT
-tags: [CoT, NLP, Prompt Engineering, paper-review]
-categories: NLP
+tags: [paper-review]
+categories: PaperReview
 use_math: true
 comments: true
 ---

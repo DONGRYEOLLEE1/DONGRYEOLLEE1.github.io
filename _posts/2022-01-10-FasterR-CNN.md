@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Faster R-CNN
-tags: [Faster R-CNN, Object Detection, paper-review]
-categories: CV
+title: Faster R-CNN - Towards Real-Time Object Detection with Region Proposal Networks [2015]
+tags: [paper-review]
+categories: PaperReview
 use_math: true
 comments: true
 ---

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: SwinTransformer
-subtitle: SwinTransformer
-tags: [SwinTransformer, Transformer, Computer Vision, paper-review]
-categories: CV
+title: SwinTransformer - Hierarchical Vision Transformer using Shifted Windows
+subtitle: 
+tags: [paper-review]
+categories: PaperReview
 use_math: true
 comments: true
 ---

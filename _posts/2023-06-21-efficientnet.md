@@ -2,8 +2,8 @@
 layout: post
 title: EfficientNet - Rethinking Model Scaling for Convolutional Neural Networks [2020]
 subtitle: 
-tags: [CV, Efficientnet, paper-review]
-categories: CV
+tags: [paper-review]
+categories: PaperReview
 use_math: true
 comments: true
 ---

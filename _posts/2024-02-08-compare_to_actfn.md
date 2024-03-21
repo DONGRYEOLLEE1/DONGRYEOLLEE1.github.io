@@ -53,7 +53,7 @@ BaseModel(
   (classifier): Sequential(
     (0): Linear(in_features=768, out_features=768, bias=True)
     (1): GELU(approximate='none')
-    (2): Dropout(p=0.3, inplace=False)
+    (2): Dropout(p=0.2, inplace=False)
     (3): Linear(in_features=768, out_features=3, bias=True)
   )
 )
@@ -164,3 +164,4 @@ def get_activation(activation_string):
 ```
 
 - `GELUActivation` class 안에 `torch.nn.functional.gelu` 함수를 통해 구현했음을 확인
+- 결론: 똑같다

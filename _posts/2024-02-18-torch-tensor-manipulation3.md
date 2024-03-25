@@ -69,5 +69,61 @@ torch.Size([100, 256, 50])
 - `expand(-1)`: 차원유지
 - `expand(n)`: 차원의 크기가 1인 tensor에 n만큼 차원 확장
 
-### triu
+### triu & tril
 
+#### 삼각행렬, triangular matrix
+
+- 선형대수에서 삼각행렬은 정사각행렬의 특수한 경우로 주대각선을 기준으로 대각항의 위쪽이나 아래쪽 항들의 값이 모두 0인 경우를 의미
+
+![삼각행렬1](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diagonal-matrix001.svg/200px-Diagonal-matrix001.svg.png)
+
+- 하삼각행렬(lower triangular matrix)
+
+![하삼각행렬](https://wikimedia.org/api/rest_v1/media/math/render/svg/2ac0792d868a00d4ecf60a3d944ac51b3eaf4c2f)
+
+- 상삼각행렬(upper triangular matrix)
+
+![상삼각행렬](https://wikimedia.org/api/rest_v1/media/math/render/svg/69ff34f2380e989eb19c29e457e425dbfbc0f99c)
+
+#### triu
+
+- 상삼각행렬 만들어주는 함수
+
+```python
+in_tensor = torch.randn(3, 3)
+print(in_tensor)
+```
+
+```python
+tensor([[ 1.1567,  1.6308, -2.5685],
+        [-0.9405, -0.3915, -1.8426],
+        [-0.2034,  0.2296,  0.5827]])
+```
+
+```python
+upper_tri_matrix = torch.triu(in_tensor, diagonal = 0)
+print(f"Upper triangular Matrix:\n{upper_tri_matrix}")
+```
+
+```python
+Upper triangular Matrix:
+tensor([[ 1.1567,  1.6308, -2.5685],
+        [ 0.0000, -0.3915, -1.8426],
+        [ 0.0000,  0.0000,  0.5827]])
+```
+
+#### tril 
+
+- 하삼각행렬 만들어주는 함수
+
+```python
+lower_tri_matrix = torch.tril(in_tensor)
+print(f"Lower triangular Matrix:\n{lower_tri_matrix}")
+```
+
+```python
+Lower triangular Matrix:
+tensor([[ 1.1567,  0.0000,  0.0000],
+        [-0.9405, -0.3915,  0.0000],
+        [-0.2034,  0.2296,  0.5827]])
+```

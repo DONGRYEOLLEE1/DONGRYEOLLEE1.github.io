@@ -13,6 +13,10 @@ published: true
 
 v0.9.0: Merging LoRA weights, new quantization options, DoRA support, and more
 
+### DoRA support
+
+> We now support Weight-Decomposed Low-Rank Adaptation aka DoRA via #1474. This new method is builds on top of LoRA and has shown very promising results. Especially at lower ranks (e.g. `r=8`), it should perform much better than LoRA. Right now, only non-quantized `nn.Linear` layers are supported. If you'd like to give it a try, just pass `use_dora=True` to your `LoraConfig` and you're good to go.
+
 ### Merging LoRA weights
 
 > With PR #1364, we added new methods for merging LoRA weights together. This is not about merging LoRA weights into the base model. Instead, this is about merging the weights from different LoRA adapters into a single adapter by calling add_weighted_adapter. This allows you to combine the strength from multiple LoRA adapters into a single adapter, while being faster than activating each of these adapters individually.

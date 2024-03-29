@@ -13,6 +13,16 @@ published: true
 
 v0.10.0: Fine-tune larger QLoRA models with DeepSpeed and FSDP, layer replication, enhance DoRA
 
+### Deprecations
+
+- `prepare_model_for_int8_training` 사용 불가 -> `prepare_model_for_kbit_training` 대체
+
+### Improving DoRA
+
+> Last release, we added the option to enable DoRA in PEFT by simply adding use_dora=True to your LoraConfig. However, this only worked for non-quantized linear layers. With this PEFT release, we now also support Conv2d layers, as well as linear layers quantized with bitsandbytes.
+
+- quantized layer에서도 적용 가능하며 Convolution layer도 지원
+
 ### layer replication
 
 > First time contributor @siddartha-RE added support for layer replication with LoRA. This allows you to duplicate layers of a model and apply LoRA adapters to them. Since the base weights are shared, this costs only very little extra memory, but can lead to a nice improvement of model performance. Find out more in our docs.
@@ -32,7 +42,7 @@ config = LoraConfig(layer_replication=[[0,4], [2,5]], ...)
 > Fewshot-Metamath-OrcaVicuna-Mistral-10B is an example of a model trained using this method on Mistral-7B expanded to 10B. The (adapter_config.json)[https://huggingface.co/abacusai/Fewshot-Metamath-OrcaVicuna-Mistral-10B/blob/main/adapter_config.json] shows a sample LoRA adapter config applying this method for fine-tuning.
 
 - layer merge 개념과 비슷하나 메모리 효율적인 adapter replication 개념
-- layer 단순 반복개념이라 mergekit의 방법론인 slerp, interpolation과는 조금 다름
+- layer 단순 반복개념이라 mergekit의 merge method(interpolation)와는 조금 다름
 
 ```python
 model_id = "mistralai/Mistral-7B-v0.1"

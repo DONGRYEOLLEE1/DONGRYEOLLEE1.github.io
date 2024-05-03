@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Toward Self-Improvement of LLMs via Imagination, Searching, and Criticizing [2024]
+title: Toward Self-Improvement of LLMs via Imagination, Searching, and Criticizing (AlphaLLM) [2024]
 subtitle: 
 tags: [paper-review]
 categories: PaperReview

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [LLM-University] 1-1. What is Semantic Search?
+title: (LLM-University) 1-1. What is Semantic Search?
 subtitle: cohere - LLM University
 tags: [NLP, RAG]
 categories: NLP

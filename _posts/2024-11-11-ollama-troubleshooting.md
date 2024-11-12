@@ -87,6 +87,24 @@ docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=
 ![fin](/img/ollama/fin.png)
 
 
+### 5. Ollama Custom Model Directory로 변경
+
+```
+# /etc/systemd/system/ollama.service
+
+[Service]
+...
+Environment="OLLAMA_MODELS=/custom/ollama/model_path"
+```
+
+- `sudo chown -R ollama:ollama /custom/ollama/model_path` -> Directory에 권한 부여
+- `systemctl daemon-reload`, `systemctl restart ollama`
+
+- `ollama list`로 custom model directory 적용 확인
+
+![custom-dir](/img/ollama/custom-dir.png)
+
+
 ## Reference
 
 - [https://github.com/open-webui/open-webui/discussions/4228](https://github.com/open-webui/open-webui/discussions/4228)

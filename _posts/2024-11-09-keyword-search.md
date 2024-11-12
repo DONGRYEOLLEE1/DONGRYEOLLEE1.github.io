@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [LLM-University] 1-2. Keyword Search
+title: (LLM-University) 1-2. Keyword Search
 subtitle: cohere - LLM University
 tags: [NLP, RAG]
 categories: NLP

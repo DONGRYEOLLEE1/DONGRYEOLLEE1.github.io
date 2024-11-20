@@ -1,9 +1,9 @@
 ---
 layout: post
-title: vllm
+title: vllm + lm-evaluation-harness OOM
 subtitle: 
 tags: [NLP, RAG]
-categories: NLP
+categories: Developing
 use_math: true
 comments: true
 published: true
@@ -34,6 +34,7 @@ OOM 에러 발생!
 ![img](/img/lm-eval-oom.png)
 
 - `vllm` backend arguments에 `enforce_eager=True` 옵션 추가하기
+- `batch_size` 줄여주기
 
 ```bash
 lm_eval --model vllm --model_args pretrained=$MODEL_NAME,tensor_parallel_size=2,gpu_memory_utilization=0.7,dtype=bfloat16,enforce_eager=True --output_path "results/gemma2-27b-it" --batch_size 2 --tasks $TASK

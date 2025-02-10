@@ -40,9 +40,9 @@ published: true
             - torchaudio-2.1.2+cu121-cp310-cp310-linux_x86_64.whl
             - torchvision-0.16.2+cu121-cp310-cp310-linux_x86_64.whl
 5. 사용되는 모든 모델을 로컬로 실행할 수 있게 파일화
-    1. `easyocr`: 최초 weight 파일을 다운받는 패키지 구조에 따라 `~/.EasyOCR` 폴더에 weight 파일을 직접 이식
-    2. `whisper`: 기존 `whisper-python` 패키지가 아닌 로컬로 동작 가능한 weight 파일로 실행
-    3. `KeyBERT`: basellm 뿐만 아니라 `keybert` 패키지 내에서 `sentence-transformer` 패키지를 사용하여 embedding model도 필요하기 때문에 basellm이 될 수 있는 언어모델과 embedding model의 weight파일을 모두 준비
+    - `easyocr`: 최초 weight 파일을 다운받는 패키지 구조에 따라 `~/.EasyOCR` 폴더에 weight 파일을 직접 이식
+    - `whisper`: 기존 `whisper-python` 패키지가 아닌 로컬로 동작 가능한 weight 파일로 실행
+    - `KeyBERT`: basellm 뿐만 아니라 `keybert` 패키지 내에서 `sentence-transformer` 패키지를 사용하여 embedding model도 필요하기 때문에 basellm이 될 수 있는 언어모델과 embedding model의 weight파일을 모두 준비
 
 위 작업 테스트를 위해 GPU가 장착된 RedHat OS 환경이 필요했으나 정확히 동일한 환경을 구축할 수 없었기에 다음 2개의 환경에서 테스트 작업을 수행함.
 
@@ -55,8 +55,8 @@ published: true
 ### CUDA, cuDNN
 최초 CUDA 로컬 파일을 통해 설치를 진행하였고 space 용량 부족 에러가 발생했으나 CUDA 설치 전용 화면이 전혀 노출이 안되고 에러메세지가 노출되었고, `tmp/...` 임시 폴더를 생성하는 것을 스크립트에서 발견하여 다른 폴더(`/data/...`)로 임시파일을 생성하게 대처하였지만 여전히 같은 에러가 발생하여 다음의 두 가지 가설을 세웠음. 
 
-1. 최초 파일을 wget을 통해 다운로드하는 준비 과정에서 문제가 발생해 파일이 손상되었다.
-    - 다음날 해당 가설을 검증하기 위해 wget을 통해 재차 CUDA 파일을 다운로드 받았고 파일 용량이 실제로 다름을 확인.
+1. 최초 파일을 wget을 통해 다운로드하는 과정에서 문제가 발생해 파일이 손상되었다.
+    - 다음날, 해당 가설을 검증하기 위해 wget을 통해 재차 CUDA 파일을 다운로드 받았고 파일 용량이 상이함을 확인
     - 파일 무결성 검사(`checksum`)를 통해 이전에 받아간 설치파일이 실제로 손상되었음을 확인
 2. 진짜 디스크 용량 부족이다.
     - 검증 절차를 따로 진행하지 않았고 대처방법을 다음 두 가지로 지정

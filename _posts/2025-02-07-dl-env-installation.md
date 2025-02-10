@@ -68,13 +68,13 @@ published: true
 
 2. 원하는 파일 browse -> verify 클릭 -> `checksum value` 확인
 
-![img1](/img/etc/img1.png)
+    ![img1](/img/etc/img1.png)
 
 3. CUDA 파일 `checksum value` 확인
 
-![img2](/img/etc/img2.png)
+    ![img2](/img/etc/img2.png)
 
-![img3](/img/etc/img3.png)
+    ![img3](/img/etc/img3.png)
 
 4. 두 `checksum value` 대조
 

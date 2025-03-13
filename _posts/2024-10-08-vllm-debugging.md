@@ -1,8 +1,8 @@
 ---
 layout: post
-title: vllm - when loading the weights, occurs infinite loading problem
+title: (vLLM) When loading the weights, occurs infinite loading problem
 subtitle: 
-tags: [python]
+tags: [python, vLLM]
 categories: python
 use_math: true
 comments: true
@@ -12,7 +12,7 @@ published: true
 
 # problem
 
-- `tensor-parallel-size` 1 이상 값으로 지정시, weight 무한 로딩 문제
+- `tensor-parallel-size` >= 2 지정시, weight 무한 로딩 문제
 
 ```bash
 export MODEL_NAME="..."

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: vLLM error - gemma계열 모델에서 발생하는 오류
+title: (vLLM) error - gemma계열 모델에서 발생하는 오류
 subtitle: flashinfer
-tags: [NLP, vllm]
+tags: [NLP, vLLM]
 categories: Developing
 use_math: true
 comments: true

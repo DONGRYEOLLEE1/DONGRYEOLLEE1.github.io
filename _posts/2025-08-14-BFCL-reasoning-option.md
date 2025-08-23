@@ -19,7 +19,30 @@ published: true
 Agent performance 측정을 위한 `BFCL` 벤치마크 실행 도중, api base generation 실행시 아래의 오류 발생
 
 ```text
-openai.BadRequestError: Error code: 400 - {'error': {'message': "Invalid type for 'include': expected an array of one of 'fil...lts', 'web...lts', 'mes...url', 'com...url', 'rea...ent', or 'mes...obs', but got a string instead.", 'type': 'invalid_request_error', 'param': 'include', 'code': 'invalid_type'}}
+❗️❗️ Error occurred during inference. Maximum reties reached for rate limit or other error. Continuing to next test case.
+❗️❗️ Test case ID: simple_3, Error: Error code: 400 - {'error': {'message': 'Encrypted content is not supported with this model.', 'type': 'invalid_request_error', 'param': 'include', 'code': None}}
+Traceback (most recent call last):
+  File "/data/dev/uv-test/agent-bm2/.venv/lib/python3.10/site-packages/bfcl_eval/_llm_response_generation.py", line 182, in multi_threaded_inference
+    result, metadata = handler.inference(
+  File "/data/dev/uv-test/agent-bm2/.venv/lib/python3.10/site-packages/bfcl_eval/model_handler/base_handler.py", line 47, in inference
+    return self.inference_single_turn_FC(test_entry, include_input_log)
+  File "/data/dev/uv-test/agent-bm2/.venv/lib/python3.10/site-packages/bfcl_eval/model_handler/base_handler.py", line 593, in inference_single_turn_FC
+    api_response, query_latency = self._query_FC(inference_data)
+  File "/data/dev/uv-test/agent-bm2/.venv/lib/python3.10/site-packages/bfcl_eval/model_handler/api_inference/openai_response.py", line 90, in _query_FC
+    return self.generate_with_backoff(**kwargs)
+  File "/data/dev/uv-test/agent-bm2/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 336, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/data/dev/uv-test/agent-bm2/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 475, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/data/dev/uv-test/agent-bm2/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+  File "/data/dev/uv-test/agent-bm2/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 398, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+openai.BadRequestError: Error code: 400 - {'error': {'message': 'Encrypted content is not supported with this model.', 'type': 'invalid_request_error', 'param': 'include', 'code': None}}
 ```
 
 ## Reproduction

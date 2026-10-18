@@ -1,0 +1,7 @@
+stage,component,full_pool_n,full_stage_n,selected_input_n,selected_pool_passes
+sft,Synthetic literal OCR,22000,33371,28800,0.8630247819963441
+sft,Real Korean scene OCR,3179,33371,28800,0.8630247819963441
+sft,General QA replay,8192,33371,28800,0.8630247819963441
+grpo,Synthetic literal OCR,1376,2683,2400,0.8945210585165859
+grpo,Real Korean scene OCR,795,2683,2400,0.8945210585165859
+grpo,General QA replay,512,2683,2400,0.8945210585165859

@@ -1,0 +1,50 @@
+[
+  {
+    "component": "Synthetic literal OCR",
+    "full_pool_n": 22000,
+    "full_stage_n": 33371,
+    "selected_input_n": 28800,
+    "selected_pool_passes": 0.8630247819963441,
+    "stage": "sft"
+  },
+  {
+    "component": "Real Korean scene OCR",
+    "full_pool_n": 3179,
+    "full_stage_n": 33371,
+    "selected_input_n": 28800,
+    "selected_pool_passes": 0.8630247819963441,
+    "stage": "sft"
+  },
+  {
+    "component": "General QA replay",
+    "full_pool_n": 8192,
+    "full_stage_n": 33371,
+    "selected_input_n": 28800,
+    "selected_pool_passes": 0.8630247819963441,
+    "stage": "sft"
+  },
+  {
+    "component": "Synthetic literal OCR",
+    "full_pool_n": 1376,
+    "full_stage_n": 2683,
+    "selected_input_n": 2400,
+    "selected_pool_passes": 0.8945210585165859,
+    "stage": "grpo"
+  },
+  {
+    "component": "Real Korean scene OCR",
+    "full_pool_n": 795,
+    "full_stage_n": 2683,
+    "selected_input_n": 2400,
+    "selected_pool_passes": 0.8945210585165859,
+    "stage": "grpo"
+  },
+  {
+    "component": "General QA replay",
+    "full_pool_n": 512,
+    "full_stage_n": 2683,
+    "selected_input_n": 2400,
+    "selected_pool_passes": 0.8945210585165859,
+    "stage": "grpo"
+  }
+]

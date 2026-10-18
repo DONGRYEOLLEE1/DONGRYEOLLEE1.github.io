@@ -1,0 +1,28 @@
+model,model_role,benchmark,metric,higher_is_better,n,value,value_percent
+Qwen3.5-2B,base,k_mmstar,accuracy,True,1500,0.44066666666666665,44.06666666666666
+KoDistill V2,v2,k_mmstar,accuracy,True,1500,0.5373333333333333,53.733333333333334
+kodistill-vl-2b,v3,k_mmstar,accuracy,True,1500,0.542,54.2
+Qwen3.5-2B,base,mtvqa_ko,strict_em,True,558,0.2616487455197133,26.16487455197133
+KoDistill V2,v2,mtvqa_ko,strict_em,True,558,0.2939068100358423,29.39068100358423
+kodistill-vl-2b,v3,mtvqa_ko,strict_em,True,558,0.2921146953405018,29.211469534050178
+Qwen3.5-2B,base,k_dtcbench,accuracy,True,240,0.7208333333333333,72.08333333333333
+KoDistill V2,v2,k_dtcbench,accuracy,True,240,0.8041666666666667,80.41666666666667
+kodistill-vl-2b,v3,k_dtcbench,accuracy,True,240,0.8083333333333332,80.83333333333333
+Qwen3.5-2B,base,mmstar,accuracy,True,1500,0.4073333333333333,40.733333333333334
+KoDistill V2,v2,mmstar,accuracy,True,1500,0.584,58.4
+kodistill-vl-2b,v3,mmstar,accuracy,True,1500,0.584,58.4
+Qwen3.5-2B,base,textvqa,vqa_soft_accuracy,True,5000,0.75268,75.268
+KoDistill V2,v2,textvqa,vqa_soft_accuracy,True,5000,0.7811600000000002,78.11600000000001
+kodistill-vl-2b,v3,textvqa,vqa_soft_accuracy,True,5000,0.7822,78.22
+Qwen3.5-2B,base,kstr_public,official_word_accuracy,True,20086,0.6762421587175147,67.62421587175147
+KoDistill V2,v2,kstr_public,official_word_accuracy,True,20086,0.6781340236980982,67.81340236980982
+kodistill-vl-2b,v3,kstr_public,official_word_accuracy,True,20086,0.712635666633476,71.2635666633476
+Qwen3.5-2B,base,kstr_public,official_jaso_1_ned,True,20086,0.8711712108848272,87.11712108848272
+KoDistill V2,v2,kstr_public,official_jaso_1_ned,True,20086,0.8712705869653817,87.12705869653817
+kodistill-vl-2b,v3,kstr_public,official_jaso_1_ned,True,20086,0.8908149138631384,89.08149138631384
+Qwen3.5-2B,base,kstr_public,cer_with_spaces,False,19855,0.32144606985371316,32.14460698537132
+KoDistill V2,v2,kstr_public,cer_with_spaces,False,19855,0.32814213387461794,32.81421338746179
+kodistill-vl-2b,v3,kstr_public,cer_with_spaces,False,19855,0.14999650031497166,14.999650031497167
+Qwen3.5-2B,base,kstr_public,wer,False,19855,0.46792996735766673,46.79299673576667
+KoDistill V2,v2,kstr_public,wer,False,19855,0.44847174530501505,44.847174530501505
+kodistill-vl-2b,v3,kstr_public,wer,False,19855,0.33473229047437364,33.473229047437364

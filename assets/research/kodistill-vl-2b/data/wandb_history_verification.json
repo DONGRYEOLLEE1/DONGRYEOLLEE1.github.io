@@ -1,0 +1,23 @@
+{
+  "operation": "read-only wandb.Api.run + scan_history; no run initialization or mutation",
+  "runs": {
+    "grpo": {
+      "comparison": "Every event identity and every published metric value, exact equality.",
+      "exactly_matched_events": 72,
+      "history_events": 72,
+      "history_sha256": "38c4529208952053101f25bd1b5b282a0627ad371d2d2d23b0b6b26a19c4ede7",
+      "run_id": "8406868b",
+      "state": "finished",
+      "url": "https://wandb.ai/dongryeol/kodistill-vl/runs/8406868b"
+    },
+    "sft": {
+      "comparison": "Every event identity and every published metric value, exact equality.",
+      "exactly_matched_events": 213,
+      "history_events": 213,
+      "history_sha256": "898f9b7d5d5b149c70602841f9135d42752411e687ebc187a5b11610c7f26219",
+      "run_id": "04c5f64a",
+      "state": "finished",
+      "url": "https://wandb.ai/dongryeol/kodistill-vl/runs/04c5f64a"
+    }
+  }
+}

@@ -1,0 +1,272 @@
+[
+  {
+    "benchmark": "k_mmstar",
+    "higher_is_better": true,
+    "metric": "accuracy",
+    "model": "Qwen3.5-2B",
+    "model_role": "base",
+    "n": 1500,
+    "value": 0.44066666666666665,
+    "value_percent": 44.06666666666666
+  },
+  {
+    "benchmark": "k_mmstar",
+    "higher_is_better": true,
+    "metric": "accuracy",
+    "model": "KoDistill V2",
+    "model_role": "v2",
+    "n": 1500,
+    "value": 0.5373333333333333,
+    "value_percent": 53.733333333333334
+  },
+  {
+    "benchmark": "k_mmstar",
+    "higher_is_better": true,
+    "metric": "accuracy",
+    "model": "kodistill-vl-2b",
+    "model_role": "v3",
+    "n": 1500,
+    "value": 0.542,
+    "value_percent": 54.2
+  },
+  {
+    "benchmark": "mtvqa_ko",
+    "higher_is_better": true,
+    "metric": "strict_em",
+    "model": "Qwen3.5-2B",
+    "model_role": "base",
+    "n": 558,
+    "value": 0.2616487455197133,
+    "value_percent": 26.16487455197133
+  },
+  {
+    "benchmark": "mtvqa_ko",
+    "higher_is_better": true,
+    "metric": "strict_em",
+    "model": "KoDistill V2",
+    "model_role": "v2",
+    "n": 558,
+    "value": 0.2939068100358423,
+    "value_percent": 29.39068100358423
+  },
+  {
+    "benchmark": "mtvqa_ko",
+    "higher_is_better": true,
+    "metric": "strict_em",
+    "model": "kodistill-vl-2b",
+    "model_role": "v3",
+    "n": 558,
+    "value": 0.2921146953405018,
+    "value_percent": 29.211469534050178
+  },
+  {
+    "benchmark": "k_dtcbench",
+    "higher_is_better": true,
+    "metric": "accuracy",
+    "model": "Qwen3.5-2B",
+    "model_role": "base",
+    "n": 240,
+    "value": 0.7208333333333333,
+    "value_percent": 72.08333333333333
+  },
+  {
+    "benchmark": "k_dtcbench",
+    "higher_is_better": true,
+    "metric": "accuracy",
+    "model": "KoDistill V2",
+    "model_role": "v2",
+    "n": 240,
+    "value": 0.8041666666666667,
+    "value_percent": 80.41666666666667
+  },
+  {
+    "benchmark": "k_dtcbench",
+    "higher_is_better": true,
+    "metric": "accuracy",
+    "model": "kodistill-vl-2b",
+    "model_role": "v3",
+    "n": 240,
+    "value": 0.8083333333333332,
+    "value_percent": 80.83333333333333
+  },
+  {
+    "benchmark": "mmstar",
+    "higher_is_better": true,
+    "metric": "accuracy",
+    "model": "Qwen3.5-2B",
+    "model_role": "base",
+    "n": 1500,
+    "value": 0.4073333333333333,
+    "value_percent": 40.733333333333334
+  },
+  {
+    "benchmark": "mmstar",
+    "higher_is_better": true,
+    "metric": "accuracy",
+    "model": "KoDistill V2",
+    "model_role": "v2",
+    "n": 1500,
+    "value": 0.584,
+    "value_percent": 58.4
+  },
+  {
+    "benchmark": "mmstar",
+    "higher_is_better": true,
+    "metric": "accuracy",
+    "model": "kodistill-vl-2b",
+    "model_role": "v3",
+    "n": 1500,
+    "value": 0.584,
+    "value_percent": 58.4
+  },
+  {
+    "benchmark": "textvqa",
+    "higher_is_better": true,
+    "metric": "vqa_soft_accuracy",
+    "model": "Qwen3.5-2B",
+    "model_role": "base",
+    "n": 5000,
+    "value": 0.75268,
+    "value_percent": 75.268
+  },
+  {
+    "benchmark": "textvqa",
+    "higher_is_better": true,
+    "metric": "vqa_soft_accuracy",
+    "model": "KoDistill V2",
+    "model_role": "v2",
+    "n": 5000,
+    "value": 0.7811600000000002,
+    "value_percent": 78.11600000000001
+  },
+  {
+    "benchmark": "textvqa",
+    "higher_is_better": true,
+    "metric": "vqa_soft_accuracy",
+    "model": "kodistill-vl-2b",
+    "model_role": "v3",
+    "n": 5000,
+    "value": 0.7822,
+    "value_percent": 78.22
+  },
+  {
+    "benchmark": "kstr_public",
+    "higher_is_better": true,
+    "metric": "official_word_accuracy",
+    "model": "Qwen3.5-2B",
+    "model_role": "base",
+    "n": 20086,
+    "value": 0.6762421587175147,
+    "value_percent": 67.62421587175147
+  },
+  {
+    "benchmark": "kstr_public",
+    "higher_is_better": true,
+    "metric": "official_word_accuracy",
+    "model": "KoDistill V2",
+    "model_role": "v2",
+    "n": 20086,
+    "value": 0.6781340236980982,
+    "value_percent": 67.81340236980982
+  },
+  {
+    "benchmark": "kstr_public",
+    "higher_is_better": true,
+    "metric": "official_word_accuracy",
+    "model": "kodistill-vl-2b",
+    "model_role": "v3",
+    "n": 20086,
+    "value": 0.712635666633476,
+    "value_percent": 71.2635666633476
+  },
+  {
+    "benchmark": "kstr_public",
+    "higher_is_better": true,
+    "metric": "official_jaso_1_ned",
+    "model": "Qwen3.5-2B",
+    "model_role": "base",
+    "n": 20086,
+    "value": 0.8711712108848272,
+    "value_percent": 87.11712108848272
+  },
+  {
+    "benchmark": "kstr_public",
+    "higher_is_better": true,
+    "metric": "official_jaso_1_ned",
+    "model": "KoDistill V2",
+    "model_role": "v2",
+    "n": 20086,
+    "value": 0.8712705869653817,
+    "value_percent": 87.12705869653817
+  },
+  {
+    "benchmark": "kstr_public",
+    "higher_is_better": true,
+    "metric": "official_jaso_1_ned",
+    "model": "kodistill-vl-2b",
+    "model_role": "v3",
+    "n": 20086,
+    "value": 0.8908149138631384,
+    "value_percent": 89.08149138631384
+  },
+  {
+    "benchmark": "kstr_public",
+    "higher_is_better": false,
+    "metric": "cer_with_spaces",
+    "model": "Qwen3.5-2B",
+    "model_role": "base",
+    "n": 19855,
+    "value": 0.32144606985371316,
+    "value_percent": 32.14460698537132
+  },
+  {
+    "benchmark": "kstr_public",
+    "higher_is_better": false,
+    "metric": "cer_with_spaces",
+    "model": "KoDistill V2",
+    "model_role": "v2",
+    "n": 19855,
+    "value": 0.32814213387461794,
+    "value_percent": 32.81421338746179
+  },
+  {
+    "benchmark": "kstr_public",
+    "higher_is_better": false,
+    "metric": "cer_with_spaces",
+    "model": "kodistill-vl-2b",
+    "model_role": "v3",
+    "n": 19855,
+    "value": 0.14999650031497166,
+    "value_percent": 14.999650031497167
+  },
+  {
+    "benchmark": "kstr_public",
+    "higher_is_better": false,
+    "metric": "wer",
+    "model": "Qwen3.5-2B",
+    "model_role": "base",
+    "n": 19855,
+    "value": 0.46792996735766673,
+    "value_percent": 46.79299673576667
+  },
+  {
+    "benchmark": "kstr_public",
+    "higher_is_better": false,
+    "metric": "wer",
+    "model": "KoDistill V2",
+    "model_role": "v2",
+    "n": 19855,
+    "value": 0.44847174530501505,
+    "value_percent": 44.847174530501505
+  },
+  {
+    "benchmark": "kstr_public",
+    "higher_is_better": false,
+    "metric": "wer",
+    "model": "kodistill-vl-2b",
+    "model_role": "v3",
+    "n": 19855,
+    "value": 0.33473229047437364,
+    "value_percent": 33.473229047437364
+  }
+]

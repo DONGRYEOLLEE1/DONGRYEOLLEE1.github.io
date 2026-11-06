@@ -370,17 +370,7 @@ The practical lesson is worth testing well beyond this study: **before adding a 
 We would most like to see three follow-ups: multi-seed replication, a matched verl GRPO control for the follow-up methods, and the same ladder at G = 4 and G = 8, where the normalization stops being a sign function.
 
 
-## Data, code, and training logs {#data}
-
-Every figure is generated from the saved per-item evaluation records and from the public W&B histories. The plotted series are available as files:
-
-- [`nine_conditions.csv`]({{ '/assets/research/thinkingcap-2b/data/nine_conditions.csv' | relative_url }}): the main results table, with per-benchmark closure rates and medians.
-- [`items.csv`]({{ '/assets/research/thinkingcap-2b/data/items.csv' | relative_url }}): strict correctness, closure, and token counts for all 11,700 responses. It contains no generated text.
-- [`paired_bootstrap.json`]({{ '/assets/research/thinkingcap-2b/data/paired_bootstrap.json' | relative_url }}): every paired comparison in this post, with its 95% interval.
-- [`training_trl_wandb.csv`]({{ '/assets/research/thinkingcap-2b/data/training_trl_wandb.csv' | relative_url }}) and [`training_verl_wandb.csv`]({{ '/assets/research/thinkingcap-2b/data/training_verl_wandb.csv' | relative_url }}): the training curves exactly as plotted.
-- [`wandb_history_verification.json`]({{ '/assets/research/thinkingcap-2b/data/wandb_history_verification.json' | relative_url }}): a reconciliation of the six W&B histories against the local training logs. 1,199 of the 1,200 logged updates match, and none of the 50,210 compared values differ.
-- [`reflection.csv`]({{ '/assets/research/thinkingcap-2b/data/reflection.csv' | relative_url }}) and [`answer_found_gsm8k.json`]({{ '/assets/research/thinkingcap-2b/data/answer_found_gsm8k.json' | relative_url }}): the inputs to Figure 10.
-- [`figure_provenance.json`]({{ '/assets/research/thinkingcap-2b/data/figure_provenance.json' | relative_url }}): SHA-256 hashes of every published data file, the W&B histories behind the training figures, and every figure.
+## Training logs, code, and model {#resources}
 
 **Training runs on W&B** ([project](https://wandb.ai/dongryeol/reducing-token)): [A](https://wandb.ai/dongryeol/reducing-token/runs/arm_a) · [+R](https://wandb.ai/dongryeol/reducing-token/runs/abl_r) · [+R+D](https://wandb.ai/dongryeol/reducing-token/runs/abl_dr) · [B](https://wandb.ai/dongryeol/reducing-token/runs/arm_b) · [GDPO](https://wandb.ai/dongryeol/reducing-token/runs/gdpo-verl-seed0) · [ShortRL-G2](https://wandb.ai/dongryeol/reducing-token/runs/short-rl-g2-verl-seed0)
 
@@ -447,8 +437,6 @@ Every figure is generated from the saved per-item evaluation records and from th
 - Yang, A., et al. (2025). [Qwen3 Technical Report](https://arxiv.org/abs/2505.09388). arXiv:2505.09388.
 - Yu, Q., et al. (2025). [DAPO: An Open-Source LLM Reinforcement Learning System at Scale](https://arxiv.org/abs/2503.14476). arXiv:2503.14476.
 - Yuan, D., et al. (2025). [Shorten After You're Right: Lazy Length Penalties for Reasoning RL](https://arxiv.org/abs/2505.12284) (first released as *Efficient RL Training for Reasoning Models via Length-Aware Optimization*). Findings of ACL 2026.
-
-*The presentation of this write-up follows the structure of the [UltraBERT](https://huggingface.co/blog/dmis-lab/ultrabert) research blog.*
 
 <style>
   mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }

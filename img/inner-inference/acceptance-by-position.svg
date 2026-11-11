@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" role="img" aria-label="draft 위치별 수락률" font-family="system-ui, -apple-system, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">
+<title>draft 위치별 수락률</title>
+<rect width="760" height="380" rx="10" fill="#fcfcfb"/>
+<text x="24.0" y="34.0" font-size="17" fill="#0b0b0b" text-anchor="start" font-weight="600">draft 위치별 수락률 (%)</text>
+<text x="24.0" y="56.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">7개 작업 유형 전체 합산. 뒤쪽 draft일수록 덜 맞음</text>
+<rect x="510" y="24" width="12" height="12" rx="3" fill="#2a78d6"/>
+<text x="528.0" y="34.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Flash-Next</text>
+<rect x="622.0" y="24" width="12" height="12" rx="3" fill="#eb6834"/>
+<text x="640.0" y="34.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">27B</text>
+<line x1="64" x2="736" y1="324.0" y2="324.0" stroke="#c3c2b7" stroke-width="1"/>
+<text x="54.0" y="328.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400">0</text>
+<line x1="64" x2="736" y1="276.0" y2="276.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54.0" y="280.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400">20</text>
+<line x1="64" x2="736" y1="228.0" y2="228.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54.0" y="232.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400">40</text>
+<line x1="64" x2="736" y1="180.0" y2="180.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54.0" y="184.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400">60</text>
+<line x1="64" x2="736" y1="132.0" y2="132.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54.0" y="136.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400">80</text>
+<line x1="64" x2="736" y1="84.0" y2="84.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54.0" y="88.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400">100</text>
+<path d="M151.0,324.0 V141.9 Q151.0,137.9 155.0,137.9 H171.0 Q175.0,137.9 175.0,141.9 V324.0 Z" fill="#2a78d6"/>
+<text x="154.0" y="130.9" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600">77.5</text>
+<path d="M177.0,324.0 V131.8 Q177.0,127.8 181.0,127.8 H197.0 Q201.0,127.8 201.0,131.8 V324.0 Z" fill="#eb6834"/>
+<text x="198.0" y="120.8" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600">81.7</text>
+<text x="176.0" y="346.0" font-size="13" fill="#52514e" text-anchor="middle" font-weight="400">1번째 draft 토큰</text>
+<path d="M375.0,324.0 V184.6 Q375.0,180.6 379.0,180.6 H395.0 Q399.0,180.6 399.0,184.6 V324.0 Z" fill="#2a78d6"/>
+<text x="378.0" y="173.6" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600">59.7</text>
+<path d="M401.0,324.0 V168.5 Q401.0,164.5 405.0,164.5 H421.0 Q425.0,164.5 425.0,168.5 V324.0 Z" fill="#eb6834"/>
+<text x="422.0" y="157.5" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600">66.4</text>
+<text x="400.0" y="346.0" font-size="13" fill="#52514e" text-anchor="middle" font-weight="400">2번째 draft 토큰</text>
+<path d="M599.0,324.0 V212.3 Q599.0,208.3 603.0,208.3 H619.0 Q623.0,208.3 623.0,212.3 V324.0 Z" fill="#2a78d6"/>
+<text x="602.0" y="201.3" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600">48.2</text>
+<path d="M625.0,324.0 V199.5 Q625.0,195.5 629.0,195.5 H645.0 Q649.0,195.5 649.0,199.5 V324.0 Z" fill="#eb6834"/>
+<text x="646.0" y="188.5" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600">53.6</text>
+<text x="624.0" y="346.0" font-size="13" fill="#52514e" text-anchor="middle" font-weight="400">3번째 draft 토큰</text>
+</svg>

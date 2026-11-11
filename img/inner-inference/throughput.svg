@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" role="img" aria-label="모델별 생성 처리량 막대 그래프" font-family="system-ui, -apple-system, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">
+<title>모델별 생성 처리량 막대 그래프</title>
+<rect width="760" height="400" rx="10" fill="#fcfcfb"/>
+<text x="24.0" y="34.0" font-size="17" fill="#0b0b0b" text-anchor="start" font-weight="600">생성 처리량 (tok/s)</text>
+<text x="24.0" y="56.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">RTX PRO 6000 96GB 2장, NVFP4, MTP k=3, LiteLLM 게이트웨이 경유</text>
+<rect x="510" y="24" width="12" height="12" rx="3" fill="#2a78d6"/>
+<text x="528.0" y="34.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Flash-Next</text>
+<rect x="622.0" y="24" width="12" height="12" rx="3" fill="#eb6834"/>
+<text x="640.0" y="34.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">27B</text>
+<line x1="64" x2="736" y1="344.0" y2="344.0" stroke="#c3c2b7" stroke-width="1"/>
+<text x="54.0" y="348.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400">0</text>
+<line x1="64" x2="736" y1="292.0" y2="292.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54.0" y="296.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400">100</text>
+<line x1="64" x2="736" y1="240.0" y2="240.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54.0" y="244.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400">200</text>
+<line x1="64" x2="736" y1="188.0" y2="188.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54.0" y="192.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400">300</text>
+<line x1="64" x2="736" y1="136.0" y2="136.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54.0" y="140.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400">400</text>
+<line x1="64" x2="736" y1="84.0" y2="84.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="54.0" y="88.0" font-size="12" fill="#898781" text-anchor="end" font-weight="400">500</text>
+<path d="M151.0,344.0 V269.5 Q151.0,265.5 155.0,265.5 H171.0 Q175.0,265.5 175.0,269.5 V344.0 Z" fill="#2a78d6"/>
+<text x="154.0" y="258.5" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600">151</text>
+<path d="M177.0,344.0 V271.2 Q177.0,267.2 181.0,267.2 H197.0 Q201.0,267.2 201.0,271.2 V344.0 Z" fill="#eb6834"/>
+<text x="198.0" y="260.2" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600">148</text>
+<text x="176.0" y="366.0" font-size="13" fill="#52514e" text-anchor="middle" font-weight="400">단일 요청 · 짧은 입력</text>
+<path d="M375.0,344.0 V264.2 Q375.0,260.2 379.0,260.2 H395.0 Q399.0,260.2 399.0,264.2 V344.0 Z" fill="#2a78d6"/>
+<text x="378.0" y="253.2" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600">161</text>
+<path d="M401.0,344.0 V257.6 Q401.0,253.6 405.0,253.6 H421.0 Q425.0,253.6 425.0,257.6 V344.0 Z" fill="#eb6834"/>
+<text x="422.0" y="246.6" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600">174</text>
+<text x="400.0" y="366.0" font-size="13" fill="#52514e" text-anchor="middle" font-weight="400">단일 요청 · 긴 입력</text>
+<path d="M599.0,344.0 V140.7 Q599.0,136.7 603.0,136.7 H619.0 Q623.0,136.7 623.0,140.7 V344.0 Z" fill="#2a78d6"/>
+<text x="602.0" y="129.7" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600">399</text>
+<path d="M625.0,344.0 V93.2 Q625.0,89.2 629.0,89.2 H645.0 Q649.0,89.2 649.0,93.2 V344.0 Z" fill="#eb6834"/>
+<text x="646.0" y="82.2" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600">490</text>
+<text x="624.0" y="366.0" font-size="13" fill="#52514e" text-anchor="middle" font-weight="400">동시 4요청 · 긴 입력 · 합산</text>
+</svg>

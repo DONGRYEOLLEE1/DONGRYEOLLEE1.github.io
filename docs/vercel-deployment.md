@@ -15,14 +15,14 @@
 | Build Command | npm run build |
 | Output Directory | dist |
 | Node.js Version | 24.x. package.json과 일치 |
-| Production Branch | 실제 공개할 브랜치. 연결 화면에서 확인하고 지정 |
+| Production Branch | `main` |
 | 필수 외부 서비스 | 없음 |
 
 빌드는 콘텐츠·관계 검증, 자산 준비, HTML 생성, 본문 검색 색인, 전수 검사를 모두 포함한다. astro build만 호출하면 검색 색인과 이전 검증이 빠지므로 위 명령을 유지한다. vercel.json과 lockfile을 함께 Git에 반영해야 한다.
 
 ## 사용자가 진행할 연결
 
-구현 내용을 GitHub의 검토용 브랜치에 반영하고 Vercel의 New Project에서 이 저장소를 Import한다. GitHub 연결 권한을 요구하면 이 저장소 접근을 허용한다. 위 프로젝트 설정을 확인한 뒤 배포한다. 기존 GitHub Pages를 유지한 상태에서도 별도 Vercel 주소에서 확인할 수 있다.
+Vercel의 New Project에서 이 저장소를 Import한다. GitHub 연결 권한을 요구하면 이 저장소 접근을 허용한다. 위 프로젝트 설정을 확인한 뒤 배포한다. Git 연동 후에는 기본적으로 `main`의 변경은 Production으로, 다른 브랜치의 변경은 Preview로 Vercel에서 빌드한다. [Vercel Git 배포](https://vercel.com/docs/git)
 
 Vercel이 만든 고정 production 도메인을 사용하거나 본인 소유 도메인을 연결한다. 커스텀 도메인은 선택 사항이며 우선 https://프로젝트이름.vercel.app으로 공개할 수 있다. 커밋별 Preview 주소를 최종 운영 주소로 지정하지 않는다.
 
@@ -46,13 +46,13 @@ Vercel이 만든 고정 production 도메인을 사용하거나 본인 소유 �
 
 dongryeollee1.github.io는 GitHub 소유 도메인이므로 Vercel의 커스텀 도메인처럼 DNS를 변경할 수 없다. 예를 들어 새 주소가 https://example.com이면 기존 /research/… 글 경로는 새 사이트에서도 유지하지만 기존 origin 방문자는 GitHub Pages에서 별도로 연결해야 한다.
 
-첫 검증 동안은 .github/workflows/build-jekyll.yml과 원본을 유지한다. 이 workflow는 기존처럼 master 변경을 Jekyll로 처리한다. 새 check-astro.yml은 검증만 수행하며 Pages 산출물을 덮어쓰지 않는다. Vercel 연결용 브랜치와 Production Branch를 구분한다.
+도메인 전환 전까지 GitHub Pages는 `main`의 저장소 루트에서 Jekyll 사이트를 계속 게시한다. 이 브랜치 소스는 GitHub의 내장 Pages 빌드로 처리된다. [GitHub Pages 게시 소스](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
 새 운영 주소의 정상 배포를 확인한 후, 같은 SITE_URL로 npm run build를 실행하고 node tools/create-legacy-bridge.mjs를 실행하면 dist-legacy/에 글별 연결 페이지를 만든다. 이 명령에도 같은 SITE_URL 환경 변수가 필요하다. 예를 들어 SITE_URL=https://example.com npm run build 다음 SITE_URL=https://example.com node tools/create-legacy-bridge.mjs 순서다. 대상 주소를 검증하며 원본·현재 배포·Git 브랜치를 변경하지 않는다.
 
 bridge는 각 글을 새 사이트의 같은 경로로 연결하고 기존 fragment를 전달한다. 모든 글을 새 홈으로 보내지 않는다. 태그·카테고리는 새 사이트의 호환 화면에서 대응한다. JS가 꺼져 있어도 안내 링크와 지연된 HTML 이동을 제공하지만 GitHub Pages 정적 HTML 이동은 HTTP 301/308과 같지 않다. RSS는 새 origin의 글 링크를 포함하는 XML로 유지한다.
 
-dist-legacy/를 검토한 후에만 Pages 설정과 workflow를 bridge용으로 전환한다. 최종 도메인이 확정되기 전에 Jekyll 자동 배포를 삭제하지 않는다. GitHub Pages를 GitHub Actions source로 바꾼다면 기존 Jekyll과 새 bridge 배포가 같은 Pages 환경을 동시에 갱신하지 않게 정리한다.
+새 운영 주소에서 기존 글 경로가 정상 응답하는지 확인하고 `dist-legacy/`를 검토한 뒤, 연결 페이지를 게시할 브랜치로 Pages 게시 소스를 변경한다.
 
 ## 캐시와 복구
 

@@ -15,7 +15,7 @@
 | 검색 | Pagefind, SearchDialog, search, src/scripts | 본문 색인, 빠른·전체 검색, 오류·빈 결과 구분 |
 | 이전 메뉴 | src/lib/legacy.ts, 기존 .html 경로 | 태그·카테고리 fragment·정적 대체 링크 |
 | 발견 | BaseLayout, feeds, sitemap, robots | 최종 origin, 유효 XML, Preview noindex |
-| 정적 배포 | vercel.json, check-astro.yml, tools/verify-build.mjs | npm 고정 설치, dist 출력, 전수 검사 |
+| 정적 배포 | vercel.json, tools/verify-build.mjs | Vercel 빌드에서 npm 고정 설치, dist 출력, 전수 검사 |
 | 기존 origin 전환 | tools/create-legacy-bridge.mjs | 최종 주소 확정 후 글별 bridge 별도 생성. 아직 배포하지 않음 |
 
 ## 확인된 검증
@@ -30,7 +30,7 @@
 
 Vercel Import, GitHub 접근 승인, Production Branch와 최종 주소 확정, SITE_URL 설정과 재배포가 필요하다. 커스텀 도메인은 해당 프로젝트가 제시하는 DNS 값을 설정한다. 계정 작업은 로컬 빌드 성공과 구분한다. 공개 배포·CDN HTTP 상태·DNS·이전 origin 전환은 배포 후 확인한다.
 
-Jekyll 운영 파일과 workflow는 복구·전환을 위해 보존하며 새 빌드에서는 읽지 않는다. 기존 미추적 사용자 작업은 유지한다. 서비스 코드를 변경하지 않았다는 과거 설계 문구는 계획 수립 당시 상태이며 현재 구현 파일과 구분한다.
+Astro 빌드와 배포는 Vercel에서 진행한다. `main`은 Production으로, 그 외 브랜치의 변경은 기본적으로 Preview로 빌드한다. 기존 주소는 GitHub Pages가 `main`의 Jekyll 사이트를 내장 빌드로 게시한다.
 
 ## 후속 범위
 

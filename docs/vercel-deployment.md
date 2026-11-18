@@ -4,7 +4,7 @@
 
 ## 준비된 구성
 
-사이트는 Markdown 원문과 메타데이터를 읽어 글·주제·시리즈·프로젝트 페이지를 정적으로 만든다. 관련 글과 작은 그래프의 데이터도 배포 전에 계산한다. Vercel Functions, 온톨로지 전용 DB, 임베딩 API 키, LLM API 키는 현재 배포에 필요하지 않다. 본문 검색은 함께 배포하는 Pagefind 색인을 사용한다.
+사이트는 Markdown 원문과 메타데이터를 읽어 글·주제·시리즈 페이지를 정적으로 만든다. 관련 글과 작은 그래프의 데이터도 배포 전에 계산한다. Vercel Functions, 온톨로지 전용 DB, 임베딩 API 키, LLM API 키는 현재 배포에 필요하지 않다. 본문 검색은 함께 배포하는 Pagefind 색인을 사용한다.
 
 | Vercel 항목 | 설정 |
 |---|---|
@@ -38,7 +38,7 @@ Vercel이 만든 고정 production 도메인을 사용하거나 본인 소유 �
 
 ## 배포 후 확인
 
-홈, 전체 글, 주제, 프로젝트, 소개를 열고 검색으로 오래된 글과 최신 연구를 각각 찾는다. 연구 그림 확대, 코드 복사, 모바일 목차, 관련 글 선택과 별도 글 이동, 어두운 테마를 확인한다. feed.xml, rss.xml, sitemap.xml의 주소가 최종 origin인지 확인하고 Google·Naver 검증 경로도 연다.
+홈, 전체 글, 주제, 소개를 열고 검색으로 오래된 글과 최신 연구를 각각 찾는다. 연구 그림 확대, 코드 복사, 모바일 목차, 관련 글 선택과 별도 글 이동, 어두운 테마를 확인한다. feed.xml, rss.xml, sitemap.xml의 주소가 최종 origin인지 확인하고 Google·Naver 검증 경로도 연다.
 
 생성된 파일·내부 링크·제목·기존 앵커 검사는 generated/build-verification.json으로 확인한다. 이 검사는 Vercel CDN의 HTTP 상태나 DNS 전환을 대신하지 않는다. 최종 도메인에서 대표 기존 .html 글 주소와 세 연구 permalink의 상태·canonical을 직접 확인한다. q·topic·type·sort·role·view·page 쿼리가 있는 요청은 vercel.json의 별도 조건부 응답 헤더로 X-Robots-Tag: noindex, follow를 제공한다. 이 조건은 로컬 정적 preview의 HTTP 헤더와 다를 수 있으므로 Vercel에서 직접 확인한다. 보고서는 외부 이미지와 출처 링크의 원격 응답을 전부 검사한 결과가 아니다.
 

@@ -1,32 +1,12 @@
 ---
+import { renderRelatedGraph } from '../lib/related-graph';
 import type { Article } from '../lib/types';
 interface Props { article: Article; articles: Article[] }
 const { article, articles } = Astro.props;
-const posts = new Map(articles.map(post => [post.id, post]));
-const related = article.related.map(ref => ({...ref, post: posts.get(ref.id)})).filter(ref => ref.post).slice(0,4);
-const positions = [[52,46],[222,43],[225,161],[55,170]];
-const shorten = (title: string) => {
-  const text = title.replace(/^\([^)]{1,40}\)\s*\d+(?:[-.]\d+)*[.\s]+/,'');
-  let label = '', width = 0;
-  for (const character of text) {
-    width += /[\u0000-\u00ff]/.test(character) ? .55 : 1;
-    if (width > 10) return label.trimEnd() + '…';
-    label += character;
-  }
-  return label;
-};
+const graph = renderRelatedGraph(article, new Map(articles.map(post => [post.id, post])));
 ---
-{related.length ? (
-  <div class="graph-wrap" data-graph={article.id} data-article-id={article.id}>
-    <svg viewBox="0 0 280 226" role="group" aria-label="관련 글 선택. 선택한 뒤 글 읽기 링크로 이동합니다.">
-      {related.map((_,i) => <line class="graph-line" x1="138" y1="108" x2={positions[i][0]} y2={positions[i][1]}/>)}
-      <g class="graph-node current selected" data-node={article.id} tabindex="0" role="button" aria-label="현재 글 선택" aria-pressed="true"><circle class="node-hit" cx="138" cy="108" r="24"/><circle cx="138" cy="108" r="23"/><text x="138" y="146" text-anchor="middle">현재 글</text></g>
-      {related.map((ref,i) => <g class="graph-node" data-node={ref.id} tabindex="0" role="button" aria-label={`${ref.post!.title} 선택`} aria-pressed="false"><circle class="node-hit" cx={positions[i][0]} cy={positions[i][1]} r="23"/><circle cx={positions[i][0]} cy={positions[i][1]} r="12"/><text x={positions[i][0]} y={positions[i][1]+31} text-anchor="middle">{shorten(ref.post!.title)}</text></g>)}
-    </svg>
-    <div class="graph-caption"><span>● 현재 글</span><span>○ 연결된 글</span></div>
-    <div class="related-preview" data-related-preview><span class="related-kicker">현재 읽는 글</span><h3 class="related-title">{article.title}</h3><p class="related-reason">주변 글을 선택하면 연결 이유를 확인할 수 있습니다.</p></div>
-    <details class="related-list"><summary>목록으로 보기</summary><ul>{related.map(ref => <li><a href={ref.post!.path}>{ref.post!.title}</a><p>{ref.reason}</p></li>)}</ul></details>
-  </div>
+{graph ? (
+  <div class="graph-wrap" set:html={graph} />
 ) : (
   <div class="related-empty"><p>아직 연결할 관련 글이 없습니다.</p>{article.conceptRefs[0] && <a href={`/topics/${article.conceptRefs[0].id}/`}>이 주제의 글 보기 ↗</a>}</div>
 )}

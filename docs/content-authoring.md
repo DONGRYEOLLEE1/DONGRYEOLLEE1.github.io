@@ -16,8 +16,7 @@
 | language | 실제 본문 기준 ko 또는 en |
 | contentType | research / paper-review / implementation / troubleshooting / note |
 | conceptRefs | 존재하는 개념 ID와 about / applies 역할 |
-| projectIds | 실제 소속이 확인된 프로젝트. 없으면 빈 배열 |
-| hero | 선택. src·alt·kind(photo/figure), 필요 시 caption |
+| hero | 선택. src·alt·kind(photo/figure) |
 | featured | 홈 대표 글로 선정한 경우만 true |
 
 날짜는 front matter 또는 파일명에서 읽고 실제 게시 의미를 유지한다. 수정일은 내용 변경을 확인한 경우만 지정하며 재배포일로 덮어쓰지 않는다. published: false인 글은 공개 글·검색·추천·feed·sitemap에서 제외해야 한다.
@@ -28,7 +27,7 @@ content/knowledge/concepts.json에서 이름·별칭·설명·상위 개념·분
 
 별칭에는 동의어와 표기 차이를 넣는다. 서로 다른 방법인 BM25와 Reranking을 하나의 동의어로 합치지 않는다. 상위 개념은 존재하는 ID만 참조하고 계층 순환을 만들지 않는다. 새 개념을 추가한 뒤 기존 추천도 함께 바뀌는지 확인한다.
 
-series.json의 orderedArticleIds는 연재 순서의 단일 원본이다. 날짜순과 별개로 실제 읽는 순서를 기록한다. projects.json에는 검증한 코드·모델·데모 주소만 추가하고 글의 projectIds로 소속을 연결한다. 프로젝트 양쪽에 글 목록을 따로 중복 편집하지 않는다. overrides.json은 pin·exclude나 명시 관계를 제어한다. 현재 파일의 실제 구조를 따르고 충돌을 수정한다.
+series.json의 orderedArticleIds는 연재 순서의 단일 원본이다. 날짜순과 별개로 실제 읽는 순서를 기록한다. overrides.json은 pin·exclude나 명시 관계를 제어한다. 현재 파일의 실제 구조를 따르고 충돌을 수정한다.
 
 ## 본문·이미지·코드
 

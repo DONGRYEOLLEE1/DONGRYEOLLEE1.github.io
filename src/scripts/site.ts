@@ -1,3 +1,4 @@
+import { renderRelatedGraph } from '../lib/related-graph';
 import type { Article, Registry } from '../lib/types';
 
 // The HTML remains the source of navigation and reading when JavaScript is unavailable.
@@ -12,10 +13,9 @@ const $ = <T extends Element = HTMLElement>(selector: string, root: ParentNode =
 const $$ = <T extends Element = HTMLElement>(selector: string, root: ParentNode = document) => [...root.querySelectorAll<T>(selector)];
 const escape = (value: unknown) => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]!));
 const labels: Record<string, string> = { research: '연구', 'paper-review': '논문 리뷰', implementation: '구현기', troubleshooting: '문제 해결', note: '학습 노트' };
-const date = (value: string) => value.slice(0, 10).replaceAll('-', '.');
-let data: SiteData = { articles: [], concepts: [], series: [], projects: [] };
+let data: SiteData = { articles: [], concepts: [], series: [] };
 try { data = JSON.parse($('#site-data')?.textContent || '{}'); } catch { /* Static HTML is still usable. */ }
-data.articles ||= []; data.concepts ||= []; data.series ||= []; data.projects ||= [];
+data.articles ||= []; data.concepts ||= []; data.series ||= [];
 const articles = new Map(data.articles.map(article => [article.id, article]));
 const concepts = new Map(data.concepts.map(concept => [concept.id, concept]));
 const normalizedPath = (path: string) => {
@@ -68,10 +68,17 @@ function relatedButton(article: PublicArticle) {
   return article.related?.length ? `<button type="button" class="card-related-trigger" data-related-open="${escape(article.id)}" aria-label="${escape(article.title)} 관련 글 보기" aria-haspopup="dialog" aria-expanded="false" aria-controls="related-dialog">···</button>` : '';
 }
 function card(article: PublicArticle, view: 'list' | 'grid', excerpt = ''): string {
-  const meta = `<span>${labels[article.contentType] || '학습 노트'}</span><time datetime="${escape(article.publishedAt)}">${date(article.publishedAt)}</time>${article.language === 'en' ? '<span class="language-label" aria-label="영문 글">EN</span>' : ''}`;
+  const grid = view === 'grid';
   const href = escape(article.path);
-  if (view === 'grid') return `<article class="archive-card ${article.hero ? '' : 'archive-card--text'}"><header class="archive-card-meta">${relatedButton(article)}${meta}</header>${article.hero ? `<a class="archive-card-media ${article.hero.kind === 'photo' ? 'is-photo' : ''}" href="${href}" tabindex="-1" aria-hidden="true"><img src="${escape(article.hero.src)}" alt="${escape(article.hero.alt)}" loading="lazy" decoding="async"></a>` : ''}<h2 class="archive-card-title"><a href="${href}" lang="${article.language}">${escape(article.title)}</a></h2>${article.hero ? '' : `<p class="archive-card-description">${escape(article.description)}</p>`}</article>`;
-  return `<article class="post-row"><div class="post-main"><div class="post-meta">${meta}${relatedButton(article)}</div><h2 class="post-title"><a href="${href}" lang="${article.language}">${escape(article.title)}</a></h2><p class="post-description${excerpt ? ' search-result-excerpt' : ''}">${excerpt ? textOnlyExcerpt(excerpt) : escape(article.description)}</p><div class="topic-chips">${article.conceptRefs.slice(0, 3).map(ref => `<a class="chip" href="/topics/${escape(ref.id)}/">${escape(concepts.get(ref.id)?.label || ref.id)}</a>`).join('')}</div></div><a class="row-arrow" href="${href}" aria-label="${escape(article.title)} 읽기">↗</a></article>`;
+  const heading = `<header class="post-card-heading"><h2 class="${grid ? 'archive-card-title' : 'post-title'}"><a href="${href}" lang="${article.language}">${escape(article.title)}</a></h2>${relatedButton(article)}</header>`;
+  if (grid) {
+    const media = article.hero ? `<a class="archive-card-media ${article.hero.kind === 'photo' ? 'is-photo' : ''}" href="${href}" tabindex="-1" aria-hidden="true"><img src="${escape(article.hero.src)}" alt="" loading="lazy" decoding="async"></a>` : '';
+    const description = article.hero ? '' : `<p class="archive-card-description" lang="${article.language}">${escape(article.description)}</p>`;
+    return `<article class="archive-card ${article.hero ? '' : 'archive-card--text'}">${media}${heading}${description}</article>`;
+  }
+  const description = excerpt ? textOnlyExcerpt(excerpt) : escape(article.description);
+  const chips = article.conceptRefs.slice(0, 3).map(ref => `<a class="chip" href="/topics/${escape(ref.id)}/">${escape(concepts.get(ref.id)?.label || ref.id)}</a>`).join('');
+  return `<article class="post-row">${heading}<p class="post-description${excerpt ? ' search-result-excerpt' : ''}" lang="${article.language}">${description}</p><div class="topic-chips">${chips}</div></article>`;
 }
 
 // Theme preferences remain independent of the system's current light/dark appearance.
@@ -131,7 +138,7 @@ async function quickSearch() {
     const hits = await searchArticles(query);
     if (version !== quickVersion || !searchDialog?.open) return;
     if (searchStatus) searchStatus.textContent = `${hits.length}개의 글을 찾았습니다.`;
-    searchResults.innerHTML = hits.length ? hits.slice(0, 6).map(({ article, excerpt }) => `<a class="search-result" href="${escape(article.path)}"><div class="search-result-meta">${labels[article.contentType]} · ${date(article.publishedAt)}</div><div class="search-result-title" lang="${article.language}">${escape(article.title)} <span aria-hidden="true">↗</span></div><p class="search-result-excerpt">${textOnlyExcerpt(excerpt) || escape(article.description)}</p></a>`).join('') + `<a class="all-search-results" href="/search/?q=${encodeURIComponent(query)}">전체 결과 보기 ↗</a>` : '<div class="empty-state"><p>조건에 맞는 글이 없어요.</p><a href="/topics/">주제로 찾아보기 ↗</a></div>';
+    searchResults.innerHTML = hits.length ? hits.slice(0, 6).map(({ article, excerpt }) => `<a class="search-result" href="${escape(article.path)}"><div class="search-result-title" lang="${article.language}">${escape(article.title)} <span aria-hidden="true">↗</span></div><p class="search-result-excerpt" lang="${article.language}">${textOnlyExcerpt(excerpt) || escape(article.description)}</p></a>`).join('') + `<a class="all-search-results" href="/search/?q=${encodeURIComponent(query)}">전체 결과 보기 ↗</a>` : '<div class="empty-state"><p>조건에 맞는 글이 없어요.</p><a href="/topics/">주제로 찾아보기 ↗</a></div>';
   } catch {
     if (version !== quickVersion || !searchDialog?.open) return;
     if (searchStatus) searchStatus.textContent = '검색을 불러오지 못했어요.';
@@ -368,29 +375,6 @@ document.addEventListener('input', event => {
   if (error) { error.hidden = true; error.textContent = ''; }
 });
 
-// A graph describes this article's outgoing recommendations. Selection never navigates.
-const graphSelections = new WeakMap<HTMLElement, string>();
-function updateGraph(root: HTMLElement, id: string, persist = false) {
-  const sourceId = root.dataset.graph || root.dataset.articleId || '';
-  const source = articles.get(sourceId), target = articles.get(id); if (!source || !target) return;
-  if (persist) graphSelections.set(root, id);
-  const preview = $('[data-related-preview]', root);
-  const reason = source.id === target.id ? '현재 읽고 있는 글입니다.' : source.related.find(item => item.id === target.id)?.reason;
-  if (!reason) return;
-  if (preview) preview.innerHTML = `<div class="related-kicker">${source.id === id ? '현재 글' : labels[target.contentType]}</div><h3 class="related-title" lang="${target.language}">${escape(target.title)}</h3><p class="related-reason">${escape(reason)}</p>${source.id === id ? '<p class="muted">주변 노드를 선택해 보세요.</p>' : `<a class="arrow-link" href="${escape(target.path)}">글 읽기 ↗</a>`}`;
-  $$<HTMLElement>('[data-node]', root).forEach(node => { const on = node.dataset.node === (persist ? id : graphSelections.get(root) || source.id); node.classList.toggle('selected', on); node.setAttribute('aria-pressed', String(on)); });
-}
-function shortGraphLabel(title: string) {
-  const text = title.replace(/^\([^)]{1,40}\)\s*\d+(?:[-.]\d+)*[.\s]+/, '');
-  let label = '', width = 0;
-  for (const character of text) { width += /[\u0000-\u00ff]/.test(character) ? .55 : 1; if (width > 10) return label.trimEnd() + '…'; label += character; }
-  return label;
-}
-function graphHtml(source: PublicArticle) {
-  const related = source.related.map(item => ({ ...item, article: articles.get(item.id) })).filter(item => !!item.article).slice(0, 4);
-  const positions = [[52, 45], [216, 43], [223, 157], [55, 166]];
-  return `<div class="graph-wrap" data-graph="${escape(source.id)}"><svg viewBox="0 0 280 220" role="group" aria-label="이 글에서 이어 읽을 글 선택">${related.map((_, i) => `<line class="graph-line" x1="138" y1="105" x2="${positions[i][0]}" y2="${positions[i][1]}"></line>`).join('')}<g class="graph-node current selected" data-node="${escape(source.id)}" tabindex="0" role="button" aria-label="현재 글 선택" aria-pressed="true"><circle cx="138" cy="105" r="23"></circle><text x="138" y="144" text-anchor="middle">현재 글</text></g>${related.map((item, i) => { const title = item.article!.title, x = positions[i][0], y = positions[i][1]; return `<g class="graph-node" data-node="${escape(item.id)}" tabindex="0" role="button" aria-label="${escape(title)} 선택" aria-pressed="false"><circle class="node-hit" cx="${x}" cy="${y}" r="22"></circle><circle cx="${x}" cy="${y}" r="12"></circle><text x="${x}" y="${y + 29}" text-anchor="middle">${escape(shortGraphLabel(title))}</text></g>`; }).join('')}</svg><div class="graph-caption"><span>● 현재 글</span><span>○ 연결된 글</span></div><div class="related-preview" data-related-preview></div></div>`;
-}
 const relatedDialog = $<HTMLDialogElement>('#related-dialog');
 let relatedFocus: HTMLElement | null = null;
 function closeRelated(restore = true) {
@@ -404,11 +388,12 @@ function openRelated(id: string, trigger: HTMLElement) {
   if (relatedDialog.open && relatedFocus === trigger) { closeRelated(); return; }
   closeRelated(false);
   const source = articles.get(id), content = $('[data-related-content], .related-dialog-content', relatedDialog); if (!source?.related.length || !content) return;
+  const graph = renderRelatedGraph(source, articles);
+  if (!graph) return;
   relatedFocus = trigger;
-  content.innerHTML = `<p class="related-source-summary">${escape(source.description)}</p>${graphHtml(source)}<a class="related-dialog-source" href="${escape(source.path)}">이 글 열기 ↗</a><ul class="sr-only">${source.related.map(item => { const target = articles.get(item.id); return target ? `<li><a href="${escape(target.path)}">${escape(target.title)}</a> — ${escape(item.reason)}</li>` : ''; }).join('')}</ul>`;
+  content.innerHTML = `<div class="graph-wrap">${graph}</div>`;
   trigger.setAttribute('aria-expanded', 'true'); trigger.setAttribute('aria-label', `${source.title} 관련 글 닫기`);
   relatedDialog.show();
-  const graph = $<HTMLElement>('[data-graph]', content); if (graph) updateGraph(graph, source.id, true);
   const anchor = trigger.getBoundingClientRect(), box = relatedDialog.getBoundingClientRect();
   relatedDialog.style.left = Math.max(16, Math.min(anchor.left, innerWidth - box.width - 16)) + 'px';
   relatedDialog.style.top = Math.max(12, Math.min(anchor.bottom + 8, innerHeight - box.height - 12)) + 'px';
@@ -416,7 +401,6 @@ function openRelated(id: string, trigger: HTMLElement) {
 }
 relatedDialog?.addEventListener('cancel', event => { event.preventDefault(); closeRelated(); });
 window.addEventListener('resize', () => closeRelated(false));
-$$<HTMLElement>('[data-graph]').forEach(root => { const sourceId = root.dataset.graph || root.dataset.articleId; if (sourceId) updateGraph(root, sourceId, true); });
 
 // Reading tools enhance the original code and image elements without hiding the source.
 const body = $('[data-article-body], .article-body');
@@ -500,7 +484,6 @@ document.addEventListener('click', event => {
   const suggestion = target.closest<HTMLElement>('[data-search-suggestion]'); if (suggestion && searchInput) { searchInput.value = suggestion.dataset.searchSuggestion || ''; void quickSearch(); searchInput.focus(); return; }
   if (target.closest('[data-list-retry]')) { retrySearch(); void renderListing(); return; }
   if (target.closest('[data-full-search-retry]')) { retrySearch(); void renderFullSearch(); return; }
-  const node = target.closest<HTMLElement>('[data-node]'), graph = node?.closest<HTMLElement>('[data-graph]'); if (node && graph) { updateGraph(graph, node.dataset.node!, true); return; }
   const zoom = target.closest<HTMLElement>('[data-image-zoom], [data-image-open]'); if (zoom) { const mouse = event as MouseEvent; if (zoom instanceof HTMLAnchorElement && (mouse.metaKey || mouse.ctrlKey || mouse.shiftKey || mouse.altKey || mouse.button !== 0)) return; event.preventDefault(); openImage(zoom); return; }
   if (target.closest('[data-close-image]')) { closeImage(); return; }
   if (target.closest('button[data-image-fit]')) { setImageMode(false); return; }
@@ -518,12 +501,7 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape') { if (relatedDialog?.open) { event.preventDefault(); closeRelated(); return; } if (searchDialog?.open) { event.preventDefault(); closeSearch(); return; } if (imageDialog?.open) { event.preventDefault(); closeImage(); return; } if (mobileMenu && !mobileMenu.hidden) { closeMobileMenu(); mobileToggle?.focus(); } }
   const element = event.target instanceof Element ? event.target : null;
   if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k' && !element?.closest('input,textarea,select,[contenteditable=true]')) { event.preventDefault(); openSearch(); }
-  const node = element?.closest<HTMLElement>('[data-node]'), graph = node?.closest<HTMLElement>('[data-graph]'); if (node && graph && (event.key === 'Enter' || event.key === ' ')) { event.preventDefault(); updateGraph(graph, node.dataset.node!, true); }
 });
-document.addEventListener('pointerover', event => { const node = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-node]') : null, root = node?.closest<HTMLElement>('[data-graph]'); if (node && root && !document.activeElement?.closest('[data-related-preview]')) updateGraph(root, node.dataset.node!); });
-document.addEventListener('focusin', event => { const node = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-node]') : null, root = node?.closest<HTMLElement>('[data-graph]'); if (node && root) updateGraph(root, node.dataset.node!); });
-document.addEventListener('pointerout', event => { const root = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-graph]') : null; if (root && !root.contains(event.relatedTarget as Node) && !root.contains(document.activeElement)) updateGraph(root, graphSelections.get(root) || root.dataset.graph || root.dataset.articleId || ''); });
-document.addEventListener('focusout', event => { const root = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-graph]') : null; if (root && !root.contains(event.relatedTarget as Node) && !root.matches(':hover')) updateGraph(root, graphSelections.get(root) || root.dataset.graph || root.dataset.articleId || ''); });
 window.addEventListener('popstate', () => { const work = fullSearch ? renderFullSearch() : listing ? renderListing() : Promise.resolve(); filterTopics(); void work.then(() => { if (typeof history.state?.scrollY === 'number') requestAnimationFrame(() => scrollTo(0, history.state.scrollY)); }); });
 window.addEventListener('pagehide', rememberScroll);
 void renderListing(); void renderFullSearch(); filterTopics();

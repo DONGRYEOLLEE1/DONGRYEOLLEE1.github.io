@@ -16,12 +16,11 @@ const mapUnique = (values, name) => {
 };
 
 /** Check both ontology structure and references before emitting any public recommendation. */
-export function validateKnowledge(articles, concepts, series, overrides = {}, projects) {
+export function validateKnowledge(articles, concepts, series, overrides = {}) {
   const articleMap = mapUnique(articles, 'article');
   const publicIds = new Set(publicOnly(articles).map(article => article.id));
   const conceptMap = mapUnique(concepts, 'concept');
   const seriesMap = mapUnique(series, 'series');
-  const projectMap = projects ? mapUnique(projects, 'project') : null;
   for (const concept of concepts) {
     if (!concept.label || !concept.description || !Array.isArray(concept.aliases) || !Array.isArray(concept.broaderIds)) fail(`invalid concept ${concept.id}`);
     if (new Set(concept.broaderIds).size !== concept.broaderIds.length) fail(`duplicate broader relation ${concept.id}`);
@@ -49,7 +48,6 @@ export function validateKnowledge(articles, concepts, series, overrides = {}, pr
       if (refs.has(key)) fail(`duplicate concept role ${key} in ${article.id}`);
       refs.add(key);
     }
-    if (projectMap) for (const id of article.projectIds || []) if (!projectMap.has(id)) fail(`unknown project ${id} in ${article.id}`);
   }
   const membership = new Map();
   for (const item of seriesMap.values()) {
@@ -170,7 +168,6 @@ export function generateRelated(inputArticles, concepts, series, overrides = {})
       if (target.id === source.id || excluded.has(target.id)) continue;
       const sameSeries = ownSeries && seriesInfo.get(target.id)?.id === ownSeries.id;
       const seriesDistance = sameSeries ? seriesInfo.get(target.id).index - ownSeries.index : 0;
-      const sameProject = (source.projectIds || []).some(id => (target.projectIds || []).includes(id));
       const cited = citations.get(source.id).has(target.id), citedBy = citations.get(target.id).has(source.id);
       const buildsOn = (overrides.buildsOn?.[source.id] || []).includes(target.id);
       const builtBy = (overrides.buildsOn?.[target.id] || []).includes(source.id);
@@ -178,14 +175,13 @@ export function generateRelated(inputArticles, concepts, series, overrides = {})
       const specific = shared.filter(id => !BROAD.has(id)).sort((a, b) => conceptIdf(b) - conceptIdf(a) || a.localeCompare(b));
       const pinned = pins.includes(target.id);
       // Shared generic categories or incidental words alone never create a relation.
-      if (!specific.length && !sameSeries && !sameProject && !cited && !citedBy && !buildsOn && !builtBy && !pinned) continue;
+      if (!specific.length && !sameSeries && !cited && !citedBy && !buildsOn && !builtBy && !pinned) continue;
       // Directed coverage avoids penalizing a useful implementation for its additional topics.
       const conceptual = .65 * weightedCoverage(conceptVectors.get(source.id), conceptVectors.get(target.id), conceptIdf)
         + .35 * weightedJaccard(conceptVectors.get(source.id), conceptVectors.get(target.id), conceptIdf);
       const lexical = weightedJaccard(textVectors.get(source.id), textVectors.get(target.id), textIdf);
       let score = .72 * conceptual + .12 * lexical;
       if (sameSeries) score += (Math.abs(seriesDistance) === 1 ? .58 : .26 / Math.abs(seriesDistance));
-      if (sameProject) score += .38;
       if (cited) score += .46;
       if (citedBy) score += .28;
       if (buildsOn || builtBy) score += .6;
@@ -197,7 +193,6 @@ export function generateRelated(inputArticles, concepts, series, overrides = {})
       else if (sameSeries) reason = seriesDistance === 1 ? '같은 시리즈의 다음 글' : seriesDistance === -1 ? '같은 시리즈의 이전 글' : '같은 시리즈의 다른 글';
       else if (cited) reason = '본문에서 연결한 글';
       else if (citedBy) reason = '이 글을 본문에서 연결한 글';
-      else if (sameProject) reason = '같은 프로젝트의 기록';
       else if (label && target.conceptRefs.some(r => r.id === concept && r.role === 'applies') && source.conceptRefs.some(r => r.id === concept && r.role === 'about')) reason = `적용 사례 · ${label}`;
       else if (label && source.conceptRefs.some(r => r.id === concept && r.role === 'applies') && target.conceptRefs.some(r => r.id === concept && r.role === 'about')) reason = `개념 설명 · ${label}`;
       else if (label) reason = `공통 개념 · ${label}`;

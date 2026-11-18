@@ -9,5 +9,4 @@ export function getRegistry(): Registry {
 export const getArticles = () => getRegistry().articles;
 export const getConcepts = () => getRegistry().concepts;
 export const getSeries = () => getRegistry().series;
-export const getProjects = () => getRegistry().projects;
 export const getArticleById = (id: string) => getArticles().find(article => article.id === id);

@@ -233,7 +233,6 @@ export async function buildContent() {
   const metadata = await readJson('content/article-metadata.json');
   const concepts = await readJson('content/knowledge/concepts.json');
   const series = await readJson('content/knowledge/series.json');
-  const projects = await readJson('content/knowledge/projects.json');
   const overrides = await readJson('content/knowledge/overrides.json');
   const filenames = (await readdir(resolve(ROOT,'_posts'))).filter(f=>/\.md$/i.test(f)).sort();
   const parsed = [];
@@ -248,9 +247,9 @@ export async function buildContent() {
     const publishedAt = explicitDate || filename.slice(0,10);
     const article = { id:meta.id, sourcePath, path:legacyPath(filename,data), title, description:meta.description,
       publishedAt, language:meta.language || data.lang || 'ko', contentType:meta.contentType,
-      conceptRefs:meta.conceptRefs, projectIds:meta.projectIds || [], featured:Boolean(meta.featured), ...(meta.hero?{hero:meta.hero}:{}),
+      conceptRefs:meta.conceptRefs, featured:Boolean(meta.featured), ...(meta.hero?{hero:meta.hero}:{}),
       ...(meta.updatedAt?{updatedAt:meta.updatedAt}:{}), legacyCategories:strings(data.categories ?? data.category),legacyTags:strings(data.tags),
-      readingMinutes:0, html:'', headings:[], plainText:'',related:[], publicationState:'published' };
+      html:'', headings:[], plainText:'',related:[], publicationState:'published' };
     parsed.push({article,source,content,filename});
   }
   const sourceMap = new Map(parsed.map(({article,filename})=>[basename(filename,'.md'),article]));
@@ -266,8 +265,6 @@ export async function buildContent() {
     const output = await renderMarkdown(content,article,sourceMap);
     article.html = String(output);
     article.plainText = article.html.replace(/<[^>]+>/g,' ').replace(/&(?:[a-z]+|#\d+);/gi,' ').replace(/\s+/g,' ').trim();
-    const koChars=(article.plainText.match(/[가-힣]/g)||[]).length; const latinWords=(article.plainText.match(/[A-Za-z0-9_]+/g)||[]).length;
-    article.readingMinutes = Math.max(1,Math.ceil(koChars/450 + latinWords/220));
     if (/<(?:script|style|iframe|object|embed)[\s>]/i.test(article.html)) throw new Error(`Unsafe active HTML remains in ${article.sourcePath}`);
     if (article.html.includes('katex-error')) report.warnings.push({type:'math-render-error',sourcePath:article.sourcePath});
     for (const message of output.messages) report.warnings.push({type:'markdown-message',sourcePath:article.sourcePath,message:message.reason});
@@ -275,12 +272,12 @@ export async function buildContent() {
     report.articles.push({id:article.id,sourcePath:article.sourcePath,canonicalPath:article.path,outputPath,sourceDigest:digest(source),headingIds:article.headings.map(h=>h.id),legacyHeadingIds:article.legacyHeadingIds,sourceResources:sourceResources.get(article.id),pathEvidence:source.includes('permalink:')?'explicit front matter permalink':'Jekyll default date/category/filename URL; live verification pending'});
   }
   const rawArticles=parsed.map(p=>p.article);
-  validateKnowledge(rawArticles,concepts,series,overrides,projects);
+  validateKnowledge(rawArticles,concepts,series,overrides);
   const articles=generateRelated(rawArticles,concepts,series,overrides).sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt)||a.id.localeCompare(b.id));
-  const registry={articles,concepts,series,projects};
+  const registry={articles,concepts,series};
   await writeFile(resolve(ROOT,'generated/registry.json'),JSON.stringify(registry));
   await writeFile(resolve(ROOT,'generated/url-manifest.json'),JSON.stringify({version:1,articles:report.articles.map(({sourceResources,...rest})=>rest)},null,2)+'\n');
   await writeFile(resolve(ROOT,'generated/migration-report.json'),JSON.stringify(report,null,2)+'\n');
-  console.log(JSON.stringify({articles:articles.length,concepts:concepts.length,series:series.length,projects:projects.length,headings:articles.reduce((n,a)=>n+a.headings.length,0),warnings:report.warnings.length,extractedImages:report.extractedImages.length}));
+  console.log(JSON.stringify({articles:articles.length,concepts:concepts.length,series:series.length,headings:articles.reduce((n,a)=>n+a.headings.length,0),warnings:report.warnings.length,extractedImages:report.extractedImages.length}));
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await buildContent();

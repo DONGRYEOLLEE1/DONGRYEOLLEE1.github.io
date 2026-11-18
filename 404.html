@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>새 블로그로 이동</title>
+<script>
+const destination = new URL('https://dongryeol-tech-blog.vercel.app/');
+const prefix = '/tech-blog/';
+if (window.location.pathname.startsWith(prefix)) {
+  destination.pathname = '/' + window.location.pathname.slice(prefix.length).replace(/^\/+/, '');
+  destination.search = window.location.search;
+  destination.hash = window.location.hash;
+  window.location.replace(destination.href);
+}
+</script>
+</head>
+<body>
+<main>
+<h1>새 블로그로 이동</h1>
+<p>주소가 바뀌었습니다. 새 블로그에서 글을 읽을 수 있습니다.</p>
+<p><a href="https://dongryeol-tech-blog.vercel.app/">새 블로그로 이동</a></p>
+</main>
+</body>
+</html>

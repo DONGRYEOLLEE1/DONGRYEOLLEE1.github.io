@@ -1,0 +1,10 @@
+{
+  "/objectdetection/2022/01/05/ObjectDetection.html": {
+    "articleId": "object-detection-basics",
+    "reason": "Overfeat 원문이 사용하던 옛 분류 경로를 현재 원본의 CV 분류 경로로 연결한다."
+  },
+  "/objectdetection/2022/01/06/R-CNN.html": {
+    "articleId": "r-cnn",
+    "reason": "Overfeat 원문의 옛 분류 경로를 현재 PaperReview 경로로 연결한다. 기존 h-nmsnon-maximum-suppression 절 주소는 유지한다."
+  }
+}

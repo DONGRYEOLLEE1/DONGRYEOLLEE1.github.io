@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1250" viewBox="0 0 1000 1250" role="img" aria-labelledby="title desc">
+  <title id="title">콘텐츠에서 관련 글 탐색까지</title>
+  <desc id="desc">작성자가 관리하는 게시글과 개념·시리즈·추천 예외를 공개 글 레지스트리에서 검증한다. 사실 관계와 추천 관계를 구분해 빌드한 후 정적 HTML과 JSON으로 만들어 Vercel에서 제공한다. 현재 게시글은 113편이며 전수 비교할 글 쌍은 6,328개다.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#68736e"/></marker>
+    <style>
+      text {font-family:"Apple SD Gothic Neo","Noto Sans CJK KR","Noto Sans",Arial,sans-serif;fill:#172821}
+      .heading {font-size:34px;font-weight:700}
+      .body {font-size:27px}
+      .small {font-size:25px;fill:#52625a}
+      .mono {font-family:"SFMono-Regular",Consolas,monospace;font-size:26px}
+      .step {font-size:25px;font-weight:700;fill:#ffffff}
+      .link {fill:none;stroke:#68736e;stroke-width:3;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1000" height="1250" rx="20" fill="#faf9f5"/>
+  <text x="56" y="53" class="heading">콘텐츠에서 관련 글 탐색까지</text>
+  <text x="56" y="91" class="small">113편 · 글 쌍 6,328개 · 빌드 시 산출하는 정적 구조</text>
+
+  <rect x="56" y="126" width="888" height="151" rx="16" fill="#ffffff" stroke="#cbd4cc" stroke-width="2"/>
+  <circle cx="91" cy="165" r="21" fill="#225b46"/><text x="84" y="174" class="step">1</text>
+  <text x="129" y="176" class="heading">작성자가 관리하는 원본</text>
+  <text x="88" y="222" class="mono">_posts/*.md + concepts / series / overrides</text>
+  <text x="88" y="255" class="small">본문 · 개념 사전 · 시리즈 순서 · 추천 고정/제외</text>
+
+  <path d="M500 278 L500 315" class="link"/>
+  <rect x="56" y="326" width="888" height="150" rx="16" fill="#ffffff" stroke="#cbd4cc" stroke-width="2"/>
+  <circle cx="91" cy="365" r="21" fill="#225b46"/><text x="84" y="374" class="step">2</text>
+  <text x="129" y="376" class="heading">검증된 공개 글 레지스트리</text>
+  <text x="88" y="421" class="body">공개 여부 · 불변 ID · canonical URL · 개념 ID 검증</text>
+  <text x="88" y="454" class="small">본문·검색·관련 글·sitemap이 같은 공개 목록을 사용</text>
+
+  <path d="M500 477 L500 514" class="link"/>
+  <rect x="56" y="525" width="888" height="240" rx="16" fill="#ffffff" stroke="#cbd4cc" stroke-width="2"/>
+  <circle cx="91" cy="564" r="21" fill="#225b46"/><text x="84" y="573" class="step">3</text>
+  <text x="129" y="575" class="heading">관계 그래프와 추천 점수 생성</text>
+  <rect x="80" y="600" width="407" height="137" rx="10" fill="#ecf4ed"/>
+  <text x="103" y="635" class="body" font-weight="700">검토한 사실 관계</text>
+  <text x="103" y="676" class="mono">Article → Concept</text>
+  <text x="103" y="713" class="small">주제 · 적용 기술 · 시리즈 소속</text>
+  <rect x="505" y="600" width="415" height="137" rx="10" fill="#efedf6"/>
+  <text x="528" y="635" class="body" font-weight="700">산출한 추천 관계</text>
+  <text x="528" y="676" class="mono">Article ⇢ Article</text>
+  <text x="528" y="713" class="small">공통 개념 · 어휘 · 검토한 연결</text>
+
+  <path d="M500 766 L500 803" class="link"/>
+  <rect x="56" y="814" width="888" height="150" rx="16" fill="#ffffff" stroke="#cbd4cc" stroke-width="2"/>
+  <circle cx="91" cy="853" r="21" fill="#225b46"/><text x="84" y="862" class="step">4</text>
+  <text x="129" y="864" class="heading">정적 HTML과 JSON 산출</text>
+  <text x="88" y="909" class="body">관련 글 링크 · 추천 이유 · 글별 소형 그래프</text>
+  <text x="88" y="942" class="small">원본 버전과 함께 생성 · 링크 검증 후 하나의 배포로 확정</text>
+
+  <path d="M500 965 L500 1002" class="link"/>
+  <rect x="56" y="1013" width="888" height="125" rx="16" fill="#e7eee8" stroke="#9bad9d" stroke-width="2"/>
+  <circle cx="91" cy="1052" r="21" fill="#225b46"/><text x="84" y="1061" class="step">5</text>
+  <text x="129" y="1063" class="heading">Vercel에서 글과 탐색 UI 제공</text>
+  <text x="88" y="1108" class="small">방문 시 LLM·벡터 DB 호출 없이 읽고 이동</text>
+
+  <line x1="56" x2="944" y1="1170" y2="1170" stroke="#cbd4cc" stroke-width="2"/>
+  <text x="56" y="1206" class="small">사실 관계와 추천 관계는 별도 보관합니다.</text>
+  <text x="56" y="1238" class="small">“함께 읽을 글”은 연구 선후관계나 기술적 의존성을 뜻하지 않습니다.</text>
+</svg>

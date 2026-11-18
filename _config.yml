@@ -195,6 +195,10 @@ defaults:
 #   redirect_uri: "Your redirect url"   # If you use a custom domain name
 
 # Build settings
+# Astro front matter is JavaScript and cannot be parsed by Jekyll.
+exclude:
+  - src
+
 # highlighter: none
 markdown: kramdown
 kmarkdown:

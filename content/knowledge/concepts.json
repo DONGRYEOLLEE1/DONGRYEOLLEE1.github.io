@@ -1,0 +1,594 @@
+[
+  {
+    "id": "transformer",
+    "label": "Transformer",
+    "aliases": [
+      "트랜스포머",
+      "Transformer architecture"
+    ],
+    "description": "어텐션을 중심으로 시퀀스를 처리하는 모델 구조와 학습 방식을 다룹니다.",
+    "broaderIds": [],
+    "area": "모델 구조"
+  },
+  {
+    "id": "object-detection",
+    "label": "Object Detection",
+    "aliases": [
+      "ObjectDetection",
+      "객체 탐지"
+    ],
+    "description": "이미지에서 물체의 위치와 종류를 찾는 검출 모델을 다룹니다.",
+    "broaderIds": [],
+    "area": "비전·멀티모달"
+  },
+  {
+    "id": "cv-evaluation",
+    "label": "비전 모델 평가",
+    "aliases": [
+      "비전 평가",
+      "객체 검출 평가"
+    ],
+    "description": "객체 검출의 정확도와 실제 시스템의 오류를 측정하는 기준을 살펴봅니다.",
+    "broaderIds": [],
+    "area": "비전·멀티모달"
+  },
+  {
+    "id": "cnn",
+    "label": "Convolutional Networks",
+    "aliases": [
+      "CNN",
+      "합성곱 신경망",
+      "ConvNet"
+    ],
+    "description": "합성곱 모델의 구조, 크기 확장과 학습 효율을 다룹니다.",
+    "broaderIds": [],
+    "area": "모델 구조"
+  },
+  {
+    "id": "vision-transformer",
+    "label": "Vision Transformer",
+    "aliases": [
+      "ViT",
+      "비전 트랜스포머"
+    ],
+    "description": "이미지 패치와 어텐션을 사용하는 비전 모델을 살펴봅니다.",
+    "broaderIds": [
+      "transformer"
+    ],
+    "area": "비전·멀티모달"
+  },
+  {
+    "id": "recurrent-networks",
+    "label": "Recurrent Networks",
+    "aliases": [
+      "순환 신경망",
+      "RNN"
+    ],
+    "description": "이전 상태를 전달하며 시퀀스를 처리하는 모델 구조를 다룹니다.",
+    "broaderIds": [],
+    "area": "모델 구조"
+  },
+  {
+    "id": "contextual-embeddings",
+    "label": "문맥 표현 학습",
+    "aliases": [
+      "contextual embeddings",
+      "문맥 임베딩"
+    ],
+    "description": "주변 문맥에 따라 달라지는 토큰 표현과 사전학습 목적을 다룹니다.",
+    "broaderIds": [],
+    "area": "모델 구조"
+  },
+  {
+    "id": "pretraining",
+    "label": "언어모델 사전학습",
+    "aliases": [
+      "pre-training",
+      "사전학습"
+    ],
+    "description": "기반 언어모델의 데이터 구성, 학습 방식과 모델 설계를 살펴봅니다.",
+    "broaderIds": [],
+    "area": "모델 학습"
+  },
+  {
+    "id": "in-context-learning",
+    "label": "In-Context Learning",
+    "aliases": [
+      "ICL",
+      "인컨텍스트 학습"
+    ],
+    "description": "프롬프트와 제한된 예시로 새로운 작업을 수행하는 방법을 다룹니다.",
+    "broaderIds": [],
+    "area": "모델 학습"
+  },
+  {
+    "id": "prompt-engineering",
+    "label": "Prompt Engineering",
+    "aliases": [
+      "프롬프트 엔지니어링"
+    ],
+    "description": "지시문·문맥·입출력 형식이 모델 응답에 미치는 영향을 살펴봅니다.",
+    "broaderIds": [],
+    "area": "에이전트·응용"
+  },
+  {
+    "id": "chain-of-thought",
+    "label": "Chain of Thought",
+    "aliases": [
+      "CoT",
+      "연쇄 사고"
+    ],
+    "description": "중간 추론 과정의 생성과 그 길이·품질의 관계를 다룹니다.",
+    "broaderIds": [
+      "prompt-engineering"
+    ],
+    "area": "모델 학습"
+  },
+  {
+    "id": "distributed-training",
+    "label": "분산 학습",
+    "aliases": [
+      "분산 학습",
+      "distributed training"
+    ],
+    "description": "여러 장치에 모델·옵티마이저 상태와 계산을 나누는 학습 구성을 다룹니다.",
+    "broaderIds": [],
+    "area": "학습·추론 인프라"
+  },
+  {
+    "id": "peft",
+    "label": "Parameter-Efficient Fine-Tuning",
+    "aliases": [
+      "PEFT",
+      "매개변수 효율적 미세조정"
+    ],
+    "description": "일부 파라미터나 작은 추가 모듈만 학습하는 미세조정 방법을 비교합니다.",
+    "broaderIds": [
+      "finetuning"
+    ],
+    "area": "모델 학습"
+  },
+  {
+    "id": "lora",
+    "label": "LoRA",
+    "aliases": [
+      "Low-Rank Adaptation",
+      "로라"
+    ],
+    "description": "낮은 랭크의 가중치 갱신과 그 변형을 이용한 미세조정을 다룹니다.",
+    "broaderIds": [
+      "peft"
+    ],
+    "area": "모델 학습"
+  },
+  {
+    "id": "qlora",
+    "label": "QLoRA",
+    "aliases": [
+      "큐로라",
+      "quantized LoRA"
+    ],
+    "description": "양자화한 기반 모델과 LoRA 어댑터로 학습 메모리를 줄이는 방법을 다룹니다.",
+    "broaderIds": [
+      "peft",
+      "quantization"
+    ],
+    "area": "모델 학습"
+  },
+  {
+    "id": "quantization",
+    "label": "Quantization",
+    "aliases": [
+      "양자화"
+    ],
+    "description": "모델의 수치 표현을 줄이는 방법과 정확도·메모리·실행 조건을 살펴봅니다.",
+    "broaderIds": [],
+    "area": "학습·추론 인프라"
+  },
+  {
+    "id": "ia3",
+    "label": "IA³",
+    "aliases": [
+      "IA3",
+      "Infused Adapter by Inhibiting and Amplifying Activations"
+    ],
+    "description": "학습 가능한 벡터로 활성값을 조절하는 PEFT 방법과 구현을 다룹니다.",
+    "broaderIds": [
+      "peft"
+    ],
+    "area": "모델 학습"
+  },
+  {
+    "id": "prompt-tuning",
+    "label": "Prompt Tuning",
+    "aliases": [
+      "소프트 프롬프트 학습",
+      "soft prompt tuning"
+    ],
+    "description": "모델을 고정하고 연속적인 프롬프트 표현을 학습하는 방법을 살펴봅니다.",
+    "broaderIds": [
+      "peft"
+    ],
+    "area": "모델 학습"
+  },
+  {
+    "id": "data-preparation",
+    "label": "학습 데이터 준비",
+    "aliases": [
+      "학습 데이터 전처리",
+      "데이터 증강"
+    ],
+    "description": "학습용 텍스트를 정리·증강하고 품질을 확인하는 과정을 다룹니다.",
+    "broaderIds": [],
+    "area": "모델 학습"
+  },
+  {
+    "id": "tokenization",
+    "label": "Tokenization",
+    "aliases": [
+      "토큰화",
+      "tokenizer",
+      "토크나이저"
+    ],
+    "description": "텍스트를 모델 입력으로 바꾸는 과정과 입력 길이·자료형 문제를 다룹니다.",
+    "broaderIds": [],
+    "area": "모델 학습"
+  },
+  {
+    "id": "reinforcement-learning",
+    "label": "언어모델 강화학습",
+    "aliases": [
+      "강화학습",
+      "언어모델 RL"
+    ],
+    "description": "보상과 피드백을 이용해 언어모델의 응답 정책을 조정하는 방법을 다룹니다.",
+    "broaderIds": [],
+    "area": "모델 학습"
+  },
+  {
+    "id": "model-alignment",
+    "label": "Model Alignment",
+    "aliases": [
+      "모델 정렬",
+      "alignment"
+    ],
+    "description": "모델의 응답을 지시·선호·안전 원칙에 맞추는 방법을 살펴봅니다.",
+    "broaderIds": [],
+    "area": "모델 학습"
+  },
+  {
+    "id": "mixture-of-experts",
+    "label": "Mixture of Experts",
+    "aliases": [
+      "MoE",
+      "혼합 전문가"
+    ],
+    "description": "입력에 따라 일부 전문가를 활성화하는 모델 구성을 다룹니다.",
+    "broaderIds": [],
+    "area": "모델 구조"
+  },
+  {
+    "id": "python-typing",
+    "label": "Python Typing",
+    "aliases": [
+      "type annotation",
+      "타입 어노테이션",
+      "typing",
+      "tying"
+    ],
+    "description": "파이썬의 타입 표기와 자료형 계약을 읽고 작성하는 방법을 다룹니다.",
+    "broaderIds": [
+      "python-language"
+    ],
+    "area": "개발·운영"
+  },
+  {
+    "id": "python-language",
+    "label": "Python 언어 기능",
+    "aliases": [
+      "파이썬 문법",
+      "Python language"
+    ],
+    "description": "함수·상속·반복·열거형 같은 파이썬 언어 기능을 예제로 정리합니다.",
+    "broaderIds": [],
+    "area": "개발·운영"
+  },
+  {
+    "id": "python-environment",
+    "label": "Python 실행 환경",
+    "aliases": [
+      "파이썬 환경",
+      "가상환경"
+    ],
+    "description": "패키지 설치와 가상환경·런타임의 호환 문제를 다룹니다.",
+    "broaderIds": [],
+    "area": "개발·운영"
+  },
+  {
+    "id": "testing",
+    "label": "Testing",
+    "aliases": [
+      "테스트",
+      "코드 검증"
+    ],
+    "description": "코드의 가정과 동작을 검증하는 테스트 작성 방법을 살펴봅니다.",
+    "broaderIds": [],
+    "area": "개발·운영"
+  },
+  {
+    "id": "pytorch-tensors",
+    "label": "PyTorch Tensors",
+    "aliases": [
+      "PyTorch 텐서",
+      "torch tensor"
+    ],
+    "description": "텐서의 차원·형태·메모리 배치와 수치 연산을 다룹니다.",
+    "broaderIds": [],
+    "area": "모델 학습"
+  },
+  {
+    "id": "gpu-memory",
+    "label": "GPU 메모리",
+    "aliases": [
+      "GPU memory",
+      "VRAM",
+      "OOM",
+      "Out of Memory"
+    ],
+    "description": "모델 학습·평가·추론에서 발생하는 메모리 부족과 누수를 살펴봅니다.",
+    "broaderIds": [],
+    "area": "학습·추론 인프라"
+  },
+  {
+    "id": "cuda",
+    "label": "CUDA·GPU 환경",
+    "aliases": [
+      "CUDA 환경",
+      "NVIDIA GPU 환경"
+    ],
+    "description": "GPU 드라이버·CUDA·딥러닝 패키지의 설치와 호환 문제를 다룹니다.",
+    "broaderIds": [],
+    "area": "학습·추론 인프라"
+  },
+  {
+    "id": "containers",
+    "label": "컨테이너 운영",
+    "aliases": [
+      "컨테이너",
+      "Docker"
+    ],
+    "description": "컨테이너에서 모델과 GPU 자원을 연결하고 서비스를 실행하는 과정을 다룹니다.",
+    "broaderIds": [],
+    "area": "개발·운영"
+  },
+  {
+    "id": "model-serving",
+    "label": "모델 서빙",
+    "aliases": [
+      "모델 서빙",
+      "inference server"
+    ],
+    "description": "모델을 API·UI에서 사용할 수 있도록 적재하고 요청을 처리하는 구성을 다룹니다.",
+    "broaderIds": [],
+    "area": "학습·추론 인프라"
+  },
+  {
+    "id": "vllm",
+    "label": "vLLM",
+    "aliases": [],
+    "description": "언어모델 추론 서버의 구성과 분산 실행·평가 오류를 살펴봅니다.",
+    "broaderIds": [
+      "model-serving"
+    ],
+    "area": "학습·추론 인프라"
+  },
+  {
+    "id": "remote-development",
+    "label": "원격 개발·네트워크",
+    "aliases": [
+      "원격 개발",
+      "SSH 개발환경"
+    ],
+    "description": "원격 서버 접속과 개발 환경의 네트워크·연결 문제를 기록합니다.",
+    "broaderIds": [],
+    "area": "개발·운영"
+  },
+  {
+    "id": "rag",
+    "label": "RAG·검색",
+    "aliases": [
+      "검색증강생성",
+      "Retrieval-Augmented Generation"
+    ],
+    "description": "질의에 필요한 문서를 찾고 모델 응답에 연결하는 검색 기술을 다룹니다.",
+    "broaderIds": [],
+    "area": "검색·에이전트"
+  },
+  {
+    "id": "semantic-search",
+    "label": "Semantic Search",
+    "aliases": [
+      "의미 검색",
+      "의미 기반 검색"
+    ],
+    "description": "단어 일치뿐 아니라 텍스트의 의미를 고려하는 검색을 살펴봅니다.",
+    "broaderIds": [
+      "rag"
+    ],
+    "area": "검색·에이전트"
+  },
+  {
+    "id": "keyword-search",
+    "label": "Keyword Search",
+    "aliases": [
+      "키워드 검색"
+    ],
+    "description": "질의의 단어·표현을 이용해 문서와 후보를 찾는 방법을 다룹니다.",
+    "broaderIds": [
+      "rag"
+    ],
+    "area": "검색·에이전트"
+  },
+  {
+    "id": "dense-retrieval",
+    "label": "Dense Retrieval",
+    "aliases": [
+      "밀집 검색",
+      "임베딩 검색"
+    ],
+    "description": "질의와 문서 임베딩의 유사도로 검색 후보를 찾는 방법을 다룹니다.",
+    "broaderIds": [
+      "semantic-search"
+    ],
+    "area": "검색·에이전트"
+  },
+  {
+    "id": "reranking",
+    "label": "Reranking",
+    "aliases": [
+      "검색 재정렬",
+      "재정렬",
+      "rerank"
+    ],
+    "description": "검색 후보를 질의와 다시 비교해 적합한 문서를 앞에 배치하는 방법을 다룹니다.",
+    "broaderIds": [
+      "rag"
+    ],
+    "area": "검색·에이전트"
+  },
+  {
+    "id": "agent-memory",
+    "label": "에이전트 메모리",
+    "aliases": [
+      "에이전트 메모리",
+      "message history",
+      "문맥 관리"
+    ],
+    "description": "대화 이력과 작업 문맥을 저장·전달·정리하는 방법을 살펴봅니다.",
+    "broaderIds": [],
+    "area": "검색·에이전트"
+  },
+  {
+    "id": "langgraph",
+    "label": "LangGraph",
+    "aliases": [
+      "StateGraph"
+    ],
+    "description": "상태 그래프로 도구 호출과 분기·스트리밍을 구성하는 구현을 다룹니다.",
+    "broaderIds": [],
+    "area": "검색·에이전트"
+  },
+  {
+    "id": "tool-use",
+    "label": "Tool Use",
+    "aliases": [
+      "도구 호출",
+      "function calling"
+    ],
+    "description": "언어모델과 외부 도구의 연결 형식과 호출 동작을 살펴봅니다.",
+    "broaderIds": [],
+    "area": "검색·에이전트"
+  },
+  {
+    "id": "agent-evaluation",
+    "label": "에이전트 평가",
+    "aliases": [
+      "에이전트 벤치마크"
+    ],
+    "description": "도구 호출과 탐색·다중 단계 작업 수행 능력을 측정하는 평가를 다룹니다.",
+    "broaderIds": [],
+    "area": "검색·에이전트"
+  },
+  {
+    "id": "multi-agent",
+    "label": "Multi-Agent",
+    "aliases": [
+      "멀티 에이전트"
+    ],
+    "description": "여러 에이전트의 작업 위임과 협업·문맥 분담을 살펴봅니다.",
+    "broaderIds": [],
+    "area": "검색·에이전트"
+  },
+  {
+    "id": "sparse-attention",
+    "label": "Sparse Attention",
+    "aliases": [
+      "희소 어텐션"
+    ],
+    "description": "긴 문맥에서 일부 토큰·헤드를 선택해 어텐션 비용을 줄이는 방법을 살펴봅니다.",
+    "broaderIds": [
+      "transformer"
+    ],
+    "area": "학습·추론 인프라"
+  },
+  {
+    "id": "speculative-decoding",
+    "label": "Speculative Decoding",
+    "aliases": [
+      "추측 디코딩"
+    ],
+    "description": "여러 토큰을 예측하고 검증해 순차 디코딩을 가속하는 접근을 다룹니다.",
+    "broaderIds": [],
+    "area": "학습·추론 인프라"
+  },
+  {
+    "id": "korean-ocr",
+    "label": "한국어 OCR",
+    "aliases": [
+      "Korean OCR",
+      "한국어 문자 인식"
+    ],
+    "description": "이미지 속 한국어 문자를 읽고 전사하는 문제와 평가를 다룹니다.",
+    "broaderIds": [],
+    "area": "비전·멀티모달"
+  },
+  {
+    "id": "vlm",
+    "label": "Vision-Language Models",
+    "aliases": [
+      "VLM",
+      "비전 언어 모델"
+    ],
+    "description": "이미지와 언어를 함께 처리하는 모델의 학습과 평가를 다룹니다.",
+    "broaderIds": [],
+    "area": "비전·멀티모달"
+  },
+  {
+    "id": "reasoning-efficiency",
+    "label": "Reasoning Efficiency",
+    "aliases": [
+      "추론 효율",
+      "추론 효율화"
+    ],
+    "description": "생각 토큰·종료 동작·답변 정확도 사이의 관계를 실험합니다.",
+    "broaderIds": [
+      "chain-of-thought"
+    ],
+    "area": "모델 학습"
+  },
+  {
+    "id": "browser-inference",
+    "label": "브라우저 추론",
+    "aliases": [
+      "브라우저 추론",
+      "in-browser inference"
+    ],
+    "description": "브라우저와 단말에서 모델을 실행할 때의 속도·호환·사용성을 다룹니다.",
+    "broaderIds": [
+      "model-serving"
+    ],
+    "area": "학습·추론 인프라"
+  },
+  {
+    "id": "finetuning",
+    "label": "모델 미세조정",
+    "aliases": [
+      "fine-tuning",
+      "finetuning",
+      "파인튜닝"
+    ],
+    "description": "사전학습 모델을 작업별 데이터로 추가 학습하는 구성과 하이퍼파라미터를 다룹니다.",
+    "broaderIds": [],
+    "area": "모델 학습"
+  }
+]

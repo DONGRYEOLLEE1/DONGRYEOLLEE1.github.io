@@ -1,0 +1,29 @@
+---
+import type { Article, Concept } from '../lib/types';
+import { TYPE_LABELS, formatDate } from '../lib/site';
+interface Props { article: Article; view?: 'list' | 'grid'; concepts?: Concept[] }
+const { article, view = 'list', concepts = [] } = Astro.props;
+const labels = new Map(concepts.map(concept => [concept.id, concept.label]));
+const refs = Array.from(new Set(article.conceptRefs.map(ref => ref.id))).slice(0,3);
+---
+{view === 'grid' ? (
+  <article class:list={['archive-card', { 'archive-card--text': !article.hero }]} data-article-id={article.id}>
+    <header class="archive-card-meta">
+      {article.related.length > 0 && <button class="card-related-trigger" type="button" data-related-open={article.id} aria-label={`${article.title} 관련 글 보기`} aria-haspopup="dialog" aria-controls="related-dialog" aria-expanded="false">···</button>}
+      <time datetime={article.publishedAt}>{formatDate(article.publishedAt)}</time><span>{TYPE_LABELS[article.contentType]}</span>{article.language === 'en' && <span class="language-label" aria-label="영문 글">EN</span>}
+    </header>
+    {article.hero && <a class:list={['archive-card-media', { 'is-photo': article.hero.kind === 'photo' }]} href={article.path} tabindex="-1" aria-hidden="true"><img src={article.hero.src} alt="" loading="lazy" decoding="async" /></a>}
+    <h2 class="archive-card-title"><a href={article.path} lang={article.language}>{article.title}</a></h2>
+    {!article.hero && <p class="archive-card-description">{article.description}</p>}
+  </article>
+) : (
+  <article class="post-row" data-article-id={article.id}>
+    <div class="post-main">
+      <div class="post-meta"><span>{TYPE_LABELS[article.contentType]}</span><time datetime={article.publishedAt}>{formatDate(article.publishedAt)}</time>{article.language === 'en' && <span class="language-label" aria-label="영문 글">EN</span>}{article.related.length > 0 && <button class="card-related-trigger" type="button" data-related-open={article.id} aria-label={`${article.title} 관련 글 보기`} aria-haspopup="dialog" aria-controls="related-dialog" aria-expanded="false">···</button>}</div>
+      <h2 class="post-title"><a href={article.path} lang={article.language}>{article.title}</a></h2>
+      <p class="post-description">{article.description}</p>
+      <div class="topic-chips">{refs.map(id => <a class="chip" href={`/topics/${id}/`}>{labels.get(id) || id}</a>)}</div>
+    </div>
+    <a class="row-arrow" href={article.path} aria-label={`${article.title} 읽기`}>↗</a>
+  </article>
+)}

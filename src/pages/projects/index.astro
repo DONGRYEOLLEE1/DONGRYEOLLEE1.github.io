@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getArticles, getProjects } from '../../lib/content';
+const projects = getProjects();
+const articles = getArticles();
+---
+<BaseLayout title="프로젝트" description="직접 수행한 연구와 개발 결과, 코드와 공개 자료를 모았습니다." canonicalPath="/projects/">
+  <div class="page-shell projects-page"><header class="page-heading"><h1 class="page-title">프로젝트</h1><p class="page-description">직접 수행한 연구와 개발 결과, 코드와 공개 자료를 모았습니다.</p></header>
+    <div class="project-grid">{projects.map(project => <article class="project-card">
+      {project.hero && <a class="project-visual" href={`/projects/${project.id}/`}><img src={project.hero.src} alt={project.hero.alt} width="1000" height="600" loading="lazy"/></a>}
+      <div class="project-body"><div class="small-label">{articles.filter(article => article.projectIds.includes(project.id)).length}개의 관련 글</div><h2 class="project-name"><a href={`/projects/${project.id}/`}>{project.name}</a></h2><p>{project.description}</p><div class="project-actions"><a class="arrow-link" href={`/projects/${project.id}/`}>프로젝트 보기 ↗</a>{project.links.map(link => <a class="arrow-link" href={link.url} target="_blank" rel="noopener noreferrer">{link.label} ↗</a>)}</div></div>
+    </article>)}</div>
+    {projects.length === 0 && <div class="empty-state"><h2>공개 프로젝트를 정리하고 있습니다.</h2><a href="/articles/?type=research">연구 글 보기 ↗</a></div>}
+  </div>
+</BaseLayout>

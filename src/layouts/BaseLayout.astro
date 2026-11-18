@@ -1,0 +1,70 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SearchDialog from '../components/SearchDialog.astro';
+import { SITE, absoluteUrl } from '../lib/site';
+import { getArticles, getConcepts, getSeries, getProjects } from '../lib/content';
+import type { Article } from '../lib/types';
+import '../styles/global.css';
+import '../styles/pages.css';
+import 'katex/dist/katex.min.css';
+interface Props {
+  title?: string; description?: string; canonicalPath?: string; language?: 'ko' | 'en';
+  image?: string; article?: Article; noindex?: boolean;
+}
+const { title = SITE.title, description = SITE.description, canonicalPath = Astro.url.pathname,
+  language = 'ko', image, article, noindex = false } = Astro.props;
+const titleText = title === SITE.title ? `${SITE.title} · 기술 블로그` : `${title} · ${SITE.title}`;
+const canonical = absoluteUrl(canonicalPath);
+const deployEnvironment = process.env.VERCEL_ENV || import.meta.env.VERCEL_ENV;
+const shouldNoindex = noindex || (!!deployEnvironment && deployEnvironment !== 'production');
+const active = article ? 'articles' : ['articles','topics','projects','about'].find(value => Astro.url.pathname.startsWith('/'+value)) || '';
+const jsonSafe = (value: unknown) => JSON.stringify(value).replace(/</g,'\\u003c').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');
+const browserData = { articles: getArticles().map(({html,plainText,headings,legacyHeadingIds,...post}) => post), concepts: getConcepts(), series: getSeries(), projects: getProjects() };
+const structuredData = article ? {
+  '@context': 'https://schema.org', '@type': 'BlogPosting', headline: article.title,
+  description: article.description, url: canonical, datePublished: article.publishedAt,
+  ...(article.updatedAt ? {dateModified:article.updatedAt}:{}),
+  author: {'@type':'Person', name: SITE.author, url:absoluteUrl('/about/')},
+  inLanguage:article.language, ...(image?{image:absoluteUrl(image)}:{}),
+  mainEntityOfPage:{'@type':'WebPage','@id':canonical},
+} : {'@context':'https://schema.org','@type':'WebSite',name:SITE.title,url:SITE.origin,description:SITE.description,inLanguage:'ko'};
+---
+<!doctype html>
+<html lang={language}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{titleText}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={SITE.author} />
+    <meta name="theme-color" content="#faf9f5" />
+    <meta name="robots" content={shouldNoindex ? 'noindex,nofollow' : 'index,follow,max-image-preview:large'} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="동렬 기술 블로그" href={absoluteUrl('/feed.xml')} />
+    <meta property="og:type" content={article?'article':'website'} />
+    <meta property="og:site_name" content={SITE.title} />
+    <meta property="og:title" content={titleText} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={language==='en'?'en_US':'ko_KR'} />
+    {image && <meta property="og:image" content={absoluteUrl(image)} />}
+    <meta name="twitter:card" content={image?'summary_large_image':'summary'} />
+    {article && <><meta property="article:published_time" content={article.publishedAt}/>{article.updatedAt&&<meta property="article:modified_time" content={article.updatedAt}/>}<meta data-pagefind-meta="article_id[content]" content={article.id}/><meta data-pagefind-meta="title[content]" content={article.title}/><meta data-pagefind-meta="description[content]" content={article.description}/></>}
+    <script is:inline>
+      (() => { try { const stored = localStorage.getItem('blog-theme'); const mode = ['light','dark'].includes(stored) ? stored : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; document.documentElement.dataset.theme = mode; } catch { document.documentElement.dataset.theme = 'light'; } })();
+    </script>
+    <script type="application/ld+json" is:inline set:html={jsonSafe(structuredData)} />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <div data-pagefind-ignore lang="ko"><Header active={active} /></div>
+    <main id="main-content" tabindex="-1" data-pagefind-ignore={article ? undefined : 'all'}><slot /></main>
+    <div data-pagefind-ignore lang="ko"><Footer /><SearchDialog /></div>
+    <script id="site-data" type="application/json" is:inline set:html={jsonSafe(browserData)} />
+    <script>import '../scripts/site';</script>
+  </body>
+</html>

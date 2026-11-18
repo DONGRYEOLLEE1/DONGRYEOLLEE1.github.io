@@ -1,0 +1,34 @@
+---
+interface Props { active?: string }
+const { active = '' } = Astro.props;
+const links = [
+  { href: '/articles/', label: '글', id: 'articles' },
+  { href: '/topics/', label: '주제', id: 'topics' },
+  { href: '/projects/', label: '프로젝트', id: 'projects' },
+  { href: '/about/', label: '소개', id: 'about' },
+];
+---
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href="/" aria-label="동렬 홈">동렬</a>
+    <nav class="nav-links" aria-label="기본 메뉴">
+      {links.map(link => <a href={link.href} aria-current={active === link.id ? 'page' : undefined}>{link.label}</a>)}
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button search-toggle" type="button" data-open-search aria-label="글 검색" aria-haspopup="dialog" aria-controls="search-dialog">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.8" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.6"/></svg>
+        <kbd class="desktop-hint">⌘K</kbd>
+      </button>
+      <label class="theme-control">
+        <span class="sr-only">화면 테마</span>
+        <select id="theme-select" data-theme-choice aria-label="화면 테마">
+          <option value="system">자동</option><option value="light">밝게</option><option value="dark">어둡게</option>
+        </select>
+      </label>
+      <button class="icon-button mobile-menu-button" type="button" data-menu aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    </div>
+  </div>
+  <nav id="mobile-menu" class="mobile-nav" aria-label="모바일 메뉴" hidden>
+    {links.map(link => <a href={link.href} aria-current={active === link.id ? 'page' : undefined}>{link.label}</a>)}
+  </nav>
+</header>

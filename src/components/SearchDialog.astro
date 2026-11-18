@@ -1,0 +1,19 @@
+<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title">
+  <div class="dialog-top">
+    <div class="dialog-title"><h2 id="search-title">글 검색</h2><button class="close-dialog" type="button" data-close-search aria-label="검색 닫기">닫기 ✕</button></div>
+    <form id="global-search-form" data-search-form action="/search/" method="get"><label class="search-input-wrap"><span class="sr-only">검색어</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.8" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.6"/></svg><input id="global-search-input" data-search-input name="q" type="search" placeholder="제목이나 기술 개념을 입력하세요" autocomplete="off"/></label></form>
+  </div>
+  <p class="search-status" data-search-status role="status" aria-live="polite"></p>
+  <div id="search-results" class="search-results" data-search-results></div>
+  <div class="dialog-footer"><span>Enter로 전체 검색 결과를 엽니다.</span><span class="keyboard-hint"><kbd>Tab</kbd> 링크 이동 · <kbd>Esc</kbd> 닫기</span></div>
+</dialog>
+<dialog id="image-dialog" class="image-dialog" aria-labelledby="image-dialog-title">
+  <header class="image-dialog-toolbar"><span id="image-dialog-title">이미지 크게 보기</span><div><button type="button" data-image-fit>화면에 맞춤</button><button type="button" data-image-actual>원본 크기</button><button type="button" data-close-image aria-label="이미지 닫기">닫기 ✕</button></div></header>
+  <div class="image-dialog-stage"><img data-zoom-image alt="" /></div>
+  <div class="image-dialog-footer"><p class="image-caption" data-image-caption></p><a data-image-original target="_blank" rel="noopener noreferrer">원본 이미지 열기 ↗</a></div>
+</dialog>
+<dialog id="related-dialog" class="related-dialog" aria-labelledby="related-dialog-title">
+  <header class="related-dialog-header"><h2 id="related-dialog-title">관련 글</h2><button type="button" data-close-related aria-label="관련 글 닫기">닫기 ✕</button></header>
+  <div class="related-dialog-content" data-related-content></div>
+</dialog>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>

@@ -1,0 +1,5 @@
+[
+  {"id":"llm-university-search","title":"LLM University · 검색","description":"의미 검색에서 키워드·밀집 검색과 재정렬까지, LLM University의 검색 학습 기록을 원래 번호순으로 읽습니다.","orderedArticleIds":["semantic-search","keyword-search","dense-retrieval","reranking"]},
+  {"id":"pytorch-tensor-manipulation","title":"PyTorch 텐서 조작","description":"형태 변경, 차원 추가·제거, 브로드캐스팅과 인덱싱을 1·2·3편 순서로 살펴봅니다.","orderedArticleIds":["torch-tensor-manipulation-1","torch-tensor-manipulation-2","torch-tensor-manipulation-3"]},
+  {"id":"developing-daily","title":"개발 일지","description":"2023년 여름의 모델·서버 개발 기록을 Daily of Developing의 원래 연재 번호순으로 모았습니다.","orderedArticleIds":["developing-daily-01","developing-daily-02","developing-daily-03","developing-daily-04","developing-daily-05","developing-daily-06","developing-daily-07","gpu-driver-troubleshooting","cuda-device-troubleshooting","python-venv-troubleshooting","netplan-troubleshooting"]}
+]

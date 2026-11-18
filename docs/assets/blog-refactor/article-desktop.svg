@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1100" viewBox="0 0 1440 1100">
+  <title>데스크톱 글 상세 구조 검토용 와이어프레임</title>
+  <desc>왼쪽 목차 180픽셀, 중앙 본문 720픽셀, 오른쪽 관련 글 280픽셀의 위계. 실제 최종 디자인이 아닌 계획 검토용이다.</desc>
+  <defs>
+    <style>
+      text{font-family:'Apple SD Gothic Neo','Noto Sans KR',Arial,sans-serif;fill:#202724}
+      .muted{fill:#59625f}.teal{fill:#0f766e}.label{font-size:25px;font-weight:600;letter-spacing:.6px}
+      .body{font-size:27px}.small{font-size:24px}.bold{font-weight:700}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7b8580"/></marker>
+  </defs>
+  <rect width="1440" height="1100" fill="#fff"/>
+  <text x="36" y="55" font-size="39" font-weight="700">글 상세 · 데스크톱</text>
+  <text x="36" y="97" font-size="25" class="muted">구조 검토용 와이어프레임 · 실제 최종 디자인 아님</text>
+  <rect x="24" y="125" width="1392" height="885" rx="14" fill="#f7f6f2" stroke="#c9ceca" stroke-width="2"/>
+  <path d="M24 221H1416" stroke="#c9ceca" stroke-width="2"/>
+  <text x="68" y="187" font-size="39" font-weight="800">LEE</text>
+  <text x="365" y="184" font-size="27">Articles</text>
+  <text x="503" y="184" font-size="27">Topics</text>
+  <text x="628" y="184" font-size="27">Projects</text>
+  <text x="776" y="184" font-size="27">About</text>
+  <rect x="1116" y="150" width="126" height="48" rx="12" fill="#e8efea" stroke="#a9bbb1"/>
+  <text x="1152" y="183" font-size="25" class="teal">검색</text>
+  <rect x="1260" y="150" width="98" height="48" rx="12" fill="#f7f6f2" stroke="#b7c0ba"/>
+  <text x="1282" y="183" font-size="25">테마</text>
+  <text x="70" y="275" class="label muted">목차 · 180</text>
+  <text x="278" y="275" class="label muted">본문 · 720</text>
+  <text x="1026" y="275" class="label muted">연관 탐색 · 280</text>
+  <path d="M70 295H250 M278 295H998 M1026 295H1306" stroke="#a9b3ad" stroke-width="2"/>
+  <text x="70" y="359" font-size="27" class="bold">이 글의 내용</text>
+  <path d="M70 391V435" stroke="#0f766e" stroke-width="5"/>
+  <text x="84" y="420" font-size="24" class="teal bold">문제 정의</text>
+  <text x="84" y="478" font-size="24" class="muted">검색 구성</text>
+  <text x="84" y="536" font-size="24" class="muted">평가 결과</text>
+  <text x="84" y="594" font-size="24" class="muted">운영과 개선</text>
+  <text x="278" y="348" font-size="24" class="teal bold">ENGINEERING · RAG</text>
+  <text x="278" y="412" font-size="47" class="bold">검색 재정렬에서</text>
+  <text x="278" y="470" font-size="47" class="bold">실제 서비스까지</text>
+  <text x="278" y="521" font-size="24" class="muted">2026. 11. 18 · 12분 · 동렬</text>
+  <text x="278" y="575" font-size="27" class="muted">실험과 운영을 연결하는 기술 기록.</text>
+  <rect x="278" y="605" width="720" height="168" rx="10" fill="#e4eae4" stroke="#bcc8be"/>
+  <rect x="318" y="663" width="151" height="54" rx="8" fill="#f7f6f2" stroke="#829b8d"/>
+  <text x="353" y="699" font-size="25">검색</text>
+  <path d="M485 690H548" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="566" y="663" width="160" height="54" rx="8" fill="#f7f6f2" stroke="#829b8d"/>
+  <text x="597" y="699" font-size="25">재정렬</text>
+  <path d="M742 690H804" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="822" y="663" width="135" height="54" rx="8" fill="#f7f6f2" stroke="#829b8d"/>
+  <text x="849" y="699" font-size="25">응답</text>
+  <text x="278" y="825" font-size="33" class="bold">01 문제를 정의하기</text>
+  <rect x="278" y="851" width="695" height="12" rx="6" fill="#bec6bf"/>
+  <rect x="278" y="885" width="720" height="12" rx="6" fill="#c9d0c9"/>
+  <rect x="278" y="919" width="594" height="12" rx="6" fill="#c9d0c9"/>
+  <text x="1026" y="349" font-size="31" class="bold">연결된 글</text>
+  <path d="M1072 411L1170 451L1280 406 M1170 451L1262 514" stroke="#8c9d90" stroke-width="2.5"/>
+  <circle cx="1072" cy="411" r="20" fill="#9fbbb0"/>
+  <circle cx="1280" cy="406" r="20" fill="#a9bea1"/>
+  <circle cx="1262" cy="514" r="20" fill="#c8b7aa"/>
+  <circle cx="1170" cy="451" r="29" fill="#f7f6f2" stroke="#0f766e" stroke-width="3"/>
+  <circle cx="1170" cy="451" r="20" fill="#0f766e"/>
+  <text x="1128" y="515" font-size="23" class="teal bold">현재 글</text>
+  <rect x="1026" y="552" width="280" height="126" rx="12" fill="#fff" stroke="#b6c2b8"/>
+  <text x="1045" y="590" font-size="26" class="bold">검색 재정렬의 원리</text>
+  <text x="1045" y="631" font-size="23" class="muted">같은 개념 · Reranking</text>
+  <rect x="1026" y="697" width="280" height="126" rx="12" fill="#fff" stroke="#b6c2b8"/>
+  <text x="1045" y="735" font-size="26" class="bold">RAG 평가 기록</text>
+  <text x="1045" y="776" font-size="23" class="muted">평가 개념 공유</text>
+  <rect x="1026" y="844" width="280" height="58" rx="10" fill="#e8efea"/>
+  <text x="1045" y="881" font-size="25" class="teal bold">연결된 글 모두 보기 →</text>
+  <text x="36" y="1053" font-size="27" class="muted">넓은 화면에서 3열 · 본문 폭을 유지하며 목차와 관련 글 제공</text>
+</svg>

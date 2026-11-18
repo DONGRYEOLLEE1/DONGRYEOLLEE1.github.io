@@ -1,0 +1,43 @@
+{
+  "name": "dongryeol-research-blog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "prepare:content": "node tools/content/build.mjs",
+    "prepare:assets": "node tools/prepare-assets.mjs",
+    "predev": "npm run prepare:content && npm run prepare:assets",
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "npm run prepare:content && npm run prepare:assets && astro build && pagefind --site dist --force-language ko && node tools/verify-build.mjs",
+    "preview": "astro preview --host 127.0.0.1",
+    "check": "npm run prepare:content && astro check",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "astro": "7.4.12",
+    "github-slugger": "2.0.0",
+    "gray-matter": "4.0.3",
+    "katex": "0.19.1",
+    "rehype-katex": "7.0.1",
+    "rehype-raw": "7.0.0",
+    "rehype-sanitize": "6.0.0",
+    "rehype-stringify": "10.0.1",
+    "remark-gfm": "4.0.1",
+    "remark-math": "6.0.0",
+    "remark-parse": "11.0.0",
+    "remark-rehype": "11.1.2",
+    "shiki": "4.6.0",
+    "unified": "11.0.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "@types/node": "^24.0.0",
+    "pagefind": "1.6.0",
+    "typescript": "^6.0.0",
+    "parse5": "^8.0.0",
+    "saxes": "^6.0.0"
+  }
+}

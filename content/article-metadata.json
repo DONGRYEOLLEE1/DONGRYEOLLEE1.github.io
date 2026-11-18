@@ -1,0 +1,1887 @@
+{
+  "_posts/2022-01-04-Transformer.md": {
+    "id": "transformer",
+    "description": "Transformer의 인코더·디코더와 Self-Attention, 위치 인코딩을 기존 순환 모델과 비교해 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "transformer",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2022-01-04-YOLOv1.md": {
+    "id": "yolo-v1",
+    "description": "한 번의 합성곱 네트워크로 위치와 종류를 예측하는 YOLO의 구조·학습 방식과 한계를 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "object-detection",
+        "role": "about"
+      },
+      {
+        "id": "cnn",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2022-01-05-ObjectDetection.md": {
+    "id": "object-detection-basics",
+    "description": "객체 검출 모델을 이해하는 데 필요한 백본, 후보 영역, RPN과 손실 함수를 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "object-detection",
+        "role": "about"
+      },
+      {
+        "id": "cnn",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2022-01-05-mAP.md": {
+    "id": "map-evaluation",
+    "description": "Precision·Recall·IoU에서 AP와 COCO mAP까지 객체 검출 평가 지표를 예제로 설명합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "cv-evaluation",
+        "role": "about"
+      },
+      {
+        "id": "object-detection",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2022-01-06-R-CNN.md": {
+    "id": "r-cnn",
+    "description": "Selective Search, CNN 특징 추출과 분류기를 순차적으로 연결하는 R-CNN의 검출 과정을 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "object-detection",
+        "role": "about"
+      },
+      {
+        "id": "cnn",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2022-01-07-FastR-CNN.md": {
+    "id": "fast-r-cnn",
+    "description": "특징 맵 공유와 RoI Pooling, 다중 작업 손실이 Fast R-CNN에서 어떤 역할을 하는지 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "object-detection",
+        "role": "about"
+      },
+      {
+        "id": "cnn",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2022-01-10-FasterR-CNN.md": {
+    "id": "faster-r-cnn",
+    "description": "Anchor Box와 RPN으로 후보 영역을 학습하는 Faster R-CNN의 구조와 손실 함수를 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "object-detection",
+        "role": "about"
+      },
+      {
+        "id": "cnn",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2022-01-11-Overfeat.md": {
+    "id": "overfeat",
+    "description": "완전연결층을 합성곱으로 해석하는 방식과 수용 영역을 통해 OverFeat의 인식·검출 구조를 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "object-detection",
+        "role": "about"
+      },
+      {
+        "id": "cnn",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2022-01-12-OHEM.md": {
+    "id": "ohem",
+    "description": "쉽고 어려운 예시가 불균형한 객체 검출 학습에서 어려운 예시를 온라인으로 선택하는 OHEM을 소개합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "object-detection",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2022-01-13-ELMO.md": {
+    "id": "elmo",
+    "description": "여러 BiLSTM 층의 표현을 조합해 문맥을 반영하는 ELMo의 사전학습과 단어 표현을 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "contextual-embeddings",
+        "role": "about"
+      },
+      {
+        "id": "recurrent-networks",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2022-01-13-LSTM.md": {
+    "id": "lstm",
+    "description": "RNN의 장기 의존성 문제와 LSTM의 입력·망각·출력 게이트, 셀 상태의 동작을 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "recurrent-networks",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2022-01-13-RNN.md": {
+    "id": "rnn",
+    "description": "시퀀스의 이전 상태를 기억하는 RNN의 구조와 BPTT, 순전파·역전파를 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "recurrent-networks",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2022-01-26-BERT.md": {
+    "id": "bert",
+    "description": "양방향 Transformer의 입력 표현과 MLM 사전학습, 태스크별 미세조정과 실험을 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "contextual-embeddings",
+        "role": "about"
+      },
+      {
+        "id": "transformer",
+        "role": "about"
+      },
+      {
+        "id": "pretraining",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2022-02-27-ViT.md": {
+    "id": "vit",
+    "description": "이미지를 패치 시퀀스로 처리하는 Vision Transformer의 구조와 미세조정·해상도 설정을 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "vision-transformer",
+        "role": "about"
+      },
+      {
+        "id": "transformer",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2022-03-14-SwinTransformer.md": {
+    "id": "swin-transformer",
+    "description": "이미지 패치를 단계적으로 결합하는 Swin Transformer의 계층적 특징 맵에 관한 짧은 메모입니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "vision-transformer",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-01-20-GPT3.md": {
+    "id": "gpt-3",
+    "description": "GPT-3 논문이 제안한 few-shot 설정과 작업별 대규모 지도 데이터 의존성의 한계를 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "in-context-learning",
+        "role": "about"
+      },
+      {
+        "id": "pretraining",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-02-02-Few-shot_learning.md": {
+    "id": "few-shot-nlp",
+    "description": "레이블이 부족한 텍스트 분류 문제를 정의하고 few-shot 접근과 사람의 검토를 결합하는 방법을 살펴봅니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "in-context-learning",
+        "role": "about"
+      },
+      {
+        "id": "data-preparation",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-02-05-assert.md": {
+    "id": "python-assert",
+    "description": "assert의 사용 형식과 AssertionError를 예제로 확인하고 코드의 가정을 검증하는 이유를 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "testing",
+        "role": "about"
+      },
+      {
+        "id": "python-language",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-03-30-Few-shot_learning_In_AI.md": {
+    "id": "few-shot-learning",
+    "description": "소수 예시 학습의 문제 설정과 용어, Siamese Network 및 데이터·모델 관점의 접근을 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "in-context-learning",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-03-31-Zero-shot_learning.md": {
+    "id": "zero-shot-learning",
+    "description": "NLI와 잠재 임베딩을 이용한 zero-shot 텍스트 분류의 설정과 예제를 살펴봅니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "in-context-learning",
+        "role": "about"
+      },
+      {
+        "id": "contextual-embeddings",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-04-05-temrs in NLP.md": {
+    "id": "nlp-terms",
+    "description": "NLI·GLUE·Perplexity 등 자연어 처리 작업과 벤치마크에서 자주 쓰이는 용어를 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "contextual-embeddings",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-04-12-GPU Training.md": {
+    "id": "distributed-gpu-training",
+    "description": "DeepSpeed와 FairScale 설치, 단일 GPU·분산 환경 설정 및 실행 예제를 기록합니다.",
+    "language": "ko",
+    "contentType": "implementation",
+    "conceptRefs": [
+      {
+        "id": "distributed-training",
+        "role": "applies"
+      },
+      {
+        "id": "python-environment",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-04-17-PromptEngineering.md": {
+    "id": "prompt-engineering",
+    "description": "지시문·문맥·입력·출력 형식의 역할과 프롬프트를 구체적으로 작성하는 방법을 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "prompt-engineering",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-04-21-Chain_of_Thought.md": {
+    "id": "chain-of-thought",
+    "description": "중간 추론 과정을 예시로 제공하는 Chain-of-Thought Prompting의 실험 설정과 결과를 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "chain-of-thought",
+        "role": "about"
+      },
+      {
+        "id": "prompt-engineering",
+        "role": "about"
+      },
+      {
+        "id": "in-context-learning",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-04-24-LLaMA.md": {
+    "id": "llama",
+    "description": "추론 비용을 함께 고려한 LLaMA의 사전학습 데이터·모델 구조·학습 및 평가 방식을 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "pretraining",
+        "role": "about"
+      },
+      {
+        "id": "transformer",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-04-24-LoRA.md": {
+    "id": "lora",
+    "description": "가중치 갱신을 낮은 랭크의 행렬로 표현하는 LoRA의 문제 설정과 기존 적응 방식의 차이를 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "lora",
+        "role": "about"
+      },
+      {
+        "id": "peft",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-05-18-DeepSpeed.md": {
+    "id": "deepspeed-troubleshooting",
+    "description": "DeepSpeed 파인튜닝 실행 중 만난 Python 빌드·패키지 관련 오류와 해결 과정을 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "distributed-training",
+        "role": "applies"
+      },
+      {
+        "id": "python-environment",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-05-23-Finetuning.md": {
+    "id": "polyglot-training-troubleshooting",
+    "description": "Polyglot-ko 파인튜닝에서 예상보다 빠르게 학습이 종료되는 현상과 데이터·실행 설정 점검 과정을 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "finetuning",
+        "role": "applies"
+      },
+      {
+        "id": "data-preparation",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-05-24-Finetuning2.md": {
+    "id": "polyglot-lora-troubleshooting",
+    "description": "Polyglot-ko에 LoRA를 적용하며 만난 target modules 불일치와 모델·토크나이저 변경 사항을 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "lora",
+        "role": "applies"
+      },
+      {
+        "id": "peft",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-05-31-bardapi.md": {
+    "id": "bard-api-troubleshooting",
+    "description": "Bard API 호출에서 발생한 응답 오류와 관련 코드·환경 설정을 점검한 기록입니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "model-serving",
+        "role": "applies"
+      },
+      {
+        "id": "python-environment",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-06-01-FLAN.md": {
+    "id": "flan",
+    "description": "여러 작업의 지시문으로 미세조정해 zero-shot 성능을 높이는 FLAN의 데이터·템플릿·평가를 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "model-alignment",
+        "role": "about"
+      },
+      {
+        "id": "in-context-learning",
+        "role": "about"
+      },
+      {
+        "id": "finetuning",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-06-09-LoRA FT.md": {
+    "id": "lora-finetuning",
+    "description": "PEFT를 이용한 LoRA 파인튜닝의 데이터 형식과 모델 로딩·학습 코드 구성을 기록합니다.",
+    "language": "ko",
+    "contentType": "implementation",
+    "conceptRefs": [
+      {
+        "id": "lora",
+        "role": "applies"
+      },
+      {
+        "id": "peft",
+        "role": "applies"
+      },
+      {
+        "id": "data-preparation",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-06-14-Typing.md": {
+    "id": "python-typing",
+    "description": "동적 타입 언어인 Python에서 타입 어노테이션과 typing의 List·Dict·Union 등을 사용하는 방법을 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "python-typing",
+        "role": "about"
+      },
+      {
+        "id": "python-language",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-06-21-efficientnet.md": {
+    "id": "efficientnet",
+    "description": "깊이·너비·입력 해상도를 함께 조정하는 EfficientNet의 모델 확장 방식과 효율을 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "cnn",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-06-23-efficientnetv2.md": {
+    "id": "efficientnet-v2",
+    "description": "학습 비용을 고려한 NAS와 점진적 학습을 중심으로 EfficientNetV2의 설계를 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "cnn",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-06-28-ResNext.md": {
+    "id": "resnext",
+    "description": "같은 형태의 변환을 집계하는 ResNeXt의 구조와 네트워크 설계 관점을 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "cnn",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-06-29-ConvNeXt.md": {
+    "id": "convnext",
+    "description": "학습 기법과 매크로·미시 구조를 단계적으로 바꾸며 ConvNet을 현대화하는 ConvNeXt를 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "cnn",
+        "role": "about"
+      },
+      {
+        "id": "vision-transformer",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-07-05-FT_til.md": {
+    "id": "finetuning-notes",
+    "description": "파인튜닝·서빙 과정에서 확인한 fp16 추론, tensor parallel 등 실행 설정과 코드를 모았습니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "model-serving",
+        "role": "applies"
+      },
+      {
+        "id": "distributed-training",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-07-10-BEiT.md": {
+    "id": "beit",
+    "description": "BEiT 논문의 제목을 등록한 짧은 기록입니다. 현재 원문에는 상세한 리뷰 내용이 작성되어 있지 않습니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "vision-transformer",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-07-11-qlora_troubleshoot.md": {
+    "id": "qlora-troubleshooting",
+    "description": "QLoRA 파인튜닝 중 bitsandbytes·CUDA 라이브러리와 학습 설정에서 발생한 오류 및 조치를 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "qlora",
+        "role": "applies"
+      },
+      {
+        "id": "quantization",
+        "role": "applies"
+      },
+      {
+        "id": "cuda",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-07-12-QLoRA.md": {
+    "id": "qlora",
+    "description": "4비트 양자화와 LoRA를 결합한 QLoRA의 메모리 절감 원리와 미세조정 설정을 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "qlora",
+        "role": "about"
+      },
+      {
+        "id": "quantization",
+        "role": "about"
+      },
+      {
+        "id": "peft",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-07-13-Transformers_TrainingArguments.md": {
+    "id": "training-arguments",
+    "description": "Transformers의 TrainingArguments에서 배치 크기 등 학습 하이퍼파라미터의 의미와 사용법을 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "finetuning",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-07-17-developing_daily1.md": {
+    "id": "developing-daily-01",
+    "description": "Docker 저장 경로, TGI 실행과 PEFT LoRA 코드에서 확인한 설정·오류를 모은 개발 기록입니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "containers",
+        "role": "applies"
+      },
+      {
+        "id": "model-serving",
+        "role": "applies"
+      },
+      {
+        "id": "lora",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-07-18-developing_daily2.md": {
+    "id": "developing-daily-02",
+    "description": "Gradio와 TextIteratorStreamer를 이용한 모델 응답 스트리밍 구성 및 문제를 기록합니다.",
+    "language": "ko",
+    "contentType": "implementation",
+    "conceptRefs": [
+      {
+        "id": "model-serving",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-07-18-developing_daily3.md": {
+    "id": "developing-daily-03",
+    "description": "모델을 불러올 때 발생한 Hugging Face 저장소 ID 형식 오류와 로컬 모델 파일 확인 과정을 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "model-serving",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-07-18-developing_daily4.md": {
+    "id": "developing-daily-04",
+    "description": "Ubuntu 파일명 변경, Git 인증서 오류와 서버 접속 관련 명령을 모은 개발 메모입니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "remote-development",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-07-27-developing_daily5.md": {
+    "id": "developing-daily-05",
+    "description": "파인튜닝 데이터의 정규표현식 전처리와 한국어·영어 질문 생성 모델 사용 과정을 기록합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "data-preparation",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-07-29-developing_daily6.md": {
+    "id": "developing-daily-06",
+    "description": "bitsandbytes의 CUDA 라이브러리 설정 등 모델 개발 중 발생한 환경 오류와 조치를 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "quantization",
+        "role": "applies"
+      },
+      {
+        "id": "cuda",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-08-01-developing_daily7.md": {
+    "id": "developing-daily-07",
+    "description": "자기 피드백 방식과 질문 생성·SBERT 모델을 결합하는 데이터 처리 워크플로를 기록합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "data-preparation",
+        "role": "applies"
+      },
+      {
+        "id": "contextual-embeddings",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-08-07-IA3.md": {
+    "id": "ia3-implementation",
+    "description": "PEFT의 IA3를 GPT-NeoX에 적용해 Colab T4에서 짧게 학습한 실행 코드와 설정을 기록합니다.",
+    "language": "ko",
+    "contentType": "implementation",
+    "conceptRefs": [
+      {
+        "id": "ia3",
+        "role": "applies"
+      },
+      {
+        "id": "peft",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-08-07-IA3_paper.md": {
+    "id": "ia3-paper",
+    "description": "In-context learning과 PEFT를 비교하고 IA3 및 T-Few의 few-shot 학습 방식을 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "ia3",
+        "role": "about"
+      },
+      {
+        "id": "peft",
+        "role": "about"
+      },
+      {
+        "id": "in-context-learning",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-08-08-peft_target_modules.md": {
+    "id": "peft-target-modules",
+    "description": "모델 구조별로 LoRA를 적용할 target modules를 확인할 수 있는 PEFT의 매핑을 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "peft",
+        "role": "about"
+      },
+      {
+        "id": "lora",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-08-09-vscode_SSH.md": {
+    "id": "vscode-ssh",
+    "description": "VSCode의 원격 탐색기와 SSH 설정으로 서버에 접속해 개발하는 절차를 기록합니다.",
+    "language": "ko",
+    "contentType": "implementation",
+    "conceptRefs": [
+      {
+        "id": "remote-development",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-08-22-lora_ts.md": {
+    "id": "lora-dtype-troubleshooting",
+    "description": "PEFT 실행에서 Half·Float 자료형 불일치와 변수를 참조하는 오류를 점검한 기록입니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "peft",
+        "role": "applies"
+      },
+      {
+        "id": "lora",
+        "role": "applies"
+      },
+      {
+        "id": "ia3",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-09-01-developing_daily8.md": {
+    "id": "gpu-driver-troubleshooting",
+    "description": "nvidia-smi 출력과 GPU 환경 정보를 바탕으로 그래픽 드라이버 버전 문제를 확인하고 조치한 기록입니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "cuda",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-09-08-developing_daily9.md": {
+    "id": "cuda-device-troubleshooting",
+    "description": "PyTorch 설치 후 CUDA 초기화와 GPU 인식이 실패하는 환경을 확인하고 조치한 기록입니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "cuda",
+        "role": "applies"
+      },
+      {
+        "id": "python-environment",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-09-13-developing_daily10.md": {
+    "id": "python-venv-troubleshooting",
+    "description": "가상환경 생성 중 ensurepip가 실패한 환경과 해결 절차를 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "python-environment",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-09-25-developing_daily11.md": {
+    "id": "netplan-troubleshooting",
+    "description": "netplan 실행 시 netifaces 모듈을 찾지 못하는 오류와 Python 환경 조치를 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "remote-development",
+        "role": "applies"
+      },
+      {
+        "id": "python-environment",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-10-02-DB1.md": {
+    "id": "mariadb-connection-troubleshooting",
+    "description": "PyMySQL로 MariaDB에 접속하는 과정의 SQL 구문 오류와 연결 코드를 점검합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "remote-development",
+        "role": "applies"
+      },
+      {
+        "id": "python-language",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-10-11-docker_gpu_error.md": {
+    "id": "docker-gpu-troubleshooting",
+    "description": "Docker가 GPU 장치 드라이버를 선택하지 못할 때 확인한 NVIDIA Container Toolkit 설정을 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "containers",
+        "role": "applies"
+      },
+      {
+        "id": "cuda",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-10-20-docker_TGI.md": {
+    "id": "tgi-implementation",
+    "description": "LoRA 어댑터를 독립 모델로 병합하고 TGI에 적재하는 코드와 컨테이너 환경을 정리합니다.",
+    "language": "ko",
+    "contentType": "implementation",
+    "conceptRefs": [
+      {
+        "id": "model-serving",
+        "role": "applies"
+      },
+      {
+        "id": "containers",
+        "role": "applies"
+      },
+      {
+        "id": "lora",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-10-30-question-generation_model_error.md": {
+    "id": "generation-cuda-assert",
+    "description": "한국어 BART 모델의 토큰화·생성 과정에서 발생한 CUDA device-side assert 오류를 점검합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "tokenization",
+        "role": "applies"
+      },
+      {
+        "id": "cuda",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-11-03-torch-tensor-manipulation.md": {
+    "id": "torch-tensor-manipulation-1",
+    "description": "PyTorch의 view·reshape·transpose가 형태와 연속 메모리에 미치는 차이를 예제로 확인합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "pytorch-tensors",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-11-10-torch-tensor-manipulation-(un)squeeze.md": {
+    "id": "torch-tensor-manipulation-2",
+    "description": "squeeze와 unsqueeze의 차원 제거·추가 동작 및 인덱스 오류를 예제로 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "pytorch-tensors",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-11-16-OOM-llama2.md": {
+    "id": "llama2-training-oom",
+    "description": "Llama2 70B의 Trainer 학습 중 스텝별 GPU 메모리가 불안정해지는 OOM 현상과 조치를 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "gpu-memory",
+        "role": "applies"
+      },
+      {
+        "id": "peft",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-11-22-model-size.md": {
+    "id": "model-input-length",
+    "description": "Transformers 모델의 입력 시퀀스 길이와 토크나이저의 길이 설정을 구분해 변경하는 방법을 기록합니다.",
+    "language": "ko",
+    "contentType": "implementation",
+    "conceptRefs": [
+      {
+        "id": "tokenization",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-11-30-OOM-issue.md": {
+    "id": "transformers-training-oom",
+    "description": "Trainer 학습이 몇 스텝 뒤 중단되는 현상을 단순한 GPU 용량 부족과 구분해 점검한 기록입니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "gpu-memory",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-12-07-LoftQ.md": {
+    "id": "loftq",
+    "description": "양자화 오차와 저랭크 적응을 함께 고려하는 LoftQ의 접근과 저비트 실험을 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "quantization",
+        "role": "about"
+      },
+      {
+        "id": "lora",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-12-14-Ziya2.md": {
+    "id": "ziya2",
+    "description": "데이터 중심의 언어모델 개발을 목표로 한 Ziya2의 데이터 파이프라인과 지속 사전학습을 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "pretraining",
+        "role": "about"
+      },
+      {
+        "id": "data-preparation",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-12-19-EDA.md": {
+    "id": "eda",
+    "description": "텍스트 분류 데이터에 적용하는 동의어 대체 등 간단한 증강 기법과 EDA의 실험을 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "data-preparation",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2023-12-29-PromptTuning.md": {
+    "id": "prompt-tuning",
+    "description": "기반 모델을 고정하고 연속 프롬프트만 학습하는 Prompt Tuning의 규모별 효과와 실험을 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "prompt-tuning",
+        "role": "about"
+      },
+      {
+        "id": "peft",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-01-04-정규표현식.md": {
+    "id": "regex-preprocessing",
+    "description": "텍스트에서 시간 표기를 제거하는 정규표현식과 raw string·문자 집합의 차이를 예제로 기록합니다.",
+    "language": "ko",
+    "contentType": "implementation",
+    "conceptRefs": [
+      {
+        "id": "data-preparation",
+        "role": "applies"
+      },
+      {
+        "id": "python-language",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-01-11-args&kwargs.md": {
+    "id": "python-args-kwargs",
+    "description": "고정 인자와 가변 위치·키워드 인자를 비교하고 args·kwargs를 함께 쓰는 예제를 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "python-language",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-01-18-message-history.md": {
+    "id": "message-history",
+    "description": "시스템·사용자·모델 메시지의 role과 content를 묶는 대화 이력 형식의 예제를 기록합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "agent-memory",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-01-24-debugging.md": {
+    "id": "tokenizer-input-troubleshooting",
+    "description": "데이터 증강 후 토크나이저의 TextEncodeInput 자료형 오류가 발생한 원인과 해결을 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "tokenization",
+        "role": "applies"
+      },
+      {
+        "id": "data-preparation",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-02-08-compare_to_actfn.md": {
+    "id": "activation-functions",
+    "description": "분류 모델 코드의 활성 함수 설정과 모델 내부 구현을 비교하며 동작을 확인합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "pytorch-tensors",
+        "role": "applies"
+      },
+      {
+        "id": "transformer",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-02-18-torch-tensor-manipulation3.md": {
+    "id": "torch-tensor-manipulation-3",
+    "description": "브로드캐스팅, 인덱싱·슬라이싱, expand와 삼각 행렬 연산을 PyTorch 예제로 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "pytorch-tensors",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-02-22-pip-options.md": {
+    "id": "pip-options",
+    "description": "pip 설치 명령과 build isolation 등 패키지 설치 옵션을 확인할 자료를 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "python-environment",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-03-01-lora_new_featrues1.md": {
+    "id": "peft-features-090",
+    "description": "PEFT v0.9.0의 DoRA 지원, LoRA 어댑터 병합과 양자화 관련 변경 사항을 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "peft",
+        "role": "about"
+      },
+      {
+        "id": "lora",
+        "role": "about"
+      },
+      {
+        "id": "quantization",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-03-29-lora_new_features2.md": {
+    "id": "peft-features-0100",
+    "description": "PEFT v0.10.0의 학습 준비 API 변경, DoRA 개선과 layer replication 기능을 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "peft",
+        "role": "about"
+      },
+      {
+        "id": "lora",
+        "role": "about"
+      },
+      {
+        "id": "qlora",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-04-25-VERA.md": {
+    "id": "vera",
+    "description": "공유하는 무작위 행렬과 학습 벡터를 사용하는 VeRA의 파라미터 효율적 적응 방식을 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "peft",
+        "role": "about"
+      },
+      {
+        "id": "lora",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-04-30-DoRA.md": {
+    "id": "dora",
+    "description": "가중치의 크기와 방향을 나누는 DoRA의 설계와 LoRA·전체 미세조정 비교를 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "peft",
+        "role": "about"
+      },
+      {
+        "id": "lora",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-05-03-alphaLLM.md": {
+    "id": "alphallm",
+    "description": "상상·탐색·비평을 통해 모델이 스스로 개선하는 AlphaLLM의 문제 설정과 접근을 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "reinforcement-learning",
+        "role": "about"
+      },
+      {
+        "id": "chain-of-thought",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-06-19-chatvector.md": {
+    "id": "chat-vector",
+    "description": "모델 간 가중치 차이를 활용해 새로운 언어의 지시 수행·정렬을 돕는 Chat Vector를 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "model-alignment",
+        "role": "about"
+      },
+      {
+        "id": "pretraining",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-06-19-moe.md": {
+    "id": "mixture-of-experts-paper",
+    "description": "Sparsely-Gated Mixture-of-Experts 논문의 제목과 배경 절을 등록한 기록입니다. 상세 리뷰는 아직 작성되어 있지 않습니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "mixture-of-experts",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-08-22-python-class-inheritance.md": {
+    "id": "python-class-inheritance",
+    "description": "Python의 상속과 추상 클래스를 정리하고 검색기 코드에서 클래스 구조를 읽어봅니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "python-language",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-09-01-pytest.md": {
+    "id": "pytest",
+    "description": "함수 형태의 테스트를 중심으로 pytest의 주요 기능과 실행 결과를 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "testing",
+        "role": "about"
+      },
+      {
+        "id": "python-language",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-09-10-python-map.md": {
+    "id": "python-map",
+    "description": "map 함수의 기본 형식부터 람다·중첩 반복 객체·조건식 적용까지 예제로 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "python-language",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-09-11-python-enumerate.md": {
+    "id": "python-enumerate",
+    "description": "반복 객체의 인덱스와 값을 함께 받는 enumerate의 구문·반환값과 장점을 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "python-language",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-09-12-python-enum.md": {
+    "id": "python-enum",
+    "description": "이름이 있는 상수 집합을 enum으로 정의하고 값 접근과 상태 표현 예제를 살펴봅니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "python-language",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-10-08-vllm-debugging.md": {
+    "id": "vllm-weight-loading",
+    "description": "vLLM의 tensor parallel 설정에서 가중치 로딩이 멈추는 현상과 해결 방법을 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "vllm",
+        "role": "applies"
+      },
+      {
+        "id": "distributed-training",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-10-29-semantic-search.md": {
+    "id": "semantic-search",
+    "description": "텍스트 임베딩과 유사도로 의미가 가까운 문서를 찾는 검색 방식을 키워드 검색과 비교합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "semantic-search",
+        "role": "about"
+      },
+      {
+        "id": "dense-retrieval",
+        "role": "about"
+      },
+      {
+        "id": "rag",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-11-09-keyword-search.md": {
+    "id": "keyword-search",
+    "description": "Wikipedia 예제를 통해 키워드 일치 검색의 동작과 쿼리에 따른 한계를 살펴봅니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "keyword-search",
+        "role": "about"
+      },
+      {
+        "id": "rag",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-11-10-dense-retrieval.md": {
+    "id": "dense-retrieval",
+    "description": "텍스트 임베딩을 사용하는 밀집 검색과 문서 청킹이 검색 결과에 미치는 영향을 정리합니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "dense-retrieval",
+        "role": "about"
+      },
+      {
+        "id": "semantic-search",
+        "role": "about"
+      },
+      {
+        "id": "rag",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-11-11-ollama-troubleshooting.md": {
+    "id": "ollama-docker-troubleshooting",
+    "description": "Ollama와 Docker의 OpenWebUI 연결, 사용자 모델 경로 설정에서 발생한 문제를 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "model-serving",
+        "role": "applies"
+      },
+      {
+        "id": "containers",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-11-12-reranking.md": {
+    "id": "reranking",
+    "description": "검색 후보를 질의와 다시 평가해 관련성 순서를 조정하고 키워드 검색 결과를 개선하는 방법을 살펴봅니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "reranking",
+        "role": "about"
+      },
+      {
+        "id": "rag",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-11-15-vllm-gemma-family-error.md": {
+    "id": "vllm-gemma-troubleshooting",
+    "description": "vLLM에서 Gemma 계열 모델을 로드하며 만난 오류와 환경별 조치를 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "vllm",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2024-11-20-lm-evaluation-harness-oom.md": {
+    "id": "lm-evaluation-harness-oom",
+    "description": "vLLM 백엔드로 lm-evaluation-harness를 실행할 때 발생한 OOM과 평가 설정을 점검합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "vllm",
+        "role": "applies"
+      },
+      {
+        "id": "gpu-memory",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2025-02-07-dl-env-installation.md": {
+    "id": "offline-deep-learning-environment",
+    "description": "폐쇄망 서버의 낮은 드라이버·CUDA 버전에서 딥러닝 환경을 준비하고 설치한 과정을 기록합니다.",
+    "language": "ko",
+    "contentType": "implementation",
+    "conceptRefs": [
+      {
+        "id": "cuda",
+        "role": "applies"
+      },
+      {
+        "id": "python-environment",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2025-03-13-vllm-inference-not-working.md": {
+    "id": "vllm-tensor-parallel-troubleshooting",
+    "description": "tensor parallel을 켜면 모델 적재 후 추론이 실패하는 현상과 custom all-reduce 관련 조치를 기록합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "vllm",
+        "role": "applies"
+      },
+      {
+        "id": "distributed-training",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2025-07-30-langgraph-expression-format.md": {
+    "id": "langgraph-structured-streaming",
+    "description": "LangGraph에서 구조화된 라우팅 결과와 생성 토큰을 구분하고 스트리밍 메시지의 metadata를 분석합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "langgraph",
+        "role": "applies"
+      },
+      {
+        "id": "tool-use",
+        "role": "applies"
+      },
+      {
+        "id": "agent-memory",
+        "role": "applies"
+      }
+    ],
+    "projectIds": [],
+    "title": "LangGraph 구조화 출력과 스트리밍 메시지 분석"
+  },
+  "_posts/2025-08-14-BFCL-reasoning-option.md": {
+    "id": "bfcl-reasoning-option",
+    "description": "BFCL의 Responses API 추론 중 발생한 오류와 모델 핸들러의 reasoning 옵션 처리 코드를 점검합니다.",
+    "language": "ko",
+    "contentType": "troubleshooting",
+    "conceptRefs": [
+      {
+        "id": "agent-evaluation",
+        "role": "applies"
+      },
+      {
+        "id": "tool-use",
+        "role": "applies"
+      }
+    ],
+    "projectIds": [],
+    "title": "BFCL Responses API의 reasoning 옵션 오류"
+  },
+  "_posts/2025-10-16-mcp-meme.md": {
+    "id": "mcp-meme",
+    "description": "MCP를 사용하는 사람과 만드는 사람을 대비한 이미지 밈을 남긴 짧은 기록입니다.",
+    "language": "ko",
+    "contentType": "note",
+    "conceptRefs": [
+      {
+        "id": "tool-use",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2026-06-04-k-browsecomp.md": {
+    "id": "k-browsecomp",
+    "description": "한국어 문맥에 기반한 웹 탐색 에이전트 벤치마크 K-BrowseComp의 구성·검증·평가를 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "agent-evaluation",
+        "role": "about"
+      },
+      {
+        "id": "tool-use",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2026-06-11-rtpurbo.md": {
+    "id": "rtpurbo",
+    "description": "기존 full attention을 적은 학습으로 희소화하는 RTPurbo의 헤드별 보정과 토큰 선택 방식을 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "sparse-attention",
+        "role": "about"
+      },
+      {
+        "id": "transformer",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2026-06-11-searchswarm.md": {
+    "id": "searchswarm",
+    "description": "장기 조사 작업에서 메인 에이전트가 문맥과 작업을 하위 에이전트에 분담하는 SearchSwarm을 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "multi-agent",
+        "role": "about"
+      },
+      {
+        "id": "agent-memory",
+        "role": "about"
+      },
+      {
+        "id": "agent-evaluation",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2026-06-18-constitutional-ai.md": {
+    "id": "constitutional-ai",
+    "description": "원칙에 따른 비평·수정과 AI 피드백 강화학습을 사용하는 Constitutional AI의 두 학습 단계를 살펴봅니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "model-alignment",
+        "role": "about"
+      },
+      {
+        "id": "reinforcement-learning",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2026-08-18-dflash-block-diffusion-speculative-decoding.md": {
+    "id": "dflash",
+    "description": "블록 확산 draft와 target 모델의 검증을 결합한 DFlash의 추측 디코딩·학습·실험을 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "speculative-decoding",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2026-08-18-fast-inference-via-speculative-decoding.md": {
+    "id": "speculative-decoding-paper",
+    "description": "작은 모델의 토큰 예측과 큰 모델의 병렬 검증으로 출력을 가속하는 원조 추측 디코딩 논문을 정리합니다.",
+    "language": "ko",
+    "contentType": "paper-review",
+    "conceptRefs": [
+      {
+        "id": "speculative-decoding",
+        "role": "about"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2026-10-19-kodistill-vl-2b.md": {
+    "id": "kodistill",
+    "description": "단일 GPU에서 한국어 문자를 그대로 전사하도록 VLM을 후속 학습하고, 한국어·영어 성능을 함께 평가한 연구입니다.",
+    "language": "en",
+    "contentType": "research",
+    "conceptRefs": [
+      {
+        "id": "korean-ocr",
+        "role": "about"
+      },
+      {
+        "id": "vlm",
+        "role": "about"
+      },
+      {
+        "id": "reinforcement-learning",
+        "role": "applies"
+      }
+    ],
+    "projectIds": [
+      "kodistill"
+    ],
+    "hero": {
+      "src": "/assets/research/kodistill-vl-2b/figures/benchmark_comparison.png",
+      "alt": "KoDistill의 한국어·영어 벤치마크 비교",
+      "kind": "figure"
+    }
+  },
+  "_posts/2026-11-05-thinkingcap-2b.md": {
+    "id": "thinkingcap",
+    "description": "작은 추론 모델의 미종료 문제를 강화학습으로 다루고, 보상과 손실 수준의 기법을 같은 평가 기준에서 비교한 연구입니다.",
+    "language": "en",
+    "contentType": "research",
+    "conceptRefs": [
+      {
+        "id": "reasoning-efficiency",
+        "role": "about"
+      },
+      {
+        "id": "reinforcement-learning",
+        "role": "applies"
+      },
+      {
+        "id": "chain-of-thought",
+        "role": "about"
+      }
+    ],
+    "projectIds": [
+      "thinkingcap"
+    ],
+    "hero": {
+      "src": "/assets/research/thinkingcap-2b/figures/fig01_tradeoff.png",
+      "alt": "ThinkingCap 조건별 정확도와 추론 토큰의 비교",
+      "kind": "figure"
+    }
+  },
+  "_posts/2026-11-11-inner-llm-inference-server.md": {
+    "id": "inference-server",
+    "description": "RunPod의 GPU 추론과 노트북의 게이트웨이·인증·관측을 분리하고, OpenAI 호환 API로 제공한 운영 기록입니다.",
+    "language": "ko",
+    "contentType": "implementation",
+    "conceptRefs": [
+      {
+        "id": "vllm",
+        "role": "applies"
+      },
+      {
+        "id": "model-serving",
+        "role": "applies"
+      },
+      {
+        "id": "speculative-decoding",
+        "role": "applies"
+      }
+    ],
+    "projectIds": []
+  },
+  "_posts/2026-11-13-in-browser-spine-reader.md": {
+    "id": "book-spine",
+    "description": "브라우저에서 책등을 검출하고 OCR·제목 검색을 연결하면서, 실제 실행 경로와 평가 방식의 차이로 생긴 문제를 분석합니다.",
+    "language": "en",
+    "contentType": "research",
+    "conceptRefs": [
+      {
+        "id": "korean-ocr",
+        "role": "applies"
+      },
+      {
+        "id": "reranking",
+        "role": "applies"
+      },
+      {
+        "id": "keyword-search",
+        "role": "applies"
+      },
+      {
+        "id": "browser-inference",
+        "role": "applies"
+      },
+      {
+        "id": "object-detection",
+        "role": "applies"
+      },
+      {
+        "id": "cv-evaluation",
+        "role": "about"
+      }
+    ],
+    "projectIds": [
+      "book-spine"
+    ],
+    "featured": true,
+    "hero": {
+      "src": "/assets/research/in-browser-spine-reader/figures/fig02_sample_result.png",
+      "alt": "선반 사진에서 책등 검출 상자와 번호가 표시된 실제 결과",
+      "kind": "photo"
+    }
+  }
+}

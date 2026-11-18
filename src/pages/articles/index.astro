@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleArchive from '../../components/ArticleArchive.astro';
+import { getArticles, getConcepts } from '../../lib/content';
+import { latestArticles, usedConcepts } from '../../lib/page-data';
+const articles = latestArticles(getArticles());
+const concepts = usedConcepts(articles,getConcepts());
+---
+<BaseLayout title="전체 글" description="연구와 구현, 문제 해결 과정을 날짜순으로 정리했습니다." canonicalPath="/articles/">
+  <div class="page-shell archive-page"><header class="page-heading"><h1 class="page-title">전체 글</h1><p class="page-description">연구와 구현, 문제 해결 과정을 날짜순으로 정리했습니다.</p></header><ArticleArchive articles={articles} concepts={concepts}/></div>
+</BaseLayout>

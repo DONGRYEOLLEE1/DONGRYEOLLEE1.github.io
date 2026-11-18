@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-18",
+  "status": "passed",
+  "method": "Playwright rendering the actual dist files through local static-response interception",
+  "productionDeploymentTested": false,
+  "checks": {
+    "registryArticles": 113,
+    "englishBodySearch": "ThinkingCap",
+    "koreanAndTechnicalSearch": "QLoRA",
+    "combinedFilters": "OR within topics/types, AND between axes",
+    "invalidPage": "clamped to page 10; 5 remaining posts",
+    "queryCanonicalAndNoindex": true,
+    "topicAppliesRole": true,
+    "relatedSelectionAndEscapeFocus": true,
+    "clipboardCopyMatchesOriginalCode": true,
+    "thinkingcapZoomTriggers": 11,
+    "zoomFitOriginalEscapeFocus": true,
+    "thinkingcapRenderedMath": 9,
+    "articleViewportWidths": [
+      320,
+      375,
+      768,
+      1280,
+      1440
+    ],
+    "articleHorizontalOverflow": false,
+    "mobileMenu": true,
+    "themeLightDarkSystem": true,
+    "darkSelectionBackground": "#315E53",
+    "searchFailureAndRetryRecovery": true,
+    "fullSearchResults": 5,
+    "newSearchDefaultsToRelevance": true,
+    "systemThemeFollowsMediaChanges": true
+  },
+  "limitations": [
+    "Vercel CDN and account deployment not performed",
+    "Legacy live site was not crawled exhaustively",
+    "External image and citation uptime not audited"
+  ]
+}

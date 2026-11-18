@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FilterFields from '../../components/FilterFields.astro';
+import { getArticles, getConcepts } from '../../lib/content';
+import { usedConcepts } from '../../lib/page-data';
+const concepts = usedConcepts(getArticles(),getConcepts());
+---
+<BaseLayout title="검색" description="제목, 기술 개념과 본문에서 글을 찾습니다." canonicalPath="/search/" noindex>
+  <div class="page-shell full-search-page" data-search-page data-page-size="10">
+    <header class="page-heading"><h1 class="page-title">검색</h1><p class="page-description">제목, 기술 개념과 본문에서 글을 찾습니다.</p></header>
+    <form class="filter-bar" data-full-search-form action="/search/" method="get">
+      <label class="search-field"><span class="sr-only">검색어</span><input type="search" name="q" placeholder="제목, 기술 개념, 본문에서 검색" autocomplete="off"/><button class="button" type="submit">검색</button></label>
+      <FilterFields concepts={concepts} search/>
+      <p class="form-error" data-input-error hidden role="alert"></p>
+    </form>
+    <div class="active-filters" data-active-filters></div>
+    <div class="full-search-status" data-full-search-status role="status" aria-live="polite">검색어를 입력해 주세요.</div>
+    <div class="post-list" data-full-search-results></div>
+    <nav data-full-search-pagination aria-label="검색 결과 페이지"></nav>
+    <p class="search-topic-link"><a class="arrow-link" href="/topics/">주제로 찾아보기 ↗</a></p>
+    <noscript><style is:inline>[data-full-search-form], [data-full-search-status] { display:none; }</style><p>현재 검색을 이용할 수 없어요. 전체 글이나 주제로 찾아보세요.</p><a class="arrow-link" href="/articles/">전체 글 보기 ↗</a></noscript>
+  </div>
+</BaseLayout>

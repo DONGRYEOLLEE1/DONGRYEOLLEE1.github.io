@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1260" viewBox="0 0 1200 1260">
+  <title>모바일 글 상세 구조 검토용 와이어프레임</title>
+  <desc>하나의 글에서 읽기 시작과 글 하단을 나누어 표시한다. 목차는 본문 위 접힘 영역, 관련 글은 본문 아래에 배치한다. 실제 최종 디자인은 아니다.</desc>
+  <defs><style>
+    text{font-family:'Apple SD Gothic Neo','Noto Sans KR',Arial,sans-serif;fill:#202724}
+    .muted{fill:#59625f}.teal{fill:#0f766e}.bold{font-weight:700}
+  </style></defs>
+  <rect width="1200" height="1260" fill="#fff"/>
+  <text x="30" y="55" font-size="40" class="bold">모바일 · 단일 본문 흐름</text>
+  <text x="30" y="99" font-size="25" class="muted">구조 검토용 와이어프레임 · 같은 글의 상단과 하단을 나누어 표시</text>
+  <text x="72" y="169" font-size="31" class="bold">읽기 시작</text>
+  <text x="687" y="169" font-size="31" class="bold">본문을 읽은 뒤</text>
+  <rect x="52" y="198" width="480" height="925" rx="25" fill="#f7f6f2" stroke="#aebbb1" stroke-width="3"/>
+  <rect x="667" y="198" width="480" height="925" rx="25" fill="#f7f6f2" stroke="#aebbb1" stroke-width="3"/>
+  <text x="82" y="254" font-size="35" class="bold">LEE</text>
+  <text x="380" y="253" font-size="28" class="teal">검색</text>
+  <text x="457" y="253" font-size="28">☰</text>
+  <path d="M52 279H532" stroke="#c9ceca" stroke-width="2"/>
+  <text x="82" y="336" font-size="25" class="teal bold">ENGINEERING · RAG</text>
+  <text x="82" y="400" font-size="41" class="bold">검색 재정렬에서</text>
+  <text x="82" y="453" font-size="41" class="bold">실제 서비스까지</text>
+  <text x="82" y="506" font-size="25" class="muted">2026. 11. 18 · 12분</text>
+  <text x="82" y="559" font-size="28" class="muted">실험과 운영을 연결하는 기록.</text>
+  <rect x="82" y="597" width="420" height="75" rx="11" fill="#e8efea" stroke="#a9bbb1"/>
+  <text x="107" y="645" font-size="31" class="teal bold">목차 보기</text>
+  <text x="454" y="645" font-size="36" class="teal">+</text>
+  <rect x="82" y="707" width="420" height="155" rx="10" fill="#e0e8e0" stroke="#b6c4b9"/>
+  <path d="M132 786H451" stroke="#0f766e" stroke-width="3"/>
+  <circle cx="150" cy="786" r="26" fill="#f7f6f2" stroke="#0f766e" stroke-width="2"/>
+  <circle cx="291" cy="786" r="26" fill="#f7f6f2" stroke="#0f766e" stroke-width="2"/>
+  <circle cx="431" cy="786" r="26" fill="#0f766e"/>
+  <text x="82" y="921" font-size="32" class="bold">01 문제를 정의하기</text>
+  <rect x="82" y="950" width="420" height="12" rx="6" fill="#bec6bf"/>
+  <rect x="82" y="982" width="400" height="12" rx="6" fill="#c9d0c9"/>
+  <rect x="82" y="1014" width="420" height="12" rx="6" fill="#c9d0c9"/>
+  <text x="82" y="1081" font-size="27" class="muted">아래로 읽기 ↓</text>
+  <path d="M565 652H620 M604 635L622 652L604 669" fill="none" stroke="#0f766e" stroke-width="4"/>
+  <text x="697" y="254" font-size="35" class="bold">LEE</text>
+  <text x="995" y="253" font-size="28" class="teal">검색</text>
+  <text x="1072" y="253" font-size="28">☰</text>
+  <path d="M667 279H1147" stroke="#c9ceca" stroke-width="2"/>
+  <rect x="697" y="323" width="396" height="12" rx="6" fill="#c9d0c9"/>
+  <rect x="697" y="355" width="348" height="12" rx="6" fill="#c9d0c9"/>
+  <text x="697" y="417" font-size="27" class="muted">본문 · 참고자료 끝</text>
+  <path d="M697 456H1117" stroke="#aebbb1" stroke-width="2"/>
+  <text x="697" y="519" font-size="37" class="bold">연결된 글</text>
+  <text x="697" y="564" font-size="27" class="muted">이 글과 이어지는 개념과 실험</text>
+  <rect x="697" y="600" width="420" height="147" rx="13" fill="#fff" stroke="#b6c2b8" stroke-width="2"/>
+  <text x="721" y="648" font-size="31" class="bold">검색 재정렬의 원리</text>
+  <text x="721" y="698" font-size="26" class="muted">같은 개념 · Reranking</text>
+  <rect x="697" y="769" width="420" height="147" rx="13" fill="#fff" stroke="#b6c2b8" stroke-width="2"/>
+  <text x="721" y="817" font-size="31" class="bold">RAG 평가 기록</text>
+  <text x="721" y="867" font-size="26" class="muted">평가 개념을 함께 다루는 글</text>
+  <rect x="697" y="947" width="420" height="69" rx="11" fill="#e8efea"/>
+  <text x="721" y="991" font-size="28" class="teal bold">연결된 글 모두 보기 →</text>
+  <text x="697" y="1082" font-size="26" class="muted">목록 링크로 탐색을 이어가기</text>
+  <text x="30" y="1191" font-size="28" class="muted">접힘 목차는 위쪽 · 관련 글은 아래쪽 · 본문을 덮는 고정 패널 없음</text>
+  <text x="30" y="1235" font-size="25" class="muted">실제 최종 디자인 아님 · 텍스트와 관계 설명을 그래프보다 먼저 읽을 수 있게 구성</text>
+</svg>

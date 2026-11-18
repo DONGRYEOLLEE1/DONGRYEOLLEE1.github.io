@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getArticles, getConcepts, getSeries } from '../../../lib/content';
+import { TYPE_LABELS, formatDate } from '../../../lib/site';
+import type { Article, Series } from '../../../lib/types';
+interface Props { series: Series }
+export function getStaticPaths() { return getSeries().map(series => ({params:{id:series.id},props:{series}})); }
+const { series } = Astro.props;
+const articles = getArticles();
+const ordered = series.orderedArticleIds.map(id => articles.find(article => article.id === id)).filter((article): article is Article => Boolean(article));
+const conceptIds = new Set(ordered.flatMap(article => article!.conceptRefs.map(ref => ref.id)));
+const concepts = getConcepts().filter(concept => conceptIds.has(concept.id));
+---
+<BaseLayout title={series.title} description={series.description} canonicalPath={`/series/${series.id}/`}>
+  <div class="page-shell series-page">
+    <header class="page-heading"><a class="breadcrumb" href="/articles/">글 <span aria-hidden="true">/ 시리즈</span></a><h1 class="page-title">{series.title}</h1><p class="page-description">{series.description}</p><p class="small-label">{ordered.length}개의 글 · 시리즈 순서</p>{ordered[0] && <a class="button" href={ordered[0].path}>첫 글부터 읽기 ↗</a>}</header>
+    <ol class="series-list">{ordered.map((article,index) => article && <li id={`article-${article.id}`}>
+      <span class="series-number" aria-hidden="true">{String(index+1).padStart(2,'0')}</span>
+      <article><span class="series-current">보고 있던 글</span><div class="card-meta"><span>{TYPE_LABELS[article.contentType]}</span><time datetime={article.publishedAt}>{formatDate(article.publishedAt)}</time></div><h2><a href={article.path}><span class="sr-only">{index+1}. </span>{article.title}</a></h2><p>{article.description}</p></article>
+    </li>)}</ol>
+    {ordered.length === 0 && <div class="empty-state"><h2>현재 읽을 수 있는 글이 없습니다.</h2><a href="/articles/">전체 글 보기 ↗</a></div>}
+    {concepts.length > 0 && <aside class="adjacent-topics"><h2>연결된 주제</h2><div class="topic-chips">{concepts.slice(0,8).map(concept => <a class="chip" href={`/topics/${concept.id}/`}>{concept.label}</a>)}</div></aside>}
+  </div>
+</BaseLayout>

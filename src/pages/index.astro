@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import { getArticles, getConcepts, getProjects } from '../lib/content';
+import { latestArticles, articlesForConcept } from '../lib/page-data';
+import { TYPE_LABELS, formatDate } from '../lib/site';
+import type { Article, Concept } from '../lib/types';
+const articles = latestArticles(getArticles());
+const concepts = getConcepts();
+const projects = getProjects();
+const lead = articles.find(article => article.featured && article.id === 'book-spine') || articles.find(article => article.featured);
+const stories = ['thinkingcap','kodistill','inference-server'].map(id => articles.find(article => article.id === id)).filter((article): article is Article => Boolean(article));
+const storyIds = new Set(stories.map(article => article!.id));
+const recent = articles.filter(article => article.id !== lead?.id && !storyIds.has(article.id)).slice(0,6);
+const selectedTopics = ['reasoning-efficiency','korean-ocr','reranking','qlora','speculative-decoding','agent'];
+const topics = selectedTopics.map(id => concepts.find(concept => concept.id === id)).filter((concept): concept is Concept => Boolean(concept && articlesForConcept(concept.id,articles,concepts).length > 0));
+---
+<BaseLayout title="동렬의 기술 블로그" canonicalPath="/">
+  <div class="page-shell home-page">
+    <h1 class="editorial-intro"><strong>동렬의 기술 블로그.</strong> LLM 학습과 추론, 에이전트 개발을 기록합니다. 직접 수행한 실험과 구현 과정을 정리합니다.</h1>
+    {lead && <section class:list={['editorial-feature',{'no-media':!lead.hero}]} aria-label="대표 연구">
+      {lead.hero && <a class="feature-photo" href={lead.path}><img src={lead.hero.src} alt={lead.hero.alt} width="1200" height="630" fetchpriority="high" class:list={{'is-figure':lead.hero.kind !== 'photo'}}/></a>}
+      <div class="feature-copy">
+        <div class="card-meta"><span>{TYPE_LABELS[lead.contentType]}</span><time datetime={lead.publishedAt}>{formatDate(lead.publishedAt)}</time>{lead.language === 'en' && <span aria-label="영문 글">EN</span>}</div>
+        <h2 class="feature-title"><a href={lead.path} lang={lead.language}>{lead.title}</a></h2>
+        <p class="feature-description">{lead.description}</p>
+        <div class="topic-chips">{lead.conceptRefs.slice(0,3).map(ref => { const concept = concepts.find(item => item.id === ref.id); return concept && <a class="chip" href={`/topics/${concept.id}/`}>{concept.label}</a>; })}</div>
+        <a class="feature-read" href={lead.path}>글 읽기 ↗</a>
+      </div>
+    </section>}
+    {stories.length > 0 && <section class="editorial-secondary" aria-label="다른 연구와 구현 기록">
+      {stories.map(article => article && <article class="editorial-story">
+        <div class="card-meta"><span>{TYPE_LABELS[article.contentType]}</span><time datetime={article.publishedAt}>{formatDate(article.publishedAt)}</time>{article.language === 'en' && <span aria-label="영문 글">EN</span>}</div>
+        <h2><a href={article.path} lang={article.language}>{article.title}</a></h2>
+        <p class="description">{article.description}</p>
+        <a class="feature-read" href={article.path}>읽기 ↗</a>
+      </article>)}
+    </section>}
+    <div class="home-lower">
+      <section aria-labelledby="recent-title"><div class="section-heading"><h2 id="recent-title">최근 글</h2><a href="/articles/">전체 글 보기 ↗</a></div><div class="post-list">{recent.map(article => <PostCard article={article} concepts={concepts}/>)}</div></section>
+      <aside class="home-topics"><div class="section-heading"><h2>주제</h2></div><div class="topic-list">{topics.map(concept => concept && <a href={`/topics/${concept.id}/`}><span>{concept.label}<small>{articlesForConcept(concept.id,articles,concepts).length}개의 글</small></span><span aria-hidden="true">↗</span></a>)}</div><a class="arrow-link" href="/topics/">주제 모두 보기 ↗</a><a class="arrow-link home-research-link" href="/articles/?type=research">연구 글 보기 ↗</a></aside>
+    </div>
+    {projects.length > 0 && <section class="home-projects" aria-labelledby="home-projects-title"><div class="section-heading"><h2 id="home-projects-title">프로젝트</h2><a href="/projects/">프로젝트 모두 보기 ↗</a></div><div class="home-project-grid">{projects.slice(0,3).map(project => <article><h3><a href={`/projects/${project.id}/`}>{project.name} ↗</a></h3><p>{project.description}</p></article>)}</div></section>}
+  </div>
+</BaseLayout>

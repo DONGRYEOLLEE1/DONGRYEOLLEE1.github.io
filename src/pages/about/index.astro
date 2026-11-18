@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getArticles, getConcepts } from '../../lib/content';
+import { SITE } from '../../lib/site';
+import type { Article } from '../../lib/types';
+const articles = getArticles();
+const concepts = getConcepts();
+const selected = ['thinkingcap','kodistill','book-spine'].map(id => articles.find(article => article.id === id)).filter((article): article is Article => Boolean(article));
+---
+<BaseLayout title="소개" description="언어모델의 학습과 추론, 에이전트를 만들고 실험하는 AI Engineer 동렬의 기술 블로그입니다." canonicalPath="/about/">
+  <div class="page-shell about-page"><div class="about-layout"><aside class="about-aside"><span class="small-label">기술 블로그</span><h1 class="page-title">동렬</h1><p class="author-role">AI Engineer</p><div class="about-social"><a class="arrow-link" href={SITE.github} target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="arrow-link" href={SITE.huggingface} target="_blank" rel="noopener noreferrer">Hugging Face ↗</a></div></aside><div class="about-copy"><h2>언어모델을 연구하고,<br/>서비스로 만듭니다.</h2><p>언어모델의 학습과 추론, 에이전트를 만들고 실험합니다. 이 블로그에는 직접 구현한 과정과 논문을 읽으며 남긴 기록을 정리합니다.</p><p>실험의 결과뿐 아니라 평가 조건과 실패한 접근, 환경에 따라 달라진 동작도 함께 기록하려고 합니다. 오래된 구현 글은 작성 당시의 환경을 기준으로 읽어주세요.</p><section class="about-interests"><h3>주로 다루는 것</h3><div class="interest-row"><h4>LLM 학습과 효율화</h4><p>파인튜닝, 양자화와 증류, 추론 과정의 효율을 살펴봅니다.</p></div><div class="interest-row"><h4>추론과 서비스 구현</h4><p>모델을 실행하고 서비스에 연결하는 과정, 운영 환경에서 만나는 문제를 정리합니다.</p></div><div class="interest-row"><h4>검색과 AI 에이전트</h4><p>검색 결과를 다듬고 도구를 연결하며, 에이전트의 동작과 평가를 살펴봅니다.</p></div></section><div class="about-actions"><a class="arrow-link" href="/projects/">프로젝트 보기 ↗</a><a class="arrow-link" href="/articles/">모든 글 보기 ↗</a></div></div></div>
+    {selected.length > 0 && <section class="about-selected"><div class="section-heading"><h2>직접 수행한 연구</h2></div><div class="post-list">{selected.map(article => article && <PostCard article={article} concepts={concepts}/>)}</div></section>}
+  </div>
+</BaseLayout>

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "reviewScope": "화면 목업의 실제 글 10편. 개념·역할은 검토한 편집 데이터이며 본문 자동 추출 결과가 아니다.",
+  "articles": [
+    {
+      "id": "thinkingcap",
+      "publicationState": "published",
+      "concepts": [
+        {
+          "id": "reasoning-efficiency",
+          "role": "about"
+        }
+      ]
+    },
+    {
+      "id": "kodistill",
+      "publicationState": "published",
+      "concepts": [
+        {
+          "id": "korean-ocr",
+          "role": "about"
+        },
+        {
+          "id": "vlm",
+          "role": "about"
+        }
+      ]
+    },
+    {
+      "id": "book-spine",
+      "publicationState": "published",
+      "concepts": [
+        {
+          "id": "korean-ocr",
+          "role": "applies"
+        },
+        {
+          "id": "reranking",
+          "role": "applies"
+        },
+        {
+          "id": "keyword-search",
+          "role": "applies"
+        }
+      ]
+    },
+    {
+      "id": "reranking",
+      "publicationState": "published",
+      "concepts": [
+        {
+          "id": "reranking",
+          "role": "about"
+        },
+        {
+          "id": "rag",
+          "role": "about"
+        }
+      ]
+    },
+    {
+      "id": "dense-retrieval",
+      "publicationState": "published",
+      "concepts": [
+        {
+          "id": "dense-retrieval",
+          "role": "about"
+        },
+        {
+          "id": "semantic-search",
+          "role": "about"
+        },
+        {
+          "id": "rag",
+          "role": "about"
+        }
+      ]
+    },
+    {
+      "id": "keyword-search",
+      "publicationState": "published",
+      "concepts": [
+        {
+          "id": "keyword-search",
+          "role": "about"
+        },
+        {
+          "id": "rag",
+          "role": "about"
+        }
+      ]
+    },
+    {
+      "id": "semantic-search",
+      "publicationState": "published",
+      "concepts": [
+        {
+          "id": "semantic-search",
+          "role": "about"
+        },
+        {
+          "id": "dense-retrieval",
+          "role": "about"
+        },
+        {
+          "id": "rag",
+          "role": "about"
+        }
+      ]
+    },
+    {
+      "id": "qlora",
+      "publicationState": "published",
+      "concepts": [
+        {
+          "id": "qlora",
+          "role": "about"
+        },
+        {
+          "id": "quantization",
+          "role": "about"
+        }
+      ]
+    },
+    {
+      "id": "qlora-troubleshooting",
+      "publicationState": "published",
+      "concepts": [
+        {
+          "id": "qlora",
+          "role": "applies"
+        },
+        {
+          "id": "quantization",
+          "role": "applies"
+        }
+      ]
+    },
+    {
+      "id": "inference-server",
+      "publicationState": "published",
+      "concepts": [
+        {
+          "id": "vllm",
+          "role": "applies"
+        },
+        {
+          "id": "speculative-decoding",
+          "role": "applies"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+---
+interface Props { page: number; totalPages: number; basePath?: string; query?: URLSearchParams | Record<string,string> }
+const { page, totalPages, basePath = '/articles/', query } = Astro.props;
+const link = (n: number) => {
+  const params = query instanceof URLSearchParams ? new URLSearchParams(query) : new URLSearchParams(query);
+  params.delete('page');
+  const root = basePath.replace(/\/+$/, '') + '/';
+  const path = params.size ? root : n === 1 ? root : `${root}page/${n}/`;
+  if (params.size && n > 1) params.set('page',String(n));
+  return path + (params.size ? '?' + params.toString() : '');
+};
+const visible = Array.from({length:Math.max(0,totalPages)},(_,i) => i+1).filter(n=>n===1||n===totalPages||Math.abs(n-page)<=2);
+---
+{totalPages > 1 && <nav class="pagination" aria-label="글 목록 페이지">
+  {page > 1 && <a href={link(page-1)} rel="prev" aria-label="이전 페이지">← 이전</a>}
+  {visible.map((n,i) => <>{i>0&&n-visible[i-1]>1&&<span class="pagination-gap" aria-hidden="true">…</span>}<a href={link(n)} class:list={{active:n===page}} aria-current={n===page?'page':undefined} aria-label={`${n}페이지`}>{n}</a></>)}
+  {page < totalPages && <a href={link(page+1)} rel="next" aria-label="다음 페이지">다음 →</a>}
+</nav>}

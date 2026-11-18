@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1810" viewBox="0 0 1600 1810">
+  <title>홈과 전체 글 목록 구조 제안</title>
+  <desc>대표 연구는 두 열 카드로, 기존 기술 기록은 텍스트 목록으로 보여준다. 전체 글 목록에는 주제와 유형 필터, 결과 수, 정렬을 제공한다. 오른쪽 모바일 예시는 같은 정보를 한 열로 배치한다. 최종 디자인이나 실제 검색 결과를 나타내지 않는 구조 검토용 와이어프레임이다.</desc>
+  <defs>
+    <style>
+      text{font-family:'Apple SD Gothic Neo','Noto Sans KR',Arial,sans-serif;fill:#202724}
+      .muted{fill:#59625f}.teal{fill:#0f766e}.bold{font-weight:700}
+      .label{font-size:24px;font-weight:600;letter-spacing:.4px}
+      .small{font-size:23px}.body{font-size:26px}
+      .line{stroke:#c9ceca;stroke-width:1.5}
+    </style>
+  </defs>
+  <rect width="1600" height="1810" fill="#ffffff"/>
+  <text x="36" y="55" font-size="39" class="bold">홈 · 전체 글 목록</text>
+  <text x="36" y="98" font-size="25" class="muted">구조 제안 · 실제 최종 디자인 아님 · 실제 글 제목을 사용한 배치 예시</text>
+
+  <rect x="32" y="140" width="1100" height="930" rx="14" fill="#f7f6f2" stroke="#c9ceca" stroke-width="2"/>
+  <text x="68" y="194" font-size="36" font-weight="800">LEE</text>
+  <text x="270" y="192" class="body">Articles</text>
+  <text x="400" y="192" class="body">Topics</text>
+  <text x="515" y="192" class="body">Projects</text>
+  <text x="651" y="192" class="body">About</text>
+  <rect x="878" y="157" width="98" height="48" rx="11" fill="#e8efea" stroke="#a9bbb1"/>
+  <text x="903" y="190" class="small teal">검색</text>
+  <rect x="990" y="157" width="98" height="48" rx="11" fill="#f7f6f2" stroke="#b7c0ba"/>
+  <text x="1016" y="190" class="small">테마</text>
+  <path d="M32 223H1132" class="line"/>
+  <text x="68" y="279" font-size="35" class="bold">언어모델을 연구하고, 서비스로 만듭니다.</text>
+  <text x="68" y="321" class="body muted">LLM 학습 · 추론 · 에이전트를 실험하며 남긴 기록</text>
+  <text x="68" y="373" font-size="28" class="bold">대표 연구</text>
+  <text x="1088" y="373" text-anchor="end" class="small teal">연구 모두 보기 →</text>
+
+  <rect x="68" y="402" width="496" height="428" rx="12" fill="#ffffff" stroke="#bec8c0"/>
+  <rect x="84" y="418" width="464" height="261" rx="8" fill="#e4eae4"/>
+  <path d="M131 492H501 M131 532H501 M131 572H501" stroke="#b7c9bd" stroke-width="2"/>
+  <rect x="144" y="482" width="62" height="105" rx="7" fill="#9fbbb0"/>
+  <rect x="240" y="516" width="62" height="71" rx="7" fill="#789e8d"/>
+  <rect x="336" y="542" width="62" height="45" rx="7" fill="#0f766e"/>
+  <text x="316" y="634" text-anchor="middle" class="small muted">연구 도표 영역 · 16:9 · 비례 축소</text>
+  <text x="88" y="713" class="small teal bold">ThinkingCap-2B · Research</text>
+  <text x="88" y="752" font-size="25" class="bold">Teaching a 2B Reasoner</text>
+  <text x="88" y="786" font-size="25" class="bold">When to Stop Thinking</text>
+
+  <rect x="598" y="402" width="496" height="428" rx="12" fill="#ffffff" stroke="#bec8c0"/>
+  <rect x="614" y="418" width="464" height="261" rx="8" fill="#e4eae4"/>
+  <rect x="670" y="462" width="130" height="126" rx="7" fill="#f7f6f2" stroke="#a4b6a9"/>
+  <path d="M690 488H775 M690 512H768 M690 536H778 M690 560H754" stroke="#829d8e" stroke-width="6" stroke-linecap="round"/>
+  <path d="M821 522H862 M851 512L863 522L851 532" stroke="#0f766e" stroke-width="3" fill="none"/>
+  <rect x="885" y="480" width="132" height="90" rx="7" fill="#c5d6c9"/>
+  <text x="951" y="535" text-anchor="middle" class="body teal bold">OCR</text>
+  <text x="846" y="634" text-anchor="middle" class="small muted">대표 이미지 영역 · 도표 잘라내기 금지</text>
+  <text x="618" y="713" class="small teal bold">KoDistill-VL-2B · Research</text>
+  <text x="618" y="752" font-size="25" class="bold">Korean OCR Post-Training</text>
+  <text x="618" y="786" font-size="25" class="bold">on a Single GPU</text>
+
+  <text x="68" y="883" font-size="28" class="bold">기술 기록</text>
+  <text x="1088" y="883" text-anchor="end" class="small teal">전체 글 보기 →</text>
+  <path d="M68 905H1094 M68 968H1094 M68 1031H1094" class="line"/>
+  <text x="68" y="946" font-size="25" class="bold">(LLM-University) 1-3. Dense Retrieval</text>
+  <text x="1088" y="946" text-anchor="end" class="small muted">2024.11.10</text>
+  <text x="68" y="1009" font-size="25" class="bold">QLoRA 파인튜닝 · trouble shooting 및 일지</text>
+  <text x="1088" y="1009" text-anchor="end" class="small muted">2023.07.11</text>
+
+  <text x="1172" y="182" font-size="29" class="bold">모바일 · 같은 정보의 순서</text>
+  <text x="1172" y="222" class="small muted">한 열 카드 → 기술 기록 목록</text>
+  <rect x="1172" y="250" width="384" height="820" rx="24" fill="#f7f6f2" stroke="#a9b6ad" stroke-width="2"/>
+  <text x="1197" y="302" font-size="30" font-weight="800">LEE</text>
+  <text x="1363" y="300" class="small teal">검색</text>
+  <text x="1461" y="300" class="small">메뉴</text>
+  <path d="M1172 325H1556" class="line"/>
+  <text x="1197" y="375" font-size="28" class="bold">언어모델을 연구하고,</text>
+  <text x="1197" y="414" font-size="28" class="bold">서비스로 만듭니다.</text>
+  <text x="1197" y="468" font-size="26" class="bold">대표 연구</text>
+  <rect x="1197" y="492" width="334" height="188" rx="8" fill="#e4eae4"/>
+  <text x="1364" y="576" text-anchor="middle" class="small muted">이미지 16:9</text>
+  <text x="1364" y="614" text-anchor="middle" class="small muted">글자가 작아지면 확대 제공</text>
+  <text x="1197" y="720" class="small teal bold">ThinkingCap-2B</text>
+  <text x="1197" y="758" font-size="24" class="bold">Teaching a 2B Reasoner</text>
+  <text x="1197" y="792" font-size="24" class="bold">When to Stop Thinking</text>
+  <path d="M1197 823H1531" class="line"/>
+  <text x="1197" y="865" class="small teal bold">다음 카드 · KoDistill-VL-2B</text>
+  <path d="M1197 897H1531" class="line"/>
+  <text x="1197" y="940" font-size="26" class="bold">기술 기록</text>
+  <text x="1197" y="984" font-size="24">Dense Retrieval</text>
+  <text x="1197" y="1021" class="small muted">날짜 · 유형 · 짧은 설명</text>
+
+  <text x="36" y="1130" font-size="31" class="bold">전체 글 · 검색과 필터로 빠르게 찾기</text>
+  <rect x="32" y="1160" width="1524" height="550" rx="14" fill="#f7f6f2" stroke="#c9ceca" stroke-width="2"/>
+  <text x="68" y="1214" font-size="32" class="bold">Articles</text>
+  <rect x="277" y="1178" width="735" height="53" rx="10" fill="#ffffff" stroke="#b7c0ba"/>
+  <circle cx="306" cy="1201" r="10" fill="none" stroke="#59625f" stroke-width="2"/>
+  <path d="M313 1208L322 1217" stroke="#59625f" stroke-width="2"/>
+  <text x="344" y="1212" class="small muted">제목, 기술 개념, 본문에서 검색</text>
+  <text x="1509" y="1213" text-anchor="end" class="small muted">검색어 없으면 최신순</text>
+  <path d="M32 1254H1556" class="line"/>
+
+  <text x="68" y="1304" class="label">주제</text>
+  <rect x="68" y="1325" width="281" height="48" rx="9" fill="#e8efea" stroke="#a9bbb1"/>
+  <text x="86" y="1357" class="small teal">RAG · 검색</text>
+  <path d="M319 1345L326 1352L333 1345" fill="none" stroke="#0f766e" stroke-width="2"/>
+  <text x="68" y="1420" class="label">글 유형</text>
+  <rect x="68" y="1441" width="281" height="48" rx="9" fill="#ffffff" stroke="#b7c0ba"/>
+  <text x="86" y="1473" class="small">모든 유형</text>
+  <path d="M319 1461L326 1468L333 1461" fill="none" stroke="#59625f" stroke-width="2"/>
+  <text x="68" y="1541" class="small teal">필터 모두 해제</text>
+  <text x="68" y="1602" class="small muted">모바일에서는 결과 위에</text>
+  <text x="68" y="1639" class="small muted">필터와 정렬을 배치</text>
+  <path d="M385 1281V1673" class="line"/>
+
+  <text x="423" y="1305" font-size="26" class="bold">결과 N개</text>
+  <rect x="579" y="1277" width="179" height="41" rx="20" fill="#e8efea"/>
+  <text x="601" y="1305" font-size="22" class="teal">RAG · 검색 ×</text>
+  <text x="1509" y="1305" text-anchor="end" class="small">정렬: 최신순 ▾</text>
+  <path d="M423 1338H1509 M423 1448H1509 M423 1558H1509 M423 1668H1509" class="line"/>
+  <text x="423" y="1381" font-size="26" class="bold">(LLM-University) 1-4. Reranking</text>
+  <text x="1509" y="1381" text-anchor="end" class="small muted">2024.11.12</text>
+  <text x="423" y="1420" class="small muted">재정렬을 이용한 검색 결과 개선 · Note</text>
+  <text x="423" y="1491" font-size="26" class="bold">(LLM-University) 1-3. Dense Retrieval</text>
+  <text x="1509" y="1491" text-anchor="end" class="small muted">2024.11.10</text>
+  <text x="423" y="1530" class="small muted">임베딩 기반 검색과 문서 청킹 · Note</text>
+  <text x="423" y="1601" font-size="26" class="bold">(LLM-University) 1-2. Keyword Search</text>
+  <text x="1509" y="1601" text-anchor="end" class="small muted">2024.11.09</text>
+  <text x="423" y="1640" class="small muted">키워드 매칭의 동작과 한계 · Note</text>
+
+  <text x="36" y="1764" font-size="25" class="muted">연구는 그림과 핵심 결과로 소개 · 학습 기록은 목록으로 탐색 · 본문과 이미지 원본은 별도 검증</text>
+</svg>

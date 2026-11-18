@@ -1,0 +1,6 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="페이지를 찾을 수 없어요" canonicalPath="/404.html" noindex>
+  <div class="page-shell error-page"><span class="small-label">404</span><h1 class="page-title">페이지를 찾을 수 없어요.</h1><p class="page-description">주소가 바뀌었거나 더 이상 공개하지 않는 글일 수 있어요.</p><form action="/search/" method="get" class="recovery-search" data-recovery-search><label class="search-field"><span class="sr-only">찾으려던 내용 검색</span><input type="search" name="q" placeholder="찾으려던 내용 검색"/><button class="button" type="submit">검색</button></label><p class="form-error" data-input-error hidden role="alert"></p></form><div class="recovery-links"><a class="arrow-link" href="/articles/">전체 글 보기 ↗</a><a class="arrow-link" href="/topics/">주제로 찾아보기 ↗</a><a class="arrow-link" href="/">홈으로 ↗</a></div></div>
+</BaseLayout>

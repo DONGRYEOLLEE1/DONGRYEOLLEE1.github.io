@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "articles": 113,
+  "sourceMarkdownFiles": 113,
+  "htmlFiles": 192,
+  "checkedLinks": 8266,
+  "checkedAssets": 1357,
+  "errors": [],
+  "warnings": [],
+  "externalResources": "not fetched by this check"
+}

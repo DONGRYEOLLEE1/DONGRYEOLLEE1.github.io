@@ -1,0 +1,359 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "mode": "concept",
+    "scorerVersion": "concept-jaccard-series-v1",
+    "sourceHash": "c2630d15686f526a56a81b52905053a265c03a1e42a779fa52b1856588879fb0",
+    "articleCount": 10,
+    "conceptCount": 12,
+    "candidatePairCount": 90,
+    "algorithm": "0.85 × role/IDF-weighted concept Jaccard + 0.15 × explicit series adjacency",
+    "scope": "10-post UI prototype; reviewed concept metadata; no LLM extraction or graph database"
+  },
+  "perArticle": {
+    "book-spine": {
+      "targets": [
+        {
+          "id": "keyword-search",
+          "score": 0.261538,
+          "signals": {
+            "concept": 0.307692,
+            "series": 0
+          },
+          "reason": "핵심 주제로 다룬 글 · Keyword Search",
+          "reasonCode": "core-topic",
+          "evidence": [
+            {
+              "type": "shared-concept",
+              "conceptId": "keyword-search",
+              "sourceRole": "applies",
+              "targetRole": "about"
+            }
+          ]
+        },
+        {
+          "id": "reranking",
+          "score": 0.261538,
+          "signals": {
+            "concept": 0.307692,
+            "series": 0
+          },
+          "reason": "핵심 주제로 다룬 글 · Reranking",
+          "reasonCode": "core-topic",
+          "evidence": [
+            {
+              "type": "shared-concept",
+              "conceptId": "reranking",
+              "sourceRole": "applies",
+              "targetRole": "about"
+            }
+          ]
+        },
+        {
+          "id": "kodistill",
+          "score": 0.180068,
+          "signals": {
+            "concept": 0.211845,
+            "series": 0
+          },
+          "reason": "핵심 주제로 다룬 글 · 한국어 OCR",
+          "reasonCode": "core-topic",
+          "evidence": [
+            {
+              "type": "shared-concept",
+              "conceptId": "korean-ocr",
+              "sourceRole": "applies",
+              "targetRole": "about"
+            }
+          ]
+        }
+      ]
+    },
+    "dense-retrieval": {
+      "targets": [
+        {
+          "id": "semantic-search",
+          "score": 0.85,
+          "signals": {
+            "concept": 1,
+            "series": 0
+          },
+          "reason": "함께 다룬 주제 · Dense Retrieval",
+          "reasonCode": "shared-concept",
+          "evidence": [
+            {
+              "type": "shared-concept",
+              "conceptId": "dense-retrieval",
+              "sourceRole": "about",
+              "targetRole": "about"
+            },
+            {
+              "type": "shared-concept",
+              "conceptId": "semantic-search",
+              "sourceRole": "about",
+              "targetRole": "about"
+            }
+          ]
+        },
+        {
+          "id": "keyword-search",
+          "score": 0.15,
+          "signals": {
+            "concept": 0,
+            "series": 1
+          },
+          "reason": "같은 시리즈의 이전 글",
+          "reasonCode": "series-neighbor",
+          "evidence": [
+            {
+              "type": "series-neighbor",
+              "seriesId": "llm-university-search",
+              "direction": "previous"
+            }
+          ]
+        },
+        {
+          "id": "reranking",
+          "score": 0.15,
+          "signals": {
+            "concept": 0,
+            "series": 1
+          },
+          "reason": "같은 시리즈의 다음 글",
+          "reasonCode": "series-neighbor",
+          "evidence": [
+            {
+              "type": "series-neighbor",
+              "seriesId": "llm-university-search",
+              "direction": "next"
+            }
+          ]
+        }
+      ]
+    },
+    "inference-server": {
+      "targets": []
+    },
+    "keyword-search": {
+      "targets": [
+        {
+          "id": "book-spine",
+          "score": 0.261538,
+          "signals": {
+            "concept": 0.307692,
+            "series": 0
+          },
+          "reason": "적용 사례 · Keyword Search",
+          "reasonCode": "application-of",
+          "evidence": [
+            {
+              "type": "shared-concept",
+              "conceptId": "keyword-search",
+              "sourceRole": "about",
+              "targetRole": "applies"
+            }
+          ]
+        },
+        {
+          "id": "dense-retrieval",
+          "score": 0.15,
+          "signals": {
+            "concept": 0,
+            "series": 1
+          },
+          "reason": "같은 시리즈의 다음 글",
+          "reasonCode": "series-neighbor",
+          "evidence": [
+            {
+              "type": "series-neighbor",
+              "seriesId": "llm-university-search",
+              "direction": "next"
+            }
+          ]
+        },
+        {
+          "id": "semantic-search",
+          "score": 0.15,
+          "signals": {
+            "concept": 0,
+            "series": 1
+          },
+          "reason": "같은 시리즈의 이전 글",
+          "reasonCode": "series-neighbor",
+          "evidence": [
+            {
+              "type": "series-neighbor",
+              "seriesId": "llm-university-search",
+              "direction": "previous"
+            }
+          ]
+        }
+      ]
+    },
+    "kodistill": {
+      "targets": [
+        {
+          "id": "book-spine",
+          "score": 0.180068,
+          "signals": {
+            "concept": 0.211845,
+            "series": 0
+          },
+          "reason": "적용 사례 · 한국어 OCR",
+          "reasonCode": "application-of",
+          "evidence": [
+            {
+              "type": "shared-concept",
+              "conceptId": "korean-ocr",
+              "sourceRole": "about",
+              "targetRole": "applies"
+            }
+          ]
+        }
+      ]
+    },
+    "qlora": {
+      "targets": [
+        {
+          "id": "qlora-troubleshooting",
+          "score": 0.68,
+          "signals": {
+            "concept": 0.8,
+            "series": 0
+          },
+          "reason": "적용 사례 · QLoRA",
+          "reasonCode": "application-of",
+          "evidence": [
+            {
+              "type": "shared-concept",
+              "conceptId": "qlora",
+              "sourceRole": "about",
+              "targetRole": "applies"
+            },
+            {
+              "type": "shared-concept",
+              "conceptId": "quantization",
+              "sourceRole": "about",
+              "targetRole": "applies"
+            }
+          ]
+        }
+      ]
+    },
+    "qlora-troubleshooting": {
+      "targets": [
+        {
+          "id": "qlora",
+          "score": 0.68,
+          "signals": {
+            "concept": 0.8,
+            "series": 0
+          },
+          "reason": "핵심 주제로 다룬 글 · QLoRA",
+          "reasonCode": "core-topic",
+          "evidence": [
+            {
+              "type": "shared-concept",
+              "conceptId": "qlora",
+              "sourceRole": "applies",
+              "targetRole": "about"
+            },
+            {
+              "type": "shared-concept",
+              "conceptId": "quantization",
+              "sourceRole": "applies",
+              "targetRole": "about"
+            }
+          ]
+        }
+      ]
+    },
+    "reranking": {
+      "targets": [
+        {
+          "id": "book-spine",
+          "score": 0.261538,
+          "signals": {
+            "concept": 0.307692,
+            "series": 0
+          },
+          "reason": "적용 사례 · Reranking",
+          "reasonCode": "application-of",
+          "evidence": [
+            {
+              "type": "shared-concept",
+              "conceptId": "reranking",
+              "sourceRole": "about",
+              "targetRole": "applies"
+            }
+          ]
+        },
+        {
+          "id": "dense-retrieval",
+          "score": 0.15,
+          "signals": {
+            "concept": 0,
+            "series": 1
+          },
+          "reason": "같은 시리즈의 이전 글",
+          "reasonCode": "series-neighbor",
+          "evidence": [
+            {
+              "type": "series-neighbor",
+              "seriesId": "llm-university-search",
+              "direction": "previous"
+            }
+          ]
+        }
+      ]
+    },
+    "semantic-search": {
+      "targets": [
+        {
+          "id": "dense-retrieval",
+          "score": 0.85,
+          "signals": {
+            "concept": 1,
+            "series": 0
+          },
+          "reason": "함께 다룬 주제 · Dense Retrieval",
+          "reasonCode": "shared-concept",
+          "evidence": [
+            {
+              "type": "shared-concept",
+              "conceptId": "dense-retrieval",
+              "sourceRole": "about",
+              "targetRole": "about"
+            },
+            {
+              "type": "shared-concept",
+              "conceptId": "semantic-search",
+              "sourceRole": "about",
+              "targetRole": "about"
+            }
+          ]
+        },
+        {
+          "id": "keyword-search",
+          "score": 0.15,
+          "signals": {
+            "concept": 0,
+            "series": 1
+          },
+          "reason": "같은 시리즈의 다음 글",
+          "reasonCode": "series-neighbor",
+          "evidence": [
+            {
+              "type": "series-neighbor",
+              "seriesId": "llm-university-search",
+              "direction": "next"
+            }
+          ]
+        }
+      ]
+    },
+    "thinkingcap": {
+      "targets": []
+    }
+  }
+}

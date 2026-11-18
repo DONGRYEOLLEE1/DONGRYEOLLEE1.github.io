@@ -1,0 +1,15 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import { getArticles } from '../lib/content';
+import type { Article } from '../lib/types';
+
+export function getStaticPaths() {
+  return getArticles().filter(article => !article.path.startsWith('/research/')).map(article => ({
+    params: { path: article.path.replace(/^\//, '').replace(/\.html$/, '') },
+    props: { article },
+  }));
+}
+interface Props { article: Article }
+const { article } = Astro.props;
+---
+<ArticleLayout article={article} />

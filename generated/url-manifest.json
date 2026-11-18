@@ -1,0 +1,3327 @@
+{
+  "version": 1,
+  "articles": [
+    {
+      "id": "transformer",
+      "sourcePath": "_posts/2022-01-04-Transformer.md",
+      "canonicalPath": "/paperreview/2022/01/04/Transformer.html",
+      "outputPath": "/paperreview/2022/01/04/Transformer.html",
+      "sourceDigest": "967367a7afc600b76797fb38ad2ad4040cbe26dd8eb2df02074b9ad021c900e7",
+      "headingIds": [
+        "transformer",
+        "출현배경",
+        "transformer가-기존-모델과-다른점",
+        "self-attention",
+        "encoder-block",
+        "input-embedding",
+        "positional-encoding",
+        "self-attention-1",
+        "multi-head-attention",
+        "residual-connection",
+        "layer-normalization",
+        "position-wise-ffn",
+        "decoder-block",
+        "masked-multi-head-attention",
+        "multi-head-attention-1",
+        "final-linear-and-softmax-layer",
+        "trnasformer-의의",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-transformer": "transformer",
+        "h-출현배경": "출현배경",
+        "h-transformer가-기존-모델과-다른점": "transformer가-기존-모델과-다른점",
+        "h-self-attention": "self-attention",
+        "h-encoder-block": "encoder-block",
+        "h-input-embedding": "input-embedding",
+        "h-positional-encoding": "positional-encoding",
+        "h-self-attention-1": "self-attention-1",
+        "h-multi-head-attention": "multi-head-attention",
+        "h-residual-connection": "residual-connection",
+        "h-layer-normalization": "layer-normalization",
+        "h-position-wise-ffn": "position-wise-ffn",
+        "h-decoder-block": "decoder-block",
+        "h-masked-multi-head-attention": "masked-multi-head-attention",
+        "h-multi-head-attention-1": "multi-head-attention-1",
+        "h-final-linear-and-softmax-layer": "final-linear-and-softmax-layer",
+        "h-trnasformer-의의": "trnasformer-의의",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "yolo-v1",
+      "sourcePath": "_posts/2022-01-04-YOLOv1.md",
+      "canonicalPath": "/paperreview/2022/01/04/YOLOv1.html",
+      "outputPath": "/paperreview/2022/01/04/YOLOv1.html",
+      "sourceDigest": "984847ab50bb8f032b83e059436a57e004b511255315ad8cb37238e86b59745c",
+      "headingIds": [
+        "introduction",
+        "unified-detection",
+        "network-design",
+        "training",
+        "limitations-of-yolo",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-unified-detection": "unified-detection",
+        "h-network-design": "network-design",
+        "h-training": "training",
+        "h-limitations-of-yolo": "limitations-of-yolo",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "object-detection-basics",
+      "sourcePath": "_posts/2022-01-05-ObjectDetection.md",
+      "canonicalPath": "/cv/2022/01/05/ObjectDetection.html",
+      "outputPath": "/cv/2022/01/05/ObjectDetection.html",
+      "sourceDigest": "1f20a87f1394e234fe7b4ed68b65d095581e42eebca4ede78b1561753141b00f",
+      "headingIds": [
+        "backbone",
+        "region-proposal-물체가-있을-법한-위치-찾기",
+        "방법1-sliding-window",
+        "방법2-selective-search",
+        "rpnregions-proposal-network",
+        "rpns-loss",
+        "또-한번의-region-proposal",
+        "roi-pooling",
+        "end-to-end",
+        "anchor-box",
+        "the-object-detection-task",
+        "anchor-boxes가-뭘까",
+        "anchor-box-커스텀-튜닝하기",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-backbone": "backbone",
+        "h-region-proposal-물체가-있을-법한-위치-찾기": "region-proposal-물체가-있을-법한-위치-찾기",
+        "h-방법1-sliding-window": "방법1-sliding-window",
+        "h-방법2-selective-search": "방법2-selective-search",
+        "h-rpnregions-proposal-network": "rpnregions-proposal-network",
+        "h-rpns-loss": "rpns-loss",
+        "h-또-한번의-region-proposal": "또-한번의-region-proposal",
+        "h-roi-pooling": "roi-pooling",
+        "h-end-to-end": "end-to-end",
+        "h-anchor-box": "anchor-box",
+        "h-the-object-detection-task": "the-object-detection-task",
+        "h-anchor-boxes가-뭘까": "anchor-boxes가-뭘까",
+        "h-anchor-box-커스텀-튜닝하기": "anchor-box-커스텀-튜닝하기",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "map-evaluation",
+      "sourcePath": "_posts/2022-01-05-mAP.md",
+      "canonicalPath": "/cv/2022/01/05/mAP.html",
+      "outputPath": "/cv/2022/01/05/mAP.html",
+      "sourceDigest": "20bfdd6dcb78172ae3d1a905589c4a1366feffd530d796b3b39498883e5167bf",
+      "headingIds": [
+        "mapmean-average-precision",
+        "precision--recall",
+        "iouintersection-over-union---fracintersectionunion",
+        "ap",
+        "interpolated-ap",
+        "aparea-under-curve-auc",
+        "coco-map",
+        "refernce"
+      ],
+      "legacyHeadingIds": {
+        "h-mapmean-average-precision": "mapmean-average-precision",
+        "h-precision--recall": "precision--recall",
+        "h-iouintersection-over-union---fracintersectionunion": "iouintersection-over-union---fracintersectionunion",
+        "h-ap": "ap",
+        "h-interpolated-ap": "interpolated-ap",
+        "h-aparea-under-curve-auc": "aparea-under-curve-auc",
+        "h-coco-map": "coco-map",
+        "h-refernce": "refernce"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "r-cnn",
+      "sourcePath": "_posts/2022-01-06-R-CNN.md",
+      "canonicalPath": "/paperreview/2022/01/06/R-CNN.html",
+      "outputPath": "/paperreview/2022/01/06/R-CNN.html",
+      "sourceDigest": "c1f61cdbac11db0db0577dabc3a5f93a94154c5d30c304c17403eeb665427502",
+      "headingIds": [
+        "abstract",
+        "region-proposal-selective-search",
+        "feature-extraction-by-fine-tuned-alexnet",
+        "사전학습된-alexnet을-fine-tune",
+        "linear-svm을-통한-분류",
+        "fine-tune된-alexnet을-사용해-linear-svm-학습",
+        "hard-negative-mining",
+        "detailed-localization-by-bounding-box-regressor",
+        "fine-tune된-alexnet을-사용해-bounding-box-regressor-학습",
+        "nmsnon-maximum-suppression",
+        "r-cnn에서-학습이-나타나는-곳",
+        "단점",
+        "요약",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-abstract": "abstract",
+        "h-region-proposal-selective-search": "region-proposal-selective-search",
+        "h-feature-extraction-by-fine-tuned-alexnet": "feature-extraction-by-fine-tuned-alexnet",
+        "h-사전학습된-alexnet을-fine-tune": "사전학습된-alexnet을-fine-tune",
+        "h-linear-svm을-통한-분류": "linear-svm을-통한-분류",
+        "h-fine-tune된-alexnet을-사용해-linear-svm-학습": "fine-tune된-alexnet을-사용해-linear-svm-학습",
+        "h-hard-negative-mining": "hard-negative-mining",
+        "h-detailed-localization-by-bounding-box-regressor": "detailed-localization-by-bounding-box-regressor",
+        "h-fine-tune된-alexnet을-사용해-bounding-box-regressor-학습": "fine-tune된-alexnet을-사용해-bounding-box-regressor-학습",
+        "h-nmsnon-maximum-suppression": "nmsnon-maximum-suppression",
+        "h-r-cnn에서-학습이-나타나는-곳": "r-cnn에서-학습이-나타나는-곳",
+        "h-단점": "단점",
+        "h-요약": "요약",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "fast-r-cnn",
+      "sourcePath": "_posts/2022-01-07-FastR-CNN.md",
+      "canonicalPath": "/paperreview/2022/01/07/FastR-CNN.html",
+      "outputPath": "/paperreview/2022/01/07/FastR-CNN.html",
+      "sourceDigest": "1aa396ec5eb082ec9399a4a47e1ffebadc0b1fb3807cf76a6043bc65af53a798",
+      "headingIds": [
+        "abstract",
+        "r-cnn과-faster-r-cnn-비교",
+        "fast-r-cnn-모델",
+        "preview",
+        "본론",
+        "1-roiregion-of-interest-pooling",
+        "2-multi-task-loss",
+        "3-계층적-샘플링-hierarchical-sampling",
+        "4-truncated-svd",
+        "fast-r-cnn-학습",
+        "initializing-pre-trained-network",
+        "rp-by-selective-search",
+        "vgg16-모델-레이어13번까지의-특징추출feature-extraction",
+        "max-pooling-by-roi-pooling",
+        "feature-vector-extraction-by-fc-layers",
+        "분류기를-통한-class-예측",
+        "bb-regressor를-통한-세세한-localization",
+        "분류기와-bb-회귀식을-multi-task-loss를-통해-학습",
+        "detection-fast-r-cnn",
+        "마치며",
+        "rough-요약",
+        "fast-r-cnn-의의",
+        "끝",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-abstract": "abstract",
+        "h-r-cnn과-faster-r-cnn-비교": "r-cnn과-faster-r-cnn-비교",
+        "h-fast-r-cnn-모델": "fast-r-cnn-모델",
+        "h-preview": "preview",
+        "h-본론": "본론",
+        "h-1-roiregion-of-interest-pooling": "1-roiregion-of-interest-pooling",
+        "roiregion-of-interest-pooling": "1-roiregion-of-interest-pooling",
+        "h-roiregion-of-interest-pooling": "1-roiregion-of-interest-pooling",
+        "h-2-multi-task-loss": "2-multi-task-loss",
+        "multi-task-loss": "2-multi-task-loss",
+        "h-multi-task-loss": "2-multi-task-loss",
+        "h-3-계층적-샘플링-hierarchical-sampling": "3-계층적-샘플링-hierarchical-sampling",
+        "계층적-샘플링-hierarchical-sampling": "3-계층적-샘플링-hierarchical-sampling",
+        "h-계층적-샘플링-hierarchical-sampling": "3-계층적-샘플링-hierarchical-sampling",
+        "h-4-truncated-svd": "4-truncated-svd",
+        "truncated-svd": "4-truncated-svd",
+        "h-truncated-svd": "4-truncated-svd",
+        "h-fast-r-cnn-학습": "fast-r-cnn-학습",
+        "h-initializing-pre-trained-network": "initializing-pre-trained-network",
+        "h-rp-by-selective-search": "rp-by-selective-search",
+        "h-vgg16-모델-레이어13번까지의-특징추출feature-extraction": "vgg16-모델-레이어13번까지의-특징추출feature-extraction",
+        "h-max-pooling-by-roi-pooling": "max-pooling-by-roi-pooling",
+        "h-feature-vector-extraction-by-fc-layers": "feature-vector-extraction-by-fc-layers",
+        "h-분류기를-통한-class-예측": "분류기를-통한-class-예측",
+        "h-bb-regressor를-통한-세세한-localization": "bb-regressor를-통한-세세한-localization",
+        "h-분류기와-bb-회귀식을-multi-task-loss를-통해-학습": "분류기와-bb-회귀식을-multi-task-loss를-통해-학습",
+        "h-detection-fast-r-cnn": "detection-fast-r-cnn",
+        "h-마치며": "마치며",
+        "h-rough-요약": "rough-요약",
+        "h-fast-r-cnn-의의": "fast-r-cnn-의의",
+        "h-끝": "끝",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "faster-r-cnn",
+      "sourcePath": "_posts/2022-01-10-FasterR-CNN.md",
+      "canonicalPath": "/paperreview/2022/01/10/FasterR-CNN.html",
+      "outputPath": "/paperreview/2022/01/10/FasterR-CNN.html",
+      "sourceDigest": "97bba68542ba081345acecd7462c7c9c1db70d5973f2dc46dd0ed8936e20a9c8",
+      "headingIds": [
+        "abstract",
+        "faster-r-cnn-모델",
+        "preview",
+        "본론",
+        "1-anchor-box",
+        "anchor-box를-사용한-이유",
+        "2-rpnregion-proposal-network",
+        "3-multi-task-loss",
+        "training-faster-r-cnn",
+        "1-사전학습된-vgg16모델로-특징-추출",
+        "2-anchor-generation-layer로-anchor-만들기",
+        "3-class-score-bb-regressor-by-rpn",
+        "4-proposal-layer로부터의-region-proposal",
+        "5-anchor의-target-layer로부터-rpn을-학습하는-동안-anchor를-선택",
+        "6-proposal-target-layer로부터-fast-r-cnn을-학습하는동안-anchor를-선택",
+        "7-max-pooling-by-roi-pooling",
+        "8-multi-task-loss를-통한-fast-r-cnn-학습",
+        "alternating-training",
+        "detection",
+        "의의",
+        "한계",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-abstract": "abstract",
+        "h-faster-r-cnn-모델": "faster-r-cnn-모델",
+        "h-preview": "preview",
+        "h-본론": "본론",
+        "h-1-anchor-box": "1-anchor-box",
+        "anchor-box": "1-anchor-box",
+        "h-anchor-box": "1-anchor-box",
+        "h-anchor-box를-사용한-이유": "anchor-box를-사용한-이유",
+        "h-2-rpnregion-proposal-network": "2-rpnregion-proposal-network",
+        "rpnregion-proposal-network": "2-rpnregion-proposal-network",
+        "h-rpnregion-proposal-network": "2-rpnregion-proposal-network",
+        "h-3-multi-task-loss": "3-multi-task-loss",
+        "multi-task-loss": "3-multi-task-loss",
+        "h-multi-task-loss": "3-multi-task-loss",
+        "h-training-faster-r-cnn": "training-faster-r-cnn",
+        "h-1-사전학습된-vgg16모델로-특징-추출": "1-사전학습된-vgg16모델로-특징-추출",
+        "사전학습된-vgg16모델로-특징-추출": "1-사전학습된-vgg16모델로-특징-추출",
+        "h-사전학습된-vgg16모델로-특징-추출": "1-사전학습된-vgg16모델로-특징-추출",
+        "h-2-anchor-generation-layer로-anchor-만들기": "2-anchor-generation-layer로-anchor-만들기",
+        "anchor-generation-layer로-anchor-만들기": "2-anchor-generation-layer로-anchor-만들기",
+        "h-anchor-generation-layer로-anchor-만들기": "2-anchor-generation-layer로-anchor-만들기",
+        "h-3-class-score-bb-regressor-by-rpn": "3-class-score-bb-regressor-by-rpn",
+        "class-score-bb-regressor-by-rpn": "3-class-score-bb-regressor-by-rpn",
+        "h-class-score-bb-regressor-by-rpn": "3-class-score-bb-regressor-by-rpn",
+        "h-4-proposal-layer로부터의-region-proposal": "4-proposal-layer로부터의-region-proposal",
+        "proposal-layer로부터의-region-proposal": "4-proposal-layer로부터의-region-proposal",
+        "h-proposal-layer로부터의-region-proposal": "4-proposal-layer로부터의-region-proposal",
+        "h-5-anchor의-target-layer로부터-rpn을-학습하는-동안-anchor를-선택": "5-anchor의-target-layer로부터-rpn을-학습하는-동안-anchor를-선택",
+        "anchor의-target-layer로부터-rpn을-학습하는-동안-anchor를-선택": "5-anchor의-target-layer로부터-rpn을-학습하는-동안-anchor를-선택",
+        "h-anchor의-target-layer로부터-rpn을-학습하는-동안-anchor를-선택": "5-anchor의-target-layer로부터-rpn을-학습하는-동안-anchor를-선택",
+        "h-6-proposal-target-layer로부터-fast-r-cnn을-학습하는동안-anchor를-선택": "6-proposal-target-layer로부터-fast-r-cnn을-학습하는동안-anchor를-선택",
+        "proposal-target-layer로부터-fast-r-cnn을-학습하는동안-anchor를-선택": "6-proposal-target-layer로부터-fast-r-cnn을-학습하는동안-anchor를-선택",
+        "h-proposal-target-layer로부터-fast-r-cnn을-학습하는동안-anchor를-선택": "6-proposal-target-layer로부터-fast-r-cnn을-학습하는동안-anchor를-선택",
+        "h-7-max-pooling-by-roi-pooling": "7-max-pooling-by-roi-pooling",
+        "max-pooling-by-roi-pooling": "7-max-pooling-by-roi-pooling",
+        "h-max-pooling-by-roi-pooling": "7-max-pooling-by-roi-pooling",
+        "h-8-multi-task-loss를-통한-fast-r-cnn-학습": "8-multi-task-loss를-통한-fast-r-cnn-학습",
+        "multi-task-loss를-통한-fast-r-cnn-학습": "8-multi-task-loss를-통한-fast-r-cnn-학습",
+        "h-multi-task-loss를-통한-fast-r-cnn-학습": "8-multi-task-loss를-통한-fast-r-cnn-학습",
+        "h-alternating-training": "alternating-training",
+        "h-detection": "detection",
+        "h-의의": "의의",
+        "h-한계": "한계",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "overfeat",
+      "sourcePath": "_posts/2022-01-11-Overfeat.md",
+      "canonicalPath": "/paperreview/2022/01/11/Overfeat.html",
+      "outputPath": "/paperreview/2022/01/11/Overfeat.html",
+      "sourceDigest": "8d67c3fee2a011cbdcc01e2b2ce58cfc86dcfbd2503c47d8ba1c810046768b90",
+      "headingIds": [
+        "convnets-input-size-constraints",
+        "문제점---convnet의-input-사이즈-제약",
+        "solution---fcl는-convolution-방식으로-구현된다",
+        "receptive-field--spatial-output",
+        "문제점---내가-필요로하는-것보다-더-많은-otuput-값을-얻는다",
+        "receptive-field수용층",
+        "문제없어---이건-spatial-output라구",
+        "convnets-sliding-window-efficiency",
+        "overfeat",
+        "overfeat-intuition",
+        "overfeat-classification-network",
+        "overfeat-detection-network",
+        "training-bounding-box-regressor",
+        "bb-regressor를-통해-추론",
+        "greedy-merge-strategy",
+        "1x1-convolution-model-size-effective-stride",
+        "1x1-convolution-and-model-size-of-convnet",
+        "effecitve-stride-of-a-network",
+        "post-processing-at-output-side",
+        "confidence-score-thresholding",
+        "nmsnon-max-suppression",
+        "nms의-자세한-내용이-궁금하다면",
+        "요약",
+        "pre-and-post-processing",
+        "learning",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-convnets-input-size-constraints": "convnets-input-size-constraints",
+        "h-문제점---convnet의-input-사이즈-제약": "문제점---convnet의-input-사이즈-제약",
+        "h-solution---fcl는-convolution-방식으로-구현된다": "solution---fcl는-convolution-방식으로-구현된다",
+        "h-receptive-field--spatial-output": "receptive-field--spatial-output",
+        "h-문제점---내가-필요로하는-것보다-더-많은-otuput-값을-얻는다": "문제점---내가-필요로하는-것보다-더-많은-otuput-값을-얻는다",
+        "h-receptive-field수용층": "receptive-field수용층",
+        "h-문제없어---이건-spatial-output라구": "문제없어---이건-spatial-output라구",
+        "h-convnets-sliding-window-efficiency": "convnets-sliding-window-efficiency",
+        "h-overfeat": "overfeat",
+        "h-overfeat-intuition": "overfeat-intuition",
+        "h-overfeat-classification-network": "overfeat-classification-network",
+        "h-overfeat-detection-network": "overfeat-detection-network",
+        "h-training-bounding-box-regressor": "training-bounding-box-regressor",
+        "h-bb-regressor를-통해-추론": "bb-regressor를-통해-추론",
+        "h-greedy-merge-strategy": "greedy-merge-strategy",
+        "h-1x1-convolution-model-size-effective-stride": "1x1-convolution-model-size-effective-stride",
+        "x1-convolution-model-size-effective-stride": "1x1-convolution-model-size-effective-stride",
+        "h-x1-convolution-model-size-effective-stride": "1x1-convolution-model-size-effective-stride",
+        "h-1x1-convolution-and-model-size-of-convnet": "1x1-convolution-and-model-size-of-convnet",
+        "x1-convolution-and-model-size-of-convnet": "1x1-convolution-and-model-size-of-convnet",
+        "h-x1-convolution-and-model-size-of-convnet": "1x1-convolution-and-model-size-of-convnet",
+        "h-effecitve-stride-of-a-network": "effecitve-stride-of-a-network",
+        "h-post-processing-at-output-side": "post-processing-at-output-side",
+        "h-confidence-score-thresholding": "confidence-score-thresholding",
+        "h-nmsnon-max-suppression": "nmsnon-max-suppression",
+        "h-nms의-자세한-내용이-궁금하다면": "nms의-자세한-내용이-궁금하다면",
+        "h-요약": "요약",
+        "h-pre-and-post-processing": "pre-and-post-processing",
+        "h-learning": "learning",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "ohem",
+      "sourcePath": "_posts/2022-01-12-OHEM.md",
+      "canonicalPath": "/paperreview/2022/01/12/OHEM.html",
+      "outputPath": "/paperreview/2022/01/12/OHEM.html",
+      "sourceDigest": "60467a1e708b5d97f505a26ac38fef0c8e0f96b0f28d2ecc200185a5f4a97c9f",
+      "headingIds": [
+        "abstract",
+        "introduction",
+        "section-3",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-abstract": "abstract",
+        "h-introduction": "introduction",
+        "h-section-3": "section-3",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "elmo",
+      "sourcePath": "_posts/2022-01-13-ELMO.md",
+      "canonicalPath": "/paperreview/2022/01/13/ELMO.html",
+      "outputPath": "/paperreview/2022/01/13/ELMO.html",
+      "sourceDigest": "7e49f43b9cfa5e16c0bde957e5d8fc188dd8de0d2d7d0a02e743ccacaa98d2b3",
+      "headingIds": [
+        "elmo",
+        "context-matters",
+        "특징",
+        "mechanism",
+        "experiments"
+      ],
+      "legacyHeadingIds": {
+        "h-elmo": "elmo",
+        "h-context-matters": "context-matters",
+        "h-특징": "특징",
+        "h-mechanism": "mechanism",
+        "h-experiments": "experiments"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "lstm",
+      "sourcePath": "_posts/2022-01-13-LSTM.md",
+      "canonicalPath": "/paperreview/2022/01/13/LSTM.html",
+      "outputPath": "/paperreview/2022/01/13/LSTM.html",
+      "sourceDigest": "f77284770949bb344de77e197361db70e8737faf90ae97b7346b383f5649868d",
+      "headingIds": [
+        "abstract",
+        "bptt를-보완한-truncated-bptt",
+        "구조",
+        "step-1-forget-gate--과거-정보를-버릴지말지-결정하는-과정",
+        "step-2-input-gate-현재-정보를-저장기억할지-결정하는-과정",
+        "step-3-cell-state-update--과거-cell-statec_t-1를-새로운-statec_t로-업데이트-하는-과정",
+        "step-4-output-gate-hidden-state--어떤-출력값을-출력할지-결정하는-과정",
+        "lstm에-relu함수가-잘-어울릴-수-있다",
+        "다양한-lstm-모델",
+        "1-peephole-connection",
+        "2-couple-with-forget-gate-and-input-gate",
+        "3-gated-recurrent-unit-gru",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-abstract": "abstract",
+        "h-bptt를-보완한-truncated-bptt": "bptt를-보완한-truncated-bptt",
+        "h-구조": "구조",
+        "h-step-1-forget-gate--과거-정보를-버릴지말지-결정하는-과정": "step-1-forget-gate--과거-정보를-버릴지말지-결정하는-과정",
+        "h-step-2-input-gate-현재-정보를-저장기억할지-결정하는-과정": "step-2-input-gate-현재-정보를-저장기억할지-결정하는-과정",
+        "h-step-3-cell-state-update--과거-cell-statec_t-1를-새로운-statec_t로-업데이트-하는-과정": "step-3-cell-state-update--과거-cell-statec_t-1를-새로운-statec_t로-업데이트-하는-과정",
+        "h-step-4-output-gate-hidden-state--어떤-출력값을-출력할지-결정하는-과정": "step-4-output-gate-hidden-state--어떤-출력값을-출력할지-결정하는-과정",
+        "h-lstm에-relu함수가-잘-어울릴-수-있다": "lstm에-relu함수가-잘-어울릴-수-있다",
+        "h-다양한-lstm-모델": "다양한-lstm-모델",
+        "h-1-peephole-connection": "1-peephole-connection",
+        "peephole-connection": "1-peephole-connection",
+        "h-peephole-connection": "1-peephole-connection",
+        "h-2-couple-with-forget-gate-and-input-gate": "2-couple-with-forget-gate-and-input-gate",
+        "couple-with-forget-gate-and-input-gate": "2-couple-with-forget-gate-and-input-gate",
+        "h-couple-with-forget-gate-and-input-gate": "2-couple-with-forget-gate-and-input-gate",
+        "h-3-gated-recurrent-unit-gru": "3-gated-recurrent-unit-gru",
+        "gated-recurrent-unit-gru": "3-gated-recurrent-unit-gru",
+        "h-gated-recurrent-unit-gru": "3-gated-recurrent-unit-gru",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "rnn",
+      "sourcePath": "_posts/2022-01-13-RNN.md",
+      "canonicalPath": "/paperreview/2022/01/13/RNN.html",
+      "outputPath": "/paperreview/2022/01/13/RNN.html",
+      "sourceDigest": "957ab003f83ff622c042a781f6def3891f847cfe74d5e214556047c0cb02cf40",
+      "headingIds": [
+        "abstract",
+        "구조",
+        "bptt",
+        "truncated-bptt",
+        "rnn의-순전파--역전파",
+        "activation-function",
+        "relu함수를-사용하지-않는-이유",
+        "다양한-rnn-모델",
+        "irnn",
+        "cw-rnn-clockwork-rnn",
+        "문제점",
+        "gradient-vanishing",
+        "long-term-dependency",
+        "요-약",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-abstract": "abstract",
+        "h-구조": "구조",
+        "h-bptt": "bptt",
+        "h-truncated-bptt": "truncated-bptt",
+        "h-rnn의-순전파--역전파": "rnn의-순전파--역전파",
+        "h-activation-function": "activation-function",
+        "h-relu함수를-사용하지-않는-이유": "relu함수를-사용하지-않는-이유",
+        "h-다양한-rnn-모델": "다양한-rnn-모델",
+        "h-irnn": "irnn",
+        "h-cw-rnn-clockwork-rnn": "cw-rnn-clockwork-rnn",
+        "h-문제점": "문제점",
+        "h-gradient-vanishing": "gradient-vanishing",
+        "h-long-term-dependency": "long-term-dependency",
+        "h-요-약": "요-약",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "bert",
+      "sourcePath": "_posts/2022-01-26-BERT.md",
+      "canonicalPath": "/paperreview/2022/01/26/BERT.html",
+      "outputPath": "/paperreview/2022/01/26/BERT.html",
+      "sourceDigest": "8b32362d2e47e9f6c16ccf209e60684f133fd742203db3d435b333af25a1fd88",
+      "headingIds": [
+        "요약",
+        "bert",
+        "model-architecture",
+        "inputoutput-representation",
+        "pre-training-bert",
+        "task-1-masked-lm-mlm",
+        "task-2-next-sentence-prediction-nsp",
+        "hyper-parameter",
+        "fine-tuning-bert",
+        "input",
+        "ouput",
+        "ablation-study",
+        "bert의-한계점"
+      ],
+      "legacyHeadingIds": {
+        "h-요약": "요약",
+        "h-bert": "bert",
+        "h-model-architecture": "model-architecture",
+        "h-inputoutput-representation": "inputoutput-representation",
+        "h-pre-training-bert": "pre-training-bert",
+        "h-task-1-masked-lm-mlm": "task-1-masked-lm-mlm",
+        "h-task-2-next-sentence-prediction-nsp": "task-2-next-sentence-prediction-nsp",
+        "h-hyper-parameter": "hyper-parameter",
+        "h-fine-tuning-bert": "fine-tuning-bert",
+        "h-input": "input",
+        "h-ouput": "ouput",
+        "h-ablation-study": "ablation-study",
+        "h-bert의-한계점": "bert의-한계점"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "vit",
+      "sourcePath": "_posts/2022-02-27-ViT.md",
+      "canonicalPath": "/paperreview/2022/02/27/ViT.html",
+      "outputPath": "/paperreview/2022/02/27/ViT.html",
+      "sourceDigest": "8146008624a03c01f5f871d990488ff3154d42d1851759b930349b93d87c09c5",
+      "headingIds": [
+        "의의",
+        "요약",
+        "transformer의-계산-효율성과-scalability를-비전에-활용",
+        "model",
+        "vision-transformervit",
+        "fine-tuning과-높은-해상도-이미지-다루기",
+        "실험결과",
+        "vision-transformer-탐색하기"
+      ],
+      "legacyHeadingIds": {
+        "h-의의": "의의",
+        "h-요약": "요약",
+        "h-transformer의-계산-효율성과-scalability를-비전에-활용": "transformer의-계산-효율성과-scalability를-비전에-활용",
+        "h-model": "model",
+        "h-vision-transformervit": "vision-transformervit",
+        "h-fine-tuning과-높은-해상도-이미지-다루기": "fine-tuning과-높은-해상도-이미지-다루기",
+        "h-실험결과": "실험결과",
+        "h-vision-transformer-탐색하기": "vision-transformer-탐색하기"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "swin-transformer",
+      "sourcePath": "_posts/2022-03-14-SwinTransformer.md",
+      "canonicalPath": "/paperreview/2022/03/14/SwinTransformer.html",
+      "outputPath": "/paperreview/2022/03/14/SwinTransformer.html",
+      "sourceDigest": "d1ab63867e40024874310dd20d073bd588c9743536bc6e6269059a916abc1423",
+      "headingIds": [
+        "swin-transformer"
+      ],
+      "legacyHeadingIds": {
+        "h-swin-transformer": "swin-transformer"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "gpt-3",
+      "sourcePath": "_posts/2023-01-20-GPT3.md",
+      "canonicalPath": "/paperreview/2023/01/20/GPT3.html",
+      "outputPath": "/paperreview/2023/01/20/GPT3.html",
+      "sourceDigest": "27d1f5ff8404caf7cae6803e6d414f9057fc2168015ff89265fc396553b1dc4a",
+      "headingIds": [
+        "section-1"
+      ],
+      "legacyHeadingIds": {
+        "h-section-1": "section-1"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "few-shot-nlp",
+      "sourcePath": "_posts/2023-02-02-Few-shot_learning.md",
+      "canonicalPath": "/nlp/2023/02/02/Few-shot_learning.html",
+      "outputPath": "/nlp/2023/02/02/Few-shot_learning.html",
+      "sourceDigest": "4b4b5aad65097a89908769133a2c7e09202114cd3f5becc4eb302448ce142e0e",
+      "headingIds": [
+        "문제-정의",
+        "solution",
+        "few-shot-with-human-in-the-loop",
+        "concept"
+      ],
+      "legacyHeadingIds": {
+        "h-문제-정의": "문제-정의",
+        "h-solution": "solution",
+        "h-few-shot-with-human-in-the-loop": "few-shot-with-human-in-the-loop",
+        "h-concept": "concept"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "python-assert",
+      "sourcePath": "_posts/2023-02-05-assert.md",
+      "canonicalPath": "/python/2023/02/05/assert.html",
+      "outputPath": "/python/2023/02/05/assert.html",
+      "sourceDigest": "fb4b625e6da476fc6d92cd69162d695b42402c39e5e2ae420de257b686fba9fc",
+      "headingIds": [
+        "가정-설명문assert",
+        "assert가-필요한-이유"
+      ],
+      "legacyHeadingIds": {
+        "h-가정-설명문assert": "가정-설명문assert",
+        "h-assert가-필요한-이유": "assert가-필요한-이유"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "few-shot-learning",
+      "sourcePath": "_posts/2023-03-30-Few-shot_learning_In_AI.md",
+      "canonicalPath": "/cv/2023/03/30/Few-shot_learning_In_AI.html",
+      "outputPath": "/cv/2023/03/30/Few-shot_learning_In_AI.html",
+      "sourceDigest": "c3214fdcc5653f5a3162c0ccdbf24e9fa27ce649e9116f48a3f9899c5dbb80fc",
+      "headingIds": [
+        "few-shot-learning이-뭘까",
+        "fsl과-관련된-중요한-용어",
+        "왜-fsl-일까",
+        "few-shot-learning은-어떻게-작동할까",
+        "siamese-network-샴-네트워크",
+        "method-1-pairwise-similarity",
+        "method-2-triplet-loss",
+        "fsl을-위한-접근법",
+        "data-level",
+        "parameter-level",
+        "metric-level",
+        "one-shot-learning",
+        "few-show-learning-적용",
+        "image-classification-cv",
+        "nlp"
+      ],
+      "legacyHeadingIds": {
+        "h-few-shot-learning이-뭘까": "few-shot-learning이-뭘까",
+        "h-fsl과-관련된-중요한-용어": "fsl과-관련된-중요한-용어",
+        "h-왜-fsl-일까": "왜-fsl-일까",
+        "h-few-shot-learning은-어떻게-작동할까": "few-shot-learning은-어떻게-작동할까",
+        "h-siamese-network-샴-네트워크": "siamese-network-샴-네트워크",
+        "h-method-1-pairwise-similarity": "method-1-pairwise-similarity",
+        "h-method-2-triplet-loss": "method-2-triplet-loss",
+        "h-fsl을-위한-접근법": "fsl을-위한-접근법",
+        "h-data-level": "data-level",
+        "h-parameter-level": "parameter-level",
+        "h-metric-level": "metric-level",
+        "h-one-shot-learning": "one-shot-learning",
+        "h-few-show-learning-적용": "few-show-learning-적용",
+        "h-image-classification-cv": "image-classification-cv",
+        "h-nlp": "nlp"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "zero-shot-learning",
+      "sourcePath": "_posts/2023-03-31-Zero-shot_learning.md",
+      "canonicalPath": "/nlp/2023/03/31/Zero-shot_learning.html",
+      "outputPath": "/nlp/2023/03/31/Zero-shot_learning.html",
+      "sourceDigest": "f851d0c6d968cd96fe8a3d61d799f381b8102db17af247388b003524b856202e",
+      "headingIds": [
+        "what-is-zero-shot-learning",
+        "a-latent-embedding-approach",
+        "when-some-annotated-data-is-available",
+        "classification-as-nli",
+        "when-some-annotated-data-is-available-1"
+      ],
+      "legacyHeadingIds": {
+        "h-what-is-zero-shot-learning": "what-is-zero-shot-learning",
+        "h-a-latent-embedding-approach": "a-latent-embedding-approach",
+        "h-when-some-annotated-data-is-available": "when-some-annotated-data-is-available",
+        "h-classification-as-nli": "classification-as-nli",
+        "h-when-some-annotated-data-is-available-1": "when-some-annotated-data-is-available-1"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "nlp-terms",
+      "sourcePath": "_posts/2023-04-05-temrs in NLP.md",
+      "canonicalPath": "/nlp/2023/04/05/temrs-in-NLP.html",
+      "outputPath": "/nlp/2023/04/05/temrs-in-NLP.html",
+      "sourceDigest": "bc4288b5d06b912a775fd745b187f9be1ac62ab3c18871c4cff67a5c0ffbcfa8",
+      "headingIds": [
+        "nli---natural-language-inference",
+        "glue---general-language-understanding-evaluation",
+        "task-on-benchmarks",
+        "perplexity"
+      ],
+      "legacyHeadingIds": {
+        "h-nli---natural-language-inference": "nli---natural-language-inference",
+        "h-glue---general-language-understanding-evaluation": "glue---general-language-understanding-evaluation",
+        "h-task-on-benchmarks": "task-on-benchmarks",
+        "h-perplexity": "perplexity"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "distributed-gpu-training",
+      "sourcePath": "_posts/2023-04-12-GPU Training.md",
+      "canonicalPath": "/finetuning/2023/04/12/GPU-Training.html",
+      "outputPath": "/finetuning/2023/04/12/GPU-Training.html",
+      "sourceDigest": "829627fc54d740da6650fa2c66ad948d21c6eb22f94962e6562a311c4adaec23",
+      "headingIds": [
+        "deepspeed",
+        "설치",
+        "단일-gpu-사용",
+        "jupyter-notebook에서-사용하기",
+        "zero-2에서-많은-기능을-활성화한-ds_configjson-파일",
+        "fairscale",
+        "설치-1",
+        "최적화-gradient와-model-sharding",
+        "single-gpu-환경에서-offloadmodel-사용",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-deepspeed": "deepspeed",
+        "h-설치": "설치",
+        "h-단일-gpu-사용": "단일-gpu-사용",
+        "h-jupyter-notebook에서-사용하기": "jupyter-notebook에서-사용하기",
+        "h-zero-2에서-많은-기능을-활성화한-ds_configjson-파일": "zero-2에서-많은-기능을-활성화한-ds_configjson-파일",
+        "h-fairscale": "fairscale",
+        "h-설치-1": "설치-1",
+        "h-최적화-gradient와-model-sharding": "최적화-gradient와-model-sharding",
+        "h-single-gpu-환경에서-offloadmodel-사용": "single-gpu-환경에서-offloadmodel-사용",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "prompt-engineering",
+      "sourcePath": "_posts/2023-04-17-PromptEngineering.md",
+      "canonicalPath": "/nlp/2023/04/17/PromptEngineering.html",
+      "outputPath": "/nlp/2023/04/17/PromptEngineering.html",
+      "sourceDigest": "ec8119f54e95929762967e1c0a664196f87695787d3d4c77ec7a8ccabc34dc4f",
+      "headingIds": [
+        "elements-of-prompt",
+        "prompt를-지정할때-일반적인-팁",
+        "the-instruction",
+        "avoid-impreciseness",
+        "to-do-or-not-to-do",
+        "examples-of-prompts",
+        "qa",
+        "conversation",
+        "chain-of-thoughtcot-prompting",
+        "cot-prompting",
+        "zero-shot-cot-prompting",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-elements-of-prompt": "elements-of-prompt",
+        "h-prompt를-지정할때-일반적인-팁": "prompt를-지정할때-일반적인-팁",
+        "h-the-instruction": "the-instruction",
+        "h-avoid-impreciseness": "avoid-impreciseness",
+        "h-to-do-or-not-to-do": "to-do-or-not-to-do",
+        "h-examples-of-prompts": "examples-of-prompts",
+        "h-qa": "qa",
+        "h-conversation": "conversation",
+        "h-chain-of-thoughtcot-prompting": "chain-of-thoughtcot-prompting",
+        "h-cot-prompting": "cot-prompting",
+        "h-zero-shot-cot-prompting": "zero-shot-cot-prompting",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "chain-of-thought",
+      "sourcePath": "_posts/2023-04-21-Chain_of_Thought.md",
+      "canonicalPath": "/paperreview/2023/04/21/Chain_of_Thought.html",
+      "outputPath": "/paperreview/2023/04/21/Chain_of_Thought.html",
+      "sourceDigest": "61cea3dab6898be0e57dec3f5c47e73e037d9122d09c72bfa4fa2a159e6523cf",
+      "headingIds": [
+        "introduction",
+        "chain-of-thought-prompting",
+        "arithmetic-reasoning",
+        "experimental-setup",
+        "results",
+        "ablation-study",
+        "equation-only",
+        "variable-compute-only",
+        "robustness-of-cot",
+        "commonsense-reasoning",
+        "prompts",
+        "results-1",
+        "symbolic-reasoning",
+        "results-2",
+        "conclusions"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-chain-of-thought-prompting": "chain-of-thought-prompting",
+        "h-arithmetic-reasoning": "arithmetic-reasoning",
+        "h-experimental-setup": "experimental-setup",
+        "h-results": "results",
+        "h-ablation-study": "ablation-study",
+        "h-equation-only": "equation-only",
+        "h-variable-compute-only": "variable-compute-only",
+        "h-robustness-of-cot": "robustness-of-cot",
+        "h-commonsense-reasoning": "commonsense-reasoning",
+        "h-prompts": "prompts",
+        "h-results-1": "results-1",
+        "h-symbolic-reasoning": "symbolic-reasoning",
+        "h-results-2": "results-2",
+        "h-conclusions": "conclusions"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "llama",
+      "sourcePath": "_posts/2023-04-24-LLaMA.md",
+      "canonicalPath": "/paperreview/2023/04/24/LLaMA.html",
+      "outputPath": "/paperreview/2023/04/24/LLaMA.html",
+      "sourceDigest": "242a3f0bf8bd601b5425f8f15b7afba668eb2344562536cd191b4e639f2b06ec",
+      "headingIds": [
+        "introduction",
+        "approach",
+        "pre-training-data",
+        "architecture",
+        "optimizer",
+        "efficient-implementation",
+        "main-results",
+        "evolution-of-performance-during-training",
+        "instruction-finetuning",
+        "bias-toxicity-and-misinformation",
+        "related-work",
+        "appendix"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-approach": "approach",
+        "h-pre-training-data": "pre-training-data",
+        "h-architecture": "architecture",
+        "h-optimizer": "optimizer",
+        "h-efficient-implementation": "efficient-implementation",
+        "h-main-results": "main-results",
+        "h-evolution-of-performance-during-training": "evolution-of-performance-during-training",
+        "h-instruction-finetuning": "instruction-finetuning",
+        "h-bias-toxicity-and-misinformation": "bias-toxicity-and-misinformation",
+        "h-related-work": "related-work",
+        "h-appendix": "appendix"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "lora",
+      "sourcePath": "_posts/2023-04-24-LoRA.md",
+      "canonicalPath": "/paperreview/2023/04/24/LoRA.html",
+      "outputPath": "/paperreview/2023/04/24/LoRA.html",
+      "sourceDigest": "18df028afaad238decc6b4d0fe38ecbe57adc50f6b34ca71f2df51d7f606a2e5",
+      "headingIds": [
+        "introduction",
+        "problem-statement",
+        "arent-existing-solutions-good-enough",
+        "adapter-layers-intorduce-inference-latency",
+        "directly-optimizing-the-prompt-is-hard",
+        "our-method",
+        "low-rank-parameterized-update-matrices",
+        "applying-lora-to-transformer",
+        "empirical-experiments",
+        "baselines"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-problem-statement": "problem-statement",
+        "h-arent-existing-solutions-good-enough": "arent-existing-solutions-good-enough",
+        "h-adapter-layers-intorduce-inference-latency": "adapter-layers-intorduce-inference-latency",
+        "h-directly-optimizing-the-prompt-is-hard": "directly-optimizing-the-prompt-is-hard",
+        "h-our-method": "our-method",
+        "h-low-rank-parameterized-update-matrices": "low-rank-parameterized-update-matrices",
+        "h-applying-lora-to-transformer": "applying-lora-to-transformer",
+        "h-empirical-experiments": "empirical-experiments",
+        "h-baselines": "baselines"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "deepspeed-troubleshooting",
+      "sourcePath": "_posts/2023-05-18-DeepSpeed.md",
+      "canonicalPath": "/nlp/2023/05/18/DeepSpeed.html",
+      "outputPath": "/nlp/2023/05/18/DeepSpeed.html",
+      "sourceDigest": "d2a1e1476b45f180f242a15c19ab063f8c2c4bc51ed389a4e1e3e327b2fc563f",
+      "headingIds": [
+        "env",
+        "1️⃣",
+        "2️⃣",
+        "3️⃣"
+      ],
+      "legacyHeadingIds": {
+        "h-env": "env",
+        "h-1️⃣": "1️⃣",
+        "h-2️⃣": "2️⃣",
+        "h-3️⃣": "3️⃣"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "polyglot-training-troubleshooting",
+      "sourcePath": "_posts/2023-05-23-Finetuning.md",
+      "canonicalPath": "/nlp/2023/05/23/Finetuning.html",
+      "outputPath": "/nlp/2023/05/23/Finetuning.html",
+      "sourceDigest": "6ed373f38f1bae060328b6a67b72312c89dd5b89c772f36b8b27b97dd2f3697f",
+      "headingIds": [
+        "envs",
+        "prob",
+        "solution",
+        "ref"
+      ],
+      "legacyHeadingIds": {
+        "h-envs": "envs",
+        "h-prob": "prob",
+        "h-solution": "solution",
+        "h-ref": "ref"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "polyglot-lora-troubleshooting",
+      "sourcePath": "_posts/2023-05-24-Finetuning2.md",
+      "canonicalPath": "/nlp/2023/05/24/Finetuning2.html",
+      "outputPath": "/nlp/2023/05/24/Finetuning2.html",
+      "sourceDigest": "380cf040a2d6fc97a81f14cca1c7c3d65790b1e9451f188e01ccd1ab941e2fab",
+      "headingIds": [
+        "envs",
+        "mission",
+        "prob",
+        "issue",
+        "ref"
+      ],
+      "legacyHeadingIds": {
+        "h-envs": "envs",
+        "h-mission": "mission",
+        "h-prob": "prob",
+        "h-issue": "issue",
+        "h-ref": "ref"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "bard-api-troubleshooting",
+      "sourcePath": "_posts/2023-05-31-bardapi.md",
+      "canonicalPath": "/nlp/2023/05/31/bardapi.html",
+      "outputPath": "/nlp/2023/05/31/bardapi.html",
+      "sourceDigest": "fa891bbd5ac427df3608efe1dd3c763aa53861d53a366ed36f9541daacc1f355",
+      "headingIds": [
+        "envs",
+        "1️⃣",
+        "2️⃣",
+        "3️⃣",
+        "solution",
+        "ref"
+      ],
+      "legacyHeadingIds": {
+        "h-envs": "envs",
+        "h-1️⃣": "1️⃣",
+        "h-2️⃣": "2️⃣",
+        "h-3️⃣": "3️⃣",
+        "h-solution": "solution",
+        "h-ref": "ref"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "flan",
+      "sourcePath": "_posts/2023-06-01-FLAN.md",
+      "canonicalPath": "/paperreview/2023/06/01/FLAN.html",
+      "outputPath": "/paperreview/2023/06/01/FLAN.html",
+      "sourceDigest": "699ab1960eb0f1d57b4682e02e37c9295920af84b99814853476810e0d8a4d84",
+      "headingIds": [
+        "introduction",
+        "flan--instruction-tuning-improves-zero-shot-learning",
+        "tasks--templates",
+        "evaluation-splits",
+        "classification-with-options",
+        "training-details",
+        "results",
+        "ablation-study--further-analysis",
+        "number-of-instruction-tuning-clusters",
+        "scaling-laws",
+        "role-of-instructions",
+        "conclusions"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-flan--instruction-tuning-improves-zero-shot-learning": "flan--instruction-tuning-improves-zero-shot-learning",
+        "h-tasks--templates": "tasks--templates",
+        "h-evaluation-splits": "evaluation-splits",
+        "h-classification-with-options": "classification-with-options",
+        "h-training-details": "training-details",
+        "h-results": "results",
+        "h-ablation-study--further-analysis": "ablation-study--further-analysis",
+        "h-number-of-instruction-tuning-clusters": "number-of-instruction-tuning-clusters",
+        "h-scaling-laws": "scaling-laws",
+        "h-role-of-instructions": "role-of-instructions",
+        "h-conclusions": "conclusions"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "lora-finetuning",
+      "sourcePath": "_posts/2023-06-09-LoRA FT.md",
+      "canonicalPath": "/nlp/2023/06/09/LoRA-FT.html",
+      "outputPath": "/nlp/2023/06/09/LoRA-FT.html",
+      "sourceDigest": "5fcfb6b0faa7d724eeb2853c5e50220b03914255a5640df3e06335b4256e62d8",
+      "headingIds": [
+        "envs",
+        "preset",
+        "dataset",
+        "model",
+        "training"
+      ],
+      "legacyHeadingIds": {
+        "h-envs": "envs",
+        "h-preset": "preset",
+        "h-dataset": "dataset",
+        "h-model": "model",
+        "h-training": "training"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "python-typing",
+      "sourcePath": "_posts/2023-06-14-Typing.md",
+      "canonicalPath": "/python/2023/06/14/Typing.html",
+      "outputPath": "/python/2023/06/14/Typing.html",
+      "sourceDigest": "f66b9ed121d6296b84a6c972016eff60a11cc0494a62f0fd5bec0bdc486ef1ad",
+      "headingIds": [
+        "파이썬--동적-프로그래밍-언어",
+        "type-annotation",
+        "typing",
+        "list-dict-tuple-set",
+        "union",
+        "optional",
+        "타입-추상화"
+      ],
+      "legacyHeadingIds": {
+        "h-파이썬--동적-프로그래밍-언어": "파이썬--동적-프로그래밍-언어",
+        "h-type-annotation": "type-annotation",
+        "h-typing": "typing",
+        "h-list-dict-tuple-set": "list-dict-tuple-set",
+        "h-union": "union",
+        "h-optional": "optional",
+        "h-타입-추상화": "타입-추상화"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "efficientnet",
+      "sourcePath": "_posts/2023-06-21-efficientnet.md",
+      "canonicalPath": "/paperreview/2023/06/21/efficientnet.html",
+      "outputPath": "/paperreview/2023/06/21/efficientnet.html",
+      "sourceDigest": "d0e9af78279403cf7a63ca2a25b783785539c5ccb822973393e844b422f8a37b",
+      "headingIds": [
+        "introduction",
+        "related-work",
+        "convnet-accuracy",
+        "convnet-efficiency",
+        "model-scaling",
+        "compound-model-scaling",
+        "problem-formulation",
+        "scaling-dimensions",
+        "compound-scaling",
+        "efficientnet-architecture",
+        "experiments",
+        "scaling-up-mobilenets-and-resnets",
+        "imagenet-results-for-efficientnet",
+        "transfer-learning-results-for-efficientnet",
+        "discussion",
+        "의의"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-related-work": "related-work",
+        "h-convnet-accuracy": "convnet-accuracy",
+        "h-convnet-efficiency": "convnet-efficiency",
+        "h-model-scaling": "model-scaling",
+        "h-compound-model-scaling": "compound-model-scaling",
+        "h-problem-formulation": "problem-formulation",
+        "h-scaling-dimensions": "scaling-dimensions",
+        "h-compound-scaling": "compound-scaling",
+        "h-efficientnet-architecture": "efficientnet-architecture",
+        "h-experiments": "experiments",
+        "h-scaling-up-mobilenets-and-resnets": "scaling-up-mobilenets-and-resnets",
+        "h-imagenet-results-for-efficientnet": "imagenet-results-for-efficientnet",
+        "h-transfer-learning-results-for-efficientnet": "transfer-learning-results-for-efficientnet",
+        "h-discussion": "discussion",
+        "h-의의": "의의"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "efficientnet-v2",
+      "sourcePath": "_posts/2023-06-23-efficientnetv2.md",
+      "canonicalPath": "/paperreview/2023/06/23/efficientnetv2.html",
+      "outputPath": "/paperreview/2023/06/23/efficientnetv2.html",
+      "sourceDigest": "adc52c2a235fc40809428be243cf26a44306808b434853dccc4860b085e79396",
+      "headingIds": [
+        "introduction",
+        "related-work",
+        "progressive-training",
+        "neural-acrchitecture-search-nas",
+        "efficientnetv2-architecture-design",
+        "review-of-efficientnet",
+        "understanding-training-efficiency",
+        "depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages",
+        "equally-scaling-up-every-stage-is-sub-optimal",
+        "training-aware-nas-and-scaling",
+        "nas-search",
+        "efficientnetv2-architecture",
+        "efficientnetv2-scaling",
+        "training-speed-comparison",
+        "progressive-learning",
+        "motivation",
+        "progressive-learning-with-adaptive-regularization",
+        "main-results",
+        "ablation-studies",
+        "comparison-to-efficientnet",
+        "progressive-learning-for-different-networks",
+        "importance-of-adaptive-regularization",
+        "의의"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-related-work": "related-work",
+        "h-progressive-training": "progressive-training",
+        "h-neural-acrchitecture-search-nas": "neural-acrchitecture-search-nas",
+        "h-efficientnetv2-architecture-design": "efficientnetv2-architecture-design",
+        "h-review-of-efficientnet": "review-of-efficientnet",
+        "h-understanding-training-efficiency": "understanding-training-efficiency",
+        "h-depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages": "depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages",
+        "h-equally-scaling-up-every-stage-is-sub-optimal": "equally-scaling-up-every-stage-is-sub-optimal",
+        "h-training-aware-nas-and-scaling": "training-aware-nas-and-scaling",
+        "h-nas-search": "nas-search",
+        "h-efficientnetv2-architecture": "efficientnetv2-architecture",
+        "h-efficientnetv2-scaling": "efficientnetv2-scaling",
+        "h-training-speed-comparison": "training-speed-comparison",
+        "h-progressive-learning": "progressive-learning",
+        "h-motivation": "motivation",
+        "h-progressive-learning-with-adaptive-regularization": "progressive-learning-with-adaptive-regularization",
+        "h-main-results": "main-results",
+        "h-ablation-studies": "ablation-studies",
+        "h-comparison-to-efficientnet": "comparison-to-efficientnet",
+        "h-progressive-learning-for-different-networks": "progressive-learning-for-different-networks",
+        "h-importance-of-adaptive-regularization": "importance-of-adaptive-regularization",
+        "h-의의": "의의"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "resnext",
+      "sourcePath": "_posts/2023-06-28-ResNext.md",
+      "canonicalPath": "/paperreview/2023/06/28/ResNext.html",
+      "outputPath": "/paperreview/2023/06/28/ResNext.html",
+      "sourceDigest": "a627b1d243f0297f54ed4f26a2a1ec136b93b53a0574e96c0e2ddea021ba8304",
+      "headingIds": [
+        "introduction",
+        "related-work",
+        "method",
+        "template",
+        "revisiting-simple-neurons",
+        "aggregated-transformations",
+        "model-capacity",
+        "implementation-details",
+        "experiments",
+        "experiments-on-imagenet1k",
+        "의의"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-related-work": "related-work",
+        "h-method": "method",
+        "h-template": "template",
+        "h-revisiting-simple-neurons": "revisiting-simple-neurons",
+        "h-aggregated-transformations": "aggregated-transformations",
+        "h-model-capacity": "model-capacity",
+        "h-implementation-details": "implementation-details",
+        "h-experiments": "experiments",
+        "h-experiments-on-imagenet1k": "experiments-on-imagenet1k",
+        "h-의의": "의의"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "convnext",
+      "sourcePath": "_posts/2023-06-29-ConvNeXt.md",
+      "canonicalPath": "/paperreview/2023/06/29/ConvNeXt.html",
+      "outputPath": "/paperreview/2023/06/29/ConvNeXt.html",
+      "sourceDigest": "05547b40fc00dc496cb2bbf51ddf96510df0ad5774a23e52e26a6e664a74e2ae",
+      "headingIds": [
+        "instruction",
+        "modernizing-a-convnet-a-roadmap",
+        "training-techniques",
+        "macro-design",
+        "resnext-ify",
+        "inverted-bottleneck",
+        "large-kernel-size",
+        "micro-design",
+        "empirical-evaluations-on-imagenet",
+        "results",
+        "isotropic-convnext-vs-vit",
+        "related-work",
+        "appendix",
+        "robustness-evaluations",
+        "detailed-architecture",
+        "detailed-results",
+        "한계점",
+        "의의"
+      ],
+      "legacyHeadingIds": {
+        "h-instruction": "instruction",
+        "h-modernizing-a-convnet-a-roadmap": "modernizing-a-convnet-a-roadmap",
+        "h-training-techniques": "training-techniques",
+        "h-macro-design": "macro-design",
+        "h-resnext-ify": "resnext-ify",
+        "h-inverted-bottleneck": "inverted-bottleneck",
+        "h-large-kernel-size": "large-kernel-size",
+        "h-micro-design": "micro-design",
+        "h-empirical-evaluations-on-imagenet": "empirical-evaluations-on-imagenet",
+        "h-results": "results",
+        "h-isotropic-convnext-vs-vit": "isotropic-convnext-vs-vit",
+        "h-related-work": "related-work",
+        "h-appendix": "appendix",
+        "h-robustness-evaluations": "robustness-evaluations",
+        "h-detailed-architecture": "detailed-architecture",
+        "h-detailed-results": "detailed-results",
+        "h-한계점": "한계점",
+        "h-의의": "의의"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "finetuning-notes",
+      "sourcePath": "_posts/2023-07-05-FT_til.md",
+      "canonicalPath": "/finetuning/2023/07/05/FT_til.html",
+      "outputPath": "/finetuning/2023/07/05/FT_til.html",
+      "sourceDigest": "1f5b6fd9ca9a64cc3b41bf6b1b32d90f88583a8704d4bbaff9d7beb44409c041",
+      "headingIds": [
+        "1",
+        "increasing-speed-a-llm-serving-inference",
+        "tensor-parallel",
+        "4bit-or-8bit-quantization",
+        "2"
+      ],
+      "legacyHeadingIds": {
+        "h-1": "1",
+        "h-increasing-speed-a-llm-serving-inference": "increasing-speed-a-llm-serving-inference",
+        "h-tensor-parallel": "tensor-parallel",
+        "h-4bit-or-8bit-quantization": "4bit-or-8bit-quantization",
+        "bit-or-8bit-quantization": "4bit-or-8bit-quantization",
+        "h-bit-or-8bit-quantization": "4bit-or-8bit-quantization",
+        "h-2": "2"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "beit",
+      "sourcePath": "_posts/2023-07-10-BEiT.md",
+      "canonicalPath": "/paperreview/2023/07/10/BEiT.html",
+      "outputPath": "/paperreview/2023/07/10/BEiT.html",
+      "sourceDigest": "9134cc8f10e0cf57a9c8dec03b8bd7ee8e4b6131b0ff50b0bc0d83e010b06f4a",
+      "headingIds": [
+        "dd"
+      ],
+      "legacyHeadingIds": {
+        "h-dd": "dd"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "qlora-troubleshooting",
+      "sourcePath": "_posts/2023-07-11-qlora_troubleshoot.md",
+      "canonicalPath": "/finetuning/2023/07/11/qlora_troubleshoot.html",
+      "outputPath": "/finetuning/2023/07/11/qlora_troubleshoot.html",
+      "sourceDigest": "92665e267d3e59bf9b480ce84b62043858614aca6fc6dd6a54ca350303964435",
+      "headingIds": [
+        "trouble-shooting",
+        "1",
+        "현상",
+        "해결",
+        "ref",
+        "2",
+        "4bit-quantization",
+        "section-8"
+      ],
+      "legacyHeadingIds": {
+        "h-trouble-shooting": "trouble-shooting",
+        "h-1": "1",
+        "h-현상": "현상",
+        "h-해결": "해결",
+        "h-ref": "ref",
+        "h-2": "2",
+        "h-4bit-quantization": "4bit-quantization",
+        "bit-quantization": "4bit-quantization",
+        "h-bit-quantization": "4bit-quantization",
+        "h-section-8": "section-8"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "qlora",
+      "sourcePath": "_posts/2023-07-12-QLoRA.md",
+      "canonicalPath": "/paperreview/2023/07/12/QLoRA.html",
+      "outputPath": "/paperreview/2023/07/12/QLoRA.html",
+      "sourceDigest": "978c312c51b1452fd11ef454d7a4cd2afcbf0f50fffde6cb86d1dc0e613b2e17",
+      "headingIds": [
+        "introduction",
+        "background",
+        "qlora-finetuning",
+        "qlora-vs-standard-finetuning",
+        "의의",
+        "etc"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-background": "background",
+        "h-qlora-finetuning": "qlora-finetuning",
+        "h-qlora-vs-standard-finetuning": "qlora-vs-standard-finetuning",
+        "h-의의": "의의",
+        "h-etc": "etc"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "training-arguments",
+      "sourcePath": "_posts/2023-07-13-Transformers_TrainingArguments.md",
+      "canonicalPath": "/finetuning/2023/07/13/Transformers_TrainingArguments.html",
+      "outputPath": "/finetuning/2023/07/13/Transformers_TrainingArguments.html",
+      "sourceDigest": "1a16cede1aaa428e8d430dfc24b65d8bc817cd93396c130ba45def78470e6afa",
+      "headingIds": [
+        "하이퍼파라미터",
+        "usage",
+        "ref"
+      ],
+      "legacyHeadingIds": {
+        "h-하이퍼파라미터": "하이퍼파라미터",
+        "h-usage": "usage",
+        "h-ref": "ref"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "developing-daily-01",
+      "sourcePath": "_posts/2023-07-17-developing_daily1.md",
+      "canonicalPath": "/developing/2023/07/17/developing_daily1.html",
+      "outputPath": "/developing/2023/07/17/developing_daily1.html",
+      "sourceDigest": "15ac0a56dd0e35d3b5072cb2981fe4b4f1d3f03d798aa726286864305651bf17",
+      "headingIds": [
+        "docker",
+        "tgi",
+        "ref"
+      ],
+      "legacyHeadingIds": {
+        "h-docker": "docker",
+        "h-tgi": "tgi",
+        "h-ref": "ref"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "developing-daily-02",
+      "sourcePath": "_posts/2023-07-18-developing_daily2.md",
+      "canonicalPath": "/developing/2023/07/18/developing_daily2.html",
+      "outputPath": "/developing/2023/07/18/developing_daily2.html",
+      "sourceDigest": "ee124bad4af068fafa12955d6c078b9c83ef1f41bb37477b57031d880142d9e2",
+      "headingIds": [
+        "gradio",
+        "ts",
+        "ref"
+      ],
+      "legacyHeadingIds": {
+        "h-gradio": "gradio",
+        "h-ts": "ts",
+        "h-ref": "ref"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "developing-daily-03",
+      "sourcePath": "_posts/2023-07-18-developing_daily3.md",
+      "canonicalPath": "/developing/2023/07/18/developing_daily3.html",
+      "outputPath": "/developing/2023/07/18/developing_daily3.html",
+      "sourceDigest": "4b85f6806f58a7cbbf548bf91153170db6608ed5c9215fc57bf844e27560e646",
+      "headingIds": [
+        "error",
+        "solution",
+        "ref"
+      ],
+      "legacyHeadingIds": {
+        "h-error": "error",
+        "h-solution": "solution",
+        "h-ref": "ref"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "developing-daily-04",
+      "sourcePath": "_posts/2023-07-18-developing_daily4.md",
+      "canonicalPath": "/developing/2023/07/18/developing_daily4.html",
+      "outputPath": "/developing/2023/07/18/developing_daily4.html",
+      "sourceDigest": "c527b5574c90e473a6010cb42448faa4fd9b8c836acff6d4876feb535e5ad7a9",
+      "headingIds": [
+        "ubuntu",
+        "파일-이름-변경",
+        "git",
+        "ca-에러",
+        "git-접속",
+        "패스워드-정보-묻지-않게-하기",
+        "여러-파일-한번에-추가",
+        "gitignore",
+        "ref"
+      ],
+      "legacyHeadingIds": {
+        "h-ubuntu": "ubuntu",
+        "h-파일-이름-변경": "파일-이름-변경",
+        "h-git": "git",
+        "h-ca-에러": "ca-에러",
+        "h-git-접속": "git-접속",
+        "h-패스워드-정보-묻지-않게-하기": "패스워드-정보-묻지-않게-하기",
+        "h-여러-파일-한번에-추가": "여러-파일-한번에-추가",
+        "h-gitignore": "gitignore",
+        "h-ref": "ref"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "developing-daily-05",
+      "sourcePath": "_posts/2023-07-27-developing_daily5.md",
+      "canonicalPath": "/developing/2023/07/27/developing_daily5.html",
+      "outputPath": "/developing/2023/07/27/developing_daily5.html",
+      "sourceDigest": "76b54216364c5bf1c0869810ce3ee10eba9b32d4ae7de93772e788fc26afff98",
+      "headingIds": [
+        "data-processing",
+        "정규표현식",
+        "generative-model",
+        "question-generation-한국어",
+        "kobart-questiongeneration",
+        "question-generation-영어",
+        "patil-surajquestion_generation",
+        "t5-end2end-question-generation",
+        "sehongt5-large-questiongeneration"
+      ],
+      "legacyHeadingIds": {
+        "h-data-processing": "data-processing",
+        "h-정규표현식": "정규표현식",
+        "h-generative-model": "generative-model",
+        "h-question-generation-한국어": "question-generation-한국어",
+        "h-kobart-questiongeneration": "kobart-questiongeneration",
+        "h-question-generation-영어": "question-generation-영어",
+        "h-patil-surajquestion_generation": "patil-surajquestion_generation",
+        "h-t5-end2end-question-generation": "t5-end2end-question-generation",
+        "h-sehongt5-large-questiongeneration": "sehongt5-large-questiongeneration"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "developing-daily-06",
+      "sourcePath": "_posts/2023-07-29-developing_daily6.md",
+      "canonicalPath": "/developing/2023/07/29/developing_daily6.html",
+      "outputPath": "/developing/2023/07/29/developing_daily6.html",
+      "sourceDigest": "416993d956533e6247720f7a2cb8775ceb4a36a288f9ab146ae8ecf9813b849d",
+      "headingIds": [
+        "error1",
+        "solution",
+        "error2",
+        "solution-1",
+        "ref"
+      ],
+      "legacyHeadingIds": {
+        "h-error1": "error1",
+        "h-solution": "solution",
+        "h-error2": "error2",
+        "h-solution-1": "solution-1",
+        "h-ref": "ref"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "developing-daily-07",
+      "sourcePath": "_posts/2023-08-01-developing_daily7.md",
+      "canonicalPath": "/developing/2023/08/01/developing_daily7.html",
+      "outputPath": "/developing/2023/08/01/developing_daily7.html",
+      "sourceDigest": "d90da8e531038dc10fc65235c1f06cad4ea55ede2b579dc50a5dab6be648e94b",
+      "headingIds": [
+        "workflow",
+        "model",
+        "question-generationeng",
+        "question-generationkor",
+        "sbert",
+        "translation"
+      ],
+      "legacyHeadingIds": {
+        "h-workflow": "workflow",
+        "h-model": "model",
+        "h-question-generationeng": "question-generationeng",
+        "h-question-generationkor": "question-generationkor",
+        "h-sbert": "sbert",
+        "h-translation": "translation"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "ia3-implementation",
+      "sourcePath": "_posts/2023-08-07-IA3.md",
+      "canonicalPath": "/finetuning/2023/08/07/IA3.html",
+      "outputPath": "/finetuning/2023/08/07/IA3.html",
+      "sourceDigest": "7c5701d60ef6bb39dfa09ecd167898a47136f931f1d1c07b421935b33c619940",
+      "headingIds": [
+        "ia3",
+        "gpt-neox-example-of-training",
+        "ref"
+      ],
+      "legacyHeadingIds": {
+        "h-ia3": "ia3",
+        "h-gpt-neox-example-of-training": "gpt-neox-example-of-training",
+        "h-ref": "ref"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "ia3-paper",
+      "sourcePath": "_posts/2023-08-07-IA3_paper.md",
+      "canonicalPath": "/paperreview/2023/08/07/IA3_paper.html",
+      "outputPath": "/paperreview/2023/08/07/IA3_paper.html",
+      "sourceDigest": "7224146e63e1d1ce76ff4d7d856c78fe264f655e2f31d12842a652b954ce0560",
+      "headingIds": [
+        "introduction",
+        "background",
+        "few-shot-in-context-learning-icl",
+        "peft",
+        "designing-the-t-few-recipe",
+        "model-and-datasets",
+        "unlikelihood-training-and-length-normalization",
+        "peft-with-ia3",
+        "pre-training-ia3",
+        "combining-the-ingredients",
+        "outperforming-icl-with-t-few",
+        "performance-on-t0-tasks",
+        "comparing-computational-costs",
+        "performance-on-real-world-few-shot-tasks-raft",
+        "ablation-experiments",
+        "conclusion",
+        "의의"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-background": "background",
+        "h-few-shot-in-context-learning-icl": "few-shot-in-context-learning-icl",
+        "h-peft": "peft",
+        "h-designing-the-t-few-recipe": "designing-the-t-few-recipe",
+        "h-model-and-datasets": "model-and-datasets",
+        "h-unlikelihood-training-and-length-normalization": "unlikelihood-training-and-length-normalization",
+        "h-peft-with-ia3": "peft-with-ia3",
+        "h-pre-training-ia3": "pre-training-ia3",
+        "h-combining-the-ingredients": "combining-the-ingredients",
+        "h-outperforming-icl-with-t-few": "outperforming-icl-with-t-few",
+        "h-performance-on-t0-tasks": "performance-on-t0-tasks",
+        "h-comparing-computational-costs": "comparing-computational-costs",
+        "h-performance-on-real-world-few-shot-tasks-raft": "performance-on-real-world-few-shot-tasks-raft",
+        "h-ablation-experiments": "ablation-experiments",
+        "h-conclusion": "conclusion",
+        "h-의의": "의의"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "peft-target-modules",
+      "sourcePath": "_posts/2023-08-08-peft_target_modules.md",
+      "canonicalPath": "/finetuning/2023/08/08/peft_target_modules.html",
+      "outputPath": "/finetuning/2023/08/08/peft_target_modules.html",
+      "sourceDigest": "9cf55f5270dd30ef6dcd7b93e239c1939025aecda4c778239a37fc436cb164bc",
+      "headingIds": [],
+      "legacyHeadingIds": {},
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "vscode-ssh",
+      "sourcePath": "_posts/2023-08-09-vscode_SSH.md",
+      "canonicalPath": "/developing/2023/08/09/vscode_SSH.html",
+      "outputPath": "/developing/2023/08/09/vscode_SSH.html",
+      "sourceDigest": "fd40ce2c65a1f0f6a66bd6cc034ab1dfc4e4002b9d838be21f8e44a030e5c5aa",
+      "headingIds": [
+        "vscode로-서버에-접속하여-개발"
+      ],
+      "legacyHeadingIds": {
+        "h-vscode로-서버에-접속하여-개발": "vscode로-서버에-접속하여-개발"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "lora-dtype-troubleshooting",
+      "sourcePath": "_posts/2023-08-22-lora_ts.md",
+      "canonicalPath": "/finetuning/2023/08/22/lora_ts.html",
+      "outputPath": "/finetuning/2023/08/22/lora_ts.html",
+      "sourceDigest": "b96a3a7e56dfed9a1b41e5c29257b6cb3ad83cb0fbbaf6fa752a5b75ad4bea9f",
+      "headingIds": [
+        "에러",
+        "ref"
+      ],
+      "legacyHeadingIds": {
+        "h-에러": "에러",
+        "h-ref": "ref"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "gpu-driver-troubleshooting",
+      "sourcePath": "_posts/2023-09-01-developing_daily8.md",
+      "canonicalPath": "/developing/2023/09/01/developing_daily8.html",
+      "outputPath": "/developing/2023/09/01/developing_daily8.html",
+      "sourceDigest": "c9fdbf5aae3f3b759d704f1635409bd7a8653e534b8a50f949dd271e255e3b5d",
+      "headingIds": [
+        "env",
+        "issue",
+        "원인",
+        "해결"
+      ],
+      "legacyHeadingIds": {
+        "h-env": "env",
+        "h-issue": "issue",
+        "h-원인": "원인",
+        "h-해결": "해결"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "cuda-device-troubleshooting",
+      "sourcePath": "_posts/2023-09-08-developing_daily9.md",
+      "canonicalPath": "/developing/2023/09/08/developing_daily9.html",
+      "outputPath": "/developing/2023/09/08/developing_daily9.html",
+      "sourceDigest": "bad634eb87eca51372365a2f10daf9b273aeb8721130d973456614bebd5d7981",
+      "headingIds": [
+        "env",
+        "issue",
+        "원인",
+        "해결",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-env": "env",
+        "h-issue": "issue",
+        "h-원인": "원인",
+        "h-해결": "해결",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "python-venv-troubleshooting",
+      "sourcePath": "_posts/2023-09-13-developing_daily10.md",
+      "canonicalPath": "/developing/2023/09/13/developing_daily10.html",
+      "outputPath": "/developing/2023/09/13/developing_daily10.html",
+      "sourceDigest": "98580d0481b823b254cfaa5cf6cb352afbeff3dc6b14fdf716e424882f923c40",
+      "headingIds": [
+        "env",
+        "issue",
+        "해결"
+      ],
+      "legacyHeadingIds": {
+        "h-env": "env",
+        "h-issue": "issue",
+        "h-해결": "해결"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "netplan-troubleshooting",
+      "sourcePath": "_posts/2023-09-25-developing_daily11.md",
+      "canonicalPath": "/developing/2023/09/25/developing_daily11.html",
+      "outputPath": "/developing/2023/09/25/developing_daily11.html",
+      "sourceDigest": "2e77b89799792f20e078cce64ce9d2d8f63d283bbc4693034455ec863b2fbaf2",
+      "headingIds": [
+        "env",
+        "issue",
+        "해결",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-env": "env",
+        "h-issue": "issue",
+        "h-해결": "해결",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "mariadb-connection-troubleshooting",
+      "sourcePath": "_posts/2023-10-02-DB1.md",
+      "canonicalPath": "/python/2023/10/02/DB1.html",
+      "outputPath": "/python/2023/10/02/DB1.html",
+      "sourceDigest": "d322dbff27707fccf9ad96972aa158309154228c5a1fa2d387092e0a91487e7f",
+      "headingIds": [
+        "env",
+        "issue",
+        "해결",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-env": "env",
+        "h-issue": "issue",
+        "h-해결": "해결",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "docker-gpu-troubleshooting",
+      "sourcePath": "_posts/2023-10-11-docker_gpu_error.md",
+      "canonicalPath": "/developing/2023/10/11/docker_gpu_error.html",
+      "outputPath": "/developing/2023/10/11/docker_gpu_error.html",
+      "sourceDigest": "a5f4f6bcd089cb17f61a871cf511d1b000fab4dcbac33d0652043ade6ffce8c3",
+      "headingIds": [
+        "env",
+        "issue",
+        "solution"
+      ],
+      "legacyHeadingIds": {
+        "h-env": "env",
+        "h-issue": "issue",
+        "h-solution": "solution"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "tgi-implementation",
+      "sourcePath": "_posts/2023-10-20-docker_TGI.md",
+      "canonicalPath": "/developing/2023/10/20/docker_TGI.html",
+      "outputPath": "/developing/2023/10/20/docker_TGI.html",
+      "sourceDigest": "33db930bd0a2c4103f75a82be940f136614a22c5d60b99549ba540fd5597f882",
+      "headingIds": [
+        "env",
+        "1",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-env": "env",
+        "h-1": "1",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "generation-cuda-assert",
+      "sourcePath": "_posts/2023-10-30-question-generation_model_error.md",
+      "canonicalPath": "/nlp/2023/10/30/question-generation_model_error.html",
+      "outputPath": "/nlp/2023/10/30/question-generation_model_error.html",
+      "sourceDigest": "630e14547591872716de83f572cb76497acd6d79fc18cf16a921de6258650687",
+      "headingIds": [
+        "env",
+        "error",
+        "solution"
+      ],
+      "legacyHeadingIds": {
+        "h-env": "env",
+        "h-error": "error",
+        "h-solution": "solution"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "torch-tensor-manipulation-1",
+      "sourcePath": "_posts/2023-11-03-torch-tensor-manipulation.md",
+      "canonicalPath": "/python/2023/11/03/torch-tensor-manipulation.html",
+      "outputPath": "/python/2023/11/03/torch-tensor-manipulation.html",
+      "sourceDigest": "809812e3c9ed9c5025d3009980d0b4bce2dfc33e39f7f114f6042916f862a18a",
+      "headingIds": [
+        "view-reshape-transpose-함수-정리",
+        "torchview",
+        "torchtranspose",
+        "torchreshape",
+        "결론",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-view-reshape-transpose-함수-정리": "view-reshape-transpose-함수-정리",
+        "h-torchview": "torchview",
+        "h-torchtranspose": "torchtranspose",
+        "h-torchreshape": "torchreshape",
+        "h-결론": "결론",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "torch-tensor-manipulation-2",
+      "sourcePath": "_posts/2023-11-10-torch-tensor-manipulation-(un)squeeze.md",
+      "canonicalPath": "/python/2023/11/10/torch-tensor-manipulation-(un)squeeze.html",
+      "outputPath": "/python/2023/11/10/torch-tensor-manipulation-(un)squeeze.html",
+      "sourceDigest": "870839b95f93cd325965b583781a3e034c63f58429869f16882cb0abab122291",
+      "headingIds": [
+        "squeeze-unsqueeze-함수-정리",
+        "squeeze",
+        "unsqueeze",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-squeeze-unsqueeze-함수-정리": "squeeze-unsqueeze-함수-정리",
+        "h-squeeze": "squeeze",
+        "h-unsqueeze": "unsqueeze",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "llama2-training-oom",
+      "sourcePath": "_posts/2023-11-16-OOM-llama2.md",
+      "canonicalPath": "/developing/2023/11/16/OOM-llama2.html",
+      "outputPath": "/developing/2023/11/16/OOM-llama2.html",
+      "sourceDigest": "57a0932dfcde7519b2416ffaa0ebb7da9e8176a51c23b0d9ed345befd3c9342c",
+      "headingIds": [
+        "env",
+        "error",
+        "solution",
+        "source-code"
+      ],
+      "legacyHeadingIds": {
+        "h-env": "env",
+        "h-error": "error",
+        "h-solution": "solution",
+        "h-source-code": "source-code"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "model-input-length",
+      "sourcePath": "_posts/2023-11-22-model-size.md",
+      "canonicalPath": "/developing/2023/11/22/model-size.html",
+      "outputPath": "/developing/2023/11/22/model-size.html",
+      "sourceDigest": "85281bbef146adc50ecf0914e96e8773440b3a5139180876e4fbb6862524021d",
+      "headingIds": [
+        "env",
+        "model-input-sequence-length"
+      ],
+      "legacyHeadingIds": {
+        "h-env": "env",
+        "h-model-input-sequence-length": "model-input-sequence-length"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "transformers-training-oom",
+      "sourcePath": "_posts/2023-11-30-OOM-issue.md",
+      "canonicalPath": "/developing/2023/11/30/OOM-issue.html",
+      "outputPath": "/developing/2023/11/30/OOM-issue.html",
+      "sourceDigest": "6bde4687c86be1c6728be22e8ccc406da64ed21453fbdaaf321eaf8628b9e5ac",
+      "headingIds": [
+        "env",
+        "error",
+        "solution"
+      ],
+      "legacyHeadingIds": {
+        "h-env": "env",
+        "h-error": "error",
+        "h-solution": "solution"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "loftq",
+      "sourcePath": "_posts/2023-12-07-LoftQ.md",
+      "canonicalPath": "/paperreview/2023/12/07/LoftQ.html",
+      "outputPath": "/paperreview/2023/12/07/LoftQ.html",
+      "sourceDigest": "09bbf80e8588356c904b378683d63a71eb2d8bda2672ed93b516e014785b2d66",
+      "headingIds": [
+        "loftq",
+        "experiments",
+        "결론",
+        "appendix",
+        "glue-with-4-bit",
+        "summarization",
+        "nlg",
+        "pruning-비교"
+      ],
+      "legacyHeadingIds": {
+        "h-loftq": "loftq",
+        "h-experiments": "experiments",
+        "h-결론": "결론",
+        "h-appendix": "appendix",
+        "h-glue-with-4-bit": "glue-with-4-bit",
+        "h-summarization": "summarization",
+        "h-nlg": "nlg",
+        "h-pruning-비교": "pruning-비교"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "ziya2",
+      "sourcePath": "_posts/2023-12-14-Ziya2.md",
+      "canonicalPath": "/paperreview/2023/12/14/Ziya2.html",
+      "outputPath": "/paperreview/2023/12/14/Ziya2.html",
+      "sourceDigest": "c136fc74e04568626c318eab6fee178e25fbfc371d79ff8a33d78ce9161a1f2a",
+      "headingIds": [
+        "introduction",
+        "approach",
+        "the-data-factory",
+        "the-architecture-of-ziya2",
+        "continual-pre-training",
+        "evaluation",
+        "baselines",
+        "data-efficiency"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-approach": "approach",
+        "h-the-data-factory": "the-data-factory",
+        "h-the-architecture-of-ziya2": "the-architecture-of-ziya2",
+        "h-continual-pre-training": "continual-pre-training",
+        "h-evaluation": "evaluation",
+        "h-baselines": "baselines",
+        "h-data-efficiency": "data-efficiency"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "eda",
+      "sourcePath": "_posts/2023-12-19-EDA.md",
+      "canonicalPath": "/paperreview/2023/12/19/EDA.html",
+      "outputPath": "/paperreview/2023/12/19/EDA.html",
+      "sourceDigest": "e4ae3300bcc5c00d8ad5a20dccb5d601ee604d44eca0463eb9f032c2f6750ab2",
+      "headingIds": [
+        "introduction",
+        "eda",
+        "experimental",
+        "benchmark-dataset",
+        "text-classification-models",
+        "results",
+        "eda-makes-gains",
+        "training-set-sizing",
+        "does-eda-conserve-true-lables",
+        "ablation-study---eda-decomposed",
+        "how-much-augmentation",
+        "comparison-with-related-work",
+        "discussion-and-limitations",
+        "appendix",
+        "theory"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-eda": "eda",
+        "h-experimental": "experimental",
+        "h-benchmark-dataset": "benchmark-dataset",
+        "h-text-classification-models": "text-classification-models",
+        "h-results": "results",
+        "h-eda-makes-gains": "eda-makes-gains",
+        "h-training-set-sizing": "training-set-sizing",
+        "h-does-eda-conserve-true-lables": "does-eda-conserve-true-lables",
+        "h-ablation-study---eda-decomposed": "ablation-study---eda-decomposed",
+        "h-how-much-augmentation": "how-much-augmentation",
+        "h-comparison-with-related-work": "comparison-with-related-work",
+        "h-discussion-and-limitations": "discussion-and-limitations",
+        "h-appendix": "appendix",
+        "h-theory": "theory"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "prompt-tuning",
+      "sourcePath": "_posts/2023-12-29-PromptTuning.md",
+      "canonicalPath": "/paperreview/2023/12/29/PromptTuning.html",
+      "outputPath": "/paperreview/2023/12/29/PromptTuning.html",
+      "sourceDigest": "7ce06ab97ed433387eabc562720653c09b8a0933f2ede7c412f62dc03ab923a1",
+      "headingIds": [
+        "introduction",
+        "prompt-tuning",
+        "results",
+        "ablation-study",
+        "resilience-to-domain-shift",
+        "prompt-ensembling",
+        "interpretability"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-prompt-tuning": "prompt-tuning",
+        "h-results": "results",
+        "h-ablation-study": "ablation-study",
+        "h-resilience-to-domain-shift": "resilience-to-domain-shift",
+        "h-prompt-ensembling": "prompt-ensembling",
+        "h-interpretability": "interpretability"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "regex-preprocessing",
+      "sourcePath": "_posts/2024-01-04-정규표현식.md",
+      "canonicalPath": "/python/2024/01/04/정규표현식.html",
+      "outputPath": "/python/2024/01/04/정규표현식.html",
+      "sourceDigest": "b74227d6ee17fea1668bafa31b7b9c8208fabda443804c8fb12f22cb021b1743",
+      "headingIds": [
+        "problem",
+        "solution"
+      ],
+      "legacyHeadingIds": {
+        "h-problem": "problem",
+        "h-solution": "solution"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "python-args-kwargs",
+      "sourcePath": "_posts/2024-01-11-args&kwargs.md",
+      "canonicalPath": "/python/2024/01/11/args&kwargs.html",
+      "outputPath": "/python/2024/01/11/args&kwargs.html",
+      "sourceDigest": "bf9651171cec3f50a2541ca456adfed626aeb88d54ae44e6db5e4b478a143e74",
+      "headingIds": [
+        "argument를-직접-지정한-함수-사용",
+        "args-사용",
+        "kwargs-사용",
+        "args와-kwargs를-같이-사용하는-방법"
+      ],
+      "legacyHeadingIds": {
+        "h-argument를-직접-지정한-함수-사용": "argument를-직접-지정한-함수-사용",
+        "h-args-사용": "args-사용",
+        "h-kwargs-사용": "kwargs-사용",
+        "h-args와-kwargs를-같이-사용하는-방법": "args와-kwargs를-같이-사용하는-방법"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "message-history",
+      "sourcePath": "_posts/2024-01-18-message-history.md",
+      "canonicalPath": "/nlp/2024/01/18/message-history.html",
+      "outputPath": "/nlp/2024/01/18/message-history.html",
+      "sourceDigest": "a1f53c76b81978a13188c8271e29132be82fd417fa7145eddc01915db8886648",
+      "headingIds": [
+        "message-history"
+      ],
+      "legacyHeadingIds": {
+        "h-message-history": "message-history"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "tokenizer-input-troubleshooting",
+      "sourcePath": "_posts/2024-01-24-debugging.md",
+      "canonicalPath": "/developing/2024/01/24/debugging.html",
+      "outputPath": "/developing/2024/01/24/debugging.html",
+      "sourceDigest": "c264f94f6a304bda337083245c487116fd0f5298ea984ae75915eb9087e9c91c",
+      "headingIds": [
+        "error",
+        "원인",
+        "solution"
+      ],
+      "legacyHeadingIds": {
+        "h-error": "error",
+        "h-원인": "원인",
+        "h-solution": "solution"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "activation-functions",
+      "sourcePath": "_posts/2024-02-08-compare_to_actfn.md",
+      "canonicalPath": "/developing/2024/02/08/compare_to_actfn.html",
+      "outputPath": "/developing/2024/02/08/compare_to_actfn.html",
+      "sourceDigest": "39589283f7fbf79f44190e719043a8d2b9e22bcf7e3e89b4ccc659378cfee268",
+      "headingIds": [
+        "case-1",
+        "case-2",
+        "curiosity",
+        "answer"
+      ],
+      "legacyHeadingIds": {
+        "h-case-1": "case-1",
+        "h-case-2": "case-2",
+        "h-curiosity": "curiosity",
+        "h-answer": "answer"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "torch-tensor-manipulation-3",
+      "sourcePath": "_posts/2024-02-18-torch-tensor-manipulation3.md",
+      "canonicalPath": "/python/2024/02/18/torch-tensor-manipulation3.html",
+      "outputPath": "/python/2024/02/18/torch-tensor-manipulation3.html",
+      "sourceDigest": "2c118596cb9aca80b459c4ef9cf47721ccb4b4b2f1f68d9397e0555d833b66fd",
+      "headingIds": [
+        "broadcasting",
+        "indexing--slicing",
+        "expand",
+        "triu--tril",
+        "삼각행렬-triangular-matrix",
+        "triu",
+        "tril"
+      ],
+      "legacyHeadingIds": {
+        "h-broadcasting": "broadcasting",
+        "h-indexing--slicing": "indexing--slicing",
+        "h-expand": "expand",
+        "h-triu--tril": "triu--tril",
+        "h-삼각행렬-triangular-matrix": "삼각행렬-triangular-matrix",
+        "h-triu": "triu",
+        "h-tril": "tril"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "pip-options",
+      "sourcePath": "_posts/2024-02-22-pip-options.md",
+      "canonicalPath": "/python/2024/02/22/pip-options.html",
+      "outputPath": "/python/2024/02/22/pip-options.html",
+      "sourceDigest": "83b0608efa18c5ae06d4d556188a82f133c4d6757e406185eeeab0524d192ace",
+      "headingIds": [
+        "pip-options",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-pip-options": "pip-options",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "peft-features-090",
+      "sourcePath": "_posts/2024-03-01-lora_new_featrues1.md",
+      "canonicalPath": "/nlp/2024/03/01/lora_new_featrues1.html",
+      "outputPath": "/nlp/2024/03/01/lora_new_featrues1.html",
+      "sourceDigest": "795992148e212873aff2e6a7fd00bd3d94c10c11fe5845ee70aeddb70cd92808",
+      "headingIds": [
+        "peft-v090",
+        "dora-support",
+        "merging-lora-weights",
+        "ref"
+      ],
+      "legacyHeadingIds": {
+        "h-peft-v090": "peft-v090",
+        "h-dora-support": "dora-support",
+        "h-merging-lora-weights": "merging-lora-weights",
+        "h-ref": "ref"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "peft-features-0100",
+      "sourcePath": "_posts/2024-03-29-lora_new_features2.md",
+      "canonicalPath": "/nlp/2024/03/29/lora_new_features2.html",
+      "outputPath": "/nlp/2024/03/29/lora_new_features2.html",
+      "sourceDigest": "382579a713241e514483857951c1d9fb8e8e4dc871d6fd42227bdf0677139bfa",
+      "headingIds": [
+        "peft-v0100",
+        "deprecations",
+        "improving-dora",
+        "layer-replication",
+        "memory-efficient-layer-replication-with-lora",
+        "ref"
+      ],
+      "legacyHeadingIds": {
+        "h-peft-v0100": "peft-v0100",
+        "h-deprecations": "deprecations",
+        "h-improving-dora": "improving-dora",
+        "h-layer-replication": "layer-replication",
+        "h-memory-efficient-layer-replication-with-lora": "memory-efficient-layer-replication-with-lora",
+        "h-ref": "ref"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "vera",
+      "sourcePath": "_posts/2024-04-25-VERA.md",
+      "canonicalPath": "/paperreview/2024/04/25/VERA.html",
+      "outputPath": "/paperreview/2024/04/25/VERA.html",
+      "sourceDigest": "92d7ba9d36955abb525f70cd65aea75171203b84fc328906070fb8c49d96af14",
+      "headingIds": [
+        "introduction",
+        "related-work",
+        "low-rank-adaptation-lora",
+        "parameter-efficiency-in-existing-methods",
+        "random-models-and-projections",
+        "method",
+        "method-formulation",
+        "parameter-count",
+        "initialization-strategies",
+        "experiments",
+        "glue-benchmark",
+        "e2e-benchmark",
+        "it",
+        "image-classification",
+        "scaling-the-number-of-trainable-parameters",
+        "ablation-study",
+        "appendix",
+        "impace-of-training-time-and-memory-usage",
+        "it-with-vicuna-eval"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-related-work": "related-work",
+        "h-low-rank-adaptation-lora": "low-rank-adaptation-lora",
+        "h-parameter-efficiency-in-existing-methods": "parameter-efficiency-in-existing-methods",
+        "h-random-models-and-projections": "random-models-and-projections",
+        "h-method": "method",
+        "h-method-formulation": "method-formulation",
+        "h-parameter-count": "parameter-count",
+        "h-initialization-strategies": "initialization-strategies",
+        "h-experiments": "experiments",
+        "h-glue-benchmark": "glue-benchmark",
+        "h-e2e-benchmark": "e2e-benchmark",
+        "h-it": "it",
+        "h-image-classification": "image-classification",
+        "h-scaling-the-number-of-trainable-parameters": "scaling-the-number-of-trainable-parameters",
+        "h-ablation-study": "ablation-study",
+        "h-appendix": "appendix",
+        "h-impace-of-training-time-and-memory-usage": "impace-of-training-time-and-memory-usage",
+        "h-it-with-vicuna-eval": "it-with-vicuna-eval"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "dora",
+      "sourcePath": "_posts/2024-04-30-DoRA.md",
+      "canonicalPath": "/paperreview/2024/04/30/DoRA.html",
+      "outputPath": "/paperreview/2024/04/30/DoRA.html",
+      "sourceDigest": "81a2826bd24156ecca27d5c19e636b277aea178eb79b7d90a83aa58969ff20f1",
+      "headingIds": [
+        "introduction",
+        "related-works",
+        "peft-parameter-efficient-fine-tuning",
+        "lora-and-its-variants",
+        "pattern-analysis-of-lora-and-ft",
+        "low-rank-adaptation-lora",
+        "weight-decomposition-analysis",
+        "method",
+        "weight-decomposed-low-rank-adaptation",
+        "gradient-analysis-of-dora",
+        "experiments",
+        "commonsense-reasoning",
+        "imagevideo-text-understanding",
+        "visual-instruction-tuning",
+        "compatibility-of-dora-with-other-lora-variants",
+        "robustness-of-dora-towards-different-rank-settings",
+        "tuning-granularity-analysis",
+        "의의"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-related-works": "related-works",
+        "h-peft-parameter-efficient-fine-tuning": "peft-parameter-efficient-fine-tuning",
+        "h-lora-and-its-variants": "lora-and-its-variants",
+        "h-pattern-analysis-of-lora-and-ft": "pattern-analysis-of-lora-and-ft",
+        "h-low-rank-adaptation-lora": "low-rank-adaptation-lora",
+        "h-weight-decomposition-analysis": "weight-decomposition-analysis",
+        "h-method": "method",
+        "h-weight-decomposed-low-rank-adaptation": "weight-decomposed-low-rank-adaptation",
+        "h-gradient-analysis-of-dora": "gradient-analysis-of-dora",
+        "h-experiments": "experiments",
+        "h-commonsense-reasoning": "commonsense-reasoning",
+        "h-imagevideo-text-understanding": "imagevideo-text-understanding",
+        "h-visual-instruction-tuning": "visual-instruction-tuning",
+        "h-compatibility-of-dora-with-other-lora-variants": "compatibility-of-dora-with-other-lora-variants",
+        "h-robustness-of-dora-towards-different-rank-settings": "robustness-of-dora-towards-different-rank-settings",
+        "h-tuning-granularity-analysis": "tuning-granularity-analysis",
+        "h-의의": "의의"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "alphallm",
+      "sourcePath": "_posts/2024-05-03-alphaLLM.md",
+      "canonicalPath": "/paperreview/2024/05/03/alphaLLM.html",
+      "outputPath": "/paperreview/2024/05/03/alphaLLM.html",
+      "sourceDigest": "aeca2ecc95b5c3414ac4f2db5bff9e5553860e0cae25bab362fb5a92cef74314",
+      "headingIds": [
+        "introduction",
+        "related-work",
+        "preliminaries",
+        "problem-formulation"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-related-work": "related-work",
+        "h-preliminaries": "preliminaries",
+        "h-problem-formulation": "problem-formulation"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "chat-vector",
+      "sourcePath": "_posts/2024-06-19-chatvector.md",
+      "canonicalPath": "/paperreview/2024/06/19/chatvector.html",
+      "outputPath": "/paperreview/2024/06/19/chatvector.html",
+      "sourceDigest": "26bb4fac46c881f065bcc8e4468b57c52125353817e0fba8f33d5b5c80760c4f",
+      "headingIds": [
+        "background",
+        "chat-vector",
+        "performance",
+        "의의"
+      ],
+      "legacyHeadingIds": {
+        "h-background": "background",
+        "h-chat-vector": "chat-vector",
+        "h-performance": "performance",
+        "h-의의": "의의"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "mixture-of-experts-paper",
+      "sourcePath": "_posts/2024-06-19-moe.md",
+      "canonicalPath": "/paperreview/2024/06/19/moe.html",
+      "outputPath": "/paperreview/2024/06/19/moe.html",
+      "sourceDigest": "e6f0e2d7d882ecf7a94bcca68fe0a15a7d173b22b2b705e16adc3ef55b12a686",
+      "headingIds": [
+        "background"
+      ],
+      "legacyHeadingIds": {
+        "h-background": "background"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "python-class-inheritance",
+      "sourcePath": "_posts/2024-08-22-python-class-inheritance.md",
+      "canonicalPath": "/python/2024/08/22/python-class-inheritance.html",
+      "outputPath": "/python/2024/08/22/python-class-inheritance.html",
+      "sourceDigest": "0bfe68d940cba77dc2529265ae18868ff35f049b90131374efe1f11395102807",
+      "headingIds": [
+        "claass---inheritance",
+        "상속의-기본-개념",
+        "examples",
+        "장점",
+        "abstract-class",
+        "예시-코드"
+      ],
+      "legacyHeadingIds": {
+        "h-claass---inheritance": "claass---inheritance",
+        "h-상속의-기본-개념": "상속의-기본-개념",
+        "h-examples": "examples",
+        "h-장점": "장점",
+        "h-abstract-class": "abstract-class",
+        "h-예시-코드": "예시-코드"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "pytest",
+      "sourcePath": "_posts/2024-09-01-pytest.md",
+      "canonicalPath": "/python/2024/09/01/pytest.html",
+      "outputPath": "/python/2024/09/01/pytest.html",
+      "sourceDigest": "29ea491fe44f35821a64bed60bff175d85f10b9a8079a659766b828fae750ac1",
+      "headingIds": [
+        "주요-특징"
+      ],
+      "legacyHeadingIds": {
+        "h-pytest": "pytest",
+        "pytest": "article-title",
+        "h-주요-특징": "주요-특징"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "python-map",
+      "sourcePath": "_posts/2024-09-10-python-map.md",
+      "canonicalPath": "/python/2024/09/10/python-map.html",
+      "outputPath": "/python/2024/09/10/python-map.html",
+      "sourceDigest": "cf9a12e7755968cd29c459972fc7a7227553cf4b27c1605dcec344f50b9863bf",
+      "headingIds": [
+        "map",
+        "구문",
+        "동작-원리",
+        "예시1-단일-반복-객체-사용",
+        "예시2-람다-함수-사용",
+        "예시3-여러-반복-객체-사용",
+        "예시4-중첩된-리스트-반환",
+        "예시5-조건에-따른-반환",
+        "예시6-복잡한-객체-반환",
+        "장점"
+      ],
+      "legacyHeadingIds": {
+        "h-map": "map",
+        "h-구문": "구문",
+        "h-동작-원리": "동작-원리",
+        "h-예시1-단일-반복-객체-사용": "예시1-단일-반복-객체-사용",
+        "h-예시2-람다-함수-사용": "예시2-람다-함수-사용",
+        "h-예시3-여러-반복-객체-사용": "예시3-여러-반복-객체-사용",
+        "h-예시4-중첩된-리스트-반환": "예시4-중첩된-리스트-반환",
+        "h-예시5-조건에-따른-반환": "예시5-조건에-따른-반환",
+        "h-예시6-복잡한-객체-반환": "예시6-복잡한-객체-반환",
+        "h-장점": "장점"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "python-enumerate",
+      "sourcePath": "_posts/2024-09-11-python-enumerate.md",
+      "canonicalPath": "/python/2024/09/11/python-enumerate.html",
+      "outputPath": "/python/2024/09/11/python-enumerate.html",
+      "sourceDigest": "6a329bf024accd8ebce83e0997a509fc73e12e559efdd49592d72c23d20f522c",
+      "headingIds": [
+        "enumerate",
+        "기본-구문",
+        "반환값",
+        "예시",
+        "장점"
+      ],
+      "legacyHeadingIds": {
+        "h-enumerate": "enumerate",
+        "h-기본-구문": "기본-구문",
+        "h-반환값": "반환값",
+        "h-예시": "예시",
+        "h-장점": "장점"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "python-enum",
+      "sourcePath": "_posts/2024-09-12-python-enum.md",
+      "canonicalPath": "/python/2024/09/12/python-enum.html",
+      "outputPath": "/python/2024/09/12/python-enum.html",
+      "sourceDigest": "fc02db9598318f9cc5810bb9e270bfa276ab2525181b0929f2eb5e287c6b1f00",
+      "headingIds": [
+        "enum",
+        "특징",
+        "enum을-사용하는-이유",
+        "예제",
+        "1-기본-사용법",
+        "2-상태를-나타나는-예제",
+        "3-fastapi에서-파라미터값-강제하기"
+      ],
+      "legacyHeadingIds": {
+        "h-enum": "enum",
+        "h-특징": "특징",
+        "h-enum을-사용하는-이유": "enum을-사용하는-이유",
+        "h-예제": "예제",
+        "h-1-기본-사용법": "1-기본-사용법",
+        "기본-사용법": "1-기본-사용법",
+        "h-기본-사용법": "1-기본-사용법",
+        "h-2-상태를-나타나는-예제": "2-상태를-나타나는-예제",
+        "상태를-나타나는-예제": "2-상태를-나타나는-예제",
+        "h-상태를-나타나는-예제": "2-상태를-나타나는-예제",
+        "h-3-fastapi에서-파라미터값-강제하기": "3-fastapi에서-파라미터값-강제하기",
+        "fastapi에서-파라미터값-강제하기": "3-fastapi에서-파라미터값-강제하기",
+        "h-fastapi에서-파라미터값-강제하기": "3-fastapi에서-파라미터값-강제하기"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "vllm-weight-loading",
+      "sourcePath": "_posts/2024-10-08-vllm-debugging.md",
+      "canonicalPath": "/python/2024/10/08/vllm-debugging.html",
+      "outputPath": "/python/2024/10/08/vllm-debugging.html",
+      "sourceDigest": "d3edae5ca3b683d1a952144cbfcf4abbd229d822558a3c50011cf828aaeb81af",
+      "headingIds": [
+        "problem",
+        "solution",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-problem": "problem",
+        "h-solution": "solution",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "semantic-search",
+      "sourcePath": "_posts/2024-10-29-semantic-search.md",
+      "canonicalPath": "/nlp/2024/10/29/semantic-search.html",
+      "outputPath": "/nlp/2024/10/29/semantic-search.html",
+      "sourceDigest": "87019998564efd99a72cb41f7443ca1ae7c9f6e5212e829459066712fd6e09c8",
+      "headingIds": [
+        "what-is-not-semantic-search",
+        "how-to-search-using-text-embedding",
+        "using-similarity-to-find-the-best-document",
+        "multilingual-search",
+        "are-embeddings-and-similarity-enough-no"
+      ],
+      "legacyHeadingIds": {
+        "h-what-is-not-semantic-search": "what-is-not-semantic-search",
+        "h-how-to-search-using-text-embedding": "how-to-search-using-text-embedding",
+        "h-using-similarity-to-find-the-best-document": "using-similarity-to-find-the-best-document",
+        "h-multilingual-search": "multilingual-search",
+        "h-are-embeddings-and-similarity-enough-no": "are-embeddings-and-similarity-enough-no"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "keyword-search",
+      "sourcePath": "_posts/2024-11-09-keyword-search.md",
+      "canonicalPath": "/nlp/2024/11/09/keyword-search.html",
+      "outputPath": "/nlp/2024/11/09/keyword-search.html",
+      "sourceDigest": "b5d604b30d95140938c928d184b304cfa034c7b170069f0b53fb67ec0a8f85d1",
+      "headingIds": [
+        "querying-the-wikipedia-dataset-using-keyword-matching",
+        "conclusion"
+      ],
+      "legacyHeadingIds": {
+        "h-querying-the-wikipedia-dataset-using-keyword-matching": "querying-the-wikipedia-dataset-using-keyword-matching",
+        "h-conclusion": "conclusion"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "dense-retrieval",
+      "sourcePath": "_posts/2024-11-10-dense-retrieval.md",
+      "canonicalPath": "/nlp/2024/11/10/dense-retrieval.html",
+      "outputPath": "/nlp/2024/11/10/dense-retrieval.html",
+      "sourceDigest": "8b11245aa2576d57c802cba3332d283d6e41b40bf4a0aa05951bee7df19728e5",
+      "headingIds": [
+        "dense-retrieval",
+        "querying-the-dataset-using-dense-retrieval",
+        "chunking-the-articles"
+      ],
+      "legacyHeadingIds": {
+        "h-dense-retrieval": "dense-retrieval",
+        "h-querying-the-dataset-using-dense-retrieval": "querying-the-dataset-using-dense-retrieval",
+        "h-chunking-the-articles": "chunking-the-articles"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "ollama-docker-troubleshooting",
+      "sourcePath": "_posts/2024-11-11-ollama-troubleshooting.md",
+      "canonicalPath": "/developing/2024/11/11/ollama-troubleshooting.html",
+      "outputPath": "/developing/2024/11/11/ollama-troubleshooting.html",
+      "sourceDigest": "9d406239812e991a7bfb65f39a2eaf08adaba38189c8140cede208002be00aa8",
+      "headingIds": [
+        "구현-사항",
+        "에러",
+        "1-ollama-설치-후-모델-다운로드--openwebui-접속",
+        "2-conda로-실행하면-잘-인식",
+        "3-conf-파일-수정-및-ollama-재가동시-에러",
+        "4-docker로-openwebui를-실행하면-왜-모델을-인식하지-못할까",
+        "4-1-원인",
+        "4-2-해결방안-open-webui-discussions4376",
+        "5-ollama-custom-model-directory로-변경",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-구현-사항": "구현-사항",
+        "h-에러": "에러",
+        "h-1-ollama-설치-후-모델-다운로드--openwebui-접속": "1-ollama-설치-후-모델-다운로드--openwebui-접속",
+        "ollama-설치-후-모델-다운로드--openwebui-접속": "1-ollama-설치-후-모델-다운로드--openwebui-접속",
+        "h-ollama-설치-후-모델-다운로드--openwebui-접속": "1-ollama-설치-후-모델-다운로드--openwebui-접속",
+        "h-2-conda로-실행하면-잘-인식": "2-conda로-실행하면-잘-인식",
+        "conda로-실행하면-잘-인식": "2-conda로-실행하면-잘-인식",
+        "h-conda로-실행하면-잘-인식": "2-conda로-실행하면-잘-인식",
+        "h-3-conf-파일-수정-및-ollama-재가동시-에러": "3-conf-파일-수정-및-ollama-재가동시-에러",
+        "conf-파일-수정-및-ollama-재가동시-에러": "3-conf-파일-수정-및-ollama-재가동시-에러",
+        "h-conf-파일-수정-및-ollama-재가동시-에러": "3-conf-파일-수정-및-ollama-재가동시-에러",
+        "h-4-docker로-openwebui를-실행하면-왜-모델을-인식하지-못할까": "4-docker로-openwebui를-실행하면-왜-모델을-인식하지-못할까",
+        "docker로-openwebui를-실행하면-왜-모델을-인식하지-못할까": "4-docker로-openwebui를-실행하면-왜-모델을-인식하지-못할까",
+        "h-docker로-openwebui를-실행하면-왜-모델을-인식하지-못할까": "4-docker로-openwebui를-실행하면-왜-모델을-인식하지-못할까",
+        "h-4-1-원인": "4-1-원인",
+        "원인": "4-1-원인",
+        "h-원인": "4-1-원인",
+        "h-4-2-해결방안-open-webui-discussions4376": "4-2-해결방안-open-webui-discussions4376",
+        "해결방안-open-webui-discussions4376": "4-2-해결방안-open-webui-discussions4376",
+        "h-해결방안-open-webui-discussions4376": "4-2-해결방안-open-webui-discussions4376",
+        "h-5-ollama-custom-model-directory로-변경": "5-ollama-custom-model-directory로-변경",
+        "ollama-custom-model-directory로-변경": "5-ollama-custom-model-directory로-변경",
+        "h-ollama-custom-model-directory로-변경": "5-ollama-custom-model-directory로-변경",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "reranking",
+      "sourcePath": "_posts/2024-11-12-reranking.md",
+      "canonicalPath": "/nlp/2024/11/12/reranking.html",
+      "outputPath": "/nlp/2024/11/12/reranking.html",
+      "sourceDigest": "9d06797af46724e3614f0a80ae9bb077870155376173b04b67545a40dd68fc0e",
+      "headingIds": [
+        "reranking",
+        "using-rerank-to-improve-keyword-search",
+        "결론"
+      ],
+      "legacyHeadingIds": {
+        "h-reranking": "reranking",
+        "h-using-rerank-to-improve-keyword-search": "using-rerank-to-improve-keyword-search",
+        "h-결론": "결론"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "vllm-gemma-troubleshooting",
+      "sourcePath": "_posts/2024-11-15-vllm-gemma-family-error.md",
+      "canonicalPath": "/developing/2024/11/15/vllm-gemma-family-error.html",
+      "outputPath": "/developing/2024/11/15/vllm-gemma-family-error.html",
+      "sourceDigest": "01752aac0feee7025dd790920db06f31a9ac613d42ddfde8bc492dc744f63d65",
+      "headingIds": [
+        "env",
+        "error",
+        "조치-1",
+        "error-2",
+        "조치-2",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-env": "env",
+        "h-error": "error",
+        "h-조치-1": "조치-1",
+        "h-error-2": "error-2",
+        "h-조치-2": "조치-2",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "lm-evaluation-harness-oom",
+      "sourcePath": "_posts/2024-11-20-lm-evaluation-harness-oom.md",
+      "canonicalPath": "/developing/2024/11/20/lm-evaluation-harness-oom.html",
+      "outputPath": "/developing/2024/11/20/lm-evaluation-harness-oom.html",
+      "sourceDigest": "b22430d82b1f2b0a41f2a2eb16f460119bd9a343689d65c2f34b8a5cea9d6bda",
+      "headingIds": [
+        "env",
+        "error",
+        "solution",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-env": "env",
+        "h-error": "error",
+        "h-solution": "solution",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "offline-deep-learning-environment",
+      "sourcePath": "_posts/2025-02-07-dl-env-installation.md",
+      "canonicalPath": "/developing/2025/02/07/dl-env-installation.html",
+      "outputPath": "/developing/2025/02/07/dl-env-installation.html",
+      "sourceDigest": "e113930289def2312b49e22e400311ab1faf6e9986bc8ebf7c2fe6d23ffc25c5",
+      "headingIds": [
+        "폐쇄망에서의-딥러닝-추론-환경-구축",
+        "nvidia-driver",
+        "cuda-cudnn",
+        "파일-무결성-검사-방법",
+        "python",
+        "python-pkg",
+        "model",
+        "새로운-이슈",
+        "폐쇄망-환경구축을-하며-느낀점"
+      ],
+      "legacyHeadingIds": {
+        "h-폐쇄망에서의-딥러닝-추론-환경-구축": "폐쇄망에서의-딥러닝-추론-환경-구축",
+        "h-nvidia-driver": "nvidia-driver",
+        "h-cuda-cudnn": "cuda-cudnn",
+        "h-파일-무결성-검사-방법": "파일-무결성-검사-방법",
+        "h-python": "python",
+        "h-python-pkg": "python-pkg",
+        "h-model": "model",
+        "h-새로운-이슈": "새로운-이슈",
+        "h-폐쇄망-환경구축을-하며-느낀점": "폐쇄망-환경구축을-하며-느낀점"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "vllm-tensor-parallel-troubleshooting",
+      "sourcePath": "_posts/2025-03-13-vllm-inference-not-working.md",
+      "canonicalPath": "/developing/2025/03/13/vllm-inference-not-working.html",
+      "outputPath": "/developing/2025/03/13/vllm-inference-not-working.html",
+      "sourceDigest": "dd7f8c0c652882468be7392b20d34093eed6a06c8dc2706277a6f57bf080af54",
+      "headingIds": [
+        "environment",
+        "problem",
+        "script",
+        "error-message",
+        "solution",
+        "script-1",
+        "what-is-disable-custom-all-reduce",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-environment": "environment",
+        "h-problem": "problem",
+        "h-script": "script",
+        "h-error-message": "error-message",
+        "h-solution": "solution",
+        "h-script-1": "script-1",
+        "h-what-is-disable-custom-all-reduce": "what-is-disable-custom-all-reduce",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "langgraph-structured-streaming",
+      "sourcePath": "_posts/2025-07-30-langgraph-expression-format.md",
+      "canonicalPath": "/developing/2025/07/30/langgraph-expression-format.html",
+      "outputPath": "/developing/2025/07/30/langgraph-expression-format.html",
+      "sourceDigest": "0c4f625cc54f4586b89a2b78e3f39d8d06b6039f5630340a4f38041e713a0713",
+      "headingIds": [
+        "environment",
+        "baseline",
+        "problem",
+        "구조-분석"
+      ],
+      "legacyHeadingIds": {
+        "h-environment": "environment",
+        "h-baseline": "baseline",
+        "h-problem": "problem",
+        "h-구조-분석": "구조-분석"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "bfcl-reasoning-option",
+      "sourcePath": "_posts/2025-08-14-BFCL-reasoning-option.md",
+      "canonicalPath": "/developing/2025/08/14/BFCL-reasoning-option.html",
+      "outputPath": "/developing/2025/08/14/BFCL-reasoning-option.html",
+      "sourceDigest": "5a9fcc5f917889fe4d01398a3a5df2932b96983e80b3d05fcc9078a5acc8e5fe",
+      "headingIds": [
+        "environment",
+        "error",
+        "reproduction",
+        "solution",
+        "refernce"
+      ],
+      "legacyHeadingIds": {
+        "h-environment": "environment",
+        "h-error": "error",
+        "h-reproduction": "reproduction",
+        "h-solution": "solution",
+        "h-refernce": "refernce"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "mcp-meme",
+      "sourcePath": "_posts/2025-10-16-mcp-meme.md",
+      "canonicalPath": "/developing/2025/10/16/mcp-meme.html",
+      "outputPath": "/developing/2025/10/16/mcp-meme.html",
+      "sourceDigest": "46817db0e91008a46005c6272fea20de9549ca12c50b5b93eb1907e61ce1ed60",
+      "headingIds": [],
+      "legacyHeadingIds": {},
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "k-browsecomp",
+      "sourcePath": "_posts/2026-06-04-k-browsecomp.md",
+      "canonicalPath": "/paperreview/2026/06/04/k-browsecomp.html",
+      "outputPath": "/paperreview/2026/06/04/k-browsecomp.html",
+      "sourceDigest": "2a2894aa08221a6716d9a4ca03440abacc1abb5b349502ed9d9c7d749162b893",
+      "headingIds": [
+        "introduction",
+        "k-browsecomp-구성",
+        "k-browsecomp-verified-300문제",
+        "failure-mode-taxonomy-f0f8",
+        "synthetic-split-100문제--이-논문의-핵심-기여",
+        "실험",
+        "setup",
+        "main-results",
+        "synthetic-결과",
+        "분석-실패는-검색-이후에-발생한다",
+        "trajectory-level-failure-patterns",
+        "search-effort과-failure-persistence",
+        "정리",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-k-browsecomp-구성": "k-browsecomp-구성",
+        "h-k-browsecomp-verified-300문제": "k-browsecomp-verified-300문제",
+        "h-failure-mode-taxonomy-f0f8": "failure-mode-taxonomy-f0f8",
+        "h-synthetic-split-100문제--이-논문의-핵심-기여": "synthetic-split-100문제--이-논문의-핵심-기여",
+        "h-실험": "실험",
+        "h-setup": "setup",
+        "h-main-results": "main-results",
+        "h-synthetic-결과": "synthetic-결과",
+        "h-분석-실패는-검색-이후에-발생한다": "분석-실패는-검색-이후에-발생한다",
+        "h-trajectory-level-failure-patterns": "trajectory-level-failure-patterns",
+        "h-search-effort과-failure-persistence": "search-effort과-failure-persistence",
+        "h-정리": "정리",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "rtpurbo",
+      "sourcePath": "_posts/2026-06-11-rtpurbo.md",
+      "canonicalPath": "/paperreview/2026/06/11/rtpurbo.html",
+      "outputPath": "/paperreview/2026/06/11/rtpurbo.html",
+      "sourceDigest": "9774b7c6f07be92b8f585b49ac56a128e11dfae410c134a40d18ae9a40281684",
+      "headingIds": [
+        "introduction",
+        "insight-왜-rtpurbo가-동작하는가",
+        "1-head-specialization--일부-head만-retrieval을-담당",
+        "2-rope가-만드는-압축-가능한-geometry--low-dim-subspace",
+        "3-dynamic-thresholding--token-budget은-query에-따라-다르다",
+        "method",
+        "offline-head-wise-calibration",
+        "adaptive-sparse-attention",
+        "low-cost-two-stage-training",
+        "hardware-aware-top-p-decoding-kernel",
+        "experiments",
+        "정확도--near-lossless",
+        "효율--ultra-long-robustness",
+        "정리",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-insight-왜-rtpurbo가-동작하는가": "insight-왜-rtpurbo가-동작하는가",
+        "h-1-head-specialization--일부-head만-retrieval을-담당": "1-head-specialization--일부-head만-retrieval을-담당",
+        "head-specialization--일부-head만-retrieval을-담당": "1-head-specialization--일부-head만-retrieval을-담당",
+        "h-head-specialization--일부-head만-retrieval을-담당": "1-head-specialization--일부-head만-retrieval을-담당",
+        "h-2-rope가-만드는-압축-가능한-geometry--low-dim-subspace": "2-rope가-만드는-압축-가능한-geometry--low-dim-subspace",
+        "rope가-만드는-압축-가능한-geometry--low-dim-subspace": "2-rope가-만드는-압축-가능한-geometry--low-dim-subspace",
+        "h-rope가-만드는-압축-가능한-geometry--low-dim-subspace": "2-rope가-만드는-압축-가능한-geometry--low-dim-subspace",
+        "h-3-dynamic-thresholding--token-budget은-query에-따라-다르다": "3-dynamic-thresholding--token-budget은-query에-따라-다르다",
+        "dynamic-thresholding--token-budget은-query에-따라-다르다": "3-dynamic-thresholding--token-budget은-query에-따라-다르다",
+        "h-dynamic-thresholding--token-budget은-query에-따라-다르다": "3-dynamic-thresholding--token-budget은-query에-따라-다르다",
+        "h-method": "method",
+        "h-offline-head-wise-calibration": "offline-head-wise-calibration",
+        "h-adaptive-sparse-attention": "adaptive-sparse-attention",
+        "h-low-cost-two-stage-training": "low-cost-two-stage-training",
+        "h-hardware-aware-top-p-decoding-kernel": "hardware-aware-top-p-decoding-kernel",
+        "h-experiments": "experiments",
+        "h-정확도--near-lossless": "정확도--near-lossless",
+        "h-효율--ultra-long-robustness": "효율--ultra-long-robustness",
+        "h-정리": "정리",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "searchswarm",
+      "sourcePath": "_posts/2026-06-11-searchswarm.md",
+      "canonicalPath": "/paperreview/2026/06/11/searchswarm.html",
+      "outputPath": "/paperreview/2026/06/11/searchswarm.html",
+      "sourceDigest": "d3b2ec141606925156bb1cda27a18419cd487a622d37f08281d1bd67ea70437a",
+      "headingIds": [
+        "introduction",
+        "method",
+        "main-distributes-sub-executes",
+        "harness-design",
+        "supervised-fine-tuning",
+        "experiments",
+        "harness의-효과",
+        "정리",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-method": "method",
+        "h-main-distributes-sub-executes": "main-distributes-sub-executes",
+        "h-harness-design": "harness-design",
+        "h-supervised-fine-tuning": "supervised-fine-tuning",
+        "h-experiments": "experiments",
+        "h-harness의-효과": "harness의-효과",
+        "h-정리": "정리",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "constitutional-ai",
+      "sourcePath": "_posts/2026-06-18-constitutional-ai.md",
+      "canonicalPath": "/paperreview/2026/06/18/constitutional-ai.html",
+      "outputPath": "/paperreview/2026/06/18/constitutional-ai.html",
+      "sourceDigest": "845807210a66e5d87fac6b31d0a2872adb99b6ddac268f1432bab26368b2f08d",
+      "headingIds": [
+        "introduction",
+        "preliminary--related-work",
+        "method",
+        "supervised-stage-critique--revision",
+        "rl-stage-rlaif",
+        "experiments",
+        "정리",
+        "reference"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-preliminary--related-work": "preliminary--related-work",
+        "h-method": "method",
+        "h-supervised-stage-critique--revision": "supervised-stage-critique--revision",
+        "h-rl-stage-rlaif": "rl-stage-rlaif",
+        "h-experiments": "experiments",
+        "h-정리": "정리",
+        "h-reference": "reference"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "dflash",
+      "sourcePath": "_posts/2026-08-18-dflash-block-diffusion-speculative-decoding.md",
+      "canonicalPath": "/paperreview/2026/08/18/dflash-block-diffusion-speculative-decoding.html",
+      "outputPath": "/paperreview/2026/08/18/dflash-block-diffusion-speculative-decoding.html",
+      "sourceDigest": "436eaf1d2e4dc666c723ea4470c089e22ab441310b6a3ef723fef73d4ce27141",
+      "headingIds": [
+        "introduction",
+        "preliminary",
+        "method",
+        "inference",
+        "training",
+        "experiments",
+        "main-results-qwen3-thinking-off",
+        "reasoning-models-thinking-on",
+        "serving-framework-sglang",
+        "ablations",
+        "conclusion"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-preliminary": "preliminary",
+        "h-method": "method",
+        "h-inference": "inference",
+        "h-training": "training",
+        "h-experiments": "experiments",
+        "h-main-results-qwen3-thinking-off": "main-results-qwen3-thinking-off",
+        "h-reasoning-models-thinking-on": "reasoning-models-thinking-on",
+        "h-serving-framework-sglang": "serving-framework-sglang",
+        "h-ablations": "ablations",
+        "h-conclusion": "conclusion"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "speculative-decoding-paper",
+      "sourcePath": "_posts/2026-08-18-fast-inference-via-speculative-decoding.md",
+      "canonicalPath": "/paperreview/2026/08/18/fast-inference-via-speculative-decoding.html",
+      "outputPath": "/paperreview/2026/08/18/fast-inference-via-speculative-decoding.html",
+      "sourceDigest": "d31cb891a7ba8f21dde599f1939d22344b11226acdafa279a1f7314c9f859d13",
+      "headingIds": [
+        "introduction",
+        "related-work",
+        "method-speculative-decoding",
+        "overview",
+        "speculative-sampling",
+        "analysis",
+        "기대-생성-토큰-수",
+        "α는-어떻게-계산하나",
+        "walltime-improvement",
+        "연산량-트레이드오프",
+        "optimal-γ",
+        "approximation-model의-선택",
+        "experiments",
+        "t5-xxl-walltime-실측",
+        "다양한-모델에서의-empirical-α",
+        "이론-예측-vs-실측",
+        "lenience--분포-변화를-조금-허용한다면",
+        "conclusion"
+      ],
+      "legacyHeadingIds": {
+        "h-introduction": "introduction",
+        "h-related-work": "related-work",
+        "h-method-speculative-decoding": "method-speculative-decoding",
+        "h-overview": "overview",
+        "h-speculative-sampling": "speculative-sampling",
+        "h-analysis": "analysis",
+        "h-기대-생성-토큰-수": "기대-생성-토큰-수",
+        "h-α는-어떻게-계산하나": "α는-어떻게-계산하나",
+        "h-walltime-improvement": "walltime-improvement",
+        "h-연산량-트레이드오프": "연산량-트레이드오프",
+        "h-optimal-γ": "optimal-γ",
+        "h-approximation-model의-선택": "approximation-model의-선택",
+        "h-experiments": "experiments",
+        "h-t5-xxl-walltime-실측": "t5-xxl-walltime-실측",
+        "h-다양한-모델에서의-empirical-α": "다양한-모델에서의-empirical-α",
+        "h-이론-예측-vs-실측": "이론-예측-vs-실측",
+        "h-lenience--분포-변화를-조금-허용한다면": "lenience--분포-변화를-조금-허용한다면",
+        "h-conclusion": "conclusion"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "kodistill",
+      "sourcePath": "_posts/2026-10-19-kodistill-vl-2b.md",
+      "canonicalPath": "/research/kodistill-vl-2b/",
+      "outputPath": "/research/kodistill-vl-2b/index.html",
+      "sourceDigest": "8f659654919d8ac2291193ae1de3f381927ccdf743a2854fb8696f59825c8ea8",
+      "headingIds": [
+        "at-a-glance",
+        "the-question-aligning-korean-qa-and-transcription",
+        "the-recipe",
+        "1-preserve-the-bilingual-foundation",
+        "2-align-ocr-supervision-with-literal-transcription",
+        "3-continue-with-sft-and-verifiable-grpo",
+        "what-the-training-curves-say",
+        "final-results",
+        "korean-ocr-a-measurable-change",
+        "english-report-the-observed-scope",
+        "how-the-comparison-was-checked",
+        "try-the-model",
+        "limits-and-release-scope",
+        "references"
+      ],
+      "legacyHeadingIds": {
+        "h-at-a-glance": "at-a-glance",
+        "h-the-question-aligning-korean-qa-and-transcription": "the-question-aligning-korean-qa-and-transcription",
+        "h-the-recipe": "the-recipe",
+        "h-1-preserve-the-bilingual-foundation": "1-preserve-the-bilingual-foundation",
+        "preserve-the-bilingual-foundation": "1-preserve-the-bilingual-foundation",
+        "h-preserve-the-bilingual-foundation": "1-preserve-the-bilingual-foundation",
+        "h-2-align-ocr-supervision-with-literal-transcription": "2-align-ocr-supervision-with-literal-transcription",
+        "align-ocr-supervision-with-literal-transcription": "2-align-ocr-supervision-with-literal-transcription",
+        "h-align-ocr-supervision-with-literal-transcription": "2-align-ocr-supervision-with-literal-transcription",
+        "h-3-continue-with-sft-and-verifiable-grpo": "3-continue-with-sft-and-verifiable-grpo",
+        "continue-with-sft-and-verifiable-grpo": "3-continue-with-sft-and-verifiable-grpo",
+        "h-continue-with-sft-and-verifiable-grpo": "3-continue-with-sft-and-verifiable-grpo",
+        "h-what-the-training-curves-say": "what-the-training-curves-say",
+        "h-final-results": "final-results",
+        "h-korean-ocr-a-measurable-change": "korean-ocr-a-measurable-change",
+        "h-english-report-the-observed-scope": "english-report-the-observed-scope",
+        "h-how-the-comparison-was-checked": "how-the-comparison-was-checked",
+        "h-try-the-model": "try-the-model",
+        "h-limits-and-release-scope": "limits-and-release-scope",
+        "h-references": "references"
+      },
+      "pathEvidence": "explicit front matter permalink"
+    },
+    {
+      "id": "thinkingcap",
+      "sourcePath": "_posts/2026-11-05-thinkingcap-2b.md",
+      "canonicalPath": "/research/thinkingcap-2b/",
+      "outputPath": "/research/thinkingcap-2b/index.html",
+      "sourceDigest": "6c8bd3028bbdfe844ad97cfd0077eb331e4e1afec614c212da8f40b3023fe0ee",
+      "headingIds": [
+        "tldr",
+        "motivation",
+        "background",
+        "bg-grpo",
+        "bg-length",
+        "bg-loss",
+        "bg-followups",
+        "bg-zero",
+        "setup",
+        "setup-training",
+        "setup-reward",
+        "setup-conditions",
+        "setup-eval",
+        "results",
+        "stop",
+        "ablation",
+        "followups",
+        "mechanism",
+        "analysis",
+        "controls",
+        "limitations",
+        "conclusion",
+        "resources",
+        "citation",
+        "references"
+      ],
+      "legacyHeadingIds": {
+        "h-tldr": "tldr",
+        "h-motivation": "motivation",
+        "small-reasoners-overthink-and-often-never-stop": "motivation",
+        "h-small-reasoners-overthink-and-often-never-stop": "motivation",
+        "h-background": "background",
+        "h-bg-grpo": "bg-grpo",
+        "grpo-and-rl-on-a-small-budget": "bg-grpo",
+        "h-grpo-and-rl-on-a-small-budget": "bg-grpo",
+        "h-bg-length": "bg-length",
+        "length-aware-rewards": "bg-length",
+        "h-length-aware-rewards": "bg-length",
+        "h-bg-loss": "bg-loss",
+        "loss-level-refinements": "bg-loss",
+        "h-loss-level-refinements": "bg-loss",
+        "h-bg-followups": "bg-followups",
+        "multi-reward-normalization-and-lazy-length-penalties": "bg-followups",
+        "h-multi-reward-normalization-and-lazy-length-penalties": "bg-followups",
+        "h-bg-zero": "bg-zero",
+        "zero-cost-alternatives": "bg-zero",
+        "h-zero-cost-alternatives": "bg-zero",
+        "h-setup": "setup",
+        "h-setup-training": "setup-training",
+        "model-data-and-training": "setup-training",
+        "h-model-data-and-training": "setup-training",
+        "h-setup-reward": "setup-reward",
+        "the-reward": "setup-reward",
+        "h-the-reward": "setup-reward",
+        "h-setup-conditions": "setup-conditions",
+        "nine-conditions": "setup-conditions",
+        "h-nine-conditions": "setup-conditions",
+        "h-setup-eval": "setup-eval",
+        "one-frozen-strict-evaluation": "setup-eval",
+        "h-one-frozen-strict-evaluation": "setup-eval",
+        "h-results": "results",
+        "results-at-a-glance": "results",
+        "h-results-at-a-glance": "results",
+        "h-stop": "stop",
+        "finding-1-rl-first-teaches-the-model-to-stop": "stop",
+        "h-finding-1-rl-first-teaches-the-model-to-stop": "stop",
+        "h-ablation": "ablation",
+        "finding-2-no-loss-level-refinement-helped-and-two-of-three-slowed-compression": "ablation",
+        "h-finding-2-no-loss-level-refinement-helped-and-two-of-three-slowed-compression": "ablation",
+        "h-followups": "followups",
+        "finding-3-gdpo-and-shortrl-g2-do-not-beat-the-plain-reward": "followups",
+        "h-finding-3-gdpo-and-shortrl-g2-do-not-beat-the-plain-reward": "followups",
+        "h-mechanism": "mechanism",
+        "a-likely-mechanism-with-two-rollouts-normalization-is-the-length-signal": "mechanism",
+        "h-a-likely-mechanism-with-two-rollouts-normalization-is-the-length-signal": "mechanism",
+        "h-analysis": "analysis",
+        "where-the-saved-tokens-come-from": "analysis",
+        "h-where-the-saved-tokens-come-from": "analysis",
+        "h-controls": "controls",
+        "free-baselines-brevity-prompts-backfire-no-thinking-wins-ood": "controls",
+        "h-free-baselines-brevity-prompts-backfire-no-thinking-wins-ood": "controls",
+        "h-limitations": "limitations",
+        "h-conclusion": "conclusion",
+        "h-resources": "resources",
+        "training-logs-code-and-model": "resources",
+        "h-training-logs-code-and-model": "resources",
+        "h-citation": "citation",
+        "h-references": "references"
+      },
+      "pathEvidence": "explicit front matter permalink"
+    },
+    {
+      "id": "inference-server",
+      "sourcePath": "_posts/2026-11-11-inner-llm-inference-server.md",
+      "canonicalPath": "/developing/2026/11/11/inner-llm-inference-server.html",
+      "outputPath": "/developing/2026/11/11/inner-llm-inference-server.html",
+      "sourceDigest": "a064d9e6a11fe20e36fedffa918261d9243b142b2595a40be94c6a5dfea904d6",
+      "headingIds": [
+        "요구사항",
+        "전체-구성",
+        "모델-구성은-파일-하나로",
+        "flash-next-올리기",
+        "모델이-큼",
+        "vllm-릴리스에는-아직-없었음",
+        "runpod에서는-ple-오프로드가-안-됨",
+        "메모리-배분",
+        "호스트를-바꿀-때마다-나온-문제",
+        "cuda-버전-필터가-정확-일치였음",
+        "nccl-초기화에서-무한-대기",
+        "아침에-켜고-저녁에-끄기",
+        "관측",
+        "벤치마크",
+        "처리량과-지연",
+        "작업-유형별-수락률",
+        "위치별-수락률",
+        "측정의-한계",
+        "kv-cache-오프로딩은-안-하기로-함",
+        "돌아보며",
+        "참고"
+      ],
+      "legacyHeadingIds": {
+        "h-요구사항": "요구사항",
+        "h-전체-구성": "전체-구성",
+        "h-모델-구성은-파일-하나로": "모델-구성은-파일-하나로",
+        "h-flash-next-올리기": "flash-next-올리기",
+        "h-모델이-큼": "모델이-큼",
+        "h-vllm-릴리스에는-아직-없었음": "vllm-릴리스에는-아직-없었음",
+        "h-runpod에서는-ple-오프로드가-안-됨": "runpod에서는-ple-오프로드가-안-됨",
+        "h-메모리-배분": "메모리-배분",
+        "h-호스트를-바꿀-때마다-나온-문제": "호스트를-바꿀-때마다-나온-문제",
+        "h-cuda-버전-필터가-정확-일치였음": "cuda-버전-필터가-정확-일치였음",
+        "h-nccl-초기화에서-무한-대기": "nccl-초기화에서-무한-대기",
+        "h-아침에-켜고-저녁에-끄기": "아침에-켜고-저녁에-끄기",
+        "h-관측": "관측",
+        "h-벤치마크": "벤치마크",
+        "h-처리량과-지연": "처리량과-지연",
+        "h-작업-유형별-수락률": "작업-유형별-수락률",
+        "h-위치별-수락률": "위치별-수락률",
+        "h-측정의-한계": "측정의-한계",
+        "h-kv-cache-오프로딩은-안-하기로-함": "kv-cache-오프로딩은-안-하기로-함",
+        "h-돌아보며": "돌아보며",
+        "h-참고": "참고"
+      },
+      "pathEvidence": "Jekyll default date/category/filename URL; live verification pending"
+    },
+    {
+      "id": "book-spine",
+      "sourcePath": "_posts/2026-11-13-in-browser-spine-reader.md",
+      "canonicalPath": "/research/in-browser-spine-reader",
+      "outputPath": "/research/in-browser-spine-reader/index.html",
+      "sourceDigest": "f42ef031266e87e84714670160536b9f94395136ceb34a421212531d44e9a014",
+      "headingIds": [
+        "tldr",
+        "system",
+        "data",
+        "datasets",
+        "metrics",
+        "setup",
+        "detection",
+        "coco",
+        "eval-path",
+        "ablation",
+        "threshold",
+        "score-split",
+        "holdout-errors",
+        "ocr",
+        "ocr-engine",
+        "ocr-scale",
+        "orientation",
+        "ocr-speed",
+        "ocr-errors",
+        "matching",
+        "retrieval",
+        "open-set",
+        "reranker",
+        "real-matching",
+        "dictionary",
+        "browser",
+        "export",
+        "threads",
+        "freeze",
+        "latency",
+        "first-visit",
+        "related",
+        "limitations",
+        "conclusion",
+        "citation",
+        "references"
+      ],
+      "legacyHeadingIds": {
+        "h-tldr": "tldr",
+        "h-system": "system",
+        "the-system": "system",
+        "h-the-system": "system",
+        "h-data": "data",
+        "data-and-evaluation": "data",
+        "h-data-and-evaluation": "data",
+        "h-datasets": "datasets",
+        "h-metrics": "metrics",
+        "h-setup": "setup",
+        "training-and-software": "setup",
+        "h-training-and-software": "setup",
+        "h-detection": "detection",
+        "spine-detection": "detection",
+        "h-spine-detection": "detection",
+        "h-coco": "coco",
+        "a-coco-detector-misses-colorful-spines": "coco",
+        "h-a-coco-detector-misses-colorful-spines": "coco",
+        "h-eval-path": "eval-path",
+        "finding-1-the-evaluation-path-decided-the-architecture": "eval-path",
+        "h-finding-1-the-evaluation-path-decided-the-architecture": "eval-path",
+        "h-ablation": "ablation",
+        "seven-detectors-measured-the-same-way": "ablation",
+        "h-seven-detectors-measured-the-same-way": "ablation",
+        "h-threshold": "threshold",
+        "the-threshold-was-not-tuned-on-the-holdout": "threshold",
+        "h-the-threshold-was-not-tuned-on-the-holdout": "threshold",
+        "h-score-split": "score-split",
+        "split-scores-on-a-thin-spine": "score-split",
+        "h-split-scores-on-a-thin-spine": "score-split",
+        "h-holdout-errors": "holdout-errors",
+        "where-the-holdout-error-comes-from": "holdout-errors",
+        "h-where-the-holdout-error-comes-from": "holdout-errors",
+        "h-ocr": "ocr",
+        "reading-the-spine": "ocr",
+        "h-reading-the-spine": "ocr",
+        "h-ocr-engine": "ocr-engine",
+        "choosing-an-ocr-engine": "ocr-engine",
+        "h-choosing-an-ocr-engine": "ocr-engine",
+        "h-ocr-scale": "ocr-scale",
+        "finding-2-the-text-detector-saw-spines-32-px-wide": "ocr-scale",
+        "h-finding-2-the-text-detector-saw-spines-32-px-wide": "ocr-scale",
+        "h-orientation": "orientation",
+        "orientation-without-a-classifier": "orientation",
+        "h-orientation-without-a-classifier": "orientation",
+        "h-ocr-speed": "ocr-speed",
+        "ocr-speed-depends-on-the-runtime": "ocr-speed",
+        "h-ocr-speed-depends-on-the-runtime": "ocr-speed",
+        "h-ocr-errors": "ocr-errors",
+        "remaining-ocr-errors": "ocr-errors",
+        "h-remaining-ocr-errors": "ocr-errors",
+        "h-matching": "matching",
+        "matching-titles": "matching",
+        "h-matching-titles": "matching",
+        "h-retrieval": "retrieval",
+        "h-open-set": "open-set",
+        "finding-3-the-matcher-looked-safe-because-the-answer-was-always-there": "open-set",
+        "h-finding-3-the-matcher-looked-safe-because-the-answer-was-always-there": "open-set",
+        "h-reranker": "reranker",
+        "a-reranker-that-handles-containment-explicitly": "reranker",
+        "h-a-reranker-that-handles-containment-explicitly": "reranker",
+        "h-real-matching": "real-matching",
+        "real-photos-and-browser-engines": "real-matching",
+        "h-real-photos-and-browser-engines": "real-matching",
+        "h-dictionary": "dictionary",
+        "the-dictionary-and-the-online-fallback": "dictionary",
+        "h-the-dictionary-and-the-online-fallback": "dictionary",
+        "h-browser": "browser",
+        "running-in-the-browser": "browser",
+        "h-running-in-the-browser": "browser",
+        "h-export": "export",
+        "h-threads": "threads",
+        "threads-need-cross-origin-isolation": "threads",
+        "h-threads-need-cross-origin-isolation": "threads",
+        "h-freeze": "freeze",
+        "finding-4-the-first-deployment-froze-on-a-phone": "freeze",
+        "h-finding-4-the-first-deployment-froze-on-a-phone": "freeze",
+        "h-latency": "latency",
+        "h-first-visit": "first-visit",
+        "h-related": "related",
+        "related-work": "related",
+        "h-related-work": "related",
+        "h-limitations": "limitations",
+        "h-conclusion": "conclusion",
+        "h-citation": "citation",
+        "h-references": "references"
+      },
+      "pathEvidence": "explicit front matter permalink"
+    }
+  ]
+}

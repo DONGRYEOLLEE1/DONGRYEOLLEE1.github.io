@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "relationTypes": {
+    "about": "글의 핵심 주제",
+    "applies": "글에서 적용한 기술"
+  },
+  "concepts": [
+    {
+      "id": "rag",
+      "label": "RAG·검색",
+      "description": "질의에 필요한 문서를 찾고 결과를 정리하는 검색 기술을 함께 살펴봅니다.",
+      "aliases": [
+        "검색증강생성",
+        "Retrieval-Augmented Generation"
+      ],
+      "broaderIds": [],
+      "recommendationWeight": 0
+    },
+    {
+      "id": "reranking",
+      "label": "Reranking",
+      "description": "검색한 후보를 질의와 다시 비교해 더 적합한 문서를 앞에 배치합니다.",
+      "aliases": [
+        "검색 재정렬",
+        "재정렬",
+        "rerank"
+      ],
+      "broaderIds": [],
+      "recommendationWeight": 1
+    },
+    {
+      "id": "dense-retrieval",
+      "label": "Dense Retrieval",
+      "description": "텍스트 임베딩의 유사도를 이용해 질의와 의미가 가까운 문서를 찾습니다.",
+      "aliases": [
+        "밀집 검색",
+        "임베딩 검색"
+      ],
+      "broaderIds": [],
+      "recommendationWeight": 1
+    },
+    {
+      "id": "keyword-search",
+      "label": "Keyword Search",
+      "description": "질의의 단어·표현을 이용해 문서 후보를 찾는 검색 방법입니다.",
+      "aliases": [
+        "키워드 검색"
+      ],
+      "broaderIds": [],
+      "recommendationWeight": 1
+    },
+    {
+      "id": "semantic-search",
+      "label": "Semantic Search",
+      "description": "단어의 일치뿐 아니라 텍스트의 의미를 고려해 관련 내용을 찾습니다.",
+      "aliases": [
+        "의미 검색",
+        "의미 기반 검색"
+      ],
+      "broaderIds": [],
+      "recommendationWeight": 1
+    },
+    {
+      "id": "qlora",
+      "label": "QLoRA",
+      "description": "양자화한 기반 모델과 LoRA 어댑터를 결합해 학습 메모리를 줄입니다.",
+      "aliases": [
+        "큐로라",
+        "quantized LoRA"
+      ],
+      "broaderIds": [],
+      "recommendationWeight": 1
+    },
+    {
+      "id": "quantization",
+      "label": "Quantization",
+      "description": "모델의 수치 표현을 줄여 저장·메모리 비용을 낮추는 기법입니다.",
+      "aliases": [
+        "양자화"
+      ],
+      "broaderIds": [],
+      "recommendationWeight": 1
+    },
+    {
+      "id": "korean-ocr",
+      "label": "한국어 OCR",
+      "description": "이미지 속 한국어 문자를 읽고 그대로 전사하는 문제를 다룹니다.",
+      "aliases": [
+        "Korean OCR",
+        "한국어 문자 인식"
+      ],
+      "broaderIds": [],
+      "recommendationWeight": 1
+    },
+    {
+      "id": "vlm",
+      "label": "Vision-Language Model",
+      "description": "이미지와 언어를 함께 처리하는 모델의 학습과 평가를 다룹니다.",
+      "aliases": [
+        "VLM",
+        "비전 언어 모델"
+      ],
+      "broaderIds": [],
+      "recommendationWeight": 1
+    },
+    {
+      "id": "reasoning-efficiency",
+      "label": "Reasoning Efficiency",
+      "description": "추론 품질과 생각 토큰·종료 동작 사이의 관계를 실험합니다.",
+      "aliases": [
+        "추론 효율",
+        "추론 효율화"
+      ],
+      "broaderIds": [],
+      "recommendationWeight": 1
+    },
+    {
+      "id": "speculative-decoding",
+      "label": "Speculative Decoding",
+      "description": "여러 토큰의 예측과 검증으로 디코딩을 가속하는 접근을 다룹니다.",
+      "aliases": [
+        "추측 디코딩"
+      ],
+      "broaderIds": [],
+      "recommendationWeight": 1
+    },
+    {
+      "id": "vllm",
+      "label": "vLLM",
+      "description": "언어모델 추론 서버를 구성하고 요청·성능·운영 상태를 살펴봅니다.",
+      "aliases": [],
+      "broaderIds": [],
+      "recommendationWeight": 1
+    }
+  ]
+}

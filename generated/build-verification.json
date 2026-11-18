@@ -2,9 +2,9 @@
   "status": "passed",
   "articles": 113,
   "sourceMarkdownFiles": 113,
-  "htmlFiles": 192,
-  "checkedLinks": 8266,
-  "checkedAssets": 1357,
+  "htmlFiles": 188,
+  "checkedLinks": 7331,
+  "checkedAssets": 1328,
   "errors": [],
   "warnings": [],
   "externalResources": "not fetched by this check"

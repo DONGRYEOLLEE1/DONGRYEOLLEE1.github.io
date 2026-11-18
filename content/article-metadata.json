@@ -9,8 +9,7 @@
         "id": "transformer",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2022-01-04-YOLOv1.md": {
     "id": "yolo-v1",
@@ -26,8 +25,7 @@
         "id": "cnn",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2022-01-05-ObjectDetection.md": {
     "id": "object-detection-basics",
@@ -43,8 +41,7 @@
         "id": "cnn",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2022-01-05-mAP.md": {
     "id": "map-evaluation",
@@ -60,8 +57,7 @@
         "id": "object-detection",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2022-01-06-R-CNN.md": {
     "id": "r-cnn",
@@ -77,8 +73,7 @@
         "id": "cnn",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2022-01-07-FastR-CNN.md": {
     "id": "fast-r-cnn",
@@ -94,8 +89,7 @@
         "id": "cnn",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2022-01-10-FasterR-CNN.md": {
     "id": "faster-r-cnn",
@@ -111,8 +105,7 @@
         "id": "cnn",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2022-01-11-Overfeat.md": {
     "id": "overfeat",
@@ -128,8 +121,7 @@
         "id": "cnn",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2022-01-12-OHEM.md": {
     "id": "ohem",
@@ -141,8 +133,7 @@
         "id": "object-detection",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2022-01-13-ELMO.md": {
     "id": "elmo",
@@ -158,8 +149,7 @@
         "id": "recurrent-networks",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2022-01-13-LSTM.md": {
     "id": "lstm",
@@ -171,8 +161,7 @@
         "id": "recurrent-networks",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2022-01-13-RNN.md": {
     "id": "rnn",
@@ -184,8 +173,7 @@
         "id": "recurrent-networks",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2022-01-26-BERT.md": {
     "id": "bert",
@@ -205,8 +193,7 @@
         "id": "pretraining",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2022-02-27-ViT.md": {
     "id": "vit",
@@ -222,8 +209,7 @@
         "id": "transformer",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2022-03-14-SwinTransformer.md": {
     "id": "swin-transformer",
@@ -235,8 +221,7 @@
         "id": "vision-transformer",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-01-20-GPT3.md": {
     "id": "gpt-3",
@@ -252,8 +237,7 @@
         "id": "pretraining",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-02-02-Few-shot_learning.md": {
     "id": "few-shot-nlp",
@@ -269,8 +253,7 @@
         "id": "data-preparation",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-02-05-assert.md": {
     "id": "python-assert",
@@ -286,8 +269,7 @@
         "id": "python-language",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-03-30-Few-shot_learning_In_AI.md": {
     "id": "few-shot-learning",
@@ -299,8 +281,7 @@
         "id": "in-context-learning",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-03-31-Zero-shot_learning.md": {
     "id": "zero-shot-learning",
@@ -316,8 +297,7 @@
         "id": "contextual-embeddings",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-04-05-temrs in NLP.md": {
     "id": "nlp-terms",
@@ -329,8 +309,7 @@
         "id": "contextual-embeddings",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-04-12-GPU Training.md": {
     "id": "distributed-gpu-training",
@@ -346,8 +325,7 @@
         "id": "python-environment",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-04-17-PromptEngineering.md": {
     "id": "prompt-engineering",
@@ -359,8 +337,7 @@
         "id": "prompt-engineering",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-04-21-Chain_of_Thought.md": {
     "id": "chain-of-thought",
@@ -380,8 +357,7 @@
         "id": "in-context-learning",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-04-24-LLaMA.md": {
     "id": "llama",
@@ -397,8 +373,7 @@
         "id": "transformer",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-04-24-LoRA.md": {
     "id": "lora",
@@ -414,8 +389,7 @@
         "id": "peft",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-05-18-DeepSpeed.md": {
     "id": "deepspeed-troubleshooting",
@@ -431,8 +405,7 @@
         "id": "python-environment",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-05-23-Finetuning.md": {
     "id": "polyglot-training-troubleshooting",
@@ -448,8 +421,7 @@
         "id": "data-preparation",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-05-24-Finetuning2.md": {
     "id": "polyglot-lora-troubleshooting",
@@ -465,8 +437,7 @@
         "id": "peft",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-05-31-bardapi.md": {
     "id": "bard-api-troubleshooting",
@@ -482,8 +453,7 @@
         "id": "python-environment",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-06-01-FLAN.md": {
     "id": "flan",
@@ -503,8 +473,7 @@
         "id": "finetuning",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-06-09-LoRA FT.md": {
     "id": "lora-finetuning",
@@ -524,8 +493,7 @@
         "id": "data-preparation",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-06-14-Typing.md": {
     "id": "python-typing",
@@ -541,8 +509,7 @@
         "id": "python-language",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-06-21-efficientnet.md": {
     "id": "efficientnet",
@@ -554,8 +521,7 @@
         "id": "cnn",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-06-23-efficientnetv2.md": {
     "id": "efficientnet-v2",
@@ -567,8 +533,7 @@
         "id": "cnn",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-06-28-ResNext.md": {
     "id": "resnext",
@@ -580,8 +545,7 @@
         "id": "cnn",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-06-29-ConvNeXt.md": {
     "id": "convnext",
@@ -597,8 +561,7 @@
         "id": "vision-transformer",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-07-05-FT_til.md": {
     "id": "finetuning-notes",
@@ -614,8 +577,7 @@
         "id": "distributed-training",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-07-10-BEiT.md": {
     "id": "beit",
@@ -627,8 +589,7 @@
         "id": "vision-transformer",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-07-11-qlora_troubleshoot.md": {
     "id": "qlora-troubleshooting",
@@ -648,8 +609,7 @@
         "id": "cuda",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-07-12-QLoRA.md": {
     "id": "qlora",
@@ -669,8 +629,7 @@
         "id": "peft",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-07-13-Transformers_TrainingArguments.md": {
     "id": "training-arguments",
@@ -682,8 +641,7 @@
         "id": "finetuning",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-07-17-developing_daily1.md": {
     "id": "developing-daily-01",
@@ -703,8 +661,7 @@
         "id": "lora",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-07-18-developing_daily2.md": {
     "id": "developing-daily-02",
@@ -716,8 +673,7 @@
         "id": "model-serving",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-07-18-developing_daily3.md": {
     "id": "developing-daily-03",
@@ -729,8 +685,7 @@
         "id": "model-serving",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-07-18-developing_daily4.md": {
     "id": "developing-daily-04",
@@ -742,8 +697,7 @@
         "id": "remote-development",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-07-27-developing_daily5.md": {
     "id": "developing-daily-05",
@@ -755,8 +709,7 @@
         "id": "data-preparation",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-07-29-developing_daily6.md": {
     "id": "developing-daily-06",
@@ -772,8 +725,7 @@
         "id": "cuda",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-08-01-developing_daily7.md": {
     "id": "developing-daily-07",
@@ -789,8 +741,7 @@
         "id": "contextual-embeddings",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-08-07-IA3.md": {
     "id": "ia3-implementation",
@@ -806,8 +757,7 @@
         "id": "peft",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-08-07-IA3_paper.md": {
     "id": "ia3-paper",
@@ -827,8 +777,7 @@
         "id": "in-context-learning",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-08-08-peft_target_modules.md": {
     "id": "peft-target-modules",
@@ -844,8 +793,7 @@
         "id": "lora",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-08-09-vscode_SSH.md": {
     "id": "vscode-ssh",
@@ -857,8 +805,7 @@
         "id": "remote-development",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-08-22-lora_ts.md": {
     "id": "lora-dtype-troubleshooting",
@@ -878,8 +825,7 @@
         "id": "ia3",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-09-01-developing_daily8.md": {
     "id": "gpu-driver-troubleshooting",
@@ -891,8 +837,7 @@
         "id": "cuda",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-09-08-developing_daily9.md": {
     "id": "cuda-device-troubleshooting",
@@ -908,8 +853,7 @@
         "id": "python-environment",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-09-13-developing_daily10.md": {
     "id": "python-venv-troubleshooting",
@@ -921,8 +865,7 @@
         "id": "python-environment",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-09-25-developing_daily11.md": {
     "id": "netplan-troubleshooting",
@@ -938,8 +881,7 @@
         "id": "python-environment",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-10-02-DB1.md": {
     "id": "mariadb-connection-troubleshooting",
@@ -955,8 +897,7 @@
         "id": "python-language",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-10-11-docker_gpu_error.md": {
     "id": "docker-gpu-troubleshooting",
@@ -972,8 +913,7 @@
         "id": "cuda",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-10-20-docker_TGI.md": {
     "id": "tgi-implementation",
@@ -993,8 +933,7 @@
         "id": "lora",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-10-30-question-generation_model_error.md": {
     "id": "generation-cuda-assert",
@@ -1010,8 +949,7 @@
         "id": "cuda",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-11-03-torch-tensor-manipulation.md": {
     "id": "torch-tensor-manipulation-1",
@@ -1023,8 +961,7 @@
         "id": "pytorch-tensors",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-11-10-torch-tensor-manipulation-(un)squeeze.md": {
     "id": "torch-tensor-manipulation-2",
@@ -1036,8 +973,7 @@
         "id": "pytorch-tensors",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-11-16-OOM-llama2.md": {
     "id": "llama2-training-oom",
@@ -1053,8 +989,7 @@
         "id": "peft",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-11-22-model-size.md": {
     "id": "model-input-length",
@@ -1066,8 +1001,7 @@
         "id": "tokenization",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-11-30-OOM-issue.md": {
     "id": "transformers-training-oom",
@@ -1079,8 +1013,7 @@
         "id": "gpu-memory",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-12-07-LoftQ.md": {
     "id": "loftq",
@@ -1096,8 +1029,7 @@
         "id": "lora",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-12-14-Ziya2.md": {
     "id": "ziya2",
@@ -1113,8 +1045,7 @@
         "id": "data-preparation",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-12-19-EDA.md": {
     "id": "eda",
@@ -1126,8 +1057,7 @@
         "id": "data-preparation",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2023-12-29-PromptTuning.md": {
     "id": "prompt-tuning",
@@ -1143,8 +1073,7 @@
         "id": "peft",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-01-04-정규표현식.md": {
     "id": "regex-preprocessing",
@@ -1160,8 +1089,7 @@
         "id": "python-language",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-01-11-args&kwargs.md": {
     "id": "python-args-kwargs",
@@ -1173,8 +1101,7 @@
         "id": "python-language",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-01-18-message-history.md": {
     "id": "message-history",
@@ -1186,8 +1113,7 @@
         "id": "agent-memory",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-01-24-debugging.md": {
     "id": "tokenizer-input-troubleshooting",
@@ -1203,8 +1129,7 @@
         "id": "data-preparation",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-02-08-compare_to_actfn.md": {
     "id": "activation-functions",
@@ -1220,8 +1145,7 @@
         "id": "transformer",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-02-18-torch-tensor-manipulation3.md": {
     "id": "torch-tensor-manipulation-3",
@@ -1233,8 +1157,7 @@
         "id": "pytorch-tensors",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-02-22-pip-options.md": {
     "id": "pip-options",
@@ -1246,8 +1169,7 @@
         "id": "python-environment",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-03-01-lora_new_featrues1.md": {
     "id": "peft-features-090",
@@ -1267,8 +1189,7 @@
         "id": "quantization",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-03-29-lora_new_features2.md": {
     "id": "peft-features-0100",
@@ -1288,8 +1209,7 @@
         "id": "qlora",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-04-25-VERA.md": {
     "id": "vera",
@@ -1305,8 +1225,7 @@
         "id": "lora",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-04-30-DoRA.md": {
     "id": "dora",
@@ -1322,8 +1241,7 @@
         "id": "lora",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-05-03-alphaLLM.md": {
     "id": "alphallm",
@@ -1339,8 +1257,7 @@
         "id": "chain-of-thought",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-06-19-chatvector.md": {
     "id": "chat-vector",
@@ -1356,8 +1273,7 @@
         "id": "pretraining",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-06-19-moe.md": {
     "id": "mixture-of-experts-paper",
@@ -1369,8 +1285,7 @@
         "id": "mixture-of-experts",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-08-22-python-class-inheritance.md": {
     "id": "python-class-inheritance",
@@ -1382,8 +1297,7 @@
         "id": "python-language",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-09-01-pytest.md": {
     "id": "pytest",
@@ -1399,8 +1313,7 @@
         "id": "python-language",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-09-10-python-map.md": {
     "id": "python-map",
@@ -1412,8 +1325,7 @@
         "id": "python-language",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-09-11-python-enumerate.md": {
     "id": "python-enumerate",
@@ -1425,8 +1337,7 @@
         "id": "python-language",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-09-12-python-enum.md": {
     "id": "python-enum",
@@ -1438,8 +1349,7 @@
         "id": "python-language",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-10-08-vllm-debugging.md": {
     "id": "vllm-weight-loading",
@@ -1455,8 +1365,7 @@
         "id": "distributed-training",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-10-29-semantic-search.md": {
     "id": "semantic-search",
@@ -1476,8 +1385,7 @@
         "id": "rag",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-11-09-keyword-search.md": {
     "id": "keyword-search",
@@ -1493,8 +1401,7 @@
         "id": "rag",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-11-10-dense-retrieval.md": {
     "id": "dense-retrieval",
@@ -1514,8 +1421,7 @@
         "id": "rag",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-11-11-ollama-troubleshooting.md": {
     "id": "ollama-docker-troubleshooting",
@@ -1531,8 +1437,7 @@
         "id": "containers",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-11-12-reranking.md": {
     "id": "reranking",
@@ -1548,8 +1453,7 @@
         "id": "rag",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-11-15-vllm-gemma-family-error.md": {
     "id": "vllm-gemma-troubleshooting",
@@ -1561,8 +1465,7 @@
         "id": "vllm",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2024-11-20-lm-evaluation-harness-oom.md": {
     "id": "lm-evaluation-harness-oom",
@@ -1578,8 +1481,7 @@
         "id": "gpu-memory",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2025-02-07-dl-env-installation.md": {
     "id": "offline-deep-learning-environment",
@@ -1595,8 +1497,7 @@
         "id": "python-environment",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2025-03-13-vllm-inference-not-working.md": {
     "id": "vllm-tensor-parallel-troubleshooting",
@@ -1612,8 +1513,7 @@
         "id": "distributed-training",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2025-07-30-langgraph-expression-format.md": {
     "id": "langgraph-structured-streaming",
@@ -1634,7 +1534,6 @@
         "role": "applies"
       }
     ],
-    "projectIds": [],
     "title": "LangGraph 구조화 출력과 스트리밍 메시지 분석"
   },
   "_posts/2025-08-14-BFCL-reasoning-option.md": {
@@ -1652,7 +1551,6 @@
         "role": "applies"
       }
     ],
-    "projectIds": [],
     "title": "BFCL Responses API의 reasoning 옵션 오류"
   },
   "_posts/2025-10-16-mcp-meme.md": {
@@ -1665,8 +1563,7 @@
         "id": "tool-use",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2026-06-04-k-browsecomp.md": {
     "id": "k-browsecomp",
@@ -1682,8 +1579,7 @@
         "id": "tool-use",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2026-06-11-rtpurbo.md": {
     "id": "rtpurbo",
@@ -1699,8 +1595,7 @@
         "id": "transformer",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2026-06-11-searchswarm.md": {
     "id": "searchswarm",
@@ -1720,8 +1615,7 @@
         "id": "agent-evaluation",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2026-06-18-constitutional-ai.md": {
     "id": "constitutional-ai",
@@ -1737,8 +1631,7 @@
         "id": "reinforcement-learning",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2026-08-18-dflash-block-diffusion-speculative-decoding.md": {
     "id": "dflash",
@@ -1750,8 +1643,7 @@
         "id": "speculative-decoding",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2026-08-18-fast-inference-via-speculative-decoding.md": {
     "id": "speculative-decoding-paper",
@@ -1763,12 +1655,11 @@
         "id": "speculative-decoding",
         "role": "about"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2026-10-19-kodistill-vl-2b.md": {
     "id": "kodistill",
-    "description": "단일 GPU에서 한국어 문자를 그대로 전사하도록 VLM을 후속 학습하고, 한국어·영어 성능을 함께 평가한 연구입니다.",
+    "description": "Single-GPU post-training for literal Korean OCR raised K-STR word accuracy from 67.62% to 71.26% over the Qwen3.5-2B baseline.",
     "language": "en",
     "contentType": "research",
     "conceptRefs": [
@@ -1785,18 +1676,15 @@
         "role": "applies"
       }
     ],
-    "projectIds": [
-      "kodistill"
-    ],
     "hero": {
       "src": "/assets/research/kodistill-vl-2b/figures/benchmark_comparison.png",
-      "alt": "KoDistill의 한국어·영어 벤치마크 비교",
+      "alt": "KoDistill benchmark results for Korean and English tasks",
       "kind": "figure"
     }
   },
   "_posts/2026-11-05-thinkingcap-2b.md": {
     "id": "thinkingcap",
-    "description": "작은 추론 모델의 미종료 문제를 강화학습으로 다루고, 보상과 손실 수준의 기법을 같은 평가 기준에서 비교한 연구입니다.",
+    "description": "In a single-GPU study, a correctness-gated length penalty cut Qwen3.5-2B’s thinking tokens by 75% on in-distribution tasks.",
     "language": "en",
     "contentType": "research",
     "conceptRefs": [
@@ -1813,12 +1701,9 @@
         "role": "about"
       }
     ],
-    "projectIds": [
-      "thinkingcap"
-    ],
     "hero": {
       "src": "/assets/research/thinkingcap-2b/figures/fig01_tradeoff.png",
-      "alt": "ThinkingCap 조건별 정확도와 추론 토큰의 비교",
+      "alt": "ThinkingCap accuracy versus thinking tokens across evaluation conditions",
       "kind": "figure"
     }
   },
@@ -1840,12 +1725,11 @@
         "id": "speculative-decoding",
         "role": "applies"
       }
-    ],
-    "projectIds": []
+    ]
   },
   "_posts/2026-11-13-in-browser-spine-reader.md": {
     "id": "book-spine",
-    "description": "브라우저에서 책등을 검출하고 OCR·제목 검색을 연결하면서, 실제 실행 경로와 평가 방식의 차이로 생긴 문제를 분석합니다.",
+    "description": "A book-spine reader that runs in a phone browser. Testing it with the correct title removed exposed how often it confirmed the wrong book.",
     "language": "en",
     "contentType": "research",
     "conceptRefs": [
@@ -1874,14 +1758,11 @@
         "role": "about"
       }
     ],
-    "projectIds": [
-      "book-spine"
-    ],
     "featured": true,
     "hero": {
-      "src": "/assets/research/in-browser-spine-reader/figures/fig02_sample_result.png",
-      "alt": "선반 사진에서 책등 검출 상자와 번호가 표시된 실제 결과",
-      "kind": "photo"
+      "src": "/assets/research/in-browser-spine-reader/figures/thumbnail_matching_outcomes.webp",
+      "alt": "False confirmations when the correct title was absent: 51.3% with the first reranker and 0.4% with the revised reranker on 3,249 synthetic spines (in-sample).",
+      "kind": "figure"
     }
   }
 }

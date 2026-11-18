@@ -8,7 +8,7 @@ const concepts = [
   {id:'retrieval',label:'검색',description:'문서 검색',aliases:[],broaderIds:[]},
   {id:'rag',label:'RAG',description:'검색 증강',aliases:[],broaderIds:[]},
 ];
-const article = (id, refs=[{id:'ocr',role:'about'}], extra={}) => ({id,path:`/${id}/`,title:id,description:'',plainText:'',html:'',publishedAt:'2026-11-01',projectIds:[],conceptRefs:refs,...extra});
+const article = (id, refs=[{id:'ocr',role:'about'}], extra={}) => ({id,path:`/${id}/`,title:id,description:'',plainText:'',html:'',publishedAt:'2026-11-01',conceptRefs:refs,...extra});
 const about = id => ({id,role:'about'});
 const applies = id => ({id,role:'applies'});
 
@@ -84,13 +84,13 @@ test('pin and exclude are directional, valid, and cannot conflict', () => {
   assert.throws(()=>generateRelated([...source,article('private',undefined,{publicationState:'draft'})],concepts,[],{pins:{a:['private']}}),/non-public override/);
 });
 
-test('real migration metadata covers all 113 articles with valid project and series references', () => {
+test('real migration metadata covers all 113 articles with valid concept and series references', () => {
   const json = path => JSON.parse(readFileSync(new URL(path,import.meta.url),'utf8'));
   const metadata=json('../content/article-metadata.json');
   const articles=Object.values(metadata);
   assert.equal(articles.length,113);
   assert.ok(articles.every(a=>a.description.trim() && a.language && a.contentType && a.conceptRefs.length));
-  assert.equal(validateKnowledge(articles,json('../content/knowledge/concepts.json'),json('../content/knowledge/series.json'),json('../content/knowledge/overrides.json'),json('../content/knowledge/projects.json')),true);
+  assert.equal(validateKnowledge(articles,json('../content/knowledge/concepts.json'),json('../content/knowledge/series.json'),json('../content/knowledge/overrides.json')),true);
   const result=generateRelated(articles,json('../content/knowledge/concepts.json'),json('../content/knowledge/series.json'),json('../content/knowledge/overrides.json'));
   assert.ok(result.every(a=>a.related.length<=4&&!a.related.some(r=>r.id===a.id)));
   assert.ok(result.find(a=>a.id==='reranking').related.some(r=>r.id==='book-spine'));

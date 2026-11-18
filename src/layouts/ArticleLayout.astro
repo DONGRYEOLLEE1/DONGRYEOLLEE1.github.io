@@ -1,8 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import RelatedGraph from '../components/RelatedGraph.astro';
-import { getArticles, getConcepts, getSeries, getProjects } from '../lib/content';
-import { TYPE_LABELS, longDate } from '../lib/site';
+import { getArticles, getConcepts, getSeries } from '../lib/content';
 import type { Article } from '../lib/types';
 interface Props { article: Article }
 const { article } = Astro.props;
@@ -15,14 +14,12 @@ const series = getSeries().find(item=>item.id===article.seriesId);
 const seriesIndex = series?.orderedArticleIds.indexOf(article.id) ?? -1;
 const previous = series && seriesIndex>0 ? lookup.get(series.orderedArticleIds[seriesIndex-1]) : undefined;
 const next = series && seriesIndex>=0 ? lookup.get(series.orderedArticleIds[seriesIndex+1]) : undefined;
-const projects = getProjects().filter(project=>article.projectIds.includes(project.id));
 ---
 <BaseLayout title={article.title} description={article.description} canonicalPath={article.path} language={article.language} image={article.hero?.src} article={article}>
   <div id="reading-progress" class="reading-progress" aria-hidden="true"></div>
   <article class="article-page" data-article-id={article.id}>
     <header class="article-heading">
-      <nav class="article-breadcrumb" aria-label="현재 위치" lang="ko"><a href="/articles/">글</a><span aria-hidden="true">/</span>{series?<a href={`/series/${series.id}/`}>{series.title}</a>:<span>{TYPE_LABELS[article.contentType]}</span>}</nav>
-      <div class="article-meta" lang="ko"><span>{TYPE_LABELS[article.contentType]}</span><time datetime={article.publishedAt}>{longDate(article.publishedAt)}</time>{article.updatedAt&&<span>수정 <time datetime={article.updatedAt}>{longDate(article.updatedAt)}</time></span>}<span>약 {article.readingMinutes}분</span>{article.language==='en'&&<span class="language-label" aria-label="영문 글">EN</span>}</div>
+      {series && <nav class="article-breadcrumb" aria-label="현재 위치" lang="ko"><a href="/articles/">글</a><span aria-hidden="true">/</span><a href={`/series/${series.id}/`}>{series.title}</a></nav>}
       <h1 class="article-title" lang={article.language}>{article.title}</h1>
       <p class="article-description">{article.description}</p>
       <div class="topic-chips" lang="ko">{Array.from(new Set(article.conceptRefs.map(ref=>ref.id))).map(id=><a class="chip" href={`/topics/${id}/`}>{concepts.get(id)?.label||id}</a>)}</div>
@@ -35,11 +32,10 @@ const projects = getProjects().filter(project=>article.projectIds.includes(proje
         <footer class="article-foot" lang="ko" data-pagefind-ignore>
           {series&&<section class="article-series"><div class="section-heading"><h2><a href={`/series/${series.id}/`}>{series.title}</a></h2><span class="small-label">{seriesIndex+1} / {series.orderedArticleIds.length}</span></div><nav class="series-nav" aria-label="시리즈 이전 글과 다음 글">{previous?<a href={previous.path}><span>← 이전 글</span><strong>{previous.title}</strong></a>:<div/>}{next?<a href={next.path}><span>다음 글 →</span><strong>{next.title}</strong></a>:<div/>}</nav><a class="arrow-link" href={`/series/${series.id}/`}>시리즈 전체 보기 ↗</a></section>}
           <section id="related-reading" class="article-related"><div class="section-heading"><h2>이어서 읽어보세요.</h2><span class="small-label">관련 글</span></div><div class="related-bottom">{related.length?related.map(ref=><a class="related-row" href={ref.post!.path}><div><span class="small-label">{ref.reason}</span><h3 lang={ref.post!.language}>{ref.post!.title}</h3></div><span aria-hidden="true">↗</span></a>):<p class="muted">아직 연결할 관련 글이 없습니다. <a href="/topics/">주제로 찾아보기 ↗</a></p>}</div></section>
-          {projects.length>0&&<section class="article-projects"><h2>관련 프로젝트</h2>{projects.map(project=><a class="resource-link" href={`/projects/${project.id}/`}>{project.name} ↗</a>)}</section>}
           <div class="author-note"><strong>동렬</strong><span>LLM 학습과 추론, 에이전트 개발을 기록합니다.</span><a href="/about/">작성자 소개 ↗</a></div>
         </footer>
       </div>
-      <aside class="related-rail" aria-label="관련 글 탐색" lang="ko" data-pagefind-ignore><div class="rail-heading"><span class="small-label">관련 글</span><h2>함께 읽을 글</h2><p>공통 개념과 적용 사례를 확인하세요.</p></div><RelatedGraph article={article} articles={articles}/></aside>
+      <aside class="related-rail" aria-labelledby="related-rail-title" lang="ko" data-pagefind-ignore><div class="rail-heading"><h2 id="related-rail-title">관련 글</h2></div><RelatedGraph article={article} articles={articles}/></aside>
     </div>
   </article>
 </BaseLayout>

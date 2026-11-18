@@ -1,4 +1,4 @@
-import { getArticles, getConcepts, getProjects, getSeries } from './content';
+import { getArticles, getConcepts, getSeries } from './content';
 import { SITE, absoluteUrl } from './site';
 
 export const xml = (value: unknown) => String(value ?? '').replace(/[<>&"']/g, character => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&apos;' }[character]!));
@@ -15,11 +15,10 @@ ${articles.map(article => `<item><title>${xml(article.title)}</title><link>${xml
 
 export function sitemapDocument() {
   const routes: { path: string; lastmod?: string }[] = [
-    ...['/', '/articles/', '/topics/', '/projects/', '/about/'].map(path => ({ path })),
+    ...['/', '/articles/', '/topics/', '/about/'].map(path => ({ path })),
     ...getArticles().map(article => ({ path: article.path, lastmod: (article.updatedAt || article.publishedAt).slice(0, 10) })),
     ...getConcepts().map(concept => ({ path: `/topics/${concept.id}/` })),
     ...getSeries().map(series => ({ path: `/series/${series.id}/` })),
-    ...getProjects().map(project => ({ path: `/projects/${project.id}/` })),
   ];
   const seen = new Set<string>();
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.filter(route => !seen.has(route.path) && seen.add(route.path)).map(route => `<url><loc>${xml(absoluteUrl(route.path))}</loc>${route.lastmod ? `<lastmod>${xml(route.lastmod)}</lastmod>` : ''}</url>`).join('\n')}\n</urlset>`;

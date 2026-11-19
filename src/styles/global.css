@@ -93,15 +93,9 @@ body > div:has(> .site-header) { position: sticky; top: 0; z-index: 50; }
   display: inline-flex;
   justify-self: start;
   align-items: center;
-  gap: 9px;
+  min-width: 44px;
   min-height: 44px;
-  font-size: 28px;
-  font-weight: 750;
-  line-height: 1;
-  letter-spacing: -.055em;
-  white-space: nowrap;
 }
-.wordmark:hover { color: var(--accent); text-decoration: none; }
 .wordmark-symbol {
   flex-shrink: 0;
   border-radius: 6px;
@@ -472,7 +466,6 @@ dialog::backdrop { background: #14141377; }
 @media (max-width: 374px) {
   .header-inner, .page-shell, .article-page { width: calc(100% - 34px); }
   .header-inner { gap: 8px; }
-  .wordmark { gap: 7px; }
   .header-actions { gap: 0; }
 }
 @media (max-height: 650px) {

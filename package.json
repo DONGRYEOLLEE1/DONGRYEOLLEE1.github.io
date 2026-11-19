@@ -7,6 +7,8 @@
     "node": "24.x"
   },
   "scripts": {
+    "recommendations:sync": "node tools/sync-recommendations.mjs",
+    "recommendations:check": "node tools/sync-recommendations.mjs --check",
     "prepare:content": "node tools/content/build.mjs",
     "prepare:assets": "node tools/prepare-assets.mjs",
     "predev": "npm run prepare:content && npm run prepare:assets",

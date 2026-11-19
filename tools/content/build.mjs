@@ -14,6 +14,7 @@ import rehypeKatex from 'rehype-katex';
 import rehypeStringify from 'rehype-stringify';
 import GithubSlugger from 'github-slugger';
 import { createHighlighter } from 'shiki';
+import { prepareCorpus, auditArtifact, projectRecommendations } from '../knowledge/phase2a.mjs';
 import { generateRelated, validateKnowledge } from '../knowledge/related.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
@@ -228,7 +229,10 @@ export async function renderMarkdown(source, article, sourceMap = new Map()) {
   return processor.process(normalized);
 }
 
-export async function buildContent() {
+export async function loadPublicCorpus() {
+  for (const value of Object.values(report)) if (Array.isArray(value)) value.length = 0;
+  sourceResources.clear();
+  assetNfc.clear();
   await mkdir(resolve(ROOT,'generated'),{recursive:true});
   const metadata = await readJson('content/article-metadata.json');
   const concepts = await readJson('content/knowledge/concepts.json');
@@ -242,12 +246,12 @@ export async function buildContent() {
     if (!meta) throw new Error(`Missing reviewed metadata: ${sourcePath}`);
     if (data.published === false || (meta.publicationState || data.publicationState || 'published') !== 'published') continue;
     const title = String(meta.title || data.title || '').trim();
-    if (!title || !meta.description?.trim() || !meta.id || !Array.isArray(meta.conceptRefs) || !meta.conceptRefs.length) throw new Error(`Incomplete article metadata: ${sourcePath}`);
+    if (!title || !meta.description?.trim() || !meta.id || (meta.conceptRefs != null && !Array.isArray(meta.conceptRefs))) throw new Error(`Incomplete article metadata: ${sourcePath}`);
     const explicitDate = /^date:\s*["']?(\d{4}-\d{2}-\d{2})/m.exec(source)?.[1];
     const publishedAt = explicitDate || filename.slice(0,10);
     const article = { id:meta.id, sourcePath, path:legacyPath(filename,data), title, description:meta.description,
       publishedAt, language:meta.language || data.lang || 'ko', contentType:meta.contentType,
-      conceptRefs:meta.conceptRefs, featured:Boolean(meta.featured), ...(meta.hero?{hero:meta.hero}:{}),
+      conceptRefs:meta.conceptRefs || [], featured:Boolean(meta.featured), ...(meta.hero?{hero:meta.hero}:{}),
       ...(meta.updatedAt?{updatedAt:meta.updatedAt}:{}), legacyCategories:strings(data.categories ?? data.category),legacyTags:strings(data.tags),
       html:'', headings:[], plainText:'',related:[], publicationState:'published' };
     parsed.push({article,source,content,filename});
@@ -271,9 +275,34 @@ export async function buildContent() {
     const outputPath = article.path.startsWith('/research/') ? article.path.replace(/\/$/,'')+'/index.html' : article.path.endsWith('/') ? article.path+'index.html' : article.path.endsWith('.html') ? article.path : article.path+'.html';
     report.articles.push({id:article.id,sourcePath:article.sourcePath,canonicalPath:article.path,outputPath,sourceDigest:digest(source),headingIds:article.headings.map(h=>h.id),legacyHeadingIds:article.legacyHeadingIds,sourceResources:sourceResources.get(article.id),pathEvidence:source.includes('permalink:')?'explicit front matter permalink':'Jekyll default date/category/filename URL; live verification pending'});
   }
-  const rawArticles=parsed.map(p=>p.article);
+  const articles = parsed.map(item => item.article);
+  const publicIds = new Set(articles.map(article => article.id));
+  const unpublished = new Set(Object.values(metadata).map(item => item.id).filter(id => !publicIds.has(id)));
+  const publicSeries = series.map(item => ({ ...item,
+    orderedArticleIds:item.orderedArticleIds.filter(id => !unpublished.has(id)),
+  })).filter((item, i) => item.orderedArticleIds.length || !series[i].orderedArticleIds.length);
+  const publicOverrides = Object.fromEntries(Object.entries(overrides).map(([kind,table]) => [kind,
+    Object.fromEntries(Object.entries(table).filter(([source]) => !unpublished.has(source))
+      .map(([source,targets]) => [source,targets.filter(id => !unpublished.has(id))])),
+  ]));
+  return { articles, concepts, series: publicSeries, overrides: publicOverrides };
+}
+
+export async function buildContent() {
+  const corpus = await loadPublicCorpus();
+  const { articles: rawArticles, concepts, series, overrides } = corpus;
   validateKnowledge(rawArticles,concepts,series,overrides);
-  const articles=generateRelated(rawArticles,concepts,series,overrides).sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt)||a.id.localeCompare(b.id));
+  let articles=generateRelated(rawArticles,concepts,series,overrides).sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt)||a.id.localeCompare(b.id));
+  if (await exists(resolve(ROOT,'content/related.json'))) {
+    const artifact = await readJson('content/related.json');
+    const ctx = prepareCorpus(corpus);
+    if (artifact.corpusHash === ctx.corpusHash) {
+      auditArtifact(ctx, artifact);
+      articles = projectRecommendations(articles, artifact, overrides);
+    } else {
+      console.warn('Recommendation inputs changed. Serving current rule rankings; run recommendations:sync.');
+    }
+  }
   const registry={articles,concepts,series};
   await writeFile(resolve(ROOT,'generated/registry.json'),JSON.stringify(registry));
   await writeFile(resolve(ROOT,'generated/url-manifest.json'),JSON.stringify({version:1,articles:report.articles.map(({sourceResources,...rest})=>rest)},null,2)+'\n');

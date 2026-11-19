@@ -4,6 +4,7 @@ import { readFile, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 import { parseFragment } from 'parse5';
+import matter from 'gray-matter';
 import { legacyPath, convertLiquid, renderMarkdown } from '../tools/content/build.mjs';
 
 const root=resolve(import.meta.dirname,'..');
@@ -20,15 +21,19 @@ const fixture=()=>({id:'fixture',sourcePath:'_posts/fixture.md',title:'Fixture',
 
 test('every current public original has one unchanged source digest and registry entry',async()=>{
   const filenames=(await readdir(resolve(root,'_posts'))).filter(f=>f.endsWith('.md'));
-  assert.equal(registry.articles.length,113);
+  const metadata=JSON.parse(await read('content/article-metadata.json'));
+  const publicPaths=[];
   assert.equal(new Set(registry.articles.map(a=>a.path)).size,registry.articles.length);
   for(const name of filenames){
     const source=await read('_posts/'+name);
-    if(/^published:\s*false\s*$/m.test(source))continue;
+    const path='_posts/'+name, {data}=matter(source);
+    if(data.published===false || (metadata[path]?.publicationState || data.publicationState || 'published')!=='published')continue;
+    publicPaths.push(path);
     const row=migration.articles.find(a=>a.sourcePath==='_posts/'+name);
     assert.ok(row,name);assert.equal(row.sourceDigest,createHash('sha256').update(source).digest('hex'));
     assert.ok(registry.articles.some(a=>a.sourcePath===row.sourcePath));
   }
+  assert.deepEqual(registry.articles.map(a=>a.sourcePath).sort(), publicPaths.sort());
 });
 
 test('canonical URLs preserve filename case, punctuation and explicit slash policy',()=>{

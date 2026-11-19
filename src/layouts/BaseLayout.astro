@@ -14,7 +14,7 @@ interface Props {
 }
 const { title = SITE.title, description = SITE.description, canonicalPath = Astro.url.pathname,
   language = 'ko', image, article, noindex = false } = Astro.props;
-const titleText = title === SITE.title ? `${SITE.title} · 기술 블로그` : `${title} · ${SITE.title}`;
+const titleText = title === SITE.title ? title : `${title} · ${SITE.title}`;
 const canonical = absoluteUrl(canonicalPath);
 const deployEnvironment = process.env.VERCEL_ENV || import.meta.env.VERCEL_ENV;
 const shouldNoindex = noindex || (!!deployEnvironment && deployEnvironment !== 'production');
@@ -43,7 +43,7 @@ const structuredData = article ? {
     <meta name="robots" content={shouldNoindex ? 'noindex,nofollow' : 'index,follow,max-image-preview:large'} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="alternate" type="application/rss+xml" title="동렬 기술 블로그" href={absoluteUrl('/feed.xml')} />
+    <link rel="alternate" type="application/rss+xml" title={SITE.title} href={absoluteUrl('/feed.xml')} />
     <meta property="og:type" content={article?'article':'website'} />
     <meta property="og:site_name" content={SITE.title} />
     <meta property="og:title" content={titleText} />

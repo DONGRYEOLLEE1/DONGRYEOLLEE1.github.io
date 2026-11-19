@@ -11,8 +11,8 @@ const link = (n: number) => {
 };
 const visible = Array.from({length:Math.max(0,totalPages)},(_,i) => i+1).filter(n=>n===1||n===totalPages||Math.abs(n-page)<=2);
 ---
-{totalPages > 1 && <nav class="pagination" aria-label="글 목록 페이지">
-  {page > 1 && <a href={link(page-1)} rel="prev" aria-label="이전 페이지">← 이전</a>}
-  {visible.map((n,i) => <>{i>0&&n-visible[i-1]>1&&<span class="pagination-gap" aria-hidden="true">…</span>}<a href={link(n)} class:list={{active:n===page}} aria-current={n===page?'page':undefined} aria-label={`${n}페이지`}>{n}</a></>)}
-  {page < totalPages && <a href={link(page+1)} rel="next" aria-label="다음 페이지">다음 →</a>}
+{totalPages > 1 && <nav class="pagination" aria-label="Article pages" lang="en">
+  {page > 1 && <a href={link(page-1)} rel="prev" aria-label="Previous page">← Previous</a>}
+  {visible.map((n,i) => <>{i>0&&n-visible[i-1]>1&&<span class="pagination-gap" aria-hidden="true">…</span>}<a href={link(n)} class:list={{active:n===page}} aria-current={n===page?'page':undefined} aria-label={`Page ${n}`}>{n}</a></>)}
+  {page < totalPages && <a href={link(page+1)} rel="next" aria-label="Next page">Next →</a>}
 </nav>}

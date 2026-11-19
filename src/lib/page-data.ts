@@ -20,3 +20,15 @@ export function usedConcepts(articles: Article[], concepts: Concept[]): Concept[
   return concepts.filter(concept => articlesForConcept(concept.id, articles, concepts).length > 0);
 }
 export const areaId = (area: string) => `area-${Array.from(area).map(char => char.codePointAt(0)!.toString(36)).join('-')}`;
+
+const topicAreaLabels: Record<string, string> = {
+  '모델 구조': 'Model Architecture',
+  '비전·멀티모달': 'Vision & Multimodal AI',
+  '모델 학습': 'Model Training',
+  '학습·추론 인프라': 'Training & Inference Infrastructure',
+  '에이전트·응용': 'Agents & Applications',
+  '개발·운영': 'Development & Operations',
+  '검색·에이전트': 'Retrieval & Agents',
+};
+
+export const topicAreaLabel = (area: string) => topicAreaLabels[area] ?? area;

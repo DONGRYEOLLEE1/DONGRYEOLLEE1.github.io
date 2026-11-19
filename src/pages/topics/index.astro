@@ -1,25 +1,39 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { articleCountLabel, topicCountLabel } from '../../lib/archive-copy';
 import { getArticles, getConcepts } from '../../lib/content';
-import { articlesForConcept, usedConcepts, areaId } from '../../lib/page-data';
+import { articlesForConcept, usedConcepts, areaId, topicAreaLabel } from '../../lib/page-data';
 const articles = getArticles();
 const concepts = usedConcepts(articles,getConcepts());
 const areas = [...new Set(concepts.map(concept => concept.area))];
 ---
-<BaseLayout title="주제별로 읽기" description="관심 있는 기술에서 다음 글을 찾아보세요." canonicalPath="/topics/">
+<BaseLayout title="Topics" description="Browse technical articles by topic." canonicalPath="/topics/" language="en">
   <div class="page-shell topics-page">
-    <header class="page-heading"><h1 class="page-title">주제별로 읽기</h1><p class="page-description">관심 있는 기술에서 다음 글을 찾아보세요.</p></header>
-    <form class="topic-search" data-topic-form action="/topics/" method="get"><label class="search-field"><span class="sr-only">주제 이름 찾기</span><input type="search" name="q" placeholder="주제 이름 찾기 · Reranking, 한국어 OCR" autocomplete="off"/><button type="submit" class="button">찾기</button></label><p class="form-error" data-input-error hidden role="alert"></p></form>
-    <nav class="topic-area-nav" aria-label="기술 영역">{areas.map(area => <a href={`#${areaId(area)}`}>{area}</a>)}</nav>
-    <div class="result-line"><span data-topic-results-count aria-live="polite">주제 {concepts.length}개</span></div>
-    <div class="empty-state" data-topic-empty hidden><h2>이름이 일치하는 주제가 없어요.</h2><p>다른 이름이나 별칭으로 찾아보세요.</p><a href="/topics/">모든 주제 보기 ↗</a></div>
+    <header class="page-heading"><h1 class="page-title">Topics</h1></header>
+    <form class="topic-search" data-topic-form action="/topics/" method="get">
+      <label class="search-field">
+        <span class="sr-only">Search topics</span>
+        <input type="search" name="q" placeholder="Search topics" autocomplete="off"/>
+        <button type="submit" class="button">Search</button>
+      </label>
+      <p class="form-error" data-input-error hidden role="alert"></p>
+    </form>
+    <nav class="topic-area-nav" aria-label="Topic areas">{areas.map(area => <a href={`#${areaId(area)}`}>{topicAreaLabel(area)}</a>)}</nav>
+    <div class="result-line"><span data-topic-results-count aria-live="polite">{topicCountLabel(concepts.length)}</span></div>
+    <div class="empty-state" data-topic-empty hidden>
+      <h2>No matching topics</h2>
+      <p>Try another name or alias.</p>
+      <a href="/topics/">View all topics ↗</a>
+    </div>
     {areas.map(area => <section class="topic-area-section" data-topic-area={area} aria-labelledby={areaId(area)}>
-      <div class="section-heading"><h2 id={areaId(area)}>{area}</h2></div>
+      <div class="section-heading"><h2 id={areaId(area)}>{topicAreaLabel(area)}</h2></div>
       <div class="topic-grid">{concepts.filter(concept => concept.area === area).map(concept => <article class="topic-tile" data-topic-tile data-topic-id={concept.id} data-search={[concept.label,...concept.aliases].join(' ')}>
-        <div class="topic-tile-meta"><span class="small-label">{concept.area}</span><span>{articlesForConcept(concept.id,articles,concepts).length}개의 글</span></div>
-        <h3 class="topic-name"><a href={`/topics/${concept.id}/`}>{concept.label}</a></h3><p>{concept.description}</p><div class="topic-tile-footer"><a class="arrow-link" href={`/topics/${concept.id}/`}>연결된 글 보기 ↗</a></div>
+        <div class="topic-tile-meta"><span class="small-label">{topicAreaLabel(area)}</span><span>{articleCountLabel(articlesForConcept(concept.id,articles,concepts).length)}</span></div>
+        <h3 class="topic-name"><a href={`/topics/${concept.id}/`}>{concept.label}</a></h3>
+        <p lang="ko">{concept.description}</p>
+        <div class="topic-tile-footer"><a class="arrow-link" href={`/topics/${concept.id}/`}>View articles ↗</a></div>
       </article>)}</div>
     </section>)}
-    <noscript><style is:inline>[data-topic-form] { display:none; }</style><p class="noscript-note">주제 이름 찾기는 JavaScript를 켜면 사용할 수 있습니다. 아래 목록에서 모든 주제를 찾아볼 수 있습니다.</p></noscript>
+    <noscript><style is:inline>[data-topic-form] { display:none; }</style><p class="noscript-note">Enable JavaScript to search by topic name, or browse the full list below.</p></noscript>
   </div>
 </BaseLayout>

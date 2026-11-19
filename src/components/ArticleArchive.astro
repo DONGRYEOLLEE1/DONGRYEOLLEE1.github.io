@@ -3,6 +3,7 @@ import type { Article, Concept } from '../lib/types';
 import PostCard from './PostCard.astro';
 import Pagination from './Pagination.astro';
 import FilterFields from './FilterFields.astro';
+import { CONCEPT_ROLE_LABELS, articleCountLabel } from '../lib/archive-copy';
 import { articlesForConcept, conceptIds } from '../lib/page-data';
 interface Props { articles: Article[]; concepts: Concept[]; page?: number; topicId?: string; basePath?: string }
 const { articles, concepts, page = 1, topicId, basePath = '/articles/' } = Astro.props;
@@ -12,7 +13,7 @@ const visible = articles.slice((page - 1) * pageSize, page * pageSize);
 const topicConceptIds = topicId ? conceptIds(topicId,concepts) : new Set<string>();
 const roleLabels = (article: Article) => {
   const roles = new Set(article.conceptRefs.filter(ref => topicConceptIds.has(ref.id)).map(ref => ref.role));
-  return [roles.has('about') ? '주제로 다룬 글' : '',roles.has('applies') ? '적용 사례' : ''].filter(Boolean);
+  return (['about', 'applies'] as const).filter(role => roles.has(role)).map(role => CONCEPT_ROLE_LABELS[role]);
 };
 const roles = topicId ? {
   all: articles.length,
@@ -21,28 +22,31 @@ const roles = topicId ? {
 } : null;
 ---
 <section data-article-list data-page-size={pageSize} data-current-page={page} data-view="list" data-base-path={basePath} data-topic-id={topicId}>
-  {roles && <nav class="role-tabs" aria-label="글과 주제의 관계">
-    <button type="button" class="active" data-role="all" aria-pressed="true">전체 <span>{roles.all}</span></button>
-    <button type="button" data-role="about" aria-pressed="false">주제로 다룬 글 <span>{roles.about}</span></button>
-    <button type="button" data-role="applies" aria-pressed="false">적용 사례 <span>{roles.applies}</span></button>
+  {roles && <nav class="role-tabs" aria-label="Article relationship to this topic" lang="en">
+    <button type="button" class="active" data-role="all" aria-pressed="true">All <span>{roles.all}</span></button>
+    <button type="button" data-role="about" aria-pressed="false">{CONCEPT_ROLE_LABELS.about} <span>{roles.about}</span></button>
+    <button type="button" data-role="applies" aria-pressed="false">{CONCEPT_ROLE_LABELS.applies} <span>{roles.applies}</span></button>
   </nav>}
-  <form class="filter-bar" data-list-form action="/search/" method="get">
-    {!topicId && <label class="search-field"><span class="sr-only">글 검색어</span><input type="search" name="q" placeholder="제목, 기술 개념, 본문에서 검색" autocomplete="off"/><button class="button" type="submit">검색</button></label>}
+  <form class="filter-bar" data-list-form action="/search/" method="get" lang="en">
+    {!topicId && <div class="search-field">
+      <input type="search" name="q" aria-label="Search articles" placeholder="Search titles, topics, or text" autocomplete="off"/>
+      <button class="button" type="submit">Search</button>
+    </div>}
     <FilterFields concepts={concepts} topicFilter={!topicId}/>
     <p class="form-error" data-input-error hidden role="alert"></p>
   </form>
-  <div class="active-filters" data-active-filters></div>
-  <div class="result-line">
-    <h2 class="result-heading" tabindex="-1" data-list-count>{articles.length}개의 글</h2>
-    <nav class="view-switch" aria-label="목록 보기 방식">
-      <button type="button" data-view="grid" aria-pressed="false">그리드</button>
-      <button type="button" class="active" data-view="list" aria-pressed="true">목록</button>
+  <div class="active-filters" data-active-filters lang="en"></div>
+  <div class="result-line" lang="en">
+    <h2 class="result-heading" tabindex="-1" data-list-count>{articleCountLabel(articles.length)}</h2>
+    <nav class="view-switch" aria-label="Article layout">
+      <button type="button" data-view="grid" aria-pressed="false">Grid</button>
+      <button type="button" class="active" data-view="list" aria-pressed="true">List</button>
     </nav>
   </div>
-  <p class="list-notice" data-list-notice role="status" aria-live="polite"></p>
+  <p class="list-notice" data-list-notice role="status" aria-live="polite" lang="en"></p>
   <div class="post-list" data-list-results>
-    {visible.map(article => topicId ? <div class="topic-role-row"><div class="topic-role-labels">{roleLabels(article).map(label => <span>{label}</span>)}</div><PostCard article={article} concepts={concepts}/></div> : <PostCard article={article} concepts={concepts}/>)}
-    {articles.length === 0 && <div class="empty-state"><h3>아직 연결된 글이 없습니다.</h3><p>다른 주제나 전체 글에서 찾아보세요.</p><a href="/articles/">전체 글 보기 ↗</a></div>}
+    {visible.map(article => topicId ? <div class="topic-role-row"><div class="topic-role-labels" lang="en">{roleLabels(article).map(label => <span>{label}</span>)}</div><PostCard article={article} concepts={concepts}/></div> : <PostCard article={article} concepts={concepts}/>)}
+    {articles.length === 0 && <div class="empty-state" lang="en"><h3>No articles yet</h3><p>Explore another topic or browse the full archive.</p><a href="/articles/">View all articles ↗</a></div>}
   </div>
   <div data-list-pagination>
     {!topicId && <Pagination page={page} totalPages={totalPages} basePath={basePath}/>}
@@ -50,6 +54,6 @@ const roles = topicId ? {
   <noscript>
     <style is:inline>[data-list-form], .view-switch, .role-tabs { display: none; }</style>
     {topicId && articles.length > pageSize && <div class="post-list">{articles.slice(pageSize).map(article => <PostCard article={article} concepts={concepts}/>)}</div>}
-    <p class="noscript-note">필터와 검색은 JavaScript를 켜면 사용할 수 있습니다. 글 제목과 페이지 링크로 계속 읽을 수 있습니다.</p>
+    <p class="noscript-note" lang="en">Enable JavaScript to search and filter. You can still browse articles using the titles and page links.</p>
   </noscript>
 </section>

@@ -15,16 +15,22 @@ const siblings = concepts.filter(item => item.id !== concept.id && item.broaderI
 const adjacent = [...children,...siblings].slice(0,8);
 const articleIds = new Set(articles.map(article => article.id));
 const series = getSeries().filter(item => item.orderedArticleIds.filter(id => articleIds.has(id)).length > 1);
+const englishAliases = concept.aliases.filter(alias => !/\p{Script=Hangul}/u.test(alias) && alias.toLowerCase() !== concept.label.toLowerCase()).slice(0,5);
 ---
-<BaseLayout title={concept.label} description={concept.description} canonicalPath={`/topics/${concept.id}/`}>
+<BaseLayout title={concept.label} description={concept.description} canonicalPath={`/topics/${concept.id}/`} language="en">
   <div class="page-shell topic-detail-page">
-    <header class="page-heading"><a class="breadcrumb" href="/topics/">주제 <span aria-hidden="true">/</span></a><h1 class="page-title">{concept.label}</h1>{concept.aliases.length > 0 && <p class="topic-aliases muted">{concept.aliases.slice(0,5).join(' · ')}</p>}<p class="page-description">{concept.description}</p></header>
-    {series.length > 0 && <aside class="topic-series"><span class="small-label">시리즈 순서로 읽기</span>{series.map(item => <a href={`/series/${item.id}/`}>{item.title} ↗</a>)}</aside>}
+    <header class="page-heading">
+      <a class="breadcrumb" href="/topics/">Topics <span aria-hidden="true">/</span></a>
+      <h1 class="page-title">{concept.label}</h1>
+      {englishAliases.length > 0 && <p class="topic-aliases muted">{englishAliases.join(' · ')}</p>}
+      <p class="page-description" lang="ko">{concept.description}</p>
+    </header>
+    {series.length > 0 && <aside class="topic-series"><span class="small-label">Read in series order</span>{series.map(item => <a href={`/series/${item.id}/`} lang="ko">{item.title} ↗</a>)}</aside>}
     <ArticleArchive articles={articles} concepts={concepts} topicId={concept.id} basePath={`/topics/${concept.id}/`}/>
     {(broader.length > 0 || adjacent.length > 0) && <aside class="adjacent-topics">
-      {broader.length > 0 && <div><h2>넓은 주제</h2><div class="topic-chips">{broader.map(item => <a class="chip" href={`/topics/${item.id}/`}>{item.label}</a>)}</div></div>}
-      {adjacent.length > 0 && <div><h2>함께 살펴볼 주제</h2><div class="topic-chips">{adjacent.map(item => <a class="chip" href={`/topics/${item.id}/`}>{item.label}</a>)}</div></div>}
+      {broader.length > 0 && <div><h2>Broader topics</h2><div class="topic-chips">{broader.map(item => <a class="chip" href={`/topics/${item.id}/`}>{item.label}</a>)}</div></div>}
+      {adjacent.length > 0 && <div><h2>Related topics</h2><div class="topic-chips">{adjacent.map(item => <a class="chip" href={`/topics/${item.id}/`}>{item.label}</a>)}</div></div>}
     </aside>}
-    <p class="topic-search-note">주제에 연결된 글 외에 본문에서 언급한 내용도 찾을 수 있습니다. <a href={`/search/?q=${encodeURIComponent(concept.label)}`}>전체 글에서 ‘{concept.label}’ 검색 ↗</a></p>
+    <p class="topic-search-note"><a href={`/search/?q=${encodeURIComponent(concept.label)}`}>Search all articles for {concept.label} ↗</a></p>
   </div>
 </BaseLayout>

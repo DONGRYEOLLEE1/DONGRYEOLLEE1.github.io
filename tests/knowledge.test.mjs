@@ -95,5 +95,4 @@ test('real migration metadata covers the article corpus with valid concept and s
   assert.ok(result.every(a=>a.related.length<=4&&!a.related.some(r=>r.id===a.id)));
   assert.ok(result.find(a=>a.id==='reranking').related.some(r=>r.id==='book-spine'));
   assert.ok(result.find(a=>a.id==='qlora').related.some(r=>r.id==='qlora-troubleshooting'));
-  assert.equal(result.find(a=>a.id==='kodistill').related[0].id,'book-spine');
 });

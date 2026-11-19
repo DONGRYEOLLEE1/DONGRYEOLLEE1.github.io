@@ -1,4 +1,6 @@
 import { renderRelatedGraph } from '../lib/related-graph';
+import { measureRelatedDialogHeight } from './graph-preview';
+import { ARCHIVE_SORT_LABELS, ARTICLE_TYPE_LABELS, CONCEPT_ROLE_LABELS, QUERY_LENGTH_MESSAGE, articleCountLabel, topicCountLabel } from '../lib/archive-copy';
 import type { Article, Registry } from '../lib/types';
 
 // The HTML remains the source of navigation and reading when JavaScript is unavailable.
@@ -12,7 +14,7 @@ type ListState = { q: string; topics: string[]; types: string[]; sort: 'latest' 
 const $ = <T extends Element = HTMLElement>(selector: string, root: ParentNode = document) => root.querySelector<T>(selector);
 const $$ = <T extends Element = HTMLElement>(selector: string, root: ParentNode = document) => [...root.querySelectorAll<T>(selector)];
 const escape = (value: unknown) => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]!));
-const labels: Record<string, string> = { research: '연구', 'paper-review': '논문 리뷰', implementation: '구현기', troubleshooting: '문제 해결', note: '학습 노트' };
+const labels: Record<string, string> = ARTICLE_TYPE_LABELS;
 let data: SiteData = { articles: [], concepts: [], series: [] };
 try { data = JSON.parse($('#site-data')?.textContent || '{}'); } catch { /* Static HTML is still usable. */ }
 data.articles ||= []; data.concepts ||= []; data.series ||= [];
@@ -56,11 +58,11 @@ async function searchArticles(query: string): Promise<SearchHit[]> {
   return searchCache.get(key)!;
 }
 function retrySearch() { pagefindPromise = undefined; searchCache.clear(); }
-function validQuery(input: HTMLInputElement | null, query: string): boolean {
+function validQuery(input: HTMLInputElement | null, query: string, message = '검색어는 200자 이내로 입력해 주세요.'): boolean {
   const tooLong = [...query].length > 200;
-  input?.setCustomValidity(tooLong ? '검색어는 200자 이내로 입력해 주세요.' : '');
+  input?.setCustomValidity(tooLong ? message : '');
   const error = input?.form?.querySelector<HTMLElement>('[data-input-error]');
-  if (error) { error.hidden = !tooLong; error.textContent = tooLong ? '검색어는 200자 이내로 입력해 주세요.' : ''; }
+  if (error) { error.hidden = !tooLong; error.textContent = tooLong ? message : ''; }
   if (tooLong) input?.reportValidity();
   return !tooLong;
 }
@@ -82,7 +84,7 @@ function card(article: PublicArticle, view: 'list' | 'grid', excerpt = ''): stri
 }
 
 // Theme preferences remain independent of the system's current light/dark appearance.
-const themeSelect = $<HTMLSelectElement>('[data-theme-choice]');
+const themeToggle = $<HTMLButtonElement>('[data-theme-toggle]');
 const themeQuery = matchMedia('(prefers-color-scheme: dark)');
 let themePreference = 'system';
 try { themePreference = localStorage.getItem('blog-theme') || 'system'; } catch { /* Storage may be disabled. */ }
@@ -92,11 +94,17 @@ function applyTheme(value: string, persist = false) {
   const resolved = themePreference === 'system' ? (themeQuery.matches ? 'dark' : 'light') : themePreference;
   document.documentElement.dataset.theme = resolved;
   document.body.dataset.theme = resolved;
-  if (themeSelect) themeSelect.value = themePreference;
+  if (themeToggle) {
+    const label = resolved === 'dark' ? '라이트 모드로 전환' : '다크 모드로 전환';
+    themeToggle.setAttribute('aria-label', label);
+    themeToggle.title = label;
+  }
   if (persist) try { localStorage.setItem('blog-theme', themePreference); } catch { /* Preference still applies for this page. */ }
 }
 applyTheme(themePreference);
-themeSelect?.addEventListener('change', () => applyTheme(themeSelect.value, true));
+themeToggle?.addEventListener('click', () => {
+  applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark', true);
+});
 themeQuery.addEventListener('change', () => { if (themePreference === 'system') applyTheme('system'); });
 const mobileMenu = $('#mobile-menu');
 const mobileToggle = $<HTMLButtonElement>('[data-menu]');
@@ -169,13 +177,13 @@ const composingForms = new WeakSet<HTMLFormElement>();
 function stateFromUrl(_pageSize: number, initialPage = 1): ListState {
   const params = currentUrl().searchParams;
   const rawTopics = [...new Set(params.getAll('topic').filter(Boolean))], rawTypes = [...new Set(params.getAll('type').filter(Boolean))];
-  const topics = rawTopics.filter(id => concepts.has(id)), types = rawTypes.filter(type => type in labels);
+  const topics = rawTopics.filter(id => concepts.has(id)), types = rawTypes.filter(type => Object.hasOwn(labels, type));
   const query = (params.get('q') || '').trim();
   const rawRole = params.get('role') || 'all';
   const pageString = params.get('page');
   const parsedPage = pageString ? Number(pageString) : initialPage;
   const defaultView = types.length === 1 && types[0] === 'research' ? 'grid' : 'list';
-  return { q: query, topics, types, sort: params.get('sort') === 'latest' || !query ? 'latest' : 'relevance', page: Number.isInteger(parsedPage) && parsedPage > 0 ? parsedPage : 1, view: params.get('view') === 'grid' || params.get('view') === 'list' ? params.get('view') as 'grid' | 'list' : defaultView, role: ['about', 'applies'].includes(rawRole) ? rawRole as 'about' | 'applies' : 'all', notice: topics.length !== rawTopics.length || types.length !== rawTypes.length || (params.has('view') && !['grid', 'list'].includes(params.get('view')!)) || !['all', 'about', 'applies'].includes(rawRole) ? '일부 조건을 사용할 수 없어 해제했어요.' : '' };
+  return { q: query, topics, types, sort: params.get('sort') === 'latest' || !query ? 'latest' : 'relevance', page: Number.isInteger(parsedPage) && parsedPage > 0 ? parsedPage : 1, view: params.get('view') === 'grid' || params.get('view') === 'list' ? params.get('view') as 'grid' | 'list' : defaultView, role: ['about', 'applies'].includes(rawRole) ? rawRole as 'about' | 'applies' : 'all', notice: topics.length !== rawTopics.length || types.length !== rawTypes.length || (params.has('view') && !['grid', 'list'].includes(params.get('view')!)) || !['all', 'about', 'applies'].includes(rawRole) ? 'Some filters were unavailable and have been cleared.' : '' };
 }
 function stateParams(state: ListState, preserveView = false) {
   const params = new URLSearchParams();
@@ -195,7 +203,7 @@ function syncForm(form: HTMLFormElement | null, state: ListState) {
       input.value = state.sort;
       if (input instanceof HTMLSelectElement) {
         let relevance = [...input.options].find(option => option.value === 'relevance');
-        if (!relevance && state.q) { relevance = new Option('관련도순', 'relevance'); input.prepend(relevance); }
+        if (!relevance && state.q) { relevance = new Option(ARCHIVE_SORT_LABELS.relevance, 'relevance'); input.prepend(relevance); }
         if (relevance) relevance.disabled = !state.q;
         input.value = state.sort;
       }
@@ -249,13 +257,13 @@ function paginationHtml(state: ListState, pageCount: number, basePath: string, a
   if (pageCount <= 1) return '';
   const visible = [...new Set([1, state.page - 1, state.page, state.page + 1, pageCount].filter(page => page >= 1 && page <= pageCount))].sort((a, b) => a - b);
   let previous = 0;
-  const previousLink = state.page > 1 ? `<a href="${escape(listUrl({ ...state, page: state.page - 1 }, basePath, allowStatic))}" data-result-page="${state.page - 1}" rel="prev">← 이전</a>` : '';
-  const nextLink = state.page < pageCount ? `<a href="${escape(listUrl({ ...state, page: state.page + 1 }, basePath, allowStatic))}" data-result-page="${state.page + 1}" rel="next">다음 →</a>` : '';
-  return '<nav class="pagination" aria-label="페이지 이동">' + previousLink + visible.map(page => { const gap = page > previous + 1 ? '<span aria-hidden="true">…</span>' : ''; previous = page; return gap + `<a href="${escape(listUrl({ ...state, page }, basePath, allowStatic))}" data-result-page="${page}" ${page === state.page ? 'aria-current="page"' : ''}>${page}</a>`; }).join('') + nextLink + '</nav>';
+  const previousLink = state.page > 1 ? `<a href="${escape(listUrl({ ...state, page: state.page - 1 }, basePath, allowStatic))}" data-result-page="${state.page - 1}" rel="prev" aria-label="Previous page">← Previous</a>` : '';
+  const nextLink = state.page < pageCount ? `<a href="${escape(listUrl({ ...state, page: state.page + 1 }, basePath, allowStatic))}" data-result-page="${state.page + 1}" rel="next" aria-label="Next page">Next →</a>` : '';
+  return '<nav class="pagination" aria-label="Article pages" lang="en">' + previousLink + visible.map(page => { const gap = page > previous + 1 ? '<span aria-hidden="true">…</span>' : ''; previous = page; return gap + `<a href="${escape(listUrl({ ...state, page }, basePath, allowStatic))}" data-result-page="${page}" ${page === state.page ? 'aria-current="page"' : ''} aria-label="Page ${page}">${page}</a>`; }).join('') + nextLink + '</nav>';
 }
 function activeFilters(state: ListState, root: HTMLElement) {
   const container = $('[data-active-filters]', root); if (!container) return;
-  container.innerHTML = (state.q ? `<button type="button" class="filter-chip" data-remove-filter="q">검색: ${escape(state.q)} <span aria-hidden="true">×</span></button>` : '') + state.topics.map(id => `<button type="button" class="filter-chip" data-remove-filter="topic" data-filter-value="${escape(id)}">${escape(concepts.get(id)?.label || id)} <span aria-hidden="true">×</span></button>`).join('') + state.types.map(type => `<button type="button" class="filter-chip" data-remove-filter="type" data-filter-value="${escape(type)}">${labels[type]} <span aria-hidden="true">×</span></button>`).join('');
+  container.innerHTML = (state.q ? `<button type="button" class="filter-chip" data-remove-filter="q">Search “${escape(state.q)}” <span aria-hidden="true">×</span></button>` : '') + state.topics.map(id => `<button type="button" class="filter-chip" data-remove-filter="topic" data-filter-value="${escape(id)}">${escape(concepts.get(id)?.label || id)} <span aria-hidden="true">×</span></button>`).join('') + state.types.map(type => `<button type="button" class="filter-chip" data-remove-filter="type" data-filter-value="${escape(type)}">${labels[type]} <span aria-hidden="true">×</span></button>`).join('');
 }
 async function renderListing(push = false, next?: ListState) {
   if (!listing || !listResults || !listForm) return;
@@ -265,12 +273,12 @@ async function renderListing(push = false, next?: ListState) {
   const initialPage = Number(location.pathname.match(/\/page\/(\d+)\/?$/)?.[1] || 1);
   const state = next || stateFromUrl(pageSize, initialPage);
   const input = $<HTMLInputElement>('[name=q]', listForm);
-  if (!validQuery(input, state.q)) { if (listNotice) listNotice.textContent = '검색어는 200자 이내로 입력해 주세요.'; return; }
+  if (!validQuery(input, state.q, QUERY_LENGTH_MESSAGE)) { if (listNotice) listNotice.textContent = QUERY_LENGTH_MESSAGE; return; }
   syncForm(listForm, state); activeFilters(state, listing);
   commitUrl(listUrl(state, basePath), push);
   if (listNotice) listNotice.textContent = state.notice;
   listResults.setAttribute('aria-busy', 'true');
-  if (state.q && listNotice) listNotice.textContent = '글을 찾고 있어요.';
+  if (state.q && listNotice) listNotice.textContent = 'Searching articles…';
   try {
     let hits = filterHits(await searchArticles(state.q), state, listing.dataset.topicId);
     if (version !== listVersion) return;
@@ -284,16 +292,17 @@ async function renderListing(push = false, next?: ListState) {
       const rendered = card(hit.article, state.view, state.q ? hit.excerpt : '');
       if (!roleIds) return rendered;
       const roles = new Set(hit.article.conceptRefs.filter(ref => roleIds.has(ref.id)).map(ref => ref.role));
-      return `<div class="topic-role-row"><div class="topic-role-labels">${roles.has('about') ? '<span>주제로 다룬 글</span>' : ''}${roles.has('applies') ? '<span>적용 사례</span>' : ''}</div>${rendered}</div>`;
-    }).join('') : '<div class="empty-state"><h2>조건에 맞는 글이 없어요.</h2><p>검색어를 바꾸거나 필터를 해제해 보세요.</p><button type="button" data-filter-reset>조건 해제</button> <a href="/topics/">주제로 찾아보기 ↗</a></div>';
-    if (listCount) listCount.textContent = `${hits.length}개의 글`;
+      const roleLabels = (['about', 'applies'] as const).filter(role => roles.has(role)).map(role => `<span>${CONCEPT_ROLE_LABELS[role]}</span>`).join('');
+      return `<div class="topic-role-row"><div class="topic-role-labels" lang="en">${roleLabels}</div>${rendered}</div>`;
+    }).join('') : '<div class="empty-state" lang="en"><h2>No matching articles</h2><p>Try another search or clear the filters.</p><button type="button" data-filter-reset>Clear filters</button> <a href="/topics/">Browse by topic ↗</a></div>';
+    if (listCount) listCount.textContent = articleCountLabel(hits.length);
     if (listNotice) listNotice.textContent = state.notice;
     if (listPagination) listPagination.innerHTML = paginationHtml(state, pageCount, basePath);
     listing.dataset.view = state.view;
     syncForm(listForm, state);
   } catch {
     if (version !== listVersion) return;
-    if (listNotice) listNotice.innerHTML = '검색을 불러오지 못했어요. <button type="button" data-list-retry>다시 시도</button> <a href="/articles/">전체 글 보기</a>';
+    if (listNotice) listNotice.innerHTML = 'Search is unavailable. <button type="button" data-list-retry>Try again</button> <a href="/articles/">View all articles</a>';
   } finally { if (version === listVersion) listResults.removeAttribute('aria-busy'); }
 }
 async function renderFullSearch(push = false, next?: ListState) {
@@ -302,25 +311,25 @@ async function renderFullSearch(push = false, next?: ListState) {
   const state = next || stateFromUrl(10);
   const input = $<HTMLInputElement>('[name=q]', fullForm);
   syncForm(fullForm, state); activeFilters(state, fullSearch);
-  if (!validQuery(input, state.q)) { if (fullStatus) fullStatus.textContent = '검색어는 200자 이내로 입력해 주세요.'; return; }
-  if (!state.q) { commitUrl(listUrl(state, '/search/', false), push); fullResults.innerHTML = '<div class="empty-state"><h2>어떤 내용이 궁금한가요?</h2><p>제목이나 기술 개념을 검색해 보세요.</p><a href="/topics/">주제로 찾아보기 ↗</a></div>'; if (fullStatus) fullStatus.textContent = ''; if (fullPagination) fullPagination.innerHTML = ''; return; }
+  if (!validQuery(input, state.q, QUERY_LENGTH_MESSAGE)) { if (fullStatus) fullStatus.textContent = QUERY_LENGTH_MESSAGE; return; }
+  if (!state.q) { commitUrl(listUrl(state, '/search/', false), push); fullResults.innerHTML = '<div class="empty-state" lang="en"><h2>Search the archive</h2><p>Enter a title or topic to find articles.</p><a href="/topics/">Browse by topic ↗</a></div>'; if (fullStatus) fullStatus.textContent = ''; if (fullPagination) fullPagination.innerHTML = ''; return; }
   commitUrl(listUrl(state, '/search/', false), push);
   fullResults.setAttribute('aria-busy', 'true');
-  if (fullStatus) fullStatus.textContent = '글을 찾고 있어요.';
+  if (fullStatus) fullStatus.textContent = 'Searching articles…';
   try {
     let hits = filterHits(await searchArticles(state.q), state);
     if (version !== fullVersion) return;
     if (state.sort === 'latest') hits.sort((a, b) => b.article.publishedAt.localeCompare(a.article.publishedAt));
     const pageCount = Math.max(1, Math.ceil(hits.length / 10)); state.page = Math.min(state.page, pageCount);
     commitUrl(listUrl(state, '/search/', false), false);
-    fullResults.innerHTML = hits.length ? hits.slice((state.page - 1) * 10, state.page * 10).map(hit => card(hit.article, 'list', hit.excerpt)).join('') : '<div class="empty-state"><h2>조건에 맞는 글이 없어요.</h2><p>검색어를 바꾸거나 필터를 해제해 보세요.</p><a href="/topics/">주제로 찾아보기 ↗</a></div>';
-    if (fullStatus) fullStatus.textContent = `${hits.length}개의 글을 찾았습니다.${state.notice ? ' ' + state.notice : ''}`;
+    fullResults.innerHTML = hits.length ? hits.slice((state.page - 1) * 10, state.page * 10).map(hit => card(hit.article, 'list', hit.excerpt)).join('') : '<div class="empty-state" lang="en"><h2>No matching articles</h2><p>Try another search or clear the filters.</p><a href="/topics/">Browse by topic ↗</a></div>';
+    if (fullStatus) fullStatus.textContent = `${articleCountLabel(hits.length)} found.${state.notice ? ' ' + state.notice : ''}`;
     if (fullPagination) fullPagination.innerHTML = paginationHtml(state, pageCount, '/search/', false);
     syncForm(fullForm, state);
   } catch {
     if (version !== fullVersion) return;
-    if (fullStatus) fullStatus.textContent = '검색을 불러오지 못했어요.';
-    fullResults.innerHTML = '<div class="empty-state error"><p>잠시 후 다시 시도하거나 글 목록에서 찾아보세요.</p><button type="button" data-full-search-retry>다시 시도</button> <a href="/articles/">전체 글 보기 ↗</a></div>';
+    if (fullStatus) fullStatus.textContent = 'Search is unavailable.';
+    fullResults.innerHTML = '<div class="empty-state error" lang="en"><p>Try again or browse the full archive.</p><button type="button" data-full-search-retry>Try again</button> <a href="/articles/">View all articles ↗</a></div>';
   } finally { if (version === fullVersion) fullResults.removeAttribute('aria-busy'); }
 }
 for (const form of [listForm, fullForm]) if (form) {
@@ -340,7 +349,7 @@ function filterTopics(push = false) {
   if (!topicForm) return;
   const params = new URLSearchParams(location.search), q = (params.get('q') || '').trim(), area = params.get('area') || '';
   const input = $<HTMLInputElement>('[name=q]', topicForm); if (input) input.value = q;
-  if (!validQuery(input, q)) return;
+  if (!validQuery(input, q, QUERY_LENGTH_MESSAGE)) return;
   const areaInput = $<HTMLSelectElement>('[name=area]', topicForm); if (areaInput) areaInput.value = area;
   let count = 0;
   $$<HTMLElement>('[data-topic-tile]').forEach(tile => {
@@ -350,12 +359,12 @@ function filterTopics(push = false) {
     tile.hidden = !visible; if (visible) count++;
   });
   $$<HTMLElement>('[data-topic-area]').forEach(section => { section.hidden = !$$<HTMLElement>('[data-topic-tile]', section).some(tile => !tile.hidden); });
-  const countElement = $('[data-topic-results-count], [data-topic-count]'); if (countElement) countElement.textContent = `${count}개 주제`;
+  const countElement = $('[data-topic-results-count], [data-topic-count]'); if (countElement) countElement.textContent = topicCountLabel(count);
   const empty = $('[data-topic-empty]'); if (empty) empty.hidden = count !== 0;
   const canonical = new URLSearchParams(); if (q) canonical.set('q', q); if (area) canonical.set('area', area);
   commitUrl('/topics/' + (canonical.size ? '?' + canonical : ''), push);
 }
-topicForm?.addEventListener('submit', event => { event.preventDefault(); if (composingForms.has(topicForm)) return; const fd = new FormData(topicForm); const params = new URLSearchParams(); const q = String(fd.get('q') || '').trim(); if (!validQuery($<HTMLInputElement>('[name=q]', topicForm), q)) return; if (q) params.set('q', q); if (fd.get('area')) params.set('area', String(fd.get('area'))); rememberScroll(); history.pushState({ scrollY }, '', '/topics/' + (params.size ? '?' + params : '')); filterTopics(); });
+topicForm?.addEventListener('submit', event => { event.preventDefault(); if (composingForms.has(topicForm)) return; const fd = new FormData(topicForm); const params = new URLSearchParams(); const q = String(fd.get('q') || '').trim(); if (!validQuery($<HTMLInputElement>('[name=q]', topicForm), q, QUERY_LENGTH_MESSAGE)) return; if (q) params.set('q', q); if (fd.get('area')) params.set('area', String(fd.get('area'))); rememberScroll(); history.pushState({ scrollY }, '', '/topics/' + (params.size ? '?' + params : '')); filterTopics(); });
 topicForm?.addEventListener('compositionstart', () => composingForms.add(topicForm));
 topicForm?.addEventListener('compositionend', () => composingForms.delete(topicForm));
 topicForm?.addEventListener('input', event => { if (event.target instanceof HTMLInputElement) event.target.setCustomValidity(''); });
@@ -396,7 +405,7 @@ function openRelated(id: string, trigger: HTMLElement) {
   relatedDialog.show();
   const anchor = trigger.getBoundingClientRect(), box = relatedDialog.getBoundingClientRect();
   relatedDialog.style.left = Math.max(16, Math.min(anchor.left, innerWidth - box.width - 16)) + 'px';
-  relatedDialog.style.top = Math.max(12, Math.min(anchor.bottom + 8, innerHeight - box.height - 12)) + 'px';
+  relatedDialog.style.top = Math.max(12, Math.min(anchor.bottom + 8, innerHeight - measureRelatedDialogHeight(relatedDialog) - 12)) + 'px';
   $<HTMLButtonElement>('[data-close-related]', relatedDialog)?.focus({ preventScroll: true });
 }
 relatedDialog?.addEventListener('cancel', event => { event.preventDefault(); closeRelated(); });

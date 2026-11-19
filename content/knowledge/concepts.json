@@ -23,10 +23,11 @@
   },
   {
     "id": "cv-evaluation",
-    "label": "비전 모델 평가",
+    "label": "Computer Vision Evaluation",
     "aliases": [
       "비전 평가",
-      "객체 검출 평가"
+      "객체 검출 평가",
+      "비전 모델 평가"
     ],
     "description": "객체 검출의 정확도와 실제 시스템의 오류를 측정하는 기준을 살펴봅니다.",
     "broaderIds": [],
@@ -70,10 +71,11 @@
   },
   {
     "id": "contextual-embeddings",
-    "label": "문맥 표현 학습",
+    "label": "Contextual Embeddings",
     "aliases": [
       "contextual embeddings",
-      "문맥 임베딩"
+      "문맥 임베딩",
+      "문맥 표현 학습"
     ],
     "description": "주변 문맥에 따라 달라지는 토큰 표현과 사전학습 목적을 다룹니다.",
     "broaderIds": [],
@@ -81,10 +83,11 @@
   },
   {
     "id": "pretraining",
-    "label": "언어모델 사전학습",
+    "label": "Language Model Pretraining",
     "aliases": [
       "pre-training",
-      "사전학습"
+      "사전학습",
+      "언어모델 사전학습"
     ],
     "description": "기반 언어모델의 데이터 구성, 학습 방식과 모델 설계를 살펴봅니다.",
     "broaderIds": [],
@@ -126,7 +129,7 @@
   },
   {
     "id": "distributed-training",
-    "label": "분산 학습",
+    "label": "Distributed Training",
     "aliases": [
       "분산 학습",
       "distributed training"
@@ -213,10 +216,11 @@
   },
   {
     "id": "data-preparation",
-    "label": "학습 데이터 준비",
+    "label": "Training Data Preparation",
     "aliases": [
       "학습 데이터 전처리",
-      "데이터 증강"
+      "데이터 증강",
+      "학습 데이터 준비"
     ],
     "description": "학습용 텍스트를 정리·증강하고 품질을 확인하는 과정을 다룹니다.",
     "broaderIds": [],
@@ -236,10 +240,11 @@
   },
   {
     "id": "reinforcement-learning",
-    "label": "언어모델 강화학습",
+    "label": "Reinforcement Learning for LLMs",
     "aliases": [
       "강화학습",
-      "언어모델 RL"
+      "언어모델 RL",
+      "언어모델 강화학습"
     ],
     "description": "보상과 피드백을 이용해 언어모델의 응답 정책을 조정하는 방법을 다룹니다.",
     "broaderIds": [],
@@ -284,10 +289,11 @@
   },
   {
     "id": "python-language",
-    "label": "Python 언어 기능",
+    "label": "Python Language Features",
     "aliases": [
       "파이썬 문법",
-      "Python language"
+      "Python language",
+      "Python 언어 기능"
     ],
     "description": "함수·상속·반복·열거형 같은 파이썬 언어 기능을 예제로 정리합니다.",
     "broaderIds": [],
@@ -295,10 +301,11 @@
   },
   {
     "id": "python-environment",
-    "label": "Python 실행 환경",
+    "label": "Python Environments",
     "aliases": [
       "파이썬 환경",
-      "가상환경"
+      "가상환경",
+      "Python 실행 환경"
     ],
     "description": "패키지 설치와 가상환경·런타임의 호환 문제를 다룹니다.",
     "broaderIds": [],
@@ -328,12 +335,13 @@
   },
   {
     "id": "gpu-memory",
-    "label": "GPU 메모리",
+    "label": "GPU Memory",
     "aliases": [
       "GPU memory",
       "VRAM",
       "OOM",
-      "Out of Memory"
+      "Out of Memory",
+      "GPU 메모리"
     ],
     "description": "모델 학습·평가·추론에서 발생하는 메모리 부족과 누수를 살펴봅니다.",
     "broaderIds": [],
@@ -341,10 +349,11 @@
   },
   {
     "id": "cuda",
-    "label": "CUDA·GPU 환경",
+    "label": "CUDA and GPU Setup",
     "aliases": [
       "CUDA 환경",
-      "NVIDIA GPU 환경"
+      "NVIDIA GPU 환경",
+      "CUDA·GPU 환경"
     ],
     "description": "GPU 드라이버·CUDA·딥러닝 패키지의 설치와 호환 문제를 다룹니다.",
     "broaderIds": [],
@@ -352,10 +361,11 @@
   },
   {
     "id": "containers",
-    "label": "컨테이너 운영",
+    "label": "Container Operations",
     "aliases": [
       "컨테이너",
-      "Docker"
+      "Docker",
+      "컨테이너 운영"
     ],
     "description": "컨테이너에서 모델과 GPU 자원을 연결하고 서비스를 실행하는 과정을 다룹니다.",
     "broaderIds": [],
@@ -363,7 +373,7 @@
   },
   {
     "id": "model-serving",
-    "label": "모델 서빙",
+    "label": "Model Serving",
     "aliases": [
       "모델 서빙",
       "inference server"
@@ -384,10 +394,11 @@
   },
   {
     "id": "remote-development",
-    "label": "원격 개발·네트워크",
+    "label": "Remote Development and Networking",
     "aliases": [
       "원격 개발",
-      "SSH 개발환경"
+      "SSH 개발환경",
+      "원격 개발·네트워크"
     ],
     "description": "원격 서버 접속과 개발 환경의 네트워크·연결 문제를 기록합니다.",
     "broaderIds": [],
@@ -395,10 +406,11 @@
   },
   {
     "id": "rag",
-    "label": "RAG·검색",
+    "label": "RAG and Retrieval",
     "aliases": [
       "검색증강생성",
-      "Retrieval-Augmented Generation"
+      "Retrieval-Augmented Generation",
+      "RAG·검색"
     ],
     "description": "질의에 필요한 문서를 찾고 모델 응답에 연결하는 검색 기술을 다룹니다.",
     "broaderIds": [],
@@ -458,7 +470,7 @@
   },
   {
     "id": "agent-memory",
-    "label": "에이전트 메모리",
+    "label": "Agent Memory",
     "aliases": [
       "에이전트 메모리",
       "message history",
@@ -491,9 +503,10 @@
   },
   {
     "id": "agent-evaluation",
-    "label": "에이전트 평가",
+    "label": "Agent Evaluation",
     "aliases": [
-      "에이전트 벤치마크"
+      "에이전트 벤치마크",
+      "에이전트 평가"
     ],
     "description": "도구 호출과 탐색·다중 단계 작업 수행 능력을 측정하는 평가를 다룹니다.",
     "broaderIds": [],
@@ -533,10 +546,11 @@
   },
   {
     "id": "korean-ocr",
-    "label": "한국어 OCR",
+    "label": "Korean OCR",
     "aliases": [
       "Korean OCR",
-      "한국어 문자 인식"
+      "한국어 문자 인식",
+      "한국어 OCR"
     ],
     "description": "이미지 속 한국어 문자를 읽고 전사하는 문제와 평가를 다룹니다.",
     "broaderIds": [],
@@ -568,7 +582,7 @@
   },
   {
     "id": "browser-inference",
-    "label": "브라우저 추론",
+    "label": "In-Browser Inference",
     "aliases": [
       "브라우저 추론",
       "in-browser inference"
@@ -581,11 +595,12 @@
   },
   {
     "id": "finetuning",
-    "label": "모델 미세조정",
+    "label": "Model Fine-Tuning",
     "aliases": [
       "fine-tuning",
       "finetuning",
-      "파인튜닝"
+      "파인튜닝",
+      "모델 미세조정"
     ],
     "description": "사전학습 모델을 작업별 데이터로 추가 학습하는 구성과 하이퍼파라미터를 다룹니다.",
     "broaderIds": [],

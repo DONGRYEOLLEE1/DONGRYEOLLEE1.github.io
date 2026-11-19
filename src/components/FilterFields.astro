@@ -1,28 +1,28 @@
 ---
 import type { Concept } from '../lib/types';
-import { TYPE_LABELS } from '../lib/site';
+import { ARCHIVE_SORT_LABELS, ARTICLE_TYPE_LABELS } from '../lib/archive-copy';
 interface Props { concepts: Concept[]; search?: boolean; topicFilter?: boolean }
 const { concepts, search = false, topicFilter = true } = Astro.props;
 ---
 <details class="mobile-filter-panel" data-filter-panel open>
-  <summary>필터 <span data-selected-filter-count></span></summary>
+  <summary>Filters <span data-selected-filter-count></span></summary>
   <div class="filter-controls">
     {topicFilter && <details class="filter-select">
-      <summary>주제 선택</summary>
-      <fieldset class="filter-options"><legend class="sr-only">주제 필터 · 복수 선택</legend>
+      <summary>Topics</summary>
+      <fieldset class="filter-options"><legend class="sr-only">Topics (select multiple)</legend>
         {concepts.map(concept => <label><input type="checkbox" name="topic" value={concept.id}/><span>{concept.label}</span></label>)}
       </fieldset>
     </details>}
     <details class="filter-select">
-      <summary>글 유형 선택</summary>
-      <fieldset class="filter-options"><legend class="sr-only">글 유형 필터 · 복수 선택</legend>
-        {Object.entries(TYPE_LABELS).map(([id,label]) => <label><input type="checkbox" name="type" value={id}/><span>{label}</span></label>)}
+      <summary>Article types</summary>
+      <fieldset class="filter-options"><legend class="sr-only">Article types (select multiple)</legend>
+        {Object.entries(ARTICLE_TYPE_LABELS).map(([id,label]) => <label><input type="checkbox" name="type" value={id}/><span>{label}</span></label>)}
       </fieldset>
     </details>
-    <label class="sort-field">정렬 <select name="sort" aria-label="글 정렬">
-      {search && <option value="relevance">관련도순</option>}
-      <option value="latest">최신순</option>
+    <label class="sort-field">Sort by <select name="sort">
+      {search && <option value="relevance">{ARCHIVE_SORT_LABELS.relevance}</option>}
+      <option value="latest">{ARCHIVE_SORT_LABELS.latest}</option>
     </select></label>
-    <button type="button" class="resource-link" data-filter-reset>{search ? '필터 모두 해제' : '모두 해제'}</button>
+    <button type="button" class="resource-link" data-filter-reset>Clear filters</button>
   </div>
 </details>

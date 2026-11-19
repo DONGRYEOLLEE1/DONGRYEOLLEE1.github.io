@@ -1,6 +1,6 @@
 import type { Article } from './types';
 
-type GraphArticle = Pick<Article, 'id' | 'path' | 'title' | 'language'>;
+type GraphArticle = Pick<Article, 'id' | 'path' | 'title' | 'language' | 'publishedAt'>;
 type Point = readonly [x: number, y: number];
 
 const origin: Point = [142, 99];
@@ -30,7 +30,8 @@ export function renderRelatedGraph(
     const article = articles.get(id);
     return article ? [article] : [];
   }).slice(0, positions.length);
-  if (!related.length) return '';
+  const first = related[0];
+  if (!first) return '';
 
   const isPair = related.length === 1;
   const [originX, originY] = isPair ? [72, 50] : origin;
@@ -38,8 +39,8 @@ export function renderRelatedGraph(
   const points = related.length === 2 ? [positions[0], positions[2]] : layout;
   const links = related.map((article, index) => {
     const [x, y] = points[index];
-    return `<a class="graph-node" href="${escapeMarkup(article.path)}" lang="${escapeMarkup(article.language)}" aria-label="${escapeMarkup(article.title)}">
-      <title>${escapeMarkup(article.title)}</title>
+    return `<a class="graph-node" href="${escapeMarkup(article.path)}" lang="${escapeMarkup(article.language)}" aria-label="${escapeMarkup(article.title)}" data-published-at="${escapeMarkup(article.publishedAt)}">
+      <desc lang="ko">게시일 ${escapeMarkup(article.publishedAt)}</desc>
       <g aria-hidden="true" transform="translate(${x} ${y})">
         <circle class="graph-node-hit" r="26"/>
         <circle class="graph-ripple" r="12"/>
@@ -64,5 +65,9 @@ export function renderRelatedGraph(
       <text class="graph-label" y="36">현재 글</text>
     </g>
     ${links.join('')}
-  </svg>`;
+  </svg>
+  <div class="graph-preview" hidden>
+    <p class="graph-preview-title" lang="${escapeMarkup(first.language)}">${escapeMarkup(first.title)}</p>
+    <time class="graph-preview-date" datetime="${escapeMarkup(first.publishedAt)}">${escapeMarkup(first.publishedAt)}</time>
+  </div>`;
 }

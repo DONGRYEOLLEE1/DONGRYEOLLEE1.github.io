@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getArticles, getConcepts } from '../lib/content';
 import { latestArticles, articlesForConcept } from '../lib/page-data';
+import { SITE } from '../lib/site';
 import type { Concept } from '../lib/types';
 const articles = latestArticles(getArticles());
 const concepts = getConcepts();
@@ -10,9 +11,9 @@ const recent = articles.filter(article => article.id !== lead?.id).slice(0, 8);
 const selectedTopics = ['reasoning-efficiency','korean-ocr','reranking','qlora','speculative-decoding','agent'];
 const topics = selectedTopics.map(id => concepts.find(concept => concept.id === id)).filter((concept): concept is Concept => Boolean(concept && articlesForConcept(concept.id,articles,concepts).length > 0));
 ---
-<BaseLayout title="동렬의 기술 블로그" canonicalPath="/">
+<BaseLayout canonicalPath="/">
   <div class="page-shell home-page">
-    {!lead && <h1 class="sr-only">동렬의 기술 블로그</h1>}
+    {!lead && <h1 class="sr-only">{SITE.title}</h1>}
     {lead && <article class:list={['editorial-feature',{'no-media':!lead.hero}]} aria-labelledby="featured-title">
       <div class="feature-copy">
         <h1 class="feature-title" id="featured-title" lang={lead.language}><a href={lead.path}>{lead.title}</a></h1>

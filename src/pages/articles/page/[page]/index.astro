@@ -11,6 +11,9 @@ const { page } = Astro.props;
 const articles = latestArticles(getArticles());
 const concepts = usedConcepts(articles,getConcepts());
 ---
-<BaseLayout title={`전체 글 · ${page}페이지`} description="연구와 구현, 문제 해결 과정을 날짜순으로 정리했습니다." canonicalPath={`/articles/page/${page}/`}>
-  <div class="page-shell archive-page"><header class="page-heading"><h1 class="page-title">전체 글</h1><p class="page-description">연구와 구현, 문제 해결 과정을 날짜순으로 정리했습니다.</p></header><ArticleArchive articles={articles} concepts={concepts} page={page}/></div>
+<BaseLayout title={`전체 글 · ${page}페이지`} canonicalPath={`/articles/page/${page}/`}>
+  <div class="page-shell archive-page">
+    <header class="page-heading"><h1 class="page-title">전체 글</h1></header>
+    <ArticleArchive articles={articles} concepts={concepts} page={page}/>
+  </div>
 </BaseLayout>

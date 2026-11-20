@@ -50,7 +50,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "96afb6e8b5f203765c02faa31455c9405740c84ceb80cab7c2d928bfe0fb06e4",
+    "inputHash": "425d22d74f3328350c9b9ef04b2e422e90c9a3b5fbc492b7051d163dc4c6de36",
     "status": "verified",
     "candidates": [
       {
@@ -253,7 +253,7 @@
       {
         "id": "dora",
         "relation": "related_method",
-        "reason": "LoRA가 low-rank 행렬로 사전학습 가중치를 업데이트하는 방식을 DoRA의 크기·방향 분해와 비교해 배울 수 있습니다.",
+        "reason": "LoRA가 낮은 순위 행렬로 가중치를 갱신하는 방식과, DoRA가 가중치를 크기와 방향으로 분해해 미세 조정하는 방식을 비교해 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "lora",
           "blockId": "[\"introduction\",3]",
@@ -272,7 +272,7 @@
       {
         "id": "qlora",
         "relation": "related_method",
-        "reason": "LoRA의 적은 학습 파라미터 방식과 이를 4-bit 사전학습 모델에 결합하는 QLoRA의 방법을 배울 수 있습니다.",
+        "reason": "LoRA의 낮은 순위 어댑터 방식과 이를 양자화된 사전학습 모델에 적용하는 QLoRA의 결합 방식을 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "lora",
           "blockId": "[\"introduction\",2]",
@@ -289,28 +289,28 @@
         }
       },
       {
-        "id": "peft-target-modules",
-        "relation": "related_method",
-        "reason": "LoRA를 Transformer의 attention 가중치에 적용하는 설명과 모델별 target module 목록을 연결해 살펴볼 수 있습니다.",
+        "id": "lora-finetuning",
+        "relation": "application_example",
+        "reason": "동결된 사전학습 가중치에 낮은 순위 업데이트를 적용하는 개념이 실제 LoRA 파인튜닝 설정에서 어떻게 지정되는지 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "lora",
-          "blockId": "[\"applying-lora-to-transformer\",1]",
-          "anchor": "applying-lora-to-transformer",
-          "quote": "연구진은 downstream-task를 위한 attention weight를 적용하는 것에만 주제를 국한시켰습니다. 이는 구조의 단순함과 파라미터의 효율성 때문입니다. 다른 방식을 통해 attention weight matrices를 Transformer안에서 적용할때의 효과에 대해서는 WHICH WEIGHT MATRICES IN TRANSFORMER SHOULD WE APPLY LORA TO? 라인에 나타나 있습니다.",
-          "hash": "d96d1e6075ba00605ed4c07cedd3d748efad752c1e8b8ee62aced6fd7942a2c1"
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "많은 사람들이 일부 매개 변수만 적용하거나 새로운 task를 위해 외부 모듈을 학습하여 이를 완화하려고 했음. 이렇게되면 task-specific한 파라미터의 숫자는 적게 저장되고 불러와짐. 이러한 방법은 Finetuning을 실패하거나 효율성과 모델 품질의 trade-off관계에서 벗어나지 못하였음.",
+          "hash": "f0c82209a5bbf501a166e1ed78190226ba448b1acd9cdc23a3cad6a87669d5e3"
         },
         "targetEvidence": {
-          "articleId": "peft-target-modules",
-          "blockId": "[null,1]",
-          "anchor": null,
-          "quote": "# peft/utils/other.py in line 328 TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING = { \"t5\": [\"q\", \"v\"], \"mt5\": [\"q\", \"v\"], \"bart\": [\"q_proj\", \"v_proj\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"blip-2\": [\"q\", \"v\", \"q_proj\", \"v_proj\"], \"opt\": [\"q_proj\", \"v_proj\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"value\"], \"xlm-roberta\": [\"query\", \"value\"], \"electra\":",
-          "hash": "b0dc93edb070d31e4f57be2457664c20130561af39054733ee01cfb9f5be00be"
+          "articleId": "lora-finetuning",
+          "blockId": "[\"training\",1]",
+          "anchor": "training",
+          "quote": "python finetune.py \\ --base_model '../model_file/polyglot-ko-5.8b' \\ --data_path './ko_alpaca_data.json' \\ --output_dir './output' \\ --batch_size 128 \\ --mircro_batch_size 4 \\ --num_epochs 3 \\ --learning_rate 2e-5 \\ --cutoff_len 512 \\ --val_set_size 2000 \\ --lora_r 8 \\ --lora_alpha 16 \\ --lora_dropout 0.05 \\ --lora_target_modules '[query_key_value]' \\ --train_on_inputs \\ --group_by_length",
+          "hash": "1d3ec647d3fc9aa157a76778d7d0beb955bd87a846aa384701e66384ac2707f9"
         }
       },
       {
         "id": "vera",
         "relation": "related_method",
-        "reason": "LoRA가 낮은 차원 행렬을 최적화하는 방식과 고정된 무작위 행렬 및 scaling vector를 쓰는 VeRA를 비교해 배울 수 있습니다.",
+        "reason": "LoRA가 낮은 순위 행렬을 학습하는 방식과 VeRA가 고정된 무작위 행렬 및 학습 가능한 스케일링 벡터를 쓰는 방식을 비교할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "lora",
           "blockId": "[\"introduction\",3]",

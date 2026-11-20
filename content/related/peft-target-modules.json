@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "6991efa81b0104e9851246367a62d817dfab0155fadbdc1ddf266f74ae8a74eb",
+    "inputHash": "b5c1173d39f517e362fe5118e9b4bb70dec981112a0136382d79959a5c17a922",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "lora-finetuning",
         "relation": "application_example",
-        "reason": "모델별 LoRA target module 목록과 Polyglot-ko 학습에서 query_key_value를 지정한 사례를 함께 보며 설정 적용을 익힐 수 있습니다.",
+        "reason": "PEFT 매핑에서 BLOOM의 LoRA 대상 모듈을 확인하고, 실제 파인튜닝 설정에서 query_key_value를 지정하는 방법을 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "peft-target-modules",
           "blockId": "[null,1]",
@@ -261,7 +261,7 @@
       {
         "id": "polyglot-lora-troubleshooting",
         "relation": "application_example",
-        "reason": "모델별 LoRA target module 목록과 Polyglot-ko 학습 코드의 query_key_value 설정을 비교해 실제 적용 사례를 확인할 수 있습니다.",
+        "reason": "BLOOM의 LoRA 대상 모듈인 query_key_value가 Polyglot-ko 파인튜닝 코드에서 어떻게 지정되는지 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "peft-target-modules",
           "blockId": "[null,1]",
@@ -278,22 +278,22 @@
         }
       },
       {
-        "id": "thinkingcap",
+        "id": "lora",
         "relation": "related_method",
-        "reason": "Llama 계열의 기본 LoRA target 목록이 일부 attention projection을 놓칠 수 있어 명시적으로 추가한 사례를 통해 target module 선택의 주의점을 배울 수 있습니다.",
+        "reason": "PEFT의 매핑은 모델별 적용 대상 모듈을 나열하며, LoRA 논문 발췌는 Transformer attention weight를 적용 대상으로 다룹니다.",
         "sourceEvidence": {
           "articleId": "peft-target-modules",
-          "blockId": "[null,6]",
+          "blockId": "[null,1]",
           "anchor": null,
-          "quote": "[\"q_proj\", \"k_proj\", \"v_proj\", \"out_proj\", \"fc1\", \"fc2\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"opt\": [\"q_proj\", \"k_proj\", \"v_proj\", \"out_proj\", \"fc1\", \"fc2\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"llama\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"key\", \"value\", \"dense\"], # \"xlm-roberta\": [\"query\", \"value\"], # \"electra\": [\"query\", \"value\"], \"deberta-v2\": [\"query_proj\",",
-          "hash": "aadf40752da7a557fdaeb8f7fa8970b960f13f0840b3334ae4f0c904a0d3b115"
+          "quote": "# peft/utils/other.py in line 328 TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING = { \"t5\": [\"q\", \"v\"], \"mt5\": [\"q\", \"v\"], \"bart\": [\"q_proj\", \"v_proj\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"blip-2\": [\"q\", \"v\", \"q_proj\", \"v_proj\"], \"opt\": [\"q_proj\", \"v_proj\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"value\"], \"xlm-roberta\": [\"query\", \"value\"], \"electra\":",
+          "hash": "b0dc93edb070d31e4f57be2457664c20130561af39054733ee01cfb9f5be00be"
         },
         "targetEvidence": {
-          "articleId": "thinkingcap",
-          "blockId": "[\"setup-training\",2]",
-          "anchor": "setup-training",
-          "quote": "One practical detail is easy to miss. The LoRA target list that is standard for Llama-style models (q,k,v,o,gate,up,down) silently skips the attention projections of all 18 linear-attention layers of this architecture; only their MLPs get adapters. We add their main input and output projections (in_proj_qkv, out_proj) explicitly; their three other projections (in_proj_z, in_proj_a, in_proj_b) get no adapters.",
-          "hash": "bdd7e1b1346ec4777b28b6916c930c43b91c04eb7368d02fefb24a58734ce161"
+          "articleId": "lora",
+          "blockId": "[\"applying-lora-to-transformer\",1]",
+          "anchor": "applying-lora-to-transformer",
+          "quote": "연구진은 downstream-task를 위한 attention weight를 적용하는 것에만 주제를 국한시켰습니다. 이는 구조의 단순함과 파라미터의 효율성 때문입니다. 다른 방식을 통해 attention weight matrices를 Transformer안에서 적용할때의 효과에 대해서는 WHICH WEIGHT MATRICES IN TRANSFORMER SHOULD WE APPLY LORA TO? 라인에 나타나 있습니다.",
+          "hash": "d96d1e6075ba00605ed4c07cedd3d748efad752c1e8b8ee62aced6fd7942a2c1"
         }
       }
     ]

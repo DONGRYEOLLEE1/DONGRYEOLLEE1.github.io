@@ -39,8 +39,8 @@
     "review": []
   },
   "entry": {
-    "inputHash": "134c37690666ff0cf96a8181b0612d4cdb174a5aebe88485b4971ae2fba82898",
-    "status": "abstained",
+    "inputHash": "cdeba098d88d67167f34b53472c4789674f090b039d2480c28e2991c64184cdf",
+    "status": "verified",
     "candidates": [
       {
         "id": "r-cnn",
@@ -238,6 +238,45 @@
         ]
       }
     ],
-    "recommendations": []
+    "recommendations": [
+      {
+        "id": "map-evaluation",
+        "relation": "related_method",
+        "reason": "OverFeat의 검출 과정과 함께 IoU가 언급되며, 이 글에서 객체 경계의 겹침을 측정하는 IoU의 의미를 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "overfeat",
+          "blockId": "[\"nmsnon-max-suppression\",13]",
+          "anchor": "nmsnon-max-suppression",
+          "quote": "IoU에 대한 자세한 설명은 이쪽으로",
+          "hash": "dab829c0811e2cb0586c43ed314b5c747bb24d4d475f1157a1d40db40c8e0a21"
+        },
+        "targetEvidence": {
+          "articleId": "map-evaluation",
+          "blockId": "[\"iouintersection-over-union---fracintersectionunion\",1]",
+          "anchor": "iouintersection-over-union---fracintersectionunion",
+          "quote": "IoU는 2개의 바운더리 사이에서의 공통으로 겹치는 부분에 대해 측정한다. Ground truth(the real object boundary)와 함께 예측된 경계가 겹치는 부분들에 대해 측정하는 것을 사용한다. True positive또는 False Positive값을 예측하는 몇몇 분류 데이터셋에서 측정 IoU 임계값(Threshold)을 사전정의하기도한다.",
+          "hash": "305a73ce4f270c6fb707574f5b4981aeeb3d53a1261875a69415a8961890d493"
+        }
+      },
+      {
+        "id": "object-detection-basics",
+        "relation": "related_method",
+        "reason": "OverFeat은 분류 학습 후 fc layer를 제거해 feature extractor로 활용하며, 이 글은 Backbone이 입력에서 feature를 추출해 task 모듈로 전달하는 역할을 설명합니다.",
+        "sourceEvidence": {
+          "articleId": "overfeat",
+          "blockId": "[\"overfeat-detection-network\",12]",
+          "anchor": "overfeat-detection-network",
+          "quote": "Overfeat 모델은 Classification, Localization, Detection task에 모두 사용할 수 있습니다. Overfeat을 Classification task를 위해 학습시킨 후, fc layer를 제거하여 feature extractor로 활용하여 localization, detection task에 사용될 수 있습니다.",
+          "hash": "c1a6c0caad769f70ace07c0aed7ab121122a0f892daed4e1bae383aec5710cd4"
+        },
+        "targetEvidence": {
+          "articleId": "object-detection-basics",
+          "blockId": "[\"backbone\",2]",
+          "anchor": "backbone",
+          "quote": "Backbone은 등뼈라는 뜻이다. 등뼈는 뇌와 몸의 각 부위의 신경을 이어주는 역할을 한다. 뇌를 통해 입력이 드러온다고 생각하고 팔, 다리 등이 출력이라고 생각한다면 backbone은 입력이 처음 들어와서 출력에 관련된 모듈에 처리된 입력을 보내주는 역할이라고 생각할 수 있다. 여러가지 task가 몸의 각 부분이라고 생각하면 Classification Model은 입력을 받아서 각 task에 맞는 모듈로 전달해주는 역할이다. 결국 객체를 검출하든 영역을 나누든 Neural Network는 입력 이미지로부터 다양한 feature를 추출해야한다. 그 역할을 Backbone Network가 하는 것이다.",
+          "hash": "2990ce85f4c2cfb34ed3cf7551d2e1bf9ac6b1e91ed0e2e7b2f7d6967011151e"
+        }
+      }
+    ]
   }
 }

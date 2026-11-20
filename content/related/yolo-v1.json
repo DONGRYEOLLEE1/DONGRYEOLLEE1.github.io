@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "c22fd93b5e0655c123bc660839087f0f4f2d0c677d295908e392d0294dfb3ce0",
+    "inputHash": "13ae1a972b5251da1394ebfd9d9fd580d13a3d8b1e942442054294ee1e9afb3a",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "r-cnn",
         "relation": "related_method",
-        "reason": "R-CNN이 region proposal별 특징 추출과 분류·위치 추정을 순차 수행하는 2단계 방식임을 살펴보며, YOLO의 통합 검출 구조와 비교할 수 있습니다.",
+        "reason": "YOLO가 검출 요소를 하나의 신경망으로 통합하는 방식과 R-CNN이 위치 탐지와 분류를 순차적으로 처리하는 2단계 방식을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "yolo-v1",
           "blockId": "[\"unified-detection\",1]",
@@ -261,7 +261,7 @@
       {
         "id": "fast-r-cnn",
         "relation": "related_method",
-        "reason": "Fast R-CNN의 RoI pooling과 multi-task loss를 통한 통합 학습을 보며, YOLO가 단일 신경망으로 검출을 수행하는 방식과 파이프라인 차이를 배울 수 있습니다.",
+        "reason": "YOLO의 단일 모델 통합 방식과 Fast R-CNN의 특징 추출부터 분류·박스 회귀까지 한 모델에서 학습하는 방식을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "yolo-v1",
           "blockId": "[\"unified-detection\",1]",
@@ -271,16 +271,35 @@
         },
         "targetEvidence": {
           "articleId": "fast-r-cnn",
-          "blockId": "[\"preview\",1]",
-          "anchor": "preview",
-          "quote": "R-CNN 모델은 2000장의 RP를 CNN 모델에 입력시켜 각각에 대하여 독립적으로 학습시켜 많은 시간이 소요된다. Fast R-CNN은 이러한 문제를 개선하여 단 1장의 이미지를 입력받으며, RP의 크기를 warp시킬 필요 없이 RoI(Region of Interest) pooling을 통해 고정된 크기의 feature vector를 fully connected layer(이하 fc layer)에 전달한다. 또한 multi-task loss를 사용하여 모델을 개별적으로 학습시킬 필요 없이 한 번에 학습시킨다. 이를 통해 학습 및 탐지 시간이 크게 감소하였다.",
-          "hash": "0540b668dfa6795df8932bc1a55e23a6d81e1cc94f2f390df5e5876dbb0ea14c"
+          "blockId": "[\"abstract\",2]",
+          "anchor": "abstract",
+          "quote": "CNN 특징 추출부터 Classification, Bounding box Regressor까지 모두 하나의 모델에서 학습시키자",
+          "hash": "d5e7b2c93915507962466544d56e6ef61f90bd9aa2c0278c3f0168ca241b4618"
+        }
+      },
+      {
+        "id": "map-evaluation",
+        "relation": "related_method",
+        "reason": "YOLO가 학습 중 예측 박스를 ground-truth와 IoU로 매칭하는 과정과 객체 탐지 평가에 쓰이는 IoU의 의미를 함께 익힐 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "yolo-v1",
+          "blockId": "[\"training\",11]",
+          "anchor": "training",
+          "quote": "YOLO는 각 grid cell당 다수의 bounding box들을 예측한다. 학습시 오직 그에 상응하는 1개의 bounding box만을 사용한다. 즉, 객체 하나당 하나의 bounding box와 매칭을 시켜야한다. 따라서 여러개의 bounding box중 하나만 선택해야한다. 이를 위해 예측된 여러 bounding box 중 실제 객체를 감싸는 ground-truth bounding box와의 IoU가 가장 큰 것을 선택한다. 이는 객체를 가장 잘 감싼다는 뜻과 같다. 이렇게 훈련된 predictor는 특정크기, 종횡비, 객체의 클래스를 더 잘 예측하게 된다.",
+          "hash": "a011233e9174aa09d3aa2f84ddf03fb68b62ab494183ee0ef58664bde2ac690e"
+        },
+        "targetEvidence": {
+          "articleId": "map-evaluation",
+          "blockId": "[\"iouintersection-over-union---fracintersectionunion\",1]",
+          "anchor": "iouintersection-over-union---fracintersectionunion",
+          "quote": "IoU는 2개의 바운더리 사이에서의 공통으로 겹치는 부분에 대해 측정한다. Ground truth(the real object boundary)와 함께 예측된 경계가 겹치는 부분들에 대해 측정하는 것을 사용한다. True positive또는 False Positive값을 예측하는 몇몇 분류 데이터셋에서 측정 IoU 임계값(Threshold)을 사전정의하기도한다.",
+          "hash": "305a73ce4f270c6fb707574f5b4981aeeb3d53a1261875a69415a8961890d493"
         }
       },
       {
         "id": "book-spine",
         "relation": "application_example",
-        "reason": "YOLO가 이미지 특징으로 bounding box를 예측하는 원리를 바탕으로, 책등 탐지기가 OBB를 찾아 후속 처리하는 실제 적용 사례를 살펴볼 수 있습니다.",
+        "reason": "YOLO가 이미지 특징으로 bounding box를 예측하는 검출 개념이 책등 탐지 시스템에서 OBB로 적용되는 사례를 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "yolo-v1",
           "blockId": "[\"unified-detection\",1]",
@@ -294,25 +313,6 @@
           "anchor": "system",
           "quote": "A photo is first downscaled so that its long side is at most 1,600 px. A one-class oriented bounding box (OBB) detector finds the spines. Near-duplicate boxes are merged (Section 3.5), and the number of boxes scoring 0.4 or more is the book count. Each box is then cut out with a margin of 8% of its short side, rotated so that its long side is vertical, and upscaled if its short side is below 96 px.",
           "hash": "47a6b7f2df9dece4417da0ca5bd70c47f8e2d281e5d4511a6cf0cf29c50c19b1"
-        }
-      },
-      {
-        "id": "map-evaluation",
-        "relation": "related_method",
-        "reason": "YOLO가 예측한 bounding box와 ground truth의 IoU로 상자를 매칭하는 과정과, 객체 검출의 AP·mAP 평가 개념을 함께 익힐 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "yolo-v1",
-          "blockId": "[\"training\",11]",
-          "anchor": "training",
-          "quote": "YOLO는 각 grid cell당 다수의 bounding box들을 예측한다. 학습시 오직 그에 상응하는 1개의 bounding box만을 사용한다. 즉, 객체 하나당 하나의 bounding box와 매칭을 시켜야한다. 따라서 여러개의 bounding box중 하나만 선택해야한다. 이를 위해 예측된 여러 bounding box 중 실제 객체를 감싸는 ground-truth bounding box와의 IoU가 가장 큰 것을 선택한다. 이는 객체를 가장 잘 감싼다는 뜻과 같다. 이렇게 훈련된 predictor는 특정크기, 종횡비, 객체의 클래스를 더 잘 예측하게 된다.",
-          "hash": "a011233e9174aa09d3aa2f84ddf03fb68b62ab494183ee0ef58664bde2ac690e"
-        },
-        "targetEvidence": {
-          "articleId": "map-evaluation",
-          "blockId": "[\"mapmean-average-precision\",1]",
-          "anchor": "mapmean-average-precision",
-          "quote": "AP는 Faster R-CNN, SSD와 같이 객체탐지의 정확도를 측정하는데있어서 가장 인기있는 metric이다. AP는 0과 1사이의 값을 가지는 recall을 통해 average precision값을 계산한다. 꽤나 복잡한 얘기로 들릴수 있겠지만 예시와 함께 설명하고자한다. 그전에, precision, recall, IoU에 대해 알아보자.",
-          "hash": "01b98da19a8d4cd15cc9fb7a64670351f90a987efd64d39a5808b9cab4a29f63"
         }
       }
     ]

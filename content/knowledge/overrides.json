@@ -1,5 +1,8 @@
 {
   "pins": {},
-  "excludes": {},
+  "excludes": {
+    "book-spine": ["kodistill"],
+    "kodistill": ["book-spine"]
+  },
   "buildsOn": {}
 }

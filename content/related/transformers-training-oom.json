@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "91aef9e43e5eb7910db80ea5db14bb530b96760a8ba699e3a61fcf01bf839bc8",
+    "inputHash": "d7b1d452f2df1f85f08cc16af994801254bfef4f2f28ff4ad399f6b93c334d63",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "qlora",
         "relation": "concept_explanation",
-        "reason": "Trainer.train()에서 OOM이 발생할 때, QLoRA의 4-bit 양자화와 Paged Optimizers가 학습 메모리 사용을 줄이거나 OOM을 방지하는 원리를 배울 수 있습니다.",
+        "reason": "Trainer.train()에서 OOM이 발생하는 상황과 QLoRA의 저메모리 파인튜닝 및 CPU 오프로딩 원리를 함께 살펴봅니다.",
         "sourceEvidence": {
           "articleId": "transformers-training-oom",
           "blockId": "[\"error\",1]",
@@ -256,6 +256,44 @@
           "anchor": "qlora-finetuning",
           "quote": "Paged Optimizers offload-CPU 방식이랑 비슷한 메커니즘. Out-of-memory 에러를 방지하여 CPU RAM에 대신 적재시키는 방법.",
           "hash": "fd9644f416f9d623a925f6622a3e79a734a8b017a0956824aa67db57713391db"
+        }
+      },
+      {
+        "id": "llama2-training-oom",
+        "relation": "related_method",
+        "reason": "Trainer로 파인튜닝 중 OOM이 발생한 사례와 학습 배치 크기·gradient accumulation 설정을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "transformers-training-oom",
+          "blockId": "[\"error\",3]",
+          "anchor": "error",
+          "quote": "GPU allocated memory가 stable 하지 않고 지속적으로 증가하는 memory leakage problem",
+          "hash": "26c7eac5ed259a0dc838a8f227518e1c5fb58edc3d1074caa1ba865cdcb2352b"
+        },
+        "targetEvidence": {
+          "articleId": "llama2-training-oom",
+          "blockId": "[\"source-code\",1]",
+          "anchor": "source-code",
+          "quote": "@dataclass class ScriptArgument: ## model argument model_name: Optional[str] = field(default = \"beomi/llama-2-ko-70b\", metadata = {\"help\" : \"the model name\"}) ## train arguments batch_size: Optional[int] = field(default = 2, metadata = {\"help\" : \"the batch size\"}) gradient_accumulation_steps: Optional[int] = field(default = 2, metadata = {\"help\" : \"the gradient accumulation steps\"}) num_train_epochs: Optional[int] = field(default = 1, metadata = {\"help\" : \"the number of",
+          "hash": "afecc7cd0846559cae6a7f3264f3ac7a79cb69dce81d993310e43747d70abafe"
+        }
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "relation": "related_method",
+        "reason": "GPU 메모리 누수 사례와 4bit quantization 학습 중 OOM이 보고된 사례를 나란히 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "transformers-training-oom",
+          "blockId": "[\"error\",3]",
+          "anchor": "error",
+          "quote": "GPU allocated memory가 stable 하지 않고 지속적으로 증가하는 memory leakage problem",
+          "hash": "26c7eac5ed259a0dc838a8f227518e1c5fb58edc3d1074caa1ba865cdcb2352b"
+        },
+        "targetEvidence": {
+          "articleId": "qlora-troubleshooting",
+          "blockId": "[\"4bit-quantization\",25]",
+          "anchor": "4bit-quantization",
+          "quote": "결과 : 🚫OOM",
+          "hash": "59c2f9e19eec29e0d44345183cf410e244898ce1f26098f15cbf0dab1509ea8b"
         }
       }
     ]

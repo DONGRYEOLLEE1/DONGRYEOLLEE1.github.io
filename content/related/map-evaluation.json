@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "8dfaafb4d6330f540d46617abba24dc12db7b84e7b4542e1e85d79b2d335555a",
+    "inputHash": "c16003afb3382a44d3edddc2850b60c54b677c7a1bc6403555b982b2afdf4da2",
     "status": "verified",
     "candidates": [
       {
@@ -241,14 +241,14 @@
     "recommendations": [
       {
         "id": "book-spine",
-        "relation": "evaluation_comparison",
-        "reason": "COCO mAP 설명과 mAP50을 4TU 검증 세트에서 측정한 사례를 통해, AP 평가 설정의 차이를 살펴볼 수 있습니다.",
+        "relation": "application_example",
+        "reason": "mAP가 객체 탐지 정확도를 평가하는 방식과 함께, 책등 검출기의 mAP50 평가 조건을 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "map-evaluation",
-          "blockId": "[\"coco-map\",1]",
-          "anchor": "coco-map",
-          "quote": "요즘 생산되는 논문들은 COCO 데이터셋을 통해 결과값을 도출하려는 경향이있다. COCO mAP에선 101-point Interpolated AP 정의가 계산에 사용됩니다. COCO에서 AP는 다중 IoU에 대한 평균입니다.",
-          "hash": "22d1e0d2dec9961a7551c06580d34e94be943a6d39fccc3880ac220ae4d6426e"
+          "blockId": "[\"mapmean-average-precision\",1]",
+          "anchor": "mapmean-average-precision",
+          "quote": "AP는 Faster R-CNN, SSD와 같이 객체탐지의 정확도를 측정하는데있어서 가장 인기있는 metric이다. AP는 0과 1사이의 값을 가지는 recall을 통해 average precision값을 계산한다. 꽤나 복잡한 얘기로 들릴수 있겠지만 예시와 함께 설명하고자한다. 그전에, precision, recall, IoU에 대해 알아보자.",
+          "hash": "01b98da19a8d4cd15cc9fb7a64670351f90a987efd64d39a5808b9cab4a29f63"
         },
         "targetEvidence": {
           "articleId": "book-spine",
@@ -261,7 +261,7 @@
       {
         "id": "r-cnn",
         "relation": "related_method",
-        "reason": "AP 설명에서 IoU로 예측 경계를 판단하는 법을 익히고, R-CNN이 IoU 임계값으로 학습용 양성·음성 후보 영역을 구분하는 과정을 볼 수 있습니다.",
+        "reason": "객체 탐지의 AP에서 IoU 기준이 중요하다는 설명과 R-CNN의 후보 영역 학습에서 IoU로 양성·음성 샘플을 나누는 방식을 연결해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "map-evaluation",
           "blockId": "[\"iouintersection-over-union---fracintersectionunion\",1]",
@@ -280,7 +280,7 @@
       {
         "id": "fast-r-cnn",
         "relation": "evaluation_comparison",
-        "reason": "PASCAL VOC의 보간 AP 설명과 Fast R-CNN의 PASCAL VOC 결과를 함께 보며, 같은 벤치마크에서 지표와 성능 결과가 어떻게 연결되는지 살펴볼 수 있습니다.",
+        "reason": "PASCAL VOC의 보간 AP 설명과 Fast R-CNN의 PASCAL VOC mAP 결과를 함께 보며 평가 지표와 데이터셋을 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "map-evaluation",
           "blockId": "[\"interpolated-ap\",1]",
@@ -294,6 +294,25 @@
           "anchor": "끝",
           "quote": "기존 R-CNN 모델보다 학습 속도가 9배 이상 빠르며, 객체탐지시, 이미지 한 장당 0.3초(RP 추출 시간 포함)이 걸린다. PASCAL VOC 2021 데이터셋에서 mAP 값이 66%를 보이면서 감지 능력또한 R-CNN모델에 비해 향상된 모습을 보인다. 이외에도 Multi-task Loss를 사용해 single stage로 여러 모델을 학습시킬 수 있다는 점과 학습으로 인해 네트워크의 가중치값을 Backpropagation을 통해 update할 수 있다는 장점이 있다.",
           "hash": "2f7ebcdf5d1d1115077fd00d62dc7cc3037eada8a6dfd89dcfe2dc01be1c133b"
+        }
+      },
+      {
+        "id": "ohem",
+        "relation": "evaluation_comparison",
+        "reason": "PASCAL VOC의 AP 판정 기준과 OHEM의 PASCAL VOC 성능 보고를 연결해 평가 맥락을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "map-evaluation",
+          "blockId": "[\"interpolated-ap\",1]",
+          "anchor": "interpolated-ap",
+          "quote": "PASCAL VOC는 객체탐지 분야에서 굉장히 유명한 데이터셋이다. PASCAL VOC challenge를 위해, 만약 IoU 값이 0.5보다 크다면, 예측값은 positive일 것이다. 또한 만약 같은 객체에서 다중의 탐지가 감지된다면 첫 번째 객체에 대해선 양수로, 나머지는 음수로 계산될 것이다.",
+          "hash": "096a743491740a561b71c0e0aad31571dc130bd882ecd66503dfe38d469bc988"
+        },
+        "targetEvidence": {
+          "articleId": "ohem",
+          "blockId": "[\"abstract\",1]",
+          "anchor": "abstract",
+          "quote": "Object Detection 분야는 region-base ConvNet의 wave에 탑승해 엄청난 진보를 이루었습니다. 그러나 그것들의 학습 절차는 여전히 많은 heuristics과 연구진들이 직접 튜닝한 하이퍼파라미터를 포함하고 있습니다. 이에 본 연구진은 간단하나 놀랍게도 효율적인 region-based ConvNet 감지기인 OHEM 알고리즘을 발표합니다. 우리의 동기부여는 항상 감지 데이터셋들이 압도적으로 많은 쉬운 예의 수와 어려운 예의 적은 수였습니다. 이 어려운 예들의 자동적인 선택은 학습을 좀 더 효율적이고 효과적으로 작동되게 만들었습니다. **OHEM은 간단하며 직관적인 알고리즘이며 몇몇의 heuristic함과 공통으로 사용되는 하이퍼파라미터들을 제거**했습니다. 그러나 더 중요한것으로, PASCAL VOC 2007, 2012에서 OHEM은 일관되고 엄청난 detection 성능을 자랑합니다.",
+          "hash": "00f031a1a5c65e8b9afc39b8a1eedf58d780b6b8801e419dc16eb41162f746c9"
         }
       }
     ]

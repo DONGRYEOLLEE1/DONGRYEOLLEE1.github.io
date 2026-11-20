@@ -50,7 +50,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "67fe222be5b5fa322580a45382536f831acd605627dbfead6736de3629e34042",
+    "inputHash": "98746c956305682ef7abb97b2760b34870ad5795d5b8a8a6d275a1fcc51ded45",
     "status": "verified",
     "candidates": [
       {
@@ -253,7 +253,7 @@
       {
         "id": "ia3-implementation",
         "relation": "application_example",
-        "reason": "IA3에서 key·value와 중간 activation에 rescaling vector를 적용한다는 설명을 바탕으로, PEFT에 추가된 IA3를 직접 학습하는 예를 볼 수 있습니다.",
+        "reason": "IA3가 key·value와 중간 activation에 rescaling vector를 적용한다는 설명을 바탕으로, PEFT의 IA3 학습 사례를 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "ia3-paper",
           "blockId": "[\"peft-with-ia3\",6]",
@@ -270,34 +270,34 @@
         }
       },
       {
-        "id": "lora",
+        "id": "few-shot-learning",
         "relation": "related_method",
-        "reason": "IA3의 목표는 적은 파라미터만 업데이트하는 것이고, LoRA는 low-rank 업데이트를 할당하는 PEFT 방법으로 두 방식의 접근 차이를 살펴볼 수 있습니다.",
+        "reason": "IA3 연구가 few-shot fine-tuning과 in-context learning을 비교하므로, few-shot learning의 기본 개념과 구분을 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "ia3-paper",
-          "blockId": "[\"introduction\",6]",
-          "anchor": "introduction",
-          "quote": "본 연구의 목표는 적은 모델의 파라미터만을 업데이트 함으로써 novel 또는 unseen task에서 효과적인 성능을 가지는 모델을 만드는 것. T0모델과 다양한 T5모델을 파인튜닝하여 사용하였음.",
-          "hash": "5c12fe0f381bed246610cc54dc4ddc2c6036d01e863a7804fda10f3355f99e1f"
+          "blockId": "[\"unlikelihood-training-and-length-normalization\",1]",
+          "anchor": "unlikelihood-training-and-length-normalization",
+          "quote": "Few-shot fine-tuning 언어모델의 성능을 향상시키기 위해 2개의 loss term 발견. 연구진은 rank classification을 사용하였고 옳은 선택을 할당하는 모델의 가능성 뿐만 아니라 정답이 아닌 선택을 하는 모델을 할당하는 가능성도 참조하였음. 학습하는 동안 unlikelihood loss를 추가하는것을 고려하였음.",
+          "hash": "3c308a26c581a2d842a341ec797d2bc6176cc5f00bd967a0c51dc5df875ef9d6"
         },
         "targetEvidence": {
-          "articleId": "lora",
-          "blockId": "[\"low-rank-parameterized-update-matrices\",4]",
-          "anchor": "low-rank-parameterized-update-matrices",
-          "quote": "또한 inference과정에서 추가적은 latency가 필요없음.",
-          "hash": "a78a89f578ffc14ebac9b19fff988866758066e8751c40bb39b71c150e6d8deb"
+          "articleId": "few-shot-learning",
+          "blockId": "[\"few-shot-learning이-뭘까\",1]",
+          "anchor": "few-shot-learning이-뭘까",
+          "quote": "Few-shot learning (FSL)은 각 class에 대해 오직 몇가지만 레이블된 샘플들을 사용한 데이터의 새로운 카테고리를 사전학습 모델에 이용가능하게 한 머신러닝 framework입니다. 이건 meta-learning의 패러다임에서 파생된 개념입니다.",
+          "hash": "ffa507f2e57a0525bec922e6b18c3e13b6c40db50d211bdfbbfbc141d9e8b4c2"
         }
       },
       {
         "id": "prompt-tuning",
         "relation": "related_method",
-        "reason": "IA3와 prompt tuning은 task별 파라미터를 활용하는 PEFT 접근이지만, prompt tuning은 입력 앞에 조정 가능한 토큰을 붙여 학습합니다.",
+        "reason": "두 방법 모두 매개변수 효율적 적응을 다루며, prompt tuning은 사전학습 모델을 동결하고 입력 앞에 조정 가능한 토큰을 붙이는 방식입니다.",
         "sourceEvidence": {
           "articleId": "ia3-paper",
-          "blockId": "[\"introduction\",6]",
-          "anchor": "introduction",
-          "quote": "본 연구의 목표는 적은 모델의 파라미터만을 업데이트 함으로써 novel 또는 unseen task에서 효과적인 성능을 가지는 모델을 만드는 것. T0모델과 다양한 T5모델을 파인튜닝하여 사용하였음.",
-          "hash": "5c12fe0f381bed246610cc54dc4ddc2c6036d01e863a7804fda10f3355f99e1f"
+          "blockId": "[\"peft\",1]",
+          "anchor": "peft",
+          "quote": "PEFT는 모델을 학습할때 필요 메모리를 급격하게 줄여주는 역할을 함. 추가적으로 PEFT method는 mixed-task batches를 가능하게 만들어 줌. 예를들어, prompt tuning은 단일의 모델을 다양한 task에 단순하게 다른 prompt embedding을 각각의 batch에서 concat함으로써 적용 가능하게 만들어줌. 반면에 re-parameterize하는 PEFT method는 mixed-task batches 작업에 resource가 매우 많이 소모됨.",
+          "hash": "81224be22d9a508bf55075b821a23c6ebeee87a52f69e1d33e61ff58463ff14e"
         },
         "targetEvidence": {
           "articleId": "prompt-tuning",
@@ -305,6 +305,25 @@
           "anchor": "introduction",
           "quote": "이번 연구에선, prompt tuning 제안. 사전훈련된 전체 모델을 동결하고 downstream-task당 추가로 K개의 조정 가능한 토큰만 input-text 앞에 붙일 수 있도록 허용함. 이 soft-prompt는 end-to-end 방식으로 학습되었고 완전히 labeled dataset으로부터 signal을 압축할 수 있음. 이러한 방법론을 통해 few-shot prompts의 성능을 향상시키고 model-tuning과의 gap을 줄일 수 있었음. 동시에 단일의 사전학습된 모델은 모든 downstream-task에서 다시사용될 수 있으며 연구진은 동결된 모델들의 효율적인 serving benefits을 재학습시켰음.",
           "hash": "74471a37f36d116424ed1aabfe097aa4a0d1e8e0b0e18409834babc1e3e51b4c"
+        }
+      },
+      {
+        "id": "gpt-3",
+        "relation": "related_method",
+        "reason": "IA3의 few-shot ICL 비교를 이해하는 데, 프롬프트 예시로 추론하고 gradient 기반 학습 없이 여러 작업에 적용하는 접근을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "ia3-paper",
+          "blockId": "[\"few-shot-in-context-learning-icl\",1]",
+          "anchor": "few-shot-in-context-learning-icl",
+          "quote": "ICL은 레이블이 지정되지 않은 쿼리 예제와 함께 연결되고 프롬프트가 표시된 입력 대상 예제(\"샷\"이라고 함)를 레이블이 지정되지 않은 쿼리 예제와 함께 제공함으로써 모델을 유도하는 것을 목표로 합니다. ICL의 이점은 파인튜닝 없이 즉시 많은 task에 단일의 모델을 적용할 수 있는 점입니다. 이는 또한 mixed-task batches를 가능하게 만들어주며 데이터 배치의 여러 예시가 서로 다른 컨텍스트를 사용하여 서로 다른 작업에 해당하는 작업도 가능합니다.",
+          "hash": "5b1f5fc385ccf87fe5e4f88f5564e1e085e3976e8e120a70e87fd851b2644a26"
+        },
+        "targetEvidence": {
+          "articleId": "gpt-3",
+          "blockId": "[null,8]",
+          "anchor": null,
+          "quote": "few-shot learning : 소수의 예시들어 in-context learning",
+          "hash": "bb18cfb5353008284836b98c5656ef8077a0c05e8c92f1d7000b4cd2bc7d616c"
         }
       }
     ]

@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "d27db409c89a250885c6937fd7489d07d19f5578a820c9c786590a6487e50750",
+    "inputHash": "3f9b5860067f83f116f624a99e701c58f6bd6849d2c322561802f95b78c735b2",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "ia3-paper",
         "relation": "related_method",
-        "reason": "prompt tuning과 $(IA)^3$ 모두 적은 파라미터만 학습하는 PEFT로, prompt embedding을 따로 붙이는 방식과 비교해 mixed-task batch 적용의 차이를 배울 수 있습니다.",
+        "reason": "soft-prompt를 입력에 결합해 학습하는 방식과, prompt tuning을 task별 soft embedding을 붙이는 PEFT로 설명하는 내용을 통해 구현 방식을 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "prompt-tuning",
           "blockId": "[\"introduction\",4]",
@@ -261,7 +261,7 @@
       {
         "id": "dora",
         "relation": "related_method",
-        "reason": "prompt tuning은 입력에 soft token을 추가해 해당 임베딩을 학습하고, DoRA는 사전학습 가중치를 magnitude와 direction으로 나누어 파인튜닝하는 방식을 설명합니다.",
+        "reason": "입력에 학습 가능한 soft token을 추가하는 prompt tuning과, 프롬프트 토큰 벡터만 학습하는 방식을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "prompt-tuning",
           "blockId": "[\"introduction\",4]",
@@ -278,15 +278,34 @@
         }
       },
       {
-        "id": "qlora",
+        "id": "lora",
         "relation": "related_method",
-        "reason": "prompt tuning은 학습 가능한 soft token에 집중하고, QLoRA는 적은 trainable 파라미터를 쓰는 LoRA로 메모리를 줄여 두 PEFT 접근의 차이를 배울 수 있습니다.",
+        "reason": "프롬프트 토큰 임베딩을 학습하는 방식과 task별 소수 파라미터를 저장·불러오는 PEFT의 대안적 접근을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "prompt-tuning",
           "blockId": "[\"introduction\",4]",
           "anchor": "introduction",
           "quote": "이번 연구에선, prompt tuning 제안. 사전훈련된 전체 모델을 동결하고 downstream-task당 추가로 K개의 조정 가능한 토큰만 input-text 앞에 붙일 수 있도록 허용함. 이 soft-prompt는 end-to-end 방식으로 학습되었고 완전히 labeled dataset으로부터 signal을 압축할 수 있음. 이러한 방법론을 통해 few-shot prompts의 성능을 향상시키고 model-tuning과의 gap을 줄일 수 있었음. 동시에 단일의 사전학습된 모델은 모든 downstream-task에서 다시사용될 수 있으며 연구진은 동결된 모델들의 효율적인 serving benefits을 재학습시켰음.",
           "hash": "74471a37f36d116424ed1aabfe097aa4a0d1e8e0b0e18409834babc1e3e51b4c"
+        },
+        "targetEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "많은 사람들이 일부 매개 변수만 적용하거나 새로운 task를 위해 외부 모듈을 학습하여 이를 완화하려고 했음. 이렇게되면 task-specific한 파라미터의 숫자는 적게 저장되고 불러와짐. 이러한 방법은 Finetuning을 실패하거나 효율성과 모델 품질의 trade-off관계에서 벗어나지 못하였음.",
+          "hash": "f0c82209a5bbf501a166e1ed78190226ba448b1acd9cdc23a3cad6a87669d5e3"
+        }
+      },
+      {
+        "id": "qlora",
+        "relation": "related_method",
+        "reason": "soft prompt의 임베딩만 학습하는 방법과, 적은 학습 파라미터로 메모리 부담을 줄이는 LoRA 방식을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "prompt-tuning",
+          "blockId": "[\"prompt-tuning\",1]",
+          "anchor": "prompt-tuning",
+          "quote": "Prompt-tuning은 prompt $\\theta$로부터 파라미터화된 prompt $P$의 한계를 제거합니다. 대신 프롬프트에는 업데이트할 수 있는 전용 매개 변수인 $\\theta_{P}$가 존재합니다. 프롬프트 디자인에는 고정된 임베딩 어휘에서 프롬프트 토큰을 선택하는 작업이 포함되지만, 프롬프트 튜닝은 특수 토큰으로 구성된 고정 프롬프트를 사용하는 것으로 생각할 수 있으며, 이러한 프롬프트 토큰의 임베딩만 업데이트할 수 있습니다.",
+          "hash": "aefdbc8f6d9a88471c4487ed5bdcea6c483e748206c124a0dd48d026221ea311"
         },
         "targetEvidence": {
           "articleId": "qlora",

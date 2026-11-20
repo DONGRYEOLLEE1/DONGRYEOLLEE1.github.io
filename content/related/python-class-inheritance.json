@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "eb52d5b7a3926d5a9c058a2729c9bd36e20f3732c58eee22e7ba64b6f7702622",
+    "inputHash": "7b09a867c379f6f5579c382eb3f242c7ca92cbf20a1740540ebd05b0b17602b4",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "python-typing",
         "relation": "concept_explanation",
-        "reason": "추상 메서드의 query와 반환값에 붙은 타입 표기가 무엇을 뜻하는지 타입 어노테이션의 기본을 배울 수 있습니다.",
+        "reason": "추상 메서드의 매개변수와 반환형에 붙은 타입 표기가 어떤 역할을 하는지 타입 어노테이션과 타입 추상화 예시로 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "python-class-inheritance",
           "blockId": "[\"abstract-class\",1]",

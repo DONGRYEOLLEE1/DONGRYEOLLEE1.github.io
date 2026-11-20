@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "076a7d9b51da62956a5f895a34b8ccad752d396d447970ad63899d908c183fa2",
+    "inputHash": "0572956388617dedd8166b931671bb38714a0a8373a1914b35667721ae721921",
     "status": "verified",
     "candidates": [
       {
@@ -231,7 +231,7 @@
       {
         "id": "langgraph-structured-streaming",
         "relation": "application_example",
-        "reason": "대화 응답을 다음 요청의 messages에 추가하는 방식과 LangGraph에서 messages를 checkpointer로 관리하며 스트리밍하는 예를 비교해 배울 수 있습니다.",
+        "reason": "대화 이력을 assistant와 user 메시지로 누적해 후속 요청에 전달하는 방식이 LangGraph의 messages 입력과 memory checkpointer 구성에서 어떻게 쓰이는지 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "message-history",
           "blockId": "[\"message-history\",3]",

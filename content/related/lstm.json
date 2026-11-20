@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "2914bdc83346b79a0854bc93c71a5cdbbc858b22cc4618315557fe02c0317379",
+    "inputHash": "6202177203de2a8780e8c1ec8233816bce77cde0f124080283bd04233bc499bb",
     "status": "verified",
     "candidates": [
       {
@@ -229,9 +229,9 @@
     ],
     "recommendations": [
       {
-        "id": "rnn",
+        "id": "elmo",
         "relation": "related_method",
-        "reason": "RNN과 LSTM의 재귀적 구조를 비교하고, Truncated BPTT가 긴 시퀀스를 나누어 학습하는 방식을 배울 수 있습니다.",
+        "reason": "ELMO가 여러 층의 BiLSTM으로 문맥 정보를 반영한 단어 표현을 만드는 방식을 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "lstm",
           "blockId": "[\"abstract\",3]",
@@ -240,30 +240,11 @@
           "hash": "69cd541f916150c132a1b504c0258f66d1ba0308bfb5d03b8894bacff5161701"
         },
         "targetEvidence": {
-          "articleId": "rnn",
-          "blockId": "[\"truncated-bptt\",1]",
-          "anchor": "truncated-bptt",
-          "quote": "장기기억을 적절한 단위로 쪼개서 학습시키자는 것이 아이디어이며, 이는 앞서 기술했던 vanishing and exploding problem을 해결하면서, 동시에 특정 input에 적합한 시간 window를 사용하자는 것입니다.",
-          "hash": "03106d093fdb6599ce762757599726e42d591ca769817dee25ba237d71b4e38a"
-        }
-      },
-      {
-        "id": "elmo",
-        "relation": "related_method",
-        "reason": "LSTM의 gate가 과거 정보를 조절하는 방식을 바탕으로, 여러 층의 BiLSTM hidden state를 결합하는 ELMo의 표현을 살펴볼 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "lstm",
-          "blockId": "[\"step-1-forget-gate--과거-정보를-버릴지말지-결정하는-과정\",1]",
-          "anchor": "step-1-forget-gate--과거-정보를-버릴지말지-결정하는-과정",
-          "quote": "과거의 정보를 통해 맥락을 고려하는것도 중요하지만, 그 정보가 필요하지 않을 경우에는 과감히 버리는 것도 중요합니다. 이전 Input($h_{t-1}$)과 현재 Input($x_t$)을 넣어, cell-state로 가는 과거 정보값이 나옵니다. $h_{t-1}$과 $x_t$를 받아 sigmoid를 취해준 값이 바로 forget gate가 내보내는 값이 됩니다.",
-          "hash": "deaf93fd4a8e2ff27b693f4e9e5cb386c3e497abd74be07f52728cac5a2ec411"
-        },
-        "targetEvidence": {
           "articleId": "elmo",
-          "blockId": "[\"특징\",3]",
-          "anchor": "특징",
-          "quote": "기존의 방법들과는 다르게 Top level의 LSTM정보만을 이용하지 않고, 각 level의 hidden state들을 조합하여 새로운 단어 representation을 만들어냅니다.",
-          "hash": "83cfe71497e0095e362553af06e62a41ee7c74f1fb728e404b4fe3acc0e05d39"
+          "blockId": "[\"elmo\",1]",
+          "anchor": "elmo",
+          "quote": "기존 word2vec, Glove 등에 비해 context 정보를 반영하는 Pre-training 방법을 제시합니다. 여러층의 BiLSTM을 이용해 Language Model을 하며, 만들어진 hidden-state를 적절하게 조합해 새로운 word representation을 만들어냅니다.",
+          "hash": "0536e6bb9b159cb5b8c31469299a3fb57f0c2d5b648124df1af19c123e28974b"
         }
       }
     ]

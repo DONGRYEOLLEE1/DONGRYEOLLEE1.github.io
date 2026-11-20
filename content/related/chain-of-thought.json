@@ -50,7 +50,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "e09407ed82c64daa0e5fe94d81a138e638007fa0f13fc4a2476614365559d880",
+    "inputHash": "3cc191110cfe47254a83fb7bb8ac0e488f95c17dabf6ebb8bd8a231ae51e082c",
     "status": "verified",
     "candidates": [
       {
@@ -253,13 +253,13 @@
       {
         "id": "prompt-engineering",
         "relation": "related_method",
-        "reason": "CoT는 중간 추론 단계를 포함한 프롬프트를 구성하고, 여기서는 프롬프트의 instruction·context·입출력 indicator 구성법을 배울 수 있습니다.",
+        "reason": "CoT prompting이 복잡한 추론을 단계적으로 풀도록 하는 방식과, 프롬프트에 instruction·context·입출력 표시자를 구성하는 방법을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "chain-of-thought",
-          "blockId": "[\"introduction\",4]",
-          "anchor": "introduction",
-          "quote": "전통적인 FSL은 추론 능력에서 형편없는 결과를 내놓았고 종종 모델 scale을 늘렸음에도 불구하고 성능이 올라가지 않았음. 이에 연구진은 위의 2가지 아이디어를 통해 그들의 한계점을 타파한 해결책을 제시하고 특히 추론 능력 task에서의 Few-shot prompting 능력에 대해 발견하고 prommpt를 input, CoT, output 총 3가지 요소로 구성하였음. 위는 그 예시임.",
-          "hash": "756010774d3d0a5ae6afe3afef7a7f70f6e324af46fb18c0cf928b7e33d5b5d7"
+          "blockId": "[\"chain-of-thought-prompting\",1]",
+          "anchor": "chain-of-thought-prompting",
+          "quote": "여러 단계를 거쳐야하는 수학 문제와 같은 복잡한 추론을 통해 문제를 푸는 절차를 연구진은 고려하였음. 이건 전형적인 문제를 하나하나 분해하여 정답에 접근하는 방식임. 이 논문의 목표는 LLM에 유사한 CoT를 생성할 수 있는 기능을 부여하는 것입니다. 일관된 일련의 중간 추론 단계를 생성할 수 있는 능력을 LLM에 부여하는 것입니다.",
+          "hash": "82ac1138b000944e339224661220eee68aa8b30584e7b60c99240027c33e995e"
         },
         "targetEvidence": {
           "articleId": "prompt-engineering",
@@ -270,9 +270,9 @@
         }
       },
       {
-        "id": "alphallm",
+        "id": "ia3-paper",
         "relation": "related_method",
-        "reason": "CoT가 중간 추론 단계를 생성하는 방식이라면, 이 연구는 LLM이 응답 품질을 비평하고 평가하도록 하는 접근을 살펴봅니다.",
+        "reason": "CoT prompting의 중간 추론 단계 생성과 ICL의 예시를 프롬프트에 넣어 모델을 유도하는 방식을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "chain-of-thought",
           "blockId": "[\"chain-of-thought-prompting\",1]",
@@ -281,23 +281,23 @@
           "hash": "82ac1138b000944e339224661220eee68aa8b30584e7b60c99240027c33e995e"
         },
         "targetEvidence": {
-          "articleId": "alphallm",
-          "blockId": "[\"related-work\",2]",
-          "anchor": "related-work",
-          "quote": "LLM Self-improving Self-improving의 중요한 부분은 좋은 response와 그렇지 못한 것에 대한 잘 분별하는 능력을 어떻게 얻을것인가 하는 문제입니다. 최초의 연구에서 이 문제를 잘 다루기 위해 LLM에 다양한 task에 대한 input query들과 그에 상응하는 output을 생성하도록 요청하였으며 그 이후 수작으로 직접 실증적인 rule에 의해 의존하였으며 그 이후의 연구에선 몇가지 원칙들을 정하고 guidance를 정해 LLM에 response의 품질 직접 평가하게 만들었습니다. 연구자들은 LLM이 input 데이터에 대해 직접 원칙들을 지정하길 원했습니다. 그러나 이를 위해서는 LLM이 각 특정 사례에 대해 이러한 원칙을 적용하고 올바른 판단을 내릴 수 있는 강력한 능력이 필요합니다.",
-          "hash": "71a65d19d117fd9a87d77ad8eb8f80c1fd784bcba9ae0642338b807188d0b0ce"
+          "articleId": "ia3-paper",
+          "blockId": "[\"few-shot-in-context-learning-icl\",1]",
+          "anchor": "few-shot-in-context-learning-icl",
+          "quote": "ICL은 레이블이 지정되지 않은 쿼리 예제와 함께 연결되고 프롬프트가 표시된 입력 대상 예제(\"샷\"이라고 함)를 레이블이 지정되지 않은 쿼리 예제와 함께 제공함으로써 모델을 유도하는 것을 목표로 합니다. ICL의 이점은 파인튜닝 없이 즉시 많은 task에 단일의 모델을 적용할 수 있는 점입니다. 이는 또한 mixed-task batches를 가능하게 만들어주며 데이터 배치의 여러 예시가 서로 다른 컨텍스트를 사용하여 서로 다른 작업에 해당하는 작업도 가능합니다.",
+          "hash": "5b1f5fc385ccf87fe5e4f88f5564e1e085e3976e8e120a70e87fd851b2644a26"
         }
       },
       {
         "id": "gpt-3",
         "relation": "related_method",
-        "reason": "CoT는 few-shot 예시를 활용한 prompting을 다루며, GPT-3 글은 자연어 지시와 적은 demonstration을 통한 in-context learning을 설명합니다.",
+        "reason": "CoT prompting이 few-shot 예시를 활용하는 방식과 in-context learning의 개념을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "chain-of-thought",
-          "blockId": "[\"introduction\",3]",
-          "anchor": "introduction",
-          "quote": "LLM은 prompting을 통해 in-context FSL의 흥미로운 전망을 제공한다. 매 다른 task를 위한 model checkpoint (FT) 대신에 단조로운 prompt를 모델에 질의할 수 있음. 놀랍게도 단순한 QA task에서 성공적적인 실험을 거뒀음.",
-          "hash": "0779db3ba324e49d34539e6cd03c91f7c4639cb22cc4b1332de76f04dceafa12"
+          "blockId": "[\"chain-of-thought-prompting\",5]",
+          "anchor": "chain-of-thought-prompting",
+          "quote": "CoT는 많은 수학 문제, commonsense 추론문제, symbolic manipluation 그리고 잠재적으로 적용가능한 언어로된 모든 task에서 사용되어 질 수 있습니다.",
+          "hash": "b274720bffed42d40bc46a9ea917df37e17229e59b042d5b9bf1a594c91b8eea"
         },
         "targetEvidence": {
           "articleId": "gpt-3",

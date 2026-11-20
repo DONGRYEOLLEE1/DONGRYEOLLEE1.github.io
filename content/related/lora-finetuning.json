@@ -61,7 +61,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "89c66a2f40dcda459e2267dd88ac5006039c52762fcc99f97d5b5166f8d8ade3",
+    "inputHash": "4dfd08e388ae9be85b882b6630164d5cbdf1ff9c6d5cc248f3d684ecae72bbb7",
     "status": "verified",
     "candidates": [
       {
@@ -262,47 +262,9 @@
     ],
     "recommendations": [
       {
-        "id": "lora",
-        "relation": "concept_explanation",
-        "reason": "LoRA가 dense layer의 rank decomposition matrix를 학습하고 기존 weight를 고정하는 원리를 설명해, 설정의 의미를 이해할 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "lora-finetuning",
-          "blockId": "[\"model\",3]",
-          "anchor": "model",
-          "quote": "# finetune.py line 46 lora_dropout: float = 0.05, lora_target_modules: List[str] = [ \"query_key_value\" ], ... # finetune.py line 111 model = AutoModelForCausalLM.from_pretrained( base_model, load_in_8bit=True, torch_dtype=torch.float16, device_map=device_map, ) tokenizer = AutoTokenizer.from_pretrained(base_model)",
-          "hash": "e6f052c3acf21c2110ce132b28383a9a970cbee6e5bfacfbe40985d2b3a306d8"
-        },
-        "targetEvidence": {
-          "articleId": "lora",
-          "blockId": "[\"introduction\",3]",
-          "anchor": "introduction",
-          "quote": "학습된 과도하게 매개변수화된 모델이 실제로 낮은 performance를 낸다는 연구결과에 영감을 받음. 낮은 intrinsic rank를 모델을 적용하는동안 weights가 바뀐다는 가설을 세움. LoRA는 간접적으로 dense layer의 rank decomposition matrix를 최적화함으로써 NN에서 몇몇의 dense layer들을 학습할 수 있게 만들어줌(이 과정에서 weight는 froze).",
-          "hash": "3cba5587203ea62e143ba4ec9ef423450571ae6976433824bbd5b3347210f7ac"
-        }
-      },
-      {
-        "id": "peft-target-modules",
-        "relation": "concept_explanation",
-        "reason": "GPT-NeoX의 LoRA 대상 모듈을 query_key_value로 제시해, 파인튜닝 설정의 대상 모듈을 확인할 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "lora-finetuning",
-          "blockId": "[\"model\",3]",
-          "anchor": "model",
-          "quote": "# finetune.py line 46 lora_dropout: float = 0.05, lora_target_modules: List[str] = [ \"query_key_value\" ], ... # finetune.py line 111 model = AutoModelForCausalLM.from_pretrained( base_model, load_in_8bit=True, torch_dtype=torch.float16, device_map=device_map, ) tokenizer = AutoTokenizer.from_pretrained(base_model)",
-          "hash": "e6f052c3acf21c2110ce132b28383a9a970cbee6e5bfacfbe40985d2b3a306d8"
-        },
-        "targetEvidence": {
-          "articleId": "peft-target-modules",
-          "blockId": "[null,1]",
-          "anchor": null,
-          "quote": "# peft/utils/other.py in line 328 TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING = { \"t5\": [\"q\", \"v\"], \"mt5\": [\"q\", \"v\"], \"bart\": [\"q_proj\", \"v_proj\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"blip-2\": [\"q\", \"v\", \"q_proj\", \"v_proj\"], \"opt\": [\"q_proj\", \"v_proj\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"value\"], \"xlm-roberta\": [\"query\", \"value\"], \"electra\":",
-          "hash": "b0dc93edb070d31e4f57be2457664c20130561af39054733ee01cfb9f5be00be"
-        }
-      },
-      {
         "id": "polyglot-lora-troubleshooting",
         "relation": "related_method",
-        "reason": "같은 Polyglot-ko 모델과 query_key_value LoRA 설정 사례에서 adapter 파일 용량 문제 및 PEFT 버그 의심 내용을 확인할 수 있습니다.",
+        "reason": "Polyglot-ko에 query_key_value를 대상으로 LoRA를 적용하는 설정과 adapter 파일 용량 문제를 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "lora-finetuning",
           "blockId": "[\"training\",1]",
@@ -316,6 +278,44 @@
           "anchor": "issue",
           "quote": "3️⃣ adapter_model.bin 파일의 용량이 443kb로 저장되었고 해당 이슈 조사 결과, peft의 버젼 문제로 인한 버그가 생긴듯함",
           "hash": "6edc0d6b44a26d1ecadb94476ede84e3d9c3c56f0ebb536eb2f4812f254185f7"
+        }
+      },
+      {
+        "id": "lora",
+        "relation": "concept_explanation",
+        "reason": "파인튜닝에서 LoRA를 적용한 구현을 바탕으로, LoRA가 가중치를 고정하고 저랭크 행렬을 학습하는 방식을 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "lora-finetuning",
+          "blockId": "[\"training\",1]",
+          "anchor": "training",
+          "quote": "python finetune.py \\ --base_model '../model_file/polyglot-ko-5.8b' \\ --data_path './ko_alpaca_data.json' \\ --output_dir './output' \\ --batch_size 128 \\ --mircro_batch_size 4 \\ --num_epochs 3 \\ --learning_rate 2e-5 \\ --cutoff_len 512 \\ --val_set_size 2000 \\ --lora_r 8 \\ --lora_alpha 16 \\ --lora_dropout 0.05 \\ --lora_target_modules '[query_key_value]' \\ --train_on_inputs \\ --group_by_length",
+          "hash": "1d3ec647d3fc9aa157a76778d7d0beb955bd87a846aa384701e66384ac2707f9"
+        },
+        "targetEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "학습된 과도하게 매개변수화된 모델이 실제로 낮은 performance를 낸다는 연구결과에 영감을 받음. 낮은 intrinsic rank를 모델을 적용하는동안 weights가 바뀐다는 가설을 세움. LoRA는 간접적으로 dense layer의 rank decomposition matrix를 최적화함으로써 NN에서 몇몇의 dense layer들을 학습할 수 있게 만들어줌(이 과정에서 weight는 froze).",
+          "hash": "3cba5587203ea62e143ba4ec9ef423450571ae6976433824bbd5b3347210f7ac"
+        }
+      },
+      {
+        "id": "peft-target-modules",
+        "relation": "concept_explanation",
+        "reason": "GPT-NeoX의 query_key_value가 PEFT에서 LoRA 대상으로 매핑된 근거를 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "lora-finetuning",
+          "blockId": "[\"training\",1]",
+          "anchor": "training",
+          "quote": "python finetune.py \\ --base_model '../model_file/polyglot-ko-5.8b' \\ --data_path './ko_alpaca_data.json' \\ --output_dir './output' \\ --batch_size 128 \\ --mircro_batch_size 4 \\ --num_epochs 3 \\ --learning_rate 2e-5 \\ --cutoff_len 512 \\ --val_set_size 2000 \\ --lora_r 8 \\ --lora_alpha 16 \\ --lora_dropout 0.05 \\ --lora_target_modules '[query_key_value]' \\ --train_on_inputs \\ --group_by_length",
+          "hash": "1d3ec647d3fc9aa157a76778d7d0beb955bd87a846aa384701e66384ac2707f9"
+        },
+        "targetEvidence": {
+          "articleId": "peft-target-modules",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "# peft/utils/other.py in line 328 TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING = { \"t5\": [\"q\", \"v\"], \"mt5\": [\"q\", \"v\"], \"bart\": [\"q_proj\", \"v_proj\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"blip-2\": [\"q\", \"v\", \"q_proj\", \"v_proj\"], \"opt\": [\"q_proj\", \"v_proj\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"value\"], \"xlm-roberta\": [\"query\", \"value\"], \"electra\":",
+          "hash": "b0dc93edb070d31e4f57be2457664c20130561af39054733ee01cfb9f5be00be"
         }
       }
     ]

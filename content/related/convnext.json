@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "8d3a0193be82f965ed5cff3f98f598636430f53ab0b531d74d280e11542ee860",
+    "inputHash": "1aef881cffd6862f66610776f230fb83939e2e71f265666f093b1ed89aaf0276",
     "status": "verified",
     "candidates": [
       {
@@ -225,28 +225,9 @@
     ],
     "recommendations": [
       {
-        "id": "swin-transformer",
-        "relation": "related_method",
-        "reason": "계층적 feature map을 만드는 Swin과 stage별 해상도를 갖는 ConvNet의 설계 방식을 비교해 볼 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "convnext",
-          "blockId": "[\"의의\",1]",
-          "anchor": "의의",
-          "quote": "ConvNet의 재부흥. Attention 모듈을 사용하지 않은 순수하게 Conv-layer를 사용하여 최근 Transformer 계열 모델을 따라잡은 것",
-          "hash": "7024622a0f1f12ff9187da54180f953fc67335e190d88bbc82ebd54a51d0d2d0"
-        },
-        "targetEvidence": {
-          "articleId": "swin-transformer",
-          "blockId": "[\"swin-transformer\",1]",
-          "anchor": "swin-transformer",
-          "quote": "더 깊은 레이어들에서 이미지 패치를 결합함으로써 계층적인 피쳐맵을 쌓아갈 수 있다",
-          "hash": "3f38c07a7a4eabd1fd18f2c2d5adb144e6e16d03e84fd9f7de2a782036b8b638"
-        }
-      },
-      {
         "id": "vit",
-        "relation": "related_method",
-        "reason": "ConvNet에 ViT와 유사한 학습 방식을 적용한 설계와 이미지를 패치 임베딩으로 바꾸는 ViT 입력 방식을 함께 살펴볼 수 있습니다.",
+        "relation": "evaluation_comparison",
+        "reason": "ConvNeXt는 ViT와 유사한 학습 방식을 적용한 ResNet-50을 비교했고, ViT는 이미지 패치를 토큰처럼 Transformer에 넣어 이미지 분류를 학습합니다.",
         "sourceEvidence": {
           "articleId": "convnext",
           "blockId": "[\"modernizing-a-convnet-a-roadmap\",1]",
@@ -263,22 +244,22 @@
         }
       },
       {
-        "id": "resnext",
+        "id": "swin-transformer",
         "relation": "related_method",
-        "reason": "ConvNet을 현대화하며 ResNeXt의 grouped convolution을 적용한 내용과 ResNeXt의 split-transform-merge 모듈 설명을 연결해 볼 수 있습니다.",
+        "reason": "ConvNeXt는 stage 사이에 다운샘플링 레이어를 두며, Swin Transformer는 이미지 패치를 결합해 계층적 피처맵을 만듭니다.",
         "sourceEvidence": {
           "articleId": "convnext",
-          "blockId": "[\"resnext-ify\",1]",
-          "anchor": "resnext-ify",
-          "quote": "이 파트에서 연구진은 vanilla ResNet보단 FLOPs과 정확도에서 더 좋은 성능을 보이는 ResNeXt의 아이디어를 적용시켰습니다. Grouped Convolution 은 메인 구성요소입니다. 또한 ResNeXt의 guiding principle은 더 많은 그룹과 확장된 width를 사용하는 것 입니다.",
-          "hash": "c0fa7e9c3be7a64728b28be27ad5a39c9a3123ea79152269ed1b87403539caa1"
+          "blockId": "[\"micro-design\",13]",
+          "anchor": "micro-design",
+          "quote": "ResNet에선 공간적인 다운샘플링은 각 stage에서 residual block의 앞단에 붙여졌고, Swin-T에선 분리된 다운샘플링 레이어는 2개의 stage사이에 추가되어졌음",
+          "hash": "909faac55480d1980ac92b61f85f404c9d69c5778bd8449a928cfb19f0f9f583"
         },
         "targetEvidence": {
-          "articleId": "resnext",
-          "blockId": "[\"introduction\",4]",
-          "anchor": "introduction",
-          "quote": "이 논문에선 VGG-net과 ResNet의 layer를 반복하는 전략과 같은 간단한 구조를 제안함과 동시에 split-transform-merge 전략을 쉽게 적용하는 방식에 대해 제안. ResNeXt의 모듈은 transformation의 set을 나타내며 각 낮은 차원의 임베딩에서의 아웃풋은 합계로 집계됨. 연구진은 집계되어지는 transformation들은 모두 같은 toplogy를 가진다는 단순한 아이디어를 추구함. 이 디자인은 특별한 form 없이 어떠한 transformation의 큰 개수가 확장되어지는 걸 가능케 만들어줌.",
-          "hash": "f1d9565b04589dbb39200958584244f0ba3bef00bad3ef7f540fc5ae3cf32e09"
+          "articleId": "swin-transformer",
+          "blockId": "[\"swin-transformer\",1]",
+          "anchor": "swin-transformer",
+          "quote": "더 깊은 레이어들에서 이미지 패치를 결합함으로써 계층적인 피쳐맵을 쌓아갈 수 있다",
+          "hash": "3f38c07a7a4eabd1fd18f2c2d5adb144e6e16d03e84fd9f7de2a782036b8b638"
         }
       }
     ]

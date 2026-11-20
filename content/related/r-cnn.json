@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "367049c1d758e693171757ccdc77354671294ea83c452ae0acb51bd8dd4a25c6",
+    "inputHash": "dd90a5a8958731b987b15c56995bab8112753277a62df362d9380c7bc543fe9a",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "faster-r-cnn",
         "relation": "related_method",
-        "reason": "R-CNN은 후보 영역마다 fine-tuned CNN으로 특징을 추출하고, Faster R-CNN은 사전학습된 CNN에서 특징 맵을 얻어 RPN 후보 영역을 처리하는 과정을 설명합니다.",
+        "reason": "R-CNN은 후보 영역마다 CNN 특징을 추출하지만, Faster R-CNN은 RPN에서 뽑은 후보를 Fast R-CNN에 전달해 특징 추출과 검출을 잇는 방식을 보여줍니다.",
         "sourceEvidence": {
           "articleId": "r-cnn",
           "blockId": "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
@@ -252,16 +252,16 @@
         },
         "targetEvidence": {
           "articleId": "faster-r-cnn",
-          "blockId": "[\"preview\",4]",
+          "blockId": "[\"preview\",3]",
           "anchor": "preview",
-          "quote": "원본이미지를 pre-trained CNN 모델에 입력해 Feature Map를 얻음 (end-to-end로 학습)",
-          "hash": "0d7862ca3c9fad4598532b02a6cfedd5094f1b6bcef696fa8a3e5b07ce503ed5"
+          "quote": "RPN에서 RP를 추출하고 이를 Fast R-CNN 네트워크에 전달하여 객체의 class와 위치를 예측한다. 이를 통해 모델의 전체 과정이 GPU상에서 동작하여 bottleneck 현상이 발생하지 않으며, end-to-end로 네트워크를 학습시키는 것이 가능해진다.",
+          "hash": "acf2b3fbc6e03337fb83d165649805cf94494ee777cf43f24e6071865bac4678"
         }
       },
       {
         "id": "fast-r-cnn",
         "relation": "related_method",
-        "reason": "R-CNN의 후보 영역별 CNN 특징 추출과 Fast R-CNN의 이미지당 한 번의 입력 및 RoI pooling 방식을 비교해 처리 차이를 배울 수 있습니다.",
+        "reason": "R-CNN의 후보 영역별 CNN 학습과 비교해 Fast R-CNN은 이미지 한 장에서 특징을 뽑고 RoI pooling과 multi-task loss로 학습하는 개선을 설명합니다.",
         "sourceEvidence": {
           "articleId": "r-cnn",
           "blockId": "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
@@ -280,7 +280,7 @@
       {
         "id": "object-detection-basics",
         "relation": "related_method",
-        "reason": "R-CNN에서 Selective Search로 후보 영역을 추출하는 과정과 픽셀 유사도로 후보 박스를 만드는 원리를 함께 살펴볼 수 있습니다.",
+        "reason": "R-CNN의 Selective Search 후보 영역 추출과 워핑 과정을 설명하며, 후보 영역이 어떻게 만들어지는지 이해하는 데 도움이 됩니다.",
         "sourceEvidence": {
           "articleId": "r-cnn",
           "blockId": "[\"region-proposal-selective-search\",1]",
@@ -297,22 +297,22 @@
         }
       },
       {
-        "id": "yolo-v1",
-        "relation": "related_method",
-        "reason": "R-CNN의 후보 영역별 처리와 달리 YOLO는 이미지 전체 특징으로 박스를 예측하는 단일 신경망 방식을 설명합니다.",
+        "id": "book-spine",
+        "relation": "application_example",
+        "reason": "R-CNN에서 다루는 박스 탐지와 중복 제거가 책등 판독 시스템에서 탐지 박스를 합치고 책 수를 세는 데 적용된 사례를 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "r-cnn",
-          "blockId": "[\"abstract\",1]",
-          "anchor": "abstract",
-          "quote": "Object Detector는 Object의 coordinate를 찾고(Localization), class를 분류(Classification)하는 작업을 진행한다. R-CNN은 이를 순차적으로 진행하는 2 Stage Detector 로, 딥러닝을 적용한 최초의 Object Detector다. R-CNN모델은 Object Detection 혹은 Inference(추론)시, 아래와 같은 순서에 의해 동작한다.",
-          "hash": "4ae1fc1530ef74e24391b17d1338950c656044da3cb13cb70ce563979e1142ad"
+          "blockId": "[\"nmsnon-maximum-suppression\",17]",
+          "anchor": "nmsnon-maximum-suppression",
+          "quote": "NMS 알고리즘은 Confidence-score 임계값이 높을수록, IoU 임계값이 낮을수록 많은 box가 제거된다. 위 과정을 통해 겹쳐진 box를 제거하고 최소한의 최적의 B.B를 반환한다. Frankly speaking, 두 박스의 교집합을 합집합으로 나눠준 값이 IoU. 논문에서는 IoU가 0.5보다 크면 동일한 물체를 대상으로 한 박스로 판단하고 NMS를 적용한다.",
+          "hash": "63c2fb237583946957b0b084fed6f0b3af7fe84b336f3a79b47ccbc7fd80c042"
         },
         "targetEvidence": {
-          "articleId": "yolo-v1",
-          "blockId": "[\"unified-detection\",1]",
-          "anchor": "unified-detection",
-          "quote": "YOLO는 object detection의 개별요소를 single neural network로 통합한 모델이다. 각각의 bounding box를 예측하기 위해 이미지 전체의 특징을 활용한다. 이러한 YOLO의 디자인 덕분에 높은 정확성을 유지하면서 end-to-end 학습과 real-time object detection이 가능하다.",
-          "hash": "2f76cb73ddcd4a62802c6767af8d23743790d711debf235a3ab1196457b30497"
+          "articleId": "book-spine",
+          "blockId": "[\"system\",2]",
+          "anchor": "system",
+          "quote": "A photo is first downscaled so that its long side is at most 1,600 px. A one-class oriented bounding box (OBB) detector finds the spines. Near-duplicate boxes are merged (Section 3.5), and the number of boxes scoring 0.4 or more is the book count. Each box is then cut out with a margin of 8% of its short side, rotated so that its long side is vertical, and upscaled if its short side is below 96 px.",
+          "hash": "47a6b7f2df9dece4417da0ca5bd70c47f8e2d281e5d4511a6cf0cf29c50c19b1"
         }
       }
     ]

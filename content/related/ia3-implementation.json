@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "ae8a0d4ad2e13da872ed4341e83b1dc06a0125b9c00aff4930f6461d450bcebd",
+    "inputHash": "6cbd95820bb3fb173d86cee818c06fcc4c0318a197df53c78ba50936af42b184",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "ia3-paper",
         "relation": "concept_explanation",
-        "reason": "IA3로 학습을 진행하기 전에, 논문 설명에서 key·value와 feed-forward activation에 학습된 재조정 벡터를 적용하는 방식을 확인할 수 있습니다.",
+        "reason": "IA3 학습 코드에서 쓰는 방식이 활성화값을 학습된 벡터로 재조정하는 원리와 어떤 벡터를 적용하는지 설명합니다.",
         "sourceEvidence": {
           "articleId": "ia3-implementation",
           "blockId": "[\"ia3\",1]",

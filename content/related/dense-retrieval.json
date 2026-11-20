@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "c7316f03dcc3e2035b68bd2be431664ff70aa3d5c96ed54f95b87a5e5bb91a35",
+    "inputHash": "e3f34b2934e060421576c4fb1ec8973cfa264ced5e43336499c58c736444d9df",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "semantic-search",
         "relation": "related_method",
-        "reason": "Dense Retrieval이 텍스트 임베딩으로 유사한 문서를 찾는 원리와 임베딩 벡터의 유사성 개념을 함께 살펴봅니다.",
+        "reason": "Dense Retrieval이 임베딩 벡터로 유사 문서를 찾는 방식과 의미 검색에서 벡터 유사도를 활용하는 개념을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "dense-retrieval",
           "blockId": "[\"querying-the-dataset-using-dense-retrieval\",1]",
@@ -261,7 +261,7 @@
       {
         "id": "reranking",
         "relation": "related_method",
-        "reason": "Dense Retrieval과 함께 언급된 Reranking이 쿼리와 응답의 관련성 점수로 검색 결과를 정렬하는 방법을 배웁니다.",
+        "reason": "Dense Retrieval과 Reranking이 의미 기반 검색에서 어떤 방식으로 쓰이고, Reranking이 검색 결과를 관련성 점수로 재정렬하는지 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "dense-retrieval",
           "blockId": "[\"dense-retrieval\",3]",

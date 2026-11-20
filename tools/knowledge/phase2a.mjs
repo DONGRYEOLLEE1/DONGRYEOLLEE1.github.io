@@ -34,6 +34,7 @@ export const rankInstruction = [
   'Reject shared background hardware or broad subject alone. Use evaluation_comparison only when the excerpts give comparable evaluation constructs.',
   'Use only claims literally supported by the TWO SELECTED quotes. Do not add numbers from other blocks; avoid numbers unless essential.',
   'Write one short Korean sentence for a reader explaining what they will learn, without Source/Target placeholders.',
+  'The reason must be in Korean (한국어, written in Hangul) even when the articles are in English. Never write it in Japanese or Chinese.',
   'Return each candidate ID once. For a shared concept: source applies / target explains means concept_explanation; the reverse means application_example.',
   'Use only relationOptions for that candidate. Write one Korean sentence under 130 characters. Avoid Source, Target, 소스, 타겟. Keep acronyms as written.',
   'Return JSON {"recommendations":[{"id":"target-id","relation":"related_method","reason":"...","sourceBlock":0,"targetBlock":0}]}.',
@@ -435,6 +436,9 @@ export function storedRankHash(ctx, id, entry, model, settings, facts) {
   return fingerprint(id, rows, model, settings);
 }
 
+// Readers see the reason as written. The model has answered an English article in Japanese.
+const koreanSentence = (text) => /[\uac00-\ud7a3]/.test(text) && !/[\u3040-\u30ff]/.test(text);
+
 export function readRanking(id, task, response) {
   const rows = response?.recommendations;
   if (!Array.isArray(rows) || rows.length > 4) throw new Error('Expected 0–4 recommendations');
@@ -449,6 +453,7 @@ export function readRanking(id, task, response) {
       typeof row.reason !== 'string' ||
       !row.reason.trim() ||
       row.reason.length > 400 ||
+      !koreanSentence(row.reason) ||
       !Number.isInteger(row.sourceBlock) ||
       !Number.isInteger(row.targetBlock) ||
       !pair.sourceBlocks[row.sourceBlock] ||

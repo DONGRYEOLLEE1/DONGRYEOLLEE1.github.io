@@ -55,7 +55,7 @@
     ]
   },
   "entry": {
-    "inputHash": "1d255700aa82cc2a083a98b432255f0fc0b6d56e0997da440b795d9d912be3dc",
+    "inputHash": "f8836da978cb7bc659a755c3e55cdaeeb6540c511981bf94e93f33758092fb9c",
     "status": "verified",
     "candidates": [
       {
@@ -258,7 +258,7 @@
       {
         "id": "dora",
         "relation": "related_method",
-        "reason": "DoRA가 LoRA를 바탕으로 한다는 설명과 가중치 크기·방향을 분해해 미세조정하는 원리를 함께 살펴봅니다.",
+        "reason": "DoRA가 LoRA에 크기와 방향 요소를 적용하는 방식을 설명해, PEFT의 DoRA 지원 내용과 구현 원리를 함께 이해할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "peft-features-090",
           "blockId": "[\"dora-support\",1]",
@@ -268,48 +268,29 @@
         },
         "targetEvidence": {
           "articleId": "dora",
-          "blockId": "[\"introduction\",3]",
-          "anchor": "introduction",
-          "quote": "Weight Reparameterization을 통해 기울기의 조건을 개선함으로써 더 빠른 속도로 수렴하는 Weight Normalization에 따라, 연구진은 새로운 weight decomposition analysis을 소개합니다. 이는 규모나 직접적인 구성요소에 따라 초기에 모델의 가중치를 reparameterize하며 그 뒤에 LoRA와 FT에 의해 도입된 규모와 방향의 변화를 검토합니다. 연구진의 분석에 따르면 LoRA와 FT는 현저하게 다른 업데이트 패턴을 보여주며, 이러한 변이들이 각 방법의 학습 능력을 반영한다는 추측을 하게 됩니다. 연구진의 발견에 영감을 받아, 우리는 사전 훈련된 가중치를 크기와 방향 요소로 분해한 다음, 두 가지 모두를 fine-tuning하는 Weight-Decomposed Low-Rank Adaptation(DoRA)을 제안합니다.",
-          "hash": "c812afd12e5702831db109ecbcdfa96f17583ccb42af9842e01c42a1a6390270"
+          "blockId": "[\"weight-decomposed-low-rank-adaptation\",2]",
+          "anchor": "weight-decomposed-low-rank-adaptation",
+          "quote": "DoRA의 메인 포인트는 2개입니다. 첫째로, LoRA를 directional adaptation에만 집중하도록 제한하면서 magnitude component도 조정 가능하게 하는 것은, LoRA가 magnitude와 direction 모두에서 조정을 학습해야 하는 기존 접근법에 비해 작업을 단순화합니다. 두번째로, 방향 업데이트를 최적화하는 절차는 행렬분해를 통해 좀 더 안정화되어집니다. DoRA와 weight normalization의 주요 차이점은 훈련 접근법에 있습니다. Weight normalization은 두 가지의 요소들을 처음부터 끝까지 학습하며 이 방법론은 다른 초기화방법에 더 민감하게 만들어줍니다. 반대로 DoRA는 두 가지의 요소들이 사전학습된 가중치와 함께 시작되기에 초기화 문제를 피할 수 있습니다.",
+          "hash": "0da8d5fe502e8f717c8666324cd8bf8a95862b7ac8157f9fb3d684e7ddf86afd"
         }
       },
       {
-        "id": "loftq",
-        "relation": "related_method",
-        "reason": "PEFT의 새 양자화 옵션과 LoftQ가 저순위 근사를 양자화와 결합하는 방식을 함께 알아봅니다.",
+        "id": "tgi-implementation",
+        "relation": "application_example",
+        "reason": "PEFT에서 LoRA 가중치 병합을 다루고, TGI 적용을 위해 LoRA 모델을 독립 모델로 변환하는 과정을 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "peft-features-090",
-          "blockId": "[\"peft-v090\",1]",
-          "anchor": "peft-v090",
-          "quote": "v0.9.0: Merging LoRA weights, new quantization options, DoRA support, and more",
-          "hash": "6d3efcdcffdcb650eef01f5700f6e53e4a616b1a90a1a1fa5ca4c3f5ec325ef8"
+          "blockId": "[\"merging-lora-weights\",3]",
+          "anchor": "merging-lora-weights",
+          "quote": "기존 베이스 모델에서 lora weight를 병합하는게 아닌 로라 모델끼리 병합하는 것을 의미",
+          "hash": "8117a060be8fd0bd91155ac33b335e6e33223091b258505d351a5b5c9a2e6287"
         },
         "targetEvidence": {
-          "articleId": "loftq",
-          "blockId": "[\"loftq\",1]",
-          "anchor": "loftq",
-          "quote": "LoftQ라고 불리는 새로운 quantization framework를 소개. 이 프레임워크는 낮은 순위의 근사치를 적극적으로 통합하여 양자화와 함께 작동하여 원래의 high-precision 사전학습된 가중치를 공동으로 근사화합니다.",
-          "hash": "1b959360ebfbcc9575ba361060e8305e2dd0db884ed90916f5f47b1e303f0d5e"
-        }
-      },
-      {
-        "id": "qlora",
-        "relation": "related_method",
-        "reason": "PEFT의 양자화 옵션과 QLoRA의 k-bit 양자화 및 LoRA 어댑터 설명을 함께 살펴봅니다.",
-        "sourceEvidence": {
-          "articleId": "peft-features-090",
-          "blockId": "[\"peft-v090\",1]",
-          "anchor": "peft-v090",
-          "quote": "v0.9.0: Merging LoRA weights, new quantization options, DoRA support, and more",
-          "hash": "6d3efcdcffdcb650eef01f5700f6e53e4a616b1a90a1a1fa5ca4c3f5ec325ef8"
-        },
-        "targetEvidence": {
-          "articleId": "qlora",
-          "blockId": "[\"background\",1]",
-          "anchor": "background",
-          "quote": "Block-wise k-bit Quantization Quantization은 representation딴에서 discretizing an input의 절차로 이를 통해 더 적은 정보를 representation에 많은 정보를 붙잡아 둘 수 있게 합니다. 이는 데이터 타입을 취할때, 더 많은 bit를 가져오고 더 적은 bit에서 변환시키는 것을 의미합니다(32-bit floats >> 8bit Integers).",
-          "hash": "d0331c9a1363f5d64bc12a235f54fbb46e279805987b074c568210011a142fff"
+          "articleId": "tgi-implementation",
+          "blockId": "[\"1\",4]",
+          "anchor": "1",
+          "quote": "torch.allclose(base_first_weight, lora_first_weight) standalone_model = lora_model.merge_and_unload() standalone_model.save_pretrained(output_dir, safe_serialization = True) tokenizer.save_pretrained(output_dir) if __name__ == \"__main__\": parser = argparse.ArgumentParser(description = \"\") parser.add_argument('--base_model_id', type = 'str', default = \"base_model_id\") parser.add_argument('--lora_model_id', type = str, default = \"lora_model_id\")",
+          "hash": "f423f8478c13a03b2bae74e7c7439cc85ac31292fcfa7990610a06b734633f97"
         }
       }
     ]

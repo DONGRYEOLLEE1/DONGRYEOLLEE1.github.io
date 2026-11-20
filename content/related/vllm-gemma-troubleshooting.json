@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "0a0121f0d25e491a4694f59239d35aab2b2d6bf402d89fca45230f705500a35f",
+    "inputHash": "9f6e41aef40faad90ba5141c2913a6f231f3e6bbe6195a6aeb52be6d876d6b27",
     "status": "verified",
     "candidates": [
       {
@@ -229,22 +229,60 @@
     ],
     "recommendations": [
       {
-        "id": "deepspeed-troubleshooting",
+        "id": "vllm-weight-loading",
         "relation": "related_method",
-        "reason": "Gemma 오류에서 필요한 FlashInfer 설치와 버전 조치가 다른 vLLM 오류 사례의 해결책과 겹쳐, 환경별 설치 및 재컴파일 문제를 살펴볼 수 있습니다.",
+        "reason": "Gemma-2의 logits_soft_cap 오류와 vLLM weight 무한 로딩 문제를 각각 확인해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "vllm-gemma-troubleshooting",
-          "blockId": "[\"조치-2\",1]",
-          "anchor": "조치-2",
-          "quote": "vllm 버전 업데이트 + flashinfer 환경에 맞는 버전 설치 + cuda 12.4로 변경",
-          "hash": "2ba64e5d0ecae9d1a7a0317daf03fae1aabec1d3eaed916914633a23127ce536"
+          "blockId": "[\"error\",12]",
+          "anchor": "error",
+          "quote": "ValueError( [rank0]: ValueError: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2). Otherwise, the output might be wrong. Set Flashinfer backend by export VLLM_ATTENTION_BACKEND=FLASHINFER. (VllmWorkerProcess pid=239160) ERROR 11-15 04:18:31 multiproc_worker_utils.py:226] Exception in worker VllmWorkerProcess while processing method determine_num_available_blocks: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2).",
+          "hash": "aed574f9dc3bc5db21ad19a0acd9a733996c3e62d5e10ea64bcf8242a54d4176"
+        },
+        "targetEvidence": {
+          "articleId": "vllm-weight-loading",
+          "blockId": "[\"problem\",1]",
+          "anchor": "problem",
+          "quote": "tensor-parallel-size >= 2 지정시, weight 무한 로딩 문제",
+          "hash": "29a0d56003fe9ab772e0679717c9a3e044c33f84eb347c840ed1557ff0ed44ad"
+        }
+      },
+      {
+        "id": "inference-server",
+        "relation": "related_method",
+        "reason": "Gemma 계열에서 FlashInfer 사용이 요구되는 오류와 FlashInfer에 맞춰 vLLM·CUDA 환경을 바꾼 사례를 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vllm-gemma-troubleshooting",
+          "blockId": "[\"error\",12]",
+          "anchor": "error",
+          "quote": "ValueError( [rank0]: ValueError: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2). Otherwise, the output might be wrong. Set Flashinfer backend by export VLLM_ATTENTION_BACKEND=FLASHINFER. (VllmWorkerProcess pid=239160) ERROR 11-15 04:18:31 multiproc_worker_utils.py:226] Exception in worker VllmWorkerProcess while processing method determine_num_available_blocks: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2).",
+          "hash": "aed574f9dc3bc5db21ad19a0acd9a733996c3e62d5e10ea64bcf8242a54d4176"
+        },
+        "targetEvidence": {
+          "articleId": "inference-server",
+          "blockId": "[\"vllm-릴리스에는-아직-없었음\",2]",
+          "anchor": "vllm-릴리스에는-아직-없었음",
+          "quote": "기존 Pod는 RunPod 기본 이미지 위에 pip로 vLLM을 까는 방식이라, 처음에는 필요한 파이썬 파일만 0.28.0 위에 덮어쓰는 방법을 시도했음. import까지는 다 통과했는데 PR이 CUDA 커널(fused_gdn_decode)도 바꾸고 있어서 .so까지 PR 빌드가 있어야 했음. 파이썬만 패치하는 건 안 됨.",
+          "hash": "9ddc7761be1bd3100de79fcb336fdd038c020b140cc08e6c166c611ccdb22750"
+        }
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "relation": "related_method",
+        "reason": "Gemma 모델의 FlashInfer 설치 조치와 FlashInfer 실행 중 발생한 오류 사례를 함께 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vllm-gemma-troubleshooting",
+          "blockId": "[\"조치-1\",1]",
+          "anchor": "조치-1",
+          "quote": "Gemma family 모델은 flashinfer 패키지 설치 필요 -> flashinfer 패키지 설치",
+          "hash": "5d68546b62a783eec02e39ce21667660e78db63a86199c73ee0eca68a6bc6f4c"
         },
         "targetEvidence": {
           "articleId": "deepspeed-troubleshooting",
-          "blockId": "[\"1️⃣\",3]",
-          "anchor": "1️⃣",
-          "quote": "sudo 명령어를 통해 패키지 설치 이후 python re-compile 필요!",
-          "hash": "3abb9d6f99a0b68f043ab645449402ef28b4b9aeb5f7c114185b61a378007d28"
+          "blockId": "[\"env\",3]",
+          "anchor": "env",
+          "quote": "cuda 11.8",
+          "hash": "d2b4f1ef1561cf2220122fdd32a7dd5405a70b47be0ed48de449dcc152e3f2dd"
         }
       }
     ]

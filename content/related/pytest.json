@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "6253212de346252f545febb227aecdbeb0fa3d1e03e37744f2fadf2c24761861",
+    "inputHash": "78cff4edbdcb27b5fe2d938804883ff34988ed4aa0bcebbb7ad75c8175bb64ed",
     "status": "verified",
     "candidates": [
       {
@@ -231,7 +231,7 @@
       {
         "id": "python-assert",
         "relation": "related_method",
-        "reason": "pytest 테스트에서 assert로 조건을 검사하고 실패를 드러내는 방식과, assert로 값의 조건을 보증하는 용도를 함께 살펴볼 수 있습니다.",
+        "reason": "pytest 예제에서 assert로 조건을 검사하는 방식을 보고, assert가 값을 보증하고 조건을 확인하는 용도를 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "pytest",
           "blockId": "[\"주요-특징\",6]",

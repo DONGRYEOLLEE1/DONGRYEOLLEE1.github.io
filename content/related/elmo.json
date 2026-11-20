@@ -50,7 +50,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "0c37a88b5b61bbd2ece2fb2e94287ea7e5363246cbd7db6142370fe7fc4b2898",
+    "inputHash": "974d643403541910d3e674f895e39accad377274984e0ac94a8c23b43736e7ab",
     "status": "verified",
     "candidates": [
       {
@@ -252,21 +252,59 @@
     "recommendations": [
       {
         "id": "bert",
-        "relation": "evaluation_comparison",
-        "reason": "ELMo와 BERT가 사전학습에 사용하는 언어 모델링 방식의 차이를 비교해 배울 수 있습니다.",
+        "relation": "related_method",
+        "reason": "ELMO는 양방향 언어 모델로 사전학습하고, BERT는 마스크된 단어를 예측하는 사전학습 방식을 설명해 두 방법을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "elmo",
-          "blockId": "[\"elmo\",1]",
-          "anchor": "elmo",
-          "quote": "기존 word2vec, Glove 등에 비해 context 정보를 반영하는 Pre-training 방법을 제시합니다. 여러층의 BiLSTM을 이용해 Language Model을 하며, 만들어진 hidden-state를 적절하게 조합해 새로운 word representation을 만들어냅니다.",
-          "hash": "0536e6bb9b159cb5b8c31469299a3fb57f0c2d5b648124df1af19c123e28974b"
+          "blockId": "[\"mechanism\",4]",
+          "anchor": "mechanism",
+          "quote": "ELMO는 Bi-directional LSTM을 통해 학습하기 때문에 Forward LM, Backward LM 둘다 학습합니다.",
+          "hash": "bf05c07eaf95891bd5e7860b44afa6c951e4cb401f96e92c707a0387eb20a7ea"
         },
         "targetEvidence": {
           "articleId": "bert",
-          "blockId": "[\"pre-training-bert\",1]",
-          "anchor": "pre-training-bert",
-          "quote": "ELMo와 GPT는 left-to-right 또는 right-to-left 언어 모델을 사용해 pre-training을 수행한다. 하지만 BERT는 이와 다르게 2가지의 새로운 unsupervised task로 pre-training을 수행한다.",
-          "hash": "18226f064ff0a07b6aac1633c090cd6c799cabbc98d3046f964e3831dbd0f676"
+          "blockId": "[\"task-1-masked-lm-mlm\",2]",
+          "anchor": "task-1-masked-lm-mlm",
+          "quote": "Bi-directional한 Transformer Encoder를 쓰되, 실제 Input에 해당하는 단어들을 임의의 비율(15%)로 마스킹을 시키고 모델이 학습을 통해서 실제 가려진 값을 잘 예측하도록 학습시키는 것이 바로 BERT의 pre-training 첫번째 task인 MLM.",
+          "hash": "9792b5e6449cb15bdc0ea16dbe7ccc3e9ead912491a7080d396ba85c93f0dc26"
+        }
+      },
+      {
+        "id": "lstm",
+        "relation": "related_method",
+        "reason": "ELMO의 BiLSTM에서 쓰이는 LSTM이 과거 정보를 다루는 구조와 맥락을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "elmo",
+          "blockId": "[\"mechanism\",3]",
+          "anchor": "mechanism",
+          "quote": "ELMO는 기본적으로 sequence의 단어속에서 다음 단어를 예측하는 언어모델입니다. 각각의 입력 임베딩벡터는 2개의 LSTM layer를 거쳐 10%의 확률값을 가지는 Improvisation을 최종 예측합니다.또한 언어모델이 다음단어의 정보를 가지고 있지않기때문에 step을 통해 BiLSTM을 학습시킬 것입니다.",
+          "hash": "b04feace1ee68726c9bf1e437601adedf0a7169b15ab54ee37cd8d293ff59190"
+        },
+        "targetEvidence": {
+          "articleId": "lstm",
+          "blockId": "[\"step-1-forget-gate--과거-정보를-버릴지말지-결정하는-과정\",1]",
+          "anchor": "step-1-forget-gate--과거-정보를-버릴지말지-결정하는-과정",
+          "quote": "과거의 정보를 통해 맥락을 고려하는것도 중요하지만, 그 정보가 필요하지 않을 경우에는 과감히 버리는 것도 중요합니다. 이전 Input($h_{t-1}$)과 현재 Input($x_t$)을 넣어, cell-state로 가는 과거 정보값이 나옵니다. $h_{t-1}$과 $x_t$를 받아 sigmoid를 취해준 값이 바로 forget gate가 내보내는 값이 됩니다.",
+          "hash": "deaf93fd4a8e2ff27b693f4e9e5cb386c3e497abd74be07f52728cac5a2ec411"
+        }
+      },
+      {
+        "id": "rnn",
+        "relation": "related_method",
+        "reason": "ELMO의 다음 단어 예측 언어 모델과 다음 글자를 정답으로 삼는 RNN 학습을 함께 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "elmo",
+          "blockId": "[\"mechanism\",3]",
+          "anchor": "mechanism",
+          "quote": "ELMO는 기본적으로 sequence의 단어속에서 다음 단어를 예측하는 언어모델입니다. 각각의 입력 임베딩벡터는 2개의 LSTM layer를 거쳐 10%의 확률값을 가지는 Improvisation을 최종 예측합니다.또한 언어모델이 다음단어의 정보를 가지고 있지않기때문에 step을 통해 BiLSTM을 학습시킬 것입니다.",
+          "hash": "b04feace1ee68726c9bf1e437601adedf0a7169b15ab54ee37cd8d293ff59190"
+        },
+        "targetEvidence": {
+          "articleId": "rnn",
+          "blockId": "[\"구조\",11]",
+          "anchor": "구조",
+          "quote": "RNN도 정답을 필요로 하는데, 모델엘 정답을 알려줘야 모델이 parameter를 적절히 갱신해 나갈 것입니다. 이 경우엔 바로 다음 글자가 정답이 될 것입니다. 예를 들어, h의 다음 정답은 e, 그 다음 정답은 l, 그 다음 정답은 l, 그 다음은 e가 될 것입니다.",
+          "hash": "9178691c367a4447dab4dc5caa78e7ccf1dab16197e4574c3b85f053e30b4dae"
         }
       }
     ]

@@ -39,8 +39,8 @@
     "review": []
   },
   "entry": {
-    "inputHash": "f7eddb2aa11f7cbcf71ee1cff4086a532164e983c55663f7751646e276970a3a",
-    "status": "abstained",
+    "inputHash": "79eeb397f7e7d949e2a3697a4a7f7ed53862c07fa74ce4ee45e6d40926de39e7",
+    "status": "verified",
     "candidates": [
       {
         "id": "pytest",
@@ -238,6 +238,26 @@
         ]
       }
     ],
-    "recommendations": []
+    "recommendations": [
+      {
+        "id": "pytest",
+        "relation": "related_method",
+        "reason": "assert로 조건 위반을 확인하는 예시와 pytest의 assert 실패 보고를 비교해 테스트에서 오류가 드러나는 방식을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "python-assert",
+          "blockId": "[\"assert가-필요한-이유\",2]",
+          "anchor": "assert가-필요한-이유",
+          "quote": "list = [1, 3, 6, 3, 8, 7, 13, 23, 13, 2, 3.14, 2, 3, 7] def test(value): assert type(value) is int, '정수가 아닌 값이 존재함' for i in list: test(i) # 결과 AssertionError: 정수가 아닌 값이 존재함",
+          "hash": "5f93952a849c762cb025ef194682fc953bad2be406f3026741cace78859029d8"
+        },
+        "targetEvidence": {
+          "articleId": "pytest",
+          "blockId": "[\"주요-특징\",8]",
+          "anchor": "주요-특징",
+          "quote": "[100%] ===================================================================== FAILURES ====================================================================== ___________________________________________________________________ test_failing ____________________________________________________________________ def test_failing(): > assert 1+1 == 3 E assert (1 + 1) == 3 test_failing.py:2: AssertionError ============================================================== short test",
+          "hash": "2b67aa740f40f8b9aec18ec19b6702072f6281130d21ae0547c7f097f025745e"
+        }
+      }
+    ]
   }
 }

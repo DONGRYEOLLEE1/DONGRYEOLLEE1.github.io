@@ -55,7 +55,7 @@
     ]
   },
   "entry": {
-    "inputHash": "d436f44abc782ffa16ff132c874dba71b39be4b81c139279b0563249bc944417",
+    "inputHash": "e7a5efc498b681ff2216625c5b5c33218c1c08d7b0b898a4da3386d763cffe72",
     "status": "verified",
     "candidates": [
       {
@@ -258,7 +258,7 @@
       {
         "id": "tgi-implementation",
         "relation": "related_method",
-        "reason": "LoRA 모델을 TGI에 적재하기 위해 standalone 모델로 변환하는 절차와 TGI 실행 명령을 확인할 수 있습니다.",
+        "reason": "LoRA 어댑터를 standalone 모델로 변환한 뒤 TGI에 적재하는 절차를 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "developing-daily-01",
           "blockId": "[\"tgi\",2]",
@@ -275,34 +275,15 @@
         }
       },
       {
-        "id": "peft-target-modules",
-        "relation": "related_method",
-        "reason": "LoRA 적용을 고민하는 상황에서 모델별 LoRA target modules 매핑을 확인할 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "developing-daily-01",
-          "blockId": "[\"docker\",8]",
-          "anchor": "docker",
-          "quote": "$ docker info",
-          "hash": "74c8ced605d0bd1ad82fc122762ba76c3b2aafaf7d6826634ce13f6ba493df02"
-        },
-        "targetEvidence": {
-          "articleId": "peft-target-modules",
-          "blockId": "[null,1]",
-          "anchor": null,
-          "quote": "# peft/utils/other.py in line 328 TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING = { \"t5\": [\"q\", \"v\"], \"mt5\": [\"q\", \"v\"], \"bart\": [\"q_proj\", \"v_proj\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"blip-2\": [\"q\", \"v\", \"q_proj\", \"v_proj\"], \"opt\": [\"q_proj\", \"v_proj\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"value\"], \"xlm-roberta\": [\"query\", \"value\"], \"electra\":",
-          "hash": "b0dc93edb070d31e4f57be2457664c20130561af39054733ee01cfb9f5be00be"
-        }
-      },
-      {
         "id": "lora-finetuning",
         "relation": "related_method",
-        "reason": "LoRA 파인튜닝 설정과 실행 예시를 통해 적용 시 필요한 target module 및 학습 절차를 살펴볼 수 있습니다.",
+        "reason": "LoRA로 파인튜닝한 모델을 TGI에서 적용하는 문제와 연결해, Polyglot 모델의 학습 설정과 실행 과정을 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "developing-daily-01",
-          "blockId": "[\"docker\",4]",
-          "anchor": "docker",
-          "quote": "$ docker stop <container ID> 또는 $ docker rm <container ID> 또는 $ docker container prune",
-          "hash": "e678dc77e35ac57c84be68dfada6c8d89242cadcd670bb42e33ad8c89fd69cbe"
+          "blockId": "[\"tgi\",2]",
+          "anchor": "tgi",
+          "quote": "Local LLM (LoRA) 파일 적용 가능한지 알아보다가 LoRA 모델은 아직 지원하지 않음을 알아내었고 후속조치 어떻게 해야할지 고민",
+          "hash": "087632ac35661c20101d32ff036287bff7f2337e01913bea0be81fd462156c3e"
         },
         "targetEvidence": {
           "articleId": "lora-finetuning",
@@ -310,6 +291,25 @@
           "anchor": "training",
           "quote": "python finetune.py \\ --base_model '../model_file/polyglot-ko-5.8b' \\ --data_path './ko_alpaca_data.json' \\ --output_dir './output' \\ --batch_size 128 \\ --mircro_batch_size 4 \\ --num_epochs 3 \\ --learning_rate 2e-5 \\ --cutoff_len 512 \\ --val_set_size 2000 \\ --lora_r 8 \\ --lora_alpha 16 \\ --lora_dropout 0.05 \\ --lora_target_modules '[query_key_value]' \\ --train_on_inputs \\ --group_by_length",
           "hash": "1d3ec647d3fc9aa157a76778d7d0beb955bd87a846aa384701e66384ac2707f9"
+        }
+      },
+      {
+        "id": "developing-daily-03",
+        "relation": "related_method",
+        "reason": "TGI에 로컬 모델을 적재하는 Docker 실행 예시와 serving 성공 사례를 함께 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "developing-daily-01",
+          "blockId": "[\"tgi\",1]",
+          "anchor": "tgi",
+          "quote": "EleutherAI/polyglot-ko-12.8b 모델 Tensor Parallel serving 성공 (PoC)",
+          "hash": "603793205032df3f21d5727fd78dc1906a5e5bd5644682bf000ae1139dd310e3"
+        },
+        "targetEvidence": {
+          "articleId": "developing-daily-03",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": "$ pwd /mnt/huggingface $ ls opt-125m version.txt $ ls opt-125m/ config.json generation_config.json merges.txt pytorch_model.bin special_tokens_map.json tokenizer_config.json vocab.json $ docker run --gpus all --shm-size 1g -p 8080:80 --volume /mnt/huggingface:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/opt-125m --num-shard 1",
+          "hash": "ab1cf11748bf6d1f44f3e6e3333c9fd6773cd8386181ca19f60a11d3b170db4c"
         }
       }
     ]

@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "ee805e9f67e03233ddb76b96536bda9a426326737ad30b2247dcc90ca66263cb",
+    "inputHash": "c17b038f6578b454c6adea031a87567a764d618f7251eec96a38bec876a8b88c",
     "status": "verified",
     "candidates": [
       {
@@ -240,28 +240,28 @@
     ],
     "recommendations": [
       {
-        "id": "generation-cuda-assert",
-        "relation": "related_method",
-        "reason": "T5-large 질문 생성 코드에 입력 길이 제한을 두어 CUDA 오류를 해결하는 방법을 배울 수 있습니다.",
+        "id": "eda",
+        "relation": "concept_explanation",
+        "reason": "파인튜닝 데이터 재전처리와 문장 수준 데이터 증강이 각각 어떤 데이터 변환을 다루는지 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "developing-daily-05",
-          "blockId": "[\"sehongt5-large-questiongeneration\",3]",
-          "anchor": "sehongt5-large-questiongeneration",
-          "quote": "from transformers import T5ForConditionalGeneration, PreTrainedTokenizerFast tokenizer = PreTrainedTokenizerFast.from_pretrained('Sehong/t5-large-QuestionGeneration') model = T5ForConditionalGeneration.from_pretrained('Sehong/t5-large-QuestionGeneration').to('cuda') text = \"...\" text_append = \"answer:\" + text raw_input_ids_ = tokenizer.encode(data_append) input_ids_ = [tokenizer.bos_token_id] + raw_input_ids_ + [tokenizer.eos_token_id] question_ids_ =",
-          "hash": "d896750cc49d08070279e476fba6bab35484ebc66538ffda5d5eb898a2fc1cbe"
+          "blockId": "[\"data-processing\",1]",
+          "anchor": "data-processing",
+          "quote": "TASK: 언어모델의 성능 향상을 위한 파인튜닝 데이터 re-preprocessing",
+          "hash": "5547c34b500f8ebd7b3be232c09ede2fc4ee6677f522600cfa70ebd7ed0530dc"
         },
         "targetEvidence": {
-          "articleId": "generation-cuda-assert",
-          "blockId": "[\"solution\",4]",
-          "anchor": "solution",
-          "quote": "for i in tqdm(range(50), desc = 'test'): raw_input_ids = qg_kor_tokenizer.encode(text, max_length = 1024) input_ids = [qg_kor_tokenizer.bos_token_id] + raw_input_ids + [qg_kor_tokenizer.eos_token_id] que_ids = qg_kor_model.generate(torch.tensor([input_ids]).to('cuda'), max_length = 4000) decode = qg_kor_tokenizer.decode(que_ids.squeeze().tolist(), skip_special_tokens = True)",
-          "hash": "4a4ee86cb6563d26cf027ce079b6bd235ea86dd2280661126856c53da084a2b4"
+          "articleId": "eda",
+          "blockId": "[\"theory\",7]",
+          "anchor": "theory",
+          "quote": "Data-Augmentation-operations은 기존 문장의 label을 변경하지 않음. 문장 내 단어의 동의어를 삽입하는 것은 context에 연관있으며 문장의 original-label을 유지시킴",
+          "hash": "b0b7ebe5ec3d83f678f11026e8e448a24dbf5c2993c98ca4b0310d9758b87d14"
         }
       },
       {
         "id": "ziya2",
         "relation": "concept_explanation",
-        "reason": "파인튜닝 데이터 재처리와 관련해 데이터 전처리·평가·중복 제거 등 데이터 품질 관리 절차를 살펴볼 수 있습니다.",
+        "reason": "재전처리 작업과 함께 데이터 전처리·필터링·중복 제거 등 데이터 품질 관리 절차를 이해할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "developing-daily-05",
           "blockId": "[\"data-processing\",1]",

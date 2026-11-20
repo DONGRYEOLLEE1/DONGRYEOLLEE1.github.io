@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "63a5e1bef0ed03f2c3058d28c0ca2f1ab4a24f2b3d2f0e2bc39babd3837d9e28",
+    "inputHash": "61f5ba48e97328f51b4eb242bca89e1328cffb3c9e7658926bfd9acadbce32ba",
     "status": "verified",
     "candidates": [
       {
@@ -240,7 +240,7 @@
       {
         "id": "pip-options",
         "relation": "concept_explanation",
-        "reason": "Bard API 해결 과정은 bardapi의 특정 버전을 pip로 설치하며, pip 설치 옵션을 다룬 문서에서 설치 방법을 더 알아볼 수 있습니다.",
+        "reason": "Bard API 설치에 특정 pip 버전을 지정하므로, pip 설치 옵션의 사용법을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "bard-api-troubleshooting",
           "blockId": "[\"solution\",4]",

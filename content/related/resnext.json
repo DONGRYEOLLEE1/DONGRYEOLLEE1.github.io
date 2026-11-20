@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "61cac1ee89e27a7d2f2d5f38aa0f98000dddeedaf45b1915b56565f1633bcd81",
+    "inputHash": "66a81896df4219e09afccf41e78d25451f58a760aff8eefeceb07410a936058c",
     "status": "verified",
     "candidates": [
       {
@@ -231,7 +231,7 @@
       {
         "id": "convnext",
         "relation": "related_method",
-        "reason": "ResNeXt의 guiding principle인 그룹 수와 width 확장 아이디어를 ConvNeXt가 Grouped Convolution으로 적용하는 방식을 배울 수 있습니다.",
+        "reason": "ResNeXt의 guiding principle인 그룹 수와 폭의 확장을 ConvNeXt가 grouped convolution으로 적용하는 방식을 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "resnext",
           "blockId": "[\"introduction\",4]",
@@ -245,6 +245,25 @@
           "anchor": "resnext-ify",
           "quote": "이 파트에서 연구진은 vanilla ResNet보단 FLOPs과 정확도에서 더 좋은 성능을 보이는 ResNeXt의 아이디어를 적용시켰습니다. Grouped Convolution 은 메인 구성요소입니다. 또한 ResNeXt의 guiding principle은 더 많은 그룹과 확장된 width를 사용하는 것 입니다.",
           "hash": "c0fa7e9c3be7a64728b28be27ad5a39c9a3123ea79152269ed1b87403539caa1"
+        }
+      },
+      {
+        "id": "yolo-v1",
+        "relation": "related_method",
+        "reason": "ResNeXt가 같은 topology의 residual block을 쌓는 설계와 YOLO의 CNN 기반 네트워크 설계를 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "resnext",
+          "blockId": "[\"template\",1]",
+          "anchor": "template",
+          "quote": "ResNeXt는 VGG/ResNet을 따르는 매우 모듈화된 디자인을 적용. 또한 residual block을 쌓아 구성하였음. 이 block들은 같은 topology를 가지고 있으며 VGG/ResNet으로부터 영감받은 2개의 단순한 규칙의 대상임.",
+          "hash": "f8a5c0e05d98fe83b738dd935b5fafa0cfbb7703ff5aa529a23cb1efc4856611"
+        },
+        "targetEvidence": {
+          "articleId": "yolo-v1",
+          "blockId": "[\"network-design\",1]",
+          "anchor": "network-design",
+          "quote": "CNN구조의 모델을 사용하고 PASCAL VOC 데이터로 평가를 진행하였다. 초기 convolutional 레이어의 network는 특징들을 표현하는데 이는 FCL가 output에 대한 확률을 예측하는 동안 이루어진다.",
+          "hash": "f416fc94e71a35e0a5509fbf5b55a9d017e66a448806bf7e116757f6ffca2964"
         }
       }
     ]

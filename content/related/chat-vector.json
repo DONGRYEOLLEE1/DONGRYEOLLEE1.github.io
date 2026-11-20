@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "2e3d203432432b9b544983ff1c24ceb6cfd5f90ff60b0bfcd83757c07e054415",
+    "inputHash": "23f14117cd4900caa0edda401af81a9bab916ce7729b7919973ceb0bd0dfa289",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "flan",
         "relation": "related_method",
-        "reason": "Chat Vector는 SFT 모델의 instruction 능력을 결합하고, FLAN은 instruction tuning으로 모델이 지시를 따르고 unseen task를 수행하도록 학습합니다.",
+        "reason": "Chat Vector가 활용하는 SFT 모델의 지시 수행 능력이 instruction tuning으로 어떻게 학습되는지 알 수 있습니다.",
         "sourceEvidence": {
           "articleId": "chat-vector",
           "blockId": "[\"chat-vector\",3]",
@@ -261,7 +261,7 @@
       {
         "id": "ziya2",
         "relation": "related_method",
-        "reason": "Chat Vector는 target 모델의 텍스트로 continual pre-training을 진행하며, Ziya2도 사전학습 데이터와 continual pre-training으로 다중언어 생성 능력을 강화합니다.",
+        "reason": "타겟 텍스트로 사전학습하는 방식과 continual pre-training의 단계별 구성을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "chat-vector",
           "blockId": "[\"chat-vector\",9]",

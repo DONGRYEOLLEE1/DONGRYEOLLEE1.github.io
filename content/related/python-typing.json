@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "f0b25fd0175c7580ddfa3f7f076e4af56fcc3643bf00951a57144e3f2e2bcdff",
+    "inputHash": "9c0a5cd351730b9152a2c363b991d92b71abdc390707da5cb89908652e03aaab",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "python-class-inheritance",
         "relation": "application_example",
-        "reason": "타입 어노테이션에서 매개변수와 반환값의 타입을 표시하는 법을, BaseRetriever의 추상 메서드 선언과 서브클래스 구현에서 확인할 수 있습니다.",
+        "reason": "타입 어노테이션으로 함수의 매개변수와 반환형을 표시하는 방법이 추상 클래스의 retrieve 인터페이스 구현에서 어떻게 쓰이는지 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "python-typing",
           "blockId": "[\"type-annotation\",3]",

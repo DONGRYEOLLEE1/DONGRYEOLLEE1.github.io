@@ -55,7 +55,7 @@
     ]
   },
   "entry": {
-    "inputHash": "2e5a550e02a00ea0e2dfc63d10648119b4dec7fb5165245860e3f57a22839235",
+    "inputHash": "73ee945c8b518e9f82b792965284792d09a361564d8afe6885eae88471873cf8",
     "status": "verified",
     "candidates": [
       {
@@ -258,7 +258,7 @@
       {
         "id": "developing-daily-03",
         "relation": "related_method",
-        "reason": "두 글의 Docker 명령을 비교해 TGI에 로컬 모델을 지정해 서빙하는 방법과 Repo id 오류 해결을 배울 수 있습니다.",
+        "reason": "두 기록의 Docker 명령은 로컬 모델을 TGI에 적재하는 방식이며, 경로 설정 오류와 해결 과정을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "tgi-implementation",
           "blockId": "[\"1\",6]",
@@ -277,7 +277,7 @@
       {
         "id": "peft-features-090",
         "relation": "related_method",
-        "reason": "LoRA를 standalone 모델로 병합해 저장하는 과정과 PEFT의 LoRA 가중치 병합 설명을 함께 살펴볼 수 있습니다.",
+        "reason": "LoRA 가중치를 병합해 standalone 모델로 저장하는 흐름과 PEFT의 LoRA 병합 설명을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "tgi-implementation",
           "blockId": "[\"1\",4]",
@@ -296,7 +296,7 @@
       {
         "id": "docker-gpu-troubleshooting",
         "relation": "related_method",
-        "reason": "TGI를 Docker에서 GPU 옵션으로 실행하는 명령과 GPU 장치 드라이버 오류의 해결 절차를 확인할 수 있습니다.",
+        "reason": "TGI 실행 명령의 GPU 옵션과 Docker GPU 드라이버 오류의 해결 절차를 함께 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "tgi-implementation",
           "blockId": "[\"1\",6]",

@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "4643dda2456d8a7091e44db2e3654f16feaa5672c62c34f87a7c0e1a39c636ac",
+    "inputHash": "5641e5cd1d09d7a3772b1983986f6606693c260951739cfa7e0705d67859832d",
     "status": "verified",
     "candidates": [
       {
@@ -240,28 +240,47 @@
     ],
     "recommendations": [
       {
-        "id": "dora",
+        "id": "peft-features-090",
         "relation": "related_method",
-        "reason": "DoRA가 LoRA의 가중치를 크기와 방향으로 분해해 학습하는 방법임을 확인할 수 있습니다.",
+        "reason": "DoRA의 PEFT 지원과 비양자화 선형층 제한을 확인해 v0.10.0에서의 개선 내용을 이해할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "peft-features-0100",
-          "blockId": "[\"peft-v0100\",1]",
-          "anchor": "peft-v0100",
-          "quote": "v0.10.0: Fine-tune larger QLoRA models with DeepSpeed and FSDP, layer replication, enhance DoRA",
-          "hash": "74a9ee3c9673b2d08d39e80a55355a2a6464dbc7c175c13685c7612865740e81"
+          "blockId": "[\"ref\",1]",
+          "anchor": "ref",
+          "quote": "peft-0.10.0",
+          "hash": "fe561204f912c4addc45ea0c76a28437ded1cc2a7ce625127880f951625705a4"
         },
         "targetEvidence": {
-          "articleId": "dora",
+          "articleId": "peft-features-090",
+          "blockId": "[\"dora-support\",1]",
+          "anchor": "dora-support",
+          "quote": "We now support Weight-Decomposed Low-Rank Adaptation aka DoRA via #1474. This new method is builds on top of LoRA and has shown very promising results. Especially at lower ranks (e.g. r=8), it should perform much better than LoRA. Right now, only non-quantized nn.Linear layers are supported. If you'd like to give it a try, just pass use_dora=True to your LoraConfig and you're good to go.",
+          "hash": "cf37b6b7a0920f456cf1aef6310a11e7c2b4153d1c6f91a7a2c425de48e6dcb3"
+        }
+      },
+      {
+        "id": "lora",
+        "relation": "related_method",
+        "reason": "LoRA가 낮은 랭크 행렬로 업데이트를 최적화하는 원리를 살펴보며 레이어 복제 후 LoRA를 적용하는 방식을 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "peft-features-0100",
+          "blockId": "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "anchor": "memory-efficient-layer-replication-with-lora",
+          "quote": "An approach used to improve the performance of models is to expand a model by duplicating layers in the model to build a larger model from a pretrained model of a given size. For example increasing a 7B model to a 10B model as described in the SOLAR paper. PEFT LoRA supports this kind of expansion in a memory efficient manner that supports further fine-tuning using LoRA adapters attached to the layers post replication of the layers.",
+          "hash": "42a36abdfb1c4b53ef93b088c5e56ec5387d018a05b8c5216aed859745a75013"
+        },
+        "targetEvidence": {
+          "articleId": "lora",
           "blockId": "[\"introduction\",3]",
           "anchor": "introduction",
-          "quote": "Weight Reparameterization을 통해 기울기의 조건을 개선함으로써 더 빠른 속도로 수렴하는 Weight Normalization에 따라, 연구진은 새로운 weight decomposition analysis을 소개합니다. 이는 규모나 직접적인 구성요소에 따라 초기에 모델의 가중치를 reparameterize하며 그 뒤에 LoRA와 FT에 의해 도입된 규모와 방향의 변화를 검토합니다. 연구진의 분석에 따르면 LoRA와 FT는 현저하게 다른 업데이트 패턴을 보여주며, 이러한 변이들이 각 방법의 학습 능력을 반영한다는 추측을 하게 됩니다. 연구진의 발견에 영감을 받아, 우리는 사전 훈련된 가중치를 크기와 방향 요소로 분해한 다음, 두 가지 모두를 fine-tuning하는 Weight-Decomposed Low-Rank Adaptation(DoRA)을 제안합니다.",
-          "hash": "c812afd12e5702831db109ecbcdfa96f17583ccb42af9842e01c42a1a6390270"
+          "quote": "학습된 과도하게 매개변수화된 모델이 실제로 낮은 performance를 낸다는 연구결과에 영감을 받음. 낮은 intrinsic rank를 모델을 적용하는동안 weights가 바뀐다는 가설을 세움. LoRA는 간접적으로 dense layer의 rank decomposition matrix를 최적화함으로써 NN에서 몇몇의 dense layer들을 학습할 수 있게 만들어줌(이 과정에서 weight는 froze).",
+          "hash": "3cba5587203ea62e143ba4ec9ef423450571ae6976433824bbd5b3347210f7ac"
         }
       },
       {
         "id": "qlora",
         "relation": "related_method",
-        "reason": "QLoRA가 4-bit 양자화 모델에 소량의 학습 가능한 LoRA 가중치를 더해 파인튜닝하는 방식을 설명합니다.",
+        "reason": "4-bit 사전학습 모델에 소량의 학습 가능한 LoRA 가중치를 추가하는 QLoRA 설명을 통해 양자화 모델 파인튜닝과의 연결을 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "peft-features-0100",
           "blockId": "[\"peft-v0100\",1]",
@@ -275,25 +294,6 @@
           "anchor": "introduction",
           "quote": "이에 연구진은 성능 저하 없이 quantized-4bit model 파인튜닝 하는 방법에 대해 소개. QLoRA는 4-bit로 사전학습된 모델을 양자화하기위해 독특한 high-precision technique를 사용하고 난 후에 학습가능한 LoRa 가중치의 적은 양을 추가함.",
           "hash": "144cb34aeaeabedd47394aafd42bacd9d03485f0a719ac279c322487f77c7a50"
-        }
-      },
-      {
-        "id": "tgi-implementation",
-        "relation": "application_example",
-        "reason": "레이어 복제로 확장한 LoRA 모델을 TGI에 적재할 때 standalone 모델로 변환하는 방법을 살펴볼 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "peft-features-0100",
-          "blockId": "[\"memory-efficient-layer-replication-with-lora\",1]",
-          "anchor": "memory-efficient-layer-replication-with-lora",
-          "quote": "An approach used to improve the performance of models is to expand a model by duplicating layers in the model to build a larger model from a pretrained model of a given size. For example increasing a 7B model to a 10B model as described in the SOLAR paper. PEFT LoRA supports this kind of expansion in a memory efficient manner that supports further fine-tuning using LoRA adapters attached to the layers post replication of the layers.",
-          "hash": "42a36abdfb1c4b53ef93b088c5e56ec5387d018a05b8c5216aed859745a75013"
-        },
-        "targetEvidence": {
-          "articleId": "tgi-implementation",
-          "blockId": "[\"1\",1]",
-          "anchor": "1",
-          "quote": "TGI에 모델을 적재시키기 위해선 lora 파인튜닝 모델 -> standalone 모델 변환(Full-finetuning 모델 필요X)",
-          "hash": "f5de7d2d3d8c89519d5d917406e602b627456be346ef41f0b6f06b5cd1e78578"
         }
       }
     ]

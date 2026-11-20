@@ -550,3 +550,20 @@ test('a role the model cites twice keeps its first citation instead of failing t
   assert.throws(() => readFacts(ctx, 'scan', task, { facts: [{ conceptId: 'nope', role: 'about', block: 0 }] }));
   assert.throws(() => readFacts(ctx, 'scan', task, { facts: [{ conceptId: 'ocr', role: 'about', block: 9 }] }));
 });
+
+test('a reason that is not written in Korean is a rejected answer', async () => {
+  const { readRanking } = await import('../tools/knowledge/phase2a.mjs');
+  const ctx = corpus([
+    article('source', '<p>OCR reads text from scans.</p>', [{ id: 'ocr', role: 'applies' }]),
+    article('target', '<p>OCR is transcription of images.</p>', [{ id: 'ocr', role: 'about' }]),
+  ]);
+  const task = rankTask(ctx, prepareSearch(ctx, new Map()), 'source');
+  const answer = (reason) => ({
+    recommendations: [{ id: 'target', relation: 'concept_explanation', reason, sourceBlock: 0, targetBlock: 0 }],
+  });
+  assert.equal(readRanking('source', task, answer('OCR의 원리를 설명합니다.'))[0].id, 'target');
+  // Observed with the fixed model on an English article.
+  assert.throws(() => readRanking('source', task, answer('OCRの基本的な仕組みを理解できます。')), /Invalid recommendation/);
+  assert.throws(() => readRanking('source', task, answer('Explains how OCR works.')), /Invalid recommendation/);
+  assert.throws(() => readRanking('source', task, answer('책 등뼈 검출을どう解釈するか')), /Invalid recommendation/);
+});

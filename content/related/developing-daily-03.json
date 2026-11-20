@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "c66615bf085460a5336bea327b9988e0809e2baf88b6a8ebbe47b791aeec6d8a",
+    "inputHash": "593bf5654a2dcd80bd9e648f7b19f3950e86ee98c37d4fba05cfb31851130c2e",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "tgi-implementation",
         "relation": "related_method",
-        "reason": "로컬 모델 경로를 TGI 컨테이너의 --model-id로 지정해 서빙하는 명령을 비교하며 설정 방법을 더 살펴볼 수 있습니다.",
+        "reason": "로컬 모델 디렉터리를 Docker 볼륨으로 연결해 TGI를 실행하는 명령과 샤드 준비 과정을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "developing-daily-03",
           "blockId": "[\"solution\",1]",

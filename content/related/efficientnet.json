@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "1017d7a241120bfc42313b93a46fc0d1d9afe14e9a6e5f9dd8981916466d8b02",
+    "inputHash": "f6d6c9690e2c0d78419e9686046d9d0a573be784ebae4e8269ecc9fad0735ac2",
     "status": "verified",
     "candidates": [
       {
@@ -231,13 +231,13 @@
       {
         "id": "efficientnet-v2",
         "relation": "related_method",
-        "reason": "EfficientNet의 width·depth·resolution 스케일링과 EfficientNetV2의 MBConv·Fused-MBConv 교체를 함께 살펴보며 모델 효율화 접근을 배울 수 있습니다.",
+        "reason": "두 연구의 모델 효율화 방법을 비교하며, EfficientNet의 Depthwise Convolution 병목과 이를 Fused-MBConv로 대체하는 방식을 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "efficientnet",
-          "blockId": "[\"model-scaling\",1]",
-          "anchor": "model-scaling",
-          "quote": "ResNet의 경우 scale down(ResNet-18) 또는 network depth를 조정하여 scale up(ResNet-200)한 경우가 존재함. 그러나 여전히 ConvNet을 어떻게 하면 효율적이고 정확도 높게 학습시킬 수 있을까? 라는 의문점이 존재함. 이에 본 연구진은 공학적이며 실증적인 연구를 통해 ConvNet을 width, depth, resolution의 차원을 모두 높이는 scaling 방법을 연구하였음.",
-          "hash": "ce9a48fb03bfc992e720933660ba893556ef5632b35d2c38f1191790652cd516"
+          "blockId": "[\"의의\",2]",
+          "anchor": "의의",
+          "quote": "연산 측면에서도 매우 훌륭함",
+          "hash": "9be6a0a65add3dae250592c1929fe0a7ce54b863aad7259fb4c8f62d2c4bbb2e"
         },
         "targetEvidence": {
           "articleId": "efficientnet-v2",
@@ -250,7 +250,7 @@
       {
         "id": "resnext",
         "relation": "related_method",
-        "reason": "EfficientNet은 width·depth·resolution을 함께 조정하고, ResNeXt는 transformation을 집계하는 구조를 제안해 CNN 설계의 서로 다른 확장 방식을 비교할 수 있습니다.",
+        "reason": "EfficientNet의 width·depth·resolution 확장과 ResNeXt의 cardinality 확장을 비교해 서로 다른 ConvNet 설계 방향을 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "efficientnet",
           "blockId": "[\"model-scaling\",1]",
@@ -260,10 +260,10 @@
         },
         "targetEvidence": {
           "articleId": "resnext",
-          "blockId": "[\"introduction\",4]",
-          "anchor": "introduction",
-          "quote": "이 논문에선 VGG-net과 ResNet의 layer를 반복하는 전략과 같은 간단한 구조를 제안함과 동시에 split-transform-merge 전략을 쉽게 적용하는 방식에 대해 제안. ResNeXt의 모듈은 transformation의 set을 나타내며 각 낮은 차원의 임베딩에서의 아웃풋은 합계로 집계됨. 연구진은 집계되어지는 transformation들은 모두 같은 toplogy를 가진다는 단순한 아이디어를 추구함. 이 디자인은 특별한 form 없이 어떠한 transformation의 큰 개수가 확장되어지는 걸 가능케 만들어줌.",
-          "hash": "f1d9565b04589dbb39200958584244f0ba3bef00bad3ef7f540fc5ae3cf32e09"
+          "blockId": "[\"aggregated-transformations\",2]",
+          "anchor": "aggregated-transformations",
+          "quote": "이 연구를 통해 width와 depth의 차원보다 cardinality가 더 효율적이고 필수적으로 적용되어야할 차원임을 밝혀냈음.",
+          "hash": "1afef8d92bb0ae728ab70a7e040104845ebd558bb66a6921ce1e4d5a5197b386"
         }
       }
     ]

@@ -28,8 +28,8 @@
     "review": []
   },
   "entry": {
-    "inputHash": "7156ec1bb375ec2113e5e74e1c0f772e997033d16a9bcfbfdffced34476fe662",
-    "status": "abstained",
+    "inputHash": "9e654bf4c7bedd00de3e1a1e873b4b58a55bdfa02f151f5707f765a377e4a62f",
+    "status": "verified",
     "candidates": [
       {
         "id": "keyword-search",
@@ -227,6 +227,26 @@
         ]
       }
     ],
-    "recommendations": []
+    "recommendations": [
+      {
+        "id": "bfcl-reasoning-option",
+        "relation": "related_method",
+        "reason": "**kwargs로 여러 키워드 인자를 받는 방식이 실제 API 요청 옵션을 담는 코드에서 어떻게 쓰이는지 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "python-args-kwargs",
+          "blockId": "[\"kwargs-사용\",5]",
+          "anchor": "kwargs-사용",
+          "quote": "def print_kwargs(**kwargs): print(\"first_name:\", kwargs['first_name']) if \"last_name\" in list(kwargs.keys()): print(\"last_name:\", kwargs['last_name']) print_kwargs(first_name = \"daniel\", last_name = \"lee\")",
+          "hash": "aa9e57576969a37dd06706ff88141bc50f1664e08293b004feca80ddfaf0b1a7"
+        },
+        "targetEvidence": {
+          "articleId": "bfcl-reasoning-option",
+          "blockId": "[\"solution\",4]",
+          "anchor": "solution",
+          "quote": "kwargs = { \"input\": message, \"model\": self.model_name.replace(\"-FC\", \"\"), \"store\": False, } # Only add reasoning parameters for OpenAI reasoning models if \"o3\" in self.model_name or \"o4-mini\" in self.model_name: kwargs[\"include\"] = [\"reasoning.encrypted_content\"] kwargs[\"reasoning\"] = {\"summary\": \"auto\"} else: kwargs[\"temperature\"] = self.temperature ...",
+          "hash": "762268e96781ad62cad9d56f53ee9c1af87d7332349d17e112d027d191ac18c7"
+        }
+      }
+    ]
   }
 }

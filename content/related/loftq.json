@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "e59caf3c0fe530cb6537cb77dabc457b53996febef2da6322ea01137f1450d45",
+    "inputHash": "d6f2d33c8a10246bb3828e68cd6e20d55caf47bfe87e91c3ef07189d5079a9ab",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "qlora",
         "relation": "related_method",
-        "reason": "LoftQ가 저순위 근사와 양자화를 결합해 사전학습 가중치를 근사하는 방식과, QLoRA가 4-bit 양자화 모델에 학습 가능한 LoRA 가중치를 더하는 방식을 비교해 볼 수 있습니다.",
+        "reason": "LoftQ는 저순위 근사와 양자화를 함께 사용하고, QLoRA는 4-bit 사전학습 모델에 학습 가능한 LoRA 가중치를 추가해 두 방법의 양자화 기반 미세조정 방식을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "loftq",
           "blockId": "[\"loftq\",1]",
@@ -261,7 +261,7 @@
       {
         "id": "lora",
         "relation": "related_method",
-        "reason": "LoftQ가 양자화와 저순위 근사를 함께 활용하는 배경을, LoRA가 가중치를 고정한 채 저랭크 분해 행렬을 최적화하는 방식과 연결해 이해할 수 있습니다.",
+        "reason": "LoftQ가 저순위 근사를 활용해 사전학습 가중치를 양자화와 함께 근사하는 방식과, LoRA가 동결된 가중치에 저랭크 행렬 분해를 적용하는 원리를 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "loftq",
           "blockId": "[\"loftq\",1]",
@@ -280,7 +280,7 @@
       {
         "id": "dora",
         "relation": "related_method",
-        "reason": "LoftQ의 저순위 근사 활용과 DoRA의 방향 성분을 LoRA로 분해하는 방식을 나란히 살펴볼 수 있습니다.",
+        "reason": "LoftQ가 양자화와 저순위 근사로 사전학습 가중치를 근사하는 반면, DoRA는 가중치를 크기와 방향으로 분해해 미세조정하는 방법을 설명합니다.",
         "sourceEvidence": {
           "articleId": "loftq",
           "blockId": "[\"loftq\",1]",

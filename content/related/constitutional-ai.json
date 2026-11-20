@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "e26ba56a353050da6ba5427d334fe199405a51d3abf52c4764db4994b7b083b9",
+    "inputHash": "8f41713c331d13a4422edac554ac531f0bd5b7b4d28ee1df392b0c3bf7ff572b",
     "status": "verified",
     "candidates": [
       {
@@ -240,28 +240,9 @@
     ],
     "recommendations": [
       {
-        "id": "alphallm",
-        "relation": "related_method",
-        "reason": "CAI가 자기 응답을 비판·수정해 학습 데이터를 만드는 방식과 LLM 자기 개선을 위한 탐색·비판 활용을 함께 살펴볼 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "constitutional-ai",
-          "blockId": "[\"introduction\",5]",
-          "anchor": "introduction",
-          "quote": "모델이 **스스로 자기 응답을 비판(critique)하고 수정(revision)**하여 supervised 학습 데이터를 생성(SL-CAI).",
-          "hash": "06bd86a765f40ffe1996457ab7c93316996c5a49b8a3b775419670640209e916"
-        },
-        "targetEvidence": {
-          "articleId": "alphallm",
-          "blockId": "[\"related-work\",3]",
-          "anchor": "related-work",
-          "quote": "이전 연구와는 달리, 우리는 LLM의 자기 개선을 위해 MCTS(Monte Carlo Tree Search)의 감독을 활용할 것을 제안합니다. MCTS의 output을 사용하여 LLM을 계속해서 훈련합니다. MCTS의 output은 기존의 sampling 데이터보다 더 품질이 더 좋기에 가능하며 이 품질의 차이는 LLM이 self-improving을 가능하게 만들어줍니다.",
-          "hash": "6f20c7c4d404228cddf29646d99e69ac40a0dff5c52a8dcb72f0e88b8119c51f"
-        }
-      },
-      {
         "id": "chain-of-thought",
         "relation": "related_method",
-        "reason": "CAI의 AI feedback은 CoT로 단계적 추론을 유도해 판단 정확도와 투명성을 높이며, 다른 글은 CoT 추론 방식 자체를 설명합니다.",
+        "reason": "AI 피드백 판단에 CoT를 적용하는 방식과 복잡한 추론을 중간 단계로 나누는 CoT prompting을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "constitutional-ai",
           "blockId": "[\"rl-stage-rlaif\",2]",
@@ -275,25 +256,6 @@
           "anchor": "chain-of-thought-prompting",
           "quote": "여러 단계를 거쳐야하는 수학 문제와 같은 복잡한 추론을 통해 문제를 푸는 절차를 연구진은 고려하였음. 이건 전형적인 문제를 하나하나 분해하여 정답에 접근하는 방식임. 이 논문의 목표는 LLM에 유사한 CoT를 생성할 수 있는 기능을 부여하는 것입니다. 일관된 일련의 중간 추론 단계를 생성할 수 있는 능력을 LLM에 부여하는 것입니다.",
           "hash": "82ac1138b000944e339224661220eee68aa8b30584e7b60c99240027c33e995e"
-        }
-      },
-      {
-        "id": "thinkingcap",
-        "relation": "related_method",
-        "reason": "CAI는 선호 기반 보상으로 강화학습하고, ThinkingCap도 RL을 보상에 적용해 모델의 응답 길이를 조절합니다.",
-        "sourceEvidence": {
-          "articleId": "constitutional-ai",
-          "blockId": "[\"rl-stage-rlaif\",1]",
-          "anchor": "rl-stage-rlaif",
-          "quote": "RL 단계의 골자는 RLHF의 인간 선호 라벨을 AI 선호 라벨로 대체하는 것. SL-CAI 모델로 각 프롬프트에 응답을 2개 생성한 뒤, feedback 모델에게 constitution 원칙과 함께 \"둘 중 어느 쪽이 덜 해로운가?\"를 객관식으로 물음. 그 답의 로그확률을 정규화해 soft preference label을 만들고, 이 AI harmlessness 라벨을 기존 인간 helpfulness 라벨과 섞어 hybrid PM을 학습함. 마지막으로 그 PM을 보상으로 SL-CAI를 강화학습하면 RL-CAI 모델이 됨. constitution은 모델 행동을 규율하는 자연어 원칙 집합(논문은 16개)으로, SL에선 루프마다·RL에선 비교마다 무작위로 샘플링해 다양성과 robustness를 높임.",
-          "hash": "e0585ad836dfba48ce5e7ee8c44ebf9fe5108cd9211334dabacc8c19330d39ff"
-        },
-        "targetEvidence": {
-          "articleId": "thinkingcap",
-          "blockId": "[\"conclusion\",1]",
-          "anchor": "conclusion",
-          "quote": "We set out to make a 2B reasoner think less, and found that the base model's real problem was not thinking too much but never stopping. A correctness-gated length penalty, placed only in the reward and optimized with stock GRPO, largely fixes that in distribution, within 200 LoRA updates on one consumer GPU: it cuts thinking by three quarters and doubles strict accuracy. None of the refinements we tried improved on it.",
-          "hash": "019e4430f782fdb8a5f62184597d2d3666cbbf44db79974d8352a390b559e488"
         }
       }
     ]

@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "3228bde9c4683bf49611052a21d0cc96398b524645f300710860375f8d48d1ca",
+    "inputHash": "b6f5b8d8f95d9fe7110bc11c3a5457b8a0d65d9f36bdbf0a915954f155aa590d",
     "status": "verified",
     "candidates": [
       {
@@ -231,13 +231,13 @@
       {
         "id": "cuda-device-troubleshooting",
         "relation": "related_method",
-        "reason": "두 사례 모두 A100에서 nvidia-smi 이상을 다루며, 그래픽 드라이버 설치 또는 재설치로 GPU 인식 문제를 해결합니다.",
+        "reason": "두 사례 모두 A100에서 nvidia-smi 이상을 겪고 드라이버를 재설치하거나 버전에 맞춰 설치해 해결하는 방법을 보여줍니다.",
         "sourceEvidence": {
           "articleId": "gpu-driver-troubleshooting",
-          "blockId": "[\"issue\",1]",
-          "anchor": "issue",
-          "quote": "nvidia-smi 입력시 평소와 다르게 그래픽카드 정보가 나타나는 현상 발생",
-          "hash": "bfca6b71f15bb1b966b79f80022abecb697cc114ef0fb623bf068a2b7b409a4c"
+          "blockId": "[\"해결\",2]",
+          "anchor": "해결",
+          "quote": "sudo apt install nvidia-driver-525 sudo reboot",
+          "hash": "fad661413a04a9975c02227e1af8d61b39d9e79c431bcde87d8d03fde1dc0dd6"
         },
         "targetEvidence": {
           "articleId": "cuda-device-troubleshooting",
@@ -250,7 +250,7 @@
       {
         "id": "developing-daily-06",
         "relation": "related_method",
-        "reason": "그래픽 드라이버 버전 문제로 GPU를 인식하지 못하는 상황에서 드라이버 관련 조치와 CUDA 버전 대응을 살펴볼 수 있습니다.",
+        "reason": "그래픽 드라이버 버전 문제로 추정된 상황에서 드라이버 설치와 재부팅, CUDA 버전에 맞춘 파일 교체를 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "gpu-driver-troubleshooting",
           "blockId": "[\"원인\",1]",
@@ -260,29 +260,29 @@
         },
         "targetEvidence": {
           "articleId": "developing-daily-06",
-          "blockId": "[\"error2\",2]",
-          "anchor": "error2",
-          "quote": "갑자기 GPU를 인식 못함",
-          "hash": "c2e9486555c735c0a728b49a3f91b1a873be75df67fdfd2b154a33fe50512fbc"
+          "blockId": "[\"solution\",2]",
+          "anchor": "solution",
+          "quote": "cuda 버전에 맞게 파일을 복사해주면 됨",
+          "hash": "779bd9c17b2d24675908211f13a4565ed1411a3f535ed3cac061d77a1be30fbc"
         }
       },
       {
-        "id": "python-venv-troubleshooting",
-        "relation": "evaluation_comparison",
-        "reason": "두 사례 모두 Ubuntu 22.04 환경이지만, 하나는 nvidia-smi 이상이고 다른 하나는 venv 생성 실패여서 문제와 해결 조건이 다릅니다.",
+        "id": "developing-daily-07",
+        "relation": "related_method",
+        "reason": "그래픽 드라이버 버전 문제로 보고 호환 버전을 설치한 뒤 재부팅하는 해결 과정을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "gpu-driver-troubleshooting",
-          "blockId": "[\"env\",1]",
-          "anchor": "env",
-          "quote": "Ubuntu 22.04",
-          "hash": "c1c6fb1bf228a39af9741fc9423688cf05ff380f3b25367ca8b19e343ba2db90"
+          "blockId": "[\"원인\",1]",
+          "anchor": "원인",
+          "quote": "그래픽드라이버 버전 문제로 예상",
+          "hash": "634274f6cf2032740013a658a7f3457f0abd836eb2255b547807002241301d37"
         },
         "targetEvidence": {
-          "articleId": "python-venv-troubleshooting",
-          "blockId": "[\"env\",1]",
-          "anchor": "env",
-          "quote": "OS : Ubuntu 22.04",
-          "hash": "ed56008c49595e0e2e8bdccba4484c4be1029d7431924779d83ea71dd8713054"
+          "articleId": "developing-daily-07",
+          "blockId": "[\"workflow\",1]",
+          "anchor": "workflow",
+          "quote": "SelFee 방식에 영감을 받아 Self-Feedback method 적용",
+          "hash": "1b6069abdc32efa0cf2a3bc2ab3829a724cff1898d3bf574f1009b57719d2643"
         }
       }
     ]

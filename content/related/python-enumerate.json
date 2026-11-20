@@ -28,8 +28,8 @@
     "review": []
   },
   "entry": {
-    "inputHash": "85ffa575771257e249f22a73919583c7bc0f8d80a1c46684ea0a1351827396b9",
-    "status": "abstained",
+    "inputHash": "08273f9816b501e8def6fc50a8cfdf5b54a6f73baaec24512f403b1e6484c41d",
+    "status": "verified",
     "candidates": [
       {
         "id": "python-map",
@@ -227,6 +227,26 @@
         ]
       }
     ],
-    "recommendations": []
+    "recommendations": [
+      {
+        "id": "python-map",
+        "relation": "related_method",
+        "reason": "enumerate가 순회 중 인덱스와 값을 함께 다루는 방법을 익히고, map 예시에서는 여러 iterable의 요소에 함수를 적용하는 방식을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "python-enumerate",
+          "blockId": "[\"enumerate\",1]",
+          "anchor": "enumerate",
+          "quote": "enumerate()함수는 파이썬에서 list나 tuple과 같은 iterable(이터러블) 객체를 순회하면서, 해당요소의 인덱스와 값을 동시에 반환해주는 함수. 보통 for 반복문과 함께 사용.",
+          "hash": "3d74c5aacdea3ed9cd9b78a1936fa53e563faca6c7fd8a47f37ddd09163d1fab"
+        },
+        "targetEvidence": {
+          "articleId": "python-map",
+          "blockId": "[\"예시3-여러-반복-객체-사용\",1]",
+          "anchor": "예시3-여러-반복-객체-사용",
+          "quote": "def add(x, y): return x+y list1 = [1, 2, 3] list2 = [4, 5, 6] print(list(map(add, list1, list2))) # 출력: [5, 7, 9]",
+          "hash": "6ce0436246aa3a354e6cea0e76a17a6545ff591df1b795408bcb7faf0f573836"
+        }
+      }
+    ]
   }
 }

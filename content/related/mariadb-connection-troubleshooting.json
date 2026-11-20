@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "3ddaa33d5aeb6de1a027d800617610aef876913e2455942de925db1823a28862",
+    "inputHash": "547b25a062b0e0f0ebd4a9c72c8b8a44a79b293572a91f1c343a5bb547839bed",
     "status": "verified",
     "candidates": [
       {
@@ -231,7 +231,7 @@
       {
         "id": "tokenizer-input-troubleshooting",
         "relation": "related_method",
-        "reason": "두 사례 모두 데이터 문제를 고치기 위해 입력 구문을 수정하며, SQL에서는 예약어 컬럼을 백틱으로 감쌉니다.",
+        "reason": "두 사례 모두 코드의 입력 문제를 찾아 원인을 해결하며, SQL 컬럼명을 백틱으로 감싸는 수정과 결측값 제거 과정을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "mariadb-connection-troubleshooting",
           "blockId": "[\"해결\",2]",

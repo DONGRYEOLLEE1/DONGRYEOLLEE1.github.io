@@ -66,7 +66,7 @@
     ]
   },
   "entry": {
-    "inputHash": "260fb270e5bb46e15280cc48961a706a8c16459a4a2d7bec08d977caa2aaf96a",
+    "inputHash": "176a815efd71ffa7bbba344d4cff6d06ed1b4da96e907937572f415af4ce33e6",
     "status": "verified",
     "candidates": [
       {
@@ -269,13 +269,13 @@
       {
         "id": "qlora",
         "relation": "concept_explanation",
-        "reason": "8bit 로딩과 k-bit 학습 준비를 사용하는 코드에 대응해, QLoRA가 양자화와 LoRA 어댑터 및 paged optimizer로 메모리를 줄이는 방법을 설명합니다.",
+        "reason": "8bit 모델 로딩과 k-bit 학습을 적용한 코드가 QLoRA의 양자화·저메모리 파인튜닝 원리와 OOM 방지용 Paged Optimizers를 설명합니다.",
         "sourceEvidence": {
           "articleId": "llama2-training-oom",
-          "blockId": "[\"source-code\",6]",
+          "blockId": "[\"source-code\",4]",
           "anchor": "source-code",
-          "quote": "task_type = TaskType.CAUSAL_LM ) model = prepare_model_for_kbit_training(model) model = get_peft_model(model, config) model.is_parallelizable = True model.model_parallel = True trainer = Trainer( model = model, train_dataset = data['train'], # eval_dataset = val_data, args = TrainingArguments( per_device_train_batch_size = script_args.batch_size, gradient_accumulation_steps = script_args.gradient_accumulation_steps, learning_rate = script_args.learning_rate, num_train_epochs",
-          "hash": "ac0cd338905f55f04cbb72b1660e9ed8455588f4c8627944b2f76efb2159170c"
+          "quote": "{\"help\" : \"lora alpha\"}) lora_dropout: Optional[float] = field(default = 0.05, metadata = {\"help\" : \"lora dropout that is stastically not related the performance as an original paper\"}) script_args = ScriptArgument() if script_args.load_in_8bit: model = AutoModelForCausalLM.from_pretrained( script_args.model_name, torch_dtype = torch.float16, device_map = 'auto', load_in_8bit = True, trust_remote_code = True ) else: model = AutoModelForCausalLM.from_pretrained(",
+          "hash": "3af8adbcdc71f20ed4074538963f07136a6462659ab5c0475d896dd0bd0e4e4a"
         },
         "targetEvidence": {
           "articleId": "qlora",
@@ -286,9 +286,28 @@
         }
       },
       {
+        "id": "transformers-training-oom",
+        "relation": "related_method",
+        "reason": "둘 다 Transformers Trainer로 파인튜닝하다가 몇 스텝 후 OOM이 발생하는 문제를 다룹니다.",
+        "sourceEvidence": {
+          "articleId": "llama2-training-oom",
+          "blockId": "[\"error\",1]",
+          "anchor": "error",
+          "quote": "transformer.Trainer로 fine-tuning 작업 진행 시, 몇개의 스텝만 진행되다가 OOM 발생",
+          "hash": "daaab9894e8211822b39db93c7d31a7f26dbd9e74686469e3d75616734b8e408"
+        },
+        "targetEvidence": {
+          "articleId": "transformers-training-oom",
+          "blockId": "[\"error\",3]",
+          "anchor": "error",
+          "quote": "GPU allocated memory가 stable 하지 않고 지속적으로 증가하는 memory leakage problem",
+          "hash": "26c7eac5ed259a0dc838a8f227518e1c5fb58edc3d1074caa1ba865cdcb2352b"
+        }
+      },
+      {
         "id": "training-arguments",
         "relation": "related_method",
-        "reason": "OOM 해결을 위해 logging_steps와 warmup_steps를 줄이는 사례와 TrainingArguments의 관련 설정 및 사용 예를 함께 볼 수 있습니다.",
+        "reason": "OOM 해결책으로 logging_steps와 warmup_steps를 조정한 사례를 TrainingArguments의 설정 및 하이퍼파라미터 설명과 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "llama2-training-oom",
           "blockId": "[\"solution\",2]",
@@ -298,10 +317,29 @@
         },
         "targetEvidence": {
           "articleId": "training-arguments",
-          "blockId": "[\"usage\",1]",
-          "anchor": "usage",
-          "quote": "args = TrainingArguments( per_device_train_batch_size = 2, gradient_accumulation_steps = 8, max_steps = 100, learning_rate = 2e-8, fp16 = True, logging_steps = 20, output_dir = f\"{OUTPUT_PATH}\", optim = 'paged_adamw_8bit', save_total_limit = 3, ... )",
-          "hash": "be661192c8fdd3ca5af2641cbb1887bf7050495cf6857d21718926272745a476"
+          "blockId": "[\"하이퍼파라미터\",5]",
+          "anchor": "하이퍼파라미터",
+          "quote": "warmup_steps(int, 0) : 0부터 learning_rate 값까지의 linear warmup의 step number",
+          "hash": "f2ed2fee5fc1209dd9fcad47695e424a89f73ee334b38a786c8403a4fbdcd30d"
+        }
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "relation": "related_method",
+        "reason": "Trainer 학습 초기에 발생한 OOM과 QLoRA 학습 초기에 발생한 OOM의 대응 사례를 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "llama2-training-oom",
+          "blockId": "[\"error\",1]",
+          "anchor": "error",
+          "quote": "transformer.Trainer로 fine-tuning 작업 진행 시, 몇개의 스텝만 진행되다가 OOM 발생",
+          "hash": "daaab9894e8211822b39db93c7d31a7f26dbd9e74686469e3d75616734b8e408"
+        },
+        "targetEvidence": {
+          "articleId": "qlora-troubleshooting",
+          "blockId": "[\"section-8\",1]",
+          "anchor": "section-8",
+          "quote": "학습은 진행되나 초기 step(약 5-step) 진행시, OOM 메세지 출력",
+          "hash": "606aad8abe773e560c35f54d5b33b91afd9cfca5a94da9f6ded85060806deedd"
         }
       }
     ]

@@ -16,7 +16,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "86eaba399922c1729020b49cc4ebe3a3524efa43ad2586d3ec762c76db7b94ee",
+    "inputHash": "f77605fa5152dc7799922037977a54ac6576f392d748fd21c2253edfcbefa8d4",
     "status": "verified",
     "candidates": [
       {
@@ -219,7 +219,7 @@
       {
         "id": "bert",
         "relation": "related_method",
-        "reason": "NLI의 entailment 레이블을 BERT의 entailment premise-hypothesis 입력과 연결해, 입력 구성과 사전학습 방법을 살펴볼 수 있습니다.",
+        "reason": "NLI의 premise와 hypothesis 입력 쌍이 BERT의 entailment 입력으로 쓰이는 구성을 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "nlp-terms",
           "blockId": "[\"nli---natural-language-inference\",14]",
@@ -236,28 +236,28 @@
         }
       },
       {
-        "id": "flan",
+        "id": "elmo",
         "relation": "related_method",
-        "reason": "NLI를 문장쌍 분류 과제로 설명한 내용과 FLAN의 지시 기반 학습을 비교해, 태스크 지시로 언어모델을 학습하는 방식을 살펴볼 수 있습니다.",
+        "reason": "GLUE에서 성능을 보인 ELMo가 문맥 정보를 반영하는 사전학습과 단어 표현을 만드는 방식을 알아볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "nlp-terms",
-          "blockId": "[\"nli---natural-language-inference\",2]",
-          "anchor": "nli---natural-language-inference",
-          "quote": "두 개 문장(premise, hypothesis)이 참(entailment), 거짓(contradiction), 중립(netural)인지 가려내는 classification task",
-          "hash": "103563cfe4b5838557435a3f19c1f549f3de816e1f8180ec67da6f6083c7e99d"
+          "blockId": "[\"glue---general-language-understanding-evaluation\",1]",
+          "anchor": "glue---general-language-understanding-evaluation",
+          "quote": "사전 학습된 딥러닝 기반 언어 모델인 ELMo, GPT-1, BERT 모두 GLUE benchmark에서 최고의 성능을 보였음",
+          "hash": "75dd75b5184816382854503b87ee6287860c3113c03b5a584d42966c8e6a75c3"
         },
         "targetEvidence": {
-          "articleId": "flan",
-          "blockId": "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
-          "anchor": "flan--instruction-tuning-improves-zero-shot-learning",
-          "quote": "메인 아이디어로는 지시(supervision)를 사용하여 언어모델에 특정 task에 대해 가르치는 것임. 그 언어모델은 심지어 unseen task 일지라도 잘 작동할 것이며 instruction을 따르기 위해 잘 학습할 것임. 밝혀지지 않은 task에 대해 평가하기 위해 작업 유형별로 데이터 세트를 클러스터로 그룹화하고 각 작업 클러스터를 평가하기 위해 보류하고 나머지 모든 클러스터에서 instruction tuning을 진행함.",
-          "hash": "8e61d4b0359d7e005d690e859cf2c30921b7666b84e49772ef0527d1b8b422e7"
+          "articleId": "elmo",
+          "blockId": "[\"elmo\",1]",
+          "anchor": "elmo",
+          "quote": "기존 word2vec, Glove 등에 비해 context 정보를 반영하는 Pre-training 방법을 제시합니다. 여러층의 BiLSTM을 이용해 Language Model을 하며, 만들어진 hidden-state를 적절하게 조합해 새로운 word representation을 만들어냅니다.",
+          "hash": "0536e6bb9b159cb5b8c31469299a3fb57f0c2d5b648124df1af19c123e28974b"
         }
       },
       {
         "id": "lora",
         "relation": "evaluation_comparison",
-        "reason": "GLUE가 모델 평가에 쓰였다는 설명과 LoRA 실험에서 GLUE 데이터셋으로 성능을 평가했다는 내용을 통해 평가 설정을 비교할 수 있습니다.",
+        "reason": "GLUE 성능을 언급한 글과 RoBERTa·DeBERTa의 GLUE 평가를 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "nlp-terms",
           "blockId": "[\"glue---general-language-understanding-evaluation\",1]",

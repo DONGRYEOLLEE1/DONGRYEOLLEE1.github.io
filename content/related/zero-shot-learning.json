@@ -50,7 +50,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "73586f4786e2e01d717d05ef7304e85686191ca4800e5014ff9314a65326ad4b",
+    "inputHash": "4d4dc56f4eef903b8625fa27294f390a0ef0b0e381b52cff6cc5407a55e2a002",
     "status": "verified",
     "candidates": [
       {
@@ -251,28 +251,9 @@
     ],
     "recommendations": [
       {
-        "id": "nlp-terms",
-        "relation": "related_method",
-        "reason": "NLI 분류를 premise와 hypothesis의 entailment·contradiction·중립 판별로 설명해, zero-shot 분류에 쓰이는 NLI 접근을 이해할 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "zero-shot-learning",
-          "blockId": "[\"classification-as-nli\",1]",
-          "anchor": "classification-as-nli",
-          "quote": "문장은 embedding하거나 같은 latent 공간에 레이블하는 경우뿐만 아니라 2개의 분명한 문장의 호환성에 대해서도 다룰 수 있습니다. NLI 2개의 문장이 존재합니다. premise 와 hypothesis가 그것입니다. 이 task는 가설이 참인지 거짓인지 주어진 premise를 통해 결정하는 task라 할 수 있습니다.",
-          "hash": "0d17612d3f17e6b6d26f103b2cab90849d46610e506f912493b0370c0407b715"
-        },
-        "targetEvidence": {
-          "articleId": "nlp-terms",
-          "blockId": "[\"nli---natural-language-inference\",2]",
-          "anchor": "nli---natural-language-inference",
-          "quote": "두 개 문장(premise, hypothesis)이 참(entailment), 거짓(contradiction), 중립(netural)인지 가려내는 classification task",
-          "hash": "103563cfe4b5838557435a3f19c1f549f3de816e1f8180ec67da6f6083c7e99d"
-        }
-      },
-      {
         "id": "flan",
-        "relation": "evaluation_comparison",
-        "reason": "파인튜닝 없이 downstream task를 평가하는 zero-shot 설정과, 다른 작업 클러스터로 instruction tuning한 뒤 보류한 클러스터를 평가하는 설정을 비교할 수 있습니다.",
+        "relation": "related_method",
+        "reason": "파인튜닝 없이 미관측 작업을 수행하는 zero-shot 설정과 instruction tuning으로 zero-shot 성능을 높이는 접근을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "zero-shot-learning",
           "blockId": "[\"what-is-zero-shot-learning\",1]",
@@ -286,6 +267,63 @@
           "anchor": "flan--instruction-tuning-improves-zero-shot-learning",
           "quote": "메인 아이디어로는 지시(supervision)를 사용하여 언어모델에 특정 task에 대해 가르치는 것임. 그 언어모델은 심지어 unseen task 일지라도 잘 작동할 것이며 instruction을 따르기 위해 잘 학습할 것임. 밝혀지지 않은 task에 대해 평가하기 위해 작업 유형별로 데이터 세트를 클러스터로 그룹화하고 각 작업 클러스터를 평가하기 위해 보류하고 나머지 모든 클러스터에서 instruction tuning을 진행함.",
           "hash": "8e61d4b0359d7e005d690e859cf2c30921b7666b84e49772ef0527d1b8b422e7"
+        }
+      },
+      {
+        "id": "few-shot-learning",
+        "relation": "evaluation_comparison",
+        "reason": "명시적 학습 없이 새 작업을 수행하는 zero-shot과 클래스별 소수 레이블 예시를 이용하는 few-shot의 조건 차이를 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"what-is-zero-shot-learning\",1]",
+          "anchor": "what-is-zero-shot-learning",
+          "quote": "전통적으로 ZSL은 대부분 상당히 특정한 유형의 작업을 가리키는 경우가 많았습니다. 1개의 셋에서 분류기를 학습한 후에 다른 셋에서의 평가하는 방식으로요. 최근에 특히 NLP 분야에서 모델이 명시적으로 학습되지 않은 작업을 수행하도록 한다는 의미로 훨씬 더 광범위하게 사용되고 있습니다. 잘 알다시피 GPT-2에서 저자들은 언어모델을 파인튜닝 없이 직접적으로 기계독해와 같은 downstream task에서 평가하였습니다.",
+          "hash": "0a41e41436ab1fea2ff22e01e522f0f279afabfdadd4a1709f4d145acc54957b"
+        },
+        "targetEvidence": {
+          "articleId": "few-shot-learning",
+          "blockId": "[\"few-shot-learning이-뭘까\",1]",
+          "anchor": "few-shot-learning이-뭘까",
+          "quote": "Few-shot learning (FSL)은 각 class에 대해 오직 몇가지만 레이블된 샘플들을 사용한 데이터의 새로운 카테고리를 사전학습 모델에 이용가능하게 한 머신러닝 framework입니다. 이건 meta-learning의 패러다임에서 파생된 개념입니다.",
+          "hash": "ffa507f2e57a0525bec922e6b18c3e13b6c40db50d211bdfbbfbc141d9e8b4c2"
+        }
+      },
+      {
+        "id": "bert",
+        "relation": "related_method",
+        "reason": "NLI 분류에서 전제와 가설을 별도 입력으로 다루는 방식과 BERT의 사전학습 목표인 MLM을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"classification-as-nli\",2]",
+          "anchor": "classification-as-nli",
+          "quote": "BERT와 같은 transformer 구조를 사용할때 NLI 데이터셋은 전형적으로 sequence-pair classification을 통해 모델링 되어집니다. 즉, 우리는 모델을 통해 전제와 가설을 함께 별개의 세그먼트로 제공하고 [반복, 중립, 수반] 중 하나를 예측하는 classification head를 학습합니다.",
+          "hash": "a0577ec78e848da12df75a7b8838429df864811eb2fdc851330579b5ce3c9468"
+        },
+        "targetEvidence": {
+          "articleId": "bert",
+          "blockId": "[\"task-1-masked-lm-mlm\",2]",
+          "anchor": "task-1-masked-lm-mlm",
+          "quote": "Bi-directional한 Transformer Encoder를 쓰되, 실제 Input에 해당하는 단어들을 임의의 비율(15%)로 마스킹을 시키고 모델이 학습을 통해서 실제 가려진 값을 잘 예측하도록 학습시키는 것이 바로 BERT의 pre-training 첫번째 task인 MLM.",
+          "hash": "9792b5e6449cb15bdc0ea16dbe7ccc3e9ead912491a7080d396ba85c93f0dc26"
+        }
+      },
+      {
+        "id": "gpt-3",
+        "relation": "related_method",
+        "reason": "파인튜닝 없이 작업을 수행하는 zero-shot과 자연어 지시 및 적은 예시를 입력해 작업에 적응하는 in-context learning을 비교할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"what-is-zero-shot-learning\",1]",
+          "anchor": "what-is-zero-shot-learning",
+          "quote": "전통적으로 ZSL은 대부분 상당히 특정한 유형의 작업을 가리키는 경우가 많았습니다. 1개의 셋에서 분류기를 학습한 후에 다른 셋에서의 평가하는 방식으로요. 최근에 특히 NLP 분야에서 모델이 명시적으로 학습되지 않은 작업을 수행하도록 한다는 의미로 훨씬 더 광범위하게 사용되고 있습니다. 잘 알다시피 GPT-2에서 저자들은 언어모델을 파인튜닝 없이 직접적으로 기계독해와 같은 downstream task에서 평가하였습니다.",
+          "hash": "0a41e41436ab1fea2ff22e01e522f0f279afabfdadd4a1709f4d145acc54957b"
+        },
+        "targetEvidence": {
+          "articleId": "gpt-3",
+          "blockId": "[null,5]",
+          "anchor": null,
+          "quote": "이런 문제를 해결하기 위한 잠재적인 루트는 바로 meta learning이다. 언어모델의 context딴에서 학습시간동안 패턴인지능력과 다양한 셋의 스킬을 개발하는 모델을 의미합니다. 그리고 그러고난 후에 inference 할때 이 능력을 원하는 작업에 빠르게 적응하거나 인식합니다 (위 이미지 참고). 최근연구를 통해 이걸 in-context learning이라고 부르기로 했고 task 특성의 특징에 맞게 사전학습된 언어모델의 텍스트 입력값으로 사용하는 것을 일컫습니다. 이 모델은 자연어 지시와 적은 demonstration에 영향을 받습니다. 그리고 다음에 올 단어를 간단하게 예측함으로써 추가적인 예시를 완벽하게 기대하게 만듭니다.",
+          "hash": "48fbd476c085ab36cb78e29fd9a76765d66c03ba983f0977be3cd1e10bb6c66a"
         }
       }
     ]

@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "82e7d51deea13ffeb1df7a0d09adcd2de0e13cb3800162ce6f167e7f2b160ef1",
+    "inputHash": "37c1e866158ac2af7bcdc97305d1f3c6567ced73c328aaf31917c2fb0adfc06b",
     "status": "verified",
     "candidates": [
       {
@@ -231,7 +231,7 @@
       {
         "id": "vit",
         "relation": "related_method",
-        "reason": "Transformer의 시퀀스 입력 방식을 이미지 패치 임베딩으로 바꿔 이미지 분류에 적용하는 방법을 배울 수 있습니다.",
+        "reason": "이미지를 패치 임베딩 시퀀스로 바꿔 Transformer에 입력하는 비전 적용 방식을 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "transformer",
           "blockId": "[\"trnasformer-의의\",1]",
@@ -250,7 +250,7 @@
       {
         "id": "bert",
         "relation": "related_method",
-        "reason": "Transformer 인코더를 쌓은 BERT의 구조와 마스킹 토큰 예측을 통해 양방향 표현을 만드는 방식을 함께 살펴볼 수 있습니다.",
+        "reason": "Transformer 인코더를 쌓은 구조가 BERT의 양방향 인코더 구성에서 어떻게 쓰이는지 알 수 있습니다.",
         "sourceEvidence": {
           "articleId": "transformer",
           "blockId": "[\"trnasformer-의의\",1]",
@@ -260,22 +260,22 @@
         },
         "targetEvidence": {
           "articleId": "bert",
-          "blockId": "[\"요약\",1]",
-          "anchor": "요약",
-          "quote": "masked language model(MLM)을 사용하여 deep directional 구조를 가진다. BERT는 input token 전체와 masked token을 한번에 Transformer encoder에 넣고 원래 token을 예측하므로 deep directional함. 특정위치에 있는 단어들을 마스킹 후, 예측하도록 만듦",
-          "hash": "34292c00ece47414f9c638388485c8700a68abbe700896cc292249503a8bd31d"
+          "blockId": "[\"model-architecture\",1]",
+          "anchor": "model-architecture",
+          "quote": "multi-layer bidirectional Transformer encoder 구조",
+          "hash": "49c04b002c01a06725f757512322a9544bd2b5c77944cb7a75f00be77d66b8df"
         }
       },
       {
         "id": "llama",
         "relation": "related_method",
-        "reason": "Transformer 하위층의 입력 정규화와 RMSNorm을 활용해 학습 안정성을 높이는 설계를 살펴볼 수 있습니다.",
+        "reason": "Transformer 하위층 입력을 정규화하는 pre-normalization과 RMSNorm의 적용 방식을 알아볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "transformer",
-          "blockId": "[\"layer-normalization\",2]",
-          "anchor": "layer-normalization",
-          "quote": "위 2개의 과정은 Encoder, Decoder에서 default값으로 자주 사용한다",
-          "hash": "9b3920819a7af4a7039275075df5a1775df078f59aeca17c9abb2974d22b429c"
+          "blockId": "[\"trnasformer-의의\",1]",
+          "anchor": "trnasformer-의의",
+          "quote": "Attention 메커니즘만을 사용하는 Transformer라는 새로운 구조를 제안하였다.",
+          "hash": "b68674931cc50c529d66a7bfbe16a60e1f91a5d5b680393015f5e1b5314f150d"
         },
         "targetEvidence": {
           "articleId": "llama",
@@ -283,6 +283,25 @@
           "anchor": "architecture",
           "quote": "Pre-normailization(GPT3), 학습 안정성을 향상시키기 위해 output을 일반화하는 대신에 각각의 transformer sub-layer의 input을 normalize 해줬습니다. 또한 RMSNorm normalizing 함수를 사용하였습니다.",
           "hash": "60102df00c8ce259b7269391bfc68bae848c47cc20d25cdbf06a5906b184a3a7"
+        }
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "relation": "related_method",
+        "reason": "Transformer 기반 autoregressive decoding을 아키텍처 변경 없이 가속하는 speculative decoding의 접근을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "transformer",
+          "blockId": "[\"transformer\",1]",
+          "anchor": "transformer",
+          "quote": "기존의 RNN처럼 하나씩 처리하는게 아닌 한꺼번에 처리하며, 기존의 Attention 메커니즘을 사용하면서 학습과 병렬화(Parallelize)가 쉽게 되게하는 모델",
+          "hash": "4c6a1af4459f769bd17fc62d6a434c746cf93887d6c0fef59f728dc5844aa951"
+        },
+        "targetEvidence": {
+          "articleId": "speculative-decoding-paper",
+          "blockId": "[\"introduction\",10]",
+          "anchor": "introduction",
+          "quote": "Speculative decoding — 이를 autoregressive decoding에 적용한 메커니즘. 아키텍처 변경 없음, 재학습 없음, 출력 분포 변화 없음(lossless). 기존(off-the-shelf) 모델 조합만으로 동작함.",
+          "hash": "1c3cb1ed0968001c77f0de40750f8a3ea1213cebbdac9b967f030a167208b696"
         }
       }
     ]

@@ -50,7 +50,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "4c89433580fd36744e302102df8d4ea2357cce8274dbd645c0b5f2e22a6fc0c1",
+    "inputHash": "1fa16eb611516ff61f7bf8c657b4a92bdc56a9b94145fa2da9f8eab0b1ffee4b",
     "status": "verified",
     "candidates": [
       {
@@ -238,7 +238,7 @@
       {
         "id": "swin-transformer",
         "relation": "related_method",
-        "reason": "ViT가 패치를 시퀀스로 입력하는 방식과 Swin Transformer가 깊은 레이어에서 패치를 결합해 계층적 피처맵을 만드는 방식을 비교해 볼 수 있습니다.",
+        "reason": "ViT가 패치 시퀀스를 입력하는 방식과 Swin Transformer가 깊은 층에서 패치를 결합해 계층적 피처맵을 만드는 방식을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "vit",
           "blockId": "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
@@ -257,7 +257,7 @@
       {
         "id": "transformer",
         "relation": "related_method",
-        "reason": "ViT가 패치 임베딩 시퀀스를 Transformer에 입력하는 방식을 Transformer의 토큰 임베딩과 위치 임베딩 개념으로 이해할 수 있습니다.",
+        "reason": "ViT가 이미지 패치를 선형 임베딩 시퀀스로 입력하는 배경이 Transformer의 토큰 임베딩과 위치 인코딩 방식과 어떻게 연결되는지 알 수 있습니다.",
         "sourceEvidence": {
           "articleId": "vit",
           "blockId": "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
@@ -275,21 +275,40 @@
       },
       {
         "id": "convnext",
-        "relation": "related_method",
-        "reason": "ViT가 CNN 구조를 Transformer로 대체한 접근과 Attention 없이 Conv-layer만으로 Transformer 계열 모델을 따라잡은 접근을 비교해 볼 수 있습니다.",
+        "relation": "evaluation_comparison",
+        "reason": "ViT의 패치 기반 이미지 분류 방식과 ConvNeXt의 ConvNet 설계 및 Swin-T와 비교하는 연구 관점을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "vit",
-          "blockId": "[\"의의\",2]",
-          "anchor": "의의",
-          "quote": "기존의 제한적인 Attention Mechanism에서 벗어나, CNN구조 대부분을 Transformer로 대체",
-          "hash": "0b13524a2ccf8bcf71a60845bb7c91ad3fb18e6ad1568c7e798dcca863aeb201"
+          "blockId": "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "anchor": "transformer의-계산-효율성과-scalability를-비전에-활용",
+          "quote": "표준 Transformer를 최대한 변형 없이 직접적으로 이미지에 적용하였다. 이를 위해 이미지를 패치 조각으로 쪼갠다. 그리고 각각의 패치에 대해 선형적인 임베딩의 시퀀스를 제공하여 Transformer에 입력하였다. 이때 이미지의 패치는 마치 NLP에서의 토큰과 같이 다루게 된다. 모델은 이미지 분류 태스크에 대해 지도 학습 방식으로 학습하였다.",
+          "hash": "3c677d0e99eb275ec2794dd5379bab388dafc305a15bb7178ba8d90787fe1481"
         },
         "targetEvidence": {
           "articleId": "convnext",
-          "blockId": "[\"의의\",1]",
-          "anchor": "의의",
-          "quote": "ConvNet의 재부흥. Attention 모듈을 사용하지 않은 순수하게 Conv-layer를 사용하여 최근 Transformer 계열 모델을 따라잡은 것",
-          "hash": "7024622a0f1f12ff9187da54180f953fc67335e190d88bbc82ebd54a51d0d2d0"
+          "blockId": "[\"instruction\",6]",
+          "anchor": "instruction",
+          "quote": "지난 10년간 점진적으로 향상되어진 ConvNet들과는 달리 Vision Transformers의 적용은 큰 변화였습니다. 최근 연구에 의하면 system-level의 비교(e.g. Swin-T vs ResNet)는 2개를 비교할때 종종 비교되어지곤 합니다. ConvNets과 계층적 vision transformer들은 동시에 다르거나 비슷하게 될 수도 있습니다. 이 두 모델은 비슷한 inductive bias를 가지나, 매우 다른 학습 절차나 micro-level의 아키텍쳐 디자인을 가집니다. 본 연구진은 ConvNets과 트랜스포머의 아키텍쳐를 조사하였으며 network의 성능에 대해서도 명확히하는 연구를 진행하였습니다. 우리의 연구는 pure ConvNet의 한계를 테스트할 뿐만 아니라 pre-ViT와 post-ViT 사이의 간극을 연결해주는 의도를 가지고 연구를 진행하였습니다.",
+          "hash": "b9cccb95c60345eb0975c0dfd2d379bf2b76a95e2c6c33aa39d27d2979f2a829"
+        }
+      },
+      {
+        "id": "bert",
+        "relation": "related_method",
+        "reason": "ViT가 이미지 패치를 시퀀스로 다루는 방식과 BERT가 입력 토큰을 Transformer 인코더에 넣는 구성을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vit",
+          "blockId": "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "anchor": "transformer의-계산-효율성과-scalability를-비전에-활용",
+          "quote": "표준 Transformer를 최대한 변형 없이 직접적으로 이미지에 적용하였다. 이를 위해 이미지를 패치 조각으로 쪼갠다. 그리고 각각의 패치에 대해 선형적인 임베딩의 시퀀스를 제공하여 Transformer에 입력하였다. 이때 이미지의 패치는 마치 NLP에서의 토큰과 같이 다루게 된다. 모델은 이미지 분류 태스크에 대해 지도 학습 방식으로 학습하였다.",
+          "hash": "3c677d0e99eb275ec2794dd5379bab388dafc305a15bb7178ba8d90787fe1481"
+        },
+        "targetEvidence": {
+          "articleId": "bert",
+          "blockId": "[\"model-architecture\",1]",
+          "anchor": "model-architecture",
+          "quote": "multi-layer bidirectional Transformer encoder 구조",
+          "hash": "49c04b002c01a06725f757512322a9544bd2b5c77944cb7a75f00be77d66b8df"
         }
       }
     ]

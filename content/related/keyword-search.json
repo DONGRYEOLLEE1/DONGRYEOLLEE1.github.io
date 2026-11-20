@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "7e1ad2e19df4f7abfcc91d918253aa25361305f8da77311dddc2ce1976e2d8ca",
+    "inputHash": "009a8fb99978b3999dc516ff87d92b7379d2955f70efd772da088a7d02de36d2",
     "status": "verified",
     "candidates": [
       {
@@ -242,13 +242,13 @@
       {
         "id": "reranking",
         "relation": "application_example",
-        "reason": "키워드 검색이 문장의 의미를 놓치는 한계를 설명한 뒤, 키워드 검색 결과를 재정렬해 관련 문서를 고르는 방법을 보여줍니다.",
+        "reason": "키워드 검색이 의미를 반영하지 못하는 한계를 재정렬로 보완해 관련 문서를 추리는 적용 사례를 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "keyword-search",
-          "blockId": "[\"conclusion\",2]",
+          "blockId": "[\"conclusion\",5]",
           "anchor": "conclusion",
-          "quote": "Keyword search는 단어들을 기준으로 결과값을 매칭하기에 문장의 의미를 활용하진 못합니다. 이는 다음과 같은 문장에 대해선 더 어려운 과제로 인식할 수 있습니다.",
-          "hash": "31a5b1df12eb14cccc7716f9f8d89a0275efb6302e89b69ea0aef2210a434ab0"
+          "quote": "문장과 문장사이의 실제 의미에 대해 이해하고 단어가 아닌 그 의미에 따라 일치시킬 수 있는 semantic search, 서로 가장 관련성이 높은 문장과 문서 쌍을 표시할 수 있는 re-ranker와 같은 알고리즘을 통해 가장 적합한 문서를 도출할 수 있습니다.",
+          "hash": "d4dcdd114033613c51647915386b7b00322b4605e0790febe9fb7c5fbda99099"
         },
         "targetEvidence": {
           "articleId": "reranking",
@@ -256,44 +256,6 @@
           "anchor": "결론",
           "quote": "Reranking은 특정 쿼리에 가장 관련성이 높은 응답을 찾는 데 매우 유용한 방법입니다. 이는 dense retrieval을 개선하기 위한 키워드 검색의 보완 방식으로도 유용합니다. 이번 포스트에서는 키워드 검색을 통해 답을 포함할 가능성이 있는 20개의 문서를 먼저 검색한 뒤, 재정렬 엔드포인트를 사용하여 그 중 상위 3개를 선택함으로써 키워드 검색 결과를 크게 향상시켰습니다.",
           "hash": "d03185c1f96687e82a0a21a6b9f63dba6fe3a917452f9793de8fe2ca09b0a0da"
-        }
-      },
-      {
-        "id": "book-spine",
-        "relation": "related_method",
-        "reason": "두 사례 모두 키워드·문자열 매칭으로 후보를 찾고 재점수화하지만, 책 제목 매칭은 잘못된 확정을 낳을 수 있음을 보여줍니다.",
-        "sourceEvidence": {
-          "articleId": "keyword-search",
-          "blockId": "[\"querying-the-wikipedia-dataset-using-keyword-matching\",3]",
-          "anchor": "querying-the-wikipedia-dataset-using-keyword-matching",
-          "quote": "Hard query: \"Who was the first person to win two Nobel prizes?\"",
-          "hash": "f50c5c656063beab3f214eac8f41aa07799d6cd0e88a03c4539899759237c86f"
-        },
-        "targetEvidence": {
-          "articleId": "book-spine",
-          "blockId": "[\"system\",4]",
-          "anchor": "system",
-          "quote": "Matching normalizes the query, retrieves 50 candidates from a 50,000-book dictionary with character 2-gram and 3-gram BM25, and rescores them with string similarity plus a few rules (Section 5). Each spine ends in one of three states: confirmed (the dictionary entry is taken as the answer), review (candidates are shown and the user picks), or unmatched.",
-          "hash": "42e4da97f352cf20759e335c63c692349941e96920844bb8ef223bed57187f05"
-        }
-      },
-      {
-        "id": "semantic-search",
-        "relation": "related_method",
-        "reason": "키워드 검색은 의미를 활용하지 못한다고 설명하고, 의미 기반 검색이 그 한계를 보완하는 방법임을 소개합니다.",
-        "sourceEvidence": {
-          "articleId": "keyword-search",
-          "blockId": "[\"conclusion\",2]",
-          "anchor": "conclusion",
-          "quote": "Keyword search는 단어들을 기준으로 결과값을 매칭하기에 문장의 의미를 활용하진 못합니다. 이는 다음과 같은 문장에 대해선 더 어려운 과제로 인식할 수 있습니다.",
-          "hash": "31a5b1df12eb14cccc7716f9f8d89a0275efb6302e89b69ea0aef2210a434ab0"
-        },
-        "targetEvidence": {
-          "articleId": "semantic-search",
-          "blockId": "[\"what-is-not-semantic-search\",17]",
-          "anchor": "what-is-not-semantic-search",
-          "quote": "stop words를 지정하여 keyword search를 개선할 수도 있으며 또한 TF-IDF 알고리즘을 통해 관계없는 단어로부터 관계있는 부분을 추출할 수도 있습니다. 그러나 언어적 특성상 keyword search는 가장 최상의 response를 찾는대는 실패할 수도 있을것입니다. 그렇기에 그 다음 알고리즘인 Semantic Search를 살펴봅시다.",
-          "hash": "97d0b5f51599a57bfecdf6ebca77def9e0266fcb14694fc397ee15c36acf5c5d"
         }
       }
     ]

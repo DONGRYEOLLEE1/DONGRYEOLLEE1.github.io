@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "6160a6d6da7cbdf3b547e516a501d5e143ab2d97064fe497d64b8bf21394a757",
+    "inputHash": "1e99d85dc919d0cd6bf3089f8a32f4bffbc7a4b54f6a8be9980535f196add660",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "qlora-troubleshooting",
         "relation": "related_method",
-        "reason": "CUDA 버전에 맞는 bitsandbytes 파일을 복사하는 방법과 같은 해결 절차를 확인할 수 있습니다.",
+        "reason": "bitsandbytes의 CUDA·CPU 라이브러리 파일을 복사하는 조치와 CUDA 버전에 맞춰 파일을 대체하는 해결법을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "developing-daily-06",
           "blockId": "[\"solution\",1]",

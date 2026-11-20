@@ -50,7 +50,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "ae4ec27a4eb4b4fb4878d18a290fc710b175481c20df61d006e7fca03cc8211c",
+    "inputHash": "d88dbb75b5af15b4f2920e814dd3e6cea5e452085e490e64c8b73d0e56df92cc",
     "status": "verified",
     "candidates": [
       {
@@ -253,7 +253,7 @@
       {
         "id": "keyword-search",
         "relation": "concept_explanation",
-        "reason": "키워드 검색 결과를 reranker로 재정렬하는 흐름과, 키워드 매칭이 문장의 의미를 활용하지 못하는 한계를 함께 배울 수 있습니다.",
+        "reason": "키워드 검색 결과를 재정렬해 개선하는 흐름과 키워드 매칭의 한계를 함께 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "reranking",
           "blockId": "[\"결론\",1]",
@@ -271,8 +271,8 @@
       },
       {
         "id": "book-spine",
-        "relation": "application_example",
-        "reason": "쿼리-응답 관련성으로 후보를 재정렬하는 개념을, BM25 후보 검색 후 문자열 유사도와 규칙으로 재점수화하는 사례와 연결해 볼 수 있습니다.",
+        "relation": "related_method",
+        "reason": "후보를 검색한 뒤 유사도와 규칙으로 재점수화하는 문서 매칭 과정을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "reranking",
           "blockId": "[\"reranking\",1]",

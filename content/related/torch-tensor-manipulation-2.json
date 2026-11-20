@@ -28,8 +28,8 @@
     "review": []
   },
   "entry": {
-    "inputHash": "3a78008e648433b4eb548ba52fdc5c9e0750990ae03cd9f91ebcdc93c9c8f47d",
-    "status": "abstained",
+    "inputHash": "1c966da98b646e31a4b2e4e3d68e795a49dae405661774903e55ef86b63cb42d",
+    "status": "verified",
     "candidates": [
       {
         "id": "torch-tensor-manipulation-1",
@@ -227,6 +227,45 @@
         ]
       }
     ],
-    "recommendations": []
+    "recommendations": [
+      {
+        "id": "torch-tensor-manipulation-3",
+        "relation": "related_method",
+        "reason": "unsqueeze로 차원을 추가하는 방법과 인덱싱에서 None으로 차원을 확장하는 방법을 함께 살펴봅니다.",
+        "sourceEvidence": {
+          "articleId": "torch-tensor-manipulation-2",
+          "blockId": "[\"unsqueeze\",6]",
+          "anchor": "unsqueeze",
+          "quote": "마찬가지로 -1로 접근 가능",
+          "hash": "92ebc698677d866d0ed34317fd01d848ab7eedf91ed4c457bf36da7c4d5affa5"
+        },
+        "targetEvidence": {
+          "articleId": "torch-tensor-manipulation-3",
+          "blockId": "[\"indexing--slicing\",5]",
+          "anchor": "indexing--slicing",
+          "quote": "None 지정해주는만큼 차원 확장가능하나 전체 인덱싱(:)은 원래 텐서 갯수만큼 할당 가능",
+          "hash": "7df151cc5cd3173b58f6189ecf365152a00b7d6a1efc3839aeef9342d9906ce1"
+        }
+      },
+      {
+        "id": "torch-tensor-manipulation-1",
+        "relation": "related_method",
+        "reason": "squeeze로 차원을 줄이는 조작과 view에서 -1로 새 차원을 만드는 조작을 비교해 봅니다.",
+        "sourceEvidence": {
+          "articleId": "torch-tensor-manipulation-2",
+          "blockId": "[\"squeeze\",11]",
+          "anchor": "squeeze",
+          "quote": "x = torch.zeros(2, 1, 3, 1, 8) print(f\"x shape: {x.shape}\") >>> x shape: torch.Size([2, 1, 3, 1, 8]) y = torch.squeeze(x, (1, 2, 3)) print(f\"y shape: {y.shape}\") >>> y shape: torch.Size([2, 3, 8]) z = torch.squeeze(x, (1, 3)) print(f\"z shape: {z.shape}\") >>> z shape: torch.Size([2, 3, 8])",
+          "hash": "e331fb2aaecde8e655425db65bc88334de167ed13ccc47fab6a06ddb3ddc270a"
+        },
+        "targetEvidence": {
+          "articleId": "torch-tensor-manipulation-1",
+          "blockId": "[\"torchview\",11]",
+          "anchor": "torchview",
+          "quote": "중간에 -1을 넣으면 해당 위치에 새로운 차원이 하나 더 생김",
+          "hash": "e097a179899f5310ac403fe4e767f8b21597997cc1daed0c6de87d6e6a26abd8"
+        }
+      }
+    ]
   }
 }

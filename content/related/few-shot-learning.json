@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "31482dfdbd35b56f1a114d9631f65daef0b223e482c6daf6ad28642ba52d40c1",
+    "inputHash": "3608140b1ab504f3854499374d48d2abcb9eb402af8833660aa77743a674a03e",
     "status": "verified",
     "candidates": [
       {
@@ -231,7 +231,7 @@
       {
         "id": "gpt-3",
         "relation": "related_method",
-        "reason": "FSL이 소수의 레이블된 예시를 활용한다고 설명하고, in-context learning은 적은 demonstration을 입력으로 사용해 작업에 적응하는 방식을 설명합니다.",
+        "reason": "Few-shot learning은 제한된 레이블 예시를 활용하고, in-context learning은 적은 demonstration으로 작업에 적응하는 방식을 설명합니다.",
         "sourceEvidence": {
           "articleId": "few-shot-learning",
           "blockId": "[\"few-shot-learning이-뭘까\",1]",
@@ -250,7 +250,7 @@
       {
         "id": "ia3-paper",
         "relation": "related_method",
-        "reason": "FSL은 클래스별 소수의 레이블된 샘플을 활용하고, ICL은 레이블된 예시를 프롬프트에 넣어 모델을 유도하는 방식을 설명합니다.",
+        "reason": "Few-shot learning의 적은 예시 활용과 ICL의 프롬프트 예시 활용을 비교하며, ICL이 파인튜닝 없이 여러 작업에 적용되는 점을 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "few-shot-learning",
           "blockId": "[\"few-shot-learning이-뭘까\",1]",
@@ -269,7 +269,7 @@
       {
         "id": "few-shot-nlp",
         "relation": "related_method",
-        "reason": "FSL을 클래스별 소수 레이블 샘플을 사용하는 방식으로 소개하고, NLP에서 각 클래스의 몇 가지 예에 사람이 레이블을 붙이는 상황을 설명합니다.",
+        "reason": "Few-shot learning의 정의와 사람의 몇 가지 레이블 예시로 학습하는 NLP 맥락을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "few-shot-learning",
           "blockId": "[\"few-shot-learning이-뭘까\",1]",
@@ -283,6 +283,25 @@
           "anchor": "concept",
           "quote": "\"Human in the loop\"이 있다는 사실은 단순히 라벨이 지정되지 않은 데이터의 잠재적으로 큰 corpus가 있고 사용자가 각 class의 몇 가지 예에 label을 지정해야 한다는 사실을 의미한다.",
           "hash": "4d74781bf0f61f8dc1979922cd895bcc360eb13c1c944b2bf8833cd6e9abf6ae"
+        }
+      },
+      {
+        "id": "chain-of-thought",
+        "relation": "related_method",
+        "reason": "Few-shot learning이 적은 예시로 학습하는 방식임을 바탕으로, prompting을 통한 in-context FSL과 CoT의 적용 과제를 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "few-shot-learning",
+          "blockId": "[\"few-shot-learning이-뭘까\",1]",
+          "anchor": "few-shot-learning이-뭘까",
+          "quote": "Few-shot learning (FSL)은 각 class에 대해 오직 몇가지만 레이블된 샘플들을 사용한 데이터의 새로운 카테고리를 사전학습 모델에 이용가능하게 한 머신러닝 framework입니다. 이건 meta-learning의 패러다임에서 파생된 개념입니다.",
+          "hash": "ffa507f2e57a0525bec922e6b18c3e13b6c40db50d211bdfbbfbc141d9e8b4c2"
+        },
+        "targetEvidence": {
+          "articleId": "chain-of-thought",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "LLM은 prompting을 통해 in-context FSL의 흥미로운 전망을 제공한다. 매 다른 task를 위한 model checkpoint (FT) 대신에 단조로운 prompt를 모델에 질의할 수 있음. 놀랍게도 단순한 QA task에서 성공적적인 실험을 거뒀음.",
+          "hash": "0779db3ba324e49d34539e6cd03c91f7c4639cb22cc4b1332de76f04dceafa12"
         }
       }
     ]

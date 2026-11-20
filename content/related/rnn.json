@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "bdfd213731520a6c26bbac87889c3d23660563da098f695db8167438ef4feff1",
+    "inputHash": "75f4c23fe340fc0ea00c2cc63bca8ad56e4ebf4337ee8a9c3faa315a114fe4de",
     "status": "verified",
     "candidates": [
       {
@@ -231,7 +231,7 @@
       {
         "id": "lstm",
         "relation": "related_method",
-        "reason": "RNN의 메모리셀이 이전 시점의 상태를 이어받는 방식과 LSTM의 chain 구조 및 구성 요소를 함께 살펴볼 수 있습니다.",
+        "reason": "RNN의 재귀적 메모리 전달과 장기 의존성 문제를 살펴보고, LSTM의 네 구조가 이를 어떻게 다루는지 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "rnn",
           "blockId": "[\"abstract\",5]",
@@ -250,7 +250,7 @@
       {
         "id": "elmo",
         "relation": "related_method",
-        "reason": "RNN의 시점별 상태 전달을 바탕으로, ELMO가 LSTM으로 다음 단어를 예측하는 언어모델 구조를 확인할 수 있습니다.",
+        "reason": "RNN의 시점별 은닉 상태 개념을 바탕으로, ELMo가 여러 층의 BiLSTM 은닉 상태를 조합해 단어 표현을 만드는 방식을 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "rnn",
           "blockId": "[\"abstract\",5]",
@@ -260,10 +260,10 @@
         },
         "targetEvidence": {
           "articleId": "elmo",
-          "blockId": "[\"mechanism\",3]",
-          "anchor": "mechanism",
-          "quote": "ELMO는 기본적으로 sequence의 단어속에서 다음 단어를 예측하는 언어모델입니다. 각각의 입력 임베딩벡터는 2개의 LSTM layer를 거쳐 10%의 확률값을 가지는 Improvisation을 최종 예측합니다.또한 언어모델이 다음단어의 정보를 가지고 있지않기때문에 step을 통해 BiLSTM을 학습시킬 것입니다.",
-          "hash": "b04feace1ee68726c9bf1e437601adedf0a7169b15ab54ee37cd8d293ff59190"
+          "blockId": "[\"elmo\",1]",
+          "anchor": "elmo",
+          "quote": "기존 word2vec, Glove 등에 비해 context 정보를 반영하는 Pre-training 방법을 제시합니다. 여러층의 BiLSTM을 이용해 Language Model을 하며, 만들어진 hidden-state를 적절하게 조합해 새로운 word representation을 만들어냅니다.",
+          "hash": "0536e6bb9b159cb5b8c31469299a3fb57f0c2d5b648124df1af19c123e28974b"
         }
       }
     ]

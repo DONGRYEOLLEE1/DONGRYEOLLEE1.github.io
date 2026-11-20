@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "472c1567792ffc0df968f87bfb5a994647528148bd9e5e8a8d7ad091f2626613",
+    "inputHash": "bef5eb8557ff0a90df68f32ac75442d1627cc037b6cff5d9dc35ec70903e1186",
     "status": "verified",
     "candidates": [
       {
@@ -231,13 +231,13 @@
       {
         "id": "developing-daily-04",
         "relation": "related_method",
-        "reason": "Remote-SSH로 서버에 접속하는 설정에 더해, Git의 인증 정보를 credential 기능으로 저장하는 방법도 확인할 수 있습니다.",
+        "reason": "Remote-SSH 설정과 Git 로그인 정보를 저장하는 방법을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "vscode-ssh",
-          "blockId": "[\"vscode로-서버에-접속하여-개발\",4]",
+          "blockId": "[\"vscode로-서버에-접속하여-개발\",2]",
           "anchor": "vscode로-서버에-접속하여-개발",
-          "quote": "'CTRL + SHIFT + P' 눌러, Connect to Host",
-          "hash": "2b7c62cf26a37b7a420f23363ef0419ad6842eabcb5cc6fecb416da31a6c8139"
+          "quote": "'CTRL + SHIFT + P' 눌러 config 파일을 선택",
+          "hash": "d4c89e2b49d4cd452cdf5eb9e69f9baa9626c51c0c4de956f3cc97f86f693b37"
         },
         "targetEvidence": {
           "articleId": "developing-daily-04",
@@ -250,7 +250,7 @@
       {
         "id": "inference-server",
         "relation": "related_method",
-        "reason": "VSCode에서 SSH 접속 정보를 설정하는 방법과 컨테이너에 SSH 서버를 설치해 자동화 접속을 가능하게 하는 방법을 함께 살펴볼 수 있습니다.",
+        "reason": "SSH 접속 정보를 설정하는 방법과 컨테이너에 openssh-server를 설치해 SSH 접속을 가능하게 하는 과정을 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "vscode-ssh",
           "blockId": "[\"vscode로-서버에-접속하여-개발\",3]",

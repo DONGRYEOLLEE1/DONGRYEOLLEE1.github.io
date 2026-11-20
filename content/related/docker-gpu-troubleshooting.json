@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "2d5980c3cab7a44cf8ef4187197bde29787b613a4f5027bac41fcc4f1901d3b6",
+    "inputHash": "fb2fa53b4270e6239c01d5ef8a68cb062a6086f708b1f8eaf7c1a8bd02d7307b",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "ollama-docker-troubleshooting",
         "relation": "related_method",
-        "reason": "nvidia-container-toolkit 설치로 GPU 컨테이너 실행 오류를 다루고, OpenWebUI 실행 명령에서 --gpus all을 설정하는 방법을 볼 수 있습니다.",
+        "reason": "GPU 컨테이너 오류 해결에 필요한 nvidia-container-toolkit 설치와 OpenWebUI 실행 시 --gpus all 옵션을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "docker-gpu-troubleshooting",
           "blockId": "[\"solution\",2]",
@@ -261,7 +261,7 @@
       {
         "id": "tgi-implementation",
         "relation": "related_method",
-        "reason": "nvidia-container-toolkit 설치로 GPU 컨테이너 오류를 해결하고, TGI Docker 명령에서 --gpus all을 사용하는 사례를 확인할 수 있습니다.",
+        "reason": "nvidia-container-toolkit 설치로 GPU 컨테이너 오류를 해결하는 방법과 TGI 컨테이너의 --gpus all 실행 구성을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "docker-gpu-troubleshooting",
           "blockId": "[\"solution\",2]",

@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "75b38f9d29951f1f3342e289d8ef063e3a690965464f478e0d551e1311fbc76e",
+    "inputHash": "8737882ce2ab0b5a2e75a4146fd940d5760cc0d5f96f9858a51afad50271abcb",
     "status": "verified",
     "candidates": [
       {
@@ -231,7 +231,7 @@
       {
         "id": "transformer",
         "relation": "related_method",
-        "reason": "입력 시퀀스 길이가 모델의 하이퍼파라미터라는 설명을 통해 길이를 늘릴 때 조정해야 하는 개념을 이해할 수 있습니다.",
+        "reason": "입력 시퀀스 길이를 늘리는 설정이 모델에서 어떤 역할을 하는지 positional encoding과 padding 설명을 통해 이해할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "model-input-length",
           "blockId": "[\"model-input-sequence-length\",6]",

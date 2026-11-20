@@ -39,8 +39,8 @@
     "review": []
   },
   "entry": {
-    "inputHash": "a5c79276fc29fa5d869fcdd4ccaad56a1c93817a5dc23ed8fdb805bb3a896443",
-    "status": "abstained",
+    "inputHash": "5923adcc2f7367804a9c172a73baa7fe14c8064fa7e7b2b81cc37eb1c417c3cb",
+    "status": "verified",
     "candidates": [
       {
         "id": "transformer",
@@ -238,6 +238,45 @@
         ]
       }
     ],
-    "recommendations": []
+    "recommendations": [
+      {
+        "id": "llama",
+        "relation": "related_method",
+        "reason": "두 글은 full-attention LLM의 head별 기능 차이와 sparsity 가능성을 다루므로, RTPurbo의 sparse 전환이 기존 attention 구조와 어떻게 맞닿는지 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "rtpurbo",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "이 논문의 주장은 도발적임 — full attention으로 학습된 LLM은 이미 본질적으로 sparse하며, 최소한의 수술(minimal surgery)만으로 고도로 sparse한 모델로 전환할 수 있다. sparsity는 head level(대부분 head는 local 정보에 의존)과 token level(각 query마다 소수 token만 큰 attention mass를 받음) 모두에서 나타남. 그렇다면 핵심 질문은 \"full-attention 모델을 능력 손실 없이 sparse하게 바꾸는 데 필요한 최소한의 수술은 무엇인가?\"",
+          "hash": "76990f1e9c87c901865260404884caff4cdddf4fd9ab42cfb415dcc494d0921f"
+        },
+        "targetEvidence": {
+          "articleId": "llama",
+          "blockId": "[\"efficient-implementation\",2]",
+          "anchor": "efficient-implementation",
+          "quote": "첫번째, causal multi-head attention을 사용하여 학습시간과 사용되는 메모리를 줄였습니다. xformers 라이브러리를 사용하여 구현했습니다. 이를 통해 attention weight를 저장하지 않았으며 key/query score를 계산하지 않았습니다. 두번재, 더 높은 학습 효율성을 위해 checkpointing과 함께 backward pass 동안에 계산하여 활성화함수의 양을 줄였습니다. 활성화함수는 선형 레이어의 output딴에서 계산하는데 resource가 굉장히 많이 들기에 우리 연구진은 이를 save하였습니다. optimization 효과를 최대로 보기 위해 모델과 sequence parallelism을 사용하여 모델의 메모리 사용량을 줄였습니다. 게다가 activation의 계산과 network에서의 GPU들의 결합을 통해 이를 가능케 했습니다.",
+          "hash": "b8c8d616eed96e7a93f69a9fb7f8428496ef5c309557134da8350c047a326763"
+        }
+      },
+      {
+        "id": "vit",
+        "relation": "related_method",
+        "reason": "두 글 모두 attention head의 지역적 주의를 다루어, RTPurbo의 head별 sparsity 관점과 ViT에서 관찰한 local attention을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "rtpurbo",
+          "blockId": "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "anchor": "1-head-specialization--일부-head만-retrieval을-담당",
+          "quote": "사전학습된 LLM의 attention head는 동질적이지 않고 기능적으로 분화돼 있음. 멀리 떨어진 관련 내용을 검색하는 소수의 head(retrieval head)가 있고, 나머지는 주로 local 정보를 처리함. retrieval head는 의미적으로 관련된 과거 context에 강한 attention을 두는 information-retrieval 패턴을 보임. 아래 layer-head heatmap을 보면 retrieval score가 높은 head가 전체 중 소수에 집중돼 있음을 확인할 수 있음.",
+          "hash": "f38d892fec30a887eeee6c584dd735260f20ef01091ff96e3e3f9d9214d15e6d"
+        },
+        "targetEvidence": {
+          "articleId": "vit",
+          "blockId": "[\"vision-transformer-탐색하기\",15]",
+          "anchor": "vision-transformer-탐색하기",
+          "quote": "또 다른 Attention Head는 밑단 Layer에서 일관적으로 작은 거리의 Patch에 집중하는 모습을 보였는데, 이렇게 지역적인 Attention은 하이브리드 모델에서는 좀처럼 나타나지 않는다. 즉, 이 Attnetion head는 CNN의 밑단에서 일어나는 것과 비슷한 작용을 하는 것이라고 유추할 수 있다.",
+          "hash": "6d9cae7278b11016ffc600e267640aed2ba942d2e522cbfc3ff4937ad31f4b86"
+        }
+      }
+    ]
   }
 }

@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "4533e185a294fc3fc180fb026ab7380dede5efc931fc5954c01863239c9fb9e6",
+    "inputHash": "f476357dc04971eb8686f3ce8aa1fd473055159b3703b98ca538da1bec8035bf",
     "status": "verified",
     "candidates": [
       {
@@ -231,7 +231,7 @@
       {
         "id": "speculative-decoding-paper",
         "relation": "related_method",
-        "reason": "draft 토큰을 만들고 target model이 병렬 검증해 원래 분포를 보장하는 기본 speculative decoding과, DFlash의 diffusion draft·AR 검증 구성을 비교해 배울 수 있습니다.",
+        "reason": "작은 초안 모델이 토큰을 제안하고 target model이 병렬 검증해 원래 출력 분포를 보존하는 기본 절차를 DFlash의 diffusion 초안 방식과 비교해 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "dflash",
           "blockId": "[\"introduction\",4]",
@@ -245,25 +245,6 @@
           "anchor": "introduction",
           "quote": "이 논문은 CPU의 branch prediction으로 익숙한 speculative execution(어떤 작업이 필요한지 검증하는 것과 병렬로 그 작업을 미리 수행하는 최적화)을 확률적(stochastic) 세팅으로 일반화함. 빠른 approximation model $M_q$가 미래 토큰들을 추측 생성하고, 느린 target model $M_p$가 이 추측들을 병렬로 평가·검증함. 여기에 speculative sampling이라는 새로운 샘플링 기법을 결합해, 최종 출력 분포가 $M_p$ 단독 샘플링과 수학적으로 완전히 동일함을 보장함.",
           "hash": "174a2cf48c5d468b077dbc01e41d87377ebaaf12a738fb5671e1b500b9511480"
-        }
-      },
-      {
-        "id": "bert",
-        "relation": "related_method",
-        "reason": "BERT의 masked token 예측과 DFlash의 masked block 병렬 denoising을 비교해, 양방향 문맥을 이용한 마스크 예측이 두 방법에서 어떻게 쓰이는지 알 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "dflash",
-          "blockId": "[\"inference\",1]",
-          "anchor": "inference",
-          "quote": "위 그림이 DFlash의 전체 inference 구조임. target model이 prefill/decode 과정에서 만든 hidden feature(파란색)를 융합해 각 draft layer의 KV cache에 주입하고, draft model은 target이 마지막으로 확정한 토큰(노란색) 뒤에 mask 토큰들(초록색)을 붙여 bidirectional attention으로 한 번에 denoise함. 그 결과 나온 draft block을 target LM head가 있는 target model이 병렬 검증하는 구조임.",
-          "hash": "f714d81adeddad9107f4481402b2fe3b083eb18c472226ee13a888e61af08f98"
-        },
-        "targetEvidence": {
-          "articleId": "bert",
-          "blockId": "[\"task-1-masked-lm-mlm\",3]",
-          "anchor": "task-1-masked-lm-mlm",
-          "quote": "text를 tokenization 하는 방법은 WordPiece를 사용한다. 기존 언어모델에서 left-to-right를 통해 문장 전체를 예측하는 것과는 대조적으로 [MASK] token만을 예측하는 Pre-training task를 수행한다. 이 [MASK] token은 pre-training에만 사용되고 fine-tuning에는 사용되지 않는다. 이 miss-match를 해결하기위한 방법으로 논문에선 다음을 제시하고있다.",
-          "hash": "b1f46d590c58cd22be226861db40d5729cf30b89390cc9b1c03417cbdd398502"
         }
       }
     ]

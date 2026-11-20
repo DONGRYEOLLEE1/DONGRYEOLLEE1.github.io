@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "a6f072bf83ebe91771292122ed32886e2798ee660e0e5148327979cf1f4b665b",
+    "inputHash": "eb60c2cc786e9644db73fabb21a744ef1c75747958e56dcf8eed99c72c0ba897",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "vllm-tensor-parallel-troubleshooting",
         "relation": "related_method",
-        "reason": "평가 명령과 추론 서버가 모두 vLLM에서 tensor parallel size 2와 bfloat16을 사용하며, 추론 오류를 해결한 옵션을 살펴볼 수 있습니다.",
+        "reason": "두 사례 모두 vLLM에서 tensor parallelism 2와 bfloat16을 사용하며, 추론 실행 옵션과 장애 해결 방법을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "lm-evaluation-harness-oom",
           "blockId": "[\"solution\",3]",

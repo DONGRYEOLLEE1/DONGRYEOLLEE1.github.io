@@ -61,7 +61,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "ef26a05e7ffcd7fb38cbabae982c2e12759a8d14407d3b493248569d488c9058",
+    "inputHash": "c4a0004741c4821be998c669a09863bb1c45f6964f3eb07e1daa569323eec94b",
     "status": "verified",
     "candidates": [
       {
@@ -264,7 +264,7 @@
       {
         "id": "k-browsecomp",
         "relation": "evaluation_comparison",
-        "reason": "두 연구 모두 browsing agent의 다중 턴 정보 탐색을 다루므로, SearchSwarm의 deep research 평가와 한국어 browsing 벤치마크의 과제·평가 관점을 비교할 수 있습니다.",
+        "reason": "두 연구 모두 웹 브라우징 에이전트를 평가하지만, SearchSwarm은 여러 deep research 벤치마크를, K-BrowseComp은 한국어 맥락의 browsing task를 다뤄 평가 범위의 차이를 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "searchswarm",
           "blockId": "[\"experiments\",1]",
@@ -281,9 +281,9 @@
         }
       },
       {
-        "id": "rtpurbo",
+        "id": "bert",
         "relation": "related_method",
-        "reason": "SearchSwarm은 brief와 report로 긴 작업의 context를 관리하고, RTPurbo는 관련 과거 context를 retrieval head로 찾습니다. 서로 다른 context 관리 접근을 알아볼 수 있습니다.",
+        "reason": "SearchSwarm은 brief와 report로 긴 맥락을 능동적으로 압축하며, BERT 설명은 마스크된 토큰을 예측하는 학습 방식을 다뤄 두 방법의 맥락 처리 차이를 이해할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "searchswarm",
           "blockId": "[\"main-distributes-sub-executes\",2]",
@@ -292,11 +292,11 @@
           "hash": "5e3ce7553c22a1489d9e82acccab91065d9b6e9600134e5aa33ad8d6a19fc2ba"
         },
         "targetEvidence": {
-          "articleId": "rtpurbo",
-          "blockId": "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
-          "anchor": "1-head-specialization--일부-head만-retrieval을-담당",
-          "quote": "사전학습된 LLM의 attention head는 동질적이지 않고 기능적으로 분화돼 있음. 멀리 떨어진 관련 내용을 검색하는 소수의 head(retrieval head)가 있고, 나머지는 주로 local 정보를 처리함. retrieval head는 의미적으로 관련된 과거 context에 강한 attention을 두는 information-retrieval 패턴을 보임. 아래 layer-head heatmap을 보면 retrieval score가 높은 head가 전체 중 소수에 집중돼 있음을 확인할 수 있음.",
-          "hash": "f38d892fec30a887eeee6c584dd735260f20ef01091ff96e3e3f9d9214d15e6d"
+          "articleId": "bert",
+          "blockId": "[\"task-1-masked-lm-mlm\",3]",
+          "anchor": "task-1-masked-lm-mlm",
+          "quote": "text를 tokenization 하는 방법은 WordPiece를 사용한다. 기존 언어모델에서 left-to-right를 통해 문장 전체를 예측하는 것과는 대조적으로 [MASK] token만을 예측하는 Pre-training task를 수행한다. 이 [MASK] token은 pre-training에만 사용되고 fine-tuning에는 사용되지 않는다. 이 miss-match를 해결하기위한 방법으로 논문에선 다음을 제시하고있다.",
+          "hash": "b1f46d590c58cd22be226861db40d5729cf30b89390cc9b1c03417cbdd398502"
         }
       }
     ]

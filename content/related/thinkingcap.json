@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "be0465755da7ed0c8b49f9dd075bbd9250b773570f2d65553e75c68bd1392d17",
+    "inputHash": "7b610c5d8fdb559f4875b7e00fa64701c1fa9de98b4ffec09deda0902b35bf42",
     "status": "verified",
     "candidates": [
       {
@@ -241,8 +241,8 @@
     "recommendations": [
       {
         "id": "constitutional-ai",
-        "relation": "concept_explanation",
-        "reason": "보상으로 강화학습하는 흐름을 비교하며, RLAIF가 AI 피드백을 보상 모델에 반영해 RL-CAI를 학습하는 방식을 배울 수 있습니다.",
+        "relation": "related_method",
+        "reason": "둘 다 보상으로 강화학습을 수행하지만, 이 글은 정답 여부에 따른 길이 페널티를 쓰고 Constitutional AI는 AI 피드백으로 무해성을 보상합니다.",
         "sourceEvidence": {
           "articleId": "thinkingcap",
           "blockId": "[\"conclusion\",1]",
@@ -261,7 +261,7 @@
       {
         "id": "kodistill",
         "relation": "related_method",
-        "reason": "두 방법 모두 GRPO로 학습하며 보상 설계를 다룹니다. OCR에서는 CER와 exact match를 결합한 검증 가능 보상을 사용합니다.",
+        "reason": "두 방법의 GRPO 보상을 비교해, 정답 여부와 답변 길이를 함께 반영하는 방식과 OCR 정확도·문자 오류율을 반영하는 방식을 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "thinkingcap",
           "blockId": "[\"conclusion\",1]",

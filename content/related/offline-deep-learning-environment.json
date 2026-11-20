@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "36b98c85ade84f04b272adbc1df56e10c833ec7669a53bc567b75d6bf855a32e",
+    "inputHash": "96f4f9b497bc58c26406122b6be51560c8f5b812e25ec19d6ec810fdc71315b7",
     "status": "verified",
     "candidates": [
       {
@@ -240,7 +240,7 @@
       {
         "id": "python-venv-troubleshooting",
         "relation": "related_method",
-        "reason": "폐쇄망 추론 환경에서 CUDA별 가상환경을 구성하는 방법과 Python 가상환경 생성·활성화 절차를 함께 살펴볼 수 있습니다.",
+        "reason": "폐쇄망 추론 환경에서 가상환경을 구성하는 방법과 Python 3.10 가상환경 생성·활성화 문제 해결을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "offline-deep-learning-environment",
           "blockId": "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
@@ -257,9 +257,9 @@
         }
       },
       {
-        "id": "deepspeed-troubleshooting",
-        "relation": "related_method",
-        "reason": "CUDA 11.8 환경을 구성할 때 폐쇄망에서의 로컬 설치와 CUDA_HOME·PATH·LD_LIBRARY_PATH 설정 방법을 비교해 볼 수 있습니다.",
+        "id": "pip-options",
+        "relation": "concept_explanation",
+        "reason": "폐쇄망 환경에 패키지를 설치하는 과정에서 활용할 수 있는 pip 설치 옵션을 알아볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "offline-deep-learning-environment",
           "blockId": "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
@@ -268,11 +268,11 @@
           "hash": "0aac5bc8cf6862b06ff89e54da1e6706678f088af1c94cf94983a38c1aefd5fa"
         },
         "targetEvidence": {
-          "articleId": "deepspeed-troubleshooting",
-          "blockId": "[\"3️⃣\",8]",
-          "anchor": "3️⃣",
-          "quote": "# NVIDIA CUDA Toolkit export CUDA_HOME=/usr/local/cuda-11.8 export PATH=\"/usr/local/cuda-11.8/bin:$PATH\" export LD_LIBRARY_PATH=\"/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH\"",
-          "hash": "fddddc441e3200b4de1a29171c5db1538fc5f9f1007b1fb17b10c3ff6fa81669"
+          "articleId": "pip-options",
+          "blockId": "[\"pip-options\",1]",
+          "anchor": "pip-options",
+          "quote": "모든 pip 설치 옵션, pip install - Usage",
+          "hash": "873aad2b41b774966b059227e56f3f8f31b682d2f862c3cdde29d8eb06cbb320"
         }
       }
     ]

@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "f5507e7851ef551ccba801a3e2660d266cc7515daf3a1c608e123d8c4a0b4d14",
+    "inputHash": "c6cc79ba74bff5ec4db8ef57f8405527c55e94840d07bdfdfa9573a83af3fdb3",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "tokenizer-input-troubleshooting",
         "relation": "related_method",
-        "reason": "학습 데이터의 전처리와 토크나이저 입력을 다루며, 결측값 제거와 토큰화 코드로 데이터 처리 문제를 해결하는 방법을 볼 수 있습니다.",
+        "reason": "학습 데이터 전처리 뒤 tokenizer에 입력하는 과정에서 생기는 오류와 해결법을 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "polyglot-training-troubleshooting",
           "blockId": "[\"prob\",3]",
@@ -256,6 +256,25 @@
           "anchor": "solution",
           "quote": "df = pd.read_csv(...) df = df.dropna(axis = 0) df = DA(...) train_sentence = tokenizer(list(train_data[\"text\"]), return_tensors = 'pt', padding = True, truncation = True, add_special_tokens = True) ...",
           "hash": "8386db12644cbd94dec473a1df32d6b6a6c824b0f6781d7087b0d839cf1666af"
+        }
+      },
+      {
+        "id": "regex-preprocessing",
+        "relation": "related_method",
+        "reason": "학습 데이터 처리 코드를 살펴보는 맥락에서 정규표현식으로 텍스트를 전처리하는 구체적인 방법을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "polyglot-training-troubleshooting",
+          "blockId": "[\"prob\",3]",
+          "anchor": "prob",
+          "quote": "그럼 남은건 데이터 뿐.. train 파일의 데이터 처리 부분 코드를 뜯어보기로!",
+          "hash": "c4e9e93a6ba7f58c60c754558f8275e520dacae813c5a73029a4eb69253d6e76"
+        },
+        "targetEvidence": {
+          "articleId": "regex-preprocessing",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": ">>> pattern = r\"\\s\\d{1,2}:\\d{1,2}\" >>> df['text'] = df['text'].apply(lambda x: re.sub(pattern, \"\", x)) >>> df.loc[0].text [홍길동] [오전] 안녕하세요?",
+          "hash": "8a82a2dcd29332089132904cb327e771d4d9e807bdc03420781feaecc3f60e3c"
         }
       }
     ]

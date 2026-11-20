@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "735af7f66b944f0d401d7cff7499ecb3c59909fffb5c76090a6e4a1b361c0d61",
+    "inputHash": "43c1c5fb0cb45462f3199f69434235f4229dd763ef5f1c361bdad91610ad0f11",
     "status": "verified",
     "candidates": [
       {
@@ -240,28 +240,28 @@
     ],
     "recommendations": [
       {
-        "id": "llama",
+        "id": "eda",
         "relation": "related_method",
-        "reason": "Ziya2가 여러 도메인의 고품질 데이터로 continual pre-training을 하는 방식과 LLaMA의 다양한 도메인 데이터 혼합 학습을 함께 살펴볼 수 있습니다.",
+        "reason": "Ziya2가 데이터 샘플링과 확장을 활용한 맥락에서 EDA의 문장 증강 방식과 데이터 규모별 효과를 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "ziya2",
-          "blockId": "[\"introduction\",5]",
-          "anchor": "introduction",
-          "quote": "이에 따라 이번 연구에선 continual pre-training의 technique과 understanding the intricate relationship between data and model performance에 집중해보고자한다. 연구진은 모델의 필수적인 구조나 사이즈를 유지시키되 높은 품질의 사전학습 데이터를 통해 LLM의 성능을 강화해보고자 한다. 따라서 LLAMA2-13B을 사용한 Ziya2 모델을 backbone 모델로 사용하고 영어와 중국어로된 약 700B 토큰을 사용하여 pre-training을 진행하였다. 특히 학습 process를 3개의 stage를 거쳐 일반적이고 domain-specific한 corpora를 만들어 Ziya2 모델의 다중언어 생성 capabilities를 만들어줬음.",
-          "hash": "63d5e11d75a4b90c9fd57ca0ce64605f8af7209f23702ba5adb7404a6182c27d"
+          "blockId": "[\"the-data-factory\",1]",
+          "anchor": "the-data-factory",
+          "quote": "데이터는 LLM의 중추적인 초석 역할을 합니다. 데이터의 양과 품질은 모델의 성능에 직접적인 영향을 미칩니다. figure2에 나타난대로 data preprocessing, automatic scoring, rule-based filtering, content de-duplication, data evaluation을 포함한 다수의 공정을 통해 용이하게 만들었습니다. 이러한 절차는 지속적인 사전학습, 데이터 샘플링과 확장을 통해 필요조건을 충족시켰습니다.",
+          "hash": "c2e3b19524a92c221e3913856180695881506ab381a2c662606682e529aea567"
         },
         "targetEvidence": {
-          "articleId": "llama",
-          "blockId": "[\"pre-training-data\",1]",
-          "anchor": "pre-training-data",
-          "quote": "우리 연구진의 데이터셋은 몇몇의 소스의 혼합이며 다양한 도메인의 데이터셋을 사용하였습니다. 또한 다른 LLM 연구진이 사용한 데이터셋을 재사용하였으며 우린 오직 공개적으로 사용가능하며 오픈된 데이터만을 사용하였습니다.",
-          "hash": "8e2adc197d4a83e0a55edfea63566e88e0449509573331102176bc32dd17c5f1"
+          "articleId": "eda",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "때문에 이번 연구에서는 universal data에 대한 매우 쉬운 data-augmentation 방법론을 제시하고 이를 EDA (easy data augmentation)이라고 명명한다.",
+          "hash": "365510027ed926964f49a1808c05623d592b35dcb561a26db8831e69b996cb6f"
         }
       },
       {
         "id": "chat-vector",
         "relation": "related_method",
-        "reason": "Ziya2의 continual pre-training 구성과 사전학습 모델을 타깃 언어 데이터로 추가 사전학습하는 절차를 비교해 볼 수 있습니다.",
+        "reason": "Ziya2의 다단계 continual pre-training과 타깃 언어 텍스트로 사전학습하는 방식을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "ziya2",
           "blockId": "[\"introduction\",5]",
@@ -275,6 +275,25 @@
           "anchor": "chat-vector",
           "quote": "타겟모델에서의 모델의 이해능력과 생성능력을 강화시켜주기위해 사전학습모델을 초기화하고 타겟모델의 텍스트 데이터와 사전학습을 진행",
           "hash": "780e2fad6a1accf94e0d10984cdc8ae1e698015cf8d6ba54cd085b924d69cdc2"
+        }
+      },
+      {
+        "id": "llama",
+        "relation": "related_method",
+        "reason": "Ziya2의 고품질 사전학습 데이터 활용과 LLaMA의 여러 도메인 데이터 혼합 구성을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "ziya2",
+          "blockId": "[\"introduction\",5]",
+          "anchor": "introduction",
+          "quote": "이에 따라 이번 연구에선 continual pre-training의 technique과 understanding the intricate relationship between data and model performance에 집중해보고자한다. 연구진은 모델의 필수적인 구조나 사이즈를 유지시키되 높은 품질의 사전학습 데이터를 통해 LLM의 성능을 강화해보고자 한다. 따라서 LLAMA2-13B을 사용한 Ziya2 모델을 backbone 모델로 사용하고 영어와 중국어로된 약 700B 토큰을 사용하여 pre-training을 진행하였다. 특히 학습 process를 3개의 stage를 거쳐 일반적이고 domain-specific한 corpora를 만들어 Ziya2 모델의 다중언어 생성 capabilities를 만들어줬음.",
+          "hash": "63d5e11d75a4b90c9fd57ca0ce64605f8af7209f23702ba5adb7404a6182c27d"
+        },
+        "targetEvidence": {
+          "articleId": "llama",
+          "blockId": "[\"pre-training-data\",1]",
+          "anchor": "pre-training-data",
+          "quote": "우리 연구진의 데이터셋은 몇몇의 소스의 혼합이며 다양한 도메인의 데이터셋을 사용하였습니다. 또한 다른 LLM 연구진이 사용한 데이터셋을 재사용하였으며 우린 오직 공개적으로 사용가능하며 오픈된 데이터만을 사용하였습니다.",
+          "hash": "8e2adc197d4a83e0a55edfea63566e88e0449509573331102176bc32dd17c5f1"
         }
       }
     ]

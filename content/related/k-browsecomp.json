@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "0899e68fde6dfa6a4b947f2b2ad34cf2c94f444b5cdfe24836fc6cf825df712e",
+    "inputHash": "46537134ff2ee697f2c8a917ece6cabfbec92e15331cb9465cdff7f4b8070a4e",
     "status": "verified",
     "candidates": [
       {
@@ -229,7 +229,7 @@
       {
         "id": "searchswarm",
         "relation": "evaluation_comparison",
-        "reason": "한국어 web browsing agent 벤치마크와 deep research 벤치마크의 평가 대상·구성을 비교해, 두 장기 탐색 과제의 평가 맥락을 알 수 있습니다.",
+        "reason": "한국어 맥락의 browsing agent 벤치마크와 BrowseComp 계열을 포함한 deep research 평가가 어떤 과제를 다루는지 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "k-browsecomp",
           "blockId": "[\"introduction\",4]",

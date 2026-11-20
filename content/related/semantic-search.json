@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "abba2387d9713183685137e22763cffb464fb6b9d05d30efc736cc5f4370fbc3",
+    "inputHash": "aff14822f02cc52a894fc10982caab8ab3f363fc23b4d0085afcc1eb4f2a18fa",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "dense-retrieval",
         "relation": "related_method",
-        "reason": "Semantic Search가 문장 간 유사한 벡터로 검색하는 원리와 Dense Retrieval의 text embedding 기반 문서 검색 방식을 함께 배울 수 있습니다.",
+        "reason": "Dense Retrieval이 text embedding으로 query와 유사한 문서를 찾는 원리를 설명해 의미 기반 검색과 벡터 유사도의 연결을 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "semantic-search",
           "blockId": "[\"how-to-search-using-text-embedding\",1]",

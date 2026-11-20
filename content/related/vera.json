@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "808c107d5354610ccfafe5c82c6a1cd7785cf4855217a3295753e8f340079353",
+    "inputHash": "7c65c5147b04c78c07aa2aeb5a557da3c010b700d0aa83604af303e6fd6ca3e3",
     "status": "verified",
     "candidates": [
       {
@@ -240,15 +240,34 @@
     ],
     "recommendations": [
       {
-        "id": "lora",
+        "id": "dora",
         "relation": "related_method",
-        "reason": "VeRA가 고정 무작위 행렬과 scaling vectors로 파라미터를 줄이는 방식과 LoRA의 저랭크 분해를 비교해 배울 수 있습니다.",
+        "reason": "VeRA가 무작위 행렬을 고정하고 scaling vectors로 조정하는 방식과 DoRA의 가중치 크기·방향 분해 및 미세조정 방식을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "vera",
-          "blockId": "[\"introduction\",4]",
+          "blockId": "[\"experiments\",1]",
+          "anchor": "experiments",
+          "quote": "LoRA와 비교, GLUE / E2E, Llama model (IT), Vision Transformers (Image CLS)",
+          "hash": "c1156bd3fcc212e301b8696460ddae9b49205d2fecf836b718f48141c00585b8"
+        },
+        "targetEvidence": {
+          "articleId": "dora",
+          "blockId": "[\"introduction\",3]",
           "anchor": "introduction",
-          "quote": "이와 동시에, 최근 연구에서는 random weights와 projection을 사용하는 모델의 놀라운 효과를 보여주었습니다 (Peng et al., 2021; Ramanujan et al., 2020; Lu et al., 2022; Schrimpf et al., 2021; Frankle et al., 2021). 본 연구진이 제안한 solution은 VeRA로 이러한 모델들의 베이스에 근간하며 파인튜닝하는 동안 가중치 matrices를 재-파라미터화함으로써 학습 파라미터를 최소화하는 방법론을 소개합니다. 특히 연구진은 scaling vectors를 차용하여 고정된 무작위 행렬값들의 pair를 공유된 layer 사이에 적용하는 방법을 사용했습니다. 이 접근법을 사용하면 더 많은 버전의 모델을 단일 GPU의 제한된 메모리에 저장할 수 있습니다.",
-          "hash": "e1007ed1310e2e4f3d0c7520eeb1504b4c0965246bfb7f3bed7b50adbc94ba8a"
+          "quote": "Weight Reparameterization을 통해 기울기의 조건을 개선함으로써 더 빠른 속도로 수렴하는 Weight Normalization에 따라, 연구진은 새로운 weight decomposition analysis을 소개합니다. 이는 규모나 직접적인 구성요소에 따라 초기에 모델의 가중치를 reparameterize하며 그 뒤에 LoRA와 FT에 의해 도입된 규모와 방향의 변화를 검토합니다. 연구진의 분석에 따르면 LoRA와 FT는 현저하게 다른 업데이트 패턴을 보여주며, 이러한 변이들이 각 방법의 학습 능력을 반영한다는 추측을 하게 됩니다. 연구진의 발견에 영감을 받아, 우리는 사전 훈련된 가중치를 크기와 방향 요소로 분해한 다음, 두 가지 모두를 fine-tuning하는 Weight-Decomposed Low-Rank Adaptation(DoRA)을 제안합니다.",
+          "hash": "c812afd12e5702831db109ecbcdfa96f17583ccb42af9842e01c42a1a6390270"
+        }
+      },
+      {
+        "id": "lora",
+        "relation": "related_method",
+        "reason": "VeRA의 고정 무작위 행렬과 학습 가능한 scaling vectors를 LoRA의 저랭크 행렬 분해 방식과 비교해 두 PEFT 접근의 차이를 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vera",
+          "blockId": "[\"method-formulation\",1]",
+          "anchor": "method-formulation",
+          "quote": "기존 LoRA Equation",
+          "hash": "f2caffe8fff04e8f7e46c1d7c612692c237a468c41de538b3e9f03300f2bc0d6"
         },
         "targetEvidence": {
           "articleId": "lora",
@@ -261,7 +280,7 @@
       {
         "id": "qlora",
         "relation": "evaluation_comparison",
-        "reason": "VeRA와 LoRA의 Llama 7B 학습 효율성 비교와 QLoRA의 메모리 절감 접근을 함께 살펴볼 수 있습니다.",
+        "reason": "VeRA와 LoRA를 Llama 7B에서 학습 효율성으로 비교한 내용과, QLoRA의 저랭크 어댑터·메모리 절감 배경을 함께 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "vera",
           "blockId": "[\"impace-of-training-time-and-memory-usage\",1]",
@@ -275,25 +294,6 @@
           "anchor": "background",
           "quote": "Low-rank Adapters Full-finetune model과 달리 LoRA 파인튜닝 방법은 적은 trainable 파라미터를 사용하여 필요 메모리 자체를 줄이는 방법을 의미합니다. Stochastic gradient descent을 수행하는동안의 기울기는 adapter에서 고정된 사전학습모델 기울기를 거칩니다.",
           "hash": "92f382a4e2188e39e15b010a45aa75d3ef4e2412cd8c1d5ff772185ab6ca7258"
-        }
-      },
-      {
-        "id": "lora-finetuning",
-        "relation": "application_example",
-        "reason": "VeRA가 저랭크 행렬을 재매개변수화하는 개념을 실제 LoRA 파인튜닝 설정에 어떻게 적용하는지 볼 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "vera",
-          "blockId": "[\"e2e-benchmark\",2]",
-          "anchor": "e2e-benchmark",
-          "quote": "모든 환경셋팅은 LoRA와 동일하나 r(Rank)와 LR값만 바꿔서 실험 진행",
-          "hash": "02038d4d86fe50772f6984e1d805401dac58f9d44dae34c71bdf9f32e311fb78"
-        },
-        "targetEvidence": {
-          "articleId": "lora-finetuning",
-          "blockId": "[\"training\",1]",
-          "anchor": "training",
-          "quote": "python finetune.py \\ --base_model '../model_file/polyglot-ko-5.8b' \\ --data_path './ko_alpaca_data.json' \\ --output_dir './output' \\ --batch_size 128 \\ --mircro_batch_size 4 \\ --num_epochs 3 \\ --learning_rate 2e-5 \\ --cutoff_len 512 \\ --val_set_size 2000 \\ --lora_r 8 \\ --lora_alpha 16 \\ --lora_dropout 0.05 \\ --lora_target_modules '[query_key_value]' \\ --train_on_inputs \\ --group_by_length",
-          "hash": "1d3ec647d3fc9aa157a76778d7d0beb955bd87a846aa384701e66384ac2707f9"
         }
       }
     ]

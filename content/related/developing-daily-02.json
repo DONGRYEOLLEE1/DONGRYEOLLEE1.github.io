@@ -28,8 +28,8 @@
     "review": []
   },
   "entry": {
-    "inputHash": "53d003be8eebd641987dfcfa2cf1e295a2af259ae49708000c2ee455c8d1d93c",
-    "status": "verified",
+    "inputHash": "a95dc8a0a5fdf4458a10bb4a480e60304ecfd936feb0a200502cf853cbcb4a81",
+    "status": "abstained",
     "candidates": [
       {
         "id": "developing-daily-03",
@@ -227,45 +227,6 @@
         ]
       }
     ],
-    "recommendations": [
-      {
-        "id": "tgi-implementation",
-        "relation": "related_method",
-        "reason": "Gradio에서 TGI Client의 generate_stream을 사용하는 방식과 TGI를 Docker로 실행하는 설정을 함께 살펴볼 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "developing-daily-02",
-          "blockId": "[\"gradio\",5]",
-          "anchor": "gradio",
-          "quote": "TGI : text-generation.Client.generate_stream",
-          "hash": "8e92db7625abde8a0b9caa0494787a89df6a1dcd5ad252aa94af02ac6292c4d2"
-        },
-        "targetEvidence": {
-          "articleId": "tgi-implementation",
-          "blockId": "[\"1\",6]",
-          "anchor": "1",
-          "quote": "$ cd model_file $ nohup sudo docker run --gpus all --shm-size 1g -p 8080:80 --volume /DATA:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/OUTPUT_DIRECTORY --num-shard {NUMBER_OF_GPUS} --rope-scaling dynamic --rope-factor 2.0 & 2023-10-26T06:37:55.196641Z INFO shard-manager: text_generation_launcher: Shard ready in 12.91406831s rank=1 2023-10-26T06:37:55.292255Z INFO text_generation_launcher: Starting Webserver 2023-10-26T06:37:55.351346Z WARN",
-          "hash": "a216686807489b023a21f034bb1f756f7199c50f63a4b9512aa1d66b052767ee"
-        }
-      },
-      {
-        "id": "developing-daily-03",
-        "relation": "related_method",
-        "reason": "Gradio에서 TGI 스트리밍을 연결하는 구성과 로컬 모델을 TGI Docker로 실행할 때의 설정 및 오류를 비교해 볼 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "developing-daily-02",
-          "blockId": "[\"gradio\",5]",
-          "anchor": "gradio",
-          "quote": "TGI : text-generation.Client.generate_stream",
-          "hash": "8e92db7625abde8a0b9caa0494787a89df6a1dcd5ad252aa94af02ac6292c4d2"
-        },
-        "targetEvidence": {
-          "articleId": "developing-daily-03",
-          "blockId": "[\"solution\",1]",
-          "anchor": "solution",
-          "quote": "$ pwd /mnt/huggingface $ ls opt-125m version.txt $ ls opt-125m/ config.json generation_config.json merges.txt pytorch_model.bin special_tokens_map.json tokenizer_config.json vocab.json $ docker run --gpus all --shm-size 1g -p 8080:80 --volume /mnt/huggingface:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/opt-125m --num-shard 1",
-          "hash": "ab1cf11748bf6d1f44f3e6e3333c9fd6773cd8386181ca19f60a11d3b170db4c"
-        }
-      }
-    ]
+    "recommendations": []
   }
 }

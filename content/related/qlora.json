@@ -72,7 +72,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "b73982b6775bd35563799580ce262384e99f0654591438e98d2bf5308d40561e",
+    "inputHash": "197ee06215b733e50ca1adb6febaeee8f15b99824763992d34be535adcc5f019",
     "status": "verified",
     "candidates": [
       {
@@ -275,7 +275,7 @@
       {
         "id": "loftq",
         "relation": "related_method",
-        "reason": "QLoRA는 4-bit 양자화 모델에 LoRA 가중치를 더하고, LoftQ는 낮은 순위 근사를 양자화에 통합해 사전학습 가중치를 근사하는 방법을 설명합니다.",
+        "reason": "QLoRA가 4비트 양자화 모델에 학습 가능한 LoRA 가중치를 추가하는 방법을 설명하고, LoftQ는 LoRA 근사를 양자화와 결합해 고정밀 가중치를 근사하는 방식을 소개합니다.",
         "sourceEvidence": {
           "articleId": "qlora",
           "blockId": "[\"introduction\",2]",
@@ -292,9 +292,28 @@
         }
       },
       {
+        "id": "lora",
+        "relation": "related_method",
+        "reason": "QLoRA는 양자화한 사전학습 모델에 학습 가능한 LoRA 가중치를 더하며, LoRA 설명은 고정된 가중치에 저랭크 분해 행렬을 최적화하는 원리를 다룹니다.",
+        "sourceEvidence": {
+          "articleId": "qlora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "이에 연구진은 성능 저하 없이 quantized-4bit model 파인튜닝 하는 방법에 대해 소개. QLoRA는 4-bit로 사전학습된 모델을 양자화하기위해 독특한 high-precision technique를 사용하고 난 후에 학습가능한 LoRa 가중치의 적은 양을 추가함.",
+          "hash": "144cb34aeaeabedd47394aafd42bacd9d03485f0a719ac279c322487f77c7a50"
+        },
+        "targetEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "학습된 과도하게 매개변수화된 모델이 실제로 낮은 performance를 낸다는 연구결과에 영감을 받음. 낮은 intrinsic rank를 모델을 적용하는동안 weights가 바뀐다는 가설을 세움. LoRA는 간접적으로 dense layer의 rank decomposition matrix를 최적화함으로써 NN에서 몇몇의 dense layer들을 학습할 수 있게 만들어줌(이 과정에서 weight는 froze).",
+          "hash": "3cba5587203ea62e143ba4ec9ef423450571ae6976433824bbd5b3347210f7ac"
+        }
+      },
+      {
         "id": "qlora-troubleshooting",
         "relation": "application_example",
-        "reason": "QLoRA가 4-bit 모델에 LoRA 가중치를 더하는 방식을 소개하고, 이 사례는 4-bit 모델에 LoraConfig를 설정해 학습하는 코드를 보여줍니다.",
+        "reason": "QLoRA의 4비트 파인튜닝 개념을 실제 설정에 적용해 LoraConfig를 구성하고 학습 가능한 파라미터를 확인하는 예를 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "qlora",
           "blockId": "[\"introduction\",2]",
@@ -308,6 +327,25 @@
           "anchor": "4bit-quantization",
           "quote": "config = LoraConfig( r = 32, lora_alpha = 32, target_modules = ['query_key_value'], lora_dropout = .05, bias = \"none\", task_type = 'CAUSAL_LM' ) model = get_peft_model(model, config) print_trainable_parameters(model) # trainable params: 26214400 || all params: 6628362240 || trainable%: 0.39548834313557374",
           "hash": "80035dbe3452011bffbdd64cb71a5f8eb78cec9a3bab402bd05a34b8d9f3cb52"
+        }
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "relation": "application_example",
+        "reason": "QLoRA에서 설명한 LoRA 기반 파인튜닝 개념이 Polyglot-ko 모델을 LoRA로 파인튜닝하는 사례에서 어떻게 적용되는지 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "qlora",
+          "blockId": "[\"background\",2]",
+          "anchor": "background",
+          "quote": "Low-rank Adapters Full-finetune model과 달리 LoRA 파인튜닝 방법은 적은 trainable 파라미터를 사용하여 필요 메모리 자체를 줄이는 방법을 의미합니다. Stochastic gradient descent을 수행하는동안의 기울기는 adapter에서 고정된 사전학습모델 기울기를 거칩니다.",
+          "hash": "92f382a4e2188e39e15b010a45aa75d3ef4e2412cd8c1d5ff772185ab6ca7258"
+        },
+        "targetEvidence": {
+          "articleId": "polyglot-lora-troubleshooting",
+          "blockId": "[\"mission\",1]",
+          "anchor": "mission",
+          "quote": "Polyglot-ko 모델을 LoRA로 Fine-tuning",
+          "hash": "588d87d066a4379dade4dec3ee63e8b9ed34374b7cd98b63547452de2993c053"
         }
       }
     ]

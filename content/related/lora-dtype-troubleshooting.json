@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "e88438b761e2b2e643cf49df957601420560f91c2334f03088d25fc850026dac",
+    "inputHash": "7e75b0a69751f8138a9f323eb00c91846eddeca201517d7bacc421b2e8086d22",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "ia3-paper",
         "relation": "related_method",
-        "reason": "IA3 오류 코드의 element-wise 곱셈과 연구에서 설명하는 IA3 rescaling vector 적용 방식을 연결해 배울 수 있습니다.",
+        "reason": "오류가 발생한 IA3의 활성화값 원소별 재조정 코드와 IA3 연구의 key·value 및 중간 활성화 재조정 방식을 함께 살펴봅니다.",
         "sourceEvidence": {
           "articleId": "lora-dtype-troubleshooting",
           "blockId": "[\"에러\",4]",
@@ -256,6 +256,25 @@
           "anchor": "peft-with-ia3",
           "quote": "학습된 vector에 대한 모델 활성화함수의 element-wise multiplication에 대해 연구 진행. 특히 학습된 task-specific vector의 적용 양식에 대해 고려하였음. broadcasting notation. 연구진은 트랜스포머 모델에서 활성화 함수의 각 set을 통해 학습된 rescaling vector를 연구하면서 이것이 꼭 필요하지 않을수도 있다는 것을 발견해냈음. 대신, 우리는 self-attention 메커니즘에 key와 value에 대한 self-attention 및 encoder-decoder attention 메커니즘의 key와 value에 vector를 재조정하고 그리고 position-wise fedd-forward의 중간 activation에 rescaling vector를 도입하는 것으로 충분했음. 이에 연구진은 3개의 학습된 vector를 소개합니다.",
           "hash": "2ed000d00afdb85f83cd558bc628039160e4e3e3d105ae4dab64def273d89ecc"
+        }
+      },
+      {
+        "id": "transformers-training-oom",
+        "relation": "related_method",
+        "reason": "IA3 학습 중 발생한 dtype 오류와 Polyglot-ko 4비트 양자화·IA3 환경에서의 오류 및 버전 변경 해결 사례를 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "lora-dtype-troubleshooting",
+          "blockId": "[\"에러\",4]",
+          "anchor": "에러",
+          "quote": "# /venv/lib/python3.10/site-packages/peft/tuners/ia3.py # line 507 ... if is_bnb_available(): class Linear8bitLt(bnb.nn.Linear8bitLt, IA3Layer): ... def forward(self, x: torch.Tensor): ... else: result = super().forward(x) ## 추가 result = result * self.ia3_l[self.active_adapter].flatten() return result",
+          "hash": "e04eb411c8b7eb479d32a29c7cde29da1c05831f7e8a230b437ae7e81e7b0315"
+        },
+        "targetEvidence": {
+          "articleId": "transformers-training-oom",
+          "blockId": "[\"error\",6]",
+          "anchor": "error",
+          "quote": "Model: EleutherAI/polyglot-ko-1.3b + 4bit of quantization + IA3",
+          "hash": "938d5f9563b9e6c8f2be7fe11b9ca594bbe6908a9083be988121f69b8e1a7ed6"
         }
       }
     ]

@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "843845cb1475bc8c988502ba15b33e01f5f25dab75ee80b5b50629309fa3d939",
+    "inputHash": "c634f71fd93df16aa349378b1b8086c514a29955b3513f524cd16394c0a66cbf",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "fast-r-cnn",
         "relation": "related_method",
-        "reason": "RoI Pooling이 이미지의 Feature Map에서 고정 크기 feature를 만드는 과정을 구체적으로 살펴볼 수 있습니다.",
+        "reason": "RoI Pooling으로 고정 크기의 특징 벡터를 만드는 설명을 통해 객체 검출에서 영역별 특징을 처리하는 과정을 더 알아볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "object-detection-basics",
           "blockId": "[\"roi-pooling\",2]",
@@ -261,13 +261,13 @@
       {
         "id": "faster-r-cnn",
         "relation": "related_method",
-        "reason": "RPN이 Feature Map에서 후보 영역의 class-score와 bounding box를 출력하는 방식을 자세히 배울 수 있습니다.",
+        "reason": "객체를 식별하고 위치를 찾는 과정을 RPN이 후보 영역과 바운딩 박스 좌표를 산출하는 방식으로 구체화합니다.",
         "sourceEvidence": {
           "articleId": "object-detection-basics",
-          "blockId": "[\"backbone\",2]",
-          "anchor": "backbone",
-          "quote": "Backbone은 등뼈라는 뜻이다. 등뼈는 뇌와 몸의 각 부위의 신경을 이어주는 역할을 한다. 뇌를 통해 입력이 드러온다고 생각하고 팔, 다리 등이 출력이라고 생각한다면 backbone은 입력이 처음 들어와서 출력에 관련된 모듈에 처리된 입력을 보내주는 역할이라고 생각할 수 있다. 여러가지 task가 몸의 각 부분이라고 생각하면 Classification Model은 입력을 받아서 각 task에 맞는 모듈로 전달해주는 역할이다. 결국 객체를 검출하든 영역을 나누든 Neural Network는 입력 이미지로부터 다양한 feature를 추출해야한다. 그 역할을 Backbone Network가 하는 것이다.",
-          "hash": "2990ce85f4c2cfb34ed3cf7551d2e1bf9ac6b1e91ed0e2e7b2f7d6967011151e"
+          "blockId": "[\"the-object-detection-task\",1]",
+          "anchor": "the-object-detection-task",
+          "quote": "Object Detection 에서 물체가 이미지에서 나타날때 우린 물체에 대해 identify, localize 할 것이다. 이는 'image classification'과는 다른 개념인데, 여기엔 많은 객체의 같거나 다른 classes들이 이미지에 나타나기 때문이다. 그리고 객체탐지는 모든 객체에 대해 정확하게 예측하는 것을 추구하기 때문이다.",
+          "hash": "1be77b2ed8cfe444203da351c8f5b64e57fa75e49da8eb29b91bd79396fff12d"
         },
         "targetEvidence": {
           "articleId": "faster-r-cnn",
@@ -278,28 +278,28 @@
         }
       },
       {
-        "id": "map-evaluation",
+        "id": "r-cnn",
         "relation": "related_method",
-        "reason": "객체 탐지에서 물체를 식별하고 위치를 찾는 과제를 AP와 recall로 평가하는 방법을 익힐 수 있습니다.",
+        "reason": "객체 검출의 위치 지정과 분류를 R-CNN이 후보 영역 추출과 특징 벡터 생성으로 수행하는 과정을 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "object-detection-basics",
-          "blockId": "[\"rpnregions-proposal-network\",2]",
-          "anchor": "rpnregions-proposal-network",
-          "quote": "RPN이란 VGG, ResNet과 같은 Feature Extraction에 입력이미지를 넣어 나온 Feature Map에다가 convolution을 적용해 해당 Region들에 객체가 있는지 없는지 분류하고 동시에 그 객체가 있을만한 Region의 바운딩 박스 좌표를 회귀하는 것을 함께 수행하는 네트워크를 의미한다. 그래서 네트워크라는 특성으로 인해 GPU 이용이 가능하고 결과적으로 기존의 Selective Search보다 속도가 빠른 장점이있다.",
-          "hash": "39eeccfd10cb6b7a26550770f494d5e84d9e3d1c803d6bd6a69ea4a1d96a7550"
+          "blockId": "[\"the-object-detection-task\",1]",
+          "anchor": "the-object-detection-task",
+          "quote": "Object Detection 에서 물체가 이미지에서 나타날때 우린 물체에 대해 identify, localize 할 것이다. 이는 'image classification'과는 다른 개념인데, 여기엔 많은 객체의 같거나 다른 classes들이 이미지에 나타나기 때문이다. 그리고 객체탐지는 모든 객체에 대해 정확하게 예측하는 것을 추구하기 때문이다.",
+          "hash": "1be77b2ed8cfe444203da351c8f5b64e57fa75e49da8eb29b91bd79396fff12d"
         },
         "targetEvidence": {
-          "articleId": "map-evaluation",
-          "blockId": "[\"mapmean-average-precision\",1]",
-          "anchor": "mapmean-average-precision",
-          "quote": "AP는 Faster R-CNN, SSD와 같이 객체탐지의 정확도를 측정하는데있어서 가장 인기있는 metric이다. AP는 0과 1사이의 값을 가지는 recall을 통해 average precision값을 계산한다. 꽤나 복잡한 얘기로 들릴수 있겠지만 예시와 함께 설명하고자한다. 그전에, precision, recall, IoU에 대해 알아보자.",
-          "hash": "01b98da19a8d4cd15cc9fb7a64670351f90a987efd64d39a5808b9cab4a29f63"
+          "articleId": "r-cnn",
+          "blockId": "[\"abstract\",1]",
+          "anchor": "abstract",
+          "quote": "Object Detector는 Object의 coordinate를 찾고(Localization), class를 분류(Classification)하는 작업을 진행한다. R-CNN은 이를 순차적으로 진행하는 2 Stage Detector 로, 딥러닝을 적용한 최초의 Object Detector다. R-CNN모델은 Object Detection 혹은 Inference(추론)시, 아래와 같은 순서에 의해 동작한다.",
+          "hash": "4ae1fc1530ef74e24391b17d1338950c656044da3cb13cb70ce563979e1142ad"
         }
       },
       {
         "id": "yolo-v1",
         "relation": "related_method",
-        "reason": "물체 식별과 위치 예측을 설명한 뒤, YOLO가 이미지 전체 특징으로 bounding box와 class를 함께 예측하는 방식을 볼 수 있습니다.",
+        "reason": "객체의 위치와 클래스를 예측하는 과정을 YOLO가 이미지 전체를 이용하는 단일 신경망으로 통합한 방식을 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "object-detection-basics",
           "blockId": "[\"the-object-detection-task\",1]",

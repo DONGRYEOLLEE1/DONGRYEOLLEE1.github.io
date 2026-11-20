@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "0c451836855e2f3e5a1627452f240c8e86c03c4a335def3fedc10427340941aa",
+    "inputHash": "3b3384cf35ac89d42edcc67db51c7ab7e558774f2f392822c77e8a17b064b180",
     "status": "verified",
     "candidates": [
       {
@@ -242,7 +242,7 @@
       {
         "id": "fast-r-cnn",
         "relation": "related_method",
-        "reason": "Faster R-CNN은 RPN의 RP를 Fast R-CNN에 전달하고, Fast R-CNN은 RoI pooling과 multi-task loss로 검출을 한 번에 학습합니다.",
+        "reason": "Faster R-CNN은 RPN이 만든 영역 제안을 Fast R-CNN에 전달하고, Fast R-CNN은 RoI pooling과 multi-task loss로 영역별 학습을 처리하는 방식을 설명합니다.",
         "sourceEvidence": {
           "articleId": "faster-r-cnn",
           "blockId": "[\"preview\",3]",
@@ -261,7 +261,7 @@
       {
         "id": "object-detection-basics",
         "relation": "related_method",
-        "reason": "RPN이 RP를 추출해 Fast R-CNN에 전달하는 흐름을 바탕으로, RPN이 anchor box에서 class-score와 Bounding Box coefficient를 출력하는 과정을 알 수 있습니다.",
+        "reason": "Faster R-CNN에서 RPN이 영역 제안을 만들고 class-score와 bounding-box 출력을 내는 구체적 과정을 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "faster-r-cnn",
           "blockId": "[\"preview\",3]",
@@ -280,26 +280,26 @@
       {
         "id": "r-cnn",
         "relation": "related_method",
-        "reason": "Faster R-CNN이 RP를 Fast R-CNN에 전달하는 방식과 비교해, R-CNN은 2000개의 Region Proposal을 CNN에 입력해 특징을 추출하는 순차적 검출 과정을 설명합니다.",
+        "reason": "Faster R-CNN의 이미지 특징 추출과 대비해, R-CNN이 각 영역 제안을 CNN에 넣어 특징 벡터를 얻는 절차를 설명합니다.",
         "sourceEvidence": {
           "articleId": "faster-r-cnn",
-          "blockId": "[\"preview\",3]",
+          "blockId": "[\"preview\",4]",
           "anchor": "preview",
-          "quote": "RPN에서 RP를 추출하고 이를 Fast R-CNN 네트워크에 전달하여 객체의 class와 위치를 예측한다. 이를 통해 모델의 전체 과정이 GPU상에서 동작하여 bottleneck 현상이 발생하지 않으며, end-to-end로 네트워크를 학습시키는 것이 가능해진다.",
-          "hash": "acf2b3fbc6e03337fb83d165649805cf94494ee777cf43f24e6071865bac4678"
+          "quote": "원본이미지를 pre-trained CNN 모델에 입력해 Feature Map를 얻음 (end-to-end로 학습)",
+          "hash": "0d7862ca3c9fad4598532b02a6cfedd5094f1b6bcef696fa8a3e5b07ce503ed5"
         },
         "targetEvidence": {
           "articleId": "r-cnn",
-          "blockId": "[\"abstract\",1]",
-          "anchor": "abstract",
-          "quote": "Object Detector는 Object의 coordinate를 찾고(Localization), class를 분류(Classification)하는 작업을 진행한다. R-CNN은 이를 순차적으로 진행하는 2 Stage Detector 로, 딥러닝을 적용한 최초의 Object Detector다. R-CNN모델은 Object Detection 혹은 Inference(추론)시, 아래와 같은 순서에 의해 동작한다.",
-          "hash": "4ae1fc1530ef74e24391b17d1338950c656044da3cb13cb70ce563979e1142ad"
+          "blockId": "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "anchor": "feature-extraction-by-fine-tuned-alexnet",
+          "quote": "다음으로 2000개의 Region Proposal을 Fine Tune된 AlexNet에 입력해 2000(=Number of Region Proposal) x 4096(=Number of Feature Vector) 크기의 Feature vector를 추출한다. 논문의 저자는 Object Detection시, 특정 도메인에 맞는 class를 예측하기 위해서 기존의 ImageNet 데이터셋을 통해, 사전학습된 CNN모델을 도메인에 맞게 fine tune하는 방식을 제안한다. Fine tune된 모델을 사용하면 도메인에 맞게 보다 적합한 feature vector를 추출하는 것이 가능해진다.",
+          "hash": "18118d1c2c75e87b6fdfe76aa5ad1711500d35561a962f5e8a87f64fcb1ce677"
         }
       },
       {
         "id": "yolo-v1",
         "relation": "related_method",
-        "reason": "Faster R-CNN은 RPN의 RP를 Fast R-CNN에 전달하지만, YOLO는 검출 요소를 단일 신경망으로 통합해 이미지 전체 특징으로 bounding box를 예측합니다.",
+        "reason": "Faster R-CNN은 RPN과 Fast R-CNN을 연결해 검출하며, YOLO는 검출 요소를 하나의 신경망으로 통합하는 방식을 보여줍니다.",
         "sourceEvidence": {
           "articleId": "faster-r-cnn",
           "blockId": "[\"preview\",3]",

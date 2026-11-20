@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "4bd3a21faf98398ca5f24d5c049fcb38f1acd478f7c7b6a6f84cc2ec90022997",
+    "inputHash": "d0cc8712acf157f2b2a44976f1bfab0aa9a80a1a4327c6916b1cba4d753bb4b1",
     "status": "verified",
     "candidates": [
       {
@@ -240,28 +240,28 @@
     ],
     "recommendations": [
       {
-        "id": "eda",
-        "relation": "concept_explanation",
-        "reason": "결측값을 제거하고 증강을 적용하는 전처리에서, EDA가 문장의 label을 유지하며 동의어를 삽입하는 증강 방법을 배울 수 있습니다.",
+        "id": "polyglot-training-troubleshooting",
+        "relation": "related_method",
+        "reason": "데이터 처리와 토크나이저를 포함한 파인튜닝 흐름을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "tokenizer-input-troubleshooting",
-          "blockId": "[\"원인\",3]",
-          "anchor": "원인",
-          "quote": "확인 결과, Data-Augmentation하면서 특정 category의 데이터에 missing values가 발생되어 해당 오류 발생하였음",
-          "hash": "9664d12570208c2ac1521305dbb57d23c18136c6ab43ad4a3fca4d6428ce919b"
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": "df = pd.read_csv(...) df = df.dropna(axis = 0) df = DA(...) train_sentence = tokenizer(list(train_data[\"text\"]), return_tensors = 'pt', padding = True, truncation = True, add_special_tokens = True) ...",
+          "hash": "8386db12644cbd94dec473a1df32d6b6a6c824b0f6781d7087b0d839cf1666af"
         },
         "targetEvidence": {
-          "articleId": "eda",
-          "blockId": "[\"theory\",7]",
-          "anchor": "theory",
-          "quote": "Data-Augmentation-operations은 기존 문장의 label을 변경하지 않음. 문장 내 단어의 동의어를 삽입하는 것은 context에 연관있으며 문장의 original-label을 유지시킴",
-          "hash": "b0b7ebe5ec3d83f678f11026e8e448a24dbf5c2993c98ca4b0310d9758b87d14"
+          "articleId": "polyglot-training-troubleshooting",
+          "blockId": "[\"prob\",3]",
+          "anchor": "prob",
+          "quote": "그럼 남은건 데이터 뿐.. train 파일의 데이터 처리 부분 코드를 뜯어보기로!",
+          "hash": "c4e9e93a6ba7f58c60c754558f8275e520dacae813c5a73029a4eb69253d6e76"
         }
       },
       {
         "id": "model-input-length",
         "relation": "related_method",
-        "reason": "두 사례에서 tokenizer 입력을 다루는 방법을 비교하며, padding과 truncation뿐 아니라 모델의 최대 입력 길이도 맞춰야 함을 알 수 있습니다.",
+        "reason": "토크나이저의 padding·truncation 설정과 모델 입력 길이를 맞추는 방법을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "tokenizer-input-troubleshooting",
           "blockId": "[\"solution\",1]",
@@ -275,6 +275,25 @@
           "anchor": "model-input-sequence-length",
           "quote": "물론 tokenizer의 padding = \"max_length\", truncation = True, max_length = 2048와 같은 옵션을 줘서 문장 길이를 맞춰줄 수도 있지만 backbone 모델의 input sequence length가 맞추려는 길이보다 짧을 경우 다음과 같은 에러 발생",
           "hash": "5629ab0bfa58ae498e8ac300c4e5f06c74f54d2f72ac258a4ba8a7d58a57f468"
+        }
+      },
+      {
+        "id": "eda",
+        "relation": "concept_explanation",
+        "reason": "데이터 증강이 문장에 적용되는 방식을 설명해 결측값이 발생한 증강 단계와 관련된 배경을 제공합니다.",
+        "sourceEvidence": {
+          "articleId": "tokenizer-input-troubleshooting",
+          "blockId": "[\"원인\",3]",
+          "anchor": "원인",
+          "quote": "확인 결과, Data-Augmentation하면서 특정 category의 데이터에 missing values가 발생되어 해당 오류 발생하였음",
+          "hash": "9664d12570208c2ac1521305dbb57d23c18136c6ab43ad4a3fca4d6428ce919b"
+        },
+        "targetEvidence": {
+          "articleId": "eda",
+          "blockId": "[\"theory\",7]",
+          "anchor": "theory",
+          "quote": "Data-Augmentation-operations은 기존 문장의 label을 변경하지 않음. 문장 내 단어의 동의어를 삽입하는 것은 context에 연관있으며 문장의 original-label을 유지시킴",
+          "hash": "b0b7ebe5ec3d83f678f11026e8e448a24dbf5c2993c98ca4b0310d9758b87d14"
         }
       }
     ]

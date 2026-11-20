@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "76062acb540522ee899d302d17a9e1ddbdeedc01ac4d90216a890da12888d42f",
+    "inputHash": "8532f3d050794985d8aeb5661d1cd8f5730343ae9b640da4a88e72a7b0cd3cea",
     "status": "verified",
     "candidates": [
       {
@@ -229,9 +229,9 @@
     ],
     "recommendations": [
       {
-        "id": "ia3-paper",
-        "relation": "evaluation_comparison",
-        "reason": "in-context learning은 적은 demonstration을 입력으로 사용하고, ICL 설명은 레이블된 예시와 쿼리를 프롬프트에 넣는 방식을 설명해 두 방식을 구체적으로 비교할 수 있습니다.",
+        "id": "few-shot-learning",
+        "relation": "related_method",
+        "reason": "두 글 모두 적은 수의 예시를 맥락에 넣어 새 작업에 적응하는 few-shot 및 in-context learning을 다룹니다.",
         "sourceEvidence": {
           "articleId": "gpt-3",
           "blockId": "[null,5]",
@@ -240,23 +240,42 @@
           "hash": "48fbd476c085ab36cb78e29fd9a76765d66c03ba983f0977be3cd1e10bb6c66a"
         },
         "targetEvidence": {
+          "articleId": "few-shot-learning",
+          "blockId": "[\"few-shot-learning이-뭘까\",1]",
+          "anchor": "few-shot-learning이-뭘까",
+          "quote": "Few-shot learning (FSL)은 각 class에 대해 오직 몇가지만 레이블된 샘플들을 사용한 데이터의 새로운 카테고리를 사전학습 모델에 이용가능하게 한 머신러닝 framework입니다. 이건 meta-learning의 패러다임에서 파생된 개념입니다.",
+          "hash": "ffa507f2e57a0525bec922e6b18c3e13b6c40db50d211bdfbbfbc141d9e8b4c2"
+        }
+      },
+      {
+        "id": "ia3-paper",
+        "relation": "evaluation_comparison",
+        "reason": "GPT-3의 in-context learning 설명과 IA3 글의 few-shot ICL 비교 실험을 통해 두 접근의 평가 관점을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "gpt-3",
+          "blockId": "[null,8]",
+          "anchor": null,
+          "quote": "few-shot learning : 소수의 예시들어 in-context learning",
+          "hash": "bb18cfb5353008284836b98c5656ef8077a0c05e8c92f1d7000b4cd2bc7d616c"
+        },
+        "targetEvidence": {
           "articleId": "ia3-paper",
-          "blockId": "[\"few-shot-in-context-learning-icl\",1]",
-          "anchor": "few-shot-in-context-learning-icl",
-          "quote": "ICL은 레이블이 지정되지 않은 쿼리 예제와 함께 연결되고 프롬프트가 표시된 입력 대상 예제(\"샷\"이라고 함)를 레이블이 지정되지 않은 쿼리 예제와 함께 제공함으로써 모델을 유도하는 것을 목표로 합니다. ICL의 이점은 파인튜닝 없이 즉시 많은 task에 단일의 모델을 적용할 수 있는 점입니다. 이는 또한 mixed-task batches를 가능하게 만들어주며 데이터 배치의 여러 예시가 서로 다른 컨텍스트를 사용하여 서로 다른 작업에 해당하는 작업도 가능합니다.",
-          "hash": "5b1f5fc385ccf87fe5e4f88f5564e1e085e3976e8e120a70e87fd851b2644a26"
+          "blockId": "[\"peft-with-ia3\",1]",
+          "anchor": "peft-with-ia3",
+          "quote": "Few-shot ICL과의 비교실험",
+          "hash": "8ee862765848652f9d17752ed3d96bf075e513a3b22d9329c6b6dea00266c739"
         }
       },
       {
         "id": "flan",
-        "relation": "related_method",
-        "reason": "few-shot 예시를 활용하는 in-context learning과, unseen task 수행을 위해 instruction tuning을 하는 접근의 차이를 알아볼 수 있습니다.",
+        "relation": "evaluation_comparison",
+        "reason": "few-shot 예시가 없는 zero-shot의 어려움과 unseen task를 평가하기 위해 작업 클러스터를 보류하는 instruction tuning 설정을 비교할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "gpt-3",
-          "blockId": "[null,5]",
+          "blockId": "[null,10]",
           "anchor": null,
-          "quote": "이런 문제를 해결하기 위한 잠재적인 루트는 바로 meta learning이다. 언어모델의 context딴에서 학습시간동안 패턴인지능력과 다양한 셋의 스킬을 개발하는 모델을 의미합니다. 그리고 그러고난 후에 inference 할때 이 능력을 원하는 작업에 빠르게 적응하거나 인식합니다 (위 이미지 참고). 최근연구를 통해 이걸 in-context learning이라고 부르기로 했고 task 특성의 특징에 맞게 사전학습된 언어모델의 텍스트 입력값으로 사용하는 것을 일컫습니다. 이 모델은 자연어 지시와 적은 demonstration에 영향을 받습니다. 그리고 다음에 올 단어를 간단하게 예측함으로써 추가적인 예시를 완벽하게 기대하게 만듭니다.",
-          "hash": "48fbd476c085ab36cb78e29fd9a76765d66c03ba983f0977be3cd1e10bb6c66a"
+          "quote": "zero-shot learning : 특정 instruction에 대해 어떠한 예시도 없이 진행",
+          "hash": "3649d23b0a84c2d76feaa3685de37e503fb6cd836b50c58a53fdd0cbd24def03"
         },
         "targetEvidence": {
           "articleId": "flan",

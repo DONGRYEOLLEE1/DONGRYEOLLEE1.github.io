@@ -33,7 +33,7 @@
     ]
   },
   "entry": {
-    "inputHash": "a9803dd38832ec7102333ba05e6cdf826f840a4e6601e0a0316dc38e493ac347",
+    "inputHash": "1ede02bfc4c64071ea9934ad75a7bde132a2a3c9e69cf5f76979aa0f03da6e98",
     "status": "verified",
     "candidates": [
       {
@@ -236,7 +236,7 @@
       {
         "id": "inference-server",
         "relation": "related_method",
-        "reason": "가중치 적재 전에 멈추는 vLLM 사례를 비교하며, NCCL 초기화에서 무한 대기하는 증상을 살펴볼 수 있습니다.",
+        "reason": "가중치 적재 전 vLLM이 무한 대기하는 사례를 비교해 멈춤 증상을 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "vllm-weight-loading",
           "blockId": "[\"problem\",3]",

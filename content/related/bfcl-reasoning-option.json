@@ -39,8 +39,8 @@
     "review": []
   },
   "entry": {
-    "inputHash": "2f4e1e14d20a7f02ae7a16615a5a04066a65b2b61fbf85f58d450c0721850eba",
-    "status": "verified",
+    "inputHash": "b8fb55f718e059608f982adeca5676f1c85806300227301b0bec9ac3f45debb4",
+    "status": "abstained",
     "candidates": [
       {
         "id": "k-browsecomp",
@@ -225,26 +225,6 @@
         ]
       }
     ],
-    "recommendations": [
-      {
-        "id": "k-browsecomp",
-        "relation": "concept_explanation",
-        "reason": "BFCL로 에이전트 성능을 측정하는 맥락에서, browsing agent 평가가 instruction following·tool calling·multi-turn interaction을 함께 다루는 이유를 알 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "bfcl-reasoning-option",
-          "blockId": "[\"error\",1]",
-          "anchor": "error",
-          "quote": "Agent performance 측정을 위한 BFCL 벤치마크 실행 도중, api base generation 실행시 아래의 오류 발생",
-          "hash": "7cac1ee12fe3e2be371d1927e1d91c77e1f1b5b600b19a7a6ccf81e3f7bb0885"
-        },
-        "targetEvidence": {
-          "articleId": "k-browsecomp",
-          "blockId": "[\"introduction\",4]",
-          "anchor": "introduction",
-          "quote": "Browsing agent는 instruction following·tool calling·multi-turn interaction을 동시에 요구하는 compositional task라, 한국어 agentic 능력을 종합적으로 측정하는 testbed가 됨.",
-          "hash": "0d7ba0566800e2c82c330937c0bb67a8a9ad059e072fccb34065468c9c5e7a3f"
-        }
-      }
-    ]
+    "recommendations": []
   }
 }

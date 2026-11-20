@@ -44,7 +44,7 @@
     ]
   },
   "entry": {
-    "inputHash": "f1fd274e458946d11c8bc95f416eb1d75d96efbe2802e43dd887f2f6bee74207",
+    "inputHash": "28b9da26ef9763c59bc06cfd3a5825ce087091c411d5e222c35b20b9b2dd7a6b",
     "status": "verified",
     "candidates": [
       {
@@ -245,9 +245,28 @@
     ],
     "recommendations": [
       {
+        "id": "polyglot-training-troubleshooting",
+        "relation": "evaluation_comparison",
+        "reason": "ZeRO 설정과 ZeRO3 Offload 적용 사례를 함께 살펴보며 설정한 분산 학습 방식과 실제 GPU·CPU 메모리 활용 결과를 비교할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "distributed-gpu-training",
+          "blockId": "[\"단일-gpu-사용\",4]",
+          "anchor": "단일-gpu-사용",
+          "quote": "ds_config.json { \"zero_optimization\": { \"stage\": 2, \"allgather_partitions\": true, \"allgather_bucket_size\": 2e8, \"reduce_scatter\": true, \"reduce_bucket_size\": 2e8, \"overlap_comm\": true, \"contiguous_gradients\": true, \"cpu_offload\": true } }",
+          "hash": "1e9d88dc3161468479a423250663d41468b7ccadb335e71834c650e49b22ef69"
+        },
+        "targetEvidence": {
+          "articleId": "polyglot-training-troubleshooting",
+          "blockId": "[\"solution\",18]",
+          "anchor": "solution",
+          "quote": "step 잘 밟고 GPU 2장 모두 잘 사용하며 ZeRO3 Offload로 rest of CPU-mem 잘 사용되었음을 확인 할 수 있었음",
+          "hash": "c18bb82376eee6d5b33e4f74ed14eca883203b7de681ab07ac5314d59e5a6880"
+        }
+      },
+      {
         "id": "llama",
         "relation": "related_method",
-        "reason": "FairScale 예시의 체크포인팅·모델 병렬화와 LLaMA의 체크포인팅·모델 및 시퀀스 병렬화로 메모리 사용량을 줄이는 구현을 비교해 볼 수 있습니다.",
+        "reason": "FairScale의 checkpointing과 메모리 절감 기법을 살펴본 뒤, 학습에서 checkpointing과 sequence parallelism을 활용한 구현 사례를 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "distributed-gpu-training",
           "blockId": "[\"single-gpu-환경에서-offloadmodel-사용\",8]",
@@ -264,22 +283,22 @@
         }
       },
       {
-        "id": "llama2-training-oom",
+        "id": "training-arguments",
         "relation": "related_method",
-        "reason": "FairScale의 OSS로 optimizer 상태를 sharding하는 방법과 OOM 대응을 위해 ZeRO stage 2 및 CPU offload를 설정하는 방법을 함께 살펴볼 수 있습니다.",
+        "reason": "DeepSpeed 설정의 fp16 옵션과 TrainingArguments의 fp16 설명을 함께 보며 혼합 정밀도 학습 설정을 익힐 수 있습니다.",
         "sourceEvidence": {
           "articleId": "distributed-gpu-training",
-          "blockId": "[\"최적화-gradient와-model-sharding\",1]",
-          "anchor": "최적화-gradient와-model-sharding",
-          "quote": "기존 torch.nn.parallel.DistributedDataParallel(DDP)은 OSS에서 사용하면 cost가 낭비될 수 있음. 그런 다음 optimizer 상태를 sharding하는 것은 optimizer를 fairscale.optim.OSS로 감싸는 문제일 뿐입니다. DDP는 SharededDDP를 대신해서 사용되어질 수 있음. 근데 메모리 절약은 잘 안 될 수 있음. 예시 코드는 다음과 같음.",
-          "hash": "b74937dc5e805cf34dd92b5e9a1df4d4d76a372e2a1198637565485cbb1b84aa"
+          "blockId": "[\"zero-2에서-많은-기능을-활성화한-ds_configjson-파일\",1]",
+          "anchor": "zero-2에서-많은-기능을-활성화한-ds_configjson-파일",
+          "quote": "{ \"fp16\": { \"enabled\": \"auto\", \"loss_scale\": 0, \"loss_scale_window\": 1000, \"initial_scale_power\": 16, \"hysteresis\": 2, \"min_loss_scale\": 1 }, \"optimizer\": { \"type\": \"AdamW\", \"params\": { \"lr\": \"auto\", \"betas\": \"auto\", \"eps\": \"auto\", \"weight_decay\": \"auto\" } }, \"scheduler\": { \"type\": \"WarmupLR\", \"params\": { \"warmup_min_lr\": \"auto\", \"warmup_max_lr\": \"auto\", \"warmup_num_steps\": \"auto\" } }, \"zero_optimization\": { \"stage\": 2, \"allgather_partitions\": true, \"allgather_bucket_size\":",
+          "hash": "f37f448e90b208467e620b5854622a737ba14bec483b69da0d75e86b8b2d0c48"
         },
         "targetEvidence": {
-          "articleId": "llama2-training-oom",
-          "blockId": "[\"source-code\",1]",
-          "anchor": "source-code",
-          "quote": "@dataclass class ScriptArgument: ## model argument model_name: Optional[str] = field(default = \"beomi/llama-2-ko-70b\", metadata = {\"help\" : \"the model name\"}) ## train arguments batch_size: Optional[int] = field(default = 2, metadata = {\"help\" : \"the batch size\"}) gradient_accumulation_steps: Optional[int] = field(default = 2, metadata = {\"help\" : \"the gradient accumulation steps\"}) num_train_epochs: Optional[int] = field(default = 1, metadata = {\"help\" : \"the number of",
-          "hash": "afecc7cd0846559cae6a7f3264f3ac7a79cb69dce81d993310e43747d70abafe"
+          "articleId": "training-arguments",
+          "blockId": "[\"하이퍼파라미터\",9]",
+          "anchor": "하이퍼파라미터",
+          "quote": "fp16(bool, False): 32-bit 학습 or 15-bit(mixed) precision 학습",
+          "hash": "4162866bdb372532bbf0f65bc4b770b0dfeea71234a3cd1ad1ba5256d9da967b"
         }
       }
     ]

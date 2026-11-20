@@ -83,7 +83,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "505f08e7ace965eb0e1399d5865d854a361ec7600739876d6ad4e89327c84968",
+    "inputHash": "83cf976912666f4fc35c5acec8549e3de3c8e45556d2526d197bc5c6f470c0d7",
     "status": "verified",
     "candidates": [
       {
@@ -123,19 +123,6 @@
           "[\"reranking\",1]",
           "[\"결론\",1]",
           "[\"using-rerank-to-improve-keyword-search\",10]"
-        ]
-      },
-      {
-        "id": "kodistill",
-        "sourceBlocks": [
-          "[\"system\",3]",
-          "[\"datasets\",3]",
-          "[\"metrics\",5]"
-        ],
-        "targetBlocks": [
-          "[null,1]",
-          "[\"2-align-ocr-supervision-with-literal-transcription\",1]",
-          "[\"korean-ocr-a-measurable-change\",3]"
         ]
       },
       {
@@ -280,13 +267,26 @@
           "[\"detection\",1]",
           "[\"2-rpnregion-proposal-network\",13]"
         ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"freeze\",6]",
+          "[\"setup\",2]",
+          "[\"tldr\",5]"
+        ],
+        "targetBlocks": [
+          "[\"error-message\",8]",
+          "[\"environment\",2]",
+          "[\"problem\",2]"
+        ]
       }
     ],
     "recommendations": [
       {
         "id": "map-evaluation",
         "relation": "concept_explanation",
-        "reason": "책 등뼈 검출의 mAP50을どう解釈するか、APとIoUに基づく物体検出評価の説明から学べます。",
+        "reason": "탐지 상자의 IoU 기준을 고정해 평가하는 mAP50이 어떤 지표인지 설명을 통해 이해할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "book-spine",
           "blockId": "[\"metrics\",3]",
@@ -305,13 +305,13 @@
       {
         "id": "reranking",
         "relation": "concept_explanation",
-        "reason": "候補を文字列類似度などで再採点する本の照合処理を、rerankingの基本的な仕組みと結び付けて理解できます。",
+        "reason": "후보 책을 문자열 유사도와 규칙으로 재채점하는 과정이 reranking의 관련성 점수 부여와 어떻게 연결되는지 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "book-spine",
-          "blockId": "[\"open-set\",1]",
-          "anchor": "open-set",
-          "quote": "The first reranker scored each candidate with the maximum of three RapidFuzz similarities: token_set_ratio, ratio on space-free strings, and partial_ratio. It had been evaluated only against the closed list of 90 titles used in Section 4, where the answer is always among the candidates.",
-          "hash": "36a824df433cfa957b73cc1d19e9bb1bf55d080cac83cfe8143310dc28e28ca5"
+          "blockId": "[\"system\",4]",
+          "anchor": "system",
+          "quote": "Matching normalizes the query, retrieves 50 candidates from a 50,000-book dictionary with character 2-gram and 3-gram BM25, and rescores them with string similarity plus a few rules (Section 5). Each spine ends in one of three states: confirmed (the dictionary entry is taken as the answer), review (candidates are shown and the user picks), or unmatched.",
+          "hash": "42e4da97f352cf20759e335c63c692349941e96920844bb8ef223bed57187f05"
         },
         "targetEvidence": {
           "articleId": "reranking",
@@ -324,26 +324,7 @@
       {
         "id": "r-cnn",
         "relation": "concept_explanation",
-        "reason": "検出した箱を使うパイプラインを、R-CNNの領域提案・位置特定・分類という段階的な物体検出の説明と照らせます。",
-        "sourceEvidence": {
-          "articleId": "book-spine",
-          "blockId": "[\"system\",2]",
-          "anchor": "system",
-          "quote": "A photo is first downscaled so that its long side is at most 1,600 px. A one-class oriented bounding box (OBB) detector finds the spines. Near-duplicate boxes are merged (Section 3.5), and the number of boxes scoring 0.4 or more is the book count. Each box is then cut out with a margin of 8% of its short side, rotated so that its long side is vertical, and upscaled if its short side is below 96 px.",
-          "hash": "47a6b7f2df9dece4417da0ca5bd70c47f8e2d281e5d4511a6cf0cf29c50c19b1"
-        },
-        "targetEvidence": {
-          "articleId": "r-cnn",
-          "blockId": "[\"abstract\",1]",
-          "anchor": "abstract",
-          "quote": "Object Detector는 Object의 coordinate를 찾고(Localization), class를 분류(Classification)하는 작업을 진행한다. R-CNN은 이를 순차적으로 진행하는 2 Stage Detector 로, 딥러닝을 적용한 최초의 Object Detector다. R-CNN모델은 Object Detection 혹은 Inference(추론)시, 아래와 같은 순서에 의해 동작한다.",
-          "hash": "4ae1fc1530ef74e24391b17d1338950c656044da3cb13cb70ce563979e1142ad"
-        }
-      },
-      {
-        "id": "faster-r-cnn",
-        "relation": "concept_explanation",
-        "reason": "検出箱の後処理に使われるNMSについて、Faster R-CNNの推論時に予測箱へ適用する説明から確認できます。",
+        "reason": "겹치는 탐지 상자를 제거하는 NMS가 평가 경로에 따라 탐지 결과를 바꿀 수 있는 이유를 알아볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "book-spine",
           "blockId": "[\"eval-path\",6]",
@@ -352,11 +333,11 @@
           "hash": "f281c675079d1ceeb33cb420449037112282024876e33af918ee7955092829ff"
         },
         "targetEvidence": {
-          "articleId": "faster-r-cnn",
-          "blockId": "[\"detection\",1]",
-          "anchor": "detection",
-          "quote": "실제 Inference 때는 Anchor target layer와 Proposal target layer는 사용되지않는다. 두 layer 모두 네트워크를 학습시키기 위한 데이터셋을 구성하는데 사용되기 때문이다. Fast R-CNN은 Proposal layer에서 추출한 RP를 활용하여 Detection을 수행한다. 그리고 최종적으로 얻은 Predicted Box에 NMS를 적용하여 최적의 BB만을 결과로 출력한다.",
-          "hash": "ff05fa485a50b844e80c12cf324b5e0dbc9a4d469113944b9134bb0dd8e8eea6"
+          "articleId": "r-cnn",
+          "blockId": "[\"nmsnon-maximum-suppression\",17]",
+          "anchor": "nmsnon-maximum-suppression",
+          "quote": "NMS 알고리즘은 Confidence-score 임계값이 높을수록, IoU 임계값이 낮을수록 많은 box가 제거된다. 위 과정을 통해 겹쳐진 box를 제거하고 최소한의 최적의 B.B를 반환한다. Frankly speaking, 두 박스의 교집합을 합집합으로 나눠준 값이 IoU. 논문에서는 IoU가 0.5보다 크면 동일한 물체를 대상으로 한 박스로 판단하고 NMS를 적용한다.",
+          "hash": "63c2fb237583946957b0b084fed6f0b3af7fe84b336f3a79b47ccbc7fd80c042"
         }
       }
     ]

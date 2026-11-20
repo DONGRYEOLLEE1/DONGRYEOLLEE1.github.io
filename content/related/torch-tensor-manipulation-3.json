@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "e3d01634df1b918f556f306b201e7a1a35598d5c5bd426f585eb9b3d9919fd60",
+    "inputHash": "09b1886345ec88b3ad67c29052236dff6c5ac1af7264d47740ce4994fe3ac0bc",
     "status": "verified",
     "candidates": [
       {
@@ -231,7 +231,7 @@
       {
         "id": "torch-tensor-manipulation-2",
         "relation": "related_method",
-        "reason": "차원을 늘리는 expand와 달리 squeeze는 크기가 1인 차원을 제거하므로, 텐서 차원 조작에서 두 함수의 역할을 함께 익힐 수 있습니다.",
+        "reason": "차원 확장인 expand와 차원 제거인 squeeze의 동작 및 shape 변화를 함께 익힐 수 있습니다.",
         "sourceEvidence": {
           "articleId": "torch-tensor-manipulation-3",
           "blockId": "[\"expand\",5]",
@@ -248,22 +248,41 @@
         }
       },
       {
-        "id": "transformer",
+        "id": "torch-tensor-manipulation-1",
         "relation": "related_method",
-        "reason": "삼각행렬의 정의를 바탕으로, Transformer의 masked attention에서 이후 위치의 attention score를 배제하는 방식을 연결해 볼 수 있습니다.",
+        "reason": "expand와 view·reshape가 텐서 차원과 shape을 다루는 서로 다른 방식을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "torch-tensor-manipulation-3",
-          "blockId": "[\"삼각행렬-triangular-matrix\",1]",
-          "anchor": "삼각행렬-triangular-matrix",
-          "quote": "선형대수에서 삼각행렬은 정사각행렬의 특수한 경우로 주대각선을 기준으로 대각항의 위쪽이나 아래쪽 항들의 값이 모두 0인 경우를 의미",
-          "hash": "413cac313bb31063eaacfa9a879c38516f3d26a2532bfeea5edf2c55d8b04843"
+          "blockId": "[\"expand\",5]",
+          "anchor": "expand",
+          "quote": "특정 차원의 텐서를 반복해서 생성해주는 함수이며 특정 차원의 크기가 1인 tensor에만 적용 가능",
+          "hash": "5401d15be60a66455062c9da8ba8836ba99d5d8c2e5d55cebcf5a4dc030ebc56"
         },
         "targetEvidence": {
-          "articleId": "transformer",
-          "blockId": "[\"masked-multi-head-attention\",2]",
-          "anchor": "masked-multi-head-attention",
-          "quote": "이 값들은 이후 softmax함수를 거치게 되면 attention-score값은 0을 가지게 될것이고, 오직 자기 자신의 score값 또는 그보다 앞에 해당하는 attention-score 값만을 사용하게 될 것이다.",
-          "hash": "a39d68af01e27c0d69375999f3fdeb5e448f8f0422e5511bd3636afd4e303479"
+          "articleId": "torch-tensor-manipulation-1",
+          "blockId": "[\"torchview\",11]",
+          "anchor": "torchview",
+          "quote": "중간에 -1을 넣으면 해당 위치에 새로운 차원이 하나 더 생김",
+          "hash": "e097a179899f5310ac403fe4e767f8b21597997cc1daed0c6de87d6e6a26abd8"
+        }
+      },
+      {
+        "id": "model-input-length",
+        "relation": "related_method",
+        "reason": "expand의 크기 제약을 모델 입력 텐서의 길이 불일치 오류 사례와 연결해 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "torch-tensor-manipulation-3",
+          "blockId": "[\"expand\",2]",
+          "anchor": "expand",
+          "quote": "torch.Size([1, 256, 1])",
+          "hash": "ef6c473669b36cafa142f797120a602718c4a9966d5c9327b13c92d44fef1218"
+        },
+        "targetEvidence": {
+          "articleId": "model-input-length",
+          "blockId": "[\"model-input-sequence-length\",5]",
+          "anchor": "model-input-sequence-length",
+          "quote": "RuntimeError: The expanded size of the tensor (554) must match the existing size (512) at non-singleton dimension 1. Target sizes: [1, 554]. Tensor sizes: [1, 512]",
+          "hash": "39bd95588d2358ddb591095dd22a5cb61a8dd96574e9ccf00564b6fa8069dc01"
         }
       }
     ]

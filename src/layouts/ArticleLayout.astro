@@ -1,14 +1,18 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import ArticleToc from '../components/ArticleToc.astro';
 import RelatedGraph from '../components/RelatedGraph.astro';
 import { getArticles, getConcepts, getSeries } from '../lib/content';
+import { buildToc, proseText, readingMinutes } from '../lib/toc';
 import type { Article } from '../lib/types';
 interface Props { article: Article }
 const { article } = Astro.props;
 const articles = getArticles();
 const lookup = new Map(articles.map(post => [post.id,post]));
 const concepts = new Map(getConcepts().map(concept=>[concept.id,concept]));
-const headings = article.headings.filter(heading=>heading.depth<=3);
+const toc = buildToc(article.headings);
+// Code listings and pasted logs are not read at the prose rate, so they stay out of the estimate.
+const minutes = readingMinutes(proseText(article.html), article.language);
 const related = article.related.map(ref=>({...ref,post:lookup.get(ref.id)})).filter(ref=>ref.post).slice(0,4);
 const series = getSeries().find(item=>item.id===article.seriesId);
 const seriesIndex = series?.orderedArticleIds.indexOf(article.id) ?? -1;
@@ -25,9 +29,15 @@ const next = series && seriesIndex>=0 ? lookup.get(series.orderedArticleIds[seri
       <div class="topic-chips" lang="ko">{Array.from(new Set(article.conceptRefs.map(ref=>ref.id))).map(id=><a class="chip" href={`/topics/${id}/`}>{concepts.get(id)?.label||id}</a>)}</div>
     </header>
     <div class="article-grid">
-      <aside class="article-toc" aria-label="목차" lang="ko"><span class="small-label">목차</span><ol>{headings.map(heading=><li class:list={{'toc-sub':heading.depth===3}}><a href={`#${heading.id}`} data-section={heading.id}>{heading.text}</a></li>)}<li><a href="#related-reading">이어 읽기</a></li></ol><a href="/articles/" class="toc-back">← 전체 글</a></aside>
+      <aside class="article-toc" aria-label="목차" lang="ko">
+        <p class="toc-title" lang={article.language} aria-hidden="true" data-pagefind-ignore>{article.title}</p>
+        <span class="small-label">목차</span>
+        <ArticleToc items={toc}/>
+        <div class="toc-meter"><div class="toc-meter-bar" role="progressbar" aria-label="읽기 진행률" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-reading-meter><span></span></div><p><span aria-hidden="true" data-reading-percent>0%</span><span>약 {minutes}분</span></p></div>
+        <a href="/articles/" class="toc-back">← 전체 글</a>
+      </aside>
       <div class="article-reading">
-        {headings.length>0&&<div class="mobile-toc" lang="ko"><details><summary>목차 보기</summary><ol>{headings.map(heading=><li class:list={{'toc-sub':heading.depth===3}}><a href={`#${heading.id}`}>{heading.text}</a></li>)}<li><a href="#related-reading">이어 읽기</a></li></ol></details></div>}
+        {toc.length>0&&<div class="mobile-toc" lang="ko"><details><summary>목차 보기 · 약 {minutes}분</summary><ArticleToc items={toc}/></details></div>}
         <div class="article-body" lang={article.language} data-article-body data-pagefind-body set:html={article.html}/>
         <footer class="article-foot" lang="ko" data-pagefind-ignore>
           {series&&<section class="article-series"><div class="section-heading"><h2><a href={`/series/${series.id}/`}>{series.title}</a></h2><span class="small-label">{seriesIndex+1} / {series.orderedArticleIds.length}</span></div><nav class="series-nav" aria-label="시리즈 이전 글과 다음 글">{previous?<a href={previous.path}><span>← 이전 글</span><strong>{previous.title}</strong></a>:<div/>}{next?<a href={next.path}><span>다음 글 →</span><strong>{next.title}</strong></a>:<div/>}</nav><a class="arrow-link" href={`/series/${series.id}/`}>시리즈 전체 보기 ↗</a></section>}

@@ -212,15 +212,43 @@ body > div:has(> .site-header) { position: sticky; top: 0; z-index: 50; }
 .article-title { max-width: 960px; margin: 0 0 23px; font-size: clamp(39px, 4.4vw, 64px); font-weight: 650; line-height: 1.1; letter-spacing: -.038em; overflow-wrap: anywhere; text-wrap: pretty; }
 .article-title:lang(en) { font-family: var(--font-editorial); font-weight: 400; letter-spacing: -.046em; }
 .article-description { max-width: 850px; margin: 0 0 23px; color: var(--muted); font-size: 20px; line-height: 1.6; overflow-wrap: anywhere; }
-.article-grid { display: grid; grid-template-columns: 180px minmax(0,720px) 280px; align-items: start; justify-content: center; gap: 32px; }
+.article-grid { display: grid; grid-template-columns: 220px minmax(0,720px) 280px; align-items: start; justify-content: center; gap: 32px; }
 .article-reading { min-width: 0; }
-.article-toc { position: sticky; top: 109px; max-height: calc(100dvh - 140px); overflow-y: auto; padding-right: 12px; font-size: 14px; font-weight: 450; line-height: 1.6; }
-.article-toc .small-label { display: block; margin-bottom: 15px; }
-.article-toc ol { list-style: none; padding: 0; margin: 0; border-left: 1px solid var(--line); }
-.article-toc a { display: block; padding: 8px 0 8px 13px; margin-left: -1px; color: var(--muted); border-left: 2px solid transparent; }
-.article-toc a:hover, .article-toc a.active { border-color: var(--accent); color: var(--ink); }
-.article-toc .toc-sub a { padding-left: 24px; font-size: 12px; }
-.article-toc .toc-back { margin-top: 19px; border: 0; padding-left: 0; font-size: 12px; }
+/* A column whose outline is the only part that scrolls, so the title, the meter and the back link stay in view. */
+.article-toc { position: sticky; top: 109px; display: flex; flex-direction: column; max-height: calc(100dvh - 140px); font-size: 14px; font-weight: 450; line-height: 1.5; }
+.article-toc > * { flex: none; }
+.toc-title { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; margin: 0 0 18px; font-weight: 600; line-height: 1.45; letter-spacing: -.01em; overflow-wrap: anywhere; }
+.toc-title:lang(ko) { word-break: keep-all; }
+.article-toc .small-label { margin-bottom: 10px; }
+.article-toc .toc-tree { flex: 0 1 auto; min-height: 0; overflow-y: auto; }
+.toc-tree, .toc-tree ol { list-style: none; margin: 0; padding: 0; }
+.toc-tree { font-size: 14px; line-height: 1.5; }
+/* The link borders stack into one rail. The focus ring is drawn inside the link because the tree's scroll box would clip one drawn outside. */
+.toc-tree a { position: relative; display: block; padding: 7px 8px 7px 14px; border-left: 1px solid var(--line); color: var(--muted); outline-offset: -2px; overflow-wrap: anywhere; word-break: keep-all; }
+.toc-tree ol a { padding: 5px 8px 5px 34px; font-size: 13px; }
+.toc-tree ol a::before { position: absolute; top: 6px; left: 17px; width: 8px; height: 9px; border: solid color-mix(in srgb, var(--line), var(--muted) 60%); border-width: 0 0 1px 1px; content: ""; }
+.toc-tree a:hover { color: var(--ink); text-decoration: none; }
+.toc-tree .is-current > a { color: var(--ink); }
+.toc-tree a.active { border-color: var(--accent); box-shadow: inset 1px 0 var(--accent); color: var(--ink); font-weight: 650; }
+/* The sidebar link keeps the room its text needs in the active weight, so becoming active never re-wraps it and nothing below it moves. */
+.article-toc .toc-tree a { display: grid; }
+.article-toc .toc-tree a > span, .article-toc .toc-tree a::after { grid-area: 1 / 1; min-width: 0; }
+.article-toc .toc-tree a::after { content: attr(data-text); font-weight: 650; visibility: hidden; }
+/* Branches fold only once the script has marked the sidebar, so the page without JavaScript shows every heading.
+   A folded branch is hidden from the tab order and from assistive technology; it opens for the current branch and for keyboard focus inside it
+   (.has-focus, set by the script: the branch must stay open while focus passes from one of its links to the next). */
+.toc-branch { display: grid; grid-template-rows: 1fr; }
+.toc-branch > ol { min-height: 0; overflow: hidden; }
+.article-toc[data-toc-ready] li:not(.is-current, .has-focus) > .toc-branch { grid-template-rows: 0fr; visibility: hidden; }
+.article-toc[data-toc-ready="animated"] .toc-branch { transition: grid-template-rows 180ms ease, visibility 0s linear 180ms; }
+.article-toc[data-toc-ready="animated"] li:is(.is-current, .has-focus) > .toc-branch { transition-delay: 0s; }
+.toc-meter { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); }
+.toc-meter-bar { height: 4px; overflow: hidden; border-radius: 2px; background: var(--line); }
+.toc-meter-bar span { display: block; height: 100%; background: var(--accent); transform: scaleX(0); transform-origin: left; }
+.toc-meter p { display: flex; justify-content: space-between; gap: 12px; margin: 8px 0 0; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.toc-meter [data-reading-percent] { color: var(--ink); font-weight: 600; }
+.toc-back { align-self: start; margin-top: 14px; color: var(--muted); font-size: 12px; }
+.toc-back:hover { color: var(--ink); }
 .mobile-toc { display: none; }
 .article-body { min-width: 0; font-size: 20px; font-weight: 400; line-height: 1.78; letter-spacing: -.005em; overflow-wrap: anywhere; }
 .article-body:lang(en) { font-size: 19px; line-height: 1.74; letter-spacing: 0; }
@@ -229,7 +257,6 @@ body > div:has(> .site-header) { position: sticky; top: 0; z-index: 50; }
 .article-body h1, .article-body h2 { margin: 46px 0 23px; font-size: 32px; font-weight: 620; line-height: 1.3; letter-spacing: -.02em; }
 .article-body h3 { margin: 33px 0 16px; font-size: 24px; font-weight: 620; line-height: 1.35; letter-spacing: -.015em; }
 .article-body h4, .article-body h5, .article-body h6 { margin: 28px 0 16px; font-size: 18px; font-weight: 600; line-height: 1.5; }
-.article-body h1, .article-body h2, .article-body h3, .article-body h4, .article-body [id] { scroll-margin-top: 110px; }
 .article-body a { text-decoration: underline; }
 .article-body .heading-anchor { margin-left: .4em; color: var(--muted); font-size: .65em; text-decoration: none; opacity: 0; }
 .article-body :is(h2,h3,h4):hover .heading-anchor, .article-body .heading-anchor:focus-visible { opacity: 1; }
@@ -366,17 +393,24 @@ dialog::backdrop { background: #14141377; }
 .toast { position: fixed; bottom: 25px; left: 50%; z-index: 100; transform: translateX(-50%); max-width: calc(100% - 32px); padding: 12px 20px; background: var(--ink); color: var(--bg); font-size: 12px; }
 
 @media (min-width: 1440px) {
-  .article-heading { margin-left: 212px; margin-right: 0; }
+  /* The heading starts where the article column does: the grid is 1284px wide (220 + 720 + 280 and two 32px gaps) and centred, and the article column is 252px into it. */
+  .article-heading { margin-left: calc((100% - 1284px) / 2 + 252px); margin-right: 0; }
 }
 @media (max-width: 1439px) {
   .archive-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+}
+@media (min-width: 1280px) and (max-width: 1439px) {
+  /* Laptop widths keep the outline: narrower page margins and outline column, so the article column stays close to 720px (691px at 1280 with a classic scrollbar). The grid is at most 1246px (190 + 720 + 280 and two 28px gaps); the article column is 218px into it. */
+  .article-page { width: calc(100% - 48px); }
+  .article-grid { grid-template-columns: 190px minmax(0,720px) 280px; gap: 28px; }
+  .article-heading { margin-left: calc((100% - min(100%, 1246px)) / 2 + 218px); margin-right: 0; }
+}
+@media (max-width: 1279px) {
   .article-grid { grid-template-columns: minmax(0,720px) 280px; }
   .article-toc { display: none; }
   .mobile-toc { display: block; padding: 12px 0; margin-bottom: 26px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 13px; }
   .mobile-toc summary { color: var(--muted); cursor: pointer; }
-  .mobile-toc ol { margin: 12px 0 0; padding: 0; list-style: none; }
-  .mobile-toc a { display: block; padding: 7px 0; font-size: 13px; }
-  .mobile-toc .toc-sub a { padding-left: 15px; font-size: 12px; }
+  .mobile-toc .toc-tree { margin-top: 12px; }
 }
 @media (max-width: 1119px) {
   .header-inner, .page-shell, .footer-inner { width: calc(100% - 64px); }
@@ -455,6 +489,7 @@ dialog::backdrop { background: #14141377; }
 }
 @media (max-height: 650px) {
   .article-toc, .related-rail { position: static; }
+  .article-toc { max-height: none; }
   .related-rail { max-height: none; overflow: visible; }
   .search-dialog { margin: 15px auto; max-height: calc(100dvh - 30px); }
   .search-results { max-height: calc(100dvh - 200px); }

@@ -1,0 +1,8 @@
+---
+import type { TocItem } from '../lib/toc';
+// One outline for the desktop sidebar and the mobile <details>. It carries no ids, so rendering it twice is safe.
+// data-text repeats the link text for a hidden ::after in the active weight (global.css), which reserves the width the sidebar link needs when it turns bold.
+interface Props { items: TocItem[] }
+const { items } = Astro.props;
+---
+<ol class="toc-tree">{items.map(item=><li><a href={`#${item.id}`} data-text={item.text}><span>{item.text}</span></a>{item.children.length>0&&<div class="toc-branch"><ol>{item.children.map(child=><li><a href={`#${child.id}`} data-text={child.text}><span>{child.text}</span></a></li>)}</ol></div>}</li>)}<li><a href="#related-reading" data-text="이어 읽기"><span>이어 읽기</span></a></li></ol>

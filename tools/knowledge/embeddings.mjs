@@ -194,6 +194,9 @@ export function fileStore(dir) {
   };
 }
 
+// The dashboard labels the project URL either way.
+const supabaseUrl = (env) => env.SUPABASE_URL || env.SUPABASE_PROJECT_URL;
+
 // Supabase names the same server-side key two ways: the newer `sb_secret_…` secret key and the
 // legacy service_role JWT. Either bypasses RLS and is sent the same way.
 function supabaseKey(env) {
@@ -204,7 +207,7 @@ function supabaseKey(env) {
 
 /** Shared cache in Supabase pgvector, reached through PostgREST with the secret (service role) key. */
 export function supabaseStore(env = process.env, { fetch: request = fetch } = {}) {
-  const table = baseUrl('SUPABASE_URL', env.SUPABASE_URL || '') + '/rest/v1/block_embeddings';
+  const table = baseUrl('SUPABASE_URL', supabaseUrl(env) || '') + '/rest/v1/block_embeddings';
   const key = secret(...supabaseKey(env));
   if (!key) throw new Error('Set SUPABASE_SECRET_KEY to use the shared embedding cache.');
   const auth = { apikey: key, Authorization: 'Bearer ' + key };
@@ -277,12 +280,13 @@ export function vectorStore(
 ) {
   const local = fileStore(dir);
   const key = supabaseKey(env)[1];
-  if (env.SUPABASE_URL && key)
+  const url = supabaseUrl(env);
+  if (url && key)
     return layered(local, supabaseStore(env, request ? { fetch: request } : {}));
   // One of the two alone is a typo, not a choice: running on would fill a cache nobody shares.
-  if (env.SUPABASE_URL || key)
+  if (url || key)
     throw new Error(
-      (env.SUPABASE_URL ? 'SUPABASE_SECRET_KEY' : 'SUPABASE_URL') +
+      (url ? 'SUPABASE_SECRET_KEY' : 'SUPABASE_URL') +
         ' is not set. Set both Supabase variables, or neither to use the local cache only.',
     );
   warn('Supabase가 설정되지 않아 로컬 캐시만 사용합니다. 다른 발행 서버와 벡터를 공유하지 않습니다.');

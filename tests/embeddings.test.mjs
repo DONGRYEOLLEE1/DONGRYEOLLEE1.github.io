@@ -716,3 +716,15 @@ test('a custom endpoint merges RECOMMENDATIONS_EXTRA_BODY into the request and t
   const fixed = chatProvider({ OPENROUTER_API_KEY: 'k', RECOMMENDATIONS_EXTRA_BODY: '{"a":1}' }, { fetch });
   assert.deepEqual(fixed.settings, { seed: 7, reasoning: { effort: 'low' } });
 });
+
+test('the Supabase project URL and secret key are read under either of their names', () => {
+  const fetch = async () => new Response('[]');
+  const options = { dir: '/nonexistent-cache', fetch, warn: () => {} };
+  for (const env of [
+    { SUPABASE_URL: 'https://p.supabase.co', SUPABASE_SECRET_KEY: 'sb_secret_x' },
+    { SUPABASE_PROJECT_URL: 'https://p.supabase.co', SUPABASE_SECRET_KEY: 'sb_secret_x' },
+    { SUPABASE_PROJECT_URL: 'https://p.supabase.co', SUPABASE_SERVICE_ROLE_KEY: 'jwt' },
+  ])
+    assert.doesNotThrow(() => vectorStore(env, options));
+  assert.throws(() => vectorStore({ SUPABASE_PROJECT_URL: 'https://p.supabase.co' }, options), /SUPABASE_SECRET_KEY is not set/);
+});

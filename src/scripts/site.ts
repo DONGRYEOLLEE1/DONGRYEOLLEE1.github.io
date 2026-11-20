@@ -1,5 +1,6 @@
 import { placePopup } from '../lib/popup-placement';
 import { renderRelatedGraph } from '../lib/related-graph';
+import { currentEntry } from '../lib/toc';
 import { measureRelatedDialogHeight } from './graph-preview';
 import { ARCHIVE_SORT_LABELS, ARTICLE_TYPE_LABELS, CONCEPT_ROLE_LABELS, QUERY_LENGTH_MESSAGE, articleCountLabel, topicCountLabel } from '../lib/archive-copy';
 import type { Article, Registry } from '../lib/types';
@@ -473,18 +474,98 @@ function openImage(trigger: HTMLElement) {
 }
 imageDialog?.addEventListener('cancel', event => { event.preventDefault(); closeImage(); });
 imageDialog?.addEventListener('click', event => { if (event.target === imageDialog) { const r = imageDialog.getBoundingClientRect(), e = event as MouseEvent; if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) closeImage(); } });
-const progress = $('#reading-progress');
-let readingFrame = 0;
+// Reading position: the top bar, the sidebar meter and the current branch of the outline.
+// Headings and links are collected once. Heading offsets are kept relative to the article body and measured again only when its size changes.
+const progress = $('#reading-progress'), relatedSection = $('#related-reading');
+const toc = $('.article-toc'), tocTree = toc ? $('.toc-tree', toc) : null;
+const meter = $('[data-reading-meter]'), meterFill = meter ? $('span', meter) : null, meterText = $('[data-reading-percent]');
+const tocLinks = new Map((tocTree ? $$<HTMLAnchorElement>('a[href^="#"]', tocTree) : []).map(link => [link.getAttribute('href')!.slice(1), link]));
+const tocHeadings = body ? $$<HTMLElement>('h2[id],h3[id]', body).filter(heading => tocLinks.has(heading.id)) : [];
+const relatedLink = tocLinks.get('related-reading');
+let readingFrame = 0, headingOffsets: number[] | undefined, bodyHeight = 0, shownPercent = -1, activeLink: HTMLAnchorElement | undefined;
+// The outline keeps in view whichever moved last: the active link, or the reader's keyboard focus inside the outline.
+let revealDue = false, focusLed = false, focusBranch: Element | null = null;
+// A jump to a place on this page (a same-page link, or the address the page was opened with), kept until the reader scrolls on their own.
+// `jumpIndex` is the jumped-to heading in `tocHeadings`. `jumpOurs` says the next time the scroll rests, it is this jump that has come to rest.
+let jump: HTMLElement | null = null, jumpIndex = -1, jumpOurs = false, settleTimer = 0;
+const scheduleReading = () => { if (!readingFrame) readingFrame = requestAnimationFrame(updateReading); };
+// The outline scrolls only itself, and only as far as the link needs; the measurement waits for the next frame so it never follows a write.
+const revealLink = () => requestAnimationFrame(() => {
+  const link = (focusLed && tocTree?.querySelector<HTMLAnchorElement>('a:focus-visible')) || activeLink;
+  if (!tocTree || !link) return;
+  const box = tocTree.getBoundingClientRect(), rect = link.getBoundingClientRect();
+  if (rect.top < box.top) tocTree.scrollTop -= box.top - rect.top + 8; else if (rect.bottom > box.bottom) tocTree.scrollTop += rect.bottom - box.bottom + 8;
+});
 function updateReading() {
   readingFrame = 0; if (!body) return;
-  const start = body.getBoundingClientRect().top + scrollY - 110, end = start + body.scrollHeight - innerHeight + 160;
-  const percentage = Math.max(0, Math.min(1, (scrollY - start) / Math.max(1, end - start)));
-  if (progress) progress.style.transform = `scaleX(${percentage})`;
-  const headings = $$<HTMLElement>('h2[id],h3[id]', body); let active = headings[0]?.id;
-  headings.forEach(heading => { if (heading.getBoundingClientRect().top <= 155) active = heading.id; });
-  $$<HTMLAnchorElement>('[data-toc] a[href^="#"], .article-toc a[href^="#"]').forEach(link => { const on = decodeURIComponent(link.hash.slice(1)) === active; link.classList.toggle('active', on); if (on) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); });
+  const top = body.getBoundingClientRect().top;
+  if (!headingOffsets) { headingOffsets = tocHeadings.map(heading => heading.getBoundingClientRect().top - top); bodyHeight = body.scrollHeight; }
+  const hasRelated = !!relatedLink && !!relatedSection;
+  const entry = currentEntry(headingOffsets, top, hasRelated ? relatedSection.getBoundingClientRect().top : Infinity, hasRelated && scrollY > 0 && scrollY + innerHeight >= document.documentElement.scrollHeight - 2, jumpIndex, innerHeight);
+  // 0 while the top of the body is 110px or more down the window, 1 once its end is 50px above the bottom edge.
+  const fraction = Math.max(0, Math.min(1, (110 - top) / Math.max(1, bodyHeight - innerHeight + 160))), percent = Math.round(fraction * 100);
+  const link = entry === headingOffsets.length ? relatedLink : tocLinks.get(tocHeadings[entry]?.id || '');
+  if (progress) progress.style.transform = `scaleX(${fraction})`;
+  if (meterFill) meterFill.style.transform = `scaleX(${fraction})`;
+  if (percent !== shownPercent) { shownPercent = percent; meter?.setAttribute('aria-valuenow', String(percent)); if (meterText) meterText.textContent = percent + '%'; }
+  if (link !== activeLink) {
+    activeLink?.classList.remove('active'); activeLink?.removeAttribute('aria-current'); activeLink?.closest('.toc-tree > li')?.classList.remove('is-current');
+    link?.classList.add('active'); link?.setAttribute('aria-current', 'location'); link?.closest('.toc-tree > li')?.classList.add('is-current');
+    activeLink = link; focusLed = false; revealDue = true;
+  }
+  if (revealDue) { revealDue = false; revealLink(); }
 }
-if (body) { addEventListener('scroll', () => { if (!readingFrame) readingFrame = requestAnimationFrame(updateReading); }, { passive: true }); addEventListener('resize', updateReading); updateReading(); }
+const hashTarget = (hash: string) => { const id = hash.slice(1); try { return document.getElementById(decodeURIComponent(id)) || document.getElementById(id); } catch { return document.getElementById(id); } };
+// Lazy images above the target load while the browser scrolls to it and push it down, so the page stops short of the heading.
+// One instant step puts the target back on the line the browser aims for; it is not an animation, and it does nothing when the target is already there or cannot rise that far.
+const offJump = () => !!jump && Math.abs(jump.getBoundingClientRect().top - (parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0)) > 4;
+function alignJump() {
+  if (!jump || !offJump()) return;
+  const before = scrollY; jump.scrollIntoView({ behavior: 'instant', block: 'start' }); jumpOurs = scrollY !== before;
+}
+// The scroll has come to rest. A rest that belongs to the jump is checked against the target; any other rest away from the target means something else moved the page, and the page is left there.
+function settleJump() {
+  clearTimeout(settleTimer); settleTimer = 0;
+  if (jumpOurs) { jumpOurs = false; alignJump(); } else if (offJump()) jump = null;
+}
+function setJump(target: HTMLElement | null) {
+  jump = target; jumpIndex = target ? tocHeadings.indexOf(target) : -1; jumpOurs = !!target;
+  // The timer also covers a jump that needs no scrolling, and browsers without `scrollend`.
+  clearTimeout(settleTimer); settleTimer = target ? window.setTimeout(settleJump, 500) : 0;
+}
+if (body) {
+  addEventListener('scroll', () => { scheduleReading(); if (jump) { clearTimeout(settleTimer); settleTimer = window.setTimeout(settleJump, 120); } }, { passive: true });
+  addEventListener('scrollend', settleJump);
+  // A window of another height moves the outline's own scroll box, so the link is brought back into it.
+  addEventListener('resize', () => { revealDue = true; scheduleReading(); });
+  new ResizeObserver(() => { headingOffsets = undefined; scheduleReading(); if (!settleTimer) alignJump(); }).observe(body);
+  // A reload or a trip through history comes back to where the reader was, not to the hash.
+  if (location.hash && (performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined)?.type === 'navigate') setJump(hashTarget(location.hash));
+  updateReading();
+  // Folding starts after the current branch is known, and its animation one frame later, so nothing moves while the page loads.
+  if (toc) { toc.dataset.tocReady = ''; requestAnimationFrame(() => { void toc.offsetHeight; toc.dataset.tocReady = 'animated'; }); }
+  tocTree?.addEventListener('transitionend', event => { if (event.propertyName === 'grid-template-rows') revealLink(); });
+  // A branch stays open while keyboard focus is inside it. A class carries this, not :has(:focus-visible): during a Tab from a parent to its child
+  // neither link is focused, and a branch that folds in that moment drops the focus to <body>.
+  tocTree?.addEventListener('focusin', event => {
+    const link = event.target as Element; if (!link.matches(':focus-visible')) return;
+    const branch = link.closest('.toc-tree > li');
+    if (branch !== focusBranch) { focusBranch?.classList.remove('has-focus'); branch?.classList.add('has-focus'); focusBranch = branch; }
+    focusLed = true; revealLink();
+  });
+  tocTree?.addEventListener('focusout', event => { if (focusBranch && !(event.relatedTarget instanceof Node && focusBranch.contains(event.relatedTarget))) { focusBranch.classList.remove('has-focus'); focusBranch = null; } });
+  addEventListener('click', event => {
+    const link = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('a[href^="#"]') : null;
+    if (!link || event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    setJump(hashTarget(link.hash)); scheduleReading();
+  });
+  // The reader's own scrolling ends the jump at once. A tap, click or Enter on a same-page link comes first and the click then starts a new one.
+  for (const type of ['wheel', 'touchstart', 'pointerdown', 'keydown']) addEventListener(type, () => { if (jump || jumpIndex >= 0) setJump(null); }, { passive: true });
+  // The address changed to another place without a click here (back, forward, a typed hash): the browser decides where the page rests.
+  addEventListener('hashchange', () => { if (hashTarget(location.hash) !== jump) setJump(null); });
+  // The list closes before the browser follows the link, so the heading is placed in the layout the reader ends up with.
+  $<HTMLDetailsElement>('.mobile-toc details')?.addEventListener('click', event => { if ((event.target as Element).closest('a') && !(event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)) (event.currentTarget as HTMLDetailsElement).open = false; });
+}
 
 // Delegation also covers cards and result lists inserted after filtering.
 document.addEventListener('click', event => {

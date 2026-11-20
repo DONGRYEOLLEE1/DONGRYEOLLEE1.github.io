@@ -1,63 +1,67 @@
-type Input = 'hovered' | 'focused';
-type Selection = Record<Input, SVGAElement | null>;
-
-const selections = new WeakMap<HTMLElement, Selection>();
+// Document-level delegation: the same handlers serve the article rail and the dialog whose graph is injected later.
+const isSelected = (node: SVGAElement) => node.getAttribute('aria-current') === 'true';
 
 function graphNode(target: EventTarget | null) {
   return target instanceof Element ? target.closest<SVGAElement>('.graph-node') : null;
 }
 
-function fillPreview(preview: HTMLElement, node: SVGAElement) {
-  const title = preview.querySelector<HTMLElement>('.graph-preview-title')!;
-  const date = preview.querySelector<HTMLTimeElement>('.graph-preview-date')!;
-  title.textContent = node.getAttribute('aria-label');
-  title.lang = node.getAttribute('lang') || '';
-  date.dateTime = date.textContent = node.dataset.publishedAt || '';
+function select(node: SVGAElement) {
+  const graph = node.closest<HTMLElement>('.graph-wrap');
+  const card = graph?.querySelector<HTMLAnchorElement>('.graph-card');
+  if (!graph || !card) return;
+
+  for (const other of graph.querySelectorAll('.graph-node[aria-current]')) other.removeAttribute('aria-current');
+  node.setAttribute('aria-current', 'true');
+
+  const { title = '', type = '', publishedAt = '', reason = '', via = '' } = node.dataset;
+  const part = <T extends HTMLElement = HTMLElement>(name: string) => card.querySelector<T>('.graph-card-' + name)!;
+  card.href = node.getAttribute('href') || '';
+  part('type').textContent = type;
+  part<HTMLTimeElement>('date').dateTime = part('date').textContent = publishedAt;
+  part('title').textContent = title;
+  part('title').lang = node.getAttribute('lang') || '';
+  part('via').textContent = via;
+  part('via').hidden = !via;
+  part('reason').textContent = reason;
 }
 
 export function measureRelatedDialogHeight(dialog: HTMLDialogElement) {
-  const preview = dialog.querySelector<HTMLElement>('.graph-preview');
+  const nodes = [...dialog.querySelectorAll<SVGAElement>('.graph-node')];
+  const selected = nodes.find(isSelected);
   let height = dialog.getBoundingClientRect().height;
-  if (!preview) return height;
+  if (!selected) return height;
 
-  // Reserve room when positioning the popup so a preview never moves the hovered node.
-  preview.hidden = false;
-  for (const node of dialog.querySelectorAll<SVGAElement>('.graph-node')) {
-    fillPreview(preview, node);
+  // Reserve room for the tallest card when positioning the popup, so a later selection never pushes it off-screen.
+  for (const node of nodes) {
+    select(node);
     height = Math.max(height, dialog.getBoundingClientRect().height);
   }
-  preview.hidden = true;
+  select(selected);
   return height;
 }
 
-function updatePreview(node: SVGAElement, input: Input, entering: boolean) {
-  const graph = node.closest<HTMLElement>('.graph-wrap');
-  const preview = graph?.querySelector<HTMLElement>('.graph-preview');
-  if (!graph || !preview) return;
+// A tap focuses the link before its click arrives, so the click alone cannot tell whether the node was already selected.
+let pressedUnselected: SVGAElement | null = null;
 
-  const selection = selections.get(graph) ?? { hovered: null, focused: null };
-  if (!entering && selection[input] !== node) return;
-  selection[input] = entering ? node : null;
-  selections.set(graph, selection);
-
-  const active = entering ? node : selection[input === 'hovered' ? 'focused' : 'hovered'];
-  if (active) fillPreview(preview, active);
-  preview.hidden = !active;
-}
-
-function updatePointer(event: PointerEvent, entering: boolean) {
-  if (event.pointerType === 'touch') return;
-  const node = graphNode(event.target);
-  if (node && node !== graphNode(event.relatedTarget)) updatePreview(node, 'hovered', entering);
-}
-
-document.addEventListener('pointerover', event => updatePointer(event, true));
-document.addEventListener('pointerout', event => updatePointer(event, false));
+document.addEventListener('pointerover', event => {
+  const node = event.pointerType === 'touch' ? null : graphNode(event.target);
+  if (node && !isSelected(node)) select(node);
+});
 document.addEventListener('focusin', event => {
   const node = graphNode(event.target);
-  if (node?.matches(':focus-visible')) updatePreview(node, 'focused', true);
+  if (node && !isSelected(node)) select(node);
 });
-document.addEventListener('focusout', event => {
+document.addEventListener('pointerdown', event => {
   const node = graphNode(event.target);
-  if (node) updatePreview(node, 'focused', false);
+  pressedUnselected = node && !isSelected(node) ? node : null;
+});
+document.addEventListener('pointercancel', () => { pressedUnselected = null; });
+document.addEventListener('click', event => {
+  const node = graphNode(event.target), pressed = pressedUnselected;
+  pressedUnselected = null;
+  if (!node || event.button || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  // event.detail is 0 for a keyboard activation, which always follows focus and therefore a selection.
+  if (isSelected(node) && !(event.detail && pressed === node)) return;
+  event.preventDefault();
+  select(node);
 });

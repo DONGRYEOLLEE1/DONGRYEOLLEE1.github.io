@@ -40,6 +40,8 @@ Astro 빌드와 배포는 Vercel에서 진행한다. `main`은 Production으로,
 
 연관 글 추천 Phase 2A(2026-11-20, `feat/related-embeddings`)는 전체 공개 글을 대상으로 구현했다. 글별 관계 추출, 그래프·어휘·임베딩 후보 검색, 임베딩 기반 근거 블록 선택, LLM 재정렬, 글별 파일(`content/related/<글 ID>.json`) 저장과 증분 갱신, 키 없는 글별 빌드 검증이 `tools/knowledge`와 `tools/sync-recommendations.mjs`에 있다. 고정 모델(`openai/gpt-6-luna`, `google/gemini-embedding-2`)과 Supabase 벡터 캐시를 실제로 호출해 113편 전체에 적용했다. 110편은 모델이 고른 추천을, 근거 블록이 없는 3편은 규칙 추천을 표시한다. 검증 결과와 남은 위험은 [연관 글 그래프 구현 계획](related-articles-implementation-plan.md)에 있다.
 
+연관 글 그래프 화면(2026-11-20, `feat/related-graph-distance`)은 선 길이로 추천 순위를 나타낸다. 추천 기록에 숫자 점수가 없으므로 순위 1위가 가장 짧고 4위가 가장 길다. 추천 글의 추천 글 가운데 아직 그래프에 없는 1편을 점선으로 잇는다(`SECOND_HOP_LIMIT`). 노드에는 라벨이 없고, 그래프 아래 카드가 선택한 글의 유형·날짜·제목·이유 문장을 항상 보여 준다. 마우스를 올리거나 한 번 누르면 선택되고, 선택된 노드나 카드를 누르면 이동한다. 배치 규칙(여백, 노드 간격, 선 길이, 선과 노드의 간격, 선 교차 없음)은 `tests/related-graph.test.mjs`가 모든 경우에 대해 검사한다. 폰 화면에서 팝업이 `···` 버튼을 덮는 경우 같은 자리를 다시 누르면 카드의 글로 이동하는 한계가 남아 있다.
+
 ## 최종 통합 검증
 
 프로덕션 형태와 Vercel Preview 환경 분기를 각각 빌드해 통과했다. Preview에서는 HTML noindex와 robots 차단을 전수 확인했다. 테스트용 origin으로 118개 이전 주소 연결 페이지의 생성도 확인했으며 테스트 산출물은 제거했다. 실제 계정 배포는 수행하지 않았다.

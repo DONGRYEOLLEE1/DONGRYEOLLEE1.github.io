@@ -1,3 +1,4 @@
+import { placePopup } from '../lib/popup-placement';
 import { renderRelatedGraph } from '../lib/related-graph';
 import { measureRelatedDialogHeight } from './graph-preview';
 import { ARCHIVE_SORT_LABELS, ARTICLE_TYPE_LABELS, CONCEPT_ROLE_LABELS, QUERY_LENGTH_MESSAGE, articleCountLabel, topicCountLabel } from '../lib/archive-copy';
@@ -386,6 +387,8 @@ document.addEventListener('input', event => {
 
 const relatedDialog = $<HTMLDialogElement>('#related-dialog');
 let relatedFocus: HTMLElement | null = null;
+const RELATED_GUARD_MS = 500;
+let relatedGuardUntil = 0;
 function closeRelated(restore = true) {
   if (!relatedDialog?.open) return;
   relatedDialog.close();
@@ -397,15 +400,17 @@ function openRelated(id: string, trigger: HTMLElement) {
   if (relatedDialog.open && relatedFocus === trigger) { closeRelated(); return; }
   closeRelated(false);
   const source = articles.get(id), content = $('[data-related-content], .related-dialog-content', relatedDialog); if (!source?.related.length || !content) return;
-  const graph = renderRelatedGraph(source, articles);
+  const graph = renderRelatedGraph(source, articles, { moreHref: source.path + '#related-reading' });
   if (!graph) return;
   relatedFocus = trigger;
   content.innerHTML = `<div class="graph-wrap">${graph}</div>`;
   trigger.setAttribute('aria-expanded', 'true'); trigger.setAttribute('aria-label', `${source.title} 관련 글 닫기`);
   relatedDialog.show();
-  const anchor = trigger.getBoundingClientRect(), box = relatedDialog.getBoundingClientRect();
-  relatedDialog.style.left = Math.max(16, Math.min(anchor.left, innerWidth - box.width - 16)) + 'px';
-  relatedDialog.style.top = Math.max(12, Math.min(anchor.bottom + 8, innerHeight - measureRelatedDialogHeight(relatedDialog) - 12)) + 'px';
+  const spot = placePopup(trigger.getBoundingClientRect(), relatedDialog.getBoundingClientRect().width, measureRelatedDialogHeight(relatedDialog), { width: innerWidth, height: innerHeight });
+  relatedDialog.style.left = spot.left + 'px';
+  relatedDialog.style.top = spot.top + 'px';
+  // Where the popup has to cover its trigger, the second press of a double click must not follow the link that appeared under it.
+  relatedGuardUntil = spot.coversAnchor ? performance.now() + RELATED_GUARD_MS : 0;
   $<HTMLButtonElement>('[data-close-related]', relatedDialog)?.focus({ preventScroll: true });
 }
 relatedDialog?.addEventListener('cancel', event => { event.preventDefault(); closeRelated(); });
@@ -484,6 +489,8 @@ if (body) { addEventListener('scroll', () => { if (!readingFrame) readingFrame =
 // Delegation also covers cards and result lists inserted after filtering.
 document.addEventListener('click', event => {
   const target = event.target instanceof Element ? event.target : null; if (!target) return;
+  // event.detail is 0 for a keyboard activation, which cannot be a stray second press.
+  if (event.detail && event.timeStamp < relatedGuardUntil && target.closest('#related-dialog a')) { event.preventDefault(); return; }
   const relatedTrigger = target.closest<HTMLElement>('[data-related-open]'); if (relatedTrigger) { openRelated(relatedTrigger.dataset.relatedOpen!, relatedTrigger); return; }
   if (target.closest('[data-close-related]')) { closeRelated(); return; }
   if (relatedDialog?.open && !target.closest('#related-dialog')) closeRelated(false);

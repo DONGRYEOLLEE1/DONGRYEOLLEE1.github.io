@@ -1,0 +1,271 @@
+{
+  "version": 2,
+  "id": "speculative-decoding-paper",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "896d7a5df293608e034a728ae0b7c7f5cf782f08f6f492b50af1d84389b7b97b",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "speculative-decoding",
+        "role": "about",
+        "evidence": {
+          "articleId": "speculative-decoding-paper",
+          "blockId": "[\"introduction\",6]",
+          "anchor": "introduction",
+          "quote": "이 논문은 CPU의 branch prediction으로 익숙한 speculative execution(어떤 작업이 필요한지 검증하는 것과 병렬로 그 작업을 미리 수행하는 최적화)을 확률적(stochastic) 세팅으로 일반화함. 빠른 approximation model $M_q$가 미래 토큰들을 추측 생성하고, 느린 target model $M_p$가 이 추측들을 병렬로 평가·검증함. 여기에 speculative sampling이라는 새로운 샘플링 기법을 결합해, 최종 출력 분포가 $M_p$ 단독 샘플링과 수학적으로 완전히 동일함을 보장함.",
+          "hash": "174a2cf48c5d468b077dbc01e41d87377ebaaf12a738fb5671e1b500b9511480"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "b1fc1e64c1d600b6e8cdb0340f61447384b318a7d131dc4094fe09ecffc98afb",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "inference-server",
+        "sourceBlocks": [
+          "[\"introduction\",6]",
+          "[\"overview\",5]",
+          "[null,2]"
+        ],
+        "targetBlocks": [
+          "[\"위치별-수락률\",3]",
+          "[\"모델-구성은-파일-하나로\",2]",
+          "[\"작업-유형별-수락률\",1]"
+        ]
+      },
+      {
+        "id": "dflash",
+        "sourceBlocks": [
+          "[\"introduction\",6]",
+          "[\"overview\",5]",
+          "[\"approximation-model의-선택\",5]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"preliminary\",1]",
+          "[\"inference\",9]"
+        ]
+      },
+      {
+        "id": "thinkingcap",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"introduction\",9]",
+          "[\"t5-xxl-walltime-실측\",15]"
+        ],
+        "targetBlocks": [
+          "[\"resources\",2]",
+          "[\"tldr\",19]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "rtpurbo",
+        "sourceBlocks": [
+          "[\"introduction\",5]",
+          "[\"overview\",8]",
+          "[\"related-work\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"hardware-aware-top-p-decoding-kernel\",1]",
+          "[\"효율--ultra-long-robustness\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[\"related-work\",3]",
+          "[\"speculative-sampling\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"related-work\",2]",
+          "[\"efficient-implementation\",1]"
+        ]
+      },
+      {
+        "id": "book-spine",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"t5-xxl-walltime-실측\",15]",
+          "[\"conclusion\",1]"
+        ],
+        "targetBlocks": [
+          "[\"tldr\",5]",
+          "[\"ablation\",10]",
+          "[\"first-visit\",1]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"introduction\",9]",
+          "[\"speculative-sampling\",1]",
+          "[null,2]"
+        ],
+        "targetBlocks": [
+          "[\"background\",1]",
+          "[\"introduction\",1]",
+          "[\"qlora-finetuning\",1]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[\"related-work\",3]",
+          "[\"speculative-sampling\",1]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",1]",
+          "[\"micro-design\",5]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[\"speculative-sampling\",2]",
+          "[\"overview\",3]"
+        ],
+        "targetBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"transformer\",1]",
+          "[\"transformer가-기존-모델과-다른점\",2]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[\"overview\",5]",
+          "[\"related-work\",1]"
+        ],
+        "targetBlocks": [
+          "[\"increasing-speed-a-llm-serving-inference\",9]",
+          "[\"4bit-or-8bit-quantization\",7]",
+          "[\"tensor-parallel\",1]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[\"overview\",3]",
+          "[\"speculative-sampling\",1]"
+        ],
+        "targetBlocks": [
+          "[\"alternating-training\",1]",
+          "[\"의의\",2]",
+          "[\"preview\",3]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[null,2]",
+          "[\"overview\",5]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"impace-of-training-time-and-memory-usage\",1]",
+          "[\"low-rank-adaptation-lora\",1]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[null,2]",
+          "[\"t5-xxl-walltime-실측\",15]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"chain-of-thought-prompting\",5]",
+          "[\"experimental-setup\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[\"speculative-sampling\",2]",
+          "[\"conclusion\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"problem-statement\",1]",
+          "[\"low-rank-parameterized-update-matrices\",4]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[\"conclusion\",1]",
+          "[\"다양한-모델에서의-empirical-α\",8]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"conclusion\",1]",
+          "[\"peft-with-ia3\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "dflash",
+        "relation": "related_method",
+        "reason": "draft-then-verify 구조를 바탕으로, diffusion 병렬 draft와 AR target의 검증을 결합하는 방법을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "speculative-decoding-paper",
+          "blockId": "[\"introduction\",6]",
+          "anchor": "introduction",
+          "quote": "이 논문은 CPU의 branch prediction으로 익숙한 speculative execution(어떤 작업이 필요한지 검증하는 것과 병렬로 그 작업을 미리 수행하는 최적화)을 확률적(stochastic) 세팅으로 일반화함. 빠른 approximation model $M_q$가 미래 토큰들을 추측 생성하고, 느린 target model $M_p$가 이 추측들을 병렬로 평가·검증함. 여기에 speculative sampling이라는 새로운 샘플링 기법을 결합해, 최종 출력 분포가 $M_p$ 단독 샘플링과 수학적으로 완전히 동일함을 보장함.",
+          "hash": "174a2cf48c5d468b077dbc01e41d87377ebaaf12a738fb5671e1b500b9511480"
+        },
+        "targetEvidence": {
+          "articleId": "dflash",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "DFlash의 아이디어는 이 둘을 결합하는 것임. draft는 diffusion으로 병렬 생성하고, 검증은 고품질 AR target model에게 맡겨 lossless를 보장함. 핵심 인사이트는 \"the target knows best\" — 큰 AR 모델의 hidden feature에는 이미 미래 토큰들에 대한 정보가 암묵적으로 담겨 있으므로, 이 feature를 조건으로 주면 아주 작은 diffusion drafter도 높은 품질의 draft를 만들 수 있다는 것임. draft model이 사실상 target model의 깊은 context feature를 활용하는 diffusion adapter로 동작하게 됨.",
+          "hash": "dd3c99a0e0db007cb33fc899332a2d6036a158a2807a26f5cded6a40df9c561c"
+        }
+      },
+      {
+        "id": "inference-server",
+        "relation": "application_example",
+        "reason": "draft 토큰을 target이 검증하는 원리를 실제 vLLM MTP 설정에 적용하고, 작업 유형별 수락률을 측정한 사례를 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "speculative-decoding-paper",
+          "blockId": "[\"introduction\",6]",
+          "anchor": "introduction",
+          "quote": "이 논문은 CPU의 branch prediction으로 익숙한 speculative execution(어떤 작업이 필요한지 검증하는 것과 병렬로 그 작업을 미리 수행하는 최적화)을 확률적(stochastic) 세팅으로 일반화함. 빠른 approximation model $M_q$가 미래 토큰들을 추측 생성하고, 느린 target model $M_p$가 이 추측들을 병렬로 평가·검증함. 여기에 speculative sampling이라는 새로운 샘플링 기법을 결합해, 최종 출력 분포가 $M_p$ 단독 샘플링과 수학적으로 완전히 동일함을 보장함.",
+          "hash": "174a2cf48c5d468b077dbc01e41d87377ebaaf12a738fb5671e1b500b9511480"
+        },
+        "targetEvidence": {
+          "articleId": "inference-server",
+          "blockId": "[\"모델-구성은-파일-하나로\",2]",
+          "anchor": "모델-구성은-파일-하나로",
+          "quote": "# profiles/rtx6000-2x-flash-next-27b.yaml (발췌, 8월 말 기준) gpu_type_ids: - NVIDIA RTX PRO 6000 Blackwell Server Edition - NVIDIA RTX PRO 6000 Blackwell Workstation Edition image: vllm/vllm-openai:qwen38-flash-next slots: FLASH: served_model_name: qwen3.8-flash-next hf_repo_id: RadixArk/Qwen3.8-Flash-Next-NVFP4 port: 8881 gpus: [0, 1] gpu_util: 0.76 max_model_len: 131072 speculative: method: mtp num_speculative_tokens: 3 Q27: served_model_name: qwen3.8-27b hf_repo_id:",
+          "hash": "d04bee954dda0c736271ded101f6fc56269b074ad33ac6aec1c36ce3c23547ba"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "version": 2,
+  "id": "rtpurbo",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "3b3ac4580b0d69730a7c9e05fffa342ccbb657a67e197231d084f14a4aa9209d",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "sparse-attention",
+        "role": "about",
+        "evidence": {
+          "articleId": "rtpurbo",
+          "blockId": "[\"정리\",1]",
+          "anchor": "정리",
+          "quote": "RTPurbo는 (1) retrieval head에만 full KV cache를 유지하는 head-wise 설계, (2) RoPE 저주파 구조를 이용한 16-dim indexer, (3) query-dependent한 dynamic top-p, (4) 경량 self-distillation을 결합해, full-attention 모델을 수백 step만에 near-lossless sparse 모델로 전환함. 핵심 메시지는 명확함 — 값비싼 native sparse pretraining 없이도 표준 full-attention 학습 모델에서 강력한 sparse inference를 끌어낼 수 있으며, 따라서 full-attention training은 여전히 경쟁력 있는 실용적 선택지라는 것.",
+          "hash": "ffe9038ee3998b514869725fdd23d34730db91387612196b744531e9512c70c4"
+        }
+      },
+      {
+        "id": "transformer",
+        "role": "about",
+        "evidence": {
+          "articleId": "rtpurbo",
+          "blockId": "[\"정리\",1]",
+          "anchor": "정리",
+          "quote": "RTPurbo는 (1) retrieval head에만 full KV cache를 유지하는 head-wise 설계, (2) RoPE 저주파 구조를 이용한 16-dim indexer, (3) query-dependent한 dynamic top-p, (4) 경량 self-distillation을 결합해, full-attention 모델을 수백 step만에 near-lossless sparse 모델로 전환함. 핵심 메시지는 명확함 — 값비싼 native sparse pretraining 없이도 표준 full-attention 학습 모델에서 강력한 sparse inference를 끌어낼 수 있으며, 따라서 full-attention training은 여전히 경쟁력 있는 실용적 선택지라는 것.",
+          "hash": "ffe9038ee3998b514869725fdd23d34730db91387612196b744531e9512c70c4"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "a5c79276fc29fa5d869fcdd4ccaad56a1c93817a5dc23ed8fdb805bb3a896443",
+    "status": "abstained",
+    "candidates": [
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"정리\",1]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "[\"adaptive-sparse-attention\",2]"
+        ],
+        "targetBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"self-attention-1\",30]",
+          "[\"multi-head-attention\",1]"
+        ]
+      },
+      {
+        "id": "dflash",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"효율--ultra-long-robustness\",1]",
+          "[\"hardware-aware-top-p-decoding-kernel\",1]"
+        ],
+        "targetBlocks": [
+          "[\"training\",5]",
+          "[\"introduction\",9]",
+          "[\"inference\",9]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"정리\",1]",
+          "[\"introduction\",2]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]"
+        ],
+        "targetBlocks": [
+          "[\"architecture\",1]",
+          "[\"introduction\",1]",
+          "[\"efficient-implementation\",2]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "[\"adaptive-sparse-attention\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"method\",1]",
+          "[\"parameter-efficiency-in-existing-methods\",2]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"hardware-aware-top-p-decoding-kernel\",1]",
+          "[\"효율--ultra-long-robustness\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",5]",
+          "[\"overview\",8]",
+          "[\"related-work\",1]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"정리\",1]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "[\"introduction\",2]"
+        ],
+        "targetBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "[\"vision-transformer-탐색하기\",15]",
+          "[\"의의\",2]"
+        ]
+      },
+      {
+        "id": "searchswarm",
+        "sourceBlocks": [
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "[\"introduction\",1]",
+          "[\"효율--ultra-long-robustness\",1]"
+        ],
+        "targetBlocks": [
+          "[\"main-distributes-sub-executes\",2]",
+          "[\"introduction\",1]",
+          "[\"정리\",1]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"정리\",1]",
+          "[\"introduction\",2]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]"
+        ],
+        "targetBlocks": [
+          "[\"model-architecture\",1]",
+          "[\"요약\",1]",
+          "[\"task-1-masked-lm-mlm\",7]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"adaptive-sparse-attention\",3]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"low-rank-parameterized-update-matrices\",1]",
+          "[\"problem-statement\",1]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"정리\",1]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "[\"정확도--near-lossless\",3]"
+        ],
+        "targetBlocks": [
+          "[\"curiosity\",1]",
+          "[\"case-1\",1]",
+          "[\"answer\",1]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "[\"효율--ultra-long-robustness\",1]"
+        ],
+        "targetBlocks": [
+          "[\"background\",2]",
+          "[\"introduction\",1]",
+          "[\"qlora-vs-standard-finetuning\",4]"
+        ]
+      },
+      {
+        "id": "k-browsecomp",
+        "sourceBlocks": [
+          "[\"정확도--near-lossless\",9]",
+          "[\"효율--ultra-long-robustness\",1]",
+          "[\"introduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"main-results\",13]",
+          "[\"정리\",1]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "[\"adaptive-sparse-attention\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"weight-decomposition-analysis\",1]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "[\"정확도--near-lossless\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"interpretability\",5]",
+          "[\"results\",1]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"효율--ultra-long-robustness\",1]",
+          "[\"introduction\",1]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]"
+        ],
+        "targetBlocks": [
+          "[\"continual-pre-training\",6]",
+          "[\"the-architecture-of-ziya2\",2]",
+          "[\"introduction\",5]"
+        ]
+      }
+    ],
+    "recommendations": []
+  }
+}

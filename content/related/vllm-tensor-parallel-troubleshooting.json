@@ -1,0 +1,252 @@
+{
+  "version": 2,
+  "id": "vllm-tensor-parallel-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "8b497df14157f9f435934bb3986ff0bed19fa7875079bed5d14816e1793119eb",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "vllm",
+        "role": "applies",
+        "evidence": {
+          "articleId": "vllm-tensor-parallel-troubleshooting",
+          "blockId": "[\"script-1\",1]",
+          "anchor": "script-1",
+          "quote": "python -m vllm.entrypoints.openai.api_server --model $MODEL_NAME --dtype bfloat16 --port 8081 -tp 2 --enforce-eager --disable_custom_all_reduce > \"$LOGFILE\" 2>&1",
+          "hash": "56d8e1d50c4249056fa86e5d84361795499497e1c9978f2109d5682ebc33b418"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "bfe4e4a18bd387b325b8ba8380b12ab588c760eab7a6dea43781da3af9d3d4ed",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"script-1\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",1]",
+          "[\"problem\",2]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"script-1\",1]",
+          "[\"error-message\",9]",
+          "[\"environment\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",12]",
+          "[\"error-2\",17]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"what-is-disable-custom-all-reduce\",1]",
+          "[\"problem\",2]"
+        ],
+        "targetBlocks": [
+          "[\"tensor-parallel\",1]",
+          "[\"increasing-speed-a-llm-serving-inference\",9]",
+          "[\"2\",12]"
+        ]
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"script-1\",1]",
+          "[\"environment\",2]",
+          "[\"solution\",4]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",3]",
+          "[\"env\",2]",
+          "[\"error\",2]"
+        ]
+      },
+      {
+        "id": "distributed-gpu-training",
+        "sourceBlocks": [
+          "[\"what-is-disable-custom-all-reduce\",2]",
+          "[\"solution\",4]",
+          "[\"error-message\",1]"
+        ],
+        "targetBlocks": [
+          "[\"최적화-gradient와-model-sharding\",2]",
+          "[\"단일-gpu-사용\",4]",
+          "[\"설치-1\",3]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"problem\",2]",
+          "[\"environment\",2]"
+        ],
+        "targetBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"cuda-cudnn\",1]",
+          "[\"파일-무결성-검사-방법\",5]"
+        ]
+      },
+      {
+        "id": "inference-server",
+        "sourceBlocks": [
+          "[\"script-1\",1]",
+          "[\"solution\",4]",
+          "[\"what-is-disable-custom-all-reduce\",5]"
+        ],
+        "targetBlocks": [
+          "[\"전체-구성\",1]",
+          "[\"nccl-초기화에서-무한-대기\",2]",
+          "[\"참고\",2]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"problem\",1]",
+          "[\"error-message\",1]",
+          "[\"solution\",4]"
+        ],
+        "targetBlocks": [
+          "[\"error\",3]",
+          "[\"solution\",3]",
+          "[\"refernce\",2]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"environment\",2]",
+          "[\"error-message\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",2]",
+          "[\"env\",9]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"error-message\",1]",
+          "[\"problem\",1]"
+        ],
+        "targetBlocks": [
+          "[\"3️⃣\",2]",
+          "[\"env\",3]",
+          "[\"2️⃣\",2]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"environment\",2]",
+          "[\"error-message\",1]",
+          "[\"script\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"1\",8]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "rnn",
+        "sourceBlocks": [
+          "[\"what-is-disable-custom-all-reduce\",6]",
+          "[\"problem\",2]",
+          "[\"solution\",4]"
+        ],
+        "targetBlocks": [
+          "[\"relu함수를-사용하지-않는-이유\",1]",
+          "[\"gradient-vanishing\",3]",
+          "[\"irnn\",5]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"environment\",2]",
+          "[\"solution\",4]",
+          "[\"error-message\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",3]",
+          "[\"solution\",3]",
+          "[\"error\",1]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"problem\",2]",
+          "[\"environment\",2]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",10]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"what-is-disable-custom-all-reduce\",1]",
+          "[\"problem\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"low-rank-adaptation-lora\",1]",
+          "[\"e2e-benchmark\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "inference-server",
+        "relation": "related_method",
+        "reason": "멀티 GPU 추론에서 NCCL_P2P_DISABLE와 --disable-custom-all-reduce를 함께 다루며, GPU 간 통신 문제와 우회 방법을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vllm-tensor-parallel-troubleshooting",
+          "blockId": "[\"solution\",4]",
+          "anchor": "solution",
+          "quote": "결국 disable-custom-all-reduce 옵션을 통해 해결할 수 있었음",
+          "hash": "77dc17f5de31ac233c310090da2fbdb6f01e6278e29f0f711c3798323e15bb81"
+        },
+        "targetEvidence": {
+          "articleId": "inference-server",
+          "blockId": "[\"nccl-초기화에서-무한-대기\",2]",
+          "anchor": "nccl-초기화에서-무한-대기",
+          "quote": "NCCL_P2P_DISABLE=1을 넣으니 통과했고, 나중에 vLLM 이슈 #30682에서 같은 증상을 찾았음. 호스트에서 IOMMU가 꺼져 있으면 PCIe 경유 GPU 간 P2P가 멈춘다는 내용이고, NCCL_P2P_DISABLE=1과 --disable-custom-all-reduce를 같이 쓰라고 돼 있음. 실제로 NCCL만 끄고 올린 27B 슬롯은 custom all-reduce 단계에서 다시 멈췄음.",
+          "hash": "4ce6312b0793801c9ee47f441e156b3d7d06f71fa17f351ee4a92f782cd65c1a"
+        }
+      }
+    ]
+  }
+}

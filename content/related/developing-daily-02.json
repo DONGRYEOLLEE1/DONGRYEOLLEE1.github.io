@@ -1,0 +1,271 @@
+{
+  "version": 2,
+  "id": "developing-daily-02",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "da01cf27cd412b8fc1be85096554119f2c546526391f04af76ff87df2fb286d7",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "model-serving",
+        "role": "applies",
+        "evidence": {
+          "articleId": "developing-daily-02",
+          "blockId": "[\"ts\",6]",
+          "anchor": "ts",
+          "quote": "with gr.Blocks() as demo: ... demo.queue().launch(server_name = \"0.0.0.0\")",
+          "hash": "d2d949fd4972f40119a370eb434bed7bf970b18307bea328338257b7d1262e43"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "53d003be8eebd641987dfcfa2cf1e295a2af259ae49708000c2ee455c8d1d93c",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "developing-daily-03",
+        "sourceBlocks": [
+          "[\"ts\",6]",
+          "[\"ref\",3]",
+          "[\"gradio\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"gradio\",3]",
+          "[\"ref\",2]",
+          "[\"ts\",6]"
+        ],
+        "targetBlocks": [
+          "[\"merging-lora-weights\",14]",
+          "[\"ref\",1]",
+          "[\"peft-v090\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"ts\",6]",
+          "[\"ref\",3]",
+          "[\"gradio\",5]"
+        ],
+        "targetBlocks": [
+          "[\"tgi\",1]",
+          "[\"ref\",3]",
+          "[\"docker\",2]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"gradio\",3]",
+          "[\"ref\",2]",
+          "[\"ts\",2]"
+        ],
+        "targetBlocks": [
+          "[\"model\",3]",
+          "[\"envs\",7]",
+          "[\"dataset\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-05",
+        "sourceBlocks": [
+          "[\"gradio\",5]",
+          "[\"ref\",3]",
+          "[\"ts\",6]"
+        ],
+        "targetBlocks": [
+          "[\"kobart-questiongeneration\",3]",
+          "[\"t5-end2end-question-generation\",4]",
+          "[\"sehongt5-large-questiongeneration\",3]"
+        ]
+      },
+      {
+        "id": "developing-daily-04",
+        "sourceBlocks": [
+          "[\"ref\",1]",
+          "[\"ts\",4]",
+          "[\"gradio\",6]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",2]",
+          "[\"gitignore\",2]",
+          "[\"파일-이름-변경\",3]"
+        ]
+      },
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"ref\",2]",
+          "[\"gradio\",3]",
+          "[\"ts\",4]"
+        ],
+        "targetBlocks": [
+          "[\"model-input-sequence-length\",1]",
+          "[\"env\",3]",
+          "[\"model-input-sequence-length\",3]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"ref\",1]",
+          "[\"ts\",4]",
+          "[\"gradio\",1]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",1]",
+          "[\"solution-1\",2]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "langgraph-structured-streaming",
+        "sourceBlocks": [
+          "[\"gradio\",3]",
+          "[\"ref\",2]",
+          "[\"ts\",6]"
+        ],
+        "targetBlocks": [
+          "[\"baseline\",6]",
+          "[\"구조-분석\",2]",
+          "[\"environment\",1]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"ts\",6]",
+          "[\"ref\",3]",
+          "[\"gradio\",5]"
+        ],
+        "targetBlocks": [
+          "[\"1\",6]",
+          "[\"env\",1]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"gradio\",3]",
+          "[\"ref\",2]",
+          "[\"ts\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",5]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"ref\",3]",
+          "[\"gradio\",5]",
+          "[\"ts\",4]"
+        ],
+        "targetBlocks": [
+          "[\"question-generationeng\",1]",
+          "[\"sbert\",1]",
+          "[\"translation\",3]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"ref\",3]",
+          "[\"gradio\",3]",
+          "[\"ts\",2]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",3]",
+          "[\"envs\",2]",
+          "[\"issue\",4]"
+        ]
+      },
+      {
+        "id": "tokenizer-input-troubleshooting",
+        "sourceBlocks": [
+          "[\"ref\",2]",
+          "[\"gradio\",3]",
+          "[\"ts\",2]"
+        ],
+        "targetBlocks": [
+          "[\"원인\",2]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"ref\",2]",
+          "[\"gradio\",3]",
+          "[\"ts\",2]"
+        ],
+        "targetBlocks": [
+          "[\"env\",3]",
+          "[\"solution\",1]",
+          "[\"error\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "tgi-implementation",
+        "relation": "related_method",
+        "reason": "Gradio에서 TGI Client의 generate_stream을 사용하는 방식과 TGI를 Docker로 실행하는 설정을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "developing-daily-02",
+          "blockId": "[\"gradio\",5]",
+          "anchor": "gradio",
+          "quote": "TGI : text-generation.Client.generate_stream",
+          "hash": "8e92db7625abde8a0b9caa0494787a89df6a1dcd5ad252aa94af02ac6292c4d2"
+        },
+        "targetEvidence": {
+          "articleId": "tgi-implementation",
+          "blockId": "[\"1\",6]",
+          "anchor": "1",
+          "quote": "$ cd model_file $ nohup sudo docker run --gpus all --shm-size 1g -p 8080:80 --volume /DATA:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/OUTPUT_DIRECTORY --num-shard {NUMBER_OF_GPUS} --rope-scaling dynamic --rope-factor 2.0 & 2023-10-26T06:37:55.196641Z INFO shard-manager: text_generation_launcher: Shard ready in 12.91406831s rank=1 2023-10-26T06:37:55.292255Z INFO text_generation_launcher: Starting Webserver 2023-10-26T06:37:55.351346Z WARN",
+          "hash": "a216686807489b023a21f034bb1f756f7199c50f63a4b9512aa1d66b052767ee"
+        }
+      },
+      {
+        "id": "developing-daily-03",
+        "relation": "related_method",
+        "reason": "Gradio에서 TGI 스트리밍을 연결하는 구성과 로컬 모델을 TGI Docker로 실행할 때의 설정 및 오류를 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "developing-daily-02",
+          "blockId": "[\"gradio\",5]",
+          "anchor": "gradio",
+          "quote": "TGI : text-generation.Client.generate_stream",
+          "hash": "8e92db7625abde8a0b9caa0494787a89df6a1dcd5ad252aa94af02ac6292c4d2"
+        },
+        "targetEvidence": {
+          "articleId": "developing-daily-03",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": "$ pwd /mnt/huggingface $ ls opt-125m version.txt $ ls opt-125m/ config.json generation_config.json merges.txt pytorch_model.bin special_tokens_map.json tokenizer_config.json vocab.json $ docker run --gpus all --shm-size 1g -p 8080:80 --volume /mnt/huggingface:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/opt-125m --num-shard 1",
+          "hash": "ab1cf11748bf6d1f44f3e6e3333c9fd6773cd8386181ca19f60a11d3b170db4c"
+        }
+      }
+    ]
+  }
+}

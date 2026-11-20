@@ -1,0 +1,282 @@
+{
+  "version": 2,
+  "id": "ziya2",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "25dc4c901c6cf3a404efea032548899a3dedd8a9e77dfffbc7fb563593b325c9",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "pretraining",
+        "role": "about",
+        "evidence": {
+          "articleId": "ziya2",
+          "blockId": "[\"introduction\",5]",
+          "anchor": "introduction",
+          "quote": "이에 따라 이번 연구에선 continual pre-training의 technique과 understanding the intricate relationship between data and model performance에 집중해보고자한다. 연구진은 모델의 필수적인 구조나 사이즈를 유지시키되 높은 품질의 사전학습 데이터를 통해 LLM의 성능을 강화해보고자 한다. 따라서 LLAMA2-13B을 사용한 Ziya2 모델을 backbone 모델로 사용하고 영어와 중국어로된 약 700B 토큰을 사용하여 pre-training을 진행하였다. 특히 학습 process를 3개의 stage를 거쳐 일반적이고 domain-specific한 corpora를 만들어 Ziya2 모델의 다중언어 생성 capabilities를 만들어줬음.",
+          "hash": "63d5e11d75a4b90c9fd57ca0ce64605f8af7209f23702ba5adb7404a6182c27d"
+        }
+      },
+      {
+        "id": "data-preparation",
+        "role": "about",
+        "evidence": {
+          "articleId": "ziya2",
+          "blockId": "[\"the-data-factory\",1]",
+          "anchor": "the-data-factory",
+          "quote": "데이터는 LLM의 중추적인 초석 역할을 합니다. 데이터의 양과 품질은 모델의 성능에 직접적인 영향을 미칩니다. figure2에 나타난대로 data preprocessing, automatic scoring, rule-based filtering, content de-duplication, data evaluation을 포함한 다수의 공정을 통해 용이하게 만들었습니다. 이러한 절차는 지속적인 사전학습, 데이터 샘플링과 확장을 통해 필요조건을 충족시켰습니다.",
+          "hash": "c2e3b19524a92c221e3913856180695881506ab381a2c662606682e529aea567"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "735af7f66b944f0d401d7cff7499ecb3c59909fffb5c76090a6e4a1b361c0d61",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[\"the-data-factory\",1]",
+          "[\"introduction\",9]",
+          "[\"data-efficiency\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"how-much-augmentation\",2]",
+          "[\"benchmark-dataset\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"introduction\",5]",
+          "[\"the-architecture-of-ziya2\",3]",
+          "[\"baselines\",2]"
+        ],
+        "targetBlocks": [
+          "[\"pre-training-data\",1]",
+          "[\"architecture\",1]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"the-data-factory\",1]",
+          "[\"continual-pre-training\",5]",
+          "[\"introduction\",9]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",10]",
+          "[\"envs\",3]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"baselines\",2]",
+          "[\"the-architecture-of-ziya2\",3]",
+          "[\"introduction\",9]"
+        ],
+        "targetBlocks": [
+          "[\"commonsense-reasoning\",4]",
+          "[\"weight-decomposed-low-rank-adaptation\",2]",
+          "[\"introduction\",4]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"introduction\",9]",
+          "[\"the-architecture-of-ziya2\",2]",
+          "[\"continual-pre-training\",5]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",10]",
+          "[\"background\",1]",
+          "[\"qlora-finetuning\",1]"
+        ]
+      },
+      {
+        "id": "regex-preprocessing",
+        "sourceBlocks": [
+          "[\"the-data-factory\",1]",
+          "[\"introduction\",9]",
+          "[\"continual-pre-training\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"problem\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"introduction\",9]",
+          "[\"data-efficiency\",2]",
+          "[\"the-data-factory\",1]"
+        ],
+        "targetBlocks": [
+          "[null,2]",
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]"
+        ]
+      },
+      {
+        "id": "alphallm",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"the-data-factory\",1]",
+          "[\"baselines\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"related-work\",3]",
+          "[\"problem-formulation\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-05",
+        "sourceBlocks": [
+          "[\"the-data-factory\",1]",
+          "[\"continual-pre-training\",1]",
+          "[\"introduction\",17]"
+        ],
+        "targetBlocks": [
+          "[\"data-processing\",1]",
+          "[\"t5-end2end-question-generation\",2]",
+          "[\"kobart-questiongeneration\",3]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"continual-pre-training\",5]",
+          "[\"the-architecture-of-ziya2\",2]",
+          "[\"introduction\",9]"
+        ],
+        "targetBlocks": [
+          "[\"training-techniques\",1]",
+          "[\"micro-design\",5]",
+          "[\"instruction\",1]"
+        ]
+      },
+      {
+        "id": "chat-vector",
+        "sourceBlocks": [
+          "[\"introduction\",5]",
+          "[\"continual-pre-training\",2]",
+          "[\"baselines\",2]"
+        ],
+        "targetBlocks": [
+          "[\"chat-vector\",9]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"the-data-factory\",1]",
+          "[\"introduction\",9]",
+          "[\"the-architecture-of-ziya2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",1]",
+          "[\"solution\",1]",
+          "[\"문제-정의\",3]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"introduction\",9]",
+          "[\"continual-pre-training\",6]",
+          "[\"the-architecture-of-ziya2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"equally-scaling-up-every-stage-is-sub-optimal\",1]",
+          "[\"importance-of-adaptive-regularization\",2]"
+        ]
+      },
+      {
+        "id": "loftq",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[\"the-architecture-of-ziya2\",2]",
+          "[\"baselines\",3]"
+        ],
+        "targetBlocks": [
+          "[\"experiments\",15]",
+          "[\"loftq\",1]",
+          "[\"glue-with-4-bit\",1]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"the-data-factory\",1]",
+          "[\"continual-pre-training\",5]",
+          "[\"introduction\",9]"
+        ],
+        "targetBlocks": [
+          "[\"dataset\",2]",
+          "[\"envs\",7]",
+          "[\"training\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "llama",
+        "relation": "related_method",
+        "reason": "Ziya2가 여러 도메인의 고품질 데이터로 continual pre-training을 하는 방식과 LLaMA의 다양한 도메인 데이터 혼합 학습을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "ziya2",
+          "blockId": "[\"introduction\",5]",
+          "anchor": "introduction",
+          "quote": "이에 따라 이번 연구에선 continual pre-training의 technique과 understanding the intricate relationship between data and model performance에 집중해보고자한다. 연구진은 모델의 필수적인 구조나 사이즈를 유지시키되 높은 품질의 사전학습 데이터를 통해 LLM의 성능을 강화해보고자 한다. 따라서 LLAMA2-13B을 사용한 Ziya2 모델을 backbone 모델로 사용하고 영어와 중국어로된 약 700B 토큰을 사용하여 pre-training을 진행하였다. 특히 학습 process를 3개의 stage를 거쳐 일반적이고 domain-specific한 corpora를 만들어 Ziya2 모델의 다중언어 생성 capabilities를 만들어줬음.",
+          "hash": "63d5e11d75a4b90c9fd57ca0ce64605f8af7209f23702ba5adb7404a6182c27d"
+        },
+        "targetEvidence": {
+          "articleId": "llama",
+          "blockId": "[\"pre-training-data\",1]",
+          "anchor": "pre-training-data",
+          "quote": "우리 연구진의 데이터셋은 몇몇의 소스의 혼합이며 다양한 도메인의 데이터셋을 사용하였습니다. 또한 다른 LLM 연구진이 사용한 데이터셋을 재사용하였으며 우린 오직 공개적으로 사용가능하며 오픈된 데이터만을 사용하였습니다.",
+          "hash": "8e2adc197d4a83e0a55edfea63566e88e0449509573331102176bc32dd17c5f1"
+        }
+      },
+      {
+        "id": "chat-vector",
+        "relation": "related_method",
+        "reason": "Ziya2의 continual pre-training 구성과 사전학습 모델을 타깃 언어 데이터로 추가 사전학습하는 절차를 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "ziya2",
+          "blockId": "[\"introduction\",5]",
+          "anchor": "introduction",
+          "quote": "이에 따라 이번 연구에선 continual pre-training의 technique과 understanding the intricate relationship between data and model performance에 집중해보고자한다. 연구진은 모델의 필수적인 구조나 사이즈를 유지시키되 높은 품질의 사전학습 데이터를 통해 LLM의 성능을 강화해보고자 한다. 따라서 LLAMA2-13B을 사용한 Ziya2 모델을 backbone 모델로 사용하고 영어와 중국어로된 약 700B 토큰을 사용하여 pre-training을 진행하였다. 특히 학습 process를 3개의 stage를 거쳐 일반적이고 domain-specific한 corpora를 만들어 Ziya2 모델의 다중언어 생성 capabilities를 만들어줬음.",
+          "hash": "63d5e11d75a4b90c9fd57ca0ce64605f8af7209f23702ba5adb7404a6182c27d"
+        },
+        "targetEvidence": {
+          "articleId": "chat-vector",
+          "blockId": "[\"chat-vector\",9]",
+          "anchor": "chat-vector",
+          "quote": "타겟모델에서의 모델의 이해능력과 생성능력을 강화시켜주기위해 사전학습모델을 초기화하고 타겟모델의 텍스트 데이터와 사전학습을 진행",
+          "hash": "780e2fad6a1accf94e0d10984cdc8ae1e698015cf8d6ba54cd085b924d69cdc2"
+        }
+      }
+    ]
+  }
+}

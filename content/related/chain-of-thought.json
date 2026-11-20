@@ -1,0 +1,312 @@
+{
+  "version": 2,
+  "id": "chain-of-thought",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "0469ac6dca762a28dbe1355684ab490c7b337cc4d24154ba026df267ce751b03",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "chain-of-thought",
+        "role": "about",
+        "evidence": {
+          "articleId": "chain-of-thought",
+          "blockId": "[\"chain-of-thought-prompting\",1]",
+          "anchor": "chain-of-thought-prompting",
+          "quote": "여러 단계를 거쳐야하는 수학 문제와 같은 복잡한 추론을 통해 문제를 푸는 절차를 연구진은 고려하였음. 이건 전형적인 문제를 하나하나 분해하여 정답에 접근하는 방식임. 이 논문의 목표는 LLM에 유사한 CoT를 생성할 수 있는 기능을 부여하는 것입니다. 일관된 일련의 중간 추론 단계를 생성할 수 있는 능력을 LLM에 부여하는 것입니다.",
+          "hash": "82ac1138b000944e339224661220eee68aa8b30584e7b60c99240027c33e995e"
+        }
+      },
+      {
+        "id": "prompt-engineering",
+        "role": "about",
+        "evidence": {
+          "articleId": "chain-of-thought",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "전통적인 FSL은 추론 능력에서 형편없는 결과를 내놓았고 종종 모델 scale을 늘렸음에도 불구하고 성능이 올라가지 않았음. 이에 연구진은 위의 2가지 아이디어를 통해 그들의 한계점을 타파한 해결책을 제시하고 특히 추론 능력 task에서의 Few-shot prompting 능력에 대해 발견하고 prommpt를 input, CoT, output 총 3가지 요소로 구성하였음. 위는 그 예시임.",
+          "hash": "756010774d3d0a5ae6afe3afef7a7f70f6e324af46fb18c0cf928b7e33d5b5d7"
+        }
+      },
+      {
+        "id": "in-context-learning",
+        "role": "about",
+        "evidence": {
+          "articleId": "chain-of-thought",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "LLM은 prompting을 통해 in-context FSL의 흥미로운 전망을 제공한다. 매 다른 task를 위한 model checkpoint (FT) 대신에 단조로운 prompt를 모델에 질의할 수 있음. 놀랍게도 단순한 QA task에서 성공적적인 실험을 거뒀음.",
+          "hash": "0779db3ba324e49d34539e6cd03c91f7c4639cb22cc4b1332de76f04dceafa12"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "e09407ed82c64daa0e5fe94d81a138e638007fa0f13fc4a2476614365559d880",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "prompt-engineering",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"results\",2]"
+        ],
+        "targetBlocks": [
+          "[\"qa\",1]",
+          "[\"cot-prompting\",1]",
+          "[\"zero-shot-cot-prompting\",7]"
+        ]
+      },
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"conclusions\",1]",
+          "[\"chain-of-thought-prompting\",5]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"conclusions\",1]",
+          "[\"results\",3]"
+        ]
+      },
+      {
+        "id": "alphallm",
+        "sourceBlocks": [
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"introduction\",1]",
+          "[\"symbolic-reasoning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",2]"
+        ]
+      },
+      {
+        "id": "gpt-3",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"results\",1]",
+          "[\"chain-of-thought-prompting\",5]"
+        ],
+        "targetBlocks": [
+          "[null,5]",
+          "[null,8]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"chain-of-thought-prompting\",5]",
+          "[\"commonsense-reasoning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]",
+          "[\"왜-fsl-일까\",5]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"symbolic-reasoning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-in-context-learning-icl\",1]",
+          "[\"introduction\",6]",
+          "[\"unlikelihood-training-and-length-normalization\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"results\",3]",
+          "[\"chain-of-thought-prompting\",5]",
+          "[\"arithmetic-reasoning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"main-results\",2]",
+          "[\"introduction\",1]",
+          "[\"related-work\",1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"results\",1]",
+          "[\"results-1\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"results\",1]",
+          "[\"ablation-study\",1]"
+        ]
+      },
+      {
+        "id": "thinkingcap",
+        "sourceBlocks": [
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"symbolic-reasoning\",1]",
+          "[\"results-2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"resources\",2]",
+          "[\"tldr\",20]",
+          "[\"mechanism\",9]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"experimental-setup\",1]",
+          "[\"chain-of-thought-prompting\",5]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"problem-statement\",1]",
+          "[\"empirical-experiments\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"symbolic-reasoning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",1]",
+          "[\"solution\",3]",
+          "[\"문제-정의\",6]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"robustness-of-cot\",1]",
+          "[\"results\",3]",
+          "[\"chain-of-thought-prompting\",1]"
+        ],
+        "targetBlocks": [
+          "[\"robustness-evaluations\",1]",
+          "[\"results\",1]",
+          "[\"instruction\",1]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"experimental-setup\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",10]",
+          "[\"background\",2]",
+          "[\"qlora-finetuning\",2]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"experimental-setup\",1]",
+          "[\"symbolic-reasoning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"discussion-and-limitations\",1]",
+          "[\"how-much-augmentation\",1]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"chain-of-thought-prompting\",5]",
+          "[\"experimental-setup\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",10]",
+          "[null,2]",
+          "[\"t5-xxl-walltime-실측\",15]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "prompt-engineering",
+        "relation": "related_method",
+        "reason": "CoT는 중간 추론 단계를 포함한 프롬프트를 구성하고, 여기서는 프롬프트의 instruction·context·입출력 indicator 구성법을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "chain-of-thought",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "전통적인 FSL은 추론 능력에서 형편없는 결과를 내놓았고 종종 모델 scale을 늘렸음에도 불구하고 성능이 올라가지 않았음. 이에 연구진은 위의 2가지 아이디어를 통해 그들의 한계점을 타파한 해결책을 제시하고 특히 추론 능력 task에서의 Few-shot prompting 능력에 대해 발견하고 prommpt를 input, CoT, output 총 3가지 요소로 구성하였음. 위는 그 예시임.",
+          "hash": "756010774d3d0a5ae6afe3afef7a7f70f6e324af46fb18c0cf928b7e33d5b5d7"
+        },
+        "targetEvidence": {
+          "articleId": "prompt-engineering",
+          "blockId": "[\"qa\",1]",
+          "anchor": "qa",
+          "quote": "모델이 특정한 대답을 뱉게 하는 가장 좋은 방법중 하나는 prompt의 format을 향상시키는 것입니다. 앞서 설명한 것처럼 프롬프트는 instruction, context, 입력 및 출력 indicator를 결합하여 더 나은 결과를 얻을 수 있습니다. 이러한 구성들은 요구되어지지 않는 반면에 사용자가 원하는 더 특정한 instruction과 함께 좋은 practice가 됩니다. 아래의 예시는 좀 더 구조적은 prompt를 구성하는 방법입니다.",
+          "hash": "f1c3c52527134f620cb85f152dd09f5ce07696a755fe436a1026782197b82ec2"
+        }
+      },
+      {
+        "id": "alphallm",
+        "relation": "related_method",
+        "reason": "CoT가 중간 추론 단계를 생성하는 방식이라면, 이 연구는 LLM이 응답 품질을 비평하고 평가하도록 하는 접근을 살펴봅니다.",
+        "sourceEvidence": {
+          "articleId": "chain-of-thought",
+          "blockId": "[\"chain-of-thought-prompting\",1]",
+          "anchor": "chain-of-thought-prompting",
+          "quote": "여러 단계를 거쳐야하는 수학 문제와 같은 복잡한 추론을 통해 문제를 푸는 절차를 연구진은 고려하였음. 이건 전형적인 문제를 하나하나 분해하여 정답에 접근하는 방식임. 이 논문의 목표는 LLM에 유사한 CoT를 생성할 수 있는 기능을 부여하는 것입니다. 일관된 일련의 중간 추론 단계를 생성할 수 있는 능력을 LLM에 부여하는 것입니다.",
+          "hash": "82ac1138b000944e339224661220eee68aa8b30584e7b60c99240027c33e995e"
+        },
+        "targetEvidence": {
+          "articleId": "alphallm",
+          "blockId": "[\"related-work\",2]",
+          "anchor": "related-work",
+          "quote": "LLM Self-improving Self-improving의 중요한 부분은 좋은 response와 그렇지 못한 것에 대한 잘 분별하는 능력을 어떻게 얻을것인가 하는 문제입니다. 최초의 연구에서 이 문제를 잘 다루기 위해 LLM에 다양한 task에 대한 input query들과 그에 상응하는 output을 생성하도록 요청하였으며 그 이후 수작으로 직접 실증적인 rule에 의해 의존하였으며 그 이후의 연구에선 몇가지 원칙들을 정하고 guidance를 정해 LLM에 response의 품질 직접 평가하게 만들었습니다. 연구자들은 LLM이 input 데이터에 대해 직접 원칙들을 지정하길 원했습니다. 그러나 이를 위해서는 LLM이 각 특정 사례에 대해 이러한 원칙을 적용하고 올바른 판단을 내릴 수 있는 강력한 능력이 필요합니다.",
+          "hash": "71a65d19d117fd9a87d77ad8eb8f80c1fd784bcba9ae0642338b807188d0b0ce"
+        }
+      },
+      {
+        "id": "gpt-3",
+        "relation": "related_method",
+        "reason": "CoT는 few-shot 예시를 활용한 prompting을 다루며, GPT-3 글은 자연어 지시와 적은 demonstration을 통한 in-context learning을 설명합니다.",
+        "sourceEvidence": {
+          "articleId": "chain-of-thought",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "LLM은 prompting을 통해 in-context FSL의 흥미로운 전망을 제공한다. 매 다른 task를 위한 model checkpoint (FT) 대신에 단조로운 prompt를 모델에 질의할 수 있음. 놀랍게도 단순한 QA task에서 성공적적인 실험을 거뒀음.",
+          "hash": "0779db3ba324e49d34539e6cd03c91f7c4639cb22cc4b1332de76f04dceafa12"
+        },
+        "targetEvidence": {
+          "articleId": "gpt-3",
+          "blockId": "[null,5]",
+          "anchor": null,
+          "quote": "이런 문제를 해결하기 위한 잠재적인 루트는 바로 meta learning이다. 언어모델의 context딴에서 학습시간동안 패턴인지능력과 다양한 셋의 스킬을 개발하는 모델을 의미합니다. 그리고 그러고난 후에 inference 할때 이 능력을 원하는 작업에 빠르게 적응하거나 인식합니다 (위 이미지 참고). 최근연구를 통해 이걸 in-context learning이라고 부르기로 했고 task 특성의 특징에 맞게 사전학습된 언어모델의 텍스트 입력값으로 사용하는 것을 일컫습니다. 이 모델은 자연어 지시와 적은 demonstration에 영향을 받습니다. 그리고 다음에 올 단어를 간단하게 예측함으로써 추가적인 예시를 완벽하게 기대하게 만듭니다.",
+          "hash": "48fbd476c085ab36cb78e29fd9a76765d66c03ba983f0977be3cd1e10bb6c66a"
+        }
+      }
+    ]
+  }
+}

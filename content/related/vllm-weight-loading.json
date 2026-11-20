@@ -1,0 +1,257 @@
+{
+  "version": 2,
+  "id": "vllm-weight-loading",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "e62f9df6763e12cc137a6f4dd815d1f8fc833d0b1e1df29659d17013f05949da",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "vllm",
+        "role": "about",
+        "evidence": {
+          "articleId": "vllm-weight-loading",
+          "blockId": "[\"problem\",1]",
+          "anchor": "problem",
+          "quote": "tensor-parallel-size >= 2 지정시, weight 무한 로딩 문제",
+          "hash": "29a0d56003fe9ab772e0679717c9a3e044c33f84eb347c840ed1557ff0ed44ad"
+        }
+      }
+    ],
+    "review": [
+      {
+        "id": "vllm",
+        "proposedRole": "about"
+      }
+    ]
+  },
+  "entry": {
+    "inputHash": "a9803dd38832ec7102333ba05e6cdf826f840a4e6601e0a0316dc38e493ac347",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",1]",
+          "[\"problem\",2]"
+        ],
+        "targetBlocks": [
+          "[\"script-1\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",1]",
+          "[\"problem\",3]"
+        ],
+        "targetBlocks": [
+          "[\"error\",12]",
+          "[\"error-2\",1]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",1]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",3]",
+          "[\"error\",2]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"tensor-parallel\",1]",
+          "[\"increasing-speed-a-llm-serving-inference\",10]",
+          "[\"2\",12]"
+        ]
+      },
+      {
+        "id": "inference-server",
+        "sourceBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",1]",
+          "[\"problem\",3]"
+        ],
+        "targetBlocks": [
+          "[\"전체-구성\",1]",
+          "[\"nccl-초기화에서-무한-대기\",1]",
+          "[\"vllm-릴리스에는-아직-없었음\",4]"
+        ]
+      },
+      {
+        "id": "distributed-gpu-training",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"최적화-gradient와-model-sharding\",2]",
+          "[\"설치\",3]",
+          "[\"단일-gpu-사용\",4]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",6]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",2]",
+          "[\"env\",9]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "ollama-docker-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"1-ollama-설치-후-모델-다운로드--openwebui-접속\",3]",
+          "[\"2-conda로-실행하면-잘-인식\",1]",
+          "[\"구현-사항\",1]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"3️⃣\",2]",
+          "[\"2️⃣\",2]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",3]",
+          "[\"solution\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"prob\",2]",
+          "[\"solution\",18]",
+          "[\"envs\",2]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",3]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",30]",
+          "[\"해결\",2]",
+          "[\"section-8\",2]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",1]",
+          "[\"envs\",2]",
+          "[\"prob\",2]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"problem\",1]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"1\",7]",
+          "[\"1\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "inference-server",
+        "relation": "related_method",
+        "reason": "가중치 적재 전에 멈추는 vLLM 사례를 비교하며, NCCL 초기화에서 무한 대기하는 증상을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vllm-weight-loading",
+          "blockId": "[\"problem\",3]",
+          "anchor": "problem",
+          "quote": "... (VllmWorkerProcess pid=3230) INFO 10-08 07:16:13 multiproc_worker_utils.py:215] Worker ready; awaiting tasks (VllmWorkerProcess pid=3230) INFO 10-08 07:16:13 utils.py:784] Found nccl from library libnccl.so.2 INFO 10-08 07:16:13 utils.py:784] Found nccl from library libnccl.so.2 INFO 10-08 07:16:13 pynccl.py:63] vLLM is using nccl==2.20.5 (VllmWorkerProcess pid=3230) INFO 10-08 07:16:13 pynccl.py:63] vLLM is using nccl==2.20.5 INFO 10-08 07:16:14",
+          "hash": "b5a83f06f273830a010fb5a460f0201d10985ab940b6afb648f26cdc7153a149"
+        },
+        "targetEvidence": {
+          "articleId": "inference-server",
+          "blockId": "[\"nccl-초기화에서-무한-대기\",1]",
+          "anchor": "nccl-초기화에서-무한-대기",
+          "quote": "같은 날 새로 받은 호스트에서 vLLM이 가중치 적재 전에 멈췄음. 워커 2개가 CPU 100%로 돌고 GPU 메모리는 1GB에서 안 올라감. 금요일까지 쓰던 호스트에서는 없던 증상임.",
+          "hash": "847bc72a326742ef1232ac62d5ccdfcc4f33971f16a31a7bb8ee97b8af360a9c"
+        }
+      }
+    ]
+  }
+}

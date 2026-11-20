@@ -1,0 +1,271 @@
+{
+  "version": 2,
+  "id": "torch-tensor-manipulation-3",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "b58e0bc60316bdd1c395a0fd262028f21641c5f715d2e15537e5c0b609c7878d",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "pytorch-tensors",
+        "role": "about",
+        "evidence": {
+          "articleId": "torch-tensor-manipulation-3",
+          "blockId": "[\"expand\",5]",
+          "anchor": "expand",
+          "quote": "특정 차원의 텐서를 반복해서 생성해주는 함수이며 특정 차원의 크기가 1인 tensor에만 적용 가능",
+          "hash": "5401d15be60a66455062c9da8ba8836ba99d5d8c2e5d55cebcf5a4dc030ebc56"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "e3d01634df1b918f556f306b201e7a1a35598d5c5bd426f585eb9b3d9919fd60",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "torch-tensor-manipulation-2",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",5]",
+          "[\"triu\",1]"
+        ],
+        "targetBlocks": [
+          "[\"squeeze\",11]",
+          "[\"unsqueeze\",6]",
+          "[\"squeeze\",6]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-1",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",5]",
+          "[\"삼각행렬-triangular-matrix\",1]"
+        ],
+        "targetBlocks": [
+          "[\"결론\",1]",
+          "[\"torchview\",11]",
+          "[\"torchreshape\",17]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",1]",
+          "[\"triu\",5]"
+        ],
+        "targetBlocks": [
+          "[\"case-1\",1]",
+          "[\"answer\",8]",
+          "[\"case-2\",2]"
+        ]
+      },
+      {
+        "id": "python-map",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",1]",
+          "[\"삼각행렬-triangular-matrix\",1]"
+        ],
+        "targetBlocks": [
+          "[\"map\",1]",
+          "[\"동작-원리\",1]",
+          "[\"예시3-여러-반복-객체-사용\",1]"
+        ]
+      },
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"expand\",2]",
+          "[\"indexing--slicing\",1]",
+          "[\"tril\",3]"
+        ],
+        "targetBlocks": [
+          "[\"model-input-sequence-length\",5]",
+          "[\"env\",2]",
+          "[\"model-input-sequence-length\",3]"
+        ]
+      },
+      {
+        "id": "regex-preprocessing",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",4]",
+          "[\"삼각행렬-triangular-matrix\",1]"
+        ],
+        "targetBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",2]",
+          "[\"problem\",2]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",1]",
+          "[\"tril\",3]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"env\",4]",
+          "[\"error\",7]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",1]",
+          "[\"삼각행렬-triangular-matrix\",2]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",2]",
+          "[\"해결\",3]",
+          "[\"원인\",2]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",1]",
+          "[\"삼각행렬-triangular-matrix\",2]"
+        ],
+        "targetBlocks": [
+          "[\"2\",12]",
+          "[\"tensor-parallel\",1]",
+          "[\"increasing-speed-a-llm-serving-inference\",10]"
+        ]
+      },
+      {
+        "id": "python-assert",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",5]",
+          "[\"삼각행렬-triangular-matrix\",1]"
+        ],
+        "targetBlocks": [
+          "[\"가정-설명문assert\",2]",
+          "[\"assert가-필요한-이유\",5]",
+          "[\"assert가-필요한-이유\",4]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"tril\",3]",
+          "[\"expand\",4]",
+          "[\"indexing--slicing\",3]"
+        ],
+        "targetBlocks": [
+          "[\"method-2-triplet-loss\",4]",
+          "[\"왜-fsl-일까\",1]",
+          "[\"few-shot-learning이-뭘까\",1]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"삼각행렬-triangular-matrix\",1]",
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",5]"
+        ],
+        "targetBlocks": [
+          "[\"masked-multi-head-attention\",2]",
+          "[\"multi-head-attention\",5]",
+          "[\"positional-encoding\",3]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"indexing--slicing\",5]",
+          "[\"expand\",6]",
+          "[\"삼각행렬-triangular-matrix\",2]"
+        ],
+        "targetBlocks": [
+          "[\"memory-efficient-layer-replication-with-lora\",14]",
+          "[\"layer-replication\",2]",
+          "[\"peft-v0100\",1]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"expand\",4]",
+          "[\"indexing--slicing\",4]",
+          "[\"삼각행렬-triangular-matrix\",2]"
+        ],
+        "targetBlocks": [
+          "[\"문제점---내가-필요로하는-것보다-더-많은-otuput-값을-얻는다\",7]",
+          "[\"1x1-convolution-and-model-size-of-convnet\",2]",
+          "[\"overfeat-classification-network\",7]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",1]",
+          "[\"삼각행렬-triangular-matrix\",2]"
+        ],
+        "targetBlocks": [
+          "[\"에러\",4]",
+          "[null,1]",
+          "[\"ref\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "torch-tensor-manipulation-2",
+        "relation": "related_method",
+        "reason": "차원을 늘리는 expand와 달리 squeeze는 크기가 1인 차원을 제거하므로, 텐서 차원 조작에서 두 함수의 역할을 함께 익힐 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "torch-tensor-manipulation-3",
+          "blockId": "[\"expand\",5]",
+          "anchor": "expand",
+          "quote": "특정 차원의 텐서를 반복해서 생성해주는 함수이며 특정 차원의 크기가 1인 tensor에만 적용 가능",
+          "hash": "5401d15be60a66455062c9da8ba8836ba99d5d8c2e5d55cebcf5a4dc030ebc56"
+        },
+        "targetEvidence": {
+          "articleId": "torch-tensor-manipulation-2",
+          "blockId": "[\"squeeze\",11]",
+          "anchor": "squeeze",
+          "quote": "x = torch.zeros(2, 1, 3, 1, 8) print(f\"x shape: {x.shape}\") >>> x shape: torch.Size([2, 1, 3, 1, 8]) y = torch.squeeze(x, (1, 2, 3)) print(f\"y shape: {y.shape}\") >>> y shape: torch.Size([2, 3, 8]) z = torch.squeeze(x, (1, 3)) print(f\"z shape: {z.shape}\") >>> z shape: torch.Size([2, 3, 8])",
+          "hash": "e331fb2aaecde8e655425db65bc88334de167ed13ccc47fab6a06ddb3ddc270a"
+        }
+      },
+      {
+        "id": "transformer",
+        "relation": "related_method",
+        "reason": "삼각행렬의 정의를 바탕으로, Transformer의 masked attention에서 이후 위치의 attention score를 배제하는 방식을 연결해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "torch-tensor-manipulation-3",
+          "blockId": "[\"삼각행렬-triangular-matrix\",1]",
+          "anchor": "삼각행렬-triangular-matrix",
+          "quote": "선형대수에서 삼각행렬은 정사각행렬의 특수한 경우로 주대각선을 기준으로 대각항의 위쪽이나 아래쪽 항들의 값이 모두 0인 경우를 의미",
+          "hash": "413cac313bb31063eaacfa9a879c38516f3d26a2532bfeea5edf2c55d8b04843"
+        },
+        "targetEvidence": {
+          "articleId": "transformer",
+          "blockId": "[\"masked-multi-head-attention\",2]",
+          "anchor": "masked-multi-head-attention",
+          "quote": "이 값들은 이후 softmax함수를 거치게 되면 attention-score값은 0을 가지게 될것이고, 오직 자기 자신의 score값 또는 그보다 앞에 해당하는 attention-score 값만을 사용하게 될 것이다.",
+          "hash": "a39d68af01e27c0d69375999f3fdeb5e448f8f0422e5511bd3636afd4e303479"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "version": 2,
+  "id": "pip-options",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "43ddd91a31b035f785a4ab9546a9d42c93383139d27243d73afede353b4c371f",
+    "status": "abstained",
+    "facts": [],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "af7544ce3c47ccf89db337c103714c02f6ef976d097a6543cd9909bbdc41389c",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "python-venv-troubleshooting",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",2]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[\"2\",19]",
+          "[\"tensor-parallel\",5]",
+          "[\"4bit-or-8bit-quantization\",2]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"2️⃣\",1]",
+          "[\"envs\",1]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1️⃣\",2]",
+          "[\"2️⃣\",2]",
+          "[\"3️⃣\",7]"
+        ]
+      },
+      {
+        "id": "netplan-troubleshooting",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution-1\",1]",
+          "[\"solution\",2]",
+          "[\"error2\",2]"
+        ]
+      },
+      {
+        "id": "distributed-gpu-training",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[\"설치-1\",2]",
+          "[\"설치\",3]",
+          "[\"fairscale\",4]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",1]",
+          "[\"해결\",2]",
+          "[\"원인\",2]"
+        ]
+      },
+      {
+        "id": "peft-target-modules",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"python-pkg\",1]",
+          "[\"python\",1]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",5]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[\"조치-2\",2]",
+          "[\"조치-1\",3]",
+          "[\"error-2\",17]"
+        ]
+      },
+      {
+        "id": "python-args-kwargs",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[\"kwargs-사용\",1]",
+          "[\"args-사용\",8]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",2]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",8]",
+          "[\"envs\",8]",
+          "[\"ref\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "python-venv-troubleshooting",
+        "relation": "application_example",
+        "reason": "pip 설치 옵션이 가상환경에서 pip를 준비하는 과정과 어떻게 맞물리는지 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "pip-options",
+          "blockId": "[\"pip-options\",1]",
+          "anchor": "pip-options",
+          "quote": "모든 pip 설치 옵션, pip install - Usage",
+          "hash": "873aad2b41b774966b059227e56f3f8f31b682d2f862c3cdde29d8eb06cbb320"
+        },
+        "targetEvidence": {
+          "articleId": "python-venv-troubleshooting",
+          "blockId": "[\"해결\",1]",
+          "anchor": "해결",
+          "quote": "$ sudo apt install python3.10-venv $ python3 -m venv test $ source test/bin/activate >>> (test) user@server:~$",
+          "hash": "efe1e5bb6760deebf78d1ca5bf370e0a5841e39d19df46cc211db417b023634b"
+        }
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "relation": "application_example",
+        "reason": "pip로 특정 bardapi 버전을 설치해 API 이슈를 해결하는 사례를 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "pip-options",
+          "blockId": "[\"pip-options\",1]",
+          "anchor": "pip-options",
+          "quote": "모든 pip 설치 옵션, pip install - Usage",
+          "hash": "873aad2b41b774966b059227e56f3f8f31b682d2f862c3cdde29d8eb06cbb320"
+        },
+        "targetEvidence": {
+          "articleId": "bard-api-troubleshooting",
+          "blockId": "[\"solution\",4]",
+          "anchor": "solution",
+          "quote": "Meet the needs that required version pip install bardapi==0.1.3",
+          "hash": "c5a393f48ef1aed17817d36041f0a753fcd6d47d52c7fbc27887f52e49595237"
+        }
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "relation": "related_method",
+        "reason": "pip install 명령으로 vLLM과 flashinfer를 설치해 오류에 대응하는 방법을 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "pip-options",
+          "blockId": "[\"pip-options\",1]",
+          "anchor": "pip-options",
+          "quote": "모든 pip 설치 옵션, pip install - Usage",
+          "hash": "873aad2b41b774966b059227e56f3f8f31b682d2f862c3cdde29d8eb06cbb320"
+        },
+        "targetEvidence": {
+          "articleId": "vllm-gemma-troubleshooting",
+          "blockId": "[\"조치-2\",2]",
+          "anchor": "조치-2",
+          "quote": "pip install -U -q vllm",
+          "hash": "c95de0eaf43e97fe01641d763cc2f3c9ea43fd29ef1f6acdaf202d620d7c14ba"
+        }
+      }
+    ]
+  }
+}

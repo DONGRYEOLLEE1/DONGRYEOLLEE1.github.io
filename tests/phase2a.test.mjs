@@ -527,3 +527,26 @@ test('pins stay ahead of model picks and excluded articles are never candidates'
   );
   assert.deepEqual(Object.keys(projected[0].related[1]), ['id', 'reason']);
 });
+
+test('a role the model cites twice keeps its first citation instead of failing the article', async () => {
+  const { factTask, readFacts } = await import('../tools/knowledge/phase2a.mjs');
+  const ctx = corpus([article('scan', '<p>OCR reads text.</p><p>OCR again here.</p>')]);
+  const task = factTask(ctx, 'scan');
+  const facts = readFacts(ctx, 'scan', task, {
+    facts: [
+      { conceptId: 'ocr', role: 'applies', block: 1 },
+      { conceptId: 'ocr', role: 'applies', block: 0 },
+      { conceptId: 'ocr', role: 'about', block: 0 },
+    ],
+  });
+  assert.deepEqual(
+    facts.map((f) => [f.id, f.role, f.evidence.quote]),
+    [
+      ['ocr', 'applies', 'OCR again here.'],
+      ['ocr', 'about', 'OCR reads text.'],
+    ],
+  );
+  // An unknown concept or a block out of range is still a rejected answer.
+  assert.throws(() => readFacts(ctx, 'scan', task, { facts: [{ conceptId: 'nope', role: 'about', block: 0 }] }));
+  assert.throws(() => readFacts(ctx, 'scan', task, { facts: [{ conceptId: 'ocr', role: 'about', block: 9 }] }));
+});

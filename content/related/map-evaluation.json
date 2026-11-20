@@ -1,0 +1,301 @@
+{
+  "version": 2,
+  "id": "map-evaluation",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "124625b8ae4172532030bcf1b6152694eef022d333dc112d4bc0297914bbf891",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "cv-evaluation",
+        "role": "about",
+        "evidence": {
+          "articleId": "map-evaluation",
+          "blockId": "[\"coco-map\",1]",
+          "anchor": "coco-map",
+          "quote": "요즘 생산되는 논문들은 COCO 데이터셋을 통해 결과값을 도출하려는 경향이있다. COCO mAP에선 101-point Interpolated AP 정의가 계산에 사용됩니다. COCO에서 AP는 다중 IoU에 대한 평균입니다.",
+          "hash": "22d1e0d2dec9961a7551c06580d34e94be943a6d39fccc3880ac220ae4d6426e"
+        }
+      },
+      {
+        "id": "object-detection",
+        "role": "about",
+        "evidence": {
+          "articleId": "map-evaluation",
+          "blockId": "[\"mapmean-average-precision\",1]",
+          "anchor": "mapmean-average-precision",
+          "quote": "AP는 Faster R-CNN, SSD와 같이 객체탐지의 정확도를 측정하는데있어서 가장 인기있는 metric이다. AP는 0과 1사이의 값을 가지는 recall을 통해 average precision값을 계산한다. 꽤나 복잡한 얘기로 들릴수 있겠지만 예시와 함께 설명하고자한다. 그전에, precision, recall, IoU에 대해 알아보자.",
+          "hash": "01b98da19a8d4cd15cc9fb7a64670351f90a987efd64d39a5808b9cab4a29f63"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "8dfaafb4d6330f540d46617abba24dc12db7b84e7b4542e1e85d79b2d335555a",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "book-spine",
+        "sourceBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"coco-map\",1]",
+          "[\"refernce\",1]"
+        ],
+        "targetBlocks": [
+          "[\"system\",2]",
+          "[\"conclusion\",1]",
+          "[\"metrics\",3]"
+        ]
+      },
+      {
+        "id": "r-cnn",
+        "sourceBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"iouintersection-over-union---fracintersectionunion\",1]",
+          "[\"interpolated-ap\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"nmsnon-maximum-suppression\",17]",
+          "[\"사전학습된-alexnet을-fine-tune\",3]"
+        ]
+      },
+      {
+        "id": "ohem",
+        "sourceBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"coco-map\",1]",
+          "[\"interpolated-ap\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",3]",
+          "[\"abstract\",2]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"iouintersection-over-union---fracintersectionunion\",1]",
+          "[\"ap\",4]"
+        ],
+        "targetBlocks": [
+          "[\"the-object-detection-task\",1]",
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"roi-pooling\",8]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"iouintersection-over-union---fracintersectionunion\",1]",
+          "[\"refernce\",1]"
+        ],
+        "targetBlocks": [
+          "[\"overfeat-detection-network\",12]",
+          "[\"nmsnon-max-suppression\",13]",
+          "[\"learning\",10]"
+        ]
+      },
+      {
+        "id": "yolo-v1",
+        "sourceBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"iouintersection-over-union---fracintersectionunion\",1]",
+          "[\"interpolated-ap\",1]"
+        ],
+        "targetBlocks": [
+          "[\"unified-detection\",1]",
+          "[\"network-design\",1]",
+          "[\"training\",11]"
+        ]
+      },
+      {
+        "id": "fast-r-cnn",
+        "sourceBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"interpolated-ap\",1]",
+          "[\"refernce\",1]"
+        ],
+        "targetBlocks": [
+          "[\"preview\",1]",
+          "[\"끝\",1]",
+          "[\"max-pooling-by-roi-pooling\",3]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"ap\",4]",
+          "[\"interpolated-ap\",4]"
+        ],
+        "targetBlocks": [
+          "[\"preview\",3]",
+          "[\"7-max-pooling-by-roi-pooling\",2]",
+          "[\"의의\",2]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"coco-map\",4]",
+          "[\"iouintersection-over-union---fracintersectionunion\",1]",
+          "[\"mapmean-average-precision\",1]"
+        ],
+        "targetBlocks": [
+          "[\"metric-level\",1]",
+          "[\"image-classification-cv\",3]",
+          "[\"few-shot-learning은-어떻게-작동할까\",1]"
+        ]
+      },
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"coco-map\",1]",
+          "[\"ap\",4]",
+          "[\"precision--recall\",2]"
+        ],
+        "targetBlocks": [
+          "[\"discussion\",2]",
+          "[\"problem-formulation\",2]",
+          "[\"imagenet-results-for-efficientnet\",1]"
+        ]
+      },
+      {
+        "id": "rtpurbo",
+        "sourceBlocks": [
+          "[\"ap\",9]",
+          "[\"interpolated-ap\",5]",
+          "[\"aparea-under-curve-auc\",2]"
+        ],
+        "targetBlocks": [
+          "[\"정확도--near-lossless\",3]",
+          "[\"효율--ultra-long-robustness\",1]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"coco-map\",1]",
+          "[\"precision--recall\",2]",
+          "[\"interpolated-ap\",5]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"pre-training-data\",1]",
+          "[\"main-results\",2]"
+        ]
+      },
+      {
+        "id": "python-map",
+        "sourceBlocks": [
+          "[\"coco-map\",2]",
+          "[\"precision--recall\",1]",
+          "[\"ap\",1]"
+        ],
+        "targetBlocks": [
+          "[\"map\",1]",
+          "[\"구문\",1]",
+          "[\"동작-원리\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"interpolated-ap\",6]",
+          "[\"ap\",4]",
+          "[\"precision--recall\",3]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",3]",
+          "[\"solution\",1]",
+          "[\"문제-정의\",4]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"interpolated-ap\",5]",
+          "[\"ap\",9]",
+          "[\"aparea-under-curve-auc\",2]"
+        ],
+        "targetBlocks": [
+          "[\"low-rank-parameterized-update-matrices\",3]",
+          "[\"empirical-experiments\",1]",
+          "[\"our-method\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "book-spine",
+        "relation": "evaluation_comparison",
+        "reason": "COCO mAP 설명과 mAP50을 4TU 검증 세트에서 측정한 사례를 통해, AP 평가 설정의 차이를 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "map-evaluation",
+          "blockId": "[\"coco-map\",1]",
+          "anchor": "coco-map",
+          "quote": "요즘 생산되는 논문들은 COCO 데이터셋을 통해 결과값을 도출하려는 경향이있다. COCO mAP에선 101-point Interpolated AP 정의가 계산에 사용됩니다. COCO에서 AP는 다중 IoU에 대한 평균입니다.",
+          "hash": "22d1e0d2dec9961a7551c06580d34e94be943a6d39fccc3880ac220ae4d6426e"
+        },
+        "targetEvidence": {
+          "articleId": "book-spine",
+          "blockId": "[\"metrics\",3]",
+          "anchor": "metrics",
+          "quote": "mAP50 is box mAP at IoU 0.5 on the 4TU validation set.",
+          "hash": "a86030d0e647713d0b4f52cf50a0c7c07af3667841e2aa02969133adc0e8d8fb"
+        }
+      },
+      {
+        "id": "r-cnn",
+        "relation": "related_method",
+        "reason": "AP 설명에서 IoU로 예측 경계를 판단하는 법을 익히고, R-CNN이 IoU 임계값으로 학습용 양성·음성 후보 영역을 구분하는 과정을 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "map-evaluation",
+          "blockId": "[\"iouintersection-over-union---fracintersectionunion\",1]",
+          "anchor": "iouintersection-over-union---fracintersectionunion",
+          "quote": "IoU는 2개의 바운더리 사이에서의 공통으로 겹치는 부분에 대해 측정한다. Ground truth(the real object boundary)와 함께 예측된 경계가 겹치는 부분들에 대해 측정하는 것을 사용한다. True positive또는 False Positive값을 예측하는 몇몇 분류 데이터셋에서 측정 IoU 임계값(Threshold)을 사전정의하기도한다.",
+          "hash": "305a73ce4f270c6fb707574f5b4981aeeb3d53a1261875a69415a8961890d493"
+        },
+        "targetEvidence": {
+          "articleId": "r-cnn",
+          "blockId": "[\"사전학습된-alexnet을-fine-tune\",3]",
+          "anchor": "사전학습된-alexnet을-fine-tune",
+          "quote": "먼저 PASCAL VOC 데이터셋에 Selective Search 알고리즘을 적용한 후 후보영역을 추출하고, 후보영역과 Ground Truth Box 와의 IoU값을 구한다. IoU값이 0.5이상인 경우, Positive sample=Object로, 0.5 미만인 경우에는 Negative Sample=Background로 저장한다. 그리고 Positive sample = 32, Negative sample = 96, Mini batch = 128을 구성하여 사전학습된 AlexNet에 입력해 학습을 진행한다. 위 과정을 통해 fine-tune된 AlexNet을 사용해 R-CNN 모델은 추론시, Feature Vector를 추출한다.",
+          "hash": "2988491a74985dc5dd2a22f7463628825ff2e44dc46838809c40bed478964372"
+        }
+      },
+      {
+        "id": "fast-r-cnn",
+        "relation": "evaluation_comparison",
+        "reason": "PASCAL VOC의 보간 AP 설명과 Fast R-CNN의 PASCAL VOC 결과를 함께 보며, 같은 벤치마크에서 지표와 성능 결과가 어떻게 연결되는지 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "map-evaluation",
+          "blockId": "[\"interpolated-ap\",1]",
+          "anchor": "interpolated-ap",
+          "quote": "PASCAL VOC는 객체탐지 분야에서 굉장히 유명한 데이터셋이다. PASCAL VOC challenge를 위해, 만약 IoU 값이 0.5보다 크다면, 예측값은 positive일 것이다. 또한 만약 같은 객체에서 다중의 탐지가 감지된다면 첫 번째 객체에 대해선 양수로, 나머지는 음수로 계산될 것이다.",
+          "hash": "096a743491740a561b71c0e0aad31571dc130bd882ecd66503dfe38d469bc988"
+        },
+        "targetEvidence": {
+          "articleId": "fast-r-cnn",
+          "blockId": "[\"끝\",1]",
+          "anchor": "끝",
+          "quote": "기존 R-CNN 모델보다 학습 속도가 9배 이상 빠르며, 객체탐지시, 이미지 한 장당 0.3초(RP 추출 시간 포함)이 걸린다. PASCAL VOC 2021 데이터셋에서 mAP 값이 66%를 보이면서 감지 능력또한 R-CNN모델에 비해 향상된 모습을 보인다. 이외에도 Multi-task Loss를 사용해 single stage로 여러 모델을 학습시킬 수 있다는 점과 학습으로 인해 네트워크의 가중치값을 Backpropagation을 통해 update할 수 있다는 장점이 있다.",
+          "hash": "2f7ebcdf5d1d1115077fd00d62dc7cc3037eada8a6dfd89dcfe2dc01be1c133b"
+        }
+      }
+    ]
+  }
+}

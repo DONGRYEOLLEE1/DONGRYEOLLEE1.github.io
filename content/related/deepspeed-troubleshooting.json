@@ -1,0 +1,304 @@
+{
+  "version": 2,
+  "id": "deepspeed-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "e6c89ad18730892cf7b1d2703690e9a7536a3a772d7000ce5887a824a67a8a88",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "finetuning",
+        "role": "about",
+        "evidence": {
+          "articleId": "deepspeed-troubleshooting",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "DeepSpeed를 통한 FT 구동중, 직면한 여러가지 오류에 대해 기술해놓습니다.",
+          "hash": "7030c96b21394e2fe0c666a7311dd196b7efc79f812f9cf2c54884004b825ecf"
+        }
+      },
+      {
+        "id": "python-environment",
+        "role": "applies",
+        "evidence": {
+          "articleId": "deepspeed-troubleshooting",
+          "blockId": "[\"1️⃣\",2]",
+          "anchor": "1️⃣",
+          "quote": "# Solution sudo apt-get install libbz2-dev cd Python-3.10.6 ./configure make sudo make install",
+          "hash": "a6019e7feaafcdaa79d50d257b0d98efa50724e40d9e438fd578989e28f71e58"
+        }
+      },
+      {
+        "id": "distributed-training",
+        "role": "applies",
+        "evidence": {
+          "articleId": "deepspeed-troubleshooting",
+          "blockId": "[\"3️⃣\",2]",
+          "anchor": "3️⃣",
+          "quote": "ninja: build stopped: subcommand failed. subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 1. RuntimeError: Error building extension 'fused_adam' ImportError: /home/test/.cache/torch_extensions/py310_cu118/fused_adam/fused_adam.so: cannot open shared object file: No such file or directory ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 326830) of binary: /home/test/lora/bin/python3.10",
+          "hash": "2fa35d0fc608a8d1b770368c6d3842ae855a1de8fbbc670c4360faab7186915d"
+        }
+      },
+      {
+        "id": "cuda",
+        "role": "applies",
+        "evidence": {
+          "articleId": "deepspeed-troubleshooting",
+          "blockId": "[\"3️⃣\",8]",
+          "anchor": "3️⃣",
+          "quote": "# NVIDIA CUDA Toolkit export CUDA_HOME=/usr/local/cuda-11.8 export PATH=\"/usr/local/cuda-11.8/bin:$PATH\" export LD_LIBRARY_PATH=\"/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH\"",
+          "hash": "fddddc441e3200b4de1a29171c5db1538fc5f9f1007b1fb17b10c3ff6fa81669"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "6f7cc5d2468c562db0a509fd0cb34604e37ad1d2fa42f83da9cd344d6b1d3ca2",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "distributed-gpu-training",
+        "sourceBlocks": [
+          "[\"1️⃣\",2]",
+          "[\"3️⃣\",2]",
+          "[\"env\",5]"
+        ],
+        "targetBlocks": [
+          "[\"설치-1\",2]",
+          "[\"최적화-gradient와-model-sharding\",2]",
+          "[\"설치\",1]"
+        ]
+      },
+      {
+        "id": "python-venv-troubleshooting",
+        "sourceBlocks": [
+          "[\"1️⃣\",2]",
+          "[\"3️⃣\",9]",
+          "[\"2️⃣\",2]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",2]",
+          "[\"issue\",2]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"3️⃣\",8]",
+          "[\"env\",4]",
+          "[\"2️⃣\",3]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"4bit-quantization\",8]",
+          "[\"현상\",1]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"1️⃣\",2]",
+          "[\"3️⃣\",8]",
+          "[\"env\",4]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"원인\",2]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "netplan-troubleshooting",
+        "sourceBlocks": [
+          "[\"1️⃣\",2]",
+          "[\"2️⃣\",2]",
+          "[\"3️⃣\",9]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"env\",10]",
+          "[\"3️⃣\",9]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",10]",
+          "[\"envs\",5]",
+          "[\"prob\",2]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"1️⃣\",2]",
+          "[\"3️⃣\",8]",
+          "[\"2️⃣\",3]"
+        ],
+        "targetBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"cuda-cudnn\",5]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"3️⃣\",6]",
+          "[\"1️⃣\",3]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"조치-2\",1]",
+          "[\"조치-1\",1]",
+          "[\"error-2\",16]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"env\",4]",
+          "[null,1]",
+          "[\"2️⃣\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",2]",
+          "[\"env\",9]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"3️⃣\",2]",
+          "[\"env\",4]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"tensor-parallel\",1]",
+          "[\"2\",12]",
+          "[\"increasing-speed-a-llm-serving-inference\",7]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"env\",4]",
+          "[\"3️⃣\",6]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",3]",
+          "[\"envs\",2]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"env\",3]",
+          "[\"3️⃣\",8]"
+        ],
+        "targetBlocks": [
+          "[\"training\",1]",
+          "[\"envs\",4]",
+          "[\"model\",3]"
+        ]
+      },
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"3️⃣\",2]",
+          "[\"2️⃣\",2]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"env\",3]",
+          "[\"3️⃣\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",1]",
+          "[\"env\",6]"
+        ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"3️⃣\",2]",
+          "[\"env\",3]",
+          "[\"2️⃣\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"error-message\",1]",
+          "[\"problem\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "distributed-gpu-training",
+        "relation": "related_method",
+        "reason": "DeepSpeed의 fused_adam 빌드 오류와 FairScale의 OSS·ShardedDDP를 이용한 분산 학습 구성을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "deepspeed-troubleshooting",
+          "blockId": "[\"3️⃣\",2]",
+          "anchor": "3️⃣",
+          "quote": "ninja: build stopped: subcommand failed. subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 1. RuntimeError: Error building extension 'fused_adam' ImportError: /home/test/.cache/torch_extensions/py310_cu118/fused_adam/fused_adam.so: cannot open shared object file: No such file or directory ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 326830) of binary: /home/test/lora/bin/python3.10",
+          "hash": "2fa35d0fc608a8d1b770368c6d3842ae855a1de8fbbc670c4360faab7186915d"
+        },
+        "targetEvidence": {
+          "articleId": "distributed-gpu-training",
+          "blockId": "[\"최적화-gradient와-model-sharding\",2]",
+          "anchor": "최적화-gradient와-model-sharding",
+          "quote": "import torch from fairscale.optim.oss import OSS from fairscale.nn.data_parallel import SharededDataParallel as ShardedDDP def train(rank, world_size, epochs): # initializing 과정 dist_init(rank, world_size) # 문제 정의 model = MyModel().to(rank) dataloader = MyDataLoader() loss_ln = MyLossFunction() # optimizer 정의 base_optimizer_arguments = { 'lr' : 1e-4 } # OSS로 base_optimizer를 감싸주자(Wrap) base_optimizer = torch.optim.SGD optimizer = OSS( params = model.parameters(), optim =",
+          "hash": "f2f2f9dc17ab23d1645779226a4e913db2375b793a0095c07888444e806d0733"
+        }
+      },
+      {
+        "id": "lora-finetuning",
+        "relation": "application_example",
+        "reason": "DeepSpeed FT 오류 사례를 살펴본 뒤, Polyglot-ko를 LoRA로 파인튜닝하는 구체적인 명령과 설정을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "deepspeed-troubleshooting",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "DeepSpeed를 통한 FT 구동중, 직면한 여러가지 오류에 대해 기술해놓습니다.",
+          "hash": "7030c96b21394e2fe0c666a7311dd196b7efc79f812f9cf2c54884004b825ecf"
+        },
+        "targetEvidence": {
+          "articleId": "lora-finetuning",
+          "blockId": "[\"training\",1]",
+          "anchor": "training",
+          "quote": "python finetune.py \\ --base_model '../model_file/polyglot-ko-5.8b' \\ --data_path './ko_alpaca_data.json' \\ --output_dir './output' \\ --batch_size 128 \\ --mircro_batch_size 4 \\ --num_epochs 3 \\ --learning_rate 2e-5 \\ --cutoff_len 512 \\ --val_set_size 2000 \\ --lora_r 8 \\ --lora_alpha 16 \\ --lora_dropout 0.05 \\ --lora_target_modules '[query_key_value]' \\ --train_on_inputs \\ --group_by_length",
+          "hash": "1d3ec647d3fc9aa157a76778d7d0beb955bd87a846aa384701e66384ac2707f9"
+        }
+      }
+    ]
+  }
+}

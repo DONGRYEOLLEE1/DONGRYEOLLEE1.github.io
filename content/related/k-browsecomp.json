@@ -1,0 +1,250 @@
+{
+  "version": 2,
+  "id": "k-browsecomp",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "d25122629d4e473ffc2ef95f5c301c87547948e5e27a7a4a9dfb9b1e462008d0",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "agent-evaluation",
+        "role": "about",
+        "evidence": {
+          "articleId": "k-browsecomp",
+          "blockId": "[\"정리\",1]",
+          "anchor": "정리",
+          "quote": "K-BrowseComp은 (1) 한국어 맥락에 기반한 첫 web browsing agent 벤치마크를 17명 원어민의 수작업으로 구축하고, (2) browsing의 information asymmetry를 역이용해 failure-mode targeting + hard few-shot으로 적대적 문제를 합성하는 방법론을 제시함. frontier 모델도 45.67%에 그치고 한국어 모델은 10% 안팎에 머무는 큰 난이도와 격차를 드러냈으며, 무엇보다 실패의 본질이 검색 능력이 아니라 multi-turn 상태 관리(candidate·constraint·role·finalization)에 있음을 trajectory 분석으로 짚어낸 점이 인상적임. data·code는 공개됨.",
+          "hash": "ec29ce72231cdc16b9a49ff81224f9db4d3a2c0d9ced6c92467737b89ab0a27c"
+        }
+      },
+      {
+        "id": "tool-use",
+        "role": "about",
+        "evidence": {
+          "articleId": "k-browsecomp",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "Browsing agent는 instruction following·tool calling·multi-turn interaction을 동시에 요구하는 compositional task라, 한국어 agentic 능력을 종합적으로 측정하는 testbed가 됨.",
+          "hash": "0d7ba0566800e2c82c330937c0bb67a8a9ad059e072fccb34065468c9c5e7a3f"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "0899e68fde6dfa6a4b947f2b2ad34cf2c94f444b5cdfe24836fc6cf825df712e",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"정리\",1]",
+          "[\"failure-mode-taxonomy-f0f8\",3]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"error\",3]",
+          "[\"reproduction\",1]"
+        ]
+      },
+      {
+        "id": "searchswarm",
+        "sourceBlocks": [
+          "[\"정리\",1]",
+          "[\"introduction\",4]",
+          "[\"setup\",2]"
+        ],
+        "targetBlocks": [
+          "[\"experiments\",1]",
+          "[\"introduction\",3]",
+          "[\"정리\",1]"
+        ]
+      },
+      {
+        "id": "rtpurbo",
+        "sourceBlocks": [
+          "[\"main-results\",13]",
+          "[\"정리\",1]",
+          "[\"introduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"정확도--near-lossless\",9]",
+          "[\"효율--ultra-long-robustness\",1]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "kodistill",
+        "sourceBlocks": [
+          "[\"main-results\",1]",
+          "[\"setup\",2]",
+          "[\"introduction\",4]"
+        ],
+        "targetBlocks": [
+          "[\"final-results\",11]",
+          "[\"at-a-glance\",5]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"setup\",1]",
+          "[\"search-effort과-failure-persistence\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",5]",
+          "[\"prompts\",1]",
+          "[\"results\",4]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"setup\",2]",
+          "[\"정리\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",9]",
+          "[\"baselines\",1]",
+          "[\"evaluation\",1]"
+        ]
+      },
+      {
+        "id": "langgraph-structured-streaming",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"setup\",2]",
+          "[\"failure-mode-taxonomy-f0f8\",3]"
+        ],
+        "targetBlocks": [
+          "[\"baseline\",2]",
+          "[\"구조-분석\",2]",
+          "[\"problem\",1]"
+        ]
+      },
+      {
+        "id": "alphallm",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"정리\",1]",
+          "[\"synthetic-split-100문제--이-논문의-핵심-기여\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",1]"
+        ]
+      },
+      {
+        "id": "dflash",
+        "sourceBlocks": [
+          "[\"main-results\",1]",
+          "[\"setup\",2]",
+          "[\"introduction\",4]"
+        ],
+        "targetBlocks": [
+          "[\"main-results-qwen3-thinking-off\",2]",
+          "[\"experiments\",1]",
+          "[\"introduction\",7]"
+        ]
+      },
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"정리\",1]",
+          "[\"synthetic-split-100문제--이-논문의-핵심-기여\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",5]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "[\"role-of-instructions\",1]"
+        ]
+      },
+      {
+        "id": "constitutional-ai",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"정리\",1]",
+          "[\"synthetic-split-100문제--이-논문의-핵심-기여\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"정리\",1]",
+          "[\"preliminary--related-work\",1]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"정리\",1]",
+          "[\"main-results\",13]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",10]",
+          "[\"analysis\",1]",
+          "[\"t5-xxl-walltime-실측\",15]"
+        ]
+      },
+      {
+        "id": "prompt-engineering",
+        "sourceBlocks": [
+          "[\"synthetic-split-100문제--이-논문의-핵심-기여\",2]",
+          "[\"k-browsecomp-verified-300문제\",3]",
+          "[\"failure-mode-taxonomy-f0f8\",11]"
+        ],
+        "targetBlocks": [
+          "[\"cot-prompting\",5]",
+          "[\"zero-shot-cot-prompting\",4]",
+          "[\"the-instruction\",2]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"setup\",2]",
+          "[\"정리\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",7]",
+          "[\"e2e-benchmark\",2]",
+          "[\"glue-benchmark\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "searchswarm",
+        "relation": "evaluation_comparison",
+        "reason": "한국어 web browsing agent 벤치마크와 deep research 벤치마크의 평가 대상·구성을 비교해, 두 장기 탐색 과제의 평가 맥락을 알 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "k-browsecomp",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "Browsing agent는 instruction following·tool calling·multi-turn interaction을 동시에 요구하는 compositional task라, 한국어 agentic 능력을 종합적으로 측정하는 testbed가 됨.",
+          "hash": "0d7ba0566800e2c82c330937c0bb67a8a9ad059e072fccb34065468c9c5e7a3f"
+        },
+        "targetEvidence": {
+          "articleId": "searchswarm",
+          "blockId": "[\"experiments\",1]",
+          "anchor": "experiments",
+          "quote": "base model은 Tongyi DeepResearch-30B-A3B이며, BrowseComp·BrowseComp-ZH·GAIA·xbench-DeepSearch-2505 네 벤치마크로 평가함. (judge model은 DeepSeek-V4-Flash, 판정은 수기 검증)",
+          "hash": "7814b0ea9aa504324e656a8083505a009feb780fd635ba1c6f27197727784642"
+        }
+      }
+    ]
+  }
+}

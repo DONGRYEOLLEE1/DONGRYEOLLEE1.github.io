@@ -1,0 +1,241 @@
+{
+  "version": 2,
+  "id": "langgraph-structured-streaming",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "6be0ab33122698f49e6643f756710db28e100cb595a55e9cdf3df0fae3efd076",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "langgraph",
+        "role": "applies",
+        "evidence": {
+          "articleId": "langgraph-structured-streaming",
+          "blockId": "[\"baseline\",5]",
+          "anchor": "baseline",
+          "quote": "workflow.add_node(\"api_generate\", api_generate) workflow.add_conditional_edges( START, routing, { \"웹검색\": \"web_generate\", \"일반질문\": \"api_generate\" } ) workflow.add_edge(\"web_generate\", END) workflow.add_edge(\"api_generate\", END) graph = workflow.compile(checkpointer = memory) # streaming 함수 def stream_inference(query: str): inputs = [HumanMessage(content = query)] for msg, metadata in graph.stream( {\"messages\": inputs}, stream_mode = \"messages\", config = {\"configurable\":",
+          "hash": "ab2952997d5c0e7cd1c306bbfd83e40d8422af51aa73df8d76d6e84ac29db2e4"
+        }
+      },
+      {
+        "id": "agent-memory",
+        "role": "applies",
+        "evidence": {
+          "articleId": "langgraph-structured-streaming",
+          "blockId": "[\"baseline\",5]",
+          "anchor": "baseline",
+          "quote": "workflow.add_node(\"api_generate\", api_generate) workflow.add_conditional_edges( START, routing, { \"웹검색\": \"web_generate\", \"일반질문\": \"api_generate\" } ) workflow.add_edge(\"web_generate\", END) workflow.add_edge(\"api_generate\", END) graph = workflow.compile(checkpointer = memory) # streaming 함수 def stream_inference(query: str): inputs = [HumanMessage(content = query)] for msg, metadata in graph.stream( {\"messages\": inputs}, stream_mode = \"messages\", config = {\"configurable\":",
+          "hash": "ab2952997d5c0e7cd1c306bbfd83e40d8422af51aa73df8d76d6e84ac29db2e4"
+        }
+      },
+      {
+        "id": "tool-use",
+        "role": "applies",
+        "evidence": {
+          "articleId": "langgraph-structured-streaming",
+          "blockId": "[\"baseline\",2]",
+          "anchor": "baseline",
+          "quote": "# app.py route_llm_with_tools = route_llm.with_structured_output(ResponseFormatter) route_prompt = ChatPromptTemplate.from_messages([ (\"system\", route_template), (\"human\", \"다음 질문을 목적에 맞게 분류하세요.",
+          "hash": "5eb3f472cac72cfc81a7af04d3fdbc77d4ed87b35bc5cb81100b82d677ffff41"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "884700936f471409309559fa721c81129fbb4e5dd861a63e46347c9891acb17a",
+    "status": "abstained",
+    "candidates": [
+      {
+        "id": "message-history",
+        "sourceBlocks": [
+          "[\"baseline\",5]",
+          "[\"구조-분석\",2]",
+          "[\"environment\",1]"
+        ],
+        "targetBlocks": [
+          "[\"message-history\",3]",
+          "[\"message-history\",1]",
+          "[\"message-history\",4]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"baseline\",6]",
+          "[\"구조-분석\",2]",
+          "[\"environment\",1]"
+        ],
+        "targetBlocks": [
+          "[\"gradio\",3]",
+          "[\"ref\",2]",
+          "[\"ts\",6]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"구조-분석\",2]",
+          "[\"baseline\",1]",
+          "[\"environment\",2]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",17]",
+          "[\"현상\",1]",
+          "[\"section-8\",1]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"baseline\",2]",
+          "[\"problem\",1]",
+          "[\"구조-분석\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",3]",
+          "[\"solution\",4]",
+          "[\"environment\",1]"
+        ]
+      },
+      {
+        "id": "k-browsecomp",
+        "sourceBlocks": [
+          "[\"baseline\",2]",
+          "[\"구조-분석\",2]",
+          "[\"problem\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"setup\",2]",
+          "[\"failure-mode-taxonomy-f0f8\",3]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"구조-분석\",2]",
+          "[\"baseline\",1]",
+          "[\"problem\",1]"
+        ],
+        "targetBlocks": [
+          "[\"curiosity\",1]",
+          "[\"case-1\",2]",
+          "[\"case-2\",1]"
+        ]
+      },
+      {
+        "id": "inference-server",
+        "sourceBlocks": [
+          "[\"구조-분석\",2]",
+          "[\"baseline\",6]",
+          "[\"problem\",1]"
+        ],
+        "targetBlocks": [
+          "[\"모델-구성은-파일-하나로\",6]",
+          "[null,1]",
+          "[\"관측\",1]"
+        ]
+      },
+      {
+        "id": "searchswarm",
+        "sourceBlocks": [
+          "[\"baseline\",5]",
+          "[\"구조-분석\",2]",
+          "[\"problem\",2]"
+        ],
+        "targetBlocks": [
+          "[\"main-distributes-sub-executes\",2]",
+          "[\"supervised-fine-tuning\",1]",
+          "[\"harness의-효과\",2]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"baseline\",6]",
+          "[\"구조-분석\",2]",
+          "[\"environment\",1]"
+        ],
+        "targetBlocks": [
+          "[\"merging-lora-weights\",17]",
+          "[\"ref\",1]",
+          "[\"peft-v090\",1]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"구조-분석\",2]",
+          "[\"baseline\",4]",
+          "[\"problem\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1️⃣\",1]",
+          "[\"2️⃣\",1]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"baseline\",1]",
+          "[\"구조-분석\",2]",
+          "[\"environment\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",5]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"구조-분석\",2]",
+          "[\"baseline\",6]",
+          "[\"environment\",2]"
+        ],
+        "targetBlocks": [
+          "[\"memory-efficient-layer-replication-with-lora\",7]",
+          "[\"layer-replication\",2]",
+          "[\"deprecations\",1]"
+        ]
+      },
+      {
+        "id": "chat-vector",
+        "sourceBlocks": [
+          "[\"baseline\",1]",
+          "[\"구조-분석\",2]",
+          "[\"problem\",1]"
+        ],
+        "targetBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"구조-분석\",2]",
+          "[\"problem\",1]",
+          "[\"baseline\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",2]",
+          "[\"env\",9]",
+          "[\"source-code\",1]"
+        ]
+      }
+    ],
+    "recommendations": []
+  }
+}

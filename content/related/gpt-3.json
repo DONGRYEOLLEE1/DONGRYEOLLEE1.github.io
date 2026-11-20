@@ -1,0 +1,271 @@
+{
+  "version": 2,
+  "id": "gpt-3",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "6ad4d6fdbf80ca627df545adbbf1d5a33f5e00c8b5a00b7c0d501042baaf9f43",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "in-context-learning",
+        "role": "about",
+        "evidence": {
+          "articleId": "gpt-3",
+          "blockId": "[null,5]",
+          "anchor": null,
+          "quote": "이런 문제를 해결하기 위한 잠재적인 루트는 바로 meta learning이다. 언어모델의 context딴에서 학습시간동안 패턴인지능력과 다양한 셋의 스킬을 개발하는 모델을 의미합니다. 그리고 그러고난 후에 inference 할때 이 능력을 원하는 작업에 빠르게 적응하거나 인식합니다 (위 이미지 참고). 최근연구를 통해 이걸 in-context learning이라고 부르기로 했고 task 특성의 특징에 맞게 사전학습된 언어모델의 텍스트 입력값으로 사용하는 것을 일컫습니다. 이 모델은 자연어 지시와 적은 demonstration에 영향을 받습니다. 그리고 다음에 올 단어를 간단하게 예측함으로써 추가적인 예시를 완벽하게 기대하게 만듭니다.",
+          "hash": "48fbd476c085ab36cb78e29fd9a76765d66c03ba983f0977be3cd1e10bb6c66a"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "76062acb540522ee899d302d17a9e1ddbdeedc01ac4d90216a890da12888d42f",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[null,5]",
+          "[null,8]",
+          "[null,9]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[null,5]",
+          "[null,10]",
+          "[null,8]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"role-of-instructions\",3]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]"
+        ]
+      },
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[null,5]",
+          "[null,10]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[null,3]",
+          "[\"classification-as-nli\",2]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[null,5]",
+          "[null,9]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",1]",
+          "[\"문제-정의\",6]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[null,5]",
+          "[null,8]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"results\",1]",
+          "[\"chain-of-thought-prompting\",5]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[null,5]",
+          "[null,8]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-in-context-learning-icl\",1]",
+          "[\"introduction\",1]",
+          "[\"peft-with-ia3\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[null,8]",
+          "[null,1]",
+          "[null,7]"
+        ],
+        "targetBlocks": [
+          "[\"pre-training-data\",1]",
+          "[\"introduction\",1]",
+          "[\"main-results\",1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,8]",
+          "[null,2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"prompt-tuning\",1]",
+          "[\"results\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,8]",
+          "[null,5]"
+        ],
+        "targetBlocks": [
+          "[\"problem-statement\",1]",
+          "[\"introduction\",1]",
+          "[\"arent-existing-solutions-good-enough\",1]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,8]",
+          "[null,10]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"background\",2]",
+          "[\"qlora-vs-standard-finetuning\",4]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,5]",
+          "[null,8]"
+        ],
+        "targetBlocks": [
+          "[\"pre-training-bert\",1]",
+          "[\"task-1-masked-lm-mlm\",3]",
+          "[\"요약\",1]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[null,5]",
+          "[null,1]",
+          "[null,8]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"speculative-sampling\",1]",
+          "[null,2]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,11]",
+          "[null,8]"
+        ],
+        "targetBlocks": [
+          "[\"peft-parameter-efficient-fine-tuning\",3]",
+          "[\"introduction\",1]",
+          "[\"commonsense-reasoning\",4]"
+        ]
+      },
+      {
+        "id": "prompt-engineering",
+        "sourceBlocks": [
+          "[null,10]",
+          "[null,8]",
+          "[null,9]"
+        ],
+        "targetBlocks": [
+          "[\"zero-shot-cot-prompting\",7]",
+          "[\"cot-prompting\",5]",
+          "[\"the-instruction\",2]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,2]",
+          "[null,4]"
+        ],
+        "targetBlocks": [
+          "[\"discussion-and-limitations\",1]",
+          "[\"introduction\",1]",
+          "[\"eda-makes-gains\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "ia3-paper",
+        "relation": "evaluation_comparison",
+        "reason": "in-context learning은 적은 demonstration을 입력으로 사용하고, ICL 설명은 레이블된 예시와 쿼리를 프롬프트에 넣는 방식을 설명해 두 방식을 구체적으로 비교할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "gpt-3",
+          "blockId": "[null,5]",
+          "anchor": null,
+          "quote": "이런 문제를 해결하기 위한 잠재적인 루트는 바로 meta learning이다. 언어모델의 context딴에서 학습시간동안 패턴인지능력과 다양한 셋의 스킬을 개발하는 모델을 의미합니다. 그리고 그러고난 후에 inference 할때 이 능력을 원하는 작업에 빠르게 적응하거나 인식합니다 (위 이미지 참고). 최근연구를 통해 이걸 in-context learning이라고 부르기로 했고 task 특성의 특징에 맞게 사전학습된 언어모델의 텍스트 입력값으로 사용하는 것을 일컫습니다. 이 모델은 자연어 지시와 적은 demonstration에 영향을 받습니다. 그리고 다음에 올 단어를 간단하게 예측함으로써 추가적인 예시를 완벽하게 기대하게 만듭니다.",
+          "hash": "48fbd476c085ab36cb78e29fd9a76765d66c03ba983f0977be3cd1e10bb6c66a"
+        },
+        "targetEvidence": {
+          "articleId": "ia3-paper",
+          "blockId": "[\"few-shot-in-context-learning-icl\",1]",
+          "anchor": "few-shot-in-context-learning-icl",
+          "quote": "ICL은 레이블이 지정되지 않은 쿼리 예제와 함께 연결되고 프롬프트가 표시된 입력 대상 예제(\"샷\"이라고 함)를 레이블이 지정되지 않은 쿼리 예제와 함께 제공함으로써 모델을 유도하는 것을 목표로 합니다. ICL의 이점은 파인튜닝 없이 즉시 많은 task에 단일의 모델을 적용할 수 있는 점입니다. 이는 또한 mixed-task batches를 가능하게 만들어주며 데이터 배치의 여러 예시가 서로 다른 컨텍스트를 사용하여 서로 다른 작업에 해당하는 작업도 가능합니다.",
+          "hash": "5b1f5fc385ccf87fe5e4f88f5564e1e085e3976e8e120a70e87fd851b2644a26"
+        }
+      },
+      {
+        "id": "flan",
+        "relation": "related_method",
+        "reason": "few-shot 예시를 활용하는 in-context learning과, unseen task 수행을 위해 instruction tuning을 하는 접근의 차이를 알아볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "gpt-3",
+          "blockId": "[null,5]",
+          "anchor": null,
+          "quote": "이런 문제를 해결하기 위한 잠재적인 루트는 바로 meta learning이다. 언어모델의 context딴에서 학습시간동안 패턴인지능력과 다양한 셋의 스킬을 개발하는 모델을 의미합니다. 그리고 그러고난 후에 inference 할때 이 능력을 원하는 작업에 빠르게 적응하거나 인식합니다 (위 이미지 참고). 최근연구를 통해 이걸 in-context learning이라고 부르기로 했고 task 특성의 특징에 맞게 사전학습된 언어모델의 텍스트 입력값으로 사용하는 것을 일컫습니다. 이 모델은 자연어 지시와 적은 demonstration에 영향을 받습니다. 그리고 다음에 올 단어를 간단하게 예측함으로써 추가적인 예시를 완벽하게 기대하게 만듭니다.",
+          "hash": "48fbd476c085ab36cb78e29fd9a76765d66c03ba983f0977be3cd1e10bb6c66a"
+        },
+        "targetEvidence": {
+          "articleId": "flan",
+          "blockId": "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "anchor": "flan--instruction-tuning-improves-zero-shot-learning",
+          "quote": "메인 아이디어로는 지시(supervision)를 사용하여 언어모델에 특정 task에 대해 가르치는 것임. 그 언어모델은 심지어 unseen task 일지라도 잘 작동할 것이며 instruction을 따르기 위해 잘 학습할 것임. 밝혀지지 않은 task에 대해 평가하기 위해 작업 유형별로 데이터 세트를 클러스터로 그룹화하고 각 작업 클러스터를 평가하기 위해 보류하고 나머지 모든 클러스터에서 instruction tuning을 진행함.",
+          "hash": "8e61d4b0359d7e005d690e859cf2c30921b7666b84e49772ef0527d1b8b422e7"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "version": 2,
+  "id": "alphallm",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "16827cb6429ba785a2460734743914eea860af6d9a5f113aad5d0fc2a1844747",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "reinforcement-learning",
+        "role": "about",
+        "evidence": {
+          "articleId": "alphallm",
+          "blockId": "[\"related-work\",3]",
+          "anchor": "related-work",
+          "quote": "이전 연구와는 달리, 우리는 LLM의 자기 개선을 위해 MCTS(Monte Carlo Tree Search)의 감독을 활용할 것을 제안합니다. MCTS의 output을 사용하여 LLM을 계속해서 훈련합니다. MCTS의 output은 기존의 sampling 데이터보다 더 품질이 더 좋기에 가능하며 이 품질의 차이는 LLM이 self-improving을 가능하게 만들어줍니다.",
+          "hash": "6f20c7c4d404228cddf29646d99e69ac40a0dff5c52a8dcb72f0e88b8119c51f"
+        }
+      },
+      {
+        "id": "chain-of-thought",
+        "role": "about",
+        "evidence": {
+          "articleId": "alphallm",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "그러나 LLM이 자신의 출력에 대해 효과적으로 비평하여 응답 품질을 향상시키거나 응답의 품질을 나타내는 scalar reward를 적용할 수 있는지는 특히 복잡한 계획 및 추론을 요구하는 상황에서 지속적인 연구 주제로 남아있었음. MCTS와 reinforcement learning을 통해 모델이 self-play하고 인간과 동등한 성능에 부합하며 심지어 게임과 같은 복잡한 task에서 인간을 능가하는 성능을 보여주었음. 이로 말미암아 self-improving하는 novel paradigm을 접목한 MCTS + LLM이 가능하지 않을까? 라는 자연스러운 질문이 제기되었음.",
+          "hash": "3772fe046da1ac1fc314512f41ef452a582b2a98ab48fbf122ab3013c79a767e"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "18c9d91c8d250564dfc418c2a4d61e834e4f1e5ca40ede4821de2c58f8f63849",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "thinkingcap",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"related-work\",3]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"conclusion\",1]",
+          "[\"resources\",2]",
+          "[\"tldr\",17]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"introduction\",6]",
+          "[\"related-work\",3]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"the-data-factory\",1]",
+          "[\"baselines\",1]"
+        ]
+      },
+      {
+        "id": "constitutional-ai",
+        "sourceBlocks": [
+          "[\"related-work\",3]",
+          "[\"introduction\",1]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"rl-stage-rlaif\",1]",
+          "[\"introduction\",5]",
+          "[\"method\",1]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",2]"
+        ],
+        "targetBlocks": [
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"introduction\",1]",
+          "[\"symbolic-reasoning\",1]"
+        ]
+      },
+      {
+        "id": "searchswarm",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"related-work\",1]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"정리\",1]",
+          "[\"experiments\",1]"
+        ]
+      },
+      {
+        "id": "prompt-engineering",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",2]"
+        ],
+        "targetBlocks": [
+          "[\"cot-prompting\",1]",
+          "[\"zero-shot-cot-prompting\",7]",
+          "[\"to-do-or-not-to-do\",5]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",3]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[null,2]",
+          "[\"few-shot-learning은-어떻게-작동할까\",1]"
+        ]
+      },
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"problem-formulation\",1]",
+          "[\"introduction\",3]",
+          "[\"related-work\",2]"
+        ],
+        "targetBlocks": [
+          "[\"problem-formulation\",2]",
+          "[\"introduction\",2]",
+          "[\"convnet-efficiency\",1]"
+        ]
+      },
+      {
+        "id": "kodistill",
+        "sourceBlocks": [
+          "[\"related-work\",3]",
+          "[\"introduction\",3]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"3-continue-with-sft-and-verifiable-grpo\",10]",
+          "[null,2]",
+          "[\"at-a-glance\",1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[\"related-work\",2]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",7]",
+          "[\"prompt-tuning\",1]",
+          "[\"interpretability\",1]"
+        ]
+      },
+      {
+        "id": "k-browsecomp",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"정리\",1]",
+          "[\"synthetic-split-100문제--이-논문의-핵심-기여\",2]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"related-work\",2]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"의의\",2]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]"
+        ]
+      },
+      {
+        "id": "dflash",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"preliminary\",7]",
+          "[\"inference\",9]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[\"related-work\",3]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]",
+          "[\"nas-search\",2]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"related-work\",3]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",9]",
+          "[\"speculative-sampling\",1]",
+          "[\"overview\",5]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "constitutional-ai",
+        "relation": "related_method",
+        "reason": "응답을 비평해 개선하는 자기개선 흐름을 비교하며, 한쪽은 MCTS 출력을 학습에 쓰고 다른 쪽은 자기비평·수정으로 학습 데이터를 만듭니다.",
+        "sourceEvidence": {
+          "articleId": "alphallm",
+          "blockId": "[\"related-work\",3]",
+          "anchor": "related-work",
+          "quote": "이전 연구와는 달리, 우리는 LLM의 자기 개선을 위해 MCTS(Monte Carlo Tree Search)의 감독을 활용할 것을 제안합니다. MCTS의 output을 사용하여 LLM을 계속해서 훈련합니다. MCTS의 output은 기존의 sampling 데이터보다 더 품질이 더 좋기에 가능하며 이 품질의 차이는 LLM이 self-improving을 가능하게 만들어줍니다.",
+          "hash": "6f20c7c4d404228cddf29646d99e69ac40a0dff5c52a8dcb72f0e88b8119c51f"
+        },
+        "targetEvidence": {
+          "articleId": "constitutional-ai",
+          "blockId": "[\"introduction\",5]",
+          "anchor": "introduction",
+          "quote": "모델이 **스스로 자기 응답을 비판(critique)하고 수정(revision)**하여 supervised 학습 데이터를 생성(SL-CAI).",
+          "hash": "06bd86a765f40ffe1996457ab7c93316996c5a49b8a3b775419670640209e916"
+        }
+      }
+    ]
+  }
+}

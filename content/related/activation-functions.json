@@ -1,0 +1,252 @@
+{
+  "version": 2,
+  "id": "activation-functions",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "b0e70b31c43b9000a76d9cd4ba04fc83a4b01076ca1fa380cb6cec78022e8c92",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "pytorch-tensors",
+        "role": "applies",
+        "evidence": {
+          "articleId": "activation-functions",
+          "blockId": "[\"case-1\",1]",
+          "anchor": "case-1",
+          "quote": "import torch import torch.nn as nn from transformers import AutoModel, AutoModelForSequenceClassification class CustomBaseModel(nn.Module): def __init__(self, model_name: str, num_classes: int = 3, dr_rate: float = 0.2): super(CustomBaseModel, self).__init__() self.num_classes = num_classes self.dr_rate = dr_rate self.model = AutoModel.from_pretrained(model_name) self.classifier = nn.Sequential( nn.Linear(self.model.config.hidden_size, self.model.config.hidden_size),",
+          "hash": "b47129362cd6391369a2b3e837c102ca9afc81566ded0bff8cdf448ff1916b8e"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "78e573abce4bbaf94be8f24bd6ec494d172ed90f819acb8037ec86e6708242a6",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "torch-tensor-manipulation-1",
+        "sourceBlocks": [
+          "[\"case-1\",1]",
+          "[\"answer\",8]",
+          "[\"curiosity\",1]"
+        ],
+        "targetBlocks": [
+          "[\"결론\",1]",
+          "[\"torchview\",8]",
+          "[\"view-reshape-transpose-함수-정리\",1]"
+        ]
+      },
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"case-2\",1]",
+          "[\"case-1\",2]",
+          "[\"answer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"model-input-sequence-length\",7]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",3]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"answer\",3]",
+          "[\"case-1\",3]",
+          "[\"case-2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"model-architecture\",1]",
+          "[\"hyper-parameter\",7]",
+          "[\"task-1-masked-lm-mlm\",3]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-2",
+        "sourceBlocks": [
+          "[\"case-1\",1]",
+          "[\"answer\",7]",
+          "[\"case-2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"squeeze\",11]",
+          "[\"unsqueeze\",1]",
+          "[\"unsqueeze\",9]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"case-2\",2]",
+          "[\"answer\",1]",
+          "[\"case-1\",3]"
+        ],
+        "targetBlocks": [
+          "[\"merging-lora-weights\",7]",
+          "[\"dora-support\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"curiosity\",1]",
+          "[\"answer\",7]",
+          "[\"case-1\",2]"
+        ],
+        "targetBlocks": [
+          "[\"micro-design\",2]",
+          "[\"의의\",2]",
+          "[\"instruction\",8]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-3",
+        "sourceBlocks": [
+          "[\"case-1\",1]",
+          "[\"answer\",8]",
+          "[\"case-2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",1]",
+          "[\"triu\",5]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"curiosity\",1]",
+          "[\"case-2\",1]",
+          "[\"case-1\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",2]",
+          "[\"source-code\",1]",
+          "[\"solution\",3]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"curiosity\",1]",
+          "[\"answer\",8]",
+          "[\"case-1\",1]"
+        ],
+        "targetBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"multi-head-attention\",5]",
+          "[\"final-linear-and-softmax-layer\",3]"
+        ]
+      },
+      {
+        "id": "python-assert",
+        "sourceBlocks": [
+          "[\"answer\",8]",
+          "[\"curiosity\",1]",
+          "[\"case-2\",1]"
+        ],
+        "targetBlocks": [
+          "[\"가정-설명문assert\",2]",
+          "[\"assert가-필요한-이유\",5]",
+          "[\"assert가-필요한-이유\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"curiosity\",1]",
+          "[\"answer\",7]",
+          "[\"case-1\",2]"
+        ],
+        "targetBlocks": [
+          "[\"architecture\",1]",
+          "[\"efficient-implementation\",2]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"curiosity\",1]",
+          "[\"case-2\",1]",
+          "[\"case-1\",3]"
+        ],
+        "targetBlocks": [
+          "[\"tensor-parallel\",2]",
+          "[\"4bit-or-8bit-quantization\",10]",
+          "[\"increasing-speed-a-llm-serving-inference\",9]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"case-1\",3]",
+          "[\"case-2\",2]",
+          "[\"answer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"glue-benchmark\",3]",
+          "[\"image-classification\",5]",
+          "[\"e2e-benchmark\",2]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"curiosity\",1]",
+          "[\"answer\",7]",
+          "[\"case-1\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",6]",
+          "[\"error-2\",3]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"curiosity\",1]",
+          "[\"answer\",3]",
+          "[\"case-1\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",10]",
+          "[\"speculative-sampling\",5]",
+          "[\"approximation-model의-선택\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "bert",
+        "relation": "concept_explanation",
+        "reason": "GELU activation을 사용하는 BERT의 설명과 두 classification head의 GELU 구현을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "activation-functions",
+          "blockId": "[\"answer\",3]",
+          "anchor": "answer",
+          "quote": "# line 60 in transformers.activations.py class GELUActivation(nn.Module): \"\"\" Original Implementation of the GELU activation function in Google BERT repo when initially created.",
+          "hash": "18d44317e5d77036424af27d2c0e3751c3c4734178733e5bf67406333cddec02"
+        },
+        "targetEvidence": {
+          "articleId": "bert",
+          "blockId": "[\"hyper-parameter\",7]",
+          "anchor": "hyper-parameter",
+          "quote": "GeLU activation function",
+          "hash": "82ae24bf1bec965ec09f3b329772e0e683ded4b98689d370f00b5cfdc0b9e9a3"
+        }
+      }
+    ]
+  }
+}

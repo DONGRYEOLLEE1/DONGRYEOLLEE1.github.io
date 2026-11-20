@@ -1,0 +1,271 @@
+{
+  "version": 2,
+  "id": "efficientnet",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "4d3aa59089ed5838ecc3b482b842121269eaa920b3cd6852ea41edf7cb5676e2",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "cnn",
+        "role": "about",
+        "evidence": {
+          "articleId": "efficientnet",
+          "blockId": "[\"model-scaling\",1]",
+          "anchor": "model-scaling",
+          "quote": "ResNet의 경우 scale down(ResNet-18) 또는 network depth를 조정하여 scale up(ResNet-200)한 경우가 존재함. 그러나 여전히 ConvNet을 어떻게 하면 효율적이고 정확도 높게 학습시킬 수 있을까? 라는 의문점이 존재함. 이에 본 연구진은 공학적이며 실증적인 연구를 통해 ConvNet을 width, depth, resolution의 차원을 모두 높이는 scaling 방법을 연구하였음.",
+          "hash": "ce9a48fb03bfc992e720933660ba893556ef5632b35d2c38f1191790652cd516"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "1017d7a241120bfc42313b93a46fc0d1d9afe14e9a6e5f9dd8981916466d8b02",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"introduction\",2]",
+          "[\"의의\",2]"
+        ],
+        "targetBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"introduction\",1]",
+          "[\"의의\",2]"
+        ]
+      },
+      {
+        "id": "resnext",
+        "sourceBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"introduction\",1]",
+          "[\"scaling-dimensions\",4]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"aggregated-transformations\",2]",
+          "[\"related-work\",4]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"convnet-accuracy\",1]",
+          "[\"efficientnet-architecture\",1]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",6]",
+          "[\"modernizing-a-convnet-a-roadmap\",1]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"problem-formulation\",1]",
+          "[\"convnet-accuracy\",1]"
+        ],
+        "targetBlocks": [
+          "[\"overfeat-intuition\",2]",
+          "[\"문제점---convnet의-input-사이즈-제약\",3]",
+          "[\"convnets-sliding-window-efficiency\",3]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"의의\",2]",
+          "[\"convnet-accuracy\",1]",
+          "[\"convnet-efficiency\",1]"
+        ],
+        "targetBlocks": [
+          "[\"의의\",3]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"요약\",6]"
+        ]
+      },
+      {
+        "id": "fast-r-cnn",
+        "sourceBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"convnet-accuracy\",1]",
+          "[\"convnet-efficiency\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",2]",
+          "[\"rough-요약\",1]",
+          "[\"3-계층적-샘플링-hierarchical-sampling\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"problem-formulation\",2]",
+          "[\"convnet-accuracy\",1]",
+          "[\"introduction\",2]"
+        ],
+        "targetBlocks": [
+          "[\"problem-statement\",1]",
+          "[\"introduction\",1]",
+          "[\"low-rank-parameterized-update-matrices\",1]"
+        ]
+      },
+      {
+        "id": "yolo-v1",
+        "sourceBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"efficientnet-architecture\",1]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"network-design\",1]",
+          "[\"introduction\",1]",
+          "[\"training\",3]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"discussion\",2]",
+          "[\"convnet-efficiency\",1]"
+        ],
+        "targetBlocks": [
+          "[\"backbone\",2]",
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"roi-pooling\",8]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"convnet-accuracy\",1]",
+          "[\"efficientnet-architecture\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"peft\",1]",
+          "[\"의의\",2]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"convnet-accuracy\",1]",
+          "[\"introduction\",2]",
+          "[\"efficientnet-architecture\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"efficient-implementation\",2]",
+          "[\"approach\",1]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"의의\",1]",
+          "[\"convnet-accuracy\",1]"
+        ],
+        "targetBlocks": [
+          "[\"preview\",4]",
+          "[\"의의\",4]",
+          "[\"1-anchor-box\",2]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"convnet-efficiency\",1]",
+          "[\"convnet-accuracy\",1]",
+          "[\"introduction\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"scaling-the-number-of-trainable-parameters\",2]",
+          "[\"parameter-efficiency-in-existing-methods\",2]"
+        ]
+      },
+      {
+        "id": "r-cnn",
+        "sourceBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"convnet-accuracy\",1]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"hard-negative-mining\",4]",
+          "[\"요약\",4]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"scaling-dimensions\",4]",
+          "[\"model-scaling\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",5]",
+          "[\"conclusions\",1]",
+          "[\"chain-of-thought-prompting\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "efficientnet-v2",
+        "relation": "related_method",
+        "reason": "EfficientNet의 width·depth·resolution 스케일링과 EfficientNetV2의 MBConv·Fused-MBConv 교체를 함께 살펴보며 모델 효율화 접근을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "efficientnet",
+          "blockId": "[\"model-scaling\",1]",
+          "anchor": "model-scaling",
+          "quote": "ResNet의 경우 scale down(ResNet-18) 또는 network depth를 조정하여 scale up(ResNet-200)한 경우가 존재함. 그러나 여전히 ConvNet을 어떻게 하면 효율적이고 정확도 높게 학습시킬 수 있을까? 라는 의문점이 존재함. 이에 본 연구진은 공학적이며 실증적인 연구를 통해 ConvNet을 width, depth, resolution의 차원을 모두 높이는 scaling 방법을 연구하였음.",
+          "hash": "ce9a48fb03bfc992e720933660ba893556ef5632b35d2c38f1191790652cd516"
+        },
+        "targetEvidence": {
+          "articleId": "efficientnet-v2",
+          "blockId": "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "anchor": "depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages",
+          "quote": "EfficientNet의 학습 병목현상은 확장된 Depthwise Convolution으로부터 야기되었음. DC는 일반적인 convolution보다 더 적은 파라미터와 FLOPs를 가지고 있음. 그러나 종종 완전히 accelerator에서 활성화 되지 않음. 최근 Fused-MBConv가 Gupta & Tan, 2019 제안되었고 후에 다른 연구에서도 쓰였으며 mobile 또는 서버 accelerator에서 더 잘 활용되어지는 것을 확인했음. MBConv에서의 depthwise conv3x3 + expansion conv1x1 를 단일의 regular Conv3x3으로 대체 할 수 있음. 이 2개의 block을 구조적으로 비교하기위해 EfficientNet-B4에서 orginal MBConv를 Fused-MBConv로 점차 교체하였음.",
+          "hash": "0f174e863d85ec7890c6be00153e09879392ec80c8c81999f7e808426060de3f"
+        }
+      },
+      {
+        "id": "resnext",
+        "relation": "related_method",
+        "reason": "EfficientNet은 width·depth·resolution을 함께 조정하고, ResNeXt는 transformation을 집계하는 구조를 제안해 CNN 설계의 서로 다른 확장 방식을 비교할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "efficientnet",
+          "blockId": "[\"model-scaling\",1]",
+          "anchor": "model-scaling",
+          "quote": "ResNet의 경우 scale down(ResNet-18) 또는 network depth를 조정하여 scale up(ResNet-200)한 경우가 존재함. 그러나 여전히 ConvNet을 어떻게 하면 효율적이고 정확도 높게 학습시킬 수 있을까? 라는 의문점이 존재함. 이에 본 연구진은 공학적이며 실증적인 연구를 통해 ConvNet을 width, depth, resolution의 차원을 모두 높이는 scaling 방법을 연구하였음.",
+          "hash": "ce9a48fb03bfc992e720933660ba893556ef5632b35d2c38f1191790652cd516"
+        },
+        "targetEvidence": {
+          "articleId": "resnext",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "이 논문에선 VGG-net과 ResNet의 layer를 반복하는 전략과 같은 간단한 구조를 제안함과 동시에 split-transform-merge 전략을 쉽게 적용하는 방식에 대해 제안. ResNeXt의 모듈은 transformation의 set을 나타내며 각 낮은 차원의 임베딩에서의 아웃풋은 합계로 집계됨. 연구진은 집계되어지는 transformation들은 모두 같은 toplogy를 가진다는 단순한 아이디어를 추구함. 이 디자인은 특별한 form 없이 어떠한 transformation의 큰 개수가 확장되어지는 걸 가능케 만들어줌.",
+          "hash": "f1d9565b04589dbb39200958584244f0ba3bef00bad3ef7f540fc5ae3cf32e09"
+        }
+      }
+    ]
+  }
+}

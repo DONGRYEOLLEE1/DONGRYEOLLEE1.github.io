@@ -1,0 +1,317 @@
+{
+  "version": 2,
+  "id": "developing-daily-01",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "9b640c93b412fd3ebefe674c7cda10a6e366d69586a4d14a18206bce982b8aa2",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "containers",
+        "role": "applies",
+        "evidence": {
+          "articleId": "developing-daily-01",
+          "blockId": "[\"docker\",4]",
+          "anchor": "docker",
+          "quote": "$ docker stop <container ID> 또는 $ docker rm <container ID> 또는 $ docker container prune",
+          "hash": "e678dc77e35ac57c84be68dfada6c8d89242cadcd670bb42e33ad8c89fd69cbe"
+        }
+      },
+      {
+        "id": "model-serving",
+        "role": "applies",
+        "evidence": {
+          "articleId": "developing-daily-01",
+          "blockId": "[\"tgi\",1]",
+          "anchor": "tgi",
+          "quote": "EleutherAI/polyglot-ko-12.8b 모델 Tensor Parallel serving 성공 (PoC)",
+          "hash": "603793205032df3f21d5727fd78dc1906a5e5bd5644682bf000ae1139dd310e3"
+        }
+      },
+      {
+        "id": "lora",
+        "role": "about",
+        "evidence": {
+          "articleId": "developing-daily-01",
+          "blockId": "[\"tgi\",2]",
+          "anchor": "tgi",
+          "quote": "Local LLM (LoRA) 파일 적용 가능한지 알아보다가 LoRA 모델은 아직 지원하지 않음을 알아내었고 후속조치 어떻게 해야할지 고민",
+          "hash": "087632ac35661c20101d32ff036287bff7f2337e01913bea0be81fd462156c3e"
+        }
+      }
+    ],
+    "review": [
+      {
+        "id": "lora",
+        "proposedRole": "about"
+      }
+    ]
+  },
+  "entry": {
+    "inputHash": "d436f44abc782ffa16ff132c874dba71b39be4b81c139279b0563249bc944417",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"docker\",4]",
+          "[\"tgi\",1]",
+          "[\"tgi\",2]"
+        ],
+        "targetBlocks": [
+          "[\"1\",1]",
+          "[\"1\",6]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"ref\",1]",
+          "[\"tgi\",2]",
+          "[\"docker\",2]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",1]",
+          "[\"solution-1\",1]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"tgi\",1]",
+          "[\"ref\",3]",
+          "[\"docker\",2]"
+        ],
+        "targetBlocks": [
+          "[\"ts\",6]",
+          "[\"ref\",3]",
+          "[\"gradio\",5]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"tgi\",2]",
+          "[\"ref\",4]",
+          "[\"docker\",4]"
+        ],
+        "targetBlocks": [
+          "[\"에러\",4]",
+          "[\"ref\",2]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "developing-daily-03",
+        "sourceBlocks": [
+          "[\"docker\",4]",
+          "[\"tgi\",1]",
+          "[\"ref\",3]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"tgi\",2]",
+          "[\"ref\",4]",
+          "[\"docker\",4]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"envs\",1]",
+          "[\"ref\",5]"
+        ]
+      },
+      {
+        "id": "ollama-docker-troubleshooting",
+        "sourceBlocks": [
+          "[\"docker\",4]",
+          "[\"tgi\",1]",
+          "[\"ref\",3]"
+        ],
+        "targetBlocks": [
+          "[\"4-2-해결방안-open-webui-discussions4376\",2]",
+          "[\"4-2-해결방안-open-webui-discussions4376\",3]",
+          "[\"구현-사항\",1]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"tgi\",2]",
+          "[\"ref\",4]",
+          "[\"docker\",4]"
+        ],
+        "targetBlocks": [
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",12]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "docker-gpu-troubleshooting",
+        "sourceBlocks": [
+          "[\"docker\",4]",
+          "[\"ref\",3]",
+          "[\"tgi\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-04",
+        "sourceBlocks": [
+          "[\"ref\",2]",
+          "[\"docker\",4]",
+          "[\"tgi\",2]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",2]",
+          "[\"gitignore\",2]",
+          "[\"파일-이름-변경\",1]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"tgi\",2]",
+          "[\"ref\",4]",
+          "[\"docker\",4]"
+        ],
+        "targetBlocks": [
+          "[\"model\",3]",
+          "[\"envs\",2]",
+          "[\"training\",1]"
+        ]
+      },
+      {
+        "id": "peft-target-modules",
+        "sourceBlocks": [
+          "[\"tgi\",2]",
+          "[\"ref\",4]",
+          "[\"docker\",8]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"tgi\",2]",
+          "[\"ref\",4]",
+          "[\"docker\",4]"
+        ],
+        "targetBlocks": [
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"ref\",1]",
+          "[\"improving-dora\",2]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"tgi\",2]",
+          "[\"ref\",4]",
+          "[\"docker\",4]"
+        ],
+        "targetBlocks": [
+          "[\"low-rank-adaptation-lora\",1]",
+          "[\"introduction\",6]",
+          "[\"method-formulation\",1]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"tgi\",1]",
+          "[\"ref\",3]",
+          "[\"docker\",4]"
+        ],
+        "targetBlocks": [
+          "[\"increasing-speed-a-llm-serving-inference\",4]",
+          "[\"4bit-or-8bit-quantization\",6]",
+          "[\"tensor-parallel\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "tgi-implementation",
+        "relation": "related_method",
+        "reason": "LoRA 모델을 TGI에 적재하기 위해 standalone 모델로 변환하는 절차와 TGI 실행 명령을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "developing-daily-01",
+          "blockId": "[\"tgi\",2]",
+          "anchor": "tgi",
+          "quote": "Local LLM (LoRA) 파일 적용 가능한지 알아보다가 LoRA 모델은 아직 지원하지 않음을 알아내었고 후속조치 어떻게 해야할지 고민",
+          "hash": "087632ac35661c20101d32ff036287bff7f2337e01913bea0be81fd462156c3e"
+        },
+        "targetEvidence": {
+          "articleId": "tgi-implementation",
+          "blockId": "[\"1\",1]",
+          "anchor": "1",
+          "quote": "TGI에 모델을 적재시키기 위해선 lora 파인튜닝 모델 -> standalone 모델 변환(Full-finetuning 모델 필요X)",
+          "hash": "f5de7d2d3d8c89519d5d917406e602b627456be346ef41f0b6f06b5cd1e78578"
+        }
+      },
+      {
+        "id": "peft-target-modules",
+        "relation": "related_method",
+        "reason": "LoRA 적용을 고민하는 상황에서 모델별 LoRA target modules 매핑을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "developing-daily-01",
+          "blockId": "[\"docker\",8]",
+          "anchor": "docker",
+          "quote": "$ docker info",
+          "hash": "74c8ced605d0bd1ad82fc122762ba76c3b2aafaf7d6826634ce13f6ba493df02"
+        },
+        "targetEvidence": {
+          "articleId": "peft-target-modules",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "# peft/utils/other.py in line 328 TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING = { \"t5\": [\"q\", \"v\"], \"mt5\": [\"q\", \"v\"], \"bart\": [\"q_proj\", \"v_proj\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"blip-2\": [\"q\", \"v\", \"q_proj\", \"v_proj\"], \"opt\": [\"q_proj\", \"v_proj\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"value\"], \"xlm-roberta\": [\"query\", \"value\"], \"electra\":",
+          "hash": "b0dc93edb070d31e4f57be2457664c20130561af39054733ee01cfb9f5be00be"
+        }
+      },
+      {
+        "id": "lora-finetuning",
+        "relation": "related_method",
+        "reason": "LoRA 파인튜닝 설정과 실행 예시를 통해 적용 시 필요한 target module 및 학습 절차를 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "developing-daily-01",
+          "blockId": "[\"docker\",4]",
+          "anchor": "docker",
+          "quote": "$ docker stop <container ID> 또는 $ docker rm <container ID> 또는 $ docker container prune",
+          "hash": "e678dc77e35ac57c84be68dfada6c8d89242cadcd670bb42e33ad8c89fd69cbe"
+        },
+        "targetEvidence": {
+          "articleId": "lora-finetuning",
+          "blockId": "[\"training\",1]",
+          "anchor": "training",
+          "quote": "python finetune.py \\ --base_model '../model_file/polyglot-ko-5.8b' \\ --data_path './ko_alpaca_data.json' \\ --output_dir './output' \\ --batch_size 128 \\ --mircro_batch_size 4 \\ --num_epochs 3 \\ --learning_rate 2e-5 \\ --cutoff_len 512 \\ --val_set_size 2000 \\ --lora_r 8 \\ --lora_alpha 16 \\ --lora_dropout 0.05 \\ --lora_target_modules '[query_key_value]' \\ --train_on_inputs \\ --group_by_length",
+          "hash": "1d3ec647d3fc9aa157a76778d7d0beb955bd87a846aa384701e66384ac2707f9"
+        }
+      }
+    ]
+  }
+}

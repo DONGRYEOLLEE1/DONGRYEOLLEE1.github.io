@@ -1,0 +1,364 @@
+{
+  "version": 2,
+  "id": "book-spine",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "15f2039c977ead27800b368b2d86299e063f05d82f58e314ca2565640aba5a61",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "cv-evaluation",
+        "role": "about",
+        "evidence": {
+          "articleId": "book-spine",
+          "blockId": "[\"conclusion\",1]",
+          "anchor": "conclusion",
+          "quote": "In each of the four cases, the measurement we relied on differed from the deployed system: in the detector head, padding and downscaling; in the width of the spines in an early OCR test; in whether the dictionary contained the answer; and in whether the page ran on a desktop or a phone.",
+          "hash": "47f4bf8157796d27dc2d41a91e3aaddebd6183d16f05d1775f86a39f2417bfa2"
+        }
+      },
+      {
+        "id": "object-detection",
+        "role": "applies",
+        "evidence": {
+          "articleId": "book-spine",
+          "blockId": "[\"system\",2]",
+          "anchor": "system",
+          "quote": "A photo is first downscaled so that its long side is at most 1,600 px. A one-class oriented bounding box (OBB) detector finds the spines. Near-duplicate boxes are merged (Section 3.5), and the number of boxes scoring 0.4 or more is the book count. Each box is then cut out with a margin of 8% of its short side, rotated so that its long side is vertical, and upscaled if its short side is below 96 px.",
+          "hash": "47a6b7f2df9dece4417da0ca5bd70c47f8e2d281e5d4511a6cf0cf29c50c19b1"
+        }
+      },
+      {
+        "id": "korean-ocr",
+        "role": "applies",
+        "evidence": {
+          "articleId": "book-spine",
+          "blockId": "[\"system\",3]",
+          "anchor": "system",
+          "quote": "Inside the crop, PP-OCRv5 finds text lines and the Korean PP-OCRv5 recognizer reads them; the reading direction is decided from recognition confidence (Section 4.3). Lines that match one of 34 publisher names are dropped, and the line with the tallest glyphs becomes the title query.",
+          "hash": "a8d828d5c1c0da0b9670c987b8309d854a739d49ffcb0ca6be86de1367bca67f"
+        }
+      },
+      {
+        "id": "keyword-search",
+        "role": "applies",
+        "evidence": {
+          "articleId": "book-spine",
+          "blockId": "[\"system\",4]",
+          "anchor": "system",
+          "quote": "Matching normalizes the query, retrieves 50 candidates from a 50,000-book dictionary with character 2-gram and 3-gram BM25, and rescores them with string similarity plus a few rules (Section 5). Each spine ends in one of three states: confirmed (the dictionary entry is taken as the answer), review (candidates are shown and the user picks), or unmatched.",
+          "hash": "42e4da97f352cf20759e335c63c692349941e96920844bb8ef223bed57187f05"
+        }
+      },
+      {
+        "id": "reranking",
+        "role": "applies",
+        "evidence": {
+          "articleId": "book-spine",
+          "blockId": "[\"system\",4]",
+          "anchor": "system",
+          "quote": "Matching normalizes the query, retrieves 50 candidates from a 50,000-book dictionary with character 2-gram and 3-gram BM25, and rescores them with string similarity plus a few rules (Section 5). Each spine ends in one of three states: confirmed (the dictionary entry is taken as the answer), review (candidates are shown and the user picks), or unmatched.",
+          "hash": "42e4da97f352cf20759e335c63c692349941e96920844bb8ef223bed57187f05"
+        }
+      },
+      {
+        "id": "browser-inference",
+        "role": "applies",
+        "evidence": {
+          "articleId": "book-spine",
+          "blockId": "[\"system\",10]",
+          "anchor": "system",
+          "quote": "All three models run in ONNX Runtime Web 1.31.1 on the multithreaded WebAssembly backend inside a Web Worker. The app is a static site made of plain ES modules with no build step. Besides serving its files, the server has one optional endpoint, which forwards the title text of unconfirmed spines to a book-search API when the user asks for it (Section 5.5).",
+          "hash": "7a57d838d048aaf0a034573cbe636dfd3cf21e078ee486caf9a6dbacb9ef48f9"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "505f08e7ace965eb0e1399d5865d854a361ec7600739876d6ad4e89327c84968",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "map-evaluation",
+        "sourceBlocks": [
+          "[\"system\",2]",
+          "[\"conclusion\",1]",
+          "[\"metrics\",3]"
+        ],
+        "targetBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"coco-map\",1]",
+          "[\"refernce\",1]"
+        ]
+      },
+      {
+        "id": "thinkingcap",
+        "sourceBlocks": [
+          "[\"setup\",2]",
+          "[\"ocr-scale\",4]",
+          "[\"eval-path\",9]"
+        ],
+        "targetBlocks": [
+          "[\"setup-training\",13]",
+          "[\"analysis\",3]",
+          "[\"ablation\",1]"
+        ]
+      },
+      {
+        "id": "reranking",
+        "sourceBlocks": [
+          "[\"system\",4]",
+          "[\"tldr\",4]",
+          "[\"open-set\",1]"
+        ],
+        "targetBlocks": [
+          "[\"reranking\",1]",
+          "[\"결론\",1]",
+          "[\"using-rerank-to-improve-keyword-search\",10]"
+        ]
+      },
+      {
+        "id": "kodistill",
+        "sourceBlocks": [
+          "[\"system\",3]",
+          "[\"datasets\",3]",
+          "[\"metrics\",5]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"2-align-ocr-supervision-with-literal-transcription\",1]",
+          "[\"korean-ocr-a-measurable-change\",3]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"eval-path\",6]",
+          "[\"related\",5]",
+          "[\"score-split\",7]"
+        ],
+        "targetBlocks": [
+          "[\"merging-lora-weights\",19]",
+          "[\"ref\",2]",
+          "[\"peft-v090\",1]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"system\",2]",
+          "[\"tldr\",1]",
+          "[\"eval-path\",6]"
+        ],
+        "targetBlocks": [
+          "[\"overfeat-detection-network\",12]",
+          "[\"learning\",10]",
+          "[\"nmsnon-max-suppression\",14]"
+        ]
+      },
+      {
+        "id": "keyword-search",
+        "sourceBlocks": [
+          "[\"system\",4]",
+          "[\"tldr\",4]",
+          "[\"open-set\",2]"
+        ],
+        "targetBlocks": [
+          "[\"conclusion\",2]",
+          "[\"querying-the-wikipedia-dataset-using-keyword-matching\",3]",
+          "[\"conclusion\",4]"
+        ]
+      },
+      {
+        "id": "prompt-engineering",
+        "sourceBlocks": [
+          "[\"eval-path\",6]",
+          "[\"score-split\",7]",
+          "[\"system\",7]"
+        ],
+        "targetBlocks": [
+          "[\"qa\",4]",
+          "[\"cot-prompting\",3]",
+          "[\"conversation\",2]"
+        ]
+      },
+      {
+        "id": "k-browsecomp",
+        "sourceBlocks": [
+          "[\"system\",8]",
+          "[\"tldr\",4]",
+          "[\"reranker\",17]"
+        ],
+        "targetBlocks": [
+          "[\"main-results\",13]",
+          "[\"setup\",1]",
+          "[\"failure-mode-taxonomy-f0f8\",4]"
+        ]
+      },
+      {
+        "id": "ohem",
+        "sourceBlocks": [
+          "[\"system\",2]",
+          "[\"setup\",1]",
+          "[\"tldr\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",3]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"tldr\",5]",
+          "[\"ablation\",10]",
+          "[\"first-visit\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"t5-xxl-walltime-실측\",15]",
+          "[\"conclusion\",1]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"eval-path\",9]",
+          "[\"ocr-scale\",6]",
+          "[\"reranker\",13]"
+        ],
+        "targetBlocks": [
+          "[\"robustness-of-dora-towards-different-rank-settings\",2]",
+          "[\"weight-decomposition-analysis\",6]",
+          "[\"imagevideo-text-understanding\",1]"
+        ]
+      },
+      {
+        "id": "r-cnn",
+        "sourceBlocks": [
+          "[\"system\",2]",
+          "[\"datasets\",12]",
+          "[\"eval-path\",6]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"region-proposal-selective-search\",3]",
+          "[\"nmsnon-maximum-suppression\",17]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"setup\",2]",
+          "[\"eval-path\",6]",
+          "[\"system\",7]"
+        ],
+        "targetBlocks": [
+          "[\"memory-efficient-layer-replication-with-lora\",8]",
+          "[\"peft-v0100\",1]",
+          "[\"improving-dora\",1]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"system\",2]",
+          "[\"eval-path\",6]",
+          "[\"ablation\",10]"
+        ],
+        "targetBlocks": [
+          "[\"preview\",3]",
+          "[\"detection\",1]",
+          "[\"2-rpnregion-proposal-network\",13]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "map-evaluation",
+        "relation": "concept_explanation",
+        "reason": "책 등뼈 검출의 mAP50을どう解釈するか、APとIoUに基づく物体検出評価の説明から学べます。",
+        "sourceEvidence": {
+          "articleId": "book-spine",
+          "blockId": "[\"metrics\",3]",
+          "anchor": "metrics",
+          "quote": "mAP50 is box mAP at IoU 0.5 on the 4TU validation set.",
+          "hash": "a86030d0e647713d0b4f52cf50a0c7c07af3667841e2aa02969133adc0e8d8fb"
+        },
+        "targetEvidence": {
+          "articleId": "map-evaluation",
+          "blockId": "[\"mapmean-average-precision\",1]",
+          "anchor": "mapmean-average-precision",
+          "quote": "AP는 Faster R-CNN, SSD와 같이 객체탐지의 정확도를 측정하는데있어서 가장 인기있는 metric이다. AP는 0과 1사이의 값을 가지는 recall을 통해 average precision값을 계산한다. 꽤나 복잡한 얘기로 들릴수 있겠지만 예시와 함께 설명하고자한다. 그전에, precision, recall, IoU에 대해 알아보자.",
+          "hash": "01b98da19a8d4cd15cc9fb7a64670351f90a987efd64d39a5808b9cab4a29f63"
+        }
+      },
+      {
+        "id": "reranking",
+        "relation": "concept_explanation",
+        "reason": "候補を文字列類似度などで再採点する本の照合処理を、rerankingの基本的な仕組みと結び付けて理解できます。",
+        "sourceEvidence": {
+          "articleId": "book-spine",
+          "blockId": "[\"open-set\",1]",
+          "anchor": "open-set",
+          "quote": "The first reranker scored each candidate with the maximum of three RapidFuzz similarities: token_set_ratio, ratio on space-free strings, and partial_ratio. It had been evaluated only against the closed list of 90 titles used in Section 4, where the answer is always among the candidates.",
+          "hash": "36a824df433cfa957b73cc1d19e9bb1bf55d080cac83cfe8143310dc28e28ca5"
+        },
+        "targetEvidence": {
+          "articleId": "reranking",
+          "blockId": "[\"reranking\",1]",
+          "anchor": "reranking",
+          "quote": "Reranking은 다음과 같이 작동합니다: 각 (쿼리, 응답) 쌍에 대해 관련성 점수를 부여합니다. 이름에서 암시하듯이, 응답이 쿼리와 관련성이 높은 경우 높은 점수를 부여하고, 그렇지 않은 경우 낮은 점수를 부여합니다. 이 장에서는 이 모듈에서 이전에 찾은 위키피디아 검색 결과를 개선하기 위해 재정렬을 사용하는 방법에 대해 배울 것입니다.",
+          "hash": "4f0224bbf25b454693f37397948cea53af80d74aa9aaa9f4de74c1ea7f5cdf1c"
+        }
+      },
+      {
+        "id": "r-cnn",
+        "relation": "concept_explanation",
+        "reason": "検出した箱を使うパイプラインを、R-CNNの領域提案・位置特定・分類という段階的な物体検出の説明と照らせます。",
+        "sourceEvidence": {
+          "articleId": "book-spine",
+          "blockId": "[\"system\",2]",
+          "anchor": "system",
+          "quote": "A photo is first downscaled so that its long side is at most 1,600 px. A one-class oriented bounding box (OBB) detector finds the spines. Near-duplicate boxes are merged (Section 3.5), and the number of boxes scoring 0.4 or more is the book count. Each box is then cut out with a margin of 8% of its short side, rotated so that its long side is vertical, and upscaled if its short side is below 96 px.",
+          "hash": "47a6b7f2df9dece4417da0ca5bd70c47f8e2d281e5d4511a6cf0cf29c50c19b1"
+        },
+        "targetEvidence": {
+          "articleId": "r-cnn",
+          "blockId": "[\"abstract\",1]",
+          "anchor": "abstract",
+          "quote": "Object Detector는 Object의 coordinate를 찾고(Localization), class를 분류(Classification)하는 작업을 진행한다. R-CNN은 이를 순차적으로 진행하는 2 Stage Detector 로, 딥러닝을 적용한 최초의 Object Detector다. R-CNN모델은 Object Detection 혹은 Inference(추론)시, 아래와 같은 순서에 의해 동작한다.",
+          "hash": "4ae1fc1530ef74e24391b17d1338950c656044da3cb13cb70ce563979e1142ad"
+        }
+      },
+      {
+        "id": "faster-r-cnn",
+        "relation": "concept_explanation",
+        "reason": "検出箱の後処理に使われるNMSについて、Faster R-CNNの推論時に予測箱へ適用する説明から確認できます。",
+        "sourceEvidence": {
+          "articleId": "book-spine",
+          "blockId": "[\"eval-path\",6]",
+          "anchor": "eval-path",
+          "quote": "Figure 3. The same segmentation weights (YOLO26n-seg trained on 4TU) on a tilted 4TU validation shelf with 20 spines, confidence 0.4, boxes drawn axis-aligned. Left: default predict, which applies NMS at IoU 0.5 to the one-to-many head. Right: the NMS-free one-to-one head. Both use rectangular padding. The bottom of the photo is cropped for display; the model saw the whole photo.",
+          "hash": "f281c675079d1ceeb33cb420449037112282024876e33af918ee7955092829ff"
+        },
+        "targetEvidence": {
+          "articleId": "faster-r-cnn",
+          "blockId": "[\"detection\",1]",
+          "anchor": "detection",
+          "quote": "실제 Inference 때는 Anchor target layer와 Proposal target layer는 사용되지않는다. 두 layer 모두 네트워크를 학습시키기 위한 데이터셋을 구성하는데 사용되기 때문이다. Fast R-CNN은 Proposal layer에서 추출한 RP를 활용하여 Detection을 수행한다. 그리고 최종적으로 얻은 Predicted Box에 NMS를 적용하여 최적의 BB만을 결과로 출력한다.",
+          "hash": "ff05fa485a50b844e80c12cf324b5e0dbc9a4d469113944b9134bb0dd8e8eea6"
+        }
+      }
+    ]
+  }
+}

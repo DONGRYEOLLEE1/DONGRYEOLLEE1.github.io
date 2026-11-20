@@ -1,0 +1,331 @@
+{
+  "version": 2,
+  "id": "bert",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "5e851b3ff10b2fd670a11f74539723ee5300a15281193c69e59350957b008f1f",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "transformer",
+        "role": "about",
+        "evidence": {
+          "articleId": "bert",
+          "blockId": "[\"model-architecture\",1]",
+          "anchor": "model-architecture",
+          "quote": "multi-layer bidirectional Transformer encoder 구조",
+          "hash": "49c04b002c01a06725f757512322a9544bd2b5c77944cb7a75f00be77d66b8df"
+        }
+      },
+      {
+        "id": "contextual-embeddings",
+        "role": "about",
+        "evidence": {
+          "articleId": "bert",
+          "blockId": "[\"task-1-masked-lm-mlm\",2]",
+          "anchor": "task-1-masked-lm-mlm",
+          "quote": "Bi-directional한 Transformer Encoder를 쓰되, 실제 Input에 해당하는 단어들을 임의의 비율(15%)로 마스킹을 시키고 모델이 학습을 통해서 실제 가려진 값을 잘 예측하도록 학습시키는 것이 바로 BERT의 pre-training 첫번째 task인 MLM.",
+          "hash": "9792b5e6449cb15bdc0ea16dbe7ccc3e9ead912491a7080d396ba85c93f0dc26"
+        }
+      },
+      {
+        "id": "pretraining",
+        "role": "about",
+        "evidence": {
+          "articleId": "bert",
+          "blockId": "[\"pre-training-bert\",1]",
+          "anchor": "pre-training-bert",
+          "quote": "ELMo와 GPT는 left-to-right 또는 right-to-left 언어 모델을 사용해 pre-training을 수행한다. 하지만 BERT는 이와 다르게 2가지의 새로운 unsupervised task로 pre-training을 수행한다.",
+          "hash": "18226f064ff0a07b6aac1633c090cd6c799cabbc98d3046f964e3831dbd0f676"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "3d93ab57a507ba21e3824192255fbac720f69ad41284b84c46b24acfb0ebc80e",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"model-architecture\",1]",
+          "[\"pre-training-bert\",1]",
+          "[\"task-1-masked-lm-mlm\",3]"
+        ],
+        "targetBlocks": [
+          "[\"pre-training-data\",1]",
+          "[\"architecture\",1]",
+          "[\"related-work\",1]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"model-architecture\",1]",
+          "[\"inputoutput-representation\",9]",
+          "[\"요약\",1]"
+        ],
+        "targetBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"input-embedding\",1]",
+          "[\"self-attention\",2]"
+        ]
+      },
+      {
+        "id": "elmo",
+        "sourceBlocks": [
+          "[\"pre-training-bert\",1]",
+          "[\"task-1-masked-lm-mlm\",2]",
+          "[\"요약\",1]"
+        ],
+        "targetBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",4]",
+          "[\"특징\",1]"
+        ]
+      },
+      {
+        "id": "nlp-terms",
+        "sourceBlocks": [
+          "[\"task-1-masked-lm-mlm\",2]",
+          "[\"input\",2]",
+          "[\"요약\",2]"
+        ],
+        "targetBlocks": [
+          "[\"nli---natural-language-inference\",14]",
+          "[\"glue---general-language-understanding-evaluation\",1]",
+          "[\"task-on-benchmarks\",1]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"model-architecture\",1]",
+          "[\"요약\",1]",
+          "[\"inputoutput-representation\",7]"
+        ],
+        "targetBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "[\"vision-transformervit\",15]",
+          "[\"요약\",16]"
+        ]
+      },
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[\"task-1-masked-lm-mlm\",2]",
+          "[\"input\",2]",
+          "[\"model-architecture\",8]"
+        ],
+        "targetBlocks": [
+          "[\"a-latent-embedding-approach\",2]",
+          "[\"classification-as-nli\",2]",
+          "[\"what-is-zero-shot-learning\",1]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"ablation-study\",3]",
+          "[\"model-architecture\",2]",
+          "[\"task-1-masked-lm-mlm\",3]"
+        ],
+        "targetBlocks": [
+          "[\"ablation-study\",1]",
+          "[\"glue-benchmark\",1]",
+          "[\"introduction\",7]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"task-1-masked-lm-mlm\",3]",
+          "[\"요약\",1]",
+          "[\"fine-tuning-bert\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"low-rank-parameterized-update-matrices\",4]",
+          "[\"problem-statement\",1]"
+        ]
+      },
+      {
+        "id": "rtpurbo",
+        "sourceBlocks": [
+          "[\"model-architecture\",1]",
+          "[\"요약\",1]",
+          "[\"task-1-masked-lm-mlm\",7]"
+        ],
+        "targetBlocks": [
+          "[\"정리\",1]",
+          "[\"introduction\",2]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"ablation-study\",3]",
+          "[\"fine-tuning-bert\",1]",
+          "[\"task-1-masked-lm-mlm\",3]"
+        ],
+        "targetBlocks": [
+          "[\"ablation-study\",3]",
+          "[\"introduction\",1]",
+          "[\"results\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"task-1-masked-lm-mlm\",2]",
+          "[\"inputoutput-representation\",8]",
+          "[\"input\",1]"
+        ],
+        "targetBlocks": [
+          "[\"sbert\",1]",
+          "[\"question-generationkor\",1]",
+          "[\"translation\",3]"
+        ]
+      },
+      {
+        "id": "fast-r-cnn",
+        "sourceBlocks": [
+          "[\"요약\",1]",
+          "[\"ouput\",2]",
+          "[\"bert\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",3]",
+          "[\"rough-요약\",1]",
+          "[\"fast-r-cnn-의의\",2]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"model-architecture\",1]",
+          "[\"hyper-parameter\",7]",
+          "[\"task-1-masked-lm-mlm\",3]"
+        ],
+        "targetBlocks": [
+          "[\"answer\",3]",
+          "[\"case-1\",3]",
+          "[\"case-2\",2]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"요약\",1]",
+          "[\"hyper-parameter\",6]",
+          "[\"task-1-masked-lm-mlm\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"progressive-learning-with-adaptive-regularization\",4]",
+          "[\"efficientnetv2-architecture-design\",3]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"hyper-parameter\",5]",
+          "[\"fine-tuning-bert\",1]",
+          "[\"task-1-masked-lm-mlm\",3]"
+        ],
+        "targetBlocks": [
+          "[\"combining-the-ingredients\",8]",
+          "[\"introduction\",6]",
+          "[\"ablation-experiments\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "elmo",
+        "relation": "related_method",
+        "reason": "ELMo는 양방향 언어 모델로 문맥 표현을 만들고, BERT는 양방향 Transformer에서 마스킹된 토큰을 예측하는 pre-training 방식을 설명합니다.",
+        "sourceEvidence": {
+          "articleId": "bert",
+          "blockId": "[\"pre-training-bert\",1]",
+          "anchor": "pre-training-bert",
+          "quote": "ELMo와 GPT는 left-to-right 또는 right-to-left 언어 모델을 사용해 pre-training을 수행한다. 하지만 BERT는 이와 다르게 2가지의 새로운 unsupervised task로 pre-training을 수행한다.",
+          "hash": "18226f064ff0a07b6aac1633c090cd6c799cabbc98d3046f964e3831dbd0f676"
+        },
+        "targetEvidence": {
+          "articleId": "elmo",
+          "blockId": "[\"mechanism\",4]",
+          "anchor": "mechanism",
+          "quote": "ELMO는 Bi-directional LSTM을 통해 학습하기 때문에 Forward LM, Backward LM 둘다 학습합니다.",
+          "hash": "bf05c07eaf95891bd5e7860b44afa6c951e4cb401f96e92c707a0387eb20a7ea"
+        }
+      },
+      {
+        "id": "transformer",
+        "relation": "related_method",
+        "reason": "BERT는 Transformer encoder를 쌓아 구성하고, Transformer 글은 인코더의 입력 임베딩과 층별 입력을 설명합니다.",
+        "sourceEvidence": {
+          "articleId": "bert",
+          "blockId": "[\"model-architecture\",1]",
+          "anchor": "model-architecture",
+          "quote": "multi-layer bidirectional Transformer encoder 구조",
+          "hash": "49c04b002c01a06725f757512322a9544bd2b5c77944cb7a75f00be77d66b8df"
+        },
+        "targetEvidence": {
+          "articleId": "transformer",
+          "blockId": "[\"input-embedding\",1]",
+          "anchor": "input-embedding",
+          "quote": "인코더의 최하단에서 사용, 밑단에 있는 인코더는 word embedding을 수행. 그 외의 인코더는 바로 아랫단의 인코더들의 output으로 받는다. 동시에 이들의 사이즈는 동일하게 유지",
+          "hash": "7e293f3dbe9dc5208cb4436bf587a33e82896f12c0980b65227794e74a45607e"
+        }
+      },
+      {
+        "id": "vit",
+        "relation": "related_method",
+        "reason": "BERT와 ViT 모두 Transformer 구조를 사용하며, ViT는 이미지를 패치 임베딩 시퀀스로 바꾸어 분류하는 방식을 설명합니다.",
+        "sourceEvidence": {
+          "articleId": "bert",
+          "blockId": "[\"model-architecture\",1]",
+          "anchor": "model-architecture",
+          "quote": "multi-layer bidirectional Transformer encoder 구조",
+          "hash": "49c04b002c01a06725f757512322a9544bd2b5c77944cb7a75f00be77d66b8df"
+        },
+        "targetEvidence": {
+          "articleId": "vit",
+          "blockId": "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "anchor": "transformer의-계산-효율성과-scalability를-비전에-활용",
+          "quote": "표준 Transformer를 최대한 변형 없이 직접적으로 이미지에 적용하였다. 이를 위해 이미지를 패치 조각으로 쪼갠다. 그리고 각각의 패치에 대해 선형적인 임베딩의 시퀀스를 제공하여 Transformer에 입력하였다. 이때 이미지의 패치는 마치 NLP에서의 토큰과 같이 다루게 된다. 모델은 이미지 분류 태스크에 대해 지도 학습 방식으로 학습하였다.",
+          "hash": "3c677d0e99eb275ec2794dd5379bab388dafc305a15bb7178ba8d90787fe1481"
+        }
+      },
+      {
+        "id": "activation-functions",
+        "relation": "application_example",
+        "reason": "BERT의 하이퍼파라미터에 GeLU가 쓰이며, 코드 예시는 분류기에서 GELU를 적용한 구성을 보여줍니다.",
+        "sourceEvidence": {
+          "articleId": "bert",
+          "blockId": "[\"hyper-parameter\",7]",
+          "anchor": "hyper-parameter",
+          "quote": "GeLU activation function",
+          "hash": "82ae24bf1bec965ec09f3b329772e0e683ded4b98689d370f00b5cfdc0b9e9a3"
+        },
+        "targetEvidence": {
+          "articleId": "activation-functions",
+          "blockId": "[\"case-1\",3]",
+          "anchor": "case-1",
+          "quote": "BaseModel( (model): ElectraModel( (embeddings): ElectraEmbeddings( ... ) ) ) ) ) (classifier): Sequential( (0): Linear(in_features=768, out_features=768, bias=True) (1): GELU(approximate='none') (2): Dropout(p=0.2, inplace=False) (3): Linear(in_features=768, out_features=3, bias=True) ) )",
+          "hash": "3cc1072ce6e86566bc2168b7e166fb3dfde1ada395e3608b4025732de8496e98"
+        }
+      }
+    ]
+  }
+}

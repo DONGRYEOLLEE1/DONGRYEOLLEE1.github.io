@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "id": "mixture-of-experts-paper",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "a1a70f9984160b3b166beade3f8de56865004d34b22e784a2a3b54dffab1e4a0",
+    "status": "abstained",
+    "facts": [],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "35c0764bdd325b778b934660c08ed4d7e026cf74bc4e3c30e0971a1c48fa55d3",
+    "status": "abstained",
+    "candidates": [],
+    "recommendations": []
+  }
+}

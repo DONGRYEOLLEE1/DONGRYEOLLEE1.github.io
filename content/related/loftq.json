@@ -1,0 +1,301 @@
+{
+  "version": 2,
+  "id": "loftq",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "e35270de7b567f5491432debe0a07639a585781f9104f30f20fdd4e572b88aa1",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "quantization",
+        "role": "about",
+        "evidence": {
+          "articleId": "loftq",
+          "blockId": "[\"loftq\",1]",
+          "anchor": "loftq",
+          "quote": "LoftQ라고 불리는 새로운 quantization framework를 소개. 이 프레임워크는 낮은 순위의 근사치를 적극적으로 통합하여 양자화와 함께 작동하여 원래의 high-precision 사전학습된 가중치를 공동으로 근사화합니다.",
+          "hash": "1b959360ebfbcc9575ba361060e8305e2dd0db884ed90916f5f47b1e303f0d5e"
+        }
+      },
+      {
+        "id": "lora",
+        "role": "about",
+        "evidence": {
+          "articleId": "loftq",
+          "blockId": "[\"loftq\",1]",
+          "anchor": "loftq",
+          "quote": "LoftQ라고 불리는 새로운 quantization framework를 소개. 이 프레임워크는 낮은 순위의 근사치를 적극적으로 통합하여 양자화와 함께 작동하여 원래의 high-precision 사전학습된 가중치를 공동으로 근사화합니다.",
+          "hash": "1b959360ebfbcc9575ba361060e8305e2dd0db884ed90916f5f47b1e303f0d5e"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "e59caf3c0fe530cb6537cb77dabc457b53996febef2da6322ea01137f1450d45",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"loftq\",1]",
+          "[\"glue-with-4-bit\",1]",
+          "[\"experiments\",9]"
+        ],
+        "targetBlocks": [
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",12]",
+          "[\"peft-v090\",1]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"loftq\",1]",
+          "[\"glue-with-4-bit\",1]",
+          "[\"experiments\",2]"
+        ],
+        "targetBlocks": [
+          "[\"background\",1]",
+          "[\"background\",2]",
+          "[\"introduction\",2]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"loftq\",1]",
+          "[\"experiments\",19]",
+          "[\"glue-with-4-bit\",5]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"weight-decomposition-analysis\",2]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"loftq\",1]",
+          "[\"glue-with-4-bit\",1]",
+          "[\"experiments\",4]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"low-rank-parameterized-update-matrices\",4]",
+          "[\"problem-statement\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"loftq\",1]",
+          "[\"pruning-비교\",2]",
+          "[\"experiments\",17]"
+        ],
+        "targetBlocks": [
+          "[\"source-code\",4]",
+          "[\"source-code\",5]",
+          "[\"error\",2]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"loftq\",1]",
+          "[\"glue-with-4-bit\",5]",
+          "[\"experiments\",13]"
+        ],
+        "targetBlocks": [
+          "[\"low-rank-adaptation-lora\",1]",
+          "[\"glue-benchmark\",1]",
+          "[\"experiments\",1]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"glue-with-4-bit\",1]",
+          "[\"experiments\",2]",
+          "[\"결론\",1]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-or-8bit-quantization\",9]",
+          "[\"increasing-speed-a-llm-serving-inference\",9]",
+          "[\"tensor-parallel\",2]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"experiments\",15]",
+          "[\"loftq\",1]",
+          "[\"결론\",1]"
+        ],
+        "targetBlocks": [
+          "[\"arithmetic-reasoning\",1]",
+          "[\"experimental-setup\",1]",
+          "[\"chain-of-thought-prompting\",3]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"loftq\",1]",
+          "[\"experiments\",2]",
+          "[\"glue-with-4-bit\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"solution-1\",1]",
+          "[\"error2\",1]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"glue-with-4-bit\",1]",
+          "[\"experiments\",16]",
+          "[\"loftq\",1]"
+        ],
+        "targetBlocks": [
+          "[\"peft-with-ia3\",1]",
+          "[\"의의\",3]",
+          "[\"conclusion\",1]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"loftq\",1]",
+          "[\"experiments\",2]",
+          "[\"glue-with-4-bit\",1]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",1]",
+          "[\"현상\",1]",
+          "[\"section-8\",2]"
+        ]
+      },
+      {
+        "id": "peft-target-modules",
+        "sourceBlocks": [
+          "[\"loftq\",1]",
+          "[\"glue-with-4-bit\",2]",
+          "[\"summarization\",2]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[null,6]",
+          "[null,3]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[\"experiments\",17]",
+          "[\"glue-with-4-bit\",5]",
+          "[\"nlg\",1]"
+        ],
+        "targetBlocks": [
+          "[\"training-set-sizing\",1]",
+          "[\"how-much-augmentation\",2]",
+          "[\"benchmark-dataset\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"loftq\",1]",
+          "[\"experiments\",2]",
+          "[\"glue-with-4-bit\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"main-results\",1]",
+          "[\"efficient-implementation\",1]"
+        ]
+      },
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[\"experiments\",17]",
+          "[\"결론\",1]",
+          "[\"loftq\",1]"
+        ],
+        "targetBlocks": [
+          "[\"scaling-laws\",2]",
+          "[\"conclusions\",1]",
+          "[\"introduction\",5]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "qlora",
+        "relation": "related_method",
+        "reason": "LoftQ가 저순위 근사와 양자화를 결합해 사전학습 가중치를 근사하는 방식과, QLoRA가 4-bit 양자화 모델에 학습 가능한 LoRA 가중치를 더하는 방식을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "loftq",
+          "blockId": "[\"loftq\",1]",
+          "anchor": "loftq",
+          "quote": "LoftQ라고 불리는 새로운 quantization framework를 소개. 이 프레임워크는 낮은 순위의 근사치를 적극적으로 통합하여 양자화와 함께 작동하여 원래의 high-precision 사전학습된 가중치를 공동으로 근사화합니다.",
+          "hash": "1b959360ebfbcc9575ba361060e8305e2dd0db884ed90916f5f47b1e303f0d5e"
+        },
+        "targetEvidence": {
+          "articleId": "qlora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "이에 연구진은 성능 저하 없이 quantized-4bit model 파인튜닝 하는 방법에 대해 소개. QLoRA는 4-bit로 사전학습된 모델을 양자화하기위해 독특한 high-precision technique를 사용하고 난 후에 학습가능한 LoRa 가중치의 적은 양을 추가함.",
+          "hash": "144cb34aeaeabedd47394aafd42bacd9d03485f0a719ac279c322487f77c7a50"
+        }
+      },
+      {
+        "id": "lora",
+        "relation": "related_method",
+        "reason": "LoftQ가 양자화와 저순위 근사를 함께 활용하는 배경을, LoRA가 가중치를 고정한 채 저랭크 분해 행렬을 최적화하는 방식과 연결해 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "loftq",
+          "blockId": "[\"loftq\",1]",
+          "anchor": "loftq",
+          "quote": "LoftQ라고 불리는 새로운 quantization framework를 소개. 이 프레임워크는 낮은 순위의 근사치를 적극적으로 통합하여 양자화와 함께 작동하여 원래의 high-precision 사전학습된 가중치를 공동으로 근사화합니다.",
+          "hash": "1b959360ebfbcc9575ba361060e8305e2dd0db884ed90916f5f47b1e303f0d5e"
+        },
+        "targetEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "학습된 과도하게 매개변수화된 모델이 실제로 낮은 performance를 낸다는 연구결과에 영감을 받음. 낮은 intrinsic rank를 모델을 적용하는동안 weights가 바뀐다는 가설을 세움. LoRA는 간접적으로 dense layer의 rank decomposition matrix를 최적화함으로써 NN에서 몇몇의 dense layer들을 학습할 수 있게 만들어줌(이 과정에서 weight는 froze).",
+          "hash": "3cba5587203ea62e143ba4ec9ef423450571ae6976433824bbd5b3347210f7ac"
+        }
+      },
+      {
+        "id": "dora",
+        "relation": "related_method",
+        "reason": "LoftQ의 저순위 근사 활용과 DoRA의 방향 성분을 LoRA로 분해하는 방식을 나란히 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "loftq",
+          "blockId": "[\"loftq\",1]",
+          "anchor": "loftq",
+          "quote": "LoftQ라고 불리는 새로운 quantization framework를 소개. 이 프레임워크는 낮은 순위의 근사치를 적극적으로 통합하여 양자화와 함께 작동하여 원래의 high-precision 사전학습된 가중치를 공동으로 근사화합니다.",
+          "hash": "1b959360ebfbcc9575ba361060e8305e2dd0db884ed90916f5f47b1e303f0d5e"
+        },
+        "targetEvidence": {
+          "articleId": "dora",
+          "blockId": "[\"weight-decomposed-low-rank-adaptation\",1]",
+          "anchor": "weight-decomposed-low-rank-adaptation",
+          "quote": "DoRA는 초기에 사전학습된 가중치를 magnitude와 directional components에 따라 분해하며 그것들을 파인튜닝합니다. Directional Components는 파라미터 수의 관점에서 크기 때문에, 효율적인 파인튜닝하는 LoRA와 함께 더 decompose 하였습니다.",
+          "hash": "d1637a6cbdd3e4acfb54e7cf75fe2439bbc09efdf888c8f82d3c086bcebf829f"
+        }
+      }
+    ]
+  }
+}

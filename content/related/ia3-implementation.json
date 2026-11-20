@@ -1,0 +1,263 @@
+{
+  "version": 2,
+  "id": "ia3-implementation",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "8ee2be0c256b63d792f004a35de64e1a21a4f5a90a2cb41dc854f99c74a8879b",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "ia3",
+        "role": "applies",
+        "evidence": {
+          "articleId": "ia3-implementation",
+          "blockId": "[\"ia3\",1]",
+          "anchor": "ia3",
+          "quote": "IA3 방식이 peft에 추가되었길래 colab 환경(T4, 14GB)에서 간단하게 50steps만 학습 진행",
+          "hash": "b4d486aa829aed2f529e5cff238a9ffd25538ea67c273895ef3f17d02ca25e52"
+        }
+      },
+      {
+        "id": "peft",
+        "role": "applies",
+        "evidence": {
+          "articleId": "ia3-implementation",
+          "blockId": "[\"ia3\",1]",
+          "anchor": "ia3",
+          "quote": "IA3 방식이 peft에 추가되었길래 colab 환경(T4, 14GB)에서 간단하게 50steps만 학습 진행",
+          "hash": "b4d486aa829aed2f529e5cff238a9ffd25538ea67c273895ef3f17d02ca25e52"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "ae8a0d4ad2e13da872ed4341e83b1dc06a0125b9c00aff4930f6461d450bcebd",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"gpt-neox-example-of-training\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "peft-target-modules",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",5]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[null,2]",
+          "[null,4]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",1]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"peft\",1]",
+          "[\"peft-with-ia3\",6]",
+          "[\"introduction\",7]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",1]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"ref\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",7]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"gpt-neox-example-of-training\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",6]",
+          "[\"env\",4]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",1]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"ref\",1]",
+          "[\"merging-lora-weights\",7]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",5]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",7]",
+          "[\"envs\",5]",
+          "[\"ref\",5]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",5]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"model\",3]",
+          "[\"envs\",6]",
+          "[\"dataset\",2]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",1]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1\",1]",
+          "[\"env\",1]",
+          "[\"1\",2]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",1]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"impace-of-training-time-and-memory-usage\",1]",
+          "[\"method-formulation\",3]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",5]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"2️⃣\",1]",
+          "[\"solution\",4]",
+          "[\"1️⃣\",1]"
+        ]
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",1]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",2]",
+          "[\"solution\",2]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "docker-gpu-troubleshooting",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"gpt-neox-example-of-training\",1]",
+          "[\"ref\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",1]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"background\",2]",
+          "[\"qlora-vs-standard-finetuning\",4]",
+          "[\"introduction\",9]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",1]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"low-rank-parameterized-update-matrices\",4]",
+          "[\"problem-statement\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "ia3-paper",
+        "relation": "concept_explanation",
+        "reason": "IA3로 학습을 진행하기 전에, 논문 설명에서 key·value와 feed-forward activation에 학습된 재조정 벡터를 적용하는 방식을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "ia3-implementation",
+          "blockId": "[\"ia3\",1]",
+          "anchor": "ia3",
+          "quote": "IA3 방식이 peft에 추가되었길래 colab 환경(T4, 14GB)에서 간단하게 50steps만 학습 진행",
+          "hash": "b4d486aa829aed2f529e5cff238a9ffd25538ea67c273895ef3f17d02ca25e52"
+        },
+        "targetEvidence": {
+          "articleId": "ia3-paper",
+          "blockId": "[\"peft-with-ia3\",6]",
+          "anchor": "peft-with-ia3",
+          "quote": "학습된 vector에 대한 모델 활성화함수의 element-wise multiplication에 대해 연구 진행. 특히 학습된 task-specific vector의 적용 양식에 대해 고려하였음. broadcasting notation. 연구진은 트랜스포머 모델에서 활성화 함수의 각 set을 통해 학습된 rescaling vector를 연구하면서 이것이 꼭 필요하지 않을수도 있다는 것을 발견해냈음. 대신, 우리는 self-attention 메커니즘에 key와 value에 대한 self-attention 및 encoder-decoder attention 메커니즘의 key와 value에 vector를 재조정하고 그리고 position-wise fedd-forward의 중간 activation에 rescaling vector를 도입하는 것으로 충분했음. 이에 연구진은 3개의 학습된 vector를 소개합니다.",
+          "hash": "2ed000d00afdb85f83cd558bc628039160e4e3e3d105ae4dab64def273d89ecc"
+        }
+      }
+    ]
+  }
+}

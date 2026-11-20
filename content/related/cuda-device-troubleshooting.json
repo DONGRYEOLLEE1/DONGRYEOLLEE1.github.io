@@ -1,0 +1,250 @@
+{
+  "version": 2,
+  "id": "cuda-device-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "501cf7cfd080165ba6f8499e45fe382c5bfc177a74e361775fdee752419d8c96",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "cuda",
+        "role": "applies",
+        "evidence": {
+          "articleId": "cuda-device-troubleshooting",
+          "blockId": "[\"해결\",1]",
+          "anchor": "해결",
+          "quote": "fabric-manager 설치 : 그래픽드라이버 버전 맞춰서 설치",
+          "hash": "66ef1721a6dca1d8137865758b0b20d06aacb8458fabf635ad7ace22499a7454"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "a7b70779f07e366c86e2e0a02af5022e901c0ba78468e919ba47b37fc3ad4a93",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",5]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "python-venv-troubleshooting",
+        "sourceBlocks": [
+          "[\"env\",1]",
+          "[\"issue\",2]",
+          "[\"해결\",2]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",1]",
+          "[\"issue\",3]"
+        ]
+      },
+      {
+        "id": "docker-gpu-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"원인\",1]",
+          "[\"issue\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"env\",1]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"원인\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1️⃣\",2]",
+          "[\"3️⃣\",8]",
+          "[\"env\",4]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",2]",
+          "[\"env\",4]"
+        ],
+        "targetBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"cuda-cudnn\",4]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"env\",2]",
+          "[\"원인\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",3]",
+          "[\"env\",1]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",1]",
+          "[\"원인\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"env\",1]",
+          "[\"error\",1]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"env\",2]",
+          "[\"issue\",2]",
+          "[\"해결\",2]"
+        ],
+        "targetBlocks": [
+          "[\"env\",3]",
+          "[\"error\",9]",
+          "[\"error-2\",4]"
+        ]
+      },
+      {
+        "id": "netplan-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"원인\",1]",
+          "[\"issue\",5]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"원인\",2]",
+          "[\"issue\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"error2\",2]",
+          "[\"solution-1\",1]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"issue\",7]",
+          "[\"원인\",2]",
+          "[\"해결\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"1️⃣\",1]",
+          "[\"2️⃣\",1]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"4bit-quantization\",30]",
+          "[\"현상\",1]"
+        ]
+      },
+      {
+        "id": "pip-options",
+        "sourceBlocks": [
+          "[\"issue\",1]",
+          "[\"해결\",2]",
+          "[\"원인\",2]"
+        ],
+        "targetBlocks": [
+          "[\"pip-options\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"env\",2]",
+          "[\"원인\",2]",
+          "[\"해결\",2]"
+        ],
+        "targetBlocks": [
+          "[\"env\",9]",
+          "[\"solution\",5]",
+          "[\"error\",2]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"issue\",1]",
+          "[\"env\",5]",
+          "[\"해결\",2]"
+        ],
+        "targetBlocks": [
+          "[\"2\",12]",
+          "[\"tensor-parallel\",1]",
+          "[\"increasing-speed-a-llm-serving-inference\",10]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "gpu-driver-troubleshooting",
+        "relation": "related_method",
+        "reason": "A100에서 CUDA·GPU 인식 문제를 겪을 때, fabric-manager 설치와 NVIDIA 드라이버 재설치 사례를 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "cuda-device-troubleshooting",
+          "blockId": "[\"해결\",1]",
+          "anchor": "해결",
+          "quote": "fabric-manager 설치 : 그래픽드라이버 버전 맞춰서 설치",
+          "hash": "66ef1721a6dca1d8137865758b0b20d06aacb8458fabf635ad7ace22499a7454"
+        },
+        "targetEvidence": {
+          "articleId": "gpu-driver-troubleshooting",
+          "blockId": "[\"해결\",2]",
+          "anchor": "해결",
+          "quote": "sudo apt install nvidia-driver-525 sudo reboot",
+          "hash": "fad661413a04a9975c02227e1af8d61b39d9e79c431bcde87d8d03fde1dc0dd6"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "version": 2,
+  "id": "lora-finetuning",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "d0000752933f294021a3cd9ab49ff0cecaf881a897e71f95e37c68337030e1ea",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "lora",
+        "role": "applies",
+        "evidence": {
+          "articleId": "lora-finetuning",
+          "blockId": "[\"model\",3]",
+          "anchor": "model",
+          "quote": "# finetune.py line 46 lora_dropout: float = 0.05, lora_target_modules: List[str] = [ \"query_key_value\" ], ... # finetune.py line 111 model = AutoModelForCausalLM.from_pretrained( base_model, load_in_8bit=True, torch_dtype=torch.float16, device_map=device_map, ) tokenizer = AutoTokenizer.from_pretrained(base_model)",
+          "hash": "e6f052c3acf21c2110ce132b28383a9a970cbee6e5bfacfbe40985d2b3a306d8"
+        }
+      },
+      {
+        "id": "peft",
+        "role": "applies",
+        "evidence": {
+          "articleId": "lora-finetuning",
+          "blockId": "[\"model\",3]",
+          "anchor": "model",
+          "quote": "# finetune.py line 46 lora_dropout: float = 0.05, lora_target_modules: List[str] = [ \"query_key_value\" ], ... # finetune.py line 111 model = AutoModelForCausalLM.from_pretrained( base_model, load_in_8bit=True, torch_dtype=torch.float16, device_map=device_map, ) tokenizer = AutoTokenizer.from_pretrained(base_model)",
+          "hash": "e6f052c3acf21c2110ce132b28383a9a970cbee6e5bfacfbe40985d2b3a306d8"
+        }
+      },
+      {
+        "id": "data-preparation",
+        "role": "applies",
+        "evidence": {
+          "articleId": "lora-finetuning",
+          "blockId": "[\"dataset\",2]",
+          "anchor": "dataset",
+          "quote": "[ { \"instruction\":\"건강을 유지하기 위한 세 가지 팁을 알려주세요.\", \"input\":\"\", \"output\":\"요호호!!\" }, { \"instruction\":\"세 가지 기본 색은 무엇인가요?\", \"input\":\"\", \"output\":\"요호호!!\" }, ... ... ]",
+          "hash": "76a4e3bb7fbce5fc482f2dcc1bedda6d67452c7c836ecce45c0c1f30cc1d9a29"
+        }
+      },
+      {
+        "id": "finetuning",
+        "role": "applies",
+        "evidence": {
+          "articleId": "lora-finetuning",
+          "blockId": "[\"training\",1]",
+          "anchor": "training",
+          "quote": "python finetune.py \\ --base_model '../model_file/polyglot-ko-5.8b' \\ --data_path './ko_alpaca_data.json' \\ --output_dir './output' \\ --batch_size 128 \\ --mircro_batch_size 4 \\ --num_epochs 3 \\ --learning_rate 2e-5 \\ --cutoff_len 512 \\ --val_set_size 2000 \\ --lora_r 8 \\ --lora_alpha 16 \\ --lora_dropout 0.05 \\ --lora_target_modules '[query_key_value]' \\ --train_on_inputs \\ --group_by_length",
+          "hash": "1d3ec647d3fc9aa157a76778d7d0beb955bd87a846aa384701e66384ac2707f9"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "89c66a2f40dcda459e2267dd88ac5006039c52762fcc99f97d5b5166f8d8ade3",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"dataset\",2]",
+          "[\"training\",1]",
+          "[\"envs\",7]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",10]",
+          "[\"envs\",4]",
+          "[\"prob\",2]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"model\",3]",
+          "[\"training\",1]",
+          "[\"envs\",2]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"model\",3]",
+          "[\"envs\",1]",
+          "[\"dataset\",1]"
+        ],
+        "targetBlocks": [
+          "[\"source-code\",5]",
+          "[\"source-code\",6]",
+          "[\"env\",9]"
+        ]
+      },
+      {
+        "id": "developing-daily-05",
+        "sourceBlocks": [
+          "[\"dataset\",2]",
+          "[\"training\",1]",
+          "[\"envs\",7]"
+        ],
+        "targetBlocks": [
+          "[\"data-processing\",1]",
+          "[\"sehongt5-large-questiongeneration\",2]",
+          "[\"question-generation-영어\",1]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"model\",3]",
+          "[\"envs\",4]",
+          "[\"training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1\",1]",
+          "[\"env\",1]",
+          "[\"1\",2]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"envs\",3]",
+          "[\"model\",3]",
+          "[\"training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",1]",
+          "[\"해결\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"model\",3]",
+          "[\"training\",1]",
+          "[\"envs\",7]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"introduction\",2]",
+          "[\"introduction\",3]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"envs\",4]",
+          "[\"training\",1]",
+          "[\"model\",2]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-or-8bit-quantization\",6]",
+          "[\"2\",1]",
+          "[\"tensor-parallel\",1]"
+        ]
+      },
+      {
+        "id": "regex-preprocessing",
+        "sourceBlocks": [
+          "[\"dataset\",2]",
+          "[\"envs\",2]",
+          "[\"model\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"problem\",1]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"model\",3]",
+          "[\"envs\",6]",
+          "[\"training\",1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "ia3-implementation",
+        "sourceBlocks": [
+          "[\"model\",3]",
+          "[\"envs\",6]",
+          "[\"dataset\",2]"
+        ],
+        "targetBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",5]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[\"dataset\",2]",
+          "[\"envs\",1]",
+          "[\"training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"training-set-sizing\",1]",
+          "[\"benchmark-dataset\",2]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"model\",3]",
+          "[\"envs\",7]",
+          "[\"training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"improving-dora\",2]"
+        ]
+      },
+      {
+        "id": "peft-target-modules",
+        "sourceBlocks": [
+          "[\"model\",3]",
+          "[\"training\",1]",
+          "[\"envs\",7]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"training\",1]",
+          "[\"envs\",4]",
+          "[\"model\",3]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"env\",3]",
+          "[\"3️⃣\",8]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "lora",
+        "relation": "concept_explanation",
+        "reason": "LoRA가 dense layer의 rank decomposition matrix를 학습하고 기존 weight를 고정하는 원리를 설명해, 설정의 의미를 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "lora-finetuning",
+          "blockId": "[\"model\",3]",
+          "anchor": "model",
+          "quote": "# finetune.py line 46 lora_dropout: float = 0.05, lora_target_modules: List[str] = [ \"query_key_value\" ], ... # finetune.py line 111 model = AutoModelForCausalLM.from_pretrained( base_model, load_in_8bit=True, torch_dtype=torch.float16, device_map=device_map, ) tokenizer = AutoTokenizer.from_pretrained(base_model)",
+          "hash": "e6f052c3acf21c2110ce132b28383a9a970cbee6e5bfacfbe40985d2b3a306d8"
+        },
+        "targetEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "학습된 과도하게 매개변수화된 모델이 실제로 낮은 performance를 낸다는 연구결과에 영감을 받음. 낮은 intrinsic rank를 모델을 적용하는동안 weights가 바뀐다는 가설을 세움. LoRA는 간접적으로 dense layer의 rank decomposition matrix를 최적화함으로써 NN에서 몇몇의 dense layer들을 학습할 수 있게 만들어줌(이 과정에서 weight는 froze).",
+          "hash": "3cba5587203ea62e143ba4ec9ef423450571ae6976433824bbd5b3347210f7ac"
+        }
+      },
+      {
+        "id": "peft-target-modules",
+        "relation": "concept_explanation",
+        "reason": "GPT-NeoX의 LoRA 대상 모듈을 query_key_value로 제시해, 파인튜닝 설정의 대상 모듈을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "lora-finetuning",
+          "blockId": "[\"model\",3]",
+          "anchor": "model",
+          "quote": "# finetune.py line 46 lora_dropout: float = 0.05, lora_target_modules: List[str] = [ \"query_key_value\" ], ... # finetune.py line 111 model = AutoModelForCausalLM.from_pretrained( base_model, load_in_8bit=True, torch_dtype=torch.float16, device_map=device_map, ) tokenizer = AutoTokenizer.from_pretrained(base_model)",
+          "hash": "e6f052c3acf21c2110ce132b28383a9a970cbee6e5bfacfbe40985d2b3a306d8"
+        },
+        "targetEvidence": {
+          "articleId": "peft-target-modules",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "# peft/utils/other.py in line 328 TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING = { \"t5\": [\"q\", \"v\"], \"mt5\": [\"q\", \"v\"], \"bart\": [\"q_proj\", \"v_proj\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"blip-2\": [\"q\", \"v\", \"q_proj\", \"v_proj\"], \"opt\": [\"q_proj\", \"v_proj\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"value\"], \"xlm-roberta\": [\"query\", \"value\"], \"electra\":",
+          "hash": "b0dc93edb070d31e4f57be2457664c20130561af39054733ee01cfb9f5be00be"
+        }
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "relation": "related_method",
+        "reason": "같은 Polyglot-ko 모델과 query_key_value LoRA 설정 사례에서 adapter 파일 용량 문제 및 PEFT 버그 의심 내용을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "lora-finetuning",
+          "blockId": "[\"training\",1]",
+          "anchor": "training",
+          "quote": "python finetune.py \\ --base_model '../model_file/polyglot-ko-5.8b' \\ --data_path './ko_alpaca_data.json' \\ --output_dir './output' \\ --batch_size 128 \\ --mircro_batch_size 4 \\ --num_epochs 3 \\ --learning_rate 2e-5 \\ --cutoff_len 512 \\ --val_set_size 2000 \\ --lora_r 8 \\ --lora_alpha 16 \\ --lora_dropout 0.05 \\ --lora_target_modules '[query_key_value]' \\ --train_on_inputs \\ --group_by_length",
+          "hash": "1d3ec647d3fc9aa157a76778d7d0beb955bd87a846aa384701e66384ac2707f9"
+        },
+        "targetEvidence": {
+          "articleId": "polyglot-lora-troubleshooting",
+          "blockId": "[\"issue\",7]",
+          "anchor": "issue",
+          "quote": "3️⃣ adapter_model.bin 파일의 용량이 443kb로 저장되었고 해당 이슈 조사 결과, peft의 버젼 문제로 인한 버그가 생긴듯함",
+          "hash": "6edc0d6b44a26d1ecadb94476ede84e3d9c3c56f0ebb536eb2f4812f254185f7"
+        }
+      }
+    ]
+  }
+}

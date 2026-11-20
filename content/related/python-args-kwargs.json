@@ -1,0 +1,232 @@
+{
+  "version": 2,
+  "id": "python-args-kwargs",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "35618601bd21e73bd56cbc8822dcf20470396fe16e5fb91d34ca2c007a9b026c",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "python-language",
+        "role": "about",
+        "evidence": {
+          "articleId": "python-args-kwargs",
+          "blockId": "[\"args-사용\",4]",
+          "anchor": "args-사용",
+          "quote": "만약 정해지지않은 n개의 인자를 받고 싶을 땐, 다음과 같이 *args를 사용 할 수 있음",
+          "hash": "a1207606ea63c719ab10a15d91cecb85dc95412e2b84816510756a957b07f3a2"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "7156ec1bb375ec2113e5e74e1c0f772e997033d16a9bcfbfdffced34476fe662",
+    "status": "abstained",
+    "candidates": [
+      {
+        "id": "keyword-search",
+        "sourceBlocks": [
+          "[\"kwargs-사용\",1]",
+          "[\"argument를-직접-지정한-함수-사용\",1]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]"
+        ],
+        "targetBlocks": [
+          "[\"querying-the-wikipedia-dataset-using-keyword-matching\",1]",
+          "[\"conclusion\",1]",
+          "[\"querying-the-wikipedia-dataset-using-keyword-matching\",4]"
+        ]
+      },
+      {
+        "id": "python-typing",
+        "sourceBlocks": [
+          "[\"args-사용\",4]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]",
+          "[\"argument를-직접-지정한-함수-사용\",1]"
+        ],
+        "targetBlocks": [
+          "[\"파이썬--동적-프로그래밍-언어\",2]",
+          "[\"타입-추상화\",3]",
+          "[\"list-dict-tuple-set\",2]"
+        ]
+      },
+      {
+        "id": "python-enumerate",
+        "sourceBlocks": [
+          "[\"args-사용\",4]",
+          "[\"argument를-직접-지정한-함수-사용\",1]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]"
+        ],
+        "targetBlocks": [
+          "[\"enumerate\",1]",
+          "[\"예시\",5]",
+          "[\"장점\",2]"
+        ]
+      },
+      {
+        "id": "semantic-search",
+        "sourceBlocks": [
+          "[\"args-사용\",8]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]",
+          "[\"argument를-직접-지정한-함수-사용\",1]"
+        ],
+        "targetBlocks": [
+          "[\"how-to-search-using-text-embedding\",12]",
+          "[\"using-similarity-to-find-the-best-document\",10]",
+          "[\"what-is-not-semantic-search\",17]"
+        ]
+      },
+      {
+        "id": "python-map",
+        "sourceBlocks": [
+          "[\"args-사용\",4]",
+          "[\"argument를-직접-지정한-함수-사용\",1]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]"
+        ],
+        "targetBlocks": [
+          "[\"map\",1]",
+          "[\"예시3-여러-반복-객체-사용\",1]",
+          "[\"예시1-단일-반복-객체-사용\",1]"
+        ]
+      },
+      {
+        "id": "reranking",
+        "sourceBlocks": [
+          "[\"kwargs-사용\",1]",
+          "[\"args-사용\",5]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]"
+        ],
+        "targetBlocks": [
+          "[\"using-rerank-to-improve-keyword-search\",1]",
+          "[\"결론\",1]",
+          "[\"reranking\",1]"
+        ]
+      },
+      {
+        "id": "python-enum",
+        "sourceBlocks": [
+          "[\"args-사용\",4]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]",
+          "[\"argument를-직접-지정한-함수-사용\",1]"
+        ],
+        "targetBlocks": [
+          "[\"enum\",1]",
+          "[\"1-기본-사용법\",1]",
+          "[\"enum을-사용하는-이유\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"kwargs-사용\",4]",
+          "[\"args-사용\",8]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]"
+        ],
+        "targetBlocks": [
+          "[\"gradio\",3]",
+          "[\"ts\",4]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "pytest",
+        "sourceBlocks": [
+          "[\"args-사용\",4]",
+          "[\"argument를-직접-지정한-함수-사용\",1]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]"
+        ],
+        "targetBlocks": [
+          "[\"주요-특징\",21]",
+          "[null,1]",
+          "[\"주요-특징\",23]"
+        ]
+      },
+      {
+        "id": "python-class-inheritance",
+        "sourceBlocks": [
+          "[\"args-사용\",4]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]",
+          "[\"kwargs-사용\",3]"
+        ],
+        "targetBlocks": [
+          "[\"abstract-class\",3]",
+          "[\"examples\",2]",
+          "[\"예시-코드\",1]"
+        ]
+      },
+      {
+        "id": "python-assert",
+        "sourceBlocks": [
+          "[\"args-사용\",4]",
+          "[\"argument를-직접-지정한-함수-사용\",1]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]"
+        ],
+        "targetBlocks": [
+          "[\"가정-설명문assert\",1]",
+          "[\"assert가-필요한-이유\",1]",
+          "[\"assert가-필요한-이유\",2]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]",
+          "[\"kwargs-사용\",4]",
+          "[\"argument를-직접-지정한-함수-사용\",1]"
+        ],
+        "targetBlocks": [
+          "[\"2\",2]",
+          "[\"increasing-speed-a-llm-serving-inference\",10]",
+          "[\"4bit-or-8bit-quantization\",2]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"kwargs-사용\",5]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]",
+          "[\"argument를-직접-지정한-함수-사용\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",5]",
+          "[\"environment\",1]"
+        ]
+      },
+      {
+        "id": "prompt-engineering",
+        "sourceBlocks": [
+          "[\"argument를-직접-지정한-함수-사용\",1]",
+          "[\"args-사용\",8]",
+          "[\"kwargs-사용\",4]"
+        ],
+        "targetBlocks": [
+          "[\"avoid-impreciseness\",1]",
+          "[\"elements-of-prompt\",3]",
+          "[\"cot-prompting\",5]"
+        ]
+      },
+      {
+        "id": "distributed-gpu-training",
+        "sourceBlocks": [
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]",
+          "[\"args-사용\",8]",
+          "[\"kwargs-사용\",4]"
+        ],
+        "targetBlocks": [
+          "[\"최적화-gradient와-model-sharding\",5]",
+          "[\"jupyter-notebook에서-사용하기\",1]",
+          "[\"설치\",3]"
+        ]
+      }
+    ],
+    "recommendations": []
+  }
+}

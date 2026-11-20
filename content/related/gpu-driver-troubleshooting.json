@@ -1,0 +1,290 @@
+{
+  "version": 2,
+  "id": "gpu-driver-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "69bd2085f3067d9d44c3511413939663093661b0b910268673e8e7e0da82c2cf",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "cuda",
+        "role": "applies",
+        "evidence": {
+          "articleId": "gpu-driver-troubleshooting",
+          "blockId": "[\"해결\",2]",
+          "anchor": "해결",
+          "quote": "sudo apt install nvidia-driver-525 sudo reboot",
+          "hash": "fad661413a04a9975c02227e1af8d61b39d9e79c431bcde87d8d03fde1dc0dd6"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "3228bde9c4683bf49611052a21d0cc96398b524645f300710860375f8d48d1ca",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",5]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"4bit-quantization\",17]",
+          "[\"현상\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"해결\",9]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",9]",
+          "[\"env\",9]",
+          "[\"error\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"원인\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"error2\",2]",
+          "[\"solution-1\",2]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",3]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",4]",
+          "[\"nvidia-driver\",1]"
+        ]
+      },
+      {
+        "id": "docker-gpu-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"env\",2]",
+          "[\"해결\",6]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",3]",
+          "[\"solution\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"원인\",1]",
+          "[\"해결\",1]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"translation\",1]",
+          "[\"workflow\",1]",
+          "[\"question-generationkor\",1]"
+        ]
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"env\",2]",
+          "[\"해결\",5]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",2]",
+          "[\"solution\",2]",
+          "[\"error\",2]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"env\",2]",
+          "[\"해결\",5]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",2]",
+          "[\"조치-2\",1]",
+          "[\"error\",9]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"3️⃣\",8]",
+          "[\"env\",3]",
+          "[\"2️⃣\",2]"
+        ]
+      },
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"해결\",6]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "python-venv-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",1]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",1]",
+          "[\"issue\",3]"
+        ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",10]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"problem\",2]",
+          "[\"environment\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "cuda-device-troubleshooting",
+        "relation": "related_method",
+        "reason": "두 사례 모두 A100에서 nvidia-smi 이상을 다루며, 그래픽 드라이버 설치 또는 재설치로 GPU 인식 문제를 해결합니다.",
+        "sourceEvidence": {
+          "articleId": "gpu-driver-troubleshooting",
+          "blockId": "[\"issue\",1]",
+          "anchor": "issue",
+          "quote": "nvidia-smi 입력시 평소와 다르게 그래픽카드 정보가 나타나는 현상 발생",
+          "hash": "bfca6b71f15bb1b966b79f80022abecb697cc114ef0fb623bf068a2b7b409a4c"
+        },
+        "targetEvidence": {
+          "articleId": "cuda-device-troubleshooting",
+          "blockId": "[\"issue\",5]",
+          "anchor": "issue",
+          "quote": "nvidia driver 재설치",
+          "hash": "eb3b2044bc85ca003c2d0856b005b4e90887e58289e21e24318bda4cd44ba635"
+        }
+      },
+      {
+        "id": "developing-daily-06",
+        "relation": "related_method",
+        "reason": "그래픽 드라이버 버전 문제로 GPU를 인식하지 못하는 상황에서 드라이버 관련 조치와 CUDA 버전 대응을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "gpu-driver-troubleshooting",
+          "blockId": "[\"원인\",1]",
+          "anchor": "원인",
+          "quote": "그래픽드라이버 버전 문제로 예상",
+          "hash": "634274f6cf2032740013a658a7f3457f0abd836eb2255b547807002241301d37"
+        },
+        "targetEvidence": {
+          "articleId": "developing-daily-06",
+          "blockId": "[\"error2\",2]",
+          "anchor": "error2",
+          "quote": "갑자기 GPU를 인식 못함",
+          "hash": "c2e9486555c735c0a728b49a3f91b1a873be75df67fdfd2b154a33fe50512fbc"
+        }
+      },
+      {
+        "id": "python-venv-troubleshooting",
+        "relation": "evaluation_comparison",
+        "reason": "두 사례 모두 Ubuntu 22.04 환경이지만, 하나는 nvidia-smi 이상이고 다른 하나는 venv 생성 실패여서 문제와 해결 조건이 다릅니다.",
+        "sourceEvidence": {
+          "articleId": "gpu-driver-troubleshooting",
+          "blockId": "[\"env\",1]",
+          "anchor": "env",
+          "quote": "Ubuntu 22.04",
+          "hash": "c1c6fb1bf228a39af9741fc9423688cf05ff380f3b25367ca8b19e343ba2db90"
+        },
+        "targetEvidence": {
+          "articleId": "python-venv-troubleshooting",
+          "blockId": "[\"env\",1]",
+          "anchor": "env",
+          "quote": "OS : Ubuntu 22.04",
+          "hash": "ed56008c49595e0e2e8bdccba4484c4be1029d7431924779d83ea71dd8713054"
+        }
+      }
+    ]
+  }
+}

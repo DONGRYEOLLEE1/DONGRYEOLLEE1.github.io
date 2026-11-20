@@ -1,0 +1,232 @@
+{
+  "version": 2,
+  "id": "eda",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "bece25b21adb5b73212e846a572a01d66c9e0dc6280b3f54054e777407a5b273",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "data-preparation",
+        "role": "about",
+        "evidence": {
+          "articleId": "eda",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "때문에 이번 연구에서는 universal data에 대한 매우 쉬운 data-augmentation 방법론을 제시하고 이를 EDA (easy data augmentation)이라고 명명한다.",
+          "hash": "365510027ed926964f49a1808c05623d592b35dcb561a26db8831e69b996cb6f"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "0c22a649d52622272cd00e36d93a0271e7eda625c3739e54dde79c25f8b52a44",
+    "status": "abstained",
+    "candidates": [
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"how-much-augmentation\",2]",
+          "[\"benchmark-dataset\",1]"
+        ],
+        "targetBlocks": [
+          "[\"the-data-factory\",1]",
+          "[\"introduction\",9]",
+          "[\"data-efficiency\",2]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"training-set-sizing\",1]",
+          "[\"how-much-augmentation\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]",
+          "[\"motivation\",3]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"ablation-study---eda-decomposed\",3]",
+          "[\"introduction\",1]",
+          "[\"does-eda-conserve-true-lables\",1]"
+        ],
+        "targetBlocks": [
+          "[\"ablation-study\",1]",
+          "[\"introduction\",7]",
+          "[\"scaling-the-number-of-trainable-parameters\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"training-set-sizing\",1]",
+          "[\"theory\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",10]",
+          "[\"prob\",3]",
+          "[\"envs\",4]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"discussion-and-limitations\",1]",
+          "[\"how-much-augmentation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"experimental-setup\",1]",
+          "[\"symbolic-reasoning\",1]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"ablation-study---eda-decomposed\",4]",
+          "[\"introduction\",1]",
+          "[\"does-eda-conserve-true-lables\",1]"
+        ],
+        "targetBlocks": [
+          "[\"ablation-experiments\",1]",
+          "[\"introduction\",6]",
+          "[\"model-and-datasets\",4]"
+        ]
+      },
+      {
+        "id": "regex-preprocessing",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"eda\",4]",
+          "[\"theory\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"training-set-sizing\",1]",
+          "[\"comparison-with-related-work\",1]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",1]",
+          "[\"training-techniques\",2]",
+          "[\"related-work\",2]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"discussion-and-limitations\",1]",
+          "[\"does-eda-conserve-true-lables\",1]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",1]",
+          "[\"solution\",1]",
+          "[\"문제-정의\",6]"
+        ]
+      },
+      {
+        "id": "developing-daily-05",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"does-eda-conserve-true-lables\",4]",
+          "[\"theory\",7]"
+        ],
+        "targetBlocks": [
+          "[\"data-processing\",1]",
+          "[\"t5-end2end-question-generation\",2]",
+          "[\"question-generation-영어\",1]"
+        ]
+      },
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"training-set-sizing\",1]",
+          "[\"ablation-study---eda-decomposed\",4]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"imagenet-results-for-efficientnet\",1]",
+          "[\"convnet-accuracy\",1]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"ablation-study---eda-decomposed\",2]",
+          "[\"benchmark-dataset\",1]",
+          "[\"discussion-and-limitations\",2]"
+        ],
+        "targetBlocks": [
+          "[\"ablation-study\",1]",
+          "[\"hyper-parameter\",2]",
+          "[\"bert의-한계점\",1]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"comparison-with-related-work\",1]",
+          "[\"training-set-sizing\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",5]",
+          "[\"related-work\",1]",
+          "[\"다양한-모델에서의-empirical-α\",7]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"training-set-sizing\",1]",
+          "[\"benchmark-dataset\",2]"
+        ],
+        "targetBlocks": [
+          "[\"dataset\",2]",
+          "[\"envs\",1]",
+          "[\"training\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"theory\",5]",
+          "[\"does-eda-conserve-true-lables\",4]"
+        ],
+        "targetBlocks": [
+          "[\"translation\",3]",
+          "[\"sbert\",1]",
+          "[\"question-generationeng\",1]"
+        ]
+      }
+    ],
+    "recommendations": []
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "version": 2,
+  "id": "tgi-implementation",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "969e5dd0a722e83de16defbfa171938127554b157a60c8497327a62a63a7da24",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "model-serving",
+        "role": "about",
+        "evidence": {
+          "articleId": "tgi-implementation",
+          "blockId": "[\"1\",6]",
+          "anchor": "1",
+          "quote": "$ cd model_file $ nohup sudo docker run --gpus all --shm-size 1g -p 8080:80 --volume /DATA:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/OUTPUT_DIRECTORY --num-shard {NUMBER_OF_GPUS} --rope-scaling dynamic --rope-factor 2.0 & 2023-10-26T06:37:55.196641Z INFO shard-manager: text_generation_launcher: Shard ready in 12.91406831s rank=1 2023-10-26T06:37:55.292255Z INFO text_generation_launcher: Starting Webserver 2023-10-26T06:37:55.351346Z WARN",
+          "hash": "a216686807489b023a21f034bb1f756f7199c50f63a4b9512aa1d66b052767ee"
+        }
+      },
+      {
+        "id": "containers",
+        "role": "applies",
+        "evidence": {
+          "articleId": "tgi-implementation",
+          "blockId": "[\"1\",6]",
+          "anchor": "1",
+          "quote": "$ cd model_file $ nohup sudo docker run --gpus all --shm-size 1g -p 8080:80 --volume /DATA:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/OUTPUT_DIRECTORY --num-shard {NUMBER_OF_GPUS} --rope-scaling dynamic --rope-factor 2.0 & 2023-10-26T06:37:55.196641Z INFO shard-manager: text_generation_launcher: Shard ready in 12.91406831s rank=1 2023-10-26T06:37:55.292255Z INFO text_generation_launcher: Starting Webserver 2023-10-26T06:37:55.351346Z WARN",
+          "hash": "a216686807489b023a21f034bb1f756f7199c50f63a4b9512aa1d66b052767ee"
+        }
+      },
+      {
+        "id": "lora",
+        "role": "applies",
+        "evidence": {
+          "articleId": "tgi-implementation",
+          "blockId": "[\"1\",1]",
+          "anchor": "1",
+          "quote": "TGI에 모델을 적재시키기 위해선 lora 파인튜닝 모델 -> standalone 모델 변환(Full-finetuning 모델 필요X)",
+          "hash": "f5de7d2d3d8c89519d5d917406e602b627456be346ef41f0b6f06b5cd1e78578"
+        }
+      }
+    ],
+    "review": [
+      {
+        "id": "model-serving",
+        "proposedRole": "about"
+      }
+    ]
+  },
+  "entry": {
+    "inputHash": "2e5a550e02a00ea0e2dfc63d10648119b4dec7fb5165245860e3f57a22839235",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"1\",1]",
+          "[\"1\",6]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"docker\",4]",
+          "[\"tgi\",1]",
+          "[\"tgi\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-03",
+        "sourceBlocks": [
+          "[\"1\",6]",
+          "[\"env\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"1\",1]",
+          "[\"env\",1]",
+          "[\"1\",2]"
+        ],
+        "targetBlocks": [
+          "[\"model\",3]",
+          "[\"envs\",4]",
+          "[\"training\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"1\",6]",
+          "[\"env\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"ts\",6]",
+          "[\"ref\",3]",
+          "[\"gradio\",5]"
+        ]
+      },
+      {
+        "id": "ollama-docker-troubleshooting",
+        "sourceBlocks": [
+          "[\"1\",6]",
+          "[\"env\",2]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"4-2-해결방안-open-webui-discussions4376\",2]",
+          "[\"4-2-해결방안-open-webui-discussions4376\",3]",
+          "[\"구현-사항\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"1\",1]",
+          "[\"env\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"envs\",2]",
+          "[\"ref\",5]"
+        ]
+      },
+      {
+        "id": "docker-gpu-troubleshooting",
+        "sourceBlocks": [
+          "[\"1\",6]",
+          "[\"env\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"env\",1]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"1\",1]",
+          "[\"env\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"source-code\",5]",
+          "[\"env\",1]",
+          "[\"solution\",12]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"1\",1]",
+          "[\"env\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"low-rank-adaptation-lora\",1]",
+          "[\"e2e-benchmark\",2]",
+          "[\"introduction\",2]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"1\",1]",
+          "[\"env\",2]",
+          "[\"1\",4]"
+        ],
+        "targetBlocks": [
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",3]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"1\",1]",
+          "[\"env\",1]",
+          "[\"1\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"1\",1]",
+          "[\"env\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",17]",
+          "[\"해결\",1]",
+          "[\"section-8\",2]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"env\",1]",
+          "[\"1\",2]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"env\",3]",
+          "[\"solution\",3]",
+          "[\"error\",5]"
+        ]
+      },
+      {
+        "id": "peft-target-modules",
+        "sourceBlocks": [
+          "[\"1\",1]",
+          "[\"env\",2]",
+          "[\"1\",2]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"1\",1]",
+          "[\"env\",1]",
+          "[\"1\",2]"
+        ],
+        "targetBlocks": [
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"deprecations\",1]",
+          "[\"layer-replication\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "developing-daily-03",
+        "relation": "related_method",
+        "reason": "두 글의 Docker 명령을 비교해 TGI에 로컬 모델을 지정해 서빙하는 방법과 Repo id 오류 해결을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "tgi-implementation",
+          "blockId": "[\"1\",6]",
+          "anchor": "1",
+          "quote": "$ cd model_file $ nohup sudo docker run --gpus all --shm-size 1g -p 8080:80 --volume /DATA:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/OUTPUT_DIRECTORY --num-shard {NUMBER_OF_GPUS} --rope-scaling dynamic --rope-factor 2.0 & 2023-10-26T06:37:55.196641Z INFO shard-manager: text_generation_launcher: Shard ready in 12.91406831s rank=1 2023-10-26T06:37:55.292255Z INFO text_generation_launcher: Starting Webserver 2023-10-26T06:37:55.351346Z WARN",
+          "hash": "a216686807489b023a21f034bb1f756f7199c50f63a4b9512aa1d66b052767ee"
+        },
+        "targetEvidence": {
+          "articleId": "developing-daily-03",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": "$ pwd /mnt/huggingface $ ls opt-125m version.txt $ ls opt-125m/ config.json generation_config.json merges.txt pytorch_model.bin special_tokens_map.json tokenizer_config.json vocab.json $ docker run --gpus all --shm-size 1g -p 8080:80 --volume /mnt/huggingface:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/opt-125m --num-shard 1",
+          "hash": "ab1cf11748bf6d1f44f3e6e3333c9fd6773cd8386181ca19f60a11d3b170db4c"
+        }
+      },
+      {
+        "id": "peft-features-090",
+        "relation": "related_method",
+        "reason": "LoRA를 standalone 모델로 병합해 저장하는 과정과 PEFT의 LoRA 가중치 병합 설명을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "tgi-implementation",
+          "blockId": "[\"1\",4]",
+          "anchor": "1",
+          "quote": "torch.allclose(base_first_weight, lora_first_weight) standalone_model = lora_model.merge_and_unload() standalone_model.save_pretrained(output_dir, safe_serialization = True) tokenizer.save_pretrained(output_dir) if __name__ == \"__main__\": parser = argparse.ArgumentParser(description = \"\") parser.add_argument('--base_model_id', type = 'str', default = \"base_model_id\") parser.add_argument('--lora_model_id', type = str, default = \"lora_model_id\")",
+          "hash": "f423f8478c13a03b2bae74e7c7439cc85ac31292fcfa7990610a06b734633f97"
+        },
+        "targetEvidence": {
+          "articleId": "peft-features-090",
+          "blockId": "[\"merging-lora-weights\",3]",
+          "anchor": "merging-lora-weights",
+          "quote": "기존 베이스 모델에서 lora weight를 병합하는게 아닌 로라 모델끼리 병합하는 것을 의미",
+          "hash": "8117a060be8fd0bd91155ac33b335e6e33223091b258505d351a5b5c9a2e6287"
+        }
+      },
+      {
+        "id": "docker-gpu-troubleshooting",
+        "relation": "related_method",
+        "reason": "TGI를 Docker에서 GPU 옵션으로 실행하는 명령과 GPU 장치 드라이버 오류의 해결 절차를 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "tgi-implementation",
+          "blockId": "[\"1\",6]",
+          "anchor": "1",
+          "quote": "$ cd model_file $ nohup sudo docker run --gpus all --shm-size 1g -p 8080:80 --volume /DATA:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/OUTPUT_DIRECTORY --num-shard {NUMBER_OF_GPUS} --rope-scaling dynamic --rope-factor 2.0 & 2023-10-26T06:37:55.196641Z INFO shard-manager: text_generation_launcher: Shard ready in 12.91406831s rank=1 2023-10-26T06:37:55.292255Z INFO text_generation_launcher: Starting Webserver 2023-10-26T06:37:55.351346Z WARN",
+          "hash": "a216686807489b023a21f034bb1f756f7199c50f63a4b9512aa1d66b052767ee"
+        },
+        "targetEvidence": {
+          "articleId": "docker-gpu-troubleshooting",
+          "blockId": "[\"solution\",2]",
+          "anchor": "solution",
+          "quote": "$ distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \\ && curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \\ && curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list $ sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit",
+          "hash": "97a6ee43b2214218cb665aba58c01f1d130df8dd772a920582c68743aceeda06"
+        }
+      }
+    ]
+  }
+}

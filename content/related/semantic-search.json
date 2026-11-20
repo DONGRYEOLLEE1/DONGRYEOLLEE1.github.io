@@ -1,0 +1,263 @@
+{
+  "version": 2,
+  "id": "semantic-search",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "92469a06fee10487acacd12c6b0401c5441876f456f8f9989965e145bd58575e",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "semantic-search",
+        "role": "about",
+        "evidence": {
+          "articleId": "semantic-search",
+          "blockId": "[\"what-is-not-semantic-search\",20]",
+          "anchor": "what-is-not-semantic-search",
+          "quote": "유사도를 사용하여 vector간에 query와 가장 비슷한 데이터를 찾습니다.",
+          "hash": "8a4cb42e63a9139ad1a43d46f4b9bf55f5875904c7d8e055b6439cda0c245cb1"
+        }
+      },
+      {
+        "id": "dense-retrieval",
+        "role": "about",
+        "evidence": {
+          "articleId": "semantic-search",
+          "blockId": "[\"what-is-not-semantic-search\",20]",
+          "anchor": "what-is-not-semantic-search",
+          "quote": "유사도를 사용하여 vector간에 query와 가장 비슷한 데이터를 찾습니다.",
+          "hash": "8a4cb42e63a9139ad1a43d46f4b9bf55f5875904c7d8e055b6439cda0c245cb1"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "abba2387d9713183685137e22763cffb464fb6b9d05d30efc736cc5f4370fbc3",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "dense-retrieval",
+        "sourceBlocks": [
+          "[\"what-is-not-semantic-search\",20]",
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"using-similarity-to-find-the-best-document\",3]"
+        ],
+        "targetBlocks": [
+          "[\"dense-retrieval\",3]",
+          "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "[\"chunking-the-articles\",11]"
+        ]
+      },
+      {
+        "id": "keyword-search",
+        "sourceBlocks": [
+          "[\"what-is-not-semantic-search\",17]",
+          "[\"using-similarity-to-find-the-best-document\",7]",
+          "[\"how-to-search-using-text-embedding\",13]"
+        ],
+        "targetBlocks": [
+          "[\"querying-the-wikipedia-dataset-using-keyword-matching\",1]",
+          "[\"conclusion\",5]",
+          "[\"conclusion\",2]"
+        ]
+      },
+      {
+        "id": "reranking",
+        "sourceBlocks": [
+          "[\"what-is-not-semantic-search\",8]",
+          "[\"using-similarity-to-find-the-best-document\",7]",
+          "[\"how-to-search-using-text-embedding\",3]"
+        ],
+        "targetBlocks": [
+          "[\"결론\",1]",
+          "[\"using-rerank-to-improve-keyword-search\",29]",
+          "[\"reranking\",1]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[\"how-to-search-using-text-embedding\",13]",
+          "[\"are-embeddings-and-similarity-enough-no\",1]",
+          "[\"using-similarity-to-find-the-best-document\",6]"
+        ],
+        "targetBlocks": [
+          "[\"does-eda-conserve-true-lables\",4]",
+          "[\"introduction\",1]",
+          "[\"theory\",7]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"using-similarity-to-find-the-best-document\",7]",
+          "[\"what-is-not-semantic-search\",19]"
+        ],
+        "targetBlocks": [
+          "[\"sbert\",1]",
+          "[\"translation\",2]",
+          "[\"question-generationkor\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"using-similarity-to-find-the-best-document\",4]",
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"what-is-not-semantic-search\",20]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning은-어떻게-작동할까\",2]",
+          "[\"method-1-pairwise-similarity\",2]",
+          "[\"few-shot-learning이-뭘까\",1]"
+        ]
+      },
+      {
+        "id": "elmo",
+        "sourceBlocks": [
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"what-is-not-semantic-search\",19]",
+          "[\"using-similarity-to-find-the-best-document\",5]"
+        ],
+        "targetBlocks": [
+          "[\"context-matters\",4]",
+          "[\"experiments\",4]",
+          "[\"elmo\",6]"
+        ]
+      },
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"what-is-not-semantic-search\",19]",
+          "[\"using-similarity-to-find-the-best-document\",7]"
+        ],
+        "targetBlocks": [
+          "[\"a-latent-embedding-approach\",2]",
+          "[\"classification-as-nli\",1]",
+          "[\"what-is-zero-shot-learning\",2]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"using-similarity-to-find-the-best-document\",5]",
+          "[\"what-is-not-semantic-search\",19]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",2]",
+          "[\"문제-정의\",6]",
+          "[\"solution\",5]"
+        ]
+      },
+      {
+        "id": "developing-daily-05",
+        "sourceBlocks": [
+          "[\"using-similarity-to-find-the-best-document\",5]",
+          "[\"how-to-search-using-text-embedding\",2]",
+          "[\"are-embeddings-and-similarity-enough-no\",4]"
+        ],
+        "targetBlocks": [
+          "[\"t5-end2end-question-generation\",3]",
+          "[\"sehongt5-large-questiongeneration\",1]",
+          "[\"kobart-questiongeneration\",3]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"what-is-not-semantic-search\",19]",
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"using-similarity-to-find-the-best-document\",2]"
+        ],
+        "targetBlocks": [
+          "[\"self-attention-1\",10]",
+          "[\"self-attention\",11]",
+          "[\"input-embedding\",1]"
+        ]
+      },
+      {
+        "id": "chat-vector",
+        "sourceBlocks": [
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"multilingual-search\",1]",
+          "[\"what-is-not-semantic-search\",19]"
+        ],
+        "targetBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "r-cnn",
+        "sourceBlocks": [
+          "[\"using-similarity-to-find-the-best-document\",6]",
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"what-is-not-semantic-search\",19]"
+        ],
+        "targetBlocks": [
+          "[\"요약\",4]",
+          "[\"hard-negative-mining\",7]",
+          "[\"region-proposal-selective-search\",3]"
+        ]
+      },
+      {
+        "id": "rtpurbo",
+        "sourceBlocks": [
+          "[\"using-similarity-to-find-the-best-document\",6]",
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"are-embeddings-and-similarity-enough-no\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "[\"2-rope가-만드는-압축-가능한-geometry--low-dim-subspace\",3]",
+          "[\"introduction\",2]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"are-embeddings-and-similarity-enough-no\",5]",
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"using-similarity-to-find-the-best-document\",7]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",15]",
+          "[\"the-architecture-of-ziya2\",2]",
+          "[\"the-data-factory\",5]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "dense-retrieval",
+        "relation": "related_method",
+        "reason": "Semantic Search가 문장 간 유사한 벡터로 검색하는 원리와 Dense Retrieval의 text embedding 기반 문서 검색 방식을 함께 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "semantic-search",
+          "blockId": "[\"how-to-search-using-text-embedding\",1]",
+          "anchor": "how-to-search-using-text-embedding",
+          "quote": "임베딩은 각 문장에 숫자 목록인 벡터를 할당하는 방식입니다. Embedding의 가장 중요한 요소는 바로 텍스트 조각에 더 비슷한 vetor를 할당하는 것입니다. 예를들어 \"Hello, how are you?\" 문장과 \"Hi, what's up?\" 문장을 매우 유사한 수의 리스트 데이터가 할당될 것인데 반해, \"Tomorrow is Friday\" 문장과는 이전 문장과 다르게 꽤 다른 수의 리스트 데이터가 할당될 것입니다.",
+          "hash": "01d74c7cd003fae5b5348d8f7d0d1c57c1086fbe52d87c425f1661db9de991b8"
+        },
+        "targetEvidence": {
+          "articleId": "dense-retrieval",
+          "blockId": "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "anchor": "querying-the-dataset-using-dense-retrieval",
+          "quote": "Dense Retrieval은 query와 유사한 문서를 찾기위해 text embedding을 사용합니다. Embedding은 숫자로 된 긴 리스트 데이터인 vector를 텍스트의 각각(token)에 할당합니다. Embedding에서의 주요 속성 중 하나는 비슷한 텍스트 조각이 비슷한 벡터로 이동한다는 것입니다.",
+          "hash": "f7396af47501ae2109752e37f93113ae64f0e1f15b7a584115a015b911de96bf"
+        }
+      }
+    ]
+  }
+}

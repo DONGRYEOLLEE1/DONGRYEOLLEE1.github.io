@@ -1,0 +1,293 @@
+{
+  "version": 2,
+  "id": "reranking",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "45276319a1631435fce058ce430357453a5228cf2f30b5a661e8f63b4cd6a163",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "reranking",
+        "role": "about",
+        "evidence": {
+          "articleId": "reranking",
+          "blockId": "[\"reranking\",1]",
+          "anchor": "reranking",
+          "quote": "Reranking은 다음과 같이 작동합니다: 각 (쿼리, 응답) 쌍에 대해 관련성 점수를 부여합니다. 이름에서 암시하듯이, 응답이 쿼리와 관련성이 높은 경우 높은 점수를 부여하고, 그렇지 않은 경우 낮은 점수를 부여합니다. 이 장에서는 이 모듈에서 이전에 찾은 위키피디아 검색 결과를 개선하기 위해 재정렬을 사용하는 방법에 대해 배울 것입니다.",
+          "hash": "4f0224bbf25b454693f37397948cea53af80d74aa9aaa9f4de74c1ea7f5cdf1c"
+        }
+      },
+      {
+        "id": "rag",
+        "role": "about",
+        "evidence": {
+          "articleId": "reranking",
+          "blockId": "[\"결론\",1]",
+          "anchor": "결론",
+          "quote": "Reranking은 특정 쿼리에 가장 관련성이 높은 응답을 찾는 데 매우 유용한 방법입니다. 이는 dense retrieval을 개선하기 위한 키워드 검색의 보완 방식으로도 유용합니다. 이번 포스트에서는 키워드 검색을 통해 답을 포함할 가능성이 있는 20개의 문서를 먼저 검색한 뒤, 재정렬 엔드포인트를 사용하여 그 중 상위 3개를 선택함으로써 키워드 검색 결과를 크게 향상시켰습니다.",
+          "hash": "d03185c1f96687e82a0a21a6b9f63dba6fe3a917452f9793de8fe2ca09b0a0da"
+        }
+      },
+      {
+        "id": "keyword-search",
+        "role": "applies",
+        "evidence": {
+          "articleId": "reranking",
+          "blockId": "[\"결론\",1]",
+          "anchor": "결론",
+          "quote": "Reranking은 특정 쿼리에 가장 관련성이 높은 응답을 찾는 데 매우 유용한 방법입니다. 이는 dense retrieval을 개선하기 위한 키워드 검색의 보완 방식으로도 유용합니다. 이번 포스트에서는 키워드 검색을 통해 답을 포함할 가능성이 있는 20개의 문서를 먼저 검색한 뒤, 재정렬 엔드포인트를 사용하여 그 중 상위 3개를 선택함으로써 키워드 검색 결과를 크게 향상시켰습니다.",
+          "hash": "d03185c1f96687e82a0a21a6b9f63dba6fe3a917452f9793de8fe2ca09b0a0da"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "ae4ec27a4eb4b4fb4878d18a290fc710b175481c20df61d006e7fca03cc8211c",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "dense-retrieval",
+        "sourceBlocks": [
+          "[\"결론\",1]",
+          "[\"using-rerank-to-improve-keyword-search\",1]",
+          "[\"reranking\",1]"
+        ],
+        "targetBlocks": [
+          "[\"dense-retrieval\",3]",
+          "[\"chunking-the-articles\",9]",
+          "[\"querying-the-dataset-using-dense-retrieval\",4]"
+        ]
+      },
+      {
+        "id": "keyword-search",
+        "sourceBlocks": [
+          "[\"결론\",1]",
+          "[\"using-rerank-to-improve-keyword-search\",30]",
+          "[\"reranking\",1]"
+        ],
+        "targetBlocks": [
+          "[\"querying-the-wikipedia-dataset-using-keyword-matching\",1]",
+          "[\"conclusion\",2]",
+          "[\"conclusion\",5]"
+        ]
+      },
+      {
+        "id": "book-spine",
+        "sourceBlocks": [
+          "[\"reranking\",1]",
+          "[\"결론\",1]",
+          "[\"using-rerank-to-improve-keyword-search\",10]"
+        ],
+        "targetBlocks": [
+          "[\"system\",4]",
+          "[\"tldr\",4]",
+          "[\"open-set\",1]"
+        ]
+      },
+      {
+        "id": "semantic-search",
+        "sourceBlocks": [
+          "[\"결론\",1]",
+          "[\"using-rerank-to-improve-keyword-search\",29]",
+          "[\"reranking\",1]"
+        ],
+        "targetBlocks": [
+          "[\"what-is-not-semantic-search\",8]",
+          "[\"using-similarity-to-find-the-best-document\",7]",
+          "[\"how-to-search-using-text-embedding\",3]"
+        ]
+      },
+      {
+        "id": "python-args-kwargs",
+        "sourceBlocks": [
+          "[\"using-rerank-to-improve-keyword-search\",1]",
+          "[\"결론\",1]",
+          "[\"reranking\",1]"
+        ],
+        "targetBlocks": [
+          "[\"kwargs-사용\",1]",
+          "[\"args-사용\",5]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]"
+        ]
+      },
+      {
+        "id": "alphallm",
+        "sourceBlocks": [
+          "[\"using-rerank-to-improve-keyword-search\",6]",
+          "[\"결론\",1]",
+          "[\"reranking\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"related-work\",2]",
+          "[\"problem-formulation\",1]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"using-rerank-to-improve-keyword-search\",1]",
+          "[\"결론\",1]",
+          "[\"reranking\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",9]",
+          "[\"the-architecture-of-ziya2\",2]",
+          "[\"baselines\",2]"
+        ]
+      },
+      {
+        "id": "prompt-engineering",
+        "sourceBlocks": [
+          "[\"using-rerank-to-improve-keyword-search\",2]",
+          "[\"결론\",1]",
+          "[\"reranking\",1]"
+        ],
+        "targetBlocks": [
+          "[\"zero-shot-cot-prompting\",4]",
+          "[\"cot-prompting\",5]",
+          "[\"the-instruction\",2]"
+        ]
+      },
+      {
+        "id": "python-typing",
+        "sourceBlocks": [
+          "[\"using-rerank-to-improve-keyword-search\",1]",
+          "[\"reranking\",1]",
+          "[\"결론\",1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"파이썬--동적-프로그래밍-언어\",1]",
+          "[\"list-dict-tuple-set\",2]"
+        ]
+      },
+      {
+        "id": "rtpurbo",
+        "sourceBlocks": [
+          "[\"결론\",1]",
+          "[\"using-rerank-to-improve-keyword-search\",6]",
+          "[\"reranking\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "[\"정리\",1]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "python-map",
+        "sourceBlocks": [
+          "[\"reranking\",1]",
+          "[\"using-rerank-to-improve-keyword-search\",1]",
+          "[\"결론\",1]"
+        ],
+        "targetBlocks": [
+          "[\"map\",1]",
+          "[\"장점\",1]",
+          "[\"동작-원리\",1]"
+        ]
+      },
+      {
+        "id": "chat-vector",
+        "sourceBlocks": [
+          "[\"using-rerank-to-improve-keyword-search\",6]",
+          "[\"결론\",1]",
+          "[\"reranking\",1]"
+        ],
+        "targetBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"using-rerank-to-improve-keyword-search\",28]",
+          "[\"결론\",1]",
+          "[\"reranking\",1]"
+        ],
+        "targetBlocks": [
+          "[\"merging-lora-weights\",14]",
+          "[\"peft-v090\",1]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"결론\",1]",
+          "[\"using-rerank-to-improve-keyword-search\",2]",
+          "[\"reranking\",1]"
+        ],
+        "targetBlocks": [
+          "[\"background\",1]",
+          "[\"qlora-vs-standard-finetuning\",4]",
+          "[\"introduction\",10]"
+        ]
+      },
+      {
+        "id": "kodistill",
+        "sourceBlocks": [
+          "[\"결론\",1]",
+          "[\"using-rerank-to-improve-keyword-search\",6]",
+          "[\"reranking\",1]"
+        ],
+        "targetBlocks": [
+          "[\"at-a-glance\",1]",
+          "[null,1]",
+          "[\"korean-ocr-a-measurable-change\",3]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "keyword-search",
+        "relation": "concept_explanation",
+        "reason": "키워드 검색 결과를 reranker로 재정렬하는 흐름과, 키워드 매칭이 문장의 의미를 활용하지 못하는 한계를 함께 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "reranking",
+          "blockId": "[\"결론\",1]",
+          "anchor": "결론",
+          "quote": "Reranking은 특정 쿼리에 가장 관련성이 높은 응답을 찾는 데 매우 유용한 방법입니다. 이는 dense retrieval을 개선하기 위한 키워드 검색의 보완 방식으로도 유용합니다. 이번 포스트에서는 키워드 검색을 통해 답을 포함할 가능성이 있는 20개의 문서를 먼저 검색한 뒤, 재정렬 엔드포인트를 사용하여 그 중 상위 3개를 선택함으로써 키워드 검색 결과를 크게 향상시켰습니다.",
+          "hash": "d03185c1f96687e82a0a21a6b9f63dba6fe3a917452f9793de8fe2ca09b0a0da"
+        },
+        "targetEvidence": {
+          "articleId": "keyword-search",
+          "blockId": "[\"conclusion\",2]",
+          "anchor": "conclusion",
+          "quote": "Keyword search는 단어들을 기준으로 결과값을 매칭하기에 문장의 의미를 활용하진 못합니다. 이는 다음과 같은 문장에 대해선 더 어려운 과제로 인식할 수 있습니다.",
+          "hash": "31a5b1df12eb14cccc7716f9f8d89a0275efb6302e89b69ea0aef2210a434ab0"
+        }
+      },
+      {
+        "id": "book-spine",
+        "relation": "application_example",
+        "reason": "쿼리-응답 관련성으로 후보를 재정렬하는 개념을, BM25 후보 검색 후 문자열 유사도와 규칙으로 재점수화하는 사례와 연결해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "reranking",
+          "blockId": "[\"reranking\",1]",
+          "anchor": "reranking",
+          "quote": "Reranking은 다음과 같이 작동합니다: 각 (쿼리, 응답) 쌍에 대해 관련성 점수를 부여합니다. 이름에서 암시하듯이, 응답이 쿼리와 관련성이 높은 경우 높은 점수를 부여하고, 그렇지 않은 경우 낮은 점수를 부여합니다. 이 장에서는 이 모듈에서 이전에 찾은 위키피디아 검색 결과를 개선하기 위해 재정렬을 사용하는 방법에 대해 배울 것입니다.",
+          "hash": "4f0224bbf25b454693f37397948cea53af80d74aa9aaa9f4de74c1ea7f5cdf1c"
+        },
+        "targetEvidence": {
+          "articleId": "book-spine",
+          "blockId": "[\"system\",4]",
+          "anchor": "system",
+          "quote": "Matching normalizes the query, retrieves 50 candidates from a 50,000-book dictionary with character 2-gram and 3-gram BM25, and rescores them with string similarity plus a few rules (Section 5). Each spine ends in one of three states: confirmed (the dictionary entry is taken as the answer), review (candidates are shown and the user picks), or unmatched.",
+          "hash": "42e4da97f352cf20759e335c63c692349941e96920844bb8ef223bed57187f05"
+        }
+      }
+    ]
+  }
+}

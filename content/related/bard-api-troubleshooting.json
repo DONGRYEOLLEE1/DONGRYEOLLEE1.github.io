@@ -1,0 +1,261 @@
+{
+  "version": 2,
+  "id": "bard-api-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "9b07ddccf5f4a38bcc783b75c0820c4529225d31e5427ce401990aa4d73565a8",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "model-serving",
+        "role": "applies",
+        "evidence": {
+          "articleId": "bard-api-troubleshooting",
+          "blockId": "[\"solution\",7]",
+          "anchor": "solution",
+          "quote": "from bardapi import Bard response = Bard(timeout = 10).get_answer('현재 대한민국 대통령은 누구일까?')['content'] print(response) >> 2023년 5월 31일 현재 대한민국의 대통령은 윤석열입니다. 윤석열은 2022년 3월 9일 제20대 대통령 선거에서 48.56%의 득표율로 당선되었습니다. 그는 2022년 5월 10일 취임하여 현재까지 재임 중입니다.",
+          "hash": "ea54e9d1db87b4f722d4d7635e2a8d1777b9a31fc2ddbd1634904ebd3227dfe0"
+        }
+      },
+      {
+        "id": "python-environment",
+        "role": "applies",
+        "evidence": {
+          "articleId": "bard-api-troubleshooting",
+          "blockId": "[\"solution\",4]",
+          "anchor": "solution",
+          "quote": "Meet the needs that required version pip install bardapi==0.1.3",
+          "hash": "c5a393f48ef1aed17817d36041f0a753fcd6d47d52c7fbc27887f52e49595237"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "63a5e1bef0ed03f2c3058d28c0ca2f1ab4a24f2b3d2f0e2bc39babd3837d9e28",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "python-venv-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"2️⃣\",1]",
+          "[\"envs\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",4]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"2️⃣\",1]",
+          "[\"envs\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution-1\",1]",
+          "[\"solution\",1]",
+          "[\"error2\",2]"
+        ]
+      },
+      {
+        "id": "netplan-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"2️⃣\",1]",
+          "[\"envs\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"2️⃣\",1]",
+          "[\"1️⃣\",1]",
+          "[\"solution\",4]"
+        ],
+        "targetBlocks": [
+          "[\"에러\",4]",
+          "[null,1]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"1️⃣\",1]",
+          "[\"2️⃣\",1]",
+          "[\"solution\",5]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"refernce\",2]",
+          "[\"environment\",1]"
+        ]
+      },
+      {
+        "id": "pip-options",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"2️⃣\",1]",
+          "[\"envs\",1]"
+        ],
+        "targetBlocks": [
+          "[\"pip-options\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"1️⃣\",1]",
+          "[\"2️⃣\",1]",
+          "[\"envs\",1]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",1]",
+          "[\"envs\",6]",
+          "[\"prob\",2]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"1️⃣\",1]",
+          "[\"2️⃣\",1]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",7]",
+          "[\"원인\",2]",
+          "[\"해결\",2]"
+        ]
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"1️⃣\",1]",
+          "[\"solution\",3]",
+          "[\"3️⃣\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",2]",
+          "[\"solution\",2]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"ref\",1]",
+          "[\"envs\",1]",
+          "[\"solution\",5]"
+        ],
+        "targetBlocks": [
+          "[\"translation\",1]",
+          "[\"question-generationkor\",1]",
+          "[\"sbert\",1]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"1️⃣\",1]",
+          "[\"envs\",1]"
+        ],
+        "targetBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"model\",1]",
+          "[\"새로운-이슈\",1]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"2️⃣\",1]",
+          "[\"1️⃣\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1️⃣\",2]",
+          "[\"2️⃣\",3]",
+          "[\"3️⃣\",6]"
+        ]
+      },
+      {
+        "id": "distributed-gpu-training",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"2️⃣\",1]",
+          "[\"envs\",1]"
+        ],
+        "targetBlocks": [
+          "[\"설치-1\",2]",
+          "[\"설치\",3]",
+          "[\"단일-gpu-사용\",4]"
+        ]
+      },
+      {
+        "id": "developing-daily-03",
+        "sourceBlocks": [
+          "[\"solution\",7]",
+          "[\"1️⃣\",1]",
+          "[\"2️⃣\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"1️⃣\",1]",
+          "[\"solution\",6]",
+          "[\"2️⃣\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",4]",
+          "[\"error\",1]",
+          "[\"error-2\",16]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "pip-options",
+        "relation": "concept_explanation",
+        "reason": "Bard API 해결 과정은 bardapi의 특정 버전을 pip로 설치하며, pip 설치 옵션을 다룬 문서에서 설치 방법을 더 알아볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "bard-api-troubleshooting",
+          "blockId": "[\"solution\",4]",
+          "anchor": "solution",
+          "quote": "Meet the needs that required version pip install bardapi==0.1.3",
+          "hash": "c5a393f48ef1aed17817d36041f0a753fcd6d47d52c7fbc27887f52e49595237"
+        },
+        "targetEvidence": {
+          "articleId": "pip-options",
+          "blockId": "[\"pip-options\",1]",
+          "anchor": "pip-options",
+          "quote": "모든 pip 설치 옵션, pip install - Usage",
+          "hash": "873aad2b41b774966b059227e56f3f8f31b682d2f862c3cdde29d8eb06cbb320"
+        }
+      }
+    ]
+  }
+}

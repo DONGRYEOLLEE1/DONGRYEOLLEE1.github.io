@@ -1,0 +1,232 @@
+{
+  "version": 2,
+  "id": "torch-tensor-manipulation-2",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "377b78f8db83c89e8a2992da1a2f913ea373814ca944be07c129dbd0d7d02b9f",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "pytorch-tensors",
+        "role": "about",
+        "evidence": {
+          "articleId": "torch-tensor-manipulation-2",
+          "blockId": "[\"squeeze\",11]",
+          "anchor": "squeeze",
+          "quote": "x = torch.zeros(2, 1, 3, 1, 8) print(f\"x shape: {x.shape}\") >>> x shape: torch.Size([2, 1, 3, 1, 8]) y = torch.squeeze(x, (1, 2, 3)) print(f\"y shape: {y.shape}\") >>> y shape: torch.Size([2, 3, 8]) z = torch.squeeze(x, (1, 3)) print(f\"z shape: {z.shape}\") >>> z shape: torch.Size([2, 3, 8])",
+          "hash": "e331fb2aaecde8e655425db65bc88334de167ed13ccc47fab6a06ddb3ddc270a"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "3a78008e648433b4eb548ba52fdc5c9e0750990ae03cd9f91ebcdc93c9c8f47d",
+    "status": "abstained",
+    "candidates": [
+      {
+        "id": "torch-tensor-manipulation-1",
+        "sourceBlocks": [
+          "[\"squeeze\",11]",
+          "[\"unsqueeze\",6]",
+          "[\"squeeze\",6]"
+        ],
+        "targetBlocks": [
+          "[\"결론\",1]",
+          "[\"torchview\",11]",
+          "[\"torchreshape\",17]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-3",
+        "sourceBlocks": [
+          "[\"squeeze\",11]",
+          "[\"unsqueeze\",6]",
+          "[\"squeeze\",6]"
+        ],
+        "targetBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",5]",
+          "[\"triu\",1]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"squeeze\",11]",
+          "[\"unsqueeze\",1]",
+          "[\"unsqueeze\",9]"
+        ],
+        "targetBlocks": [
+          "[\"case-1\",1]",
+          "[\"answer\",7]",
+          "[\"case-2\",2]"
+        ]
+      },
+      {
+        "id": "python-assert",
+        "sourceBlocks": [
+          "[\"unsqueeze\",9]",
+          "[\"squeeze\",8]",
+          "[\"unsqueeze\",8]"
+        ],
+        "targetBlocks": [
+          "[\"가정-설명문assert\",2]",
+          "[\"assert가-필요한-이유\",4]",
+          "[\"assert가-필요한-이유\",5]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"unsqueeze\",8]",
+          "[\"squeeze\",6]",
+          "[\"unsqueeze\",9]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"error\",7]",
+          "[\"env\",4]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"unsqueeze\",6]",
+          "[\"squeeze\",10]",
+          "[\"unsqueeze\",9]"
+        ],
+        "targetBlocks": [
+          "[\"2\",12]",
+          "[\"tensor-parallel\",4]",
+          "[\"4bit-or-8bit-quantization\",2]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"unsqueeze\",9]",
+          "[\"squeeze\",7]",
+          "[\"unsqueeze\",8]"
+        ],
+        "targetBlocks": [
+          "[\"에러\",4]",
+          "[null,1]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"unsqueeze\",9]",
+          "[\"squeeze\",10]",
+          "[\"unsqueeze\",8]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",30]",
+          "[\"현상\",1]",
+          "[\"해결\",1]"
+        ]
+      },
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"unsqueeze\",9]",
+          "[\"squeeze\",9]",
+          "[\"unsqueeze\",7]"
+        ],
+        "targetBlocks": [
+          "[\"model-input-sequence-length\",3]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",5]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"unsqueeze\",6]",
+          "[\"squeeze\",4]",
+          "[\"unsqueeze\",9]"
+        ],
+        "targetBlocks": [
+          "[\"positional-encoding\",3]",
+          "[\"self-attention-1\",19]",
+          "[\"input-embedding\",3]"
+        ]
+      },
+      {
+        "id": "regex-preprocessing",
+        "sourceBlocks": [
+          "[\"squeeze\",9]",
+          "[\"unsqueeze\",4]",
+          "[\"squeeze\",1]"
+        ],
+        "targetBlocks": [
+          "[\"problem\",2]",
+          "[\"solution\",2]",
+          "[\"problem\",4]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"unsqueeze\",9]",
+          "[\"squeeze\",8]",
+          "[\"unsqueeze\",8]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",1]",
+          "[\"해결\",3]",
+          "[\"원인\",2]"
+        ]
+      },
+      {
+        "id": "python-map",
+        "sourceBlocks": [
+          "[\"squeeze\",9]",
+          "[\"unsqueeze\",1]",
+          "[\"unsqueeze\",9]"
+        ],
+        "targetBlocks": [
+          "[\"예시1-단일-반복-객체-사용\",1]",
+          "[\"map\",1]",
+          "[\"예시4-중첩된-리스트-반환\",1]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"unsqueeze\",9]",
+          "[\"squeeze\",8]",
+          "[\"squeeze\",6]"
+        ],
+        "targetBlocks": [
+          "[\"문제점---내가-필요로하는-것보다-더-많은-otuput-값을-얻는다\",7]",
+          "[\"bb-regressor를-통해-추론\",1]",
+          "[\"1x1-convolution-and-model-size-of-convnet\",2]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"unsqueeze\",9]",
+          "[\"squeeze\",7]",
+          "[\"unsqueeze\",8]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",3]",
+          "[\"reproduction\",1]"
+        ]
+      }
+    ],
+    "recommendations": []
+  }
+}

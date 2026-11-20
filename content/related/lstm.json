@@ -1,0 +1,271 @@
+{
+  "version": 2,
+  "id": "lstm",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "0f95df8ec2c7a14978c4b81044ca4b1bed2b8c5103fc39f3683d5147ba7c0438",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "recurrent-networks",
+        "role": "about",
+        "evidence": {
+          "articleId": "lstm",
+          "blockId": "[\"abstract\",3]",
+          "anchor": "abstract",
+          "quote": "RNN은 한 개의 tanh레이어를 가지는 매우 간결한 구조. LSTM은 또한 RNN과 같은 chain 구조를 가지긴 하지만, 단일구조 대신에 매우 특별하게 상호작용하는 **4개의 구조**를 가진다",
+          "hash": "69cd541f916150c132a1b504c0258f66d1ba0308bfb5d03b8894bacff5161701"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "2914bdc83346b79a0854bc93c71a5cdbbc858b22cc4618315557fe02c0317379",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "rnn",
+        "sourceBlocks": [
+          "[\"abstract\",3]",
+          "[\"bptt를-보완한-truncated-bptt\",1]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",10]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",5]",
+          "[\"truncated-bptt\",1]",
+          "[\"gradient-vanishing\",2]"
+        ]
+      },
+      {
+        "id": "elmo",
+        "sourceBlocks": [
+          "[\"abstract\",3]",
+          "[\"step-1-forget-gate--과거-정보를-버릴지말지-결정하는-과정\",1]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",11]"
+        ],
+        "targetBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",3]",
+          "[\"특징\",3]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"abstract\",4]",
+          "[\"step-4-output-gate-hidden-state--어떤-출력값을-출력할지-결정하는-과정\",5]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",9]"
+        ],
+        "targetBlocks": [
+          "[\"positional-encoding\",1]",
+          "[\"출현배경\",1]",
+          "[\"self-attention-1\",27]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"abstract\",4]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",6]",
+          "[\"bptt를-보완한-truncated-bptt\",1]"
+        ],
+        "targetBlocks": [
+          "[\"overfeat-intuition\",2]",
+          "[\"overfeat-detection-network\",12]",
+          "[\"effecitve-stride-of-a-network\",5]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"abstract\",4]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",2]",
+          "[\"bptt를-보완한-truncated-bptt\",1]"
+        ],
+        "targetBlocks": [
+          "[\"요약\",1]",
+          "[\"bert\",1]",
+          "[\"task-1-masked-lm-mlm\",2]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"abstract\",4]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",1]",
+          "[\"1-peephole-connection\",6]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",1]",
+          "[\"micro-design\",1]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"abstract\",4]",
+          "[\"bptt를-보완한-truncated-bptt\",1]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",9]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"low-rank-parameterized-update-matrices\",4]",
+          "[\"problem-statement\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",2]",
+          "[\"abstract\",4]",
+          "[\"bptt를-보완한-truncated-bptt\",1]"
+        ],
+        "targetBlocks": [
+          "[\"architecture\",2]",
+          "[\"introduction\",1]",
+          "[\"efficient-implementation\",2]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"abstract\",3]",
+          "[\"3-gated-recurrent-unit-gru\",7]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",1]"
+        ],
+        "targetBlocks": [
+          "[\"rpns-loss\",2]",
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"end-to-end\",2]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"abstract\",4]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",12]",
+          "[\"bptt를-보완한-truncated-bptt\",1]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"siamese-network-샴-네트워크\",1]",
+          "[\"few-shot-learning은-어떻게-작동할까\",1]"
+        ]
+      },
+      {
+        "id": "fast-r-cnn",
+        "sourceBlocks": [
+          "[\"abstract\",4]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",7]",
+          "[\"3-gated-recurrent-unit-gru\",7]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",3]",
+          "[\"rough-요약\",1]",
+          "[\"fast-r-cnn-의의\",2]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"abstract\",4]",
+          "[\"bptt를-보완한-truncated-bptt\",1]",
+          "[\"1-peephole-connection\",6]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"low-rank-adaptation-lora\",1]",
+          "[\"impace-of-training-time-and-memory-usage\",1]"
+        ]
+      },
+      {
+        "id": "yolo-v1",
+        "sourceBlocks": [
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",2]",
+          "[\"abstract\",3]",
+          "[\"bptt를-보완한-truncated-bptt\",1]"
+        ],
+        "targetBlocks": [
+          "[\"training\",5]",
+          "[\"network-design\",1]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",3]",
+          "[\"bptt를-보완한-truncated-bptt\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",3]",
+          "[\"의의\",3]",
+          "[\"preview\",3]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"abstract\",4]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",14]",
+          "[\"1-peephole-connection\",6]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"문제-정의\",6]",
+          "[\"concept\",4]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "rnn",
+        "relation": "related_method",
+        "reason": "RNN과 LSTM의 재귀적 구조를 비교하고, Truncated BPTT가 긴 시퀀스를 나누어 학습하는 방식을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "lstm",
+          "blockId": "[\"abstract\",3]",
+          "anchor": "abstract",
+          "quote": "RNN은 한 개의 tanh레이어를 가지는 매우 간결한 구조. LSTM은 또한 RNN과 같은 chain 구조를 가지긴 하지만, 단일구조 대신에 매우 특별하게 상호작용하는 **4개의 구조**를 가진다",
+          "hash": "69cd541f916150c132a1b504c0258f66d1ba0308bfb5d03b8894bacff5161701"
+        },
+        "targetEvidence": {
+          "articleId": "rnn",
+          "blockId": "[\"truncated-bptt\",1]",
+          "anchor": "truncated-bptt",
+          "quote": "장기기억을 적절한 단위로 쪼개서 학습시키자는 것이 아이디어이며, 이는 앞서 기술했던 vanishing and exploding problem을 해결하면서, 동시에 특정 input에 적합한 시간 window를 사용하자는 것입니다.",
+          "hash": "03106d093fdb6599ce762757599726e42d591ca769817dee25ba237d71b4e38a"
+        }
+      },
+      {
+        "id": "elmo",
+        "relation": "related_method",
+        "reason": "LSTM의 gate가 과거 정보를 조절하는 방식을 바탕으로, 여러 층의 BiLSTM hidden state를 결합하는 ELMo의 표현을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "lstm",
+          "blockId": "[\"step-1-forget-gate--과거-정보를-버릴지말지-결정하는-과정\",1]",
+          "anchor": "step-1-forget-gate--과거-정보를-버릴지말지-결정하는-과정",
+          "quote": "과거의 정보를 통해 맥락을 고려하는것도 중요하지만, 그 정보가 필요하지 않을 경우에는 과감히 버리는 것도 중요합니다. 이전 Input($h_{t-1}$)과 현재 Input($x_t$)을 넣어, cell-state로 가는 과거 정보값이 나옵니다. $h_{t-1}$과 $x_t$를 받아 sigmoid를 취해준 값이 바로 forget gate가 내보내는 값이 됩니다.",
+          "hash": "deaf93fd4a8e2ff27b693f4e9e5cb386c3e497abd74be07f52728cac5a2ec411"
+        },
+        "targetEvidence": {
+          "articleId": "elmo",
+          "blockId": "[\"특징\",3]",
+          "anchor": "특징",
+          "quote": "기존의 방법들과는 다르게 Top level의 LSTM정보만을 이용하지 않고, 각 level의 hidden state들을 조합하여 새로운 단어 representation을 만들어냅니다.",
+          "hash": "83cfe71497e0095e362553af06e62a41ee7c74f1fb728e404b4fe3acc0e05d39"
+        }
+      }
+    ]
+  }
+}

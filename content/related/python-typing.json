@@ -1,0 +1,263 @@
+{
+  "version": 2,
+  "id": "python-typing",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "5b53ff17c0e6a051f3740fc44b927b444f8110d17aba797936ff75fbd3ee098d",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "python-typing",
+        "role": "about",
+        "evidence": {
+          "articleId": "python-typing",
+          "blockId": "[\"type-annotation\",3]",
+          "anchor": "type-annotation",
+          "quote": "매개변수의 타입을 명시할 수 있음. 또한 함수의 반환값도 -> 타입 처럼 사용하여 반환값의 타입을 명시할 수 있다.",
+          "hash": "e578778848b1570113cc59824695a03c592dfa1974618333de10300365138de2"
+        }
+      },
+      {
+        "id": "python-language",
+        "role": "about",
+        "evidence": {
+          "articleId": "python-typing",
+          "blockId": "[\"파이썬--동적-프로그래밍-언어\",2]",
+          "anchor": "파이썬--동적-프로그래밍-언어",
+          "quote": "변수의 타입을 동적으로 바꿀 수 있는 파이썬은 동적 프로그래밍 언어",
+          "hash": "c5815291b5b61ee2513e8ecfbdb65d9317244bce0c326391847acb56f89d3907"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "f0b25fd0175c7580ddfa3f7f076e4af56fcc3643bf00951a57144e3f2e2bcdff",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "python-class-inheritance",
+        "sourceBlocks": [
+          "[\"파이썬--동적-프로그래밍-언어\",2]",
+          "[\"type-annotation\",3]",
+          "[\"타입-추상화\",2]"
+        ],
+        "targetBlocks": [
+          "[\"abstract-class\",1]",
+          "[\"abstract-class\",3]",
+          "[\"예시-코드\",1]"
+        ]
+      },
+      {
+        "id": "python-map",
+        "sourceBlocks": [
+          "[\"파이썬--동적-프로그래밍-언어\",2]",
+          "[\"list-dict-tuple-set\",3]",
+          "[\"타입-추상화\",2]"
+        ],
+        "targetBlocks": [
+          "[\"map\",1]",
+          "[\"예시1-단일-반복-객체-사용\",1]",
+          "[\"예시2-람다-함수-사용\",1]"
+        ]
+      },
+      {
+        "id": "python-args-kwargs",
+        "sourceBlocks": [
+          "[\"파이썬--동적-프로그래밍-언어\",2]",
+          "[\"타입-추상화\",3]",
+          "[\"list-dict-tuple-set\",2]"
+        ],
+        "targetBlocks": [
+          "[\"args-사용\",4]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]",
+          "[\"argument를-직접-지정한-함수-사용\",1]"
+        ]
+      },
+      {
+        "id": "tokenizer-input-troubleshooting",
+        "sourceBlocks": [
+          "[\"list-dict-tuple-set\",2]",
+          "[null,1]",
+          "[\"타입-추상화\",3]"
+        ],
+        "targetBlocks": [
+          "[\"원인\",2]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ]
+      },
+      {
+        "id": "python-enum",
+        "sourceBlocks": [
+          "[\"파이썬--동적-프로그래밍-언어\",2]",
+          "[\"type-annotation\",1]",
+          "[\"list-dict-tuple-set\",2]"
+        ],
+        "targetBlocks": [
+          "[\"enum\",1]",
+          "[\"enum을-사용하는-이유\",2]",
+          "[\"특징\",1]"
+        ]
+      },
+      {
+        "id": "python-assert",
+        "sourceBlocks": [
+          "[\"파이썬--동적-프로그래밍-언어\",2]",
+          "[\"타입-추상화\",2]",
+          "[\"optional\",2]"
+        ],
+        "targetBlocks": [
+          "[\"가정-설명문assert\",1]",
+          "[\"assert가-필요한-이유\",2]",
+          "[\"assert가-필요한-이유\",3]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"list-dict-tuple-set\",2]",
+          "[\"union\",2]"
+        ],
+        "targetBlocks": [
+          "[\"curiosity\",1]",
+          "[\"answer\",8]",
+          "[\"case-1\",2]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"list-dict-tuple-set\",2]",
+          "[\"파이썬--동적-프로그래밍-언어\",1]"
+        ],
+        "targetBlocks": [
+          "[\"2\",3]",
+          "[\"tensor-parallel\",2]",
+          "[\"4bit-or-8bit-quantization\",5]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"optional\",2]",
+          "[\"list-dict-tuple-set\",2]",
+          "[\"타입-추상화\",3]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",5]",
+          "[\"refernce\",1]"
+        ]
+      },
+      {
+        "id": "python-enumerate",
+        "sourceBlocks": [
+          "[\"파이썬--동적-프로그래밍-언어\",2]",
+          "[\"타입-추상화\",2]",
+          "[\"list-dict-tuple-set\",2]"
+        ],
+        "targetBlocks": [
+          "[\"enumerate\",1]",
+          "[\"장점\",2]",
+          "[\"기본-구문\",2]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"list-dict-tuple-set\",2]",
+          "[\"파이썬--동적-프로그래밍-언어\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",2]",
+          "[\"source-code\",1]",
+          "[\"solution\",3]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"list-dict-tuple-set\",2]",
+          "[\"파이썬--동적-프로그래밍-언어\",1]"
+        ],
+        "targetBlocks": [
+          "[\"anchor-boxes가-뭘까\",1]",
+          "[\"region-proposal-물체가-있을-법한-위치-찾기\",2]",
+          "[\"anchor-box-커스텀-튜닝하기\",1]"
+        ]
+      },
+      {
+        "id": "reranking",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"파이썬--동적-프로그래밍-언어\",1]",
+          "[\"list-dict-tuple-set\",2]"
+        ],
+        "targetBlocks": [
+          "[\"using-rerank-to-improve-keyword-search\",1]",
+          "[\"reranking\",1]",
+          "[\"결론\",1]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"list-dict-tuple-set\",2]",
+          "[\"타입-추상화\",2]"
+        ],
+        "targetBlocks": [
+          "[\"model-architecture\",1]",
+          "[\"inputoutput-representation\",4]",
+          "[\"요약\",1]"
+        ]
+      },
+      {
+        "id": "training-arguments",
+        "sourceBlocks": [
+          "[\"list-dict-tuple-set\",2]",
+          "[\"type-annotation\",1]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"하이퍼파라미터\",3]",
+          "[\"usage\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "python-class-inheritance",
+        "relation": "application_example",
+        "reason": "타입 어노테이션에서 매개변수와 반환값의 타입을 표시하는 법을, BaseRetriever의 추상 메서드 선언과 서브클래스 구현에서 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "python-typing",
+          "blockId": "[\"type-annotation\",3]",
+          "anchor": "type-annotation",
+          "quote": "매개변수의 타입을 명시할 수 있음. 또한 함수의 반환값도 -> 타입 처럼 사용하여 반환값의 타입을 명시할 수 있다.",
+          "hash": "e578778848b1570113cc59824695a03c592dfa1974618333de10300365138de2"
+        },
+        "targetEvidence": {
+          "articleId": "python-class-inheritance",
+          "blockId": "[\"abstract-class\",1]",
+          "anchor": "abstract-class",
+          "quote": "# raptor/Retrievers.py from abc import ABC, abstractmethod from typing import List class BaseRetriever(ABC): @abstractmethod def retrieve(self, query: str) -> str: pass # raptor/tree_retriever.py from .Retrievers import BaseRetriever class TreeRetriever(BaseRetriever): def __init__(self, config, tree) -> None: ... def retrieve(self, query, start_layer, num_layers, top_k, max_tokens, collapse_tree, return_layer_information) -> str: ...",
+          "hash": "18105ba22c217f1242c14e7ef2e223b89c0e47d5e1aff3c88d3f6c71bc657e76"
+        }
+      }
+    ]
+  }
+}

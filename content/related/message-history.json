@@ -1,0 +1,252 @@
+{
+  "version": 2,
+  "id": "message-history",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "f00c5baaac98cfc5dc92bd438cf471457a1cd7c1cd083b711b94285fface4ab0",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "agent-memory",
+        "role": "about",
+        "evidence": {
+          "articleId": "message-history",
+          "blockId": "[\"message-history\",3]",
+          "anchor": "message-history",
+          "quote": "res_message.append({\"role\" : \"assistant\", \"content\" : response1.choices[0].message.content}) res_message.append({\"role\" : \"user\", \"content\" : \"What exactly is the 'perfect storm' feeling you're referring to?\"}) response2 = client.chat.completions.create( model = \"gpt-3.5-turbo\", messages = res_message ) response2.choices[0].message.content",
+          "hash": "abdecd68de14a7f5f4bcbac01f796b30f0665f29e35b8c4cbe53f95cb2395d53"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "076a7d9b51da62956a5f895a34b8ccad752d396d447970ad63899d908c183fa2",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "searchswarm",
+        "sourceBlocks": [
+          "[\"message-history\",3]",
+          "[\"message-history\",1]",
+          "[\"message-history\",2]"
+        ],
+        "targetBlocks": [
+          "[\"main-distributes-sub-executes\",2]",
+          "[\"supervised-fine-tuning\",3]",
+          "[\"experiments\",8]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"message-history\",1]",
+          "[\"message-history\",3]",
+          "[\"message-history\",4]"
+        ],
+        "targetBlocks": [
+          "[\"merging-lora-weights\",14]",
+          "[\"ref\",1]",
+          "[\"peft-v090\",1]"
+        ]
+      },
+      {
+        "id": "prompt-engineering",
+        "sourceBlocks": [
+          "[\"message-history\",1]",
+          "[\"message-history\",3]",
+          "[\"message-history\",2]"
+        ],
+        "targetBlocks": [
+          "[\"to-do-or-not-to-do\",3]",
+          "[\"conversation\",2]",
+          "[\"the-instruction\",5]"
+        ]
+      },
+      {
+        "id": "langgraph-structured-streaming",
+        "sourceBlocks": [
+          "[\"message-history\",3]",
+          "[\"message-history\",1]",
+          "[\"message-history\",4]"
+        ],
+        "targetBlocks": [
+          "[\"baseline\",5]",
+          "[\"구조-분석\",2]",
+          "[\"environment\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"message-history\",1]",
+          "[\"message-history\",3]",
+          "[\"message-history\",2]"
+        ],
+        "targetBlocks": [
+          "[\"envs\",6]",
+          "[\"ref\",1]",
+          "[\"mission\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"message-history\",3]",
+          "[\"message-history\",1]",
+          "[\"message-history\",4]"
+        ],
+        "targetBlocks": [
+          "[\"gradio\",6]",
+          "[\"ref\",3]",
+          "[\"ts\",6]"
+        ]
+      },
+      {
+        "id": "python-enum",
+        "sourceBlocks": [
+          "[\"message-history\",1]",
+          "[\"message-history\",3]",
+          "[\"message-history\",4]"
+        ],
+        "targetBlocks": [
+          "[\"3-fastapi에서-파라미터값-강제하기\",1]",
+          "[\"1-기본-사용법\",1]",
+          "[\"2-상태를-나타나는-예제\",1]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"message-history\",1]",
+          "[\"message-history\",3]",
+          "[\"message-history\",4]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",6]",
+          "[\"refernce\",2]"
+        ]
+      },
+      {
+        "id": "ollama-docker-troubleshooting",
+        "sourceBlocks": [
+          "[\"message-history\",1]",
+          "[\"message-history\",3]",
+          "[\"message-history\",4]"
+        ],
+        "targetBlocks": [
+          "[\"1-ollama-설치-후-모델-다운로드--openwebui-접속\",3]",
+          "[\"2-conda로-실행하면-잘-인식\",1]",
+          "[\"구현-사항\",1]"
+        ]
+      },
+      {
+        "id": "thinkingcap",
+        "sourceBlocks": [
+          "[\"message-history\",3]",
+          "[\"message-history\",1]",
+          "[\"message-history\",4]"
+        ],
+        "targetBlocks": [
+          "[\"analysis\",7]",
+          "[\"ablation\",1]",
+          "[\"stop\",1]"
+        ]
+      },
+      {
+        "id": "mariadb-connection-troubleshooting",
+        "sourceBlocks": [
+          "[\"message-history\",1]",
+          "[\"message-history\",3]",
+          "[\"message-history\",4]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",2]",
+          "[\"env\",2]",
+          "[\"해결\",2]"
+        ]
+      },
+      {
+        "id": "python-args-kwargs",
+        "sourceBlocks": [
+          "[\"message-history\",1]",
+          "[\"message-history\",3]",
+          "[\"message-history\",4]"
+        ],
+        "targetBlocks": [
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]",
+          "[\"kwargs-사용\",3]",
+          "[\"argument를-직접-지정한-함수-사용\",1]"
+        ]
+      },
+      {
+        "id": "semantic-search",
+        "sourceBlocks": [
+          "[\"message-history\",1]",
+          "[\"message-history\",3]",
+          "[\"message-history\",2]"
+        ],
+        "targetBlocks": [
+          "[\"how-to-search-using-text-embedding\",8]",
+          "[\"are-embeddings-and-similarity-enough-no\",3]",
+          "[\"what-is-not-semantic-search\",16]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"message-history\",1]",
+          "[\"message-history\",3]",
+          "[\"message-history\",4]"
+        ],
+        "targetBlocks": [
+          "[\"env\",3]",
+          "[\"solution\",3]",
+          "[\"error\",4]"
+        ]
+      },
+      {
+        "id": "keyword-search",
+        "sourceBlocks": [
+          "[\"message-history\",1]",
+          "[\"message-history\",3]",
+          "[\"message-history\",2]"
+        ],
+        "targetBlocks": [
+          "[\"querying-the-wikipedia-dataset-using-keyword-matching\",4]",
+          "[\"conclusion\",3]",
+          "[\"querying-the-wikipedia-dataset-using-keyword-matching\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "langgraph-structured-streaming",
+        "relation": "application_example",
+        "reason": "대화 응답을 다음 요청의 messages에 추가하는 방식과 LangGraph에서 messages를 checkpointer로 관리하며 스트리밍하는 예를 비교해 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "message-history",
+          "blockId": "[\"message-history\",3]",
+          "anchor": "message-history",
+          "quote": "res_message.append({\"role\" : \"assistant\", \"content\" : response1.choices[0].message.content}) res_message.append({\"role\" : \"user\", \"content\" : \"What exactly is the 'perfect storm' feeling you're referring to?\"}) response2 = client.chat.completions.create( model = \"gpt-3.5-turbo\", messages = res_message ) response2.choices[0].message.content",
+          "hash": "abdecd68de14a7f5f4bcbac01f796b30f0665f29e35b8c4cbe53f95cb2395d53"
+        },
+        "targetEvidence": {
+          "articleId": "langgraph-structured-streaming",
+          "blockId": "[\"baseline\",5]",
+          "anchor": "baseline",
+          "quote": "workflow.add_node(\"api_generate\", api_generate) workflow.add_conditional_edges( START, routing, { \"웹검색\": \"web_generate\", \"일반질문\": \"api_generate\" } ) workflow.add_edge(\"web_generate\", END) workflow.add_edge(\"api_generate\", END) graph = workflow.compile(checkpointer = memory) # streaming 함수 def stream_inference(query: str): inputs = [HumanMessage(content = query)] for msg, metadata in graph.stream( {\"messages\": inputs}, stream_mode = \"messages\", config = {\"configurable\":",
+          "hash": "ab2952997d5c0e7cd1c306bbfd83e40d8422af51aa73df8d76d6e84ac29db2e4"
+        }
+      }
+    ]
+  }
+}

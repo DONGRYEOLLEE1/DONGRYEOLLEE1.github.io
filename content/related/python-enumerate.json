@@ -1,0 +1,232 @@
+{
+  "version": 2,
+  "id": "python-enumerate",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "1336ff89d8f93ae387db03390baf2c418b503e73dc64dffa05b60462ae5e3640",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "python-language",
+        "role": "about",
+        "evidence": {
+          "articleId": "python-enumerate",
+          "blockId": "[\"enumerate\",1]",
+          "anchor": "enumerate",
+          "quote": "enumerate()함수는 파이썬에서 list나 tuple과 같은 iterable(이터러블) 객체를 순회하면서, 해당요소의 인덱스와 값을 동시에 반환해주는 함수. 보통 for 반복문과 함께 사용.",
+          "hash": "3d74c5aacdea3ed9cd9b78a1936fa53e563faca6c7fd8a47f37ddd09163d1fab"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "85ffa575771257e249f22a73919583c7bc0f8d80a1c46684ea0a1351827396b9",
+    "status": "abstained",
+    "candidates": [
+      {
+        "id": "python-map",
+        "sourceBlocks": [
+          "[\"enumerate\",1]",
+          "[\"예시\",16]",
+          "[\"장점\",1]"
+        ],
+        "targetBlocks": [
+          "[\"map\",1]",
+          "[\"예시3-여러-반복-객체-사용\",1]",
+          "[\"장점\",1]"
+        ]
+      },
+      {
+        "id": "python-enum",
+        "sourceBlocks": [
+          "[\"enumerate\",1]",
+          "[\"장점\",2]",
+          "[\"예시\",43]"
+        ],
+        "targetBlocks": [
+          "[\"enum\",1]",
+          "[\"특징\",2]",
+          "[\"enum을-사용하는-이유\",1]"
+        ]
+      },
+      {
+        "id": "pytest",
+        "sourceBlocks": [
+          "[\"enumerate\",1]",
+          "[\"장점\",1]",
+          "[\"예시\",16]"
+        ],
+        "targetBlocks": [
+          "[\"주요-특징\",11]",
+          "[null,1]",
+          "[\"주요-특징\",23]"
+        ]
+      },
+      {
+        "id": "python-args-kwargs",
+        "sourceBlocks": [
+          "[\"enumerate\",1]",
+          "[\"예시\",5]",
+          "[\"장점\",2]"
+        ],
+        "targetBlocks": [
+          "[\"args-사용\",4]",
+          "[\"argument를-직접-지정한-함수-사용\",1]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]"
+        ]
+      },
+      {
+        "id": "python-typing",
+        "sourceBlocks": [
+          "[\"enumerate\",1]",
+          "[\"장점\",2]",
+          "[\"기본-구문\",2]"
+        ],
+        "targetBlocks": [
+          "[\"파이썬--동적-프로그래밍-언어\",2]",
+          "[\"타입-추상화\",2]",
+          "[\"list-dict-tuple-set\",2]"
+        ]
+      },
+      {
+        "id": "python-class-inheritance",
+        "sourceBlocks": [
+          "[\"enumerate\",1]",
+          "[\"장점\",1]",
+          "[\"예시\",41]"
+        ],
+        "targetBlocks": [
+          "[\"abstract-class\",3]",
+          "[\"장점\",2]",
+          "[\"examples\",1]"
+        ]
+      },
+      {
+        "id": "semantic-search",
+        "sourceBlocks": [
+          "[\"enumerate\",1]",
+          "[\"예시\",29]",
+          "[\"장점\",2]"
+        ],
+        "targetBlocks": [
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"using-similarity-to-find-the-best-document\",10]",
+          "[\"multilingual-search\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"예시\",37]",
+          "[\"enumerate\",1]",
+          "[\"장점\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",3]",
+          "[\"envs\",1]",
+          "[\"prob\",3]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"예시\",38]",
+          "[\"enumerate\",1]",
+          "[\"장점\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error-2\",2]",
+          "[\"error\",5]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "prompt-engineering",
+        "sourceBlocks": [
+          "[\"예시\",16]",
+          "[\"enumerate\",1]",
+          "[\"장점\",1]"
+        ],
+        "targetBlocks": [
+          "[\"cot-prompting\",5]",
+          "[\"the-instruction\",1]",
+          "[\"conversation\",1]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"예시\",38]",
+          "[\"enumerate\",1]",
+          "[\"장점\",2]"
+        ],
+        "targetBlocks": [
+          "[\"3️⃣\",1]",
+          "[\"env\",2]",
+          "[\"1️⃣\",2]"
+        ]
+      },
+      {
+        "id": "python-assert",
+        "sourceBlocks": [
+          "[\"enumerate\",1]",
+          "[\"예시\",37]",
+          "[\"장점\",1]"
+        ],
+        "targetBlocks": [
+          "[\"가정-설명문assert\",1]",
+          "[\"assert가-필요한-이유\",2]",
+          "[\"assert가-필요한-이유\",3]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"enumerate\",1]",
+          "[\"예시\",16]",
+          "[\"장점\",1]"
+        ],
+        "targetBlocks": [
+          "[\"answer\",8]",
+          "[\"case-1\",2]",
+          "[\"curiosity\",1]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-1",
+        "sourceBlocks": [
+          "[\"enumerate\",1]",
+          "[\"예시\",29]",
+          "[\"장점\",1]"
+        ],
+        "targetBlocks": [
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchtranspose\",8]",
+          "[\"torchview\",1]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"예시\",8]",
+          "[\"enumerate\",1]",
+          "[\"장점\",2]"
+        ],
+        "targetBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",7]",
+          "[\"python\",1]",
+          "[\"cuda-cudnn\",1]"
+        ]
+      }
+    ],
+    "recommendations": []
+  }
+}

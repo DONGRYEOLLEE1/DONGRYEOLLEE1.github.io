@@ -1,0 +1,230 @@
+{
+  "version": 2,
+  "id": "netplan-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "a1d3b724b0fe424f82088e24067a99bd01934ad51c0c987b302e97a1a82fb733",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "python-environment",
+        "role": "applies",
+        "evidence": {
+          "articleId": "netplan-troubleshooting",
+          "blockId": "[\"해결\",2]",
+          "anchor": "해결",
+          "quote": "$ python3 -V >>> Python3.10.12 $ cd /usr/bin/ $ cp python3 python3_backup (기존 python3 backup) $ rm python3 $ ln -sf python3.8 python3 $ python3 -V >>> python3.8.xx $ netplan apply",
+          "hash": "fa9d7a2bc3a9ffe30fb2f568831a73341728544bc9e3b9faa2894df61616e13c"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "fc3dd2a0678b8b2534eda9656b44fdf7f4e45b1e1c489cfb5af1d264871ebcff",
+    "status": "abstained",
+    "candidates": [
+      {
+        "id": "python-venv-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",3]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"error2\",2]",
+          "[\"solution-1\",2]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"원인\",1]",
+          "[\"issue\",5]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1️⃣\",2]",
+          "[\"2️⃣\",2]",
+          "[\"3️⃣\",9]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"python-pkg\",1]",
+          "[\"python\",1]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"2️⃣\",1]",
+          "[\"envs\",1]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",1]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "pip-options",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"pip-options\",1]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"조치-1\",1]",
+          "[\"error\",5]",
+          "[\"조치-2\",1]"
+        ]
+      },
+      {
+        "id": "mariadb-connection-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",1]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"해결\",1]",
+          "[\"issue\",2]"
+        ]
+      },
+      {
+        "id": "distributed-gpu-training",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"설치-1\",2]",
+          "[\"설치\",3]",
+          "[\"single-gpu-환경에서-offloadmodel-사용\",3]"
+        ]
+      },
+      {
+        "id": "ollama-docker-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"3-conf-파일-수정-및-ollama-재가동시-에러\",3]",
+          "[\"4-1-원인\",2]",
+          "[\"5-ollama-custom-model-directory로-변경\",3]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",5]",
+          "[\"solution\",3]",
+          "[\"environment\",1]"
+        ]
+      },
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",3]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-04",
+        "sourceBlocks": [
+          "[\"issue\",1]",
+          "[\"해결\",2]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"ca-에러\",3]",
+          "[\"파일-이름-변경\",3]",
+          "[\"ref\",4]"
+        ]
+      }
+    ],
+    "recommendations": []
+  }
+}

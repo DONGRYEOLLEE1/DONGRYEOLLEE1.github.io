@@ -1,0 +1,282 @@
+{
+  "version": 2,
+  "id": "finetuning-notes",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "7e02d1014a7670210ea52448c149ae20cc4087b393b66d2996f7648ad2654b56",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "model-serving",
+        "role": "applies",
+        "evidence": {
+          "articleId": "finetuning-notes",
+          "blockId": "[\"increasing-speed-a-llm-serving-inference\",4]",
+          "anchor": "increasing-speed-a-llm-serving-inference",
+          "quote": "현재, ChatKoAlpaca는 TensorParallel을 통해 서빙중이며 fp16 모델로 서비스 중",
+          "hash": "32024d6bfffb632c054f5de4bca8a26fb4534c05e5bee72ac03e08c1025b1443"
+        }
+      },
+      {
+        "id": "distributed-training",
+        "role": "applies",
+        "evidence": {
+          "articleId": "finetuning-notes",
+          "blockId": "[\"tensor-parallel\",1]",
+          "anchor": "tensor-parallel",
+          "quote": "import tensor_parallel as tp model = AutoModelForCausalLM.from_pretrained(model_path, device_map = 'auto') model = tp.TensorParallelPreTrainedModel(model, device_ids = ['cuda:0', 'cuda:1']) #TensorParallelPreTrainedModel( # (wrapped_model): TensorParallel( # (module_shards): ModuleList( # (0-1): 2 x GPTNeoXForCausalLM( # (gpt_neox): GPTNeoXModel( # (embed_in): TensorParallelWrapper( # (tp_wrapped_module): Embedding(30080, 4096) # ) # (layers): ModuleList( # (0-27): 28 x",
+          "hash": "5e0223540d6ac54f01b23f5b4571a852b5b997a6d8e8bea6a31547613cc281a8"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "9c69d1112969664ad24890407dcc1e6b145a348a96371250ae3b976dca61d288",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "distributed-gpu-training",
+        "sourceBlocks": [
+          "[\"tensor-parallel\",1]",
+          "[\"2\",12]",
+          "[\"increasing-speed-a-llm-serving-inference\",7]"
+        ],
+        "targetBlocks": [
+          "[\"최적화-gradient와-model-sharding\",2]",
+          "[\"설치\",3]",
+          "[\"deepspeed\",5]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"4bit-or-8bit-quantization\",10]",
+          "[\"2\",10]",
+          "[\"increasing-speed-a-llm-serving-inference\",10]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",9]",
+          "[\"section-8\",2]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"tensor-parallel\",1]",
+          "[\"increasing-speed-a-llm-serving-inference\",9]",
+          "[\"2\",12]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"what-is-disable-custom-all-reduce\",1]",
+          "[\"problem\",2]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"4bit-or-8bit-quantization\",6]",
+          "[\"2\",1]",
+          "[\"tensor-parallel\",1]"
+        ],
+        "targetBlocks": [
+          "[\"envs\",4]",
+          "[\"training\",1]",
+          "[\"model\",2]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"4bit-or-8bit-quantization\",9]",
+          "[\"increasing-speed-a-llm-serving-inference\",9]",
+          "[\"tensor-parallel\",1]"
+        ],
+        "targetBlocks": [
+          "[\"qlora-vs-standard-finetuning\",4]",
+          "[\"etc\",3]",
+          "[\"introduction\",4]"
+        ]
+      },
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"tensor-parallel\",1]",
+          "[\"increasing-speed-a-llm-serving-inference\",10]",
+          "[\"2\",12]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"4bit-or-8bit-quantization\",6]",
+          "[\"increasing-speed-a-llm-serving-inference\",10]",
+          "[\"tensor-parallel\",4]"
+        ],
+        "targetBlocks": [
+          "[\"deprecations\",1]",
+          "[\"improving-dora\",2]",
+          "[\"memory-efficient-layer-replication-with-lora\",7]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"tensor-parallel\",1]",
+          "[\"2\",12]",
+          "[\"increasing-speed-a-llm-serving-inference\",7]"
+        ],
+        "targetBlocks": [
+          "[\"3️⃣\",2]",
+          "[\"env\",4]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"2\",12]",
+          "[\"increasing-speed-a-llm-serving-inference\",6]",
+          "[\"4bit-or-8bit-quantization\",7]"
+        ],
+        "targetBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",16]",
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"폐쇄망-환경구축을-하며-느낀점\",5]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"4bit-or-8bit-quantization\",10]",
+          "[\"increasing-speed-a-llm-serving-inference\",4]",
+          "[\"2\",8]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",5]",
+          "[\"prob\",2]",
+          "[\"envs\",8]"
+        ]
+      },
+      {
+        "id": "inference-server",
+        "sourceBlocks": [
+          "[\"increasing-speed-a-llm-serving-inference\",4]",
+          "[\"4bit-or-8bit-quantization\",7]",
+          "[\"tensor-parallel\",2]"
+        ],
+        "targetBlocks": [
+          "[\"전체-구성\",1]",
+          "[\"참고\",6]",
+          "[\"처리량과-지연\",7]"
+        ]
+      },
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"increasing-speed-a-llm-serving-inference\",4]",
+          "[\"4bit-or-8bit-quantization\",6]",
+          "[\"tensor-parallel\",1]"
+        ],
+        "targetBlocks": [
+          "[\"tgi\",1]",
+          "[\"ref\",3]",
+          "[\"docker\",4]"
+        ]
+      },
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"4bit-or-8bit-quantization\",10]",
+          "[\"2\",1]",
+          "[\"increasing-speed-a-llm-serving-inference\",4]"
+        ],
+        "targetBlocks": [
+          "[\"envs\",3]",
+          "[\"solution\",18]",
+          "[\"prob\",1]"
+        ]
+      },
+      {
+        "id": "loftq",
+        "sourceBlocks": [
+          "[\"4bit-or-8bit-quantization\",9]",
+          "[\"increasing-speed-a-llm-serving-inference\",9]",
+          "[\"tensor-parallel\",2]"
+        ],
+        "targetBlocks": [
+          "[\"glue-with-4-bit\",1]",
+          "[\"experiments\",2]",
+          "[\"결론\",1]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"increasing-speed-a-llm-serving-inference\",4]",
+          "[\"4bit-or-8bit-quantization\",7]",
+          "[\"tensor-parallel\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1\",6]",
+          "[\"env\",1]",
+          "[\"1\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "distributed-gpu-training",
+        "relation": "related_method",
+        "reason": "Tensor Parallel로 모델을 GPU 둘에 나눈 구성과 FairScale의 OSS·ShardedDDP로 학습을 샤딩하는 방법을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "finetuning-notes",
+          "blockId": "[\"tensor-parallel\",1]",
+          "anchor": "tensor-parallel",
+          "quote": "import tensor_parallel as tp model = AutoModelForCausalLM.from_pretrained(model_path, device_map = 'auto') model = tp.TensorParallelPreTrainedModel(model, device_ids = ['cuda:0', 'cuda:1']) #TensorParallelPreTrainedModel( # (wrapped_model): TensorParallel( # (module_shards): ModuleList( # (0-1): 2 x GPTNeoXForCausalLM( # (gpt_neox): GPTNeoXModel( # (embed_in): TensorParallelWrapper( # (tp_wrapped_module): Embedding(30080, 4096) # ) # (layers): ModuleList( # (0-27): 28 x",
+          "hash": "5e0223540d6ac54f01b23f5b4571a852b5b997a6d8e8bea6a31547613cc281a8"
+        },
+        "targetEvidence": {
+          "articleId": "distributed-gpu-training",
+          "blockId": "[\"최적화-gradient와-model-sharding\",2]",
+          "anchor": "최적화-gradient와-model-sharding",
+          "quote": "import torch from fairscale.optim.oss import OSS from fairscale.nn.data_parallel import SharededDataParallel as ShardedDDP def train(rank, world_size, epochs): # initializing 과정 dist_init(rank, world_size) # 문제 정의 model = MyModel().to(rank) dataloader = MyDataLoader() loss_ln = MyLossFunction() # optimizer 정의 base_optimizer_arguments = { 'lr' : 1e-4 } # OSS로 base_optimizer를 감싸주자(Wrap) base_optimizer = torch.optim.SGD optimizer = OSS( params = model.parameters(), optim =",
+          "hash": "f2f2f9dc17ab23d1645779226a4e913db2375b793a0095c07888444e806d0733"
+        }
+      },
+      {
+        "id": "tgi-implementation",
+        "relation": "related_method",
+        "reason": "TensorParallel로 모델을 두 GPU에 나누는 구성과 TGI에서 GPU 수를 지정해 모델을 서빙하는 과정을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "finetuning-notes",
+          "blockId": "[\"increasing-speed-a-llm-serving-inference\",4]",
+          "anchor": "increasing-speed-a-llm-serving-inference",
+          "quote": "현재, ChatKoAlpaca는 TensorParallel을 통해 서빙중이며 fp16 모델로 서비스 중",
+          "hash": "32024d6bfffb632c054f5de4bca8a26fb4534c05e5bee72ac03e08c1025b1443"
+        },
+        "targetEvidence": {
+          "articleId": "tgi-implementation",
+          "blockId": "[\"1\",6]",
+          "anchor": "1",
+          "quote": "$ cd model_file $ nohup sudo docker run --gpus all --shm-size 1g -p 8080:80 --volume /DATA:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/OUTPUT_DIRECTORY --num-shard {NUMBER_OF_GPUS} --rope-scaling dynamic --rope-factor 2.0 & 2023-10-26T06:37:55.196641Z INFO shard-manager: text_generation_launcher: Shard ready in 12.91406831s rank=1 2023-10-26T06:37:55.292255Z INFO text_generation_launcher: Starting Webserver 2023-10-26T06:37:55.351346Z WARN",
+          "hash": "a216686807489b023a21f034bb1f756f7199c50f63a4b9512aa1d66b052767ee"
+        }
+      }
+    ]
+  }
+}

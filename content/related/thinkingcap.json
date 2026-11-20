@@ -1,0 +1,282 @@
+{
+  "version": 2,
+  "id": "thinkingcap",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "8315096b39eca02d65a21a1e933f122b083ab7d47dc8f4307648486eb4cd1cc8",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "reasoning-efficiency",
+        "role": "about",
+        "evidence": {
+          "articleId": "thinkingcap",
+          "blockId": "[\"conclusion\",1]",
+          "anchor": "conclusion",
+          "quote": "We set out to make a 2B reasoner think less, and found that the base model's real problem was not thinking too much but never stopping. A correctness-gated length penalty, placed only in the reward and optimized with stock GRPO, largely fixes that in distribution, within 200 LoRA updates on one consumer GPU: it cuts thinking by three quarters and doubles strict accuracy. None of the refinements we tried improved on it.",
+          "hash": "019e4430f782fdb8a5f62184597d2d3666cbbf44db79974d8352a390b559e488"
+        }
+      },
+      {
+        "id": "reinforcement-learning",
+        "role": "applies",
+        "evidence": {
+          "articleId": "thinkingcap",
+          "blockId": "[\"conclusion\",1]",
+          "anchor": "conclusion",
+          "quote": "We set out to make a 2B reasoner think less, and found that the base model's real problem was not thinking too much but never stopping. A correctness-gated length penalty, placed only in the reward and optimized with stock GRPO, largely fixes that in distribution, within 200 LoRA updates on one consumer GPU: it cuts thinking by three quarters and doubles strict accuracy. None of the refinements we tried improved on it.",
+          "hash": "019e4430f782fdb8a5f62184597d2d3666cbbf44db79974d8352a390b559e488"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "be0465755da7ed0c8b49f9dd075bbd9250b773570f2d65553e75c68bd1392d17",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "alphallm",
+        "sourceBlocks": [
+          "[\"conclusion\",1]",
+          "[\"resources\",2]",
+          "[\"tldr\",17]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"related-work\",3]",
+          "[\"problem-formulation\",1]"
+        ]
+      },
+      {
+        "id": "book-spine",
+        "sourceBlocks": [
+          "[\"setup-training\",13]",
+          "[\"analysis\",3]",
+          "[\"ablation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"setup\",2]",
+          "[\"ocr-scale\",4]",
+          "[\"eval-path\",9]"
+        ]
+      },
+      {
+        "id": "kodistill",
+        "sourceBlocks": [
+          "[\"conclusion\",1]",
+          "[\"followups\",2]",
+          "[\"stop\",1]"
+        ],
+        "targetBlocks": [
+          "[\"3-continue-with-sft-and-verifiable-grpo\",10]",
+          "[\"what-the-training-curves-say\",2]",
+          "[null,2]"
+        ]
+      },
+      {
+        "id": "prompt-engineering",
+        "sourceBlocks": [
+          "[\"resources\",2]",
+          "[\"tldr\",20]",
+          "[\"analysis\",6]"
+        ],
+        "targetBlocks": [
+          "[\"cot-prompting\",1]",
+          "[\"zero-shot-cot-prompting\",4]",
+          "[\"to-do-or-not-to-do\",3]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"resources\",2]",
+          "[\"tldr\",20]",
+          "[\"mechanism\",9]"
+        ],
+        "targetBlocks": [
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"symbolic-reasoning\",1]",
+          "[\"results-2\",2]"
+        ]
+      },
+      {
+        "id": "dflash",
+        "sourceBlocks": [
+          "[\"results\",1]",
+          "[\"resources\",2]",
+          "[\"followups\",6]"
+        ],
+        "targetBlocks": [
+          "[\"main-results-qwen3-thinking-off\",2]",
+          "[\"reasoning-models-thinking-on\",1]",
+          "[\"training\",5]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"setup-training\",2]",
+          "[\"motivation\",11]",
+          "[\"tldr\",2]"
+        ],
+        "targetBlocks": [
+          "[\"merging-lora-weights\",7]",
+          "[\"dora-support\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "constitutional-ai",
+        "sourceBlocks": [
+          "[\"conclusion\",1]",
+          "[\"tldr\",15]",
+          "[\"stop\",1]"
+        ],
+        "targetBlocks": [
+          "[\"rl-stage-rlaif\",1]",
+          "[\"supervised-stage-critique--revision\",2]",
+          "[\"experiments\",2]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"setup-training\",2]",
+          "[\"motivation\",11]",
+          "[\"resources\",2]"
+        ],
+        "targetBlocks": [
+          "[\"memory-efficient-layer-replication-with-lora\",9]",
+          "[\"improving-dora\",1]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"resources\",2]",
+          "[\"tldr\",1]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",14]",
+          "[\"continual-pre-training\",7]",
+          "[\"baselines\",3]"
+        ]
+      },
+      {
+        "id": "loftq",
+        "sourceBlocks": [
+          "[\"resources\",2]",
+          "[\"motivation\",11]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"experiments\",10]",
+          "[\"summarization\",1]",
+          "[\"glue-with-4-bit\",5]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"resources\",2]",
+          "[\"tldr\",19]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"introduction\",9]",
+          "[\"t5-xxl-walltime-실측\",15]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"resources\",2]",
+          "[\"motivation\",11]",
+          "[\"setup-training\",2]"
+        ],
+        "targetBlocks": [
+          "[\"it\",1]",
+          "[\"e2e-benchmark\",1]",
+          "[\"impace-of-training-time-and-memory-usage\",1]"
+        ]
+      },
+      {
+        "id": "searchswarm",
+        "sourceBlocks": [
+          "[\"results\",4]",
+          "[\"followups\",8]",
+          "[\"resources\",2]"
+        ],
+        "targetBlocks": [
+          "[\"experiments\",8]",
+          "[\"supervised-fine-tuning\",2]",
+          "[\"정리\",1]"
+        ]
+      },
+      {
+        "id": "rtpurbo",
+        "sourceBlocks": [
+          "[\"results\",11]",
+          "[\"resources\",2]",
+          "[\"setup-training\",2]"
+        ],
+        "targetBlocks": [
+          "[\"정확도--near-lossless\",9]",
+          "[\"introduction\",1]",
+          "[\"효율--ultra-long-robustness\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "constitutional-ai",
+        "relation": "concept_explanation",
+        "reason": "보상으로 강화학습하는 흐름을 비교하며, RLAIF가 AI 피드백을 보상 모델에 반영해 RL-CAI를 학습하는 방식을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "thinkingcap",
+          "blockId": "[\"conclusion\",1]",
+          "anchor": "conclusion",
+          "quote": "We set out to make a 2B reasoner think less, and found that the base model's real problem was not thinking too much but never stopping. A correctness-gated length penalty, placed only in the reward and optimized with stock GRPO, largely fixes that in distribution, within 200 LoRA updates on one consumer GPU: it cuts thinking by three quarters and doubles strict accuracy. None of the refinements we tried improved on it.",
+          "hash": "019e4430f782fdb8a5f62184597d2d3666cbbf44db79974d8352a390b559e488"
+        },
+        "targetEvidence": {
+          "articleId": "constitutional-ai",
+          "blockId": "[\"rl-stage-rlaif\",1]",
+          "anchor": "rl-stage-rlaif",
+          "quote": "RL 단계의 골자는 RLHF의 인간 선호 라벨을 AI 선호 라벨로 대체하는 것. SL-CAI 모델로 각 프롬프트에 응답을 2개 생성한 뒤, feedback 모델에게 constitution 원칙과 함께 \"둘 중 어느 쪽이 덜 해로운가?\"를 객관식으로 물음. 그 답의 로그확률을 정규화해 soft preference label을 만들고, 이 AI harmlessness 라벨을 기존 인간 helpfulness 라벨과 섞어 hybrid PM을 학습함. 마지막으로 그 PM을 보상으로 SL-CAI를 강화학습하면 RL-CAI 모델이 됨. constitution은 모델 행동을 규율하는 자연어 원칙 집합(논문은 16개)으로, SL에선 루프마다·RL에선 비교마다 무작위로 샘플링해 다양성과 robustness를 높임.",
+          "hash": "e0585ad836dfba48ce5e7ee8c44ebf9fe5108cd9211334dabacc8c19330d39ff"
+        }
+      },
+      {
+        "id": "kodistill",
+        "relation": "related_method",
+        "reason": "두 방법 모두 GRPO로 학습하며 보상 설계를 다룹니다. OCR에서는 CER와 exact match를 결합한 검증 가능 보상을 사용합니다.",
+        "sourceEvidence": {
+          "articleId": "thinkingcap",
+          "blockId": "[\"conclusion\",1]",
+          "anchor": "conclusion",
+          "quote": "We set out to make a 2B reasoner think less, and found that the base model's real problem was not thinking too much but never stopping. A correctness-gated length penalty, placed only in the reward and optimized with stock GRPO, largely fixes that in distribution, within 200 LoRA updates on one consumer GPU: it cuts thinking by three quarters and doubles strict accuracy. None of the refinements we tried improved on it.",
+          "hash": "019e4430f782fdb8a5f62184597d2d3666cbbf44db79974d8352a390b559e488"
+        },
+        "targetEvidence": {
+          "articleId": "kodistill",
+          "blockId": "[\"3-continue-with-sft-and-verifiable-grpo\",10]",
+          "anchor": "3-continue-with-sft-and-verifiable-grpo",
+          "quote": "GRPO uses an immutable reference made from this run's selected SFT model. For an OCR completion, reward is 0.8 × max(0, 1 − CER) + 0.2 × exact_match. Empty or truncated completions receive zero. Gold and predictions use NFC normalization and outer trimming; case, numbers, punctuation, and internal spaces remain meaningful. General QA replay keeps its existing task-specific verifier and original reward labels.",
+          "hash": "dcbd39d2826524b50f330522e4e82c1e3058ca10c5e5508f8c4936363f741c32"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "version": 2,
+  "id": "vscode-ssh",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "262d894d35fa08cb877b581b3bfd39552f885786e56b35cd3d3e9b74198e469e",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "remote-development",
+        "role": "applies",
+        "evidence": {
+          "articleId": "vscode-ssh",
+          "blockId": "[\"vscode로-서버에-접속하여-개발\",1]",
+          "anchor": "vscode로-서버에-접속하여-개발",
+          "quote": "확장 -> Remote - SSH 설치",
+          "hash": "022bbad33e424388cf1613adfd7ca0050115dd85b483b48f5679e3a5e502985a"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "472c1567792ffc0df968f87bfb5a994647528148bd9e5e8a8d7ad091f2626613",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "mariadb-connection-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",4]",
+          "[\"vscode로-서버에-접속하여-개발\",5]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"해결\",1]",
+          "[\"issue\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",4]"
+        ],
+        "targetBlocks": [
+          "[\"ts\",2]",
+          "[\"ref\",4]",
+          "[\"gradio\",3]"
+        ]
+      },
+      {
+        "id": "python-venv-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",4]",
+          "[\"vscode로-서버에-접속하여-개발\",5]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",2]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-04",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",2]",
+          "[\"vscode로-서버에-접속하여-개발\",4]"
+        ],
+        "targetBlocks": [
+          "[\"ca-에러\",3]",
+          "[\"git-접속\",1]",
+          "[\"패스워드-정보-묻지-않게-하기\",1]"
+        ]
+      },
+      {
+        "id": "inference-server",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",3]"
+        ],
+        "targetBlocks": [
+          "[\"vllm-릴리스에는-아직-없었음\",4]",
+          "[\"아침에-켜고-저녁에-끄기\",5]",
+          "[\"모델-구성은-파일-하나로\",6]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",4]",
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"1\",1]",
+          "[\"1\",8]"
+        ]
+      },
+      {
+        "id": "ollama-docker-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",4]"
+        ],
+        "targetBlocks": [
+          "[\"1-ollama-설치-후-모델-다운로드--openwebui-접속\",3]",
+          "[\"구현-사항\",1]",
+          "[\"2-conda로-실행하면-잘-인식\",1]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",3]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",30]",
+          "[\"해결\",1]",
+          "[\"현상\",1]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",4]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "training-arguments",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",3]",
+          "[\"vscode로-서버에-접속하여-개발\",4]",
+          "[\"vscode로-서버에-접속하여-개발\",1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"usage\",1]",
+          "[\"하이퍼파라미터\",6]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",4]",
+          "[\"vscode로-서버에-접속하여-개발\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",2]",
+          "[\"env\",9]"
+        ]
+      },
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",3]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",3]"
+        ],
+        "targetBlocks": [
+          "[\"3️⃣\",7]",
+          "[\"2️⃣\",3]",
+          "[\"1️⃣\",2]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",4]"
+        ],
+        "targetBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"폐쇄망-환경구축을-하며-느낀점\",4]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",4]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",6]",
+          "[\"3️⃣\",1]",
+          "[\"2️⃣\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "developing-daily-04",
+        "relation": "related_method",
+        "reason": "Remote-SSH로 서버에 접속하는 설정에 더해, Git의 인증 정보를 credential 기능으로 저장하는 방법도 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vscode-ssh",
+          "blockId": "[\"vscode로-서버에-접속하여-개발\",4]",
+          "anchor": "vscode로-서버에-접속하여-개발",
+          "quote": "'CTRL + SHIFT + P' 눌러, Connect to Host",
+          "hash": "2b7c62cf26a37b7a420f23363ef0419ad6842eabcb5cc6fecb416da31a6c8139"
+        },
+        "targetEvidence": {
+          "articleId": "developing-daily-04",
+          "blockId": "[\"패스워드-정보-묻지-않게-하기\",1]",
+          "anchor": "패스워드-정보-묻지-않게-하기",
+          "quote": "credential기능을 통해 로그인 정보를 저장해 두었다가 다시 입력하지 않아도 사용할 수 있게 만들어줌",
+          "hash": "7cb00559cb8854a181e6145cbd484473a3cec0c996042f2253c616ca360f4bf1"
+        }
+      },
+      {
+        "id": "inference-server",
+        "relation": "related_method",
+        "reason": "VSCode에서 SSH 접속 정보를 설정하는 방법과 컨테이너에 SSH 서버를 설치해 자동화 접속을 가능하게 하는 방법을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vscode-ssh",
+          "blockId": "[\"vscode로-서버에-접속하여-개발\",3]",
+          "anchor": "vscode로-서버에-접속하여-개발",
+          "quote": "Host [display_name] HostName [ip addr] User [account_name] Port [port number] (default : 22)",
+          "hash": "32a338ce052e9be8b8b27c8f9be445700b7432d900d6cf95dac170c1d46a6ddf"
+        },
+        "targetEvidence": {
+          "articleId": "inference-server",
+          "blockId": "[\"vllm-릴리스에는-아직-없었음\",4]",
+          "anchor": "vllm-릴리스에는-아직-없었음",
+          "quote": "이미지에는 sshd가 없어서 내 자동화(SSH로 붙어서 프로비저닝)가 안 붙었는데, 이건 컨테이너 시작 명령에서 openssh-server를 설치하고 띄우는 걸로 해결함.",
+          "hash": "7ff9f8c76a5546df1ad7ee019caa1e7a9ee692c48f3b727543812b4b3f0b2cb7"
+        }
+      }
+    ]
+  }
+}

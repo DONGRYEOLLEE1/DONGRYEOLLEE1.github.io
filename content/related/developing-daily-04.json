@@ -1,0 +1,230 @@
+{
+  "version": 2,
+  "id": "developing-daily-04",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "08e9cfaab3240ecd2416e15233e3f14046b054a85b47942f05f7991ba6d5aeb8",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "remote-development",
+        "role": "applies",
+        "evidence": {
+          "articleId": "developing-daily-04",
+          "blockId": "[\"ca-에러\",3]",
+          "anchor": "ca-에러",
+          "quote": "$ export GIT_SSL_NO_VERIFY=1 또는 전역으로 저장하고 싶으면 $ git config --global http.sslverify false",
+          "hash": "c9cc66409d23d8f6b68f2db3453cd6e656516222fb5720fca7d8fdd407d071e0"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "22d41de95e36840373a42b69d1084ddc36759944f4eec80cd0510b77dbcff42b",
+    "status": "abstained",
+    "candidates": [
+      {
+        "id": "developing-daily-03",
+        "sourceBlocks": [
+          "[\"gitignore\",2]",
+          "[\"ref\",3]",
+          "[\"파일-이름-변경\",3]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "mariadb-connection-troubleshooting",
+        "sourceBlocks": [
+          "[\"ca-에러\",3]",
+          "[\"ref\",4]",
+          "[\"git-접속\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",1]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"ref\",2]",
+          "[\"gitignore\",2]",
+          "[\"파일-이름-변경\",1]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",2]",
+          "[\"docker\",4]",
+          "[\"tgi\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-05",
+        "sourceBlocks": [
+          "[\"ref\",2]",
+          "[\"gitignore\",2]",
+          "[\"파일-이름-변경\",3]"
+        ],
+        "targetBlocks": [
+          "[\"kobart-questiongeneration\",4]",
+          "[\"정규표현식\",8]",
+          "[\"question-generation-영어\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"ref\",2]",
+          "[\"gitignore\",2]",
+          "[\"ca-에러\",2]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",1]",
+          "[\"solution-1\",2]",
+          "[\"error2\",2]"
+        ]
+      },
+      {
+        "id": "netplan-troubleshooting",
+        "sourceBlocks": [
+          "[\"ca-에러\",3]",
+          "[\"파일-이름-변경\",3]",
+          "[\"ref\",4]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",1]",
+          "[\"해결\",2]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "swin-transformer",
+        "sourceBlocks": [
+          "[\"gitignore\",2]",
+          "[\"파일-이름-변경\",3]",
+          "[\"ref\",3]"
+        ],
+        "targetBlocks": [
+          "[\"swin-transformer\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"ref\",3]",
+          "[\"gitignore\",2]",
+          "[\"ca-에러\",2]"
+        ],
+        "targetBlocks": [
+          "[\"translation\",1]",
+          "[\"workflow\",1]",
+          "[\"sbert\",1]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"파일-이름-변경\",1]",
+          "[\"ref\",4]",
+          "[\"gitignore\",2]"
+        ],
+        "targetBlocks": [
+          "[\"2️⃣\",3]",
+          "[\"3️⃣\",7]",
+          "[\"1️⃣\",3]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"ref\",2]",
+          "[\"gitignore\",2]",
+          "[\"파일-이름-변경\",3]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",1]",
+          "[\"ts\",4]",
+          "[\"gradio\",6]"
+        ]
+      },
+      {
+        "id": "vscode-ssh",
+        "sourceBlocks": [
+          "[\"ca-에러\",3]",
+          "[\"git-접속\",1]",
+          "[\"패스워드-정보-묻지-않게-하기\",1]"
+        ],
+        "targetBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",2]",
+          "[\"vscode로-서버에-접속하여-개발\",4]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"ca-에러\",2]",
+          "[\"ref\",4]",
+          "[\"gitignore\",2]"
+        ],
+        "targetBlocks": [
+          "[\"새로운-이슈\",8]",
+          "[\"cuda-cudnn\",5]",
+          "[\"파일-무결성-검사-방법\",5]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"gitignore\",2]",
+          "[\"ref\",4]",
+          "[\"git-접속\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",6]",
+          "[\"원인\",1]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "python-venv-troubleshooting",
+        "sourceBlocks": [
+          "[\"gitignore\",2]",
+          "[\"파일-이름-변경\",3]",
+          "[\"git-접속\",1]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",2]",
+          "[\"해결\",1]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"gitignore\",2]",
+          "[\"파일-이름-변경\",3]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",30]",
+          "[\"ref\",1]",
+          "[\"해결\",2]"
+        ]
+      }
+    ],
+    "recommendations": []
+  }
+}

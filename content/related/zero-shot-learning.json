@@ -1,0 +1,293 @@
+{
+  "version": 2,
+  "id": "zero-shot-learning",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "5366ed3585a9c0e5a40ba81aca30b05e29959abf5eb448130933cb603766c4ec",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "in-context-learning",
+        "role": "about",
+        "evidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"what-is-zero-shot-learning\",1]",
+          "anchor": "what-is-zero-shot-learning",
+          "quote": "전통적으로 ZSL은 대부분 상당히 특정한 유형의 작업을 가리키는 경우가 많았습니다. 1개의 셋에서 분류기를 학습한 후에 다른 셋에서의 평가하는 방식으로요. 최근에 특히 NLP 분야에서 모델이 명시적으로 학습되지 않은 작업을 수행하도록 한다는 의미로 훨씬 더 광범위하게 사용되고 있습니다. 잘 알다시피 GPT-2에서 저자들은 언어모델을 파인튜닝 없이 직접적으로 기계독해와 같은 downstream task에서 평가하였습니다.",
+          "hash": "0a41e41436ab1fea2ff22e01e522f0f279afabfdadd4a1709f4d145acc54957b"
+        }
+      },
+      {
+        "id": "contextual-embeddings",
+        "role": "about",
+        "evidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"a-latent-embedding-approach\",2]",
+          "anchor": "a-latent-embedding-approach",
+          "quote": "text 도메인에선 같은 공간에서 class 이름과 데이터를 embed할 수 있는 단일의 모델을 사용할 수 있다는 장점이 존재하고 데이터 수집 정렬 단계의 필요를 제거할수있습니다. 이게 절대 새로운 기술이 아닌게 연구자와 실무자들은 비슷한 방식으로 단어 벡터를 pool해왔습니다. 그런데 최근에 문장단위의 임베딩 모델의 quality가 급격하게 상승하는 현장을 목도했습니다. 그러므로 Sentence-transformers를 통해 몇가지 실험들을 돌려볼 수 있는 경험을 할 수 있으며 최근 파인튜닝한 pooled BERT와 같은 기술들같은 model을 통해 sequence와 레이블 embedding들을 얻을 수 있습니다.",
+          "hash": "59dba5e76bb591b4a25529eaa5a2dd2a5befbcb432b5bea3600560738582c607"
+        }
+      },
+      {
+        "id": "finetuning",
+        "role": "applies",
+        "evidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"classification-as-nli\",3]",
+          "anchor": "classification-as-nli",
+          "quote": "Yin et al. (2019)에서 제안된 접근법은 사전학습된 MNLI sequence-pair classifier(Zero-shot text classifier)를 사용합니다. 이 아이디어는 우리가 관심있는 순서를 premise로 표시하고 각 후보 레이블을 hypothesis로 바꾸는 것입니다. 만약 NLI 모델이 premise가 hypothesis를 entailment로 예측했다면 우린 true 레이블을 얻을것입니다.",
+          "hash": "52d84e4b1ab77f82c86b6ff70fc105d4a3548ec7926606d9da04591e86f67fcc"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "73586f4786e2e01d717d05ef7304e85686191ca4800e5014ff9314a65326ad4b",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "nlp-terms",
+        "sourceBlocks": [
+          "[\"a-latent-embedding-approach\",2]",
+          "[\"classification-as-nli\",1]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"nli---natural-language-inference\",2]",
+          "[null,1]",
+          "[\"glue---general-language-understanding-evaluation\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[null,1]",
+          "[\"when-some-annotated-data-is-available\",1]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[null,1]",
+          "[\"nlp\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[null,5]",
+          "[\"when-some-annotated-data-is-available-1\",1]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",1]",
+          "[\"문제-정의\",3]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "gpt-3",
+        "sourceBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[null,3]",
+          "[\"classification-as-nli\",2]"
+        ],
+        "targetBlocks": [
+          "[null,5]",
+          "[null,10]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[null,3]",
+          "[\"what-is-zero-shot-learning\",1]",
+          "[\"when-some-annotated-data-is-available-1\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"resilience-to-domain-shift\",2]",
+          "[\"interpretability\",1]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"a-latent-embedding-approach\",2]",
+          "[\"classification-as-nli\",2]",
+          "[\"what-is-zero-shot-learning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"task-1-masked-lm-mlm\",2]",
+          "[\"input\",2]",
+          "[\"model-architecture\",8]"
+        ]
+      },
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[\"classification-as-nli\",3]",
+          "[null,3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"introduction\",2]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[null,3]",
+          "[\"when-some-annotated-data-is-available-1\",1]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-in-context-learning-icl\",1]",
+          "[\"introduction\",6]",
+          "[\"performance-on-t0-tasks\",1]"
+        ]
+      },
+      {
+        "id": "elmo",
+        "sourceBlocks": [
+          "[\"a-latent-embedding-approach\",2]",
+          "[\"what-is-zero-shot-learning\",2]",
+          "[null,3]"
+        ],
+        "targetBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",3]",
+          "[\"experiments\",4]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"classification-as-nli\",3]",
+          "[\"a-latent-embedding-approach\",1]",
+          "[null,3]"
+        ],
+        "targetBlocks": [
+          "[\"fine-tuning과-높은-해상도-이미지-다루기\",1]",
+          "[\"vision-transformervit\",9]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"a-latent-embedding-approach\",2]",
+          "[\"classification-as-nli\",4]",
+          "[null,5]"
+        ],
+        "targetBlocks": [
+          "[\"sbert\",1]",
+          "[\"translation\",3]",
+          "[\"question-generationkor\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[null,3]",
+          "[\"what-is-zero-shot-learning\",1]",
+          "[\"when-some-annotated-data-is-available-1\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"related-work\",1]",
+          "[\"main-results\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"classification-as-nli\",3]",
+          "[null,4]",
+          "[\"what-is-zero-shot-learning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"problem-statement\",1]",
+          "[\"low-rank-parameterized-update-matrices\",1]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[null,3]",
+          "[\"classification-as-nli\",7]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"chain-of-thought-prompting\",5]",
+          "[\"symbolic-reasoning\",1]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[null,5]",
+          "[\"classification-as-nli\",7]",
+          "[\"a-latent-embedding-approach\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"eda-makes-gains\",1]",
+          "[\"discussion-and-limitations\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "nlp-terms",
+        "relation": "related_method",
+        "reason": "NLI 분류를 premise와 hypothesis의 entailment·contradiction·중립 판별로 설명해, zero-shot 분류에 쓰이는 NLI 접근을 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"classification-as-nli\",1]",
+          "anchor": "classification-as-nli",
+          "quote": "문장은 embedding하거나 같은 latent 공간에 레이블하는 경우뿐만 아니라 2개의 분명한 문장의 호환성에 대해서도 다룰 수 있습니다. NLI 2개의 문장이 존재합니다. premise 와 hypothesis가 그것입니다. 이 task는 가설이 참인지 거짓인지 주어진 premise를 통해 결정하는 task라 할 수 있습니다.",
+          "hash": "0d17612d3f17e6b6d26f103b2cab90849d46610e506f912493b0370c0407b715"
+        },
+        "targetEvidence": {
+          "articleId": "nlp-terms",
+          "blockId": "[\"nli---natural-language-inference\",2]",
+          "anchor": "nli---natural-language-inference",
+          "quote": "두 개 문장(premise, hypothesis)이 참(entailment), 거짓(contradiction), 중립(netural)인지 가려내는 classification task",
+          "hash": "103563cfe4b5838557435a3f19c1f549f3de816e1f8180ec67da6f6083c7e99d"
+        }
+      },
+      {
+        "id": "flan",
+        "relation": "evaluation_comparison",
+        "reason": "파인튜닝 없이 downstream task를 평가하는 zero-shot 설정과, 다른 작업 클러스터로 instruction tuning한 뒤 보류한 클러스터를 평가하는 설정을 비교할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"what-is-zero-shot-learning\",1]",
+          "anchor": "what-is-zero-shot-learning",
+          "quote": "전통적으로 ZSL은 대부분 상당히 특정한 유형의 작업을 가리키는 경우가 많았습니다. 1개의 셋에서 분류기를 학습한 후에 다른 셋에서의 평가하는 방식으로요. 최근에 특히 NLP 분야에서 모델이 명시적으로 학습되지 않은 작업을 수행하도록 한다는 의미로 훨씬 더 광범위하게 사용되고 있습니다. 잘 알다시피 GPT-2에서 저자들은 언어모델을 파인튜닝 없이 직접적으로 기계독해와 같은 downstream task에서 평가하였습니다.",
+          "hash": "0a41e41436ab1fea2ff22e01e522f0f279afabfdadd4a1709f4d145acc54957b"
+        },
+        "targetEvidence": {
+          "articleId": "flan",
+          "blockId": "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "anchor": "flan--instruction-tuning-improves-zero-shot-learning",
+          "quote": "메인 아이디어로는 지시(supervision)를 사용하여 언어모델에 특정 task에 대해 가르치는 것임. 그 언어모델은 심지어 unseen task 일지라도 잘 작동할 것이며 instruction을 따르기 위해 잘 학습할 것임. 밝혀지지 않은 task에 대해 평가하기 위해 작업 유형별로 데이터 세트를 클러스터로 그룹화하고 각 작업 클러스터를 평가하기 위해 보류하고 나머지 모든 클러스터에서 instruction tuning을 진행함.",
+          "hash": "8e61d4b0359d7e005d690e859cf2c30921b7666b84e49772ef0527d1b8b422e7"
+        }
+      }
+    ]
+  }
+}

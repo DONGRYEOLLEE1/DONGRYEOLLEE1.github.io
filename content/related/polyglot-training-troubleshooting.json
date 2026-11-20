@@ -1,0 +1,263 @@
+{
+  "version": 2,
+  "id": "polyglot-training-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "9fdf2f4e3fff314cf0cc7748994e7987f6e1a7c66e69a89e14aa99a2bb1a9ae5",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "finetuning",
+        "role": "applies",
+        "evidence": {
+          "articleId": "polyglot-training-troubleshooting",
+          "blockId": "[\"solution\",10]",
+          "anchor": "solution",
+          "quote": "{\"text\": \"### 명령어: 삶의 의미가 뭘까?\\n\\n### 결과: 삶의 의미는 개인에 따라 다를 수 있으며, 각각의 개인이 그 의미를 발견하고 경험하는 과정입니다.\"}",
+          "hash": "7e582572ec2b9f50c0105070c385509c9d6e66a1d93102be55cd3d65524edd7a"
+        }
+      },
+      {
+        "id": "data-preparation",
+        "role": "applies",
+        "evidence": {
+          "articleId": "polyglot-training-troubleshooting",
+          "blockId": "[\"solution\",10]",
+          "anchor": "solution",
+          "quote": "{\"text\": \"### 명령어: 삶의 의미가 뭘까?\\n\\n### 결과: 삶의 의미는 개인에 따라 다를 수 있으며, 각각의 개인이 그 의미를 발견하고 경험하는 과정입니다.\"}",
+          "hash": "7e582572ec2b9f50c0105070c385509c9d6e66a1d93102be55cd3d65524edd7a"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "f5507e7851ef551ccba801a3e2660d266cc7515daf3a1c608e123d8c4a0b4d14",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "developing-daily-05",
+        "sourceBlocks": [
+          "[\"solution\",10]",
+          "[\"prob\",3]",
+          "[\"envs\",1]"
+        ],
+        "targetBlocks": [
+          "[\"data-processing\",1]",
+          "[\"kobart-questiongeneration\",3]",
+          "[\"sehongt5-large-questiongeneration\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",10]",
+          "[\"envs\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"envs\",1]",
+          "[\"issue\",9]"
+        ]
+      },
+      {
+        "id": "regex-preprocessing",
+        "sourceBlocks": [
+          "[\"solution\",10]",
+          "[\"prob\",3]",
+          "[\"envs\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"problem\",1]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"solution\",10]",
+          "[\"envs\",4]",
+          "[\"prob\",2]"
+        ],
+        "targetBlocks": [
+          "[\"dataset\",2]",
+          "[\"training\",1]",
+          "[\"envs\",7]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",10]",
+          "[\"envs\",5]",
+          "[\"prob\",2]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"env\",10]",
+          "[\"3️⃣\",9]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"prob\",2]",
+          "[\"envs\",3]",
+          "[\"solution\",18]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",9]",
+          "[\"section-8\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[\"solution\",10]",
+          "[\"prob\",3]",
+          "[\"envs\",4]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"training-set-sizing\",1]",
+          "[\"theory\",5]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"envs\",3]",
+          "[\"solution\",18]",
+          "[\"prob\",1]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-or-8bit-quantization\",10]",
+          "[\"2\",1]",
+          "[\"increasing-speed-a-llm-serving-inference\",4]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"solution\",10]",
+          "[\"envs\",3]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"the-data-factory\",1]",
+          "[\"continual-pre-training\",5]",
+          "[\"introduction\",9]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"solution\",18]",
+          "[\"prob\",2]",
+          "[\"envs\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"error\",1]",
+          "[\"env\",9]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"solution\",10]",
+          "[\"envs\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"translation\",3]",
+          "[\"question-generationkor\",1]",
+          "[\"sbert\",1]"
+        ]
+      },
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"envs\",3]",
+          "[\"prob\",3]"
+        ],
+        "targetBlocks": [
+          "[\"model-input-sequence-length\",2]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",3]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"solution\",10]",
+          "[\"envs\",2]",
+          "[\"prob\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"env\",1]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "tokenizer-input-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",10]",
+          "[\"prob\",3]",
+          "[\"envs\",4]"
+        ],
+        "targetBlocks": [
+          "[\"원인\",3]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"solution\",10]",
+          "[\"prob\",1]",
+          "[\"envs\",4]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",1]",
+          "[\"문제-정의\",7]",
+          "[\"solution\",5]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "tokenizer-input-troubleshooting",
+        "relation": "related_method",
+        "reason": "학습 데이터의 전처리와 토크나이저 입력을 다루며, 결측값 제거와 토큰화 코드로 데이터 처리 문제를 해결하는 방법을 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "polyglot-training-troubleshooting",
+          "blockId": "[\"prob\",3]",
+          "anchor": "prob",
+          "quote": "그럼 남은건 데이터 뿐.. train 파일의 데이터 처리 부분 코드를 뜯어보기로!",
+          "hash": "c4e9e93a6ba7f58c60c754558f8275e520dacae813c5a73029a4eb69253d6e76"
+        },
+        "targetEvidence": {
+          "articleId": "tokenizer-input-troubleshooting",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": "df = pd.read_csv(...) df = df.dropna(axis = 0) df = DA(...) train_sentence = tokenizer(list(train_data[\"text\"]), return_tensors = 'pt', padding = True, truncation = True, add_special_tokens = True) ...",
+          "hash": "8386db12644cbd94dec473a1df32d6b6a6c824b0f6781d7087b0d839cf1666af"
+        }
+      }
+    ]
+  }
+}

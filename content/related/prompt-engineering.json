@@ -1,0 +1,301 @@
+{
+  "version": 2,
+  "id": "prompt-engineering",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "d3b126c30f9cff48710f3b4d90fa741fa41e9affe6d15e0616c794ca64af6bcf",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "prompt-engineering",
+        "role": "about",
+        "evidence": {
+          "articleId": "prompt-engineering",
+          "blockId": "[\"qa\",1]",
+          "anchor": "qa",
+          "quote": "모델이 특정한 대답을 뱉게 하는 가장 좋은 방법중 하나는 prompt의 format을 향상시키는 것입니다. 앞서 설명한 것처럼 프롬프트는 instruction, context, 입력 및 출력 indicator를 결합하여 더 나은 결과를 얻을 수 있습니다. 이러한 구성들은 요구되어지지 않는 반면에 사용자가 원하는 더 특정한 instruction과 함께 좋은 practice가 됩니다. 아래의 예시는 좀 더 구조적은 prompt를 구성하는 방법입니다.",
+          "hash": "f1c3c52527134f620cb85f152dd09f5ce07696a755fe436a1026782197b82ec2"
+        }
+      },
+      {
+        "id": "chain-of-thought",
+        "role": "about",
+        "evidence": {
+          "articleId": "prompt-engineering",
+          "blockId": "[\"cot-prompting\",1]",
+          "anchor": "cot-prompting",
+          "quote": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models에서 소개된 CoT prompting은 복잡한 추론 기능을 추론 과정을 통해 가능케한다. Few-shot prompting과 결합하여 더 복잡한 task에서 좋은 결과를 낼 수 있다.",
+          "hash": "f18657936992b3acf84e3e27e696c0d09b690079a4858f18c4b4ede9c8bb42cb"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "b9329cdfad823dc06ffb4c6c5b6dc51f9433ca9e561f37430c75c8bda77ada16",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"qa\",1]",
+          "[\"cot-prompting\",1]",
+          "[\"zero-shot-cot-prompting\",7]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"results\",2]"
+        ]
+      },
+      {
+        "id": "thinkingcap",
+        "sourceBlocks": [
+          "[\"cot-prompting\",1]",
+          "[\"zero-shot-cot-prompting\",4]",
+          "[\"to-do-or-not-to-do\",3]"
+        ],
+        "targetBlocks": [
+          "[\"resources\",2]",
+          "[\"tldr\",20]",
+          "[\"analysis\",6]"
+        ]
+      },
+      {
+        "id": "alphallm",
+        "sourceBlocks": [
+          "[\"cot-prompting\",1]",
+          "[\"zero-shot-cot-prompting\",7]",
+          "[\"to-do-or-not-to-do\",5]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",2]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"cot-prompting\",5]",
+          "[\"conversation\",3]",
+          "[\"the-instruction\",5]"
+        ],
+        "targetBlocks": [
+          "[\"merging-lora-weights\",5]",
+          "[\"ref\",2]",
+          "[\"peft-v090\",1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"zero-shot-cot-prompting\",7]",
+          "[\"the-instruction\",2]",
+          "[\"cot-prompting\",1]"
+        ],
+        "targetBlocks": [
+          "[\"interpretability\",1]",
+          "[\"introduction\",2]",
+          "[\"ablation-study\",1]"
+        ]
+      },
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[\"the-instruction\",2]",
+          "[\"cot-prompting\",1]",
+          "[\"zero-shot-cot-prompting\",7]"
+        ],
+        "targetBlocks": [
+          "[\"role-of-instructions\",3]",
+          "[\"introduction\",5]",
+          "[\"results\",3]"
+        ]
+      },
+      {
+        "id": "book-spine",
+        "sourceBlocks": [
+          "[\"qa\",4]",
+          "[\"cot-prompting\",3]",
+          "[\"conversation\",2]"
+        ],
+        "targetBlocks": [
+          "[\"eval-path\",6]",
+          "[\"score-split\",7]",
+          "[\"system\",7]"
+        ]
+      },
+      {
+        "id": "gpt-3",
+        "sourceBlocks": [
+          "[\"zero-shot-cot-prompting\",7]",
+          "[\"cot-prompting\",5]",
+          "[\"the-instruction\",2]"
+        ],
+        "targetBlocks": [
+          "[null,10]",
+          "[null,8]",
+          "[null,9]"
+        ]
+      },
+      {
+        "id": "kodistill",
+        "sourceBlocks": [
+          "[\"cot-prompting\",5]",
+          "[\"zero-shot-cot-prompting\",4]",
+          "[\"the-instruction\",2]"
+        ],
+        "targetBlocks": [
+          "[\"1-preserve-the-bilingual-foundation\",7]",
+          "[\"3-continue-with-sft-and-verifiable-grpo\",6]",
+          "[null,2]"
+        ]
+      },
+      {
+        "id": "constitutional-ai",
+        "sourceBlocks": [
+          "[\"cot-prompting\",1]",
+          "[\"zero-shot-cot-prompting\",4]",
+          "[\"to-do-or-not-to-do\",5]"
+        ],
+        "targetBlocks": [
+          "[\"rl-stage-rlaif\",2]",
+          "[\"supervised-stage-critique--revision\",2]",
+          "[\"introduction\",7]"
+        ]
+      },
+      {
+        "id": "message-history",
+        "sourceBlocks": [
+          "[\"to-do-or-not-to-do\",3]",
+          "[\"conversation\",2]",
+          "[\"the-instruction\",5]"
+        ],
+        "targetBlocks": [
+          "[\"message-history\",1]",
+          "[\"message-history\",3]",
+          "[\"message-history\",2]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"zero-shot-cot-prompting\",7]",
+          "[\"cot-prompting\",5]",
+          "[\"the-instruction\",2]"
+        ],
+        "targetBlocks": [
+          "[\"문제-정의\",6]",
+          "[\"concept\",1]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "reranking",
+        "sourceBlocks": [
+          "[\"zero-shot-cot-prompting\",4]",
+          "[\"cot-prompting\",5]",
+          "[\"the-instruction\",2]"
+        ],
+        "targetBlocks": [
+          "[\"using-rerank-to-improve-keyword-search\",2]",
+          "[\"결론\",1]",
+          "[\"reranking\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"zero-shot-cot-prompting\",4]",
+          "[\"cot-prompting\",5]",
+          "[\"to-do-or-not-to-do\",5]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",1]",
+          "[\"envs\",6]",
+          "[\"mission\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"the-instruction\",2]",
+          "[\"cot-prompting\",5]",
+          "[\"to-do-or-not-to-do\",5]"
+        ],
+        "targetBlocks": [
+          "[\"instruction-finetuning\",1]",
+          "[\"appendix\",2]",
+          "[\"main-results\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "chain-of-thought",
+        "relation": "related_method",
+        "reason": "복잡한 추론에서 추론 단계를 유도하는 CoT prompting의 구성과 활용을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "prompt-engineering",
+          "blockId": "[\"cot-prompting\",1]",
+          "anchor": "cot-prompting",
+          "quote": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models에서 소개된 CoT prompting은 복잡한 추론 기능을 추론 과정을 통해 가능케한다. Few-shot prompting과 결합하여 더 복잡한 task에서 좋은 결과를 낼 수 있다.",
+          "hash": "f18657936992b3acf84e3e27e696c0d09b690079a4858f18c4b4ede9c8bb42cb"
+        },
+        "targetEvidence": {
+          "articleId": "chain-of-thought",
+          "blockId": "[\"chain-of-thought-prompting\",1]",
+          "anchor": "chain-of-thought-prompting",
+          "quote": "여러 단계를 거쳐야하는 수학 문제와 같은 복잡한 추론을 통해 문제를 푸는 절차를 연구진은 고려하였음. 이건 전형적인 문제를 하나하나 분해하여 정답에 접근하는 방식임. 이 논문의 목표는 LLM에 유사한 CoT를 생성할 수 있는 기능을 부여하는 것입니다. 일관된 일련의 중간 추론 단계를 생성할 수 있는 능력을 LLM에 부여하는 것입니다.",
+          "hash": "82ac1138b000944e339224661220eee68aa8b30584e7b60c99240027c33e995e"
+        }
+      },
+      {
+        "id": "constitutional-ai",
+        "relation": "related_method",
+        "reason": "CoT를 활용해 harmlessness 판단을 단계적으로 풀게 하는 적용 사례를 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "prompt-engineering",
+          "blockId": "[\"cot-prompting\",1]",
+          "anchor": "cot-prompting",
+          "quote": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models에서 소개된 CoT prompting은 복잡한 추론 기능을 추론 과정을 통해 가능케한다. Few-shot prompting과 결합하여 더 복잡한 task에서 좋은 결과를 낼 수 있다.",
+          "hash": "f18657936992b3acf84e3e27e696c0d09b690079a4858f18c4b4ede9c8bb42cb"
+        },
+        "targetEvidence": {
+          "articleId": "constitutional-ai",
+          "blockId": "[\"rl-stage-rlaif\",2]",
+          "anchor": "rl-stage-rlaif",
+          "quote": "여기에 **chain-of-thought(CoT)**를 더함. feedback 모델이 객관식 답을 고르기 전 \"단계적으로 생각해 보자\"며 추론을 쓰게 하면 판단 정확도와 투명성이 함께 올라감. (CoT가 확률을 0이나 1로 극단화하는 문제는 40~60%로 clamp해 완화)",
+          "hash": "7d4bd0bfa2d39eec80184aa7f140ff7ca98cd26879052885242135bdd9ca8f64"
+        }
+      },
+      {
+        "id": "gpt-3",
+        "relation": "related_method",
+        "reason": "프롬프트에 예시를 넣지 않는 zero-shot과 소수 예시를 쓰는 few-shot의 차이를 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "prompt-engineering",
+          "blockId": "[\"zero-shot-cot-prompting\",7]",
+          "anchor": "zero-shot-cot-prompting",
+          "quote": "많은 예시 필요없이 이 prompt를 통해 효과적인 방법을 낼 수 있음.",
+          "hash": "3a56de8ce82b4b523985bcba2992d46c2f3434d3061e8e33a50f3d2e788e0657"
+        },
+        "targetEvidence": {
+          "articleId": "gpt-3",
+          "blockId": "[null,10]",
+          "anchor": null,
+          "quote": "zero-shot learning : 특정 instruction에 대해 어떠한 예시도 없이 진행",
+          "hash": "3649d23b0a84c2d76feaa3685de37e503fb6cd836b50c58a53fdd0cbd24def03"
+        }
+      }
+    ]
+  }
+}

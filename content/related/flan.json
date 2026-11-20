@@ -1,0 +1,312 @@
+{
+  "version": 2,
+  "id": "flan",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "50a1e595472a20f324dc428ae3ffa628d2dd88825c022ab7829823e07daa3a85",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "finetuning",
+        "role": "about",
+        "evidence": {
+          "articleId": "flan",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "간단한 방법을 통해 zero-shot performance를 향상시킬 수 있음을 밝혀냈음. 즉 더 general한 모델을 만들었음을 의미함. 연구진은 직관을 효율적으로 사용했는데 NLP 태스크는 자연어 instructions을 통해 다음과 같이 묘사할 수 있음. \"이 영화리뷰의 sentiment는 긍정일까 아님 부정일까?\" 또는 \"'어떻게 지내?'를 중국어로 번역하라\". 연구진은 137B 규모의 사전학습된 언어모델을 만들었으며 instruction tuning을 수행하였음. 이 모델을 FLAN이라 부르기로 함.",
+          "hash": "515edbed0e7d291017230424c546ee532cf970d9ed28fd77b576ba3918650bc1"
+        }
+      },
+      {
+        "id": "model-alignment",
+        "role": "about",
+        "evidence": {
+          "articleId": "flan",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "간단한 방법을 통해 zero-shot performance를 향상시킬 수 있음을 밝혀냈음. 즉 더 general한 모델을 만들었음을 의미함. 연구진은 직관을 효율적으로 사용했는데 NLP 태스크는 자연어 instructions을 통해 다음과 같이 묘사할 수 있음. \"이 영화리뷰의 sentiment는 긍정일까 아님 부정일까?\" 또는 \"'어떻게 지내?'를 중국어로 번역하라\". 연구진은 137B 규모의 사전학습된 언어모델을 만들었으며 instruction tuning을 수행하였음. 이 모델을 FLAN이라 부르기로 함.",
+          "hash": "515edbed0e7d291017230424c546ee532cf970d9ed28fd77b576ba3918650bc1"
+        }
+      },
+      {
+        "id": "in-context-learning",
+        "role": "about",
+        "evidence": {
+          "articleId": "flan",
+          "blockId": "[\"introduction\",1]",
+          "anchor": "introduction",
+          "quote": "GPT-3 같은 경우에 few-shot learning을 통해 대단한 성능을 냈으나 zero-shot learning performance는 특정 태스트에서 few-shot perofrmance보다 성능이 좋지않음. few-shot 예시없이는 사전 학습 데이터의 형식과 유사하지 않은 프롬프트에서 모델이 잘 수행하기가 더 어려움.",
+          "hash": "1cfffeb31f2dcf3a59c083fedcffd6c4b7b8c17871d7772b0f062cbc6fde9d65"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "b49bf917ff9b41429633a87559b6962401e84697930276a5a9dfe6421a5824da",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "chat-vector",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "[\"role-of-instructions\",1]"
+        ],
+        "targetBlocks": [
+          "[\"chat-vector\",3]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"conclusions\",1]",
+          "[\"results\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"conclusions\",1]",
+          "[\"chain-of-thought-prompting\",5]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"introduction\",5]",
+          "[\"scaling-laws\",2]",
+          "[\"results\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"results\",1]",
+          "[\"interpretability\",1]"
+        ]
+      },
+      {
+        "id": "constitutional-ai",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"scaling-laws\",2]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"정리\",1]",
+          "[\"introduction\",2]",
+          "[\"preliminary--related-work\",1]"
+        ]
+      },
+      {
+        "id": "gpt-3",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"role-of-instructions\",3]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]"
+        ],
+        "targetBlocks": [
+          "[null,5]",
+          "[null,10]",
+          "[null,8]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "[\"results\",3]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-in-context-learning-icl\",1]",
+          "[\"introduction\",6]",
+          "[\"performance-on-t0-tasks\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "[\"evaluation-splits\",1]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]",
+          "[\"왜-fsl-일까\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"scaling-laws\",2]",
+          "[\"introduction\",5]",
+          "[\"results\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"instruction-finetuning\",1]",
+          "[\"main-results\",2]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "[\"scaling-laws\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"problem-statement\",1]",
+          "[\"low-rank-parameterized-update-matrices\",1]"
+        ]
+      },
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"introduction\",2]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[\"classification-as-nli\",3]",
+          "[null,3]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"classification-with-options\",2]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",1]",
+          "[\"문제-정의\",6]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"introduction\",5]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "[\"conclusions\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",9]",
+          "[\"baselines\",2]",
+          "[\"the-data-factory\",8]"
+        ]
+      },
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"scaling-laws\",2]",
+          "[\"introduction\",5]",
+          "[\"results\",3]"
+        ],
+        "targetBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"scaling-dimensions\",4]",
+          "[\"convnet-efficiency\",1]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "[\"scaling-laws\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"background\",1]",
+          "[\"qlora-vs-standard-finetuning\",4]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "[\"number-of-instruction-tuning-clusters\",1]",
+          "[\"introduction\",5]"
+        ],
+        "targetBlocks": [
+          "[\"pre-training-bert\",1]",
+          "[\"ablation-study\",3]",
+          "[\"task-1-masked-lm-mlm\",3]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "gpt-3",
+        "relation": "related_method",
+        "reason": "FLAN은 지시 튜닝으로 unseen task의 zero-shot 수행을 목표로 하고, GPT-3 설명은 자연어 지시와 소수의 예시를 입력에 활용하는 in-context learning을 소개합니다.",
+        "sourceEvidence": {
+          "articleId": "flan",
+          "blockId": "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "anchor": "flan--instruction-tuning-improves-zero-shot-learning",
+          "quote": "메인 아이디어로는 지시(supervision)를 사용하여 언어모델에 특정 task에 대해 가르치는 것임. 그 언어모델은 심지어 unseen task 일지라도 잘 작동할 것이며 instruction을 따르기 위해 잘 학습할 것임. 밝혀지지 않은 task에 대해 평가하기 위해 작업 유형별로 데이터 세트를 클러스터로 그룹화하고 각 작업 클러스터를 평가하기 위해 보류하고 나머지 모든 클러스터에서 instruction tuning을 진행함.",
+          "hash": "8e61d4b0359d7e005d690e859cf2c30921b7666b84e49772ef0527d1b8b422e7"
+        },
+        "targetEvidence": {
+          "articleId": "gpt-3",
+          "blockId": "[null,5]",
+          "anchor": null,
+          "quote": "이런 문제를 해결하기 위한 잠재적인 루트는 바로 meta learning이다. 언어모델의 context딴에서 학습시간동안 패턴인지능력과 다양한 셋의 스킬을 개발하는 모델을 의미합니다. 그리고 그러고난 후에 inference 할때 이 능력을 원하는 작업에 빠르게 적응하거나 인식합니다 (위 이미지 참고). 최근연구를 통해 이걸 in-context learning이라고 부르기로 했고 task 특성의 특징에 맞게 사전학습된 언어모델의 텍스트 입력값으로 사용하는 것을 일컫습니다. 이 모델은 자연어 지시와 적은 demonstration에 영향을 받습니다. 그리고 다음에 올 단어를 간단하게 예측함으로써 추가적인 예시를 완벽하게 기대하게 만듭니다.",
+          "hash": "48fbd476c085ab36cb78e29fd9a76765d66c03ba983f0977be3cd1e10bb6c66a"
+        }
+      },
+      {
+        "id": "prompt-tuning",
+        "relation": "related_method",
+        "reason": "FLAN은 지시를 통해 여러 task를 수행하도록 모델을 학습하며, prompt tuning 설명은 task description과 예시로 모델을 유도하는 prompt design을 다룹니다.",
+        "sourceEvidence": {
+          "articleId": "flan",
+          "blockId": "[\"introduction\",5]",
+          "anchor": "introduction",
+          "quote": "Instruction tuning은 위 그림과 같이 단순한 방법으로 사전학습+파인튜닝과 언어모델의 inference-time에 대한 성능을 향상시키기 위한 파인튜닝을 통한 프롬프팅 패러다임에서 나타나는 측면을 결합한 형태임. Instruction을 통한 순수하게 묘사되어진 태스크들을 수행하기위한 언어모델의 유망한 능력들로 하여금 연구진들의 실증적인 결과가 나타났음.",
+          "hash": "2fa7cd695168753cb693b230e0fe578e04d8c34301039e46c298c7e55ce5d234"
+        },
+        "targetEvidence": {
+          "articleId": "prompt-tuning",
+          "blockId": "[\"introduction\",1]",
+          "anchor": "introduction",
+          "quote": "ELMo 이래로 언어모델의 패러다임이 model tuning(=fine-tuning)으로 바뀌게 되었음. 더 최근에 prompt design(=priming)은 text-prompt를 통해 GPT-3 모델의 결과를 놀라울 정도로 효과적으로 만들어줬음. 프롬프트는 전형적으로 task description이나 몇몇의 canonical 예시로 구성되어있음. 특히 모델 사이즈가 계속해서 커져가는 추세에 이런 사전학습모델을 고정하는 방법론은 다소 매력적임. 각 downstream task에 맞춰 각각의 모델을 단순 copy 하는 방식보다 단일의 generalist model을 통해 동시다발적으로 다양한 task를 serving하는 방법론은 더 효율적임.",
+          "hash": "a2bce9cce050a9910ad5fbb83937642a626a4f43ccfca4b168a86dfd5a6a596b"
+        }
+      },
+      {
+        "id": "ia3-paper",
+        "relation": "evaluation_comparison",
+        "reason": "FLAN은 unseen task에서 instruction tuning한 모델의 zero-shot 성능을 다루고, IA3 설명은 few-shot in-context 모델과 zero-shot 모델의 성능을 비교합니다.",
+        "sourceEvidence": {
+          "articleId": "flan",
+          "blockId": "[\"results\",3]",
+          "anchor": "results",
+          "quote": "Instruction tuning이 특정 task에 맞춰 모델 자체를 변경하는 것보다 훨씬 더 효율적이고 효과적임을 나타냈음. 근데 직접적으로 계산하는 task(e.g., commonsense reasoning, coreference resolution)에선 꽤나 좋지 않은 성능을 냄.",
+          "hash": "e5dad15aa8e8d146c89639b351b5ac765e28cc9893d4696cee6a78dc2c9e2aa3"
+        },
+        "targetEvidence": {
+          "articleId": "ia3-paper",
+          "blockId": "[\"performance-on-t0-tasks\",1]",
+          "anchor": "performance-on-t0-tasks",
+          "quote": "Few-shot 모델이 zero-shot 모델보다 더 성능이 좋지 않았기에 T0 모델과 zero-shot learning에 대해 비교하였음.",
+          "hash": "167f73cbdd3451f262382921cd4ee8b57017d150050a4d081252f0ef30dab43a"
+        }
+      }
+    ]
+  }
+}

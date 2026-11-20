@@ -1,0 +1,271 @@
+{
+  "version": 2,
+  "id": "torch-tensor-manipulation-1",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "2caba623f73e1cf308a0b1ed6a27579ff13b991e7d0bfc9b7cfbc3f954e2ddc6",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "pytorch-tensors",
+        "role": "about",
+        "evidence": {
+          "articleId": "torch-tensor-manipulation-1",
+          "blockId": "[\"결론\",1]",
+          "anchor": "결론",
+          "quote": "view : tensor에 저장된 데이터의 물리적 위치 순서와 index순서가 일치할 때 contiguous shape을 재구성한다. 때문에 항상 contiguous하다는 성질이 보유",
+          "hash": "3cf32b16a060dc21d433e470aa5dba90d6c3e06bd834638a7e3d8542c41fdfc8"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "771f8a80cb6ba3b4ce752fff1719165888bc9f39b974a2723debcb41313fa2eb",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "torch-tensor-manipulation-2",
+        "sourceBlocks": [
+          "[\"결론\",1]",
+          "[\"torchview\",11]",
+          "[\"torchreshape\",17]"
+        ],
+        "targetBlocks": [
+          "[\"squeeze\",11]",
+          "[\"unsqueeze\",6]",
+          "[\"squeeze\",6]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-3",
+        "sourceBlocks": [
+          "[\"결론\",1]",
+          "[\"torchview\",11]",
+          "[\"torchreshape\",17]"
+        ],
+        "targetBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",5]",
+          "[\"삼각행렬-triangular-matrix\",1]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"결론\",1]",
+          "[\"torchview\",8]",
+          "[\"view-reshape-transpose-함수-정리\",1]"
+        ],
+        "targetBlocks": [
+          "[\"case-1\",1]",
+          "[\"answer\",8]",
+          "[\"curiosity\",1]"
+        ]
+      },
+      {
+        "id": "python-assert",
+        "sourceBlocks": [
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchreshape\",5]",
+          "[\"결론\",1]"
+        ],
+        "targetBlocks": [
+          "[\"가정-설명문assert\",2]",
+          "[\"assert가-필요한-이유\",2]",
+          "[\"assert가-필요한-이유\",5]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchreshape\",5]",
+          "[\"결론\",1]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",30]",
+          "[\"현상\",1]",
+          "[\"해결\",1]"
+        ]
+      },
+      {
+        "id": "regex-preprocessing",
+        "sourceBlocks": [
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchview\",11]",
+          "[\"torchtranspose\",9]"
+        ],
+        "targetBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",2]",
+          "[\"problem\",2]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchview\",11]",
+          "[\"결론\",1]"
+        ],
+        "targetBlocks": [
+          "[\"tensor-parallel\",1]",
+          "[\"2\",12]",
+          "[\"increasing-speed-a-llm-serving-inference\",9]"
+        ]
+      },
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"torchreshape\",5]",
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchtranspose\",1]"
+        ],
+        "targetBlocks": [
+          "[\"model-input-sequence-length\",3]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",1]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"torchview\",11]",
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchreshape\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"env\",4]",
+          "[\"error\",7]"
+        ]
+      },
+      {
+        "id": "python-map",
+        "sourceBlocks": [
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchview\",1]",
+          "[\"결론\",1]"
+        ],
+        "targetBlocks": [
+          "[\"map\",1]",
+          "[\"동작-원리\",1]",
+          "[\"장점\",1]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchtranspose\",1]",
+          "[\"torchview\",11]"
+        ],
+        "targetBlocks": [
+          "[\"multi-head-attention\",5]",
+          "[\"positional-encoding\",4]",
+          "[\"self-attention-1\",30]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"결론\",1]",
+          "[\"torchview\",3]"
+        ],
+        "targetBlocks": [
+          "[\"micro-design\",5]",
+          "[\"instruction\",1]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"view-reshape-transpose-함수-정리\",2]",
+          "[\"torchreshape\",5]",
+          "[\"결론\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",3]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"torchreshape\",5]",
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchview\",3]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"error-message\",6]",
+          "[\"environment\",4]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchreshape\",5]",
+          "[\"torchview\",1]"
+        ],
+        "targetBlocks": [
+          "[\"에러\",4]",
+          "[null,1]",
+          "[\"ref\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "torch-tensor-manipulation-3",
+        "relation": "related_method",
+        "reason": "view와 reshape의 차이를 본 뒤 expand와 인덱싱을 통한 차원 확장 방법도 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "torch-tensor-manipulation-1",
+          "blockId": "[\"torchview\",11]",
+          "anchor": "torchview",
+          "quote": "중간에 -1을 넣으면 해당 위치에 새로운 차원이 하나 더 생김",
+          "hash": "e097a179899f5310ac403fe4e767f8b21597997cc1daed0c6de87d6e6a26abd8"
+        },
+        "targetEvidence": {
+          "articleId": "torch-tensor-manipulation-3",
+          "blockId": "[\"expand\",5]",
+          "anchor": "expand",
+          "quote": "특정 차원의 텐서를 반복해서 생성해주는 함수이며 특정 차원의 크기가 1인 tensor에만 적용 가능",
+          "hash": "5401d15be60a66455062c9da8ba8836ba99d5d8c2e5d55cebcf5a4dc030ebc56"
+        }
+      },
+      {
+        "id": "model-input-length",
+        "relation": "related_method",
+        "reason": "view가 stride 조건을 만족하지 못해 실패하는 사례와, 모델 입력 시퀀스 길이 변경 과정의 오류를 함께 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "torch-tensor-manipulation-1",
+          "blockId": "[\"torchreshape\",5]",
+          "anchor": "torchreshape",
+          "quote": "tt.view(4, 3, 2) --------------------------------------------------------------------------- RuntimeError Traceback (most recent call last) /home/bigster/moef/tmp.ipynb 셀 26 line 1 ----> 1 tt.view(4, 3, 2) RuntimeError: view size is not compatible with input tensor's size and stride (at least one dimension spans across two contiguous subspaces). Use .reshape(...) instead.",
+          "hash": "2ede27b12d95f9e9686798ca3ad94940089b3c863aa44f3529d18cec315f6cf6"
+        },
+        "targetEvidence": {
+          "articleId": "model-input-length",
+          "blockId": "[\"model-input-sequence-length\",3]",
+          "anchor": "model-input-sequence-length",
+          "quote": ">>> model(tokenizer(text, return_tensors = 'pt')['input_ids'].to('cuda')) --------------------------------------------------------------------------- RuntimeError Traceback (most recent call last) <ipython-input-92-4ef402b4a33e> in <cell line: 1>() ----> 1 model(tokenizer(text, return_tensors = 'pt')['input_ids'].to('cuda')) 5 frames /usr/local/lib/python3.10/dist-packages/transformers/models/electra/modeling_electra.py in forward(self, input_ids, attention_mask,",
+          "hash": "c6433aad8ff6d4f67a8ef0353e1e4d15ae506b338ec45f43d7a8b3c6907b8923"
+        }
+      }
+    ]
+  }
+}

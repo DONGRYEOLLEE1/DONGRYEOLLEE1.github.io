@@ -1,0 +1,301 @@
+{
+  "version": 2,
+  "id": "dora",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "ac390f7faa17f5572faf7466af9ae2b0691f66dffdae6f846ccb4777cbb209df",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "peft",
+        "role": "about",
+        "evidence": {
+          "articleId": "dora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "이러한 관점에서 parameter-efficient fine-tuning(PEFT) 방법론이 나타났고 사전학습된 모델을 매우 적은 수의 파라미터만을 파인튜닝 하는 방식입니다. 그 중 LoRA는 모델의 구조를 변화시키지 않고 가장 효율적으로 학습할 수 있는 대표적인 방법론입니다. 그럼에도 불구하고 훈련 가능한 파라미터의 수가 제한되기 때문에 FT와 LoRA의 사이엔 여전히 격차가 존재합니다.",
+          "hash": "a7176cbd87544f764be0036748cba81bcf5a4f4ef26db78c5007ca29f3f0f155"
+        }
+      },
+      {
+        "id": "lora",
+        "role": "about",
+        "evidence": {
+          "articleId": "dora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "Weight Reparameterization을 통해 기울기의 조건을 개선함으로써 더 빠른 속도로 수렴하는 Weight Normalization에 따라, 연구진은 새로운 weight decomposition analysis을 소개합니다. 이는 규모나 직접적인 구성요소에 따라 초기에 모델의 가중치를 reparameterize하며 그 뒤에 LoRA와 FT에 의해 도입된 규모와 방향의 변화를 검토합니다. 연구진의 분석에 따르면 LoRA와 FT는 현저하게 다른 업데이트 패턴을 보여주며, 이러한 변이들이 각 방법의 학습 능력을 반영한다는 추측을 하게 됩니다. 연구진의 발견에 영감을 받아, 우리는 사전 훈련된 가중치를 크기와 방향 요소로 분해한 다음, 두 가지 모두를 fine-tuning하는 Weight-Decomposed Low-Rank Adaptation(DoRA)을 제안합니다.",
+          "hash": "c812afd12e5702831db109ecbcdfa96f17583ccb42af9842e01c42a1a6390270"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "1900c7338f2c88b38716f368627ec18694d23c3470df4c44c5d79de7a29b6661",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"experiments\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"low-rank-adaptation-lora\",1]",
+          "[\"experiments\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"low-rank-adaptation-lora\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"low-rank-parameterized-update-matrices\",3]"
+        ]
+      },
+      {
+        "id": "peft-target-modules",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"peft-parameter-efficient-fine-tuning\",2]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"peft-parameter-efficient-fine-tuning\",1]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"peft\",1]",
+          "[\"introduction\",6]",
+          "[\"peft-with-ia3\",16]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"peft-parameter-efficient-fine-tuning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"improving-dora\",2]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"commonsense-reasoning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"envs\",3]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"background\",2]",
+          "[\"introduction\",2]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"weight-decomposed-low-rank-adaptation\",2]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",3]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"의의\",2]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]",
+          "[\"introduction\",4]"
+        ],
+        "targetBlocks": [
+          "[\"의의\",1]",
+          "[\"instruction\",8]",
+          "[\"modernizing-a-convnet-a-roadmap\",6]"
+        ]
+      },
+      {
+        "id": "loftq",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"weight-decomposition-analysis\",2]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"loftq\",1]",
+          "[\"experiments\",19]",
+          "[\"glue-with-4-bit\",5]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"commonsense-reasoning\",4]",
+          "[\"introduction\",4]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"evolution-of-performance-during-training\",1]",
+          "[\"introduction\",1]",
+          "[\"instruction-finetuning\",2]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"peft-parameter-efficient-fine-tuning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"model\",3]",
+          "[\"envs\",6]",
+          "[\"dataset\",2]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"commonsense-reasoning\",4]",
+          "[\"weight-decomposed-low-rank-adaptation\",2]",
+          "[\"introduction\",4]"
+        ],
+        "targetBlocks": [
+          "[\"baselines\",2]",
+          "[\"the-architecture-of-ziya2\",3]",
+          "[\"introduction\",9]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"peft-parameter-efficient-fine-tuning\",1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"peft-parameter-efficient-fine-tuning\",3]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"prompt-tuning\",1]",
+          "[\"ablation-study\",3]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "vera",
+        "relation": "related_method",
+        "reason": "DoRA는 크기와 방향으로 가중치를 나누어 조정하고, VeRA는 고정 무작위 행렬과 scaling vectors로 가중치를 재매개변수화해 학습 파라미터를 줄이는 방식을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "dora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "Weight Reparameterization을 통해 기울기의 조건을 개선함으로써 더 빠른 속도로 수렴하는 Weight Normalization에 따라, 연구진은 새로운 weight decomposition analysis을 소개합니다. 이는 규모나 직접적인 구성요소에 따라 초기에 모델의 가중치를 reparameterize하며 그 뒤에 LoRA와 FT에 의해 도입된 규모와 방향의 변화를 검토합니다. 연구진의 분석에 따르면 LoRA와 FT는 현저하게 다른 업데이트 패턴을 보여주며, 이러한 변이들이 각 방법의 학습 능력을 반영한다는 추측을 하게 됩니다. 연구진의 발견에 영감을 받아, 우리는 사전 훈련된 가중치를 크기와 방향 요소로 분해한 다음, 두 가지 모두를 fine-tuning하는 Weight-Decomposed Low-Rank Adaptation(DoRA)을 제안합니다.",
+          "hash": "c812afd12e5702831db109ecbcdfa96f17583ccb42af9842e01c42a1a6390270"
+        },
+        "targetEvidence": {
+          "articleId": "vera",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "이와 동시에, 최근 연구에서는 random weights와 projection을 사용하는 모델의 놀라운 효과를 보여주었습니다 (Peng et al., 2021; Ramanujan et al., 2020; Lu et al., 2022; Schrimpf et al., 2021; Frankle et al., 2021). 본 연구진이 제안한 solution은 VeRA로 이러한 모델들의 베이스에 근간하며 파인튜닝하는 동안 가중치 matrices를 재-파라미터화함으로써 학습 파라미터를 최소화하는 방법론을 소개합니다. 특히 연구진은 scaling vectors를 차용하여 고정된 무작위 행렬값들의 pair를 공유된 layer 사이에 적용하는 방법을 사용했습니다. 이 접근법을 사용하면 더 많은 버전의 모델을 단일 GPU의 제한된 메모리에 저장할 수 있습니다.",
+          "hash": "e1007ed1310e2e4f3d0c7520eeb1504b4c0965246bfb7f3bed7b50adbc94ba8a"
+        }
+      },
+      {
+        "id": "peft-features-0100",
+        "relation": "related_method",
+        "reason": "DoRA가 LoRA를 바탕으로 가중치 크기와 방향을 조정하는 방법을 설명하므로, PEFT에서 DoRA를 지원하는 조건과 개선 사항을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "dora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "Weight Reparameterization을 통해 기울기의 조건을 개선함으로써 더 빠른 속도로 수렴하는 Weight Normalization에 따라, 연구진은 새로운 weight decomposition analysis을 소개합니다. 이는 규모나 직접적인 구성요소에 따라 초기에 모델의 가중치를 reparameterize하며 그 뒤에 LoRA와 FT에 의해 도입된 규모와 방향의 변화를 검토합니다. 연구진의 분석에 따르면 LoRA와 FT는 현저하게 다른 업데이트 패턴을 보여주며, 이러한 변이들이 각 방법의 학습 능력을 반영한다는 추측을 하게 됩니다. 연구진의 발견에 영감을 받아, 우리는 사전 훈련된 가중치를 크기와 방향 요소로 분해한 다음, 두 가지 모두를 fine-tuning하는 Weight-Decomposed Low-Rank Adaptation(DoRA)을 제안합니다.",
+          "hash": "c812afd12e5702831db109ecbcdfa96f17583ccb42af9842e01c42a1a6390270"
+        },
+        "targetEvidence": {
+          "articleId": "peft-features-0100",
+          "blockId": "[\"improving-dora\",2]",
+          "anchor": "improving-dora",
+          "quote": "quantized layer에서도 적용 가능하며 Convolution layer도 지원",
+          "hash": "93bcf49c808cd6bede2850edf6cd6bc86931082ac14b97e40f811cce0fd8818d"
+        }
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "relation": "evaluation_comparison",
+        "reason": "DoRA와 LoRA를 commonsense reasoning에서 평가한 결과를, Polyglot-ko 모델을 LoRA로 파인튜닝하는 적용 사례와 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "dora",
+          "blockId": "[\"commonsense-reasoning\",1]",
+          "anchor": "commonsense-reasoning",
+          "quote": "Llama-7B/13B 모델을 commonsense reasoning task에 DoRA, LoRA와 Prompt learning(Prefix), Series Adapter(Series), Parallel Adapter(Parallel) 방법론을 적용해보았습니다. 또한 ChatGPT api를 사용하여 zero-shot CoT를 적용한 ChatGPT accuracy를 포함시켰습니다.",
+          "hash": "b976d3ec1a39e22a7dfe2f959424977edd7465a8c48ae8c475096b70fe8817ef"
+        },
+        "targetEvidence": {
+          "articleId": "polyglot-lora-troubleshooting",
+          "blockId": "[\"mission\",1]",
+          "anchor": "mission",
+          "quote": "Polyglot-ko 모델을 LoRA로 Fine-tuning",
+          "hash": "588d87d066a4379dade4dec3ee63e8b9ed34374b7cd98b63547452de2993c053"
+        }
+      }
+    ]
+  }
+}

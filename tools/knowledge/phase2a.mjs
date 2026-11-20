@@ -84,19 +84,23 @@ export function factHash(ctx, id, model, settings) {
 export function readFacts(ctx, id, task, response) {
   if (!Array.isArray(response?.facts) || response.facts.length > 6) throw new Error('Expected facts array');
   const seen = new Set();
-  return response.facts.map(({ conceptId, role, block }) => {
+  const facts = [];
+  for (const { conceptId, role, block } of response.facts) {
     const key = conceptId + '/' + role;
     if (
       !ctx.conceptIds.has(conceptId) ||
       !ROLES.includes(role) ||
       !Number.isInteger(block) ||
-      !task.blocks[block] ||
-      seen.has(key)
+      !task.blocks[block]
     )
       throw new Error('Invalid fact ' + key);
+    // The model sometimes cites one role twice with different blocks. The first citation is a
+    // valid fact; rejecting the answer would retry the same deterministic output on every sync.
+    if (seen.has(key)) continue;
     seen.add(key);
-    return { id: conceptId, role, evidence: citation(id, task.blocks[block]) };
-  });
+    facts.push({ id: conceptId, role, evidence: citation(id, task.blocks[block]) });
+  }
+  return facts;
 }
 
 const liveFact = (ctx, id, fact) =>

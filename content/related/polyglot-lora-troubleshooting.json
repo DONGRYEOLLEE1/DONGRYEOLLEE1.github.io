@@ -1,0 +1,331 @@
+{
+  "version": 2,
+  "id": "polyglot-lora-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "db6e617878ab7a8bef2753ed07a0911369ab6b7689221e44f6641195bc8555c8",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "finetuning",
+        "role": "about",
+        "evidence": {
+          "articleId": "polyglot-lora-troubleshooting",
+          "blockId": "[\"mission\",1]",
+          "anchor": "mission",
+          "quote": "Polyglot-ko 모델을 LoRA로 Fine-tuning",
+          "hash": "588d87d066a4379dade4dec3ee63e8b9ed34374b7cd98b63547452de2993c053"
+        }
+      },
+      {
+        "id": "lora",
+        "role": "applies",
+        "evidence": {
+          "articleId": "polyglot-lora-troubleshooting",
+          "blockId": "[\"mission\",1]",
+          "anchor": "mission",
+          "quote": "Polyglot-ko 모델을 LoRA로 Fine-tuning",
+          "hash": "588d87d066a4379dade4dec3ee63e8b9ed34374b7cd98b63547452de2993c053"
+        }
+      },
+      {
+        "id": "peft",
+        "role": "applies",
+        "evidence": {
+          "articleId": "polyglot-lora-troubleshooting",
+          "blockId": "[\"issue\",7]",
+          "anchor": "issue",
+          "quote": "3️⃣ adapter_model.bin 파일의 용량이 443kb로 저장되었고 해당 이슈 조사 결과, peft의 버젼 문제로 인한 버그가 생긴듯함",
+          "hash": "6edc0d6b44a26d1ecadb94476ede84e3d9c3c56f0ebb536eb2f4812f254185f7"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "b6e1add1b255a95affac595b191d7ed23413a892dd556ad074ab180e9d2d257d",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"ref\",5]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"introduction\",2]",
+          "[\"introduction\",3]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"ref\",2]"
+        ],
+        "targetBlocks": [
+          "[\"model\",3]",
+          "[\"training\",1]",
+          "[\"envs\",2]"
+        ]
+      },
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"mission\",1]",
+          "[\"envs\",1]",
+          "[\"issue\",9]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",10]",
+          "[\"envs\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "peft-target-modules",
+        "sourceBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"prob\",3]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"prob\",2]",
+          "[\"issue\",3]",
+          "[\"mission\",2]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",9]",
+          "[\"현상\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"envs\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"commonsense-reasoning\",1]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"prob\",1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"ref\",5]",
+          "[\"prob\",2]",
+          "[\"envs\",8]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-or-8bit-quantization\",10]",
+          "[\"increasing-speed-a-llm-serving-inference\",4]",
+          "[\"2\",8]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"envs\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"low-rank-adaptation-lora\",1]",
+          "[\"e2e-benchmark\",2]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"mission\",1]",
+          "[\"envs\",2]",
+          "[\"ref\",5]"
+        ],
+        "targetBlocks": [
+          "[\"1\",1]",
+          "[\"env\",1]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "ia3-implementation",
+        "sourceBlocks": [
+          "[\"issue\",7]",
+          "[\"envs\",5]",
+          "[\"ref\",5]"
+        ],
+        "targetBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",5]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"ref\",5]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"background\",2]",
+          "[\"qlora-vs-standard-finetuning\",4]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"envs\",2]"
+        ],
+        "targetBlocks": [
+          "[\"source-code\",5]",
+          "[\"source-code\",6]",
+          "[\"env\",9]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"mission\",1]",
+          "[\"envs\",8]",
+          "[\"prob\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"env\",5]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"mission\",1]",
+          "[\"envs\",1]",
+          "[\"ref\",5]"
+        ],
+        "targetBlocks": [
+          "[\"tgi\",2]",
+          "[\"ref\",4]",
+          "[\"docker\",4]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "lora",
+        "relation": "concept_explanation",
+        "reason": "Polyglot-ko에 적용한 LoRA가 사전학습 가중치를 고정하고 저랭크 행렬을 학습하는 방식임을 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "polyglot-lora-troubleshooting",
+          "blockId": "[\"mission\",1]",
+          "anchor": "mission",
+          "quote": "Polyglot-ko 모델을 LoRA로 Fine-tuning",
+          "hash": "588d87d066a4379dade4dec3ee63e8b9ed34374b7cd98b63547452de2993c053"
+        },
+        "targetEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "학습된 과도하게 매개변수화된 모델이 실제로 낮은 performance를 낸다는 연구결과에 영감을 받음. 낮은 intrinsic rank를 모델을 적용하는동안 weights가 바뀐다는 가설을 세움. LoRA는 간접적으로 dense layer의 rank decomposition matrix를 최적화함으로써 NN에서 몇몇의 dense layer들을 학습할 수 있게 만들어줌(이 과정에서 weight는 froze).",
+          "hash": "3cba5587203ea62e143ba4ec9ef423450571ae6976433824bbd5b3347210f7ac"
+        }
+      },
+      {
+        "id": "peft-target-modules",
+        "relation": "concept_explanation",
+        "reason": "`query_key_value`가 여러 모델의 LoRA 대상 모듈 목록에 어떻게 쓰이는지 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "polyglot-lora-troubleshooting",
+          "blockId": "[\"prob\",3]",
+          "anchor": "prob",
+          "quote": "# `finetune.py` line 44 def train( ... lora_target_modules: List[str] = [ \"query_key_value\" ] )",
+          "hash": "59a660c539bec928db614187405a103efcfb15725276f7391e42e8c81fba151c"
+        },
+        "targetEvidence": {
+          "articleId": "peft-target-modules",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "# peft/utils/other.py in line 328 TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING = { \"t5\": [\"q\", \"v\"], \"mt5\": [\"q\", \"v\"], \"bart\": [\"q_proj\", \"v_proj\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"blip-2\": [\"q\", \"v\", \"q_proj\", \"v_proj\"], \"opt\": [\"q_proj\", \"v_proj\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"value\"], \"xlm-roberta\": [\"query\", \"value\"], \"electra\":",
+          "hash": "b0dc93edb070d31e4f57be2457664c20130561af39054733ee01cfb9f5be00be"
+        }
+      },
+      {
+        "id": "lora-finetuning",
+        "relation": "application_example",
+        "reason": "Polyglot-ko LoRA 파인튜닝에 적용할 모델 로딩 설정과 학습 명령어를 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "polyglot-lora-troubleshooting",
+          "blockId": "[\"mission\",1]",
+          "anchor": "mission",
+          "quote": "Polyglot-ko 모델을 LoRA로 Fine-tuning",
+          "hash": "588d87d066a4379dade4dec3ee63e8b9ed34374b7cd98b63547452de2993c053"
+        },
+        "targetEvidence": {
+          "articleId": "lora-finetuning",
+          "blockId": "[\"training\",1]",
+          "anchor": "training",
+          "quote": "python finetune.py \\ --base_model '../model_file/polyglot-ko-5.8b' \\ --data_path './ko_alpaca_data.json' \\ --output_dir './output' \\ --batch_size 128 \\ --mircro_batch_size 4 \\ --num_epochs 3 \\ --learning_rate 2e-5 \\ --cutoff_len 512 \\ --val_set_size 2000 \\ --lora_r 8 \\ --lora_alpha 16 \\ --lora_dropout 0.05 \\ --lora_target_modules '[query_key_value]' \\ --train_on_inputs \\ --group_by_length",
+          "hash": "1d3ec647d3fc9aa157a76778d7d0beb955bd87a846aa384701e66384ac2707f9"
+        }
+      },
+      {
+        "id": "qlora",
+        "relation": "concept_explanation",
+        "reason": "LoRA 파인튜닝에 4-bit 양자화를 더하는 QLoRA의 방식을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "polyglot-lora-troubleshooting",
+          "blockId": "[\"mission\",1]",
+          "anchor": "mission",
+          "quote": "Polyglot-ko 모델을 LoRA로 Fine-tuning",
+          "hash": "588d87d066a4379dade4dec3ee63e8b9ed34374b7cd98b63547452de2993c053"
+        },
+        "targetEvidence": {
+          "articleId": "qlora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "이에 연구진은 성능 저하 없이 quantized-4bit model 파인튜닝 하는 방법에 대해 소개. QLoRA는 4-bit로 사전학습된 모델을 양자화하기위해 독특한 high-precision technique를 사용하고 난 후에 학습가능한 LoRa 가중치의 적은 양을 추가함.",
+          "hash": "144cb34aeaeabedd47394aafd42bacd9d03485f0a719ac279c322487f77c7a50"
+        }
+      }
+    ]
+  }
+}

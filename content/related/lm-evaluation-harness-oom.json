@@ -1,0 +1,263 @@
+{
+  "version": 2,
+  "id": "lm-evaluation-harness-oom",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "2dc1ff8ff675fd0301e53f9d2809caacfc845bcac80ac941029203d7bb715ecb",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "vllm",
+        "role": "applies",
+        "evidence": {
+          "articleId": "lm-evaluation-harness-oom",
+          "blockId": "[\"solution\",3]",
+          "anchor": "solution",
+          "quote": "lm_eval --model vllm --model_args pretrained=$MODEL_NAME,tensor_parallel_size=2,gpu_memory_utilization=0.7,dtype=bfloat16,enforce_eager=True --output_path \"results/gemma2-27b-it\" --batch_size 2 --tasks $TASK",
+          "hash": "8eef3ba0bedf96faaca545237ec5e0d91a37d38631ac1a4caee004217915b50e"
+        }
+      },
+      {
+        "id": "gpu-memory",
+        "role": "applies",
+        "evidence": {
+          "articleId": "lm-evaluation-harness-oom",
+          "blockId": "[\"error\",2]",
+          "anchor": "error",
+          "quote": "OOM 에러 발생!",
+          "hash": "5823691ef56e4d0819eae917b3e76957d28aa576919fc687b530130ecd349fa9"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "a6f072bf83ebe91771292122ed32886e2798ee660e0e5148327979cf1f4b665b",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"error\",2]",
+          "[\"env\",1]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",3]",
+          "[\"env\",1]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",3]",
+          "[\"error\",2]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",12]",
+          "[\"env\",3]",
+          "[\"error-2\",6]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"error\",2]",
+          "[\"env\",2]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"env\",8]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"solution\",3]",
+          "[\"error\",2]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",1]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",3]",
+          "[\"env\",2]",
+          "[\"error\",2]"
+        ],
+        "targetBlocks": [
+          "[\"script-1\",1]",
+          "[\"environment\",2]",
+          "[\"solution\",4]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"env\",2]",
+          "[\"solution\",2]",
+          "[\"error\",2]"
+        ],
+        "targetBlocks": [
+          "[\"env\",2]",
+          "[\"해결\",5]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",2]",
+          "[\"solution\",2]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"section-8\",1]",
+          "[\"4bit-quantization\",25]",
+          "[\"해결\",2]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"env\",6]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",3]",
+          "[\"solution\",3]",
+          "[\"error\",1]"
+        ]
+      },
+      {
+        "id": "inference-server",
+        "sourceBlocks": [
+          "[\"solution\",3]",
+          "[\"error\",2]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"전체-구성\",1]",
+          "[\"참고\",2]",
+          "[\"nccl-초기화에서-무한-대기\",1]"
+        ]
+      },
+      {
+        "id": "docker-gpu-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"env\",2]",
+          "[\"error\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"env\",1]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"env\",1]",
+          "[\"solution\",3]",
+          "[\"error\",2]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",3]",
+          "[\"model-input-sequence-length\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"solution\",3]",
+          "[\"error\",2]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"solution-1\",1]",
+          "[\"error2\",1]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"env\",1]",
+          "[\"solution\",3]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"1\",7]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",2]",
+          "[\"solution\",2]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"1️⃣\",1]",
+          "[\"solution\",3]",
+          "[\"3️⃣\",1]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",2]",
+          "[\"solution\",2]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"3️⃣\",1]",
+          "[\"env\",3]",
+          "[\"2️⃣\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "relation": "related_method",
+        "reason": "평가 명령과 추론 서버가 모두 vLLM에서 tensor parallel size 2와 bfloat16을 사용하며, 추론 오류를 해결한 옵션을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "lm-evaluation-harness-oom",
+          "blockId": "[\"solution\",3]",
+          "anchor": "solution",
+          "quote": "lm_eval --model vllm --model_args pretrained=$MODEL_NAME,tensor_parallel_size=2,gpu_memory_utilization=0.7,dtype=bfloat16,enforce_eager=True --output_path \"results/gemma2-27b-it\" --batch_size 2 --tasks $TASK",
+          "hash": "8eef3ba0bedf96faaca545237ec5e0d91a37d38631ac1a4caee004217915b50e"
+        },
+        "targetEvidence": {
+          "articleId": "vllm-tensor-parallel-troubleshooting",
+          "blockId": "[\"script-1\",1]",
+          "anchor": "script-1",
+          "quote": "python -m vllm.entrypoints.openai.api_server --model $MODEL_NAME --dtype bfloat16 --port 8081 -tp 2 --enforce-eager --disable_custom_all_reduce > \"$LOGFILE\" 2>&1",
+          "hash": "56d8e1d50c4249056fa86e5d84361795499497e1c9978f2109d5682ebc33b418"
+        }
+      }
+    ]
+  }
+}

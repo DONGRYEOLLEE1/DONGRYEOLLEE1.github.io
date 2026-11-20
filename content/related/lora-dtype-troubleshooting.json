@@ -1,0 +1,263 @@
+{
+  "version": 2,
+  "id": "lora-dtype-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "92110af85b2c9fc19dfe5b1addca73dc1f32afcf400997a46b85c6f3e72ee856",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "peft",
+        "role": "applies",
+        "evidence": {
+          "articleId": "lora-dtype-troubleshooting",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "PEFT-IA3 training 도중 오류 발생",
+          "hash": "8b4bd5c42d6c6338336d90d64f461fec3ac364a1b0179ee6e11a100092567970"
+        }
+      },
+      {
+        "id": "ia3",
+        "role": "applies",
+        "evidence": {
+          "articleId": "lora-dtype-troubleshooting",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "PEFT-IA3 training 도중 오류 발생",
+          "hash": "8b4bd5c42d6c6338336d90d64f461fec3ac364a1b0179ee6e11a100092567970"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "e88438b761e2b2e643cf49df957601420560f91c2334f03088d25fc850026dac",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "ia3-implementation",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",2]"
+        ],
+        "targetBlocks": [
+          "[\"ia3\",1]",
+          "[\"gpt-neox-example-of-training\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",6]",
+          "[\"env\",4]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"에러\",4]",
+          "[null,1]",
+          "[\"ref\",2]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",13]",
+          "[\"현상\",1]",
+          "[\"해결\",1]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"peft\",1]",
+          "[\"peft-with-ia3\",6]",
+          "[\"introduction\",6]"
+        ]
+      },
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"에러\",4]",
+          "[\"ref\",2]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"tgi\",2]",
+          "[\"ref\",4]",
+          "[\"docker\",4]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",2]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"prob\",1]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",2]"
+        ],
+        "targetBlocks": [
+          "[\"model\",3]",
+          "[\"envs\",6]",
+          "[\"training\",1]"
+        ]
+      },
+      {
+        "id": "peft-target-modules",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"ref\",2]",
+          "[\"에러\",4]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"peft-parameter-efficient-fine-tuning\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",2]"
+        ],
+        "targetBlocks": [
+          "[\"source-code\",5]",
+          "[\"source-code\",6]",
+          "[\"error\",1]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"low-rank-adaptation-lora\",1]",
+          "[\"method\",1]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",2]"
+        ],
+        "targetBlocks": [
+          "[\"env\",4]",
+          "[null,1]",
+          "[\"3️⃣\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"problem-statement\",1]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"에러\",4]",
+          "[null,1]",
+          "[\"ref\",2]"
+        ],
+        "targetBlocks": [
+          "[\"2️⃣\",1]",
+          "[\"1️⃣\",1]",
+          "[\"solution\",4]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"에러\",4]",
+          "[null,1]",
+          "[\"ref\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",5]",
+          "[\"error-2\",8]",
+          "[\"env\",6]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "ia3-paper",
+        "relation": "related_method",
+        "reason": "IA3 오류 코드의 element-wise 곱셈과 연구에서 설명하는 IA3 rescaling vector 적용 방식을 연결해 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "lora-dtype-troubleshooting",
+          "blockId": "[\"에러\",4]",
+          "anchor": "에러",
+          "quote": "# /venv/lib/python3.10/site-packages/peft/tuners/ia3.py # line 507 ... if is_bnb_available(): class Linear8bitLt(bnb.nn.Linear8bitLt, IA3Layer): ... def forward(self, x: torch.Tensor): ... else: result = super().forward(x) ## 추가 result = result * self.ia3_l[self.active_adapter].flatten() return result",
+          "hash": "e04eb411c8b7eb479d32a29c7cde29da1c05831f7e8a230b437ae7e81e7b0315"
+        },
+        "targetEvidence": {
+          "articleId": "ia3-paper",
+          "blockId": "[\"peft-with-ia3\",6]",
+          "anchor": "peft-with-ia3",
+          "quote": "학습된 vector에 대한 모델 활성화함수의 element-wise multiplication에 대해 연구 진행. 특히 학습된 task-specific vector의 적용 양식에 대해 고려하였음. broadcasting notation. 연구진은 트랜스포머 모델에서 활성화 함수의 각 set을 통해 학습된 rescaling vector를 연구하면서 이것이 꼭 필요하지 않을수도 있다는 것을 발견해냈음. 대신, 우리는 self-attention 메커니즘에 key와 value에 대한 self-attention 및 encoder-decoder attention 메커니즘의 key와 value에 vector를 재조정하고 그리고 position-wise fedd-forward의 중간 activation에 rescaling vector를 도입하는 것으로 충분했음. 이에 연구진은 3개의 학습된 vector를 소개합니다.",
+          "hash": "2ed000d00afdb85f83cd558bc628039160e4e3e3d105ae4dab64def273d89ecc"
+        }
+      }
+    ]
+  }
+}

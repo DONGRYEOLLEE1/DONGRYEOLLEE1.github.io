@@ -1,0 +1,250 @@
+{
+  "version": 2,
+  "id": "bfcl-reasoning-option",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "c61aca146387e8510d91d577a2cf67819341973c42d085d431106247b7eb0c29",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "agent-evaluation",
+        "role": "applies",
+        "evidence": {
+          "articleId": "bfcl-reasoning-option",
+          "blockId": "[\"error\",1]",
+          "anchor": "error",
+          "quote": "Agent performance 측정을 위한 BFCL 벤치마크 실행 도중, api base generation 실행시 아래의 오류 발생",
+          "hash": "7cac1ee12fe3e2be371d1927e1d91c77e1f1b5b600b19a7a6ccf81e3f7bb0885"
+        }
+      },
+      {
+        "id": "tool-use",
+        "role": "applies",
+        "evidence": {
+          "articleId": "bfcl-reasoning-option",
+          "blockId": "[\"error\",3]",
+          "anchor": "error",
+          "quote": "multi_threaded_inference result, metadata = handler.inference( File \"/data/dev/uv-test/agent-bm2/.venv/lib/python3.10/site-packages/bfcl_eval/model_handler/base_handler.py\", line 47, in inference return self.inference_single_turn_FC(test_entry, include_input_log) File \"/data/dev/uv-test/agent-bm2/.venv/lib/python3.10/site-packages/bfcl_eval/model_handler/base_handler.py\", line 593, in inference_single_turn_FC api_response, query_latency = self._query_FC(inference_data) File",
+          "hash": "24bf0f2a7a0ce44696ea15bb0325a8dc476dded9ce59e26c821016e1cf954c6d"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "2f4e1e14d20a7f02ae7a16615a5a04066a65b2b61fbf85f58d450c0721850eba",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "k-browsecomp",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"error\",3]",
+          "[\"reproduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"정리\",1]",
+          "[\"failure-mode-taxonomy-f0f8\",3]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",3]",
+          "[\"refernce\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",3]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"refernce\",2]",
+          "[\"environment\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1️⃣\",1]",
+          "[\"2️⃣\",1]",
+          "[\"solution\",5]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"environment\",1]",
+          "[\"reproduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",4]",
+          "[\"error\",1]",
+          "[\"error-2\",2]"
+        ]
+      },
+      {
+        "id": "langgraph-structured-streaming",
+        "sourceBlocks": [
+          "[\"error\",3]",
+          "[\"solution\",4]",
+          "[\"environment\",1]"
+        ],
+        "targetBlocks": [
+          "[\"baseline\",2]",
+          "[\"problem\",1]",
+          "[\"구조-분석\",2]"
+        ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",3]",
+          "[\"solution\",3]",
+          "[\"refernce\",2]"
+        ],
+        "targetBlocks": [
+          "[\"problem\",1]",
+          "[\"error-message\",1]",
+          "[\"solution\",4]"
+        ]
+      },
+      {
+        "id": "searchswarm",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",3]",
+          "[\"reproduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"experiments\",1]",
+          "[\"supervised-fine-tuning\",2]",
+          "[\"harness의-효과\",2]"
+        ]
+      },
+      {
+        "id": "mariadb-connection-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",1]",
+          "[\"environment\",1]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",3]",
+          "[\"env\",2]",
+          "[\"해결\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"error\",5]",
+          "[\"solution\",4]",
+          "[\"reproduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"solution-1\",1]",
+          "[\"error2\",2]"
+        ]
+      },
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"error\",6]",
+          "[\"solution\",4]",
+          "[\"environment\",1]"
+        ],
+        "targetBlocks": [
+          "[\"model-input-sequence-length\",2]",
+          "[\"env\",2]",
+          "[\"model-input-sequence-length\",3]"
+        ]
+      },
+      {
+        "id": "inference-server",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",5]",
+          "[\"reproduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"벤치마크\",4]",
+          "[\"모델-구성은-파일-하나로\",6]",
+          "[\"cuda-버전-필터가-정확-일치였음\",1]"
+        ]
+      },
+      {
+        "id": "netplan-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",5]",
+          "[\"solution\",3]",
+          "[\"environment\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"solution\",3]",
+          "[\"error\",4]",
+          "[\"reproduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",2]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",6]",
+          "[\"refernce\",2]"
+        ],
+        "targetBlocks": [
+          "[\"envs\",6]",
+          "[\"issue\",1]",
+          "[\"ref\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "k-browsecomp",
+        "relation": "concept_explanation",
+        "reason": "BFCL로 에이전트 성능을 측정하는 맥락에서, browsing agent 평가가 instruction following·tool calling·multi-turn interaction을 함께 다루는 이유를 알 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "bfcl-reasoning-option",
+          "blockId": "[\"error\",1]",
+          "anchor": "error",
+          "quote": "Agent performance 측정을 위한 BFCL 벤치마크 실행 도중, api base generation 실행시 아래의 오류 발생",
+          "hash": "7cac1ee12fe3e2be371d1927e1d91c77e1f1b5b600b19a7a6ccf81e3f7bb0885"
+        },
+        "targetEvidence": {
+          "articleId": "k-browsecomp",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "Browsing agent는 instruction following·tool calling·multi-turn interaction을 동시에 요구하는 compositional task라, 한국어 agentic 능력을 종합적으로 측정하는 testbed가 됨.",
+          "hash": "0d7ba0566800e2c82c330937c0bb67a8a9ad059e072fccb34065468c9c5e7a3f"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "version": 2,
+  "id": "vllm-gemma-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "4d86925e91062d5b2ecdfbf5bc95c5694341ec33159df620ac5deb70591673c6",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "vllm",
+        "role": "applies",
+        "evidence": {
+          "articleId": "vllm-gemma-troubleshooting",
+          "blockId": "[\"error\",12]",
+          "anchor": "error",
+          "quote": "ValueError( [rank0]: ValueError: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2). Otherwise, the output might be wrong. Set Flashinfer backend by export VLLM_ATTENTION_BACKEND=FLASHINFER. (VllmWorkerProcess pid=239160) ERROR 11-15 04:18:31 multiproc_worker_utils.py:226] Exception in worker VllmWorkerProcess while processing method determine_num_available_blocks: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2).",
+          "hash": "aed574f9dc3bc5db21ad19a0acd9a733996c3e62d5e10ea64bcf8242a54d4176"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "0a0121f0d25e491a4694f59239d35aab2b2d6bf402d89fca45230f705500a35f",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"error\",12]",
+          "[\"error-2\",1]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",1]",
+          "[\"problem\",3]"
+        ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",12]",
+          "[\"error-2\",17]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"script-1\",1]",
+          "[\"error-message\",9]",
+          "[\"environment\",2]"
+        ]
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"error\",12]",
+          "[\"env\",3]",
+          "[\"error-2\",6]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",3]",
+          "[\"error\",2]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "inference-server",
+        "sourceBlocks": [
+          "[\"error\",12]",
+          "[\"env\",2]",
+          "[\"조치-2\",1]"
+        ],
+        "targetBlocks": [
+          "[\"전체-구성\",1]",
+          "[\"참고\",2]",
+          "[\"vllm-릴리스에는-아직-없었음\",2]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"조치-2\",1]",
+          "[\"조치-1\",1]",
+          "[\"error-2\",16]"
+        ],
+        "targetBlocks": [
+          "[\"3️⃣\",6]",
+          "[\"1️⃣\",3]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "netplan-troubleshooting",
+        "sourceBlocks": [
+          "[\"조치-1\",1]",
+          "[\"error\",5]",
+          "[\"조치-2\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"error-2\",17]",
+          "[\"env\",3]",
+          "[\"error\",5]"
+        ],
+        "targetBlocks": [
+          "[\"error\",2]",
+          "[\"env\",9]",
+          "[\"solution\",12]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"env\",4]",
+          "[\"error\",1]",
+          "[\"error-2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"environment\",1]",
+          "[\"reproduction\",1]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"env\",3]",
+          "[\"error\",1]",
+          "[\"error-2\",8]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",3]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"조치-2\",2]",
+          "[\"error\",12]",
+          "[\"조치-1\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution-1\",1]",
+          "[\"solution\",1]",
+          "[\"error2\",2]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"error-2\",17]",
+          "[\"error\",5]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"error\",3]",
+          "[\"env\",1]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"조치-2\",1]",
+          "[\"error\",5]",
+          "[\"조치-1\",2]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"4bit-quantization\",30]",
+          "[\"현상\",1]"
+        ]
+      },
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"error-2\",8]",
+          "[\"error\",10]",
+          "[\"조치-2\",3]"
+        ],
+        "targetBlocks": [
+          "[\"model-input-sequence-length\",3]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",2]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"env\",2]",
+          "[\"조치-2\",1]",
+          "[\"error\",9]"
+        ],
+        "targetBlocks": [
+          "[\"env\",2]",
+          "[\"해결\",5]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"env\",3]",
+          "[\"error\",9]",
+          "[\"error-2\",4]"
+        ],
+        "targetBlocks": [
+          "[\"env\",2]",
+          "[\"issue\",2]",
+          "[\"해결\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "deepspeed-troubleshooting",
+        "relation": "related_method",
+        "reason": "Gemma 오류에서 필요한 FlashInfer 설치와 버전 조치가 다른 vLLM 오류 사례의 해결책과 겹쳐, 환경별 설치 및 재컴파일 문제를 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vllm-gemma-troubleshooting",
+          "blockId": "[\"조치-2\",1]",
+          "anchor": "조치-2",
+          "quote": "vllm 버전 업데이트 + flashinfer 환경에 맞는 버전 설치 + cuda 12.4로 변경",
+          "hash": "2ba64e5d0ecae9d1a7a0317daf03fae1aabec1d3eaed916914633a23127ce536"
+        },
+        "targetEvidence": {
+          "articleId": "deepspeed-troubleshooting",
+          "blockId": "[\"1️⃣\",3]",
+          "anchor": "1️⃣",
+          "quote": "sudo 명령어를 통해 패키지 설치 이후 python re-compile 필요!",
+          "hash": "3abb9d6f99a0b68f043ab645449402ef28b4b9aeb5f7c114185b61a378007d28"
+        }
+      }
+    ]
+  }
+}

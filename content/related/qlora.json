@@ -1,0 +1,315 @@
+{
+  "version": 2,
+  "id": "qlora",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "7bd138bf9c8a2a5cdee4a912c20d6292dbf1a9771671fbe7adca41193ab9ca2f",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "qlora",
+        "role": "about",
+        "evidence": {
+          "articleId": "qlora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "이에 연구진은 성능 저하 없이 quantized-4bit model 파인튜닝 하는 방법에 대해 소개. QLoRA는 4-bit로 사전학습된 모델을 양자화하기위해 독특한 high-precision technique를 사용하고 난 후에 학습가능한 LoRa 가중치의 적은 양을 추가함.",
+          "hash": "144cb34aeaeabedd47394aafd42bacd9d03485f0a719ac279c322487f77c7a50"
+        }
+      },
+      {
+        "id": "quantization",
+        "role": "about",
+        "evidence": {
+          "articleId": "qlora",
+          "blockId": "[\"background\",1]",
+          "anchor": "background",
+          "quote": "Block-wise k-bit Quantization Quantization은 representation딴에서 discretizing an input의 절차로 이를 통해 더 적은 정보를 representation에 많은 정보를 붙잡아 둘 수 있게 합니다. 이는 데이터 타입을 취할때, 더 많은 bit를 가져오고 더 적은 bit에서 변환시키는 것을 의미합니다(32-bit floats >> 8bit Integers).",
+          "hash": "d0331c9a1363f5d64bc12a235f54fbb46e279805987b074c568210011a142fff"
+        }
+      },
+      {
+        "id": "peft",
+        "role": "about",
+        "evidence": {
+          "articleId": "qlora",
+          "blockId": "[\"background\",2]",
+          "anchor": "background",
+          "quote": "Low-rank Adapters Full-finetune model과 달리 LoRA 파인튜닝 방법은 적은 trainable 파라미터를 사용하여 필요 메모리 자체를 줄이는 방법을 의미합니다. Stochastic gradient descent을 수행하는동안의 기울기는 adapter에서 고정된 사전학습모델 기울기를 거칩니다.",
+          "hash": "92f382a4e2188e39e15b010a45aa75d3ef4e2412cd8c1d5ff772185ab6ca7258"
+        }
+      },
+      {
+        "id": "lora",
+        "role": "about",
+        "evidence": {
+          "articleId": "qlora",
+          "blockId": "[\"background\",2]",
+          "anchor": "background",
+          "quote": "Low-rank Adapters Full-finetune model과 달리 LoRA 파인튜닝 방법은 적은 trainable 파라미터를 사용하여 필요 메모리 자체를 줄이는 방법을 의미합니다. Stochastic gradient descent을 수행하는동안의 기울기는 adapter에서 고정된 사전학습모델 기울기를 거칩니다.",
+          "hash": "92f382a4e2188e39e15b010a45aa75d3ef4e2412cd8c1d5ff772185ab6ca7258"
+        }
+      },
+      {
+        "id": "finetuning",
+        "role": "about",
+        "evidence": {
+          "articleId": "qlora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "이에 연구진은 성능 저하 없이 quantized-4bit model 파인튜닝 하는 방법에 대해 소개. QLoRA는 4-bit로 사전학습된 모델을 양자화하기위해 독특한 high-precision technique를 사용하고 난 후에 학습가능한 LoRa 가중치의 적은 양을 추가함.",
+          "hash": "144cb34aeaeabedd47394aafd42bacd9d03485f0a719ac279c322487f77c7a50"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "b73982b6775bd35563799580ce262384e99f0654591438e98d2bf5308d40561e",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"background\",2]",
+          "[\"qlora-vs-standard-finetuning\",4]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"improving-dora\",2]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"background\",2]",
+          "[\"introduction\",1]",
+          "[\"qlora-finetuning\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"low-rank-adaptation-lora\",1]",
+          "[\"impace-of-training-time-and-memory-usage\",1]"
+        ]
+      },
+      {
+        "id": "loftq",
+        "sourceBlocks": [
+          "[\"background\",1]",
+          "[\"background\",2]",
+          "[\"introduction\",2]"
+        ],
+        "targetBlocks": [
+          "[\"loftq\",1]",
+          "[\"glue-with-4-bit\",1]",
+          "[\"experiments\",2]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"background\",1]",
+          "[\"background\",2]",
+          "[\"qlora-vs-standard-finetuning\",4]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",12]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"background\",2]",
+          "[\"qlora-finetuning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"introduction\",2]",
+          "[\"introduction\",3]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"background\",2]",
+          "[\"introduction\",2]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"background\",1]",
+          "[\"qlora-finetuning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",1]",
+          "[\"4bit-quantization\",16]",
+          "[\"section-8\",2]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"qlora-vs-standard-finetuning\",4]",
+          "[\"etc\",3]",
+          "[\"introduction\",4]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-or-8bit-quantization\",9]",
+          "[\"increasing-speed-a-llm-serving-inference\",9]",
+          "[\"tensor-parallel\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"background\",1]",
+          "[\"background\",2]",
+          "[\"qlora-finetuning\",3]"
+        ],
+        "targetBlocks": [
+          "[\"source-code\",4]",
+          "[\"source-code\",5]",
+          "[\"source-code\",6]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"background\",1]",
+          "[\"qlora-finetuning\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"efficient-implementation\",2]",
+          "[\"instruction-finetuning\",2]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"background\",2]",
+          "[\"introduction\",1]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[\"peft\",1]",
+          "[\"introduction\",6]",
+          "[\"의의\",3]"
+        ]
+      },
+      {
+        "id": "peft-target-modules",
+        "sourceBlocks": [
+          "[\"background\",2]",
+          "[\"qlora-finetuning\",4]",
+          "[\"etc\",1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[null,6]",
+          "[null,3]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"의의\",1]",
+          "[\"background\",1]"
+        ],
+        "targetBlocks": [
+          "[\"fine-tuning과-높은-해상도-이미지-다루기\",1]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"의의\",3]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[\"background\",1]",
+          "[\"qlora-finetuning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",9]",
+          "[\"the-architecture-of-ziya2\",2]",
+          "[\"continual-pre-training\",5]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"background\",2]",
+          "[\"qlora-vs-standard-finetuning\",4]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"ref\",5]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "loftq",
+        "relation": "related_method",
+        "reason": "QLoRA는 4-bit 양자화 모델에 LoRA 가중치를 더하고, LoftQ는 낮은 순위 근사를 양자화에 통합해 사전학습 가중치를 근사하는 방법을 설명합니다.",
+        "sourceEvidence": {
+          "articleId": "qlora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "이에 연구진은 성능 저하 없이 quantized-4bit model 파인튜닝 하는 방법에 대해 소개. QLoRA는 4-bit로 사전학습된 모델을 양자화하기위해 독특한 high-precision technique를 사용하고 난 후에 학습가능한 LoRa 가중치의 적은 양을 추가함.",
+          "hash": "144cb34aeaeabedd47394aafd42bacd9d03485f0a719ac279c322487f77c7a50"
+        },
+        "targetEvidence": {
+          "articleId": "loftq",
+          "blockId": "[\"loftq\",1]",
+          "anchor": "loftq",
+          "quote": "LoftQ라고 불리는 새로운 quantization framework를 소개. 이 프레임워크는 낮은 순위의 근사치를 적극적으로 통합하여 양자화와 함께 작동하여 원래의 high-precision 사전학습된 가중치를 공동으로 근사화합니다.",
+          "hash": "1b959360ebfbcc9575ba361060e8305e2dd0db884ed90916f5f47b1e303f0d5e"
+        }
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "relation": "application_example",
+        "reason": "QLoRA가 4-bit 모델에 LoRA 가중치를 더하는 방식을 소개하고, 이 사례는 4-bit 모델에 LoraConfig를 설정해 학습하는 코드를 보여줍니다.",
+        "sourceEvidence": {
+          "articleId": "qlora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "이에 연구진은 성능 저하 없이 quantized-4bit model 파인튜닝 하는 방법에 대해 소개. QLoRA는 4-bit로 사전학습된 모델을 양자화하기위해 독특한 high-precision technique를 사용하고 난 후에 학습가능한 LoRa 가중치의 적은 양을 추가함.",
+          "hash": "144cb34aeaeabedd47394aafd42bacd9d03485f0a719ac279c322487f77c7a50"
+        },
+        "targetEvidence": {
+          "articleId": "qlora-troubleshooting",
+          "blockId": "[\"4bit-quantization\",16]",
+          "anchor": "4bit-quantization",
+          "quote": "config = LoraConfig( r = 32, lora_alpha = 32, target_modules = ['query_key_value'], lora_dropout = .05, bias = \"none\", task_type = 'CAUSAL_LM' ) model = get_peft_model(model, config) print_trainable_parameters(model) # trainable params: 26214400 || all params: 6628362240 || trainable%: 0.39548834313557374",
+          "hash": "80035dbe3452011bffbdd64cb71a5f8eb78cec9a3bab402bd05a34b8d9f3cb52"
+        }
+      }
+    ]
+  }
+}

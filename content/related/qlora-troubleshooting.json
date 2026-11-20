@@ -1,0 +1,304 @@
+{
+  "version": 2,
+  "id": "qlora-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "1e96fa745384b45f5a72bb1e4c6483aa045895b8ca2cc16370934c9defe32a68",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "qlora",
+        "role": "applies",
+        "evidence": {
+          "articleId": "qlora-troubleshooting",
+          "blockId": "[\"4bit-quantization\",16]",
+          "anchor": "4bit-quantization",
+          "quote": "config = LoraConfig( r = 32, lora_alpha = 32, target_modules = ['query_key_value'], lora_dropout = .05, bias = \"none\", task_type = 'CAUSAL_LM' ) model = get_peft_model(model, config) print_trainable_parameters(model) # trainable params: 26214400 || all params: 6628362240 || trainable%: 0.39548834313557374",
+          "hash": "80035dbe3452011bffbdd64cb71a5f8eb78cec9a3bab402bd05a34b8d9f3cb52"
+        }
+      },
+      {
+        "id": "quantization",
+        "role": "applies",
+        "evidence": {
+          "articleId": "qlora-troubleshooting",
+          "blockId": "[\"4bit-quantization\",1]",
+          "anchor": "4bit-quantization",
+          "quote": "ubuntu 20.04",
+          "hash": "0a94f7ace07cbeba8ddf1d308ee899df0ce92b5dcbee15cb57eb520a9e07fd2b"
+        }
+      },
+      {
+        "id": "cuda",
+        "role": "applies",
+        "evidence": {
+          "articleId": "qlora-troubleshooting",
+          "blockId": "[\"해결\",2]",
+          "anchor": "해결",
+          "quote": "cuda 버젼에 상응하는 파일을 복사(대체)해주면 된다",
+          "hash": "5d8db550cf758bf1f42b0c0da0c4b3c25da36bffe67596ec4d9337054b7c40b8"
+        }
+      },
+      {
+        "id": "gpu-memory",
+        "role": "about",
+        "evidence": {
+          "articleId": "qlora-troubleshooting",
+          "blockId": "[\"section-8\",1]",
+          "anchor": "section-8",
+          "quote": "학습은 진행되나 초기 step(약 5-step) 진행시, OOM 메세지 출력",
+          "hash": "606aad8abe773e560c35f54d5b33b91afd9cfca5a94da9f6ded85060806deedd"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "5f83b700ef9fb637138e4a9379e5ae3c7e76502259f3c0b7ed6cc7cc4004b4ec",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"4bit-quantization\",1]",
+          "[\"section-8\",1]",
+          "[\"해결\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"source-code\",4]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"4bit-quantization\",9]",
+          "[\"section-8\",2]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-or-8bit-quantization\",10]",
+          "[\"2\",10]",
+          "[\"increasing-speed-a-llm-serving-inference\",10]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"4bit-quantization\",1]",
+          "[\"현상\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"solution\",2]",
+          "[\"solution-1\",1]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"4bit-quantization\",17]",
+          "[\"현상\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"4bit-quantization\",1]",
+          "[\"4bit-quantization\",16]",
+          "[\"section-8\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"background\",1]",
+          "[\"qlora-finetuning\",1]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"section-8\",1]",
+          "[\"4bit-quantization\",25]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",3]",
+          "[\"env\",5]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"4bit-quantization\",1]",
+          "[\"해결\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"envs\",3]",
+          "[\"model\",3]",
+          "[\"training\",1]"
+        ]
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"section-8\",1]",
+          "[\"4bit-quantization\",25]",
+          "[\"해결\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",2]",
+          "[\"solution\",2]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"4bit-quantization\",16]",
+          "[\"ref\",1]",
+          "[\"해결\",1]"
+        ],
+        "targetBlocks": [
+          "[\"deprecations\",1]",
+          "[\"improving-dora\",2]",
+          "[\"memory-efficient-layer-replication-with-lora\",15]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"4bit-quantization\",13]",
+          "[\"현상\",1]",
+          "[\"해결\",1]"
+        ],
+        "targetBlocks": [
+          "[\"에러\",4]",
+          "[null,1]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"4bit-quantization\",30]",
+          "[\"현상\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"4bit-quantization\",8]",
+          "[\"현상\",1]"
+        ],
+        "targetBlocks": [
+          "[\"3️⃣\",8]",
+          "[\"env\",4]",
+          "[\"2️⃣\",3]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"4bit-quantization\",30]",
+          "[\"현상\",1]"
+        ],
+        "targetBlocks": [
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"cuda-cudnn\",4]",
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]"
+        ]
+      },
+      {
+        "id": "docker-gpu-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"4bit-quantization\",17]",
+          "[\"현상\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"4bit-quantization\",9]",
+          "[\"현상\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"prob\",2]",
+          "[\"issue\",3]",
+          "[\"mission\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "qlora",
+        "relation": "concept_explanation",
+        "reason": "QLoRA가 4-bit 사전학습 모델에 양자화를 적용하고 학습 가능한 LoRA 가중치를 추가하는 방식을 설명해, 4bit 파인튜닝의 배경을 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "qlora-troubleshooting",
+          "blockId": "[\"4bit-quantization\",1]",
+          "anchor": "4bit-quantization",
+          "quote": "ubuntu 20.04",
+          "hash": "0a94f7ace07cbeba8ddf1d308ee899df0ce92b5dcbee15cb57eb520a9e07fd2b"
+        },
+        "targetEvidence": {
+          "articleId": "qlora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "이에 연구진은 성능 저하 없이 quantized-4bit model 파인튜닝 하는 방법에 대해 소개. QLoRA는 4-bit로 사전학습된 모델을 양자화하기위해 독특한 high-precision technique를 사용하고 난 후에 학습가능한 LoRa 가중치의 적은 양을 추가함.",
+          "hash": "144cb34aeaeabedd47394aafd42bacd9d03485f0a719ac279c322487f77c7a50"
+        }
+      },
+      {
+        "id": "developing-daily-06",
+        "relation": "related_method",
+        "reason": "둘 다 bitsandbytes에서 CUDA 버전에 맞는 파일을 libbitsandbytes_cpu.so로 복사해 undefined symbol 오류를 해결하는 방법을 보여줍니다.",
+        "sourceEvidence": {
+          "articleId": "qlora-troubleshooting",
+          "blockId": "[\"해결\",2]",
+          "anchor": "해결",
+          "quote": "cuda 버젼에 상응하는 파일을 복사(대체)해주면 된다",
+          "hash": "5d8db550cf758bf1f42b0c0da0c4b3c25da36bffe67596ec4d9337054b7c40b8"
+        },
+        "targetEvidence": {
+          "articleId": "developing-daily-06",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": "$ cd {ENV}/lib/python-3.10/site-packages/bitsandbytes $ cp libbitsandbytes_cuda118.so libbitsandbytes_cpu.so",
+          "hash": "56832f339cb838e82d9dbb16d59be8d5d89c8beb85794454b122d5c61e7cad66"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "version": 2,
+  "id": "overfeat",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "b93f1b4814af4b6bc780dd54ef8c9d58740d33a27cc8dd57b8a3871a70720413",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "object-detection",
+        "role": "about",
+        "evidence": {
+          "articleId": "overfeat",
+          "blockId": "[\"overfeat-detection-network\",12]",
+          "anchor": "overfeat-detection-network",
+          "quote": "Overfeat 모델은 Classification, Localization, Detection task에 모두 사용할 수 있습니다. Overfeat을 Classification task를 위해 학습시킨 후, fc layer를 제거하여 feature extractor로 활용하여 localization, detection task에 사용될 수 있습니다.",
+          "hash": "c1a6c0caad769f70ace07c0aed7ab121122a0f892daed4e1bae383aec5710cd4"
+        }
+      },
+      {
+        "id": "cnn",
+        "role": "about",
+        "evidence": {
+          "articleId": "overfeat",
+          "blockId": "[\"overfeat-intuition\",2]",
+          "anchor": "overfeat-intuition",
+          "quote": "FCL를 Convolution작동 방식으로 변환함으로써, Input 사이즈에 대한 고정된 크기 제한을 없앨수 있습니다. 이 방식엔 4가지 이점이 있습니다.",
+          "hash": "7b4abcb4e45161a7b2b1979bfa3d6809e15fa6ef410fdcf615cf448a4f90f50b"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "134c37690666ff0cf96a8181b0612d4cdb174a5aebe88485b4971ae2fba82898",
+    "status": "abstained",
+    "candidates": [
+      {
+        "id": "r-cnn",
+        "sourceBlocks": [
+          "[\"nms의-자세한-내용이-궁금하다면\",2]",
+          "[\"overfeat-intuition\",2]",
+          "[\"overfeat-detection-network\",12]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"nmsnon-maximum-suppression\",10]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"overfeat-intuition\",2]",
+          "[\"overfeat-detection-network\",12]",
+          "[\"training-bounding-box-regressor\",3]"
+        ],
+        "targetBlocks": [
+          "[\"preview\",3]",
+          "[\"preview\",4]",
+          "[\"7-max-pooling-by-roi-pooling\",2]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"nmsnon-max-suppression\",13]",
+          "[\"overfeat-intuition\",2]",
+          "[\"overfeat-detection-network\",12]"
+        ],
+        "targetBlocks": [
+          "[\"backbone\",2]",
+          "[\"the-object-detection-task\",1]",
+          "[\"roi-pooling\",3]"
+        ]
+      },
+      {
+        "id": "yolo-v1",
+        "sourceBlocks": [
+          "[\"overfeat-intuition\",2]",
+          "[\"overfeat-detection-network\",12]",
+          "[\"overfeat-classification-network\",4]"
+        ],
+        "targetBlocks": [
+          "[\"unified-detection\",1]",
+          "[\"network-design\",1]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "fast-r-cnn",
+        "sourceBlocks": [
+          "[\"overfeat-intuition\",2]",
+          "[\"overfeat-detection-network\",12]",
+          "[\"bb-regressor를-통해-추론\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",2]",
+          "[\"preview\",1]",
+          "[\"bb-regressor를-통한-세세한-localization\",4]"
+        ]
+      },
+      {
+        "id": "ohem",
+        "sourceBlocks": [
+          "[\"overfeat-detection-network\",12]",
+          "[\"learning\",1]",
+          "[\"overfeat-classification-network\",9]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",1]",
+          "[\"introduction\",3]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"overfeat-intuition\",2]",
+          "[\"convnets-sliding-window-efficiency\",3]",
+          "[\"문제점---convnet의-input-사이즈-제약\",3]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",6]",
+          "[\"macro-design\",1]",
+          "[\"large-kernel-size\",1]"
+        ]
+      },
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"overfeat-intuition\",2]",
+          "[\"문제점---convnet의-input-사이즈-제약\",3]",
+          "[\"convnets-sliding-window-efficiency\",3]"
+        ],
+        "targetBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"problem-formulation\",1]",
+          "[\"convnet-accuracy\",1]"
+        ]
+      },
+      {
+        "id": "rnn",
+        "sourceBlocks": [
+          "[\"receptive-field수용층\",4]",
+          "[\"문제점---convnet의-input-사이즈-제약\",3]",
+          "[\"overfeat-intuition\",4]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",10]",
+          "[\"구조\",6]",
+          "[\"relu함수를-사용하지-않는-이유\",5]"
+        ]
+      },
+      {
+        "id": "resnext",
+        "sourceBlocks": [
+          "[\"overfeat-intuition\",2]",
+          "[\"overfeat-classification-network\",4]",
+          "[\"convnets-sliding-window-efficiency\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"related-work\",2]",
+          "[\"aggregated-transformations\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"learning\",1]",
+          "[\"overfeat-detection-network\",12]",
+          "[\"overfeat-intuition\",4]"
+        ],
+        "targetBlocks": [
+          "[null,2]",
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"image-classification-cv\",2]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"overfeat-intuition\",2]",
+          "[\"learning\",1]",
+          "[\"overfeat-detection-network\",12]"
+        ],
+        "targetBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"문제점---내가-필요로하는-것보다-더-많은-otuput-값을-얻는다\",12]",
+          "[\"effecitve-stride-of-a-network\",4]",
+          "[\"overfeat-classification-network\",1]"
+        ],
+        "targetBlocks": [
+          "[\"final-linear-and-softmax-layer\",3]",
+          "[\"self-attention\",5]",
+          "[\"출현배경\",1]"
+        ]
+      },
+      {
+        "id": "map-evaluation",
+        "sourceBlocks": [
+          "[\"overfeat-detection-network\",12]",
+          "[\"nmsnon-max-suppression\",13]",
+          "[\"learning\",10]"
+        ],
+        "targetBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"iouintersection-over-union---fracintersectionunion\",1]",
+          "[\"refernce\",1]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"overfeat-intuition\",4]",
+          "[\"문제점---convnet의-input-사이즈-제약\",3]",
+          "[\"learning\",5]"
+        ],
+        "targetBlocks": [
+          "[\"vision-transformervit\",16]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"요약\",14]"
+        ]
+      }
+    ],
+    "recommendations": []
+  }
+}

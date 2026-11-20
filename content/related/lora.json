@@ -1,0 +1,331 @@
+{
+  "version": 2,
+  "id": "lora",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "a8cffd6f7adc6c437c3f45fd60acf98a00681333a8a6a7969b759e5b3f119c46",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "lora",
+        "role": "about",
+        "evidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "학습된 과도하게 매개변수화된 모델이 실제로 낮은 performance를 낸다는 연구결과에 영감을 받음. 낮은 intrinsic rank를 모델을 적용하는동안 weights가 바뀐다는 가설을 세움. LoRA는 간접적으로 dense layer의 rank decomposition matrix를 최적화함으로써 NN에서 몇몇의 dense layer들을 학습할 수 있게 만들어줌(이 과정에서 weight는 froze).",
+          "hash": "3cba5587203ea62e143ba4ec9ef423450571ae6976433824bbd5b3347210f7ac"
+        }
+      },
+      {
+        "id": "peft",
+        "role": "about",
+        "evidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "많은 사람들이 일부 매개 변수만 적용하거나 새로운 task를 위해 외부 모듈을 학습하여 이를 완화하려고 했음. 이렇게되면 task-specific한 파라미터의 숫자는 적게 저장되고 불러와짐. 이러한 방법은 Finetuning을 실패하거나 효율성과 모델 품질의 trade-off관계에서 벗어나지 못하였음.",
+          "hash": "f0c82209a5bbf501a166e1ed78190226ba448b1acd9cdc23a3cad6a87669d5e3"
+        }
+      },
+      {
+        "id": "finetuning",
+        "role": "about",
+        "evidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",1]",
+          "anchor": "introduction",
+          "quote": "많은 자연어 처리 산업에서 단일의 큰 규모의 모델과 다양한 downstream task에 사전학습된 언어모델에 의존하고 있음. Finetuning 같은 방식을 통해 모든 사전학습 모델의 파라미터를 업데이트하여 적용 시키고 있음. Finetuning의 요지는 수많은 파라미터들을 새로운 모델에 포함시켜 주는 것. 큰 모델일수록 학습시간도 방대해지고 산업에 적용시키기 매우 불편함.",
+          "hash": "ca8e85ce3cf18aff08e35cd05675e3bf9ed75260f910b71a344dfcbd6b14c6aa"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "96afb6e8b5f203765c02faa31455c9405740c84ceb80cab7c2d928bfe0fb06e4",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"low-rank-parameterized-update-matrices\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"low-rank-adaptation-lora\",1]",
+          "[\"method-formulation\",1]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"low-rank-parameterized-update-matrices\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"low-rank-adaptation-lora\",1]"
+        ]
+      },
+      {
+        "id": "peft-target-modules",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"applying-lora-to-transformer\",1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[null,6]",
+          "[null,3]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"problem-statement\",1]",
+          "[\"low-rank-parameterized-update-matrices\",4]"
+        ],
+        "targetBlocks": [
+          "[\"peft\",1]",
+          "[\"introduction\",6]",
+          "[\"peft-with-ia3\",16]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"introduction\",2]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"background\",2]",
+          "[\"qlora-finetuning\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"introduction\",2]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"ref\",5]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"problem-statement\",1]",
+          "[\"directly-optimizing-the-prompt-is-hard\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"prompt-tuning\",1]",
+          "[\"results\",1]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"introduction\",2]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"model\",3]",
+          "[\"training\",1]",
+          "[\"envs\",7]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"problem-statement\",1]",
+          "[\"low-rank-parameterized-update-matrices\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"efficient-implementation\",2]",
+          "[\"architecture\",1]"
+        ]
+      },
+      {
+        "id": "loftq",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"low-rank-parameterized-update-matrices\",4]",
+          "[\"problem-statement\",1]"
+        ],
+        "targetBlocks": [
+          "[\"loftq\",1]",
+          "[\"glue-with-4-bit\",1]",
+          "[\"experiments\",4]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"low-rank-parameterized-update-matrices\",4]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",3]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"problem-statement\",1]",
+          "[\"empirical-experiments\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"experimental-setup\",1]",
+          "[\"chain-of-thought-prompting\",5]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"low-rank-parameterized-update-matrices\",4]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"improving-dora\",2]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"problem-statement\",1]",
+          "[\"adapter-layers-intorduce-inference-latency\",1]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",1]",
+          "[\"modernizing-a-convnet-a-roadmap\",1]",
+          "[\"micro-design\",9]"
+        ]
+      },
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"problem-statement\",1]",
+          "[\"low-rank-parameterized-update-matrices\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "[\"scaling-laws\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "dora",
+        "relation": "related_method",
+        "reason": "LoRA가 low-rank 행렬로 사전학습 가중치를 업데이트하는 방식을 DoRA의 크기·방향 분해와 비교해 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "학습된 과도하게 매개변수화된 모델이 실제로 낮은 performance를 낸다는 연구결과에 영감을 받음. 낮은 intrinsic rank를 모델을 적용하는동안 weights가 바뀐다는 가설을 세움. LoRA는 간접적으로 dense layer의 rank decomposition matrix를 최적화함으로써 NN에서 몇몇의 dense layer들을 학습할 수 있게 만들어줌(이 과정에서 weight는 froze).",
+          "hash": "3cba5587203ea62e143ba4ec9ef423450571ae6976433824bbd5b3347210f7ac"
+        },
+        "targetEvidence": {
+          "articleId": "dora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "Weight Reparameterization을 통해 기울기의 조건을 개선함으로써 더 빠른 속도로 수렴하는 Weight Normalization에 따라, 연구진은 새로운 weight decomposition analysis을 소개합니다. 이는 규모나 직접적인 구성요소에 따라 초기에 모델의 가중치를 reparameterize하며 그 뒤에 LoRA와 FT에 의해 도입된 규모와 방향의 변화를 검토합니다. 연구진의 분석에 따르면 LoRA와 FT는 현저하게 다른 업데이트 패턴을 보여주며, 이러한 변이들이 각 방법의 학습 능력을 반영한다는 추측을 하게 됩니다. 연구진의 발견에 영감을 받아, 우리는 사전 훈련된 가중치를 크기와 방향 요소로 분해한 다음, 두 가지 모두를 fine-tuning하는 Weight-Decomposed Low-Rank Adaptation(DoRA)을 제안합니다.",
+          "hash": "c812afd12e5702831db109ecbcdfa96f17583ccb42af9842e01c42a1a6390270"
+        }
+      },
+      {
+        "id": "qlora",
+        "relation": "related_method",
+        "reason": "LoRA의 적은 학습 파라미터 방식과 이를 4-bit 사전학습 모델에 결합하는 QLoRA의 방법을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "많은 사람들이 일부 매개 변수만 적용하거나 새로운 task를 위해 외부 모듈을 학습하여 이를 완화하려고 했음. 이렇게되면 task-specific한 파라미터의 숫자는 적게 저장되고 불러와짐. 이러한 방법은 Finetuning을 실패하거나 효율성과 모델 품질의 trade-off관계에서 벗어나지 못하였음.",
+          "hash": "f0c82209a5bbf501a166e1ed78190226ba448b1acd9cdc23a3cad6a87669d5e3"
+        },
+        "targetEvidence": {
+          "articleId": "qlora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "이에 연구진은 성능 저하 없이 quantized-4bit model 파인튜닝 하는 방법에 대해 소개. QLoRA는 4-bit로 사전학습된 모델을 양자화하기위해 독특한 high-precision technique를 사용하고 난 후에 학습가능한 LoRa 가중치의 적은 양을 추가함.",
+          "hash": "144cb34aeaeabedd47394aafd42bacd9d03485f0a719ac279c322487f77c7a50"
+        }
+      },
+      {
+        "id": "peft-target-modules",
+        "relation": "related_method",
+        "reason": "LoRA를 Transformer의 attention 가중치에 적용하는 설명과 모델별 target module 목록을 연결해 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"applying-lora-to-transformer\",1]",
+          "anchor": "applying-lora-to-transformer",
+          "quote": "연구진은 downstream-task를 위한 attention weight를 적용하는 것에만 주제를 국한시켰습니다. 이는 구조의 단순함과 파라미터의 효율성 때문입니다. 다른 방식을 통해 attention weight matrices를 Transformer안에서 적용할때의 효과에 대해서는 WHICH WEIGHT MATRICES IN TRANSFORMER SHOULD WE APPLY LORA TO? 라인에 나타나 있습니다.",
+          "hash": "d96d1e6075ba00605ed4c07cedd3d748efad752c1e8b8ee62aced6fd7942a2c1"
+        },
+        "targetEvidence": {
+          "articleId": "peft-target-modules",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "# peft/utils/other.py in line 328 TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING = { \"t5\": [\"q\", \"v\"], \"mt5\": [\"q\", \"v\"], \"bart\": [\"q_proj\", \"v_proj\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"blip-2\": [\"q\", \"v\", \"q_proj\", \"v_proj\"], \"opt\": [\"q_proj\", \"v_proj\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"value\"], \"xlm-roberta\": [\"query\", \"value\"], \"electra\":",
+          "hash": "b0dc93edb070d31e4f57be2457664c20130561af39054733ee01cfb9f5be00be"
+        }
+      },
+      {
+        "id": "vera",
+        "relation": "related_method",
+        "reason": "LoRA가 낮은 차원 행렬을 최적화하는 방식과 고정된 무작위 행렬 및 scaling vector를 쓰는 VeRA를 비교해 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "학습된 과도하게 매개변수화된 모델이 실제로 낮은 performance를 낸다는 연구결과에 영감을 받음. 낮은 intrinsic rank를 모델을 적용하는동안 weights가 바뀐다는 가설을 세움. LoRA는 간접적으로 dense layer의 rank decomposition matrix를 최적화함으로써 NN에서 몇몇의 dense layer들을 학습할 수 있게 만들어줌(이 과정에서 weight는 froze).",
+          "hash": "3cba5587203ea62e143ba4ec9ef423450571ae6976433824bbd5b3347210f7ac"
+        },
+        "targetEvidence": {
+          "articleId": "vera",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "이와 동시에, 최근 연구에서는 random weights와 projection을 사용하는 모델의 놀라운 효과를 보여주었습니다 (Peng et al., 2021; Ramanujan et al., 2020; Lu et al., 2022; Schrimpf et al., 2021; Frankle et al., 2021). 본 연구진이 제안한 solution은 VeRA로 이러한 모델들의 베이스에 근간하며 파인튜닝하는 동안 가중치 matrices를 재-파라미터화함으로써 학습 파라미터를 최소화하는 방법론을 소개합니다. 특히 연구진은 scaling vectors를 차용하여 고정된 무작위 행렬값들의 pair를 공유된 layer 사이에 적용하는 방법을 사용했습니다. 이 접근법을 사용하면 더 많은 버전의 모델을 단일 GPU의 제한된 메모리에 저장할 수 있습니다.",
+          "hash": "e1007ed1310e2e4f3d0c7520eeb1504b4c0965246bfb7f3bed7b50adbc94ba8a"
+        }
+      }
+    ]
+  }
+}

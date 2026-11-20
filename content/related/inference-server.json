@@ -61,7 +61,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "8190d13568d58f331a02082850a5f326db5284eace19ac59fd94ba9c77a1ebaa",
+    "inputHash": "b734b44e6410b2f2b9d09810e7cf93d19dcdc37480911bbf448ae40e40cda6e5",
     "status": "verified",
     "candidates": [
       {
@@ -221,16 +221,16 @@
         ]
       },
       {
-        "id": "loftq",
+        "id": "peft-features-090",
         "sourceBlocks": [
           "[null,3]",
-          "[\"참고\",6]",
-          "[\"위치별-수락률\",3]"
+          "[\"runpod에서는-ple-오프로드가-안-됨\",3]",
+          "[\"모델-구성은-파일-하나로\",6]"
         ],
         "targetBlocks": [
-          "[\"loftq\",1]",
-          "[\"experiments\",15]",
-          "[\"glue-with-4-bit\",1]"
+          "[\"merging-lora-weights\",12]",
+          "[\"ref\",1]",
+          "[\"peft-v090\",1]"
         ]
       },
       {
@@ -264,7 +264,7 @@
       {
         "id": "speculative-decoding-paper",
         "relation": "concept_explanation",
-        "reason": "MTP를 speculative decoding 방식으로 서빙한 사례와 draft 생성·target 검증으로 구성된 기본 원리를 함께 살펴볼 수 있습니다.",
+        "reason": "MTP를 speculative decoding 방식으로 서빙하는 구성과, 초안 토큰을 target 모델이 병렬 검증하는 기본 원리를 함께 이해할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "inference-server",
           "blockId": "[\"위치별-수락률\",3]",
@@ -283,13 +283,13 @@
       {
         "id": "dflash",
         "relation": "related_method",
-        "reason": "MTP를 vLLM 설정으로 적용한 사례와 diffusion으로 draft를 만들고 target 모델이 검증하는 DFlash 구조를 비교해 볼 수 있습니다.",
+        "reason": "MTP와 DFlash가 각각 어떤 방식으로 초안 토큰을 만들고 검증하는지 비교해 speculative decoding 계열의 구현 차이를 배울 수 있습니다.",
         "sourceEvidence": {
           "articleId": "inference-server",
-          "blockId": "[\"모델-구성은-파일-하나로\",2]",
-          "anchor": "모델-구성은-파일-하나로",
-          "quote": "# profiles/rtx6000-2x-flash-next-27b.yaml (발췌, 8월 말 기준) gpu_type_ids: - NVIDIA RTX PRO 6000 Blackwell Server Edition - NVIDIA RTX PRO 6000 Blackwell Workstation Edition image: vllm/vllm-openai:qwen38-flash-next slots: FLASH: served_model_name: qwen3.8-flash-next hf_repo_id: RadixArk/Qwen3.8-Flash-Next-NVFP4 port: 8881 gpus: [0, 1] gpu_util: 0.76 max_model_len: 131072 speculative: method: mtp num_speculative_tokens: 3 Q27: served_model_name: qwen3.8-27b hf_repo_id:",
-          "hash": "d04bee954dda0c736271ded101f6fc56269b074ad33ac6aec1c36ce3c23547ba"
+          "blockId": "[\"위치별-수락률\",3]",
+          "anchor": "위치별-수락률",
+          "quote": "speculative decoding 자체는 예전에 원조 논문과 DFlash를 리뷰하면서 정리한 적이 있음. MTP는 별도 draft 모델 없이 체크포인트에 내장된 헤드가 다음 토큰 여러 개를 한 번에 예측하는 방식이라, draft 모델을 따로 받아 올릴 필요가 없다는 게 운영 입장에서 편했음.",
+          "hash": "1d6accd7f45e8ae1cedb8a00a50d18bbbc46ea0c3fcbf2acd0719efb39111bcb"
         },
         "targetEvidence": {
           "articleId": "dflash",
@@ -300,28 +300,9 @@
         }
       },
       {
-        "id": "loftq",
-        "relation": "related_method",
-        "reason": "Qwen 모델을 NVFP4로 서빙한 구성과 양자화 과정에서 가중치 근사를 함께 다루는 LoftQ의 접근을 살펴볼 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "inference-server",
-          "blockId": "[null,3]",
-          "anchor": null,
-          "quote": "RTX PRO 6000 Blackwell 96GB 2장에 Qwen3.8-Flash-Next(125B MoE)와 Qwen3.8-27B를 둘 다 NVFP4로 올려서 같이 서빙함",
-          "hash": "7fdb680dbfd43a9d80ff3bd117401da2e89cfd854224c9ea6b1e602f0b5d4270"
-        },
-        "targetEvidence": {
-          "articleId": "loftq",
-          "blockId": "[\"loftq\",1]",
-          "anchor": "loftq",
-          "quote": "LoftQ라고 불리는 새로운 quantization framework를 소개. 이 프레임워크는 낮은 순위의 근사치를 적극적으로 통합하여 양자화와 함께 작동하여 원래의 high-precision 사전학습된 가중치를 공동으로 근사화합니다.",
-          "hash": "1b959360ebfbcc9575ba361060e8305e2dd0db884ed90916f5f47b1e303f0d5e"
-        }
-      },
-      {
         "id": "vllm-tensor-parallel-troubleshooting",
         "relation": "related_method",
-        "reason": "vLLM의 다중 GPU 추론에서 NCCL과 custom all-reduce가 멈춘 사례 및 우회 설정을 확인할 수 있습니다.",
+        "reason": "GPU 간 P2P 문제에서 NCCL과 custom all-reduce를 조정한 경험을 바탕으로, vLLM의 all-reduce 우회 옵션이 어떻게 쓰이는지 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "inference-server",
           "blockId": "[\"nccl-초기화에서-무한-대기\",2]",

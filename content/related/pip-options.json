@@ -16,7 +16,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "a366f02183a363063d249b25ea4cc0b6613a485be94bb08aa8aa58b0495f7b86",
+    "inputHash": "ea1565cf77603967e8e1be39ea0a39f6480fed89ea05bbe684078da9df3512b1",
     "status": "verified",
     "candidates": [
       {
@@ -141,17 +141,6 @@
         ]
       },
       {
-        "id": "vllm-gemma-troubleshooting",
-        "sourceBlocks": [
-          "[\"pip-options\",1]"
-        ],
-        "targetBlocks": [
-          "[\"조치-2\",2]",
-          "[\"조치-1\",3]",
-          "[\"error-2\",17]"
-        ]
-      },
-      {
         "id": "python-args-kwargs",
         "sourceBlocks": [
           "[\"pip-options\",1]"
@@ -172,13 +161,24 @@
           "[\"envs\",8]",
           "[\"ref\",1]"
         ]
+      },
+      {
+        "id": "docker-gpu-troubleshooting",
+        "sourceBlocks": [
+          "[\"pip-options\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
       }
     ],
     "recommendations": [
       {
-        "id": "vllm-gemma-troubleshooting",
-        "relation": "related_method",
-        "reason": "pip 옵션을 살펴본 뒤 vLLM과 flashinfer를 pip로 설치하는 구체적인 명령을 확인할 수 있습니다.",
+        "id": "python-venv-troubleshooting",
+        "relation": "application_example",
+        "reason": "pip 설치 옵션을 다루는 문서와 함께, python3.10-venv 설치 후 가상환경을 만들고 활성화하는 실제 절차를 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "pip-options",
           "blockId": "[\"pip-options\",1]",
@@ -187,17 +187,36 @@
           "hash": "873aad2b41b774966b059227e56f3f8f31b682d2f862c3cdde29d8eb06cbb320"
         },
         "targetEvidence": {
-          "articleId": "vllm-gemma-troubleshooting",
-          "blockId": "[\"조치-2\",2]",
-          "anchor": "조치-2",
-          "quote": "pip install -U -q vllm",
-          "hash": "c95de0eaf43e97fe01641d763cc2f3c9ea43fd29ef1f6acdaf202d620d7c14ba"
+          "articleId": "python-venv-troubleshooting",
+          "blockId": "[\"해결\",1]",
+          "anchor": "해결",
+          "quote": "$ sudo apt install python3.10-venv $ python3 -m venv test $ source test/bin/activate >>> (test) user@server:~$",
+          "hash": "efe1e5bb6760deebf78d1ca5bf370e0a5841e39d19df46cc211db417b023634b"
+        }
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "relation": "application_example",
+        "reason": "pip 설치 옵션의 실제 사용 사례로 bardapi를 특정 버전으로 설치해 이슈를 해결하는 방법을 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "pip-options",
+          "blockId": "[\"pip-options\",1]",
+          "anchor": "pip-options",
+          "quote": "모든 pip 설치 옵션, pip install - Usage",
+          "hash": "873aad2b41b774966b059227e56f3f8f31b682d2f862c3cdde29d8eb06cbb320"
+        },
+        "targetEvidence": {
+          "articleId": "bard-api-troubleshooting",
+          "blockId": "[\"solution\",4]",
+          "anchor": "solution",
+          "quote": "Meet the needs that required version pip install bardapi==0.1.3",
+          "hash": "c5a393f48ef1aed17817d36041f0a753fcd6d47d52c7fbc27887f52e49595237"
         }
       },
       {
         "id": "distributed-gpu-training",
-        "relation": "related_method",
-        "reason": "pip 설치 옵션을 참고해 FairScale 패키지를 설치하는 명령을 확인할 수 있습니다.",
+        "relation": "application_example",
+        "reason": "pip 설치 옵션을 살펴본 뒤, fairscale를 설치해 사용하는 구체적인 설치 사례를 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "pip-options",
           "blockId": "[\"pip-options\",1]",

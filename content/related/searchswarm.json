@@ -61,7 +61,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "c4a0004741c4821be998c669a09863bb1c45f6964f3eb07e1daa569323eec94b",
+    "inputHash": "7446e4f8e1cb7eac75f6a09f8450b0b602a3f573134e49d3e5c07cf9df93c7b4",
     "status": "verified",
     "candidates": [
       {
@@ -156,16 +156,16 @@
         ]
       },
       {
-        "id": "bert",
+        "id": "constitutional-ai",
         "sourceBlocks": [
-          "[\"main-distributes-sub-executes\",2]",
           "[\"supervised-fine-tuning\",2]",
-          "[\"introduction\",1]"
+          "[\"정리\",1]",
+          "[\"introduction\",3]"
         ],
         "targetBlocks": [
-          "[\"요약\",1]",
-          "[\"task-1-masked-lm-mlm\",3]",
-          "[\"hyper-parameter\",5]"
+          "[\"method\",1]",
+          "[\"정리\",1]",
+          "[\"supervised-stage-critique--revision\",1]"
         ]
       },
       {
@@ -182,19 +182,6 @@
         ]
       },
       {
-        "id": "constitutional-ai",
-        "sourceBlocks": [
-          "[\"supervised-fine-tuning\",2]",
-          "[\"정리\",1]",
-          "[\"introduction\",3]"
-        ],
-        "targetBlocks": [
-          "[\"method\",1]",
-          "[\"정리\",1]",
-          "[\"supervised-stage-critique--revision\",1]"
-        ]
-      },
-      {
         "id": "chain-of-thought",
         "sourceBlocks": [
           "[\"main-distributes-sub-executes\",2]",
@@ -205,19 +192,6 @@
           "[\"chain-of-thought-prompting\",1]",
           "[\"results\",3]",
           "[\"arithmetic-reasoning\",1]"
-        ]
-      },
-      {
-        "id": "loftq",
-        "sourceBlocks": [
-          "[\"experiments\",8]",
-          "[\"정리\",1]",
-          "[\"introduction\",3]"
-        ],
-        "targetBlocks": [
-          "[\"experiments\",10]",
-          "[\"loftq\",1]",
-          "[\"glue-with-4-bit\",5]"
         ]
       },
       {
@@ -234,16 +208,16 @@
         ]
       },
       {
-        "id": "speculative-decoding-paper",
+        "id": "loftq",
         "sourceBlocks": [
-          "[\"introduction\",1]",
-          "[\"main-distributes-sub-executes\",2]",
-          "[\"정리\",1]"
+          "[\"experiments\",8]",
+          "[\"정리\",1]",
+          "[\"introduction\",3]"
         ],
         "targetBlocks": [
-          "[\"introduction\",10]",
-          "[\"overview\",8]",
-          "[null,2]"
+          "[\"experiments\",10]",
+          "[\"loftq\",1]",
+          "[\"glue-with-4-bit\",5]"
         ]
       },
       {
@@ -258,13 +232,39 @@
           "[\"unlikelihood-training-and-length-normalization\",1]",
           "[\"model-and-datasets\",4]"
         ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"main-distributes-sub-executes\",2]",
+          "[\"정리\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",10]",
+          "[\"overview\",8]",
+          "[null,2]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"main-distributes-sub-executes\",2]",
+          "[\"supervised-fine-tuning\",2]"
+        ],
+        "targetBlocks": [
+          "[\"fine-tuning과-높은-해상도-이미지-다루기\",1]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"요약\",10]"
+        ]
       }
     ],
     "recommendations": [
       {
         "id": "k-browsecomp",
         "relation": "evaluation_comparison",
-        "reason": "두 연구 모두 웹 브라우징 에이전트를 평가하지만, SearchSwarm은 여러 deep research 벤치마크를, K-BrowseComp은 한국어 맥락의 browsing task를 다뤄 평가 범위의 차이를 살펴볼 수 있습니다.",
+        "reason": "두 연구의 deep research·browsing 평가를 비교해, 벤치마크 구성과 한국어 맥락 평가의 차이를 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "searchswarm",
           "blockId": "[\"experiments\",1]",
@@ -281,9 +281,9 @@
         }
       },
       {
-        "id": "bert",
+        "id": "langgraph-structured-streaming",
         "relation": "related_method",
-        "reason": "SearchSwarm은 brief와 report로 긴 맥락을 능동적으로 압축하며, BERT 설명은 마스크된 토큰을 예측하는 학습 방식을 다뤄 두 방법의 맥락 처리 차이를 이해할 수 있습니다.",
+        "reason": "모델 생성 결과를 상태에 반영하는 구조와 brief·report를 활용한 context 관리를 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "searchswarm",
           "blockId": "[\"main-distributes-sub-executes\",2]",
@@ -292,11 +292,11 @@
           "hash": "5e3ce7553c22a1489d9e82acccab91065d9b6e9600134e5aa33ad8d6a19fc2ba"
         },
         "targetEvidence": {
-          "articleId": "bert",
-          "blockId": "[\"task-1-masked-lm-mlm\",3]",
-          "anchor": "task-1-masked-lm-mlm",
-          "quote": "text를 tokenization 하는 방법은 WordPiece를 사용한다. 기존 언어모델에서 left-to-right를 통해 문장 전체를 예측하는 것과는 대조적으로 [MASK] token만을 예측하는 Pre-training task를 수행한다. 이 [MASK] token은 pre-training에만 사용되고 fine-tuning에는 사용되지 않는다. 이 miss-match를 해결하기위한 방법으로 논문에선 다음을 제시하고있다.",
-          "hash": "b1f46d590c58cd22be226861db40d5729cf30b89390cc9b1c03417cbdd398502"
+          "articleId": "langgraph-structured-streaming",
+          "blockId": "[\"baseline\",5]",
+          "anchor": "baseline",
+          "quote": "workflow.add_node(\"api_generate\", api_generate) workflow.add_conditional_edges( START, routing, { \"웹검색\": \"web_generate\", \"일반질문\": \"api_generate\" } ) workflow.add_edge(\"web_generate\", END) workflow.add_edge(\"api_generate\", END) graph = workflow.compile(checkpointer = memory) # streaming 함수 def stream_inference(query: str): inputs = [HumanMessage(content = query)] for msg, metadata in graph.stream( {\"messages\": inputs}, stream_mode = \"messages\", config = {\"configurable\":",
+          "hash": "ab2952997d5c0e7cd1c306bbfd83e40d8422af51aa73df8d76d6e84ac29db2e4"
         }
       }
     ]

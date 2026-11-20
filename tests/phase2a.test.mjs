@@ -567,3 +567,36 @@ test('a reason that is not written in Korean is a rejected answer', async () => 
   assert.throws(() => readRanking('source', task, answer('Explains how OCR works.')), /Invalid recommendation/);
   assert.throws(() => readRanking('source', task, answer('책 등뼈 검출을どう解釈するか')), /Invalid recommendation/);
 });
+
+test('series neighbours stay in the list and a hand-corrected reason replaces the model sentence', () => {
+  const baseline = [
+    {
+      id: 'part2',
+      related: [
+        { id: 'part3', reason: '같은 시리즈의 다음 글', score: 0.6 },
+        { id: 'part1', reason: '같은 시리즈의 이전 글', score: 0.6 },
+        { id: 'far', reason: '같은 시리즈의 다른 글', score: 0.3 },
+        { id: 'topic', reason: '공통 개념 · OCR', score: 0.2 },
+      ],
+    },
+  ];
+  const entry = (recommendations) =>
+    new Map([['part2', { entry: { status: recommendations.length ? 'verified' : 'abstained', candidates: [{ id: 'x' }], recommendations } }]]);
+  const picked = [
+    { id: 'guide', reason: '모델이 쓴 문장' },
+    { id: 'part3', reason: '모델이 고른 다음 편' },
+  ];
+  assert.deepEqual(projectRecommendations(baseline, entry(picked), {}, { part2: { guide: '작성자가 고친 문장' } })[0].related, [
+    { id: 'guide', reason: '작성자가 고친 문장' },
+    { id: 'part3', reason: '모델이 고른 다음 편' },
+    { id: 'part1', reason: '같은 시리즈의 이전 글' },
+  ]);
+  // A judged abstention still shows the adjacent parts, and only those.
+  assert.deepEqual(
+    projectRecommendations(baseline, entry([]), {})[0].related.map((row) => row.id),
+    ['part3', 'part1'],
+  );
+  // Four picks leave no room: the model's list is not displaced.
+  const four = ['a', 'b', 'c', 'd'].map((id) => ({ id, reason: '이유' }));
+  assert.deepEqual(projectRecommendations(baseline, entry(four), {})[0].related.map((row) => row.id), ['a', 'b', 'c', 'd']);
+});

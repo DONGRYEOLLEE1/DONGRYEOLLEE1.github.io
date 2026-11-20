@@ -285,7 +285,17 @@ export async function loadPublicCorpus() {
     Object.fromEntries(Object.entries(table).filter(([source]) => !unpublished.has(source))
       .map(([source,targets]) => [source,targets.filter(id => !unpublished.has(id))])),
   ]));
-  return { articles, concepts, series: publicSeries, overrides: publicOverrides };
+  // Optional sentences the author corrected by hand: { sourceId: { targetId: "이유" } }.
+  const reasons = {};
+  if (await stat(resolve(ROOT,'content/knowledge/reasons.json')).then(() => true, () => false)) {
+    for (const [source,targets] of Object.entries(await readJson('content/knowledge/reasons.json'))) {
+      for (const [target,text] of Object.entries(targets)) {
+        if (typeof text !== 'string' || !text.trim() || text.length > 200) throw new Error(`Invalid reason override: ${source} -> ${target}`);
+        if (publicIds.has(source) && publicIds.has(target)) (reasons[source] ||= {})[target] = text.trim();
+      }
+    }
+  }
+  return { articles, concepts, series: publicSeries, overrides: publicOverrides, reasons };
 }
 
 /**
@@ -297,7 +307,7 @@ export async function applyRelated(corpus, articles, dir) {
   const report = { version:1, directory:false, articles:articles.length, llm:0, rules:articles.length, missing:articles.length, invalid:0, fallback:0, invalidIds:[], fallbackIds:[], orphans:[] };
   if (!(await stat(dir).then(s => s.isDirectory(), () => false))) return { articles, report };
   const audit = auditAll(prepareCorpus(corpus), await readRecords(dir));
-  return { articles: projectRecommendations(articles, audit.valid, corpus.overrides), report: { ...report, ...auditSummary(audit), directory:true } };
+  return { articles: projectRecommendations(articles, audit.valid, corpus.overrides, corpus.reasons), report: { ...report, ...auditSummary(audit), directory:true } };
 }
 
 export async function buildContent() {

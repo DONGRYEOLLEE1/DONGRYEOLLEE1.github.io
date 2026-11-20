@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "b6f5b8d8f95d9fe7110bc11c3a5457b8a0d65d9f36bdbf0a915954f155aa590d",
+    "inputHash": "7c91f1a9f63f791fa776c64f23766a662dc3961cfba8e4b00760a95e24d49c8e",
     "status": "verified",
     "candidates": [
       {
@@ -136,16 +136,16 @@
         ]
       },
       {
-        "id": "developing-daily-07",
+        "id": "deepspeed-troubleshooting",
         "sourceBlocks": [
-          "[\"원인\",1]",
-          "[\"해결\",1]",
-          "[\"env\",3]"
+          "[\"해결\",2]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
         ],
         "targetBlocks": [
-          "[\"translation\",1]",
-          "[\"workflow\",1]",
-          "[\"question-generationkor\",1]"
+          "[\"3️⃣\",8]",
+          "[\"env\",3]",
+          "[\"2️⃣\",2]"
         ]
       },
       {
@@ -175,19 +175,6 @@
         ]
       },
       {
-        "id": "deepspeed-troubleshooting",
-        "sourceBlocks": [
-          "[\"해결\",2]",
-          "[\"env\",2]",
-          "[\"issue\",1]"
-        ],
-        "targetBlocks": [
-          "[\"3️⃣\",8]",
-          "[\"env\",3]",
-          "[\"2️⃣\",2]"
-        ]
-      },
-      {
         "id": "vllm-weight-loading",
         "sourceBlocks": [
           "[\"해결\",6]",
@@ -214,6 +201,19 @@
         ]
       },
       {
+        "id": "netplan-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",1]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
         "id": "vllm-tensor-parallel-troubleshooting",
         "sourceBlocks": [
           "[\"해결\",10]",
@@ -231,7 +231,7 @@
       {
         "id": "cuda-device-troubleshooting",
         "relation": "related_method",
-        "reason": "두 사례 모두 A100에서 nvidia-smi 이상을 겪고 드라이버를 재설치하거나 버전에 맞춰 설치해 해결하는 방법을 보여줍니다.",
+        "reason": "두 사례 모두 A100 환경에서 NVIDIA 드라이버 재설치를 다루며, 한쪽은 fabric-manager를 드라이버 버전에 맞춰 설치하는 조치도 설명합니다.",
         "sourceEvidence": {
           "articleId": "gpu-driver-troubleshooting",
           "blockId": "[\"해결\",2]",
@@ -241,16 +241,16 @@
         },
         "targetEvidence": {
           "articleId": "cuda-device-troubleshooting",
-          "blockId": "[\"issue\",5]",
-          "anchor": "issue",
-          "quote": "nvidia driver 재설치",
-          "hash": "eb3b2044bc85ca003c2d0856b005b4e90887e58289e21e24318bda4cd44ba635"
+          "blockId": "[\"해결\",1]",
+          "anchor": "해결",
+          "quote": "fabric-manager 설치 : 그래픽드라이버 버전 맞춰서 설치",
+          "hash": "66ef1721a6dca1d8137865758b0b20d06aacb8458fabf635ad7ace22499a7454"
         }
       },
       {
         "id": "developing-daily-06",
         "relation": "related_method",
-        "reason": "그래픽 드라이버 버전 문제로 추정된 상황에서 드라이버 설치와 재부팅, CUDA 버전에 맞춘 파일 교체를 함께 살펴볼 수 있습니다.",
+        "reason": "두 사례 모두 그래픽 드라이버 버전 문제를 의심하거나 버전을 맞춰 GPU 인식 문제를 해결한 내용을 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "gpu-driver-troubleshooting",
           "blockId": "[\"원인\",1]",
@@ -264,25 +264,6 @@
           "anchor": "solution",
           "quote": "cuda 버전에 맞게 파일을 복사해주면 됨",
           "hash": "779bd9c17b2d24675908211f13a4565ed1411a3f535ed3cac061d77a1be30fbc"
-        }
-      },
-      {
-        "id": "developing-daily-07",
-        "relation": "related_method",
-        "reason": "그래픽 드라이버 버전 문제로 보고 호환 버전을 설치한 뒤 재부팅하는 해결 과정을 비교해 볼 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "gpu-driver-troubleshooting",
-          "blockId": "[\"원인\",1]",
-          "anchor": "원인",
-          "quote": "그래픽드라이버 버전 문제로 예상",
-          "hash": "634274f6cf2032740013a658a7f3457f0abd836eb2255b547807002241301d37"
-        },
-        "targetEvidence": {
-          "articleId": "developing-daily-07",
-          "blockId": "[\"workflow\",1]",
-          "anchor": "workflow",
-          "quote": "SelFee 방식에 영감을 받아 Self-Feedback method 적용",
-          "hash": "1b6069abdc32efa0cf2a3bc2ab3829a724cff1898d3bf574f1009b57719d2643"
         }
       }
     ]

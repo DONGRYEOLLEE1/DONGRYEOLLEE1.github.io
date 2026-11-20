@@ -1,8 +1,53 @@
 {
   "pins": {},
   "excludes": {
-    "book-spine": ["kodistill"],
-    "kodistill": ["book-spine"]
+    "bard-api-troubleshooting": [
+      "pip-options"
+    ],
+    "book-spine": [
+      "kodistill"
+    ],
+    "dora": [
+      "polyglot-lora-troubleshooting"
+    ],
+    "gpu-driver-troubleshooting": [
+      "developing-daily-07"
+    ],
+    "inference-server": [
+      "loftq"
+    ],
+    "kodistill": [
+      "book-spine"
+    ],
+    "mariadb-connection-troubleshooting": [
+      "tokenizer-input-troubleshooting"
+    ],
+    "pip-options": [
+      "vllm-gemma-troubleshooting"
+    ],
+    "polyglot-training-troubleshooting": [
+      "regex-preprocessing"
+    ],
+    "regex-preprocessing": [
+      "book-spine"
+    ],
+    "rtpurbo": [
+      "llama"
+    ],
+    "searchswarm": [
+      "bert"
+    ],
+    "torch-tensor-manipulation-1": [
+      "transformer"
+    ],
+    "vllm-gemma-troubleshooting": [
+      "deepspeed-troubleshooting",
+      "inference-server"
+    ],
+    "vscode-ssh": [
+      "developing-daily-04",
+      "inference-server"
+    ]
   },
   "buildsOn": {}
 }

@@ -584,16 +584,24 @@ const unjudged = (entry) =>
   (entry.status === 'fallback' && entry.fallbackFrom === 'rules') ||
   (entry.status === 'abstained' && !entry.candidates.length);
 
-export function projectRecommendations(baseline, valid, overrides) {
+// The author's own series order is a fact, not a judgment: the previous and next part stay in the
+// list whatever the model picked. `reasons` holds sentences the author corrected by hand.
+const SERIES_NEIGHBOUR = /^같은 시리즈의 (?:다음|이전) 글$/;
+
+export function projectRecommendations(baseline, valid, overrides, reasons = {}) {
   return baseline.map((article) => {
     const entry = valid.get(article.id)?.entry;
     if (!entry || unjudged(entry)) return article;
     const pins = new Set(overrides.pins?.[article.id] || []);
-    const related = article.related
-      .filter((row) => pins.has(row.id))
-      .concat(entry.recommendations.filter((row) => !pins.has(row.id)))
+    const rows = article.related.filter((row) => pins.has(row.id));
+    const add = (row) => {
+      if (!rows.some((kept) => kept.id === row.id)) rows.push(row);
+    };
+    entry.recommendations.forEach(add);
+    article.related.filter((row) => SERIES_NEIGHBOUR.test(row.reason)).forEach(add);
+    const related = rows
       .slice(0, 4)
-      .map(({ id, reason }) => ({ id, reason }));
+      .map(({ id, reason }) => ({ id, reason: reasons[article.id]?.[id] ?? reason }));
     return { ...article, related };
   });
 }

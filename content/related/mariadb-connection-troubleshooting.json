@@ -28,8 +28,8 @@
     "review": []
   },
   "entry": {
-    "inputHash": "547b25a062b0e0f0ebd4a9c72c8b8a44a79b293572a91f1c343a5bb547839bed",
-    "status": "verified",
+    "inputHash": "db828f8ac39f0700fbd39e104711e4af0faf1ae2ab7155f3b6c2b815c3d030f1",
+    "status": "abstained",
     "candidates": [
       {
         "id": "bfcl-reasoning-option",
@@ -71,16 +71,16 @@
         ]
       },
       {
-        "id": "tokenizer-input-troubleshooting",
+        "id": "bard-api-troubleshooting",
         "sourceBlocks": [
-          "[\"issue\",2]",
-          "[\"해결\",2]",
+          "[\"issue\",3]",
+          "[\"해결\",1]",
           "[\"env\",2]"
         ],
         "targetBlocks": [
-          "[\"solution\",1]",
-          "[\"원인\",3]",
-          "[\"error\",1]"
+          "[\"1️⃣\",1]",
+          "[\"2️⃣\",1]",
+          "[\"envs\",1]"
         ]
       },
       {
@@ -97,16 +97,16 @@
         ]
       },
       {
-        "id": "bard-api-troubleshooting",
+        "id": "qlora-troubleshooting",
         "sourceBlocks": [
-          "[\"issue\",3]",
           "[\"해결\",1]",
-          "[\"env\",2]"
+          "[\"issue\",2]",
+          "[\"env\",1]"
         ],
         "targetBlocks": [
-          "[\"1️⃣\",1]",
-          "[\"2️⃣\",1]",
-          "[\"envs\",1]"
+          "[\"4bit-quantization\",30]",
+          "[\"해결\",1]",
+          "[\"현상\",1]"
         ]
       },
       {
@@ -123,19 +123,6 @@
         ]
       },
       {
-        "id": "qlora-troubleshooting",
-        "sourceBlocks": [
-          "[\"해결\",1]",
-          "[\"issue\",2]",
-          "[\"env\",1]"
-        ],
-        "targetBlocks": [
-          "[\"4bit-quantization\",30]",
-          "[\"해결\",1]",
-          "[\"현상\",1]"
-        ]
-      },
-      {
         "id": "gpu-driver-troubleshooting",
         "sourceBlocks": [
           "[\"env\",1]",
@@ -146,19 +133,6 @@
           "[\"env\",1]",
           "[\"해결\",5]",
           "[\"issue\",1]"
-        ]
-      },
-      {
-        "id": "lm-evaluation-harness-oom",
-        "sourceBlocks": [
-          "[\"해결\",1]",
-          "[\"issue\",3]",
-          "[\"env\",1]"
-        ],
-        "targetBlocks": [
-          "[\"solution\",1]",
-          "[\"error\",2]",
-          "[\"env\",1]"
         ]
       },
       {
@@ -175,16 +149,16 @@
         ]
       },
       {
-        "id": "developing-daily-04",
+        "id": "lm-evaluation-harness-oom",
         "sourceBlocks": [
           "[\"해결\",1]",
-          "[\"env\",1]",
-          "[\"issue\",1]"
+          "[\"issue\",3]",
+          "[\"env\",1]"
         ],
         "targetBlocks": [
-          "[\"ca-에러\",3]",
-          "[\"ref\",4]",
-          "[\"git-접속\",1]"
+          "[\"solution\",1]",
+          "[\"error\",2]",
+          "[\"env\",1]"
         ]
       },
       {
@@ -201,16 +175,16 @@
         ]
       },
       {
-        "id": "generation-cuda-assert",
+        "id": "developing-daily-04",
         "sourceBlocks": [
-          "[\"issue\",2]",
           "[\"해결\",1]",
-          "[\"env\",1]"
+          "[\"env\",1]",
+          "[\"issue\",1]"
         ],
         "targetBlocks": [
-          "[\"solution\",3]",
-          "[\"error\",1]",
-          "[\"env\",1]"
+          "[\"ca-에러\",3]",
+          "[\"ref\",4]",
+          "[\"git-접속\",1]"
         ]
       },
       {
@@ -225,28 +199,34 @@
           "[\"3-conf-파일-수정-및-ollama-재가동시-에러\",6]",
           "[\"구현-사항\",1]"
         ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"issue\",2]",
+          "[\"해결\",1]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",3]",
+          "[\"error\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"issue\",2]",
+          "[\"해결\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",8]",
+          "[\"prob\",2]",
+          "[\"envs\",1]"
+        ]
       }
     ],
-    "recommendations": [
-      {
-        "id": "tokenizer-input-troubleshooting",
-        "relation": "related_method",
-        "reason": "두 사례 모두 코드의 입력 문제를 찾아 원인을 해결하며, SQL 컬럼명을 백틱으로 감싸는 수정과 결측값 제거 과정을 비교해 볼 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "mariadb-connection-troubleshooting",
-          "blockId": "[\"해결\",2]",
-          "anchor": "해결",
-          "quote": "sql = \"\"\"INSERT INTO TEST (id, `order`, recom_code, recom_score) VALUES (%s, %s, %s, %s)\"\"\"",
-          "hash": "868bc9ee5175c8ab2d4c20135b9caf9d3a730f11602dd2e8b04859ad9d8a38a2"
-        },
-        "targetEvidence": {
-          "articleId": "tokenizer-input-troubleshooting",
-          "blockId": "[\"원인\",3]",
-          "anchor": "원인",
-          "quote": "확인 결과, Data-Augmentation하면서 특정 category의 데이터에 missing values가 발생되어 해당 오류 발생하였음",
-          "hash": "9664d12570208c2ac1521305dbb57d23c18136c6ab43ad4a3fca4d6428ce919b"
-        }
-      }
-    ]
+    "recommendations": []
   }
 }

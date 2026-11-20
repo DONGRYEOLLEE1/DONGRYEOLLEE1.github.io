@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "9f6e41aef40faad90ba5141c2913a6f231f3e6bbe6195a6aeb52be6d876d6b27",
+    "inputHash": "f043affc46cc1f9960765423b7ea99704ce129673ee3e022c9d9eebb262afbe6",
     "status": "verified",
     "candidates": [
       {
@@ -68,32 +68,6 @@
           "[\"solution\",3]",
           "[\"error\",2]",
           "[\"env\",2]"
-        ]
-      },
-      {
-        "id": "inference-server",
-        "sourceBlocks": [
-          "[\"error\",12]",
-          "[\"env\",2]",
-          "[\"조치-2\",1]"
-        ],
-        "targetBlocks": [
-          "[\"전체-구성\",1]",
-          "[\"참고\",2]",
-          "[\"vllm-릴리스에는-아직-없었음\",2]"
-        ]
-      },
-      {
-        "id": "deepspeed-troubleshooting",
-        "sourceBlocks": [
-          "[\"조치-2\",1]",
-          "[\"조치-1\",1]",
-          "[\"error-2\",16]"
-        ],
-        "targetBlocks": [
-          "[\"3️⃣\",6]",
-          "[\"1️⃣\",3]",
-          "[\"env\",3]"
         ]
       },
       {
@@ -225,64 +199,90 @@
           "[\"issue\",2]",
           "[\"해결\",2]"
         ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"조치-1\",3]",
+          "[\"error-2\",9]",
+          "[\"조치-2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"2\",12]",
+          "[\"increasing-speed-a-llm-serving-inference\",8]",
+          "[\"tensor-parallel\",1]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"env\",1]",
+          "[\"조치-2\",1]",
+          "[\"error-2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"1\",1]",
+          "[\"env\",2]"
+        ]
       }
     ],
     "recommendations": [
       {
-        "id": "vllm-weight-loading",
+        "id": "developing-daily-06",
         "relation": "related_method",
-        "reason": "Gemma-2의 logits_soft_cap 오류와 vLLM weight 무한 로딩 문제를 각각 확인해 볼 수 있습니다.",
+        "reason": "Gemma 계열의 vLLM 오류와 해결에 flashinfer 설치가 필요하다는 내용이 함께 있어 관련 조치를 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "vllm-gemma-troubleshooting",
-          "blockId": "[\"error\",12]",
-          "anchor": "error",
-          "quote": "ValueError( [rank0]: ValueError: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2). Otherwise, the output might be wrong. Set Flashinfer backend by export VLLM_ATTENTION_BACKEND=FLASHINFER. (VllmWorkerProcess pid=239160) ERROR 11-15 04:18:31 multiproc_worker_utils.py:226] Exception in worker VllmWorkerProcess while processing method determine_num_available_blocks: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2).",
-          "hash": "aed574f9dc3bc5db21ad19a0acd9a733996c3e62d5e10ea64bcf8242a54d4176"
+          "blockId": "[\"조치-2\",2]",
+          "anchor": "조치-2",
+          "quote": "pip install -U -q vllm",
+          "hash": "c95de0eaf43e97fe01641d763cc2f3c9ea43fd29ef1f6acdaf202d620d7c14ba"
         },
         "targetEvidence": {
-          "articleId": "vllm-weight-loading",
-          "blockId": "[\"problem\",1]",
-          "anchor": "problem",
-          "quote": "tensor-parallel-size >= 2 지정시, weight 무한 로딩 문제",
-          "hash": "29a0d56003fe9ab772e0679717c9a3e044c33f84eb347c840ed1557ff0ed44ad"
+          "articleId": "developing-daily-06",
+          "blockId": "[\"error2\",2]",
+          "anchor": "error2",
+          "quote": "갑자기 GPU를 인식 못함",
+          "hash": "c2e9486555c735c0a728b49a3f91b1a873be75df67fdfd2b154a33fe50512fbc"
         }
       },
       {
-        "id": "inference-server",
+        "id": "finetuning-notes",
         "relation": "related_method",
-        "reason": "Gemma 계열에서 FlashInfer 사용이 요구되는 오류와 FlashInfer에 맞춰 vLLM·CUDA 환경을 바꾼 사례를 살펴볼 수 있습니다.",
+        "reason": "FlashInfer 설치와 vLLM 업데이트를 통해 Gemma 계열 로딩 오류를 해결하는 방법을 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "vllm-gemma-troubleshooting",
-          "blockId": "[\"error\",12]",
-          "anchor": "error",
-          "quote": "ValueError( [rank0]: ValueError: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2). Otherwise, the output might be wrong. Set Flashinfer backend by export VLLM_ATTENTION_BACKEND=FLASHINFER. (VllmWorkerProcess pid=239160) ERROR 11-15 04:18:31 multiproc_worker_utils.py:226] Exception in worker VllmWorkerProcess while processing method determine_num_available_blocks: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2).",
-          "hash": "aed574f9dc3bc5db21ad19a0acd9a733996c3e62d5e10ea64bcf8242a54d4176"
-        },
-        "targetEvidence": {
-          "articleId": "inference-server",
-          "blockId": "[\"vllm-릴리스에는-아직-없었음\",2]",
-          "anchor": "vllm-릴리스에는-아직-없었음",
-          "quote": "기존 Pod는 RunPod 기본 이미지 위에 pip로 vLLM을 까는 방식이라, 처음에는 필요한 파이썬 파일만 0.28.0 위에 덮어쓰는 방법을 시도했음. import까지는 다 통과했는데 PR이 CUDA 커널(fused_gdn_decode)도 바꾸고 있어서 .so까지 PR 빌드가 있어야 했음. 파이썬만 패치하는 건 안 됨.",
-          "hash": "9ddc7761be1bd3100de79fcb336fdd038c020b140cc08e6c166c611ccdb22750"
-        }
-      },
-      {
-        "id": "deepspeed-troubleshooting",
-        "relation": "related_method",
-        "reason": "Gemma 모델의 FlashInfer 설치 조치와 FlashInfer 실행 중 발생한 오류 사례를 함께 확인할 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "vllm-gemma-troubleshooting",
-          "blockId": "[\"조치-1\",1]",
+          "blockId": "[\"조치-1\",3]",
           "anchor": "조치-1",
-          "quote": "Gemma family 모델은 flashinfer 패키지 설치 필요 -> flashinfer 패키지 설치",
-          "hash": "5d68546b62a783eec02e39ce21667660e78db63a86199c73ee0eca68a6bc6f4c"
+          "quote": "pip install flashinfer -i https://flashinfer.ai/whl/cu118/torch2.3/",
+          "hash": "5e301fa619a726b67f45c4ddbf6fd782f0781df80248fe44672a4f3b4dc88d8d"
         },
         "targetEvidence": {
-          "articleId": "deepspeed-troubleshooting",
-          "blockId": "[\"env\",3]",
-          "anchor": "env",
-          "quote": "cuda 11.8",
-          "hash": "d2b4f1ef1561cf2220122fdd32a7dd5405a70b47be0ed48de449dcc152e3f2dd"
+          "articleId": "finetuning-notes",
+          "blockId": "[\"2\",12]",
+          "anchor": "2",
+          "quote": "잘 설치되는 것 같아, pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118를 통해 torch 설치",
+          "hash": "0a54c5152dbb252a1fea9d4339dfc7e8b42195606f2c18582e561e658b60054b"
+        }
+      },
+      {
+        "id": "model-input-length",
+        "relation": "related_method",
+        "reason": "두 오류 로그 모두 FlashInfer의 prefill 처리에서 발생하며, 주의할 설정을 비교해볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vllm-gemma-troubleshooting",
+          "blockId": "[\"error-2\",8]",
+          "anchor": "error-2",
+          "quote": "self.prefill_wrapper.begin_forward( [rank0]: File \"/data/envs/llm_test/lib/python3.10/site-packages/flashinfer/prefill.py\", line 832, in plan [rank0]: self._wrapper.plan( [rank0]: RuntimeError: CHECK_EQ(paged_kv_indptr.size(0), batch_size + 1) failed.",
+          "hash": "5ad41915206fc5dde4a162b0ac965c75430c53c027845001a357c0f18cc50123"
+        },
+        "targetEvidence": {
+          "articleId": "model-input-length",
+          "blockId": "[\"model-input-sequence-length\",2]",
+          "anchor": "model-input-sequence-length",
+          "quote": "물론 tokenizer의 padding = \"max_length\", truncation = True, max_length = 2048와 같은 옵션을 줘서 문장 길이를 맞춰줄 수도 있지만 backbone 모델의 input sequence length가 맞추려는 길이보다 짧을 경우 다음과 같은 에러 발생",
+          "hash": "5629ab0bfa58ae498e8ac300c4e5f06c74f54d2f72ac258a4ba8a7d58a57f468"
         }
       }
     ]

@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "afd7bf82c104691405cb8f0b73814ca91e973eb6b50e0925e79591deab9296f9",
+    "inputHash": "a5971e8c5e3a29ff653927daa24d2fc953dd69c584551fe59a12bb493cc8ea9d",
     "status": "verified",
     "candidates": [
       {
@@ -225,24 +225,24 @@
         ]
       },
       {
-        "id": "book-spine",
+        "id": "few-shot-nlp",
         "sourceBlocks": [
-          "[\"problem\",4]",
-          "[\"solution\",2]",
-          "[\"problem\",1]"
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"problem\",4]"
         ],
         "targetBlocks": [
-          "[\"retrieval\",1]",
-          "[\"system\",3]",
-          "[\"metrics\",5]"
+          "[\"concept\",1]",
+          "[\"solution\",1]",
+          "[\"문제-정의\",7]"
         ]
       }
     ],
     "recommendations": [
       {
-        "id": "developing-daily-05",
-        "relation": "related_method",
-        "reason": "정규표현식으로 시간 정보를 제거하는 방법과 특정 문자열 패턴 뒤의 문장을 삭제하는 전처리를 함께 살펴볼 수 있습니다.",
+        "id": "python-map",
+        "relation": "concept_explanation",
+        "reason": "정규식 치환을 각 텍스트에 적용하는 코드와 함께 map()의 반복 객체 처리 방식도 익힐 수 있습니다.",
         "sourceEvidence": {
           "articleId": "regex-preprocessing",
           "blockId": "[\"solution\",1]",
@@ -251,30 +251,30 @@
           "hash": "8a82a2dcd29332089132904cb327e771d4d9e807bdc03420781feaecc3f60e3c"
         },
         "targetEvidence": {
+          "articleId": "python-map",
+          "blockId": "[\"map\",1]",
+          "anchor": "map",
+          "quote": "map() 함수는 파이썬에서 반복 가능한 객체의 모든 요소에 대해 지정된 함수를 적용하는 함수. 원본 데이터를 변형하여 새로운 데이터를 생산하는 데 사용. 이 함수는 lazy evaluation을 사용하여 결과를 바로 계산하지 않고 필요할 때만 값을 계산하는 특성을 지니고 있다.",
+          "hash": "b20c954fa596819d6fd342d8947a28e563945c2d66562f880f392ab83aaae789"
+        }
+      },
+      {
+        "id": "developing-daily-05",
+        "relation": "related_method",
+        "reason": "시간 문자열 제거와 정규표현식으로 특정 문자열 형태를 찾아 후속 문장을 삭제하는 전처리 사례를 비교할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "regex-preprocessing",
+          "blockId": "[\"problem\",2]",
+          "anchor": "problem",
+          "quote": "위 문자 중, 04:25 문자만 삭제하고싶음. (숫자 정보 앞 공백도 같이!)",
+          "hash": "2efdeb9a48675d76eea760cf28c46d6ee6c43985c48b755f7055375e74a268ab"
+        },
+        "targetEvidence": {
           "articleId": "developing-daily-05",
           "blockId": "[\"정규표현식\",1]",
           "anchor": "정규표현식",
           "quote": "특정 문자열의 형태를 반복하는 데이터 이후에 나오는 문장을 모두 삭제",
           "hash": "11c518b02f130eca27ef2459282fcb7c926a47f3d551ee5c7ced2e29b2f68715"
-        }
-      },
-      {
-        "id": "book-spine",
-        "relation": "related_method",
-        "reason": "정규표현식 치환과 OCR 검색 전 정규화에서 텍스트의 공백·문장부호를 처리하는 방식을 비교해 볼 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "regex-preprocessing",
-          "blockId": "[\"problem\",4]",
-          "anchor": "problem",
-          "quote": "위 방식으로 없애려 했으나 문장 내의 모든 공백이 삭제되었음..",
-          "hash": "e3bd956e69fb36b19525193b4c4a3ea47c41765de9f1a19ecbb51825addf30c5"
-        },
-        "targetEvidence": {
-          "articleId": "book-spine",
-          "blockId": "[\"retrieval\",1]",
-          "anchor": "retrieval",
-          "quote": "OCR output often differs from the dictionary in spacing and punctuation. Stacked titles lose their spaces, and \"총,균,쇠\" against the dictionary's \"총, 균, 쇠\" (Guns, Germs, and Steel) scores only 50 with RapidFuzz's token_set_ratio. Both sides are therefore NFKC-normalized, lower-cased and stripped of spaces and punctuation.",
-          "hash": "2867acb68ee4d695da1b6bf0885ac20a8c22b36b158b8b82aaa645f6c0de2997"
         }
       }
     ]

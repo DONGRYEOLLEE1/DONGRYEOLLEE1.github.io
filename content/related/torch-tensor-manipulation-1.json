@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "17c157f689acf6c97ba15377e9335fee2499d91c49537b9870b1e5162b6d4e9a",
+    "inputHash": "f4c8c373abdb101b5f88ca009d373a1aa54a499fa675f16311f39ba53f0af439",
     "status": "verified",
     "candidates": [
       {
@@ -162,19 +162,6 @@
         ]
       },
       {
-        "id": "transformer",
-        "sourceBlocks": [
-          "[\"view-reshape-transpose-함수-정리\",1]",
-          "[\"torchtranspose\",1]",
-          "[\"torchview\",11]"
-        ],
-        "targetBlocks": [
-          "[\"multi-head-attention\",5]",
-          "[\"positional-encoding\",4]",
-          "[\"self-attention-1\",30]"
-        ]
-      },
-      {
         "id": "convnext",
         "sourceBlocks": [
           "[\"view-reshape-transpose-함수-정리\",1]",
@@ -201,6 +188,19 @@
         ]
       },
       {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchreshape\",5]",
+          "[\"torchview\",1]"
+        ],
+        "targetBlocks": [
+          "[\"에러\",4]",
+          "[null,1]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
         "id": "vllm-tensor-parallel-troubleshooting",
         "sourceBlocks": [
           "[\"torchreshape\",5]",
@@ -214,16 +214,16 @@
         ]
       },
       {
-        "id": "lora-dtype-troubleshooting",
+        "id": "vit",
         "sourceBlocks": [
-          "[\"view-reshape-transpose-함수-정리\",1]",
-          "[\"torchreshape\",5]",
-          "[\"torchview\",1]"
+          "[\"view-reshape-transpose-함수-정리\",2]",
+          "[\"결론\",1]",
+          "[\"torchview\",11]"
         ],
         "targetBlocks": [
-          "[\"에러\",4]",
-          "[null,1]",
-          "[\"ref\",2]"
+          "[\"vision-transformervit\",8]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"요약\",19]"
         ]
       }
     ],
@@ -231,7 +231,7 @@
       {
         "id": "torch-tensor-manipulation-2",
         "relation": "related_method",
-        "reason": "view와 달리 squeeze는 크기가 1인 차원을 제거해 텐서의 shape을 바꾸는 방법을 보여줍니다.",
+        "reason": "view의 차원 재구성과 달리 squeeze는 크기가 1인 차원을 제거하므로 두 텐서 조작 방식의 차이를 익힐 수 있습니다.",
         "sourceEvidence": {
           "articleId": "torch-tensor-manipulation-1",
           "blockId": "[\"torchview\",11]",
@@ -250,7 +250,7 @@
       {
         "id": "torch-tensor-manipulation-3",
         "relation": "related_method",
-        "reason": "-1로 차원을 다루는 view 설명과 함께, 크기가 1인 차원에 적용하는 expand와 인덱싱을 살펴볼 수 있습니다.",
+        "reason": "view로 차원을 재구성하는 방법과 None으로 차원을 늘리는 인덱싱 방식의 차이를 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "torch-tensor-manipulation-1",
           "blockId": "[\"torchview\",11]",
@@ -260,29 +260,10 @@
         },
         "targetEvidence": {
           "articleId": "torch-tensor-manipulation-3",
-          "blockId": "[\"expand\",5]",
-          "anchor": "expand",
-          "quote": "특정 차원의 텐서를 반복해서 생성해주는 함수이며 특정 차원의 크기가 1인 tensor에만 적용 가능",
-          "hash": "5401d15be60a66455062c9da8ba8836ba99d5d8c2e5d55cebcf5a4dc030ebc56"
-        }
-      },
-      {
-        "id": "transformer",
-        "relation": "related_method",
-        "reason": "차원 순서를 바꾸는 transpose 설명을 바탕으로, Multi-Head Attention에서 Q, K, V 행렬을 만드는 과정을 확인할 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "torch-tensor-manipulation-1",
-          "blockId": "[\"torchtranspose\",1]",
-          "anchor": "torchtranspose",
-          "quote": "보통 (batch_size, hidden_state, input_dim)을 (batch_size, input_dim, hidden_state)으로 변경해주는 작업을 할때 사용 (Dimension Swap)",
-          "hash": "44814affabd4b2a446f13cc5bc639f1f6b83a43972ff619354b9fde68660aa88"
-        },
-        "targetEvidence": {
-          "articleId": "transformer",
-          "blockId": "[\"multi-head-attention\",5]",
-          "anchor": "multi-head-attention",
-          "quote": "multi-head atttention을 이용하기 위해서는 각각의 head를 위해서 각각의 다른 Q, K, V weight 행렬들을 모델에 가지게 된다. 벡터들의 모음인 행렬 X를 $W^{Q}$, $W^{K}$, $W^{V}$ 행렬들로 곱해 각 head에 대한 Q, K, V 행렬을 생성",
-          "hash": "1a039b06eec7815a2a51e4deac4b8fbff18e652dd6da6235a155817d897b9b2b"
+          "blockId": "[\"indexing--slicing\",5]",
+          "anchor": "indexing--slicing",
+          "quote": "None 지정해주는만큼 차원 확장가능하나 전체 인덱싱(:)은 원래 텐서 갯수만큼 할당 가능",
+          "hash": "7df151cc5cd3173b58f6189ecf365152a00b7d6a1efc3839aeef9342d9906ce1"
         }
       }
     ]

@@ -39,8 +39,8 @@
     "review": []
   },
   "entry": {
-    "inputHash": "61f5ba48e97328f51b4eb242bca89e1328cffb3c9e7658926bfd9acadbce32ba",
-    "status": "verified",
+    "inputHash": "0e5a4bb930e23c568121658be3fae307100787766813b86aa3a76e4e17d4c03f",
+    "status": "abstained",
     "candidates": [
       {
         "id": "python-venv-troubleshooting",
@@ -108,14 +108,16 @@
         ]
       },
       {
-        "id": "pip-options",
+        "id": "cuda-device-troubleshooting",
         "sourceBlocks": [
           "[\"solution\",4]",
-          "[\"2️⃣\",1]",
-          "[\"envs\",1]"
+          "[\"1️⃣\",1]",
+          "[\"2️⃣\",1]"
         ],
         "targetBlocks": [
-          "[\"pip-options\",1]"
+          "[\"issue\",7]",
+          "[\"원인\",2]",
+          "[\"해결\",2]"
         ]
       },
       {
@@ -132,16 +134,16 @@
         ]
       },
       {
-        "id": "cuda-device-troubleshooting",
+        "id": "offline-deep-learning-environment",
         "sourceBlocks": [
           "[\"solution\",4]",
           "[\"1️⃣\",1]",
-          "[\"2️⃣\",1]"
+          "[\"envs\",1]"
         ],
         "targetBlocks": [
-          "[\"issue\",7]",
-          "[\"원인\",2]",
-          "[\"해결\",2]"
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"model\",1]",
+          "[\"새로운-이슈\",1]"
         ]
       },
       {
@@ -171,16 +173,16 @@
         ]
       },
       {
-        "id": "offline-deep-learning-environment",
+        "id": "distributed-gpu-training",
         "sourceBlocks": [
           "[\"solution\",4]",
-          "[\"1️⃣\",1]",
+          "[\"2️⃣\",1]",
           "[\"envs\",1]"
         ],
         "targetBlocks": [
-          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
-          "[\"model\",1]",
-          "[\"새로운-이슈\",1]"
+          "[\"설치-1\",2]",
+          "[\"설치\",3]",
+          "[\"단일-gpu-사용\",4]"
         ]
       },
       {
@@ -194,19 +196,6 @@
           "[\"1️⃣\",2]",
           "[\"2️⃣\",3]",
           "[\"3️⃣\",6]"
-        ]
-      },
-      {
-        "id": "distributed-gpu-training",
-        "sourceBlocks": [
-          "[\"solution\",4]",
-          "[\"2️⃣\",1]",
-          "[\"envs\",1]"
-        ],
-        "targetBlocks": [
-          "[\"설치-1\",2]",
-          "[\"설치\",3]",
-          "[\"단일-gpu-사용\",4]"
         ]
       },
       {
@@ -234,28 +223,21 @@
           "[\"error\",1]",
           "[\"error-2\",16]"
         ]
+      },
+      {
+        "id": "mariadb-connection-troubleshooting",
+        "sourceBlocks": [
+          "[\"1️⃣\",1]",
+          "[\"2️⃣\",1]",
+          "[\"envs\",1]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",3]",
+          "[\"해결\",1]",
+          "[\"env\",2]"
+        ]
       }
     ],
-    "recommendations": [
-      {
-        "id": "pip-options",
-        "relation": "concept_explanation",
-        "reason": "Bard API 설치에 특정 pip 버전을 지정하므로, pip 설치 옵션의 사용법을 함께 살펴볼 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "bard-api-troubleshooting",
-          "blockId": "[\"solution\",4]",
-          "anchor": "solution",
-          "quote": "Meet the needs that required version pip install bardapi==0.1.3",
-          "hash": "c5a393f48ef1aed17817d36041f0a753fcd6d47d52c7fbc27887f52e49595237"
-        },
-        "targetEvidence": {
-          "articleId": "pip-options",
-          "blockId": "[\"pip-options\",1]",
-          "anchor": "pip-options",
-          "quote": "모든 pip 설치 옵션, pip install - Usage",
-          "hash": "873aad2b41b774966b059227e56f3f8f31b682d2f862c3cdde29d8eb06cbb320"
-        }
-      }
-    ]
+    "recommendations": []
   }
 }

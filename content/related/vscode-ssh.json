@@ -28,8 +28,8 @@
     "review": []
   },
   "entry": {
-    "inputHash": "bef5eb8557ff0a90df68f32ac75442d1627cc037b6cff5d9dc35ec70903e1186",
-    "status": "verified",
+    "inputHash": "4a5514ef856f315ddca825bc02b34c8692b9e2320ff83e2eb5094bdd8406a401",
+    "status": "abstained",
     "candidates": [
       {
         "id": "mariadb-connection-troubleshooting",
@@ -71,29 +71,16 @@
         ]
       },
       {
-        "id": "developing-daily-04",
-        "sourceBlocks": [
-          "[\"vscode로-서버에-접속하여-개발\",1]",
-          "[\"vscode로-서버에-접속하여-개발\",2]",
-          "[\"vscode로-서버에-접속하여-개발\",4]"
-        ],
-        "targetBlocks": [
-          "[\"ca-에러\",3]",
-          "[\"git-접속\",1]",
-          "[\"패스워드-정보-묻지-않게-하기\",1]"
-        ]
-      },
-      {
-        "id": "inference-server",
+        "id": "ollama-docker-troubleshooting",
         "sourceBlocks": [
           "[\"vscode로-서버에-접속하여-개발\",1]",
           "[\"vscode로-서버에-접속하여-개발\",5]",
-          "[\"vscode로-서버에-접속하여-개발\",3]"
+          "[\"vscode로-서버에-접속하여-개발\",4]"
         ],
         "targetBlocks": [
-          "[\"vllm-릴리스에는-아직-없었음\",4]",
-          "[\"아침에-켜고-저녁에-끄기\",5]",
-          "[\"모델-구성은-파일-하나로\",6]"
+          "[\"1-ollama-설치-후-모델-다운로드--openwebui-접속\",3]",
+          "[\"구현-사항\",1]",
+          "[\"2-conda로-실행하면-잘-인식\",1]"
         ]
       },
       {
@@ -110,16 +97,16 @@
         ]
       },
       {
-        "id": "ollama-docker-troubleshooting",
+        "id": "gpu-driver-troubleshooting",
         "sourceBlocks": [
           "[\"vscode로-서버에-접속하여-개발\",1]",
           "[\"vscode로-서버에-접속하여-개발\",5]",
           "[\"vscode로-서버에-접속하여-개발\",4]"
         ],
         "targetBlocks": [
-          "[\"1-ollama-설치-후-모델-다운로드--openwebui-접속\",3]",
-          "[\"구현-사항\",1]",
-          "[\"2-conda로-실행하면-잘-인식\",1]"
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
         ]
       },
       {
@@ -136,19 +123,6 @@
         ]
       },
       {
-        "id": "gpu-driver-troubleshooting",
-        "sourceBlocks": [
-          "[\"vscode로-서버에-접속하여-개발\",1]",
-          "[\"vscode로-서버에-접속하여-개발\",5]",
-          "[\"vscode로-서버에-접속하여-개발\",4]"
-        ],
-        "targetBlocks": [
-          "[\"해결\",2]",
-          "[\"issue\",1]",
-          "[\"env\",1]"
-        ]
-      },
-      {
         "id": "training-arguments",
         "sourceBlocks": [
           "[\"vscode로-서버에-접속하여-개발\",3]",
@@ -159,19 +133,6 @@
           "[null,1]",
           "[\"usage\",1]",
           "[\"하이퍼파라미터\",6]"
-        ]
-      },
-      {
-        "id": "llama2-training-oom",
-        "sourceBlocks": [
-          "[\"vscode로-서버에-접속하여-개발\",1]",
-          "[\"vscode로-서버에-접속하여-개발\",4]",
-          "[\"vscode로-서버에-접속하여-개발\",5]"
-        ],
-        "targetBlocks": [
-          "[\"solution\",4]",
-          "[\"error\",2]",
-          "[\"env\",9]"
         ]
       },
       {
@@ -188,6 +149,19 @@
         ]
       },
       {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",4]",
+          "[\"vscode로-서버에-접속하여-개발\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",2]",
+          "[\"env\",9]"
+        ]
+      },
+      {
         "id": "deepspeed-troubleshooting",
         "sourceBlocks": [
           "[\"vscode로-서버에-접속하여-개발\",1]",
@@ -198,6 +172,19 @@
           "[\"3️⃣\",7]",
           "[\"2️⃣\",3]",
           "[\"1️⃣\",2]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",4]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",6]",
+          "[\"3️⃣\",1]",
+          "[\"2️⃣\",1]"
         ]
       },
       {
@@ -214,58 +201,32 @@
         ]
       },
       {
-        "id": "bard-api-troubleshooting",
+        "id": "developing-daily-06",
         "sourceBlocks": [
           "[\"vscode로-서버에-접속하여-개발\",1]",
-          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",4]",
+          "[\"vscode로-서버에-접속하여-개발\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"solution-1\",2]",
+          "[\"error2\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",3]",
           "[\"vscode로-서버에-접속하여-개발\",4]"
         ],
         "targetBlocks": [
-          "[\"solution\",6]",
-          "[\"3️⃣\",1]",
-          "[\"2️⃣\",1]"
+          "[\"docker\",6]",
+          "[\"ref\",3]",
+          "[\"tgi\",2]"
         ]
       }
     ],
-    "recommendations": [
-      {
-        "id": "developing-daily-04",
-        "relation": "related_method",
-        "reason": "Remote-SSH 설정과 Git 로그인 정보를 저장하는 방법을 함께 살펴볼 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "vscode-ssh",
-          "blockId": "[\"vscode로-서버에-접속하여-개발\",2]",
-          "anchor": "vscode로-서버에-접속하여-개발",
-          "quote": "'CTRL + SHIFT + P' 눌러 config 파일을 선택",
-          "hash": "d4c89e2b49d4cd452cdf5eb9e69f9baa9626c51c0c4de956f3cc97f86f693b37"
-        },
-        "targetEvidence": {
-          "articleId": "developing-daily-04",
-          "blockId": "[\"패스워드-정보-묻지-않게-하기\",1]",
-          "anchor": "패스워드-정보-묻지-않게-하기",
-          "quote": "credential기능을 통해 로그인 정보를 저장해 두었다가 다시 입력하지 않아도 사용할 수 있게 만들어줌",
-          "hash": "7cb00559cb8854a181e6145cbd484473a3cec0c996042f2253c616ca360f4bf1"
-        }
-      },
-      {
-        "id": "inference-server",
-        "relation": "related_method",
-        "reason": "SSH 접속 정보를 설정하는 방법과 컨테이너에 openssh-server를 설치해 SSH 접속을 가능하게 하는 과정을 볼 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "vscode-ssh",
-          "blockId": "[\"vscode로-서버에-접속하여-개발\",3]",
-          "anchor": "vscode로-서버에-접속하여-개발",
-          "quote": "Host [display_name] HostName [ip addr] User [account_name] Port [port number] (default : 22)",
-          "hash": "32a338ce052e9be8b8b27c8f9be445700b7432d900d6cf95dac170c1d46a6ddf"
-        },
-        "targetEvidence": {
-          "articleId": "inference-server",
-          "blockId": "[\"vllm-릴리스에는-아직-없었음\",4]",
-          "anchor": "vllm-릴리스에는-아직-없었음",
-          "quote": "이미지에는 sshd가 없어서 내 자동화(SSH로 붙어서 프로비저닝)가 안 붙었는데, 이건 컨테이너 시작 명령에서 openssh-server를 설치하고 띄우는 걸로 해결함.",
-          "hash": "7ff9f8c76a5546df1ad7ee019caa1e7a9ee692c48f3b727543812b4b3f0b2cb7"
-        }
-      }
-    ]
+    "recommendations": []
   }
 }

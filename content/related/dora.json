@@ -39,7 +39,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "28e216d6fc72926146f65eb2cba07658b383282cdd4b5c6448e08275bb6d702d",
+    "inputHash": "277e5787df8d44ad5ec70f8461205c05d4a5823b96c7f2daaaaa8eacdf46b0c8",
     "status": "verified",
     "candidates": [
       {
@@ -108,16 +108,16 @@
         ]
       },
       {
-        "id": "polyglot-lora-troubleshooting",
+        "id": "peft-features-090",
         "sourceBlocks": [
           "[\"introduction\",2]",
           "[\"introduction\",3]",
-          "[\"commonsense-reasoning\",1]"
+          "[\"weight-decomposed-low-rank-adaptation\",2]"
         ],
         "targetBlocks": [
-          "[\"mission\",1]",
-          "[\"issue\",7]",
-          "[\"envs\",3]"
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",3]"
         ]
       },
       {
@@ -131,19 +131,6 @@
           "[\"background\",2]",
           "[\"introduction\",2]",
           "[\"의의\",1]"
-        ]
-      },
-      {
-        "id": "peft-features-090",
-        "sourceBlocks": [
-          "[\"introduction\",2]",
-          "[\"introduction\",3]",
-          "[\"weight-decomposed-low-rank-adaptation\",2]"
-        ],
-        "targetBlocks": [
-          "[\"peft-v090\",1]",
-          "[\"dora-support\",1]",
-          "[\"merging-lora-weights\",3]"
         ]
       },
       {
@@ -173,19 +160,6 @@
         ]
       },
       {
-        "id": "llama",
-        "sourceBlocks": [
-          "[\"commonsense-reasoning\",4]",
-          "[\"introduction\",4]",
-          "[\"weight-decomposed-low-rank-adaptation\",1]"
-        ],
-        "targetBlocks": [
-          "[\"evolution-of-performance-during-training\",1]",
-          "[\"introduction\",1]",
-          "[\"instruction-finetuning\",2]"
-        ]
-      },
-      {
         "id": "lora-finetuning",
         "sourceBlocks": [
           "[\"introduction\",2]",
@@ -199,16 +173,16 @@
         ]
       },
       {
-        "id": "ziya2",
+        "id": "llama",
         "sourceBlocks": [
           "[\"commonsense-reasoning\",4]",
-          "[\"weight-decomposed-low-rank-adaptation\",2]",
-          "[\"introduction\",4]"
+          "[\"introduction\",4]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]"
         ],
         "targetBlocks": [
-          "[\"baselines\",2]",
-          "[\"the-architecture-of-ziya2\",3]",
-          "[\"introduction\",9]"
+          "[\"evolution-of-performance-during-training\",1]",
+          "[\"introduction\",1]",
+          "[\"instruction-finetuning\",2]"
         ]
       },
       {
@@ -225,6 +199,19 @@
         ]
       },
       {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"commonsense-reasoning\",4]",
+          "[\"weight-decomposed-low-rank-adaptation\",2]",
+          "[\"introduction\",4]"
+        ],
+        "targetBlocks": [
+          "[\"baselines\",2]",
+          "[\"the-architecture-of-ziya2\",3]",
+          "[\"introduction\",9]"
+        ]
+      },
+      {
         "id": "prompt-tuning",
         "sourceBlocks": [
           "[\"introduction\",2]",
@@ -236,13 +223,26 @@
           "[\"prompt-tuning\",1]",
           "[\"ablation-study\",3]"
         ]
+      },
+      {
+        "id": "chat-vector",
+        "sourceBlocks": [
+          "[\"weight-decomposed-low-rank-adaptation\",1]",
+          "[\"weight-decomposition-analysis\",1]",
+          "[\"introduction\",4]"
+        ],
+        "targetBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"의의\",1]",
+          "[\"background\",2]"
+        ]
       }
     ],
     "recommendations": [
       {
         "id": "vera",
         "relation": "related_method",
-        "reason": "DoRA가 가중치를 크기와 방향으로 분해해 조정하는 방식과 VeRA가 고정 무작위 행렬 및 scaling vectors로 가중치를 재매개변수화하는 방식을 비교해 볼 수 있습니다.",
+        "reason": "VeRA와 DoRA가 모두 가중치를 재매개변수화해 학습 파라미터를 줄이는 방식을 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "dora",
           "blockId": "[\"introduction\",3]",
@@ -259,9 +259,28 @@
         }
       },
       {
+        "id": "lora",
+        "relation": "related_method",
+        "reason": "DoRA가 LoRA와 FT의 업데이트 패턴을 분석하고 LoRA 분해를 활용하는 배경을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "dora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "Weight Reparameterization을 통해 기울기의 조건을 개선함으로써 더 빠른 속도로 수렴하는 Weight Normalization에 따라, 연구진은 새로운 weight decomposition analysis을 소개합니다. 이는 규모나 직접적인 구성요소에 따라 초기에 모델의 가중치를 reparameterize하며 그 뒤에 LoRA와 FT에 의해 도입된 규모와 방향의 변화를 검토합니다. 연구진의 분석에 따르면 LoRA와 FT는 현저하게 다른 업데이트 패턴을 보여주며, 이러한 변이들이 각 방법의 학습 능력을 반영한다는 추측을 하게 됩니다. 연구진의 발견에 영감을 받아, 우리는 사전 훈련된 가중치를 크기와 방향 요소로 분해한 다음, 두 가지 모두를 fine-tuning하는 Weight-Decomposed Low-Rank Adaptation(DoRA)을 제안합니다.",
+          "hash": "c812afd12e5702831db109ecbcdfa96f17583ccb42af9842e01c42a1a6390270"
+        },
+        "targetEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"low-rank-parameterized-update-matrices\",3]",
+          "anchor": "low-rank-parameterized-update-matrices",
+          "quote": "LoRA는 단계적으로 step를 밟으며 gradient update 과정이 필요없음. 이는 LoRA를 모든 가중치 행렬에 적용하고 모든 편향을 훈련시킬 때 LoRA rank를 사전 훈련된 가중치 행렬의 순위로 설정하여 전체 미세 조정의 표현력을 대략적으로 복구한다는 것을 의미합니다. 반면에, 학습가능한 파라미터의 수가 늘어날때 학습하는 LoRA는 기존 모델을 roughly 연산함.",
+          "hash": "bfd9b48e94ef1d883b040f270832f959d3cd2d9aaaa7ca702f43f962040eb1a3"
+        }
+      },
+      {
         "id": "peft-features-0100",
         "relation": "related_method",
-        "reason": "DoRA의 가중치 분해 방식이 PEFT에서 지원되는 기능과 어떻게 연결되는지, quantized layer와 convolution layer 지원 내용으로 살펴볼 수 있습니다.",
+        "reason": "DoRA가 가중치를 크기와 방향으로 분해한다는 설명과 PEFT의 DoRA 개선 사항을 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "dora",
           "blockId": "[\"peft-parameter-efficient-fine-tuning\",1]",
@@ -278,28 +297,9 @@
         }
       },
       {
-        "id": "polyglot-lora-troubleshooting",
-        "relation": "evaluation_comparison",
-        "reason": "DoRA와 LoRA를 포함한 방법들을 Llama commonsense reasoning task에 적용한 평가 구성을 확인할 수 있습니다.",
-        "sourceEvidence": {
-          "articleId": "dora",
-          "blockId": "[\"commonsense-reasoning\",1]",
-          "anchor": "commonsense-reasoning",
-          "quote": "Llama-7B/13B 모델을 commonsense reasoning task에 DoRA, LoRA와 Prompt learning(Prefix), Series Adapter(Series), Parallel Adapter(Parallel) 방법론을 적용해보았습니다. 또한 ChatGPT api를 사용하여 zero-shot CoT를 적용한 ChatGPT accuracy를 포함시켰습니다.",
-          "hash": "b976d3ec1a39e22a7dfe2f959424977edd7465a8c48ae8c475096b70fe8817ef"
-        },
-        "targetEvidence": {
-          "articleId": "polyglot-lora-troubleshooting",
-          "blockId": "[\"envs\",3]",
-          "anchor": "envs",
-          "quote": "pytorch 2.0.0+cu118",
-          "hash": "2485bc36f0db6778dbfb46a310740f5d096ec19f344385a538f8eccb69bc58c1"
-        }
-      },
-      {
         "id": "peft-features-090",
         "relation": "related_method",
-        "reason": "DoRA가 LoRA의 방향 조정에 magnitude 조정을 더하는 방식과 PEFT의 DoRA 지원 구현 및 적용 조건을 함께 살펴볼 수 있습니다.",
+        "reason": "DoRA의 분해 방식과 LoRA 기반 지원 구현 및 지원 레이어 조건을 함께 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "dora",
           "blockId": "[\"weight-decomposed-low-rank-adaptation\",2]",

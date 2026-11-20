@@ -43,12 +43,14 @@
 
 ## 실행과 결과 확인
 
-`npm ci` 후 `npm run recommendations:check`로 현재 Git 트리와 스냅샷을 대조한다. `npm run build`는 API 키 없이 정적 페이지를 생성한다. 미리보기에서 다음 경로의 오른쪽 노드와 본문 하단의 연결 이유를 확인할 수 있다.
+이 보고서의 측정에 쓴 3편 스냅샷(`content/related.json`)은 파일럿 브랜치 `feat/phase2a-pilot`에 있다. 현행 구현은 전체 공개 글을 대상으로 하고 글별 파일 `content/related/<글 ID>.json`에 저장한다. 아래는 현행 구현 기준의 실행 방법이다.
+
+`npm ci` 후 `npm run recommendations:check -- --offline`으로 저장된 추천 파일을 현재 원문과 대조한다. `npm run recommendations:check`는 벡터 캐시로 후보까지 다시 계산해 낡은 글을 알린다. `npm run build`는 API 키 없이 정적 페이지를 생성한다. 미리보기에서 다음 경로의 오른쪽 노드와 본문 하단의 연결 이유를 확인할 수 있다.
 
 - 책등 인식 — `/research/in-browser-spine-reader`
 - Reranking — `/nlp/2024/11/12/reranking.html`
 - KoDistill — `/research/kodistill-vl-2b/`
 
-다시 추론할 때는 발행 서버 환경에 `OPENROUTER_API_KEY`를 설정하고 `npm run recommendations:sync`를 실행한다. 기본 모델은 `qwen/qwen3.7-flash`이고 모델 ID는 `RECOMMENDATIONS_MODEL`로 지정한다. OpenAI 호환 로컬 추론을 사용할 경우에는 `RECOMMENDATIONS_API_BASE`와 해당 서버의 모델 ID를 지정한다. 사용자 지정 엔드포인트의 인증은 `RECOMMENDATIONS_API_KEY`로 설정한다.
+다시 추론할 때는 발행 서버의 `.env`에 `OPENROUTER_API_KEY`와 공유 벡터 캐시용 `SUPABASE_URL`·`SUPABASE_SECRET_KEY`를 설정하고 `npm run recommendations:sync`를 실행한다. 기본 모델은 `openai/gpt-6-luna`, 임베딩은 `google/gemini-embedding-2`(768차원)이고 모델 ID는 `RECOMMENDATIONS_MODEL`, `EMBEDDINGS_MODEL`로 지정한다. OpenAI 호환 로컬 추론을 사용할 경우에는 `RECOMMENDATIONS_API_BASE`와 해당 서버의 모델 ID를 지정한다. 사용자 지정 엔드포인트의 인증은 `RECOMMENDATIONS_API_KEY`로 설정한다.
 
-`content/related.json`은 실제 출력이다. 글별 사실, 모델·입력 해시, 후보 및 양쪽 블록 목록, 선택한 발췌와 추천 이유를 담는다. 브라우저에는 추천 ID·이유만 전달한다. 실패한 항목은 `fallback`과 종료 코드 2로 보고하며 다음 동기화에서 재시도한다. 입력이 일치하는 성공·보류 결과는 재사용한다. 두 발행 서버에서 변경을 합칠 때 최종 트리에서 `recommendations:check`를 실행하고 불일치하면 동기화한다. 발행본 해시가 달라진 상태에서 빌드하면 경고와 함께 현재 규칙 추천을 제공한다.
+`content/related/<글 ID>.json`은 실제 출력이다. 그 글의 사실, 모델·추론 설정·입력 해시, 후보 및 양쪽 블록 목록, 선택한 발췌와 추천 이유를 담는다. 브라우저에는 추천 ID·이유만 전달한다. 실패한 항목은 `fallback`과 종료 코드 2로 보고하며 다음 동기화에서 재시도한다. 입력이 일치하는 성공·보류 결과는 재사용한다. 두 발행 서버에서 변경을 합칠 때 최종 트리에서 `recommendations:check`를 실행하고 낡은 글이 있으면 동기화한다. 빌드는 글마다 검증하며, 파일이 없거나 현재 원문과 맞지 않는 글만 경고와 함께 현재 규칙 추천을 제공한다.

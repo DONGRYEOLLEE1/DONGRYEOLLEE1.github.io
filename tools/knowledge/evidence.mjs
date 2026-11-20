@@ -9,6 +9,17 @@ function textOf(node) {
   return (node.childNodes || []).map(textOf).join(node.tagName === 'tr' ? ' | ' : '');
 }
 
+/** One spelling for an article path and a link to it: URL.pathname percent-encodes, paths do not. */
+export function linkPath(path) {
+  let decoded = path;
+  try {
+    decoded = decodeURI(path);
+  } catch {
+    // A malformed escape is compared as written.
+  }
+  return decoded.replace(/\/+$/, '');
+}
+
 // Resolve evidence against the same sanitized HTML and heading IDs that Astro publishes.
 function articleLinks(node, base) {
   const paths = [];
@@ -18,7 +29,7 @@ function articleLinks(node, base) {
       if (href && !href.startsWith('#') && URL.canParse(href, base)) {
         const url = new URL(href, base);
         if (url.origin === base.origin || url.hostname === 'dongryeollee1.github.io') {
-          paths.push(url.pathname.replace(/\/+$/, ''));
+          paths.push(linkPath(url.pathname));
         }
       }
     }
@@ -33,12 +44,13 @@ export function evidenceBlocks(article) {
   const blocks = [];
   let anchor = null;
   let heading = '';
-  let sequence = 0;
+  // Numbered per anchor, not per heading: a heading without an id shares the preamble's null
+  // anchor, and a repeated id would otherwise restart at 1 and produce the same block ID twice.
+  const sequences = new Map();
   function visit(node) {
     if (/^h[1-6]$/.test(node.tagName)) {
       anchor = node.attrs.find((attr) => attr.name === 'id')?.value ?? null;
       heading = textOf(node).trim();
-      sequence = 0;
       return;
     }
     if (
@@ -58,7 +70,9 @@ export function evidenceBlocks(article) {
           if (space > start + 160) end = space;
         }
         const quote = text.slice(start, end).trim();
-        const id = JSON.stringify([anchor, ++sequence]);
+        const sequence = (sequences.get(anchor) || 0) + 1;
+        sequences.set(anchor, sequence);
+        const id = JSON.stringify([anchor, sequence]);
         blocks.push({ id, anchor, heading, quote, links, hash: hash(quote) });
         start = end;
       }
@@ -68,6 +82,11 @@ export function evidenceBlocks(article) {
   }
   visit(parseFragment(article.html));
   return blocks;
+}
+
+// Reference lists name other work without describing this article, so they never serve as evidence.
+export function usable(block) {
+  return !/^(?:\d+\.\s*)?(?:references?|bibliography|citation|참고\s*문헌)$/i.test(block.heading);
 }
 
 export function citation(articleId, block) {

@@ -4,11 +4,11 @@
 
 ## 준비된 구성
 
-사이트는 Markdown 원문과 메타데이터를 읽어 글·주제·시리즈 페이지를 정적으로 만든다. 관련 글과 작은 그래프의 데이터도 배포 전에 계산한다. Vercel Functions, 온톨로지 전용 DB, 임베딩 API 키, LLM API 키는 현재 배포에 필요하지 않다. 본문 검색은 함께 배포하는 Pagefind 색인을 사용한다.
+사이트는 Markdown 원문과 메타데이터를 읽어 글·주제·시리즈 페이지를 정적으로 만든다. 관련 글과 작은 그래프의 데이터도 배포 전에 계산한다. Vercel Functions, 온톨로지 전용 DB, 임베딩 API 키, LLM API 키는 현재 배포에 필요하지 않다. 이는 Vercel 빌드 기준이다. 연관 글 추천을 갱신하는 `npm run recommendations:sync`는 발행 서버에서만 실행하고, 그때 쓰는 OpenRouter·Supabase 키는 Vercel 환경 변수에 넣지 않는다. 본문 검색은 함께 배포하는 Pagefind 색인을 사용한다.
 
 | Vercel 항목 | 설정 |
 |---|---|
-| Git Repository | DONGRYEOLLEE1/DONGRYEOLLEE1.github.io |
+| Git Repository | DONGRYEOLLEE1/tech-blog |
 | Framework Preset | Astro |
 | Root Directory | 저장소 루트 . |
 | Install Command | npm ci |

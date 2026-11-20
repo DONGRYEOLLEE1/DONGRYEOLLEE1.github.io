@@ -3,7 +3,7 @@ import { renderRelatedGraph } from '../lib/related-graph';
 import type { Article } from '../lib/types';
 interface Props { article: Article; articles: Article[] }
 const { article, articles } = Astro.props;
-const graph = renderRelatedGraph(article, new Map(articles.map(post => [post.id, post])));
+const graph = renderRelatedGraph(article, new Map(articles.map(post => [post.id, post])), { moreHref: '#related-reading' });
 ---
 {graph ? (
   <div class="graph-wrap" set:html={graph} />

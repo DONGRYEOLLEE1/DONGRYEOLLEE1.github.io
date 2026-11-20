@@ -61,7 +61,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "7446e4f8e1cb7eac75f6a09f8450b0b602a3f573134e49d3e5c07cf9df93c7b4",
+    "inputHash": "46d0005b0dd5a649951dfc2c11be1aa4bc57ac0f15d7db2042a750634516ceef",
     "status": "verified",
     "candidates": [
       {
@@ -140,19 +140,6 @@
           "[\"error\",1]",
           "[\"solution\",3]",
           "[\"reproduction\",1]"
-        ]
-      },
-      {
-        "id": "langgraph-structured-streaming",
-        "sourceBlocks": [
-          "[\"main-distributes-sub-executes\",2]",
-          "[\"supervised-fine-tuning\",1]",
-          "[\"harness의-효과\",2]"
-        ],
-        "targetBlocks": [
-          "[\"baseline\",5]",
-          "[\"구조-분석\",2]",
-          "[\"problem\",2]"
         ]
       },
       {
@@ -258,13 +245,26 @@
           "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
           "[\"요약\",10]"
         ]
+      },
+      {
+        "id": "chat-vector",
+        "sourceBlocks": [
+          "[\"정리\",1]",
+          "[\"supervised-fine-tuning\",2]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ]
       }
     ],
     "recommendations": [
       {
         "id": "k-browsecomp",
         "relation": "evaluation_comparison",
-        "reason": "두 연구의 deep research·browsing 평가를 비교해, 벤치마크 구성과 한국어 맥락 평가의 차이를 살펴볼 수 있습니다.",
+        "reason": "두 글은 웹 탐색형 에이전트를 평가하지만, K-BrowseComp은 한국어 맥락의 별도 벤치마크를 제시해 SearchSwarm의 평가 범위를 비교하는 데 유용합니다.",
         "sourceEvidence": {
           "articleId": "searchswarm",
           "blockId": "[\"experiments\",1]",
@@ -281,9 +281,9 @@
         }
       },
       {
-        "id": "langgraph-structured-streaming",
+        "id": "chain-of-thought",
         "relation": "related_method",
-        "reason": "모델 생성 결과를 상태에 반영하는 구조와 brief·report를 활용한 context 관리를 함께 살펴볼 수 있습니다.",
+        "reason": "SearchSwarm은 brief와 report로 긴 맥락을 관리하고, CoT는 복잡한 문제를 중간 추론 단계로 나누어 푸는 방식을 설명합니다.",
         "sourceEvidence": {
           "articleId": "searchswarm",
           "blockId": "[\"main-distributes-sub-executes\",2]",
@@ -292,11 +292,11 @@
           "hash": "5e3ce7553c22a1489d9e82acccab91065d9b6e9600134e5aa33ad8d6a19fc2ba"
         },
         "targetEvidence": {
-          "articleId": "langgraph-structured-streaming",
-          "blockId": "[\"baseline\",5]",
-          "anchor": "baseline",
-          "quote": "workflow.add_node(\"api_generate\", api_generate) workflow.add_conditional_edges( START, routing, { \"웹검색\": \"web_generate\", \"일반질문\": \"api_generate\" } ) workflow.add_edge(\"web_generate\", END) workflow.add_edge(\"api_generate\", END) graph = workflow.compile(checkpointer = memory) # streaming 함수 def stream_inference(query: str): inputs = [HumanMessage(content = query)] for msg, metadata in graph.stream( {\"messages\": inputs}, stream_mode = \"messages\", config = {\"configurable\":",
-          "hash": "ab2952997d5c0e7cd1c306bbfd83e40d8422af51aa73df8d76d6e84ac29db2e4"
+          "articleId": "chain-of-thought",
+          "blockId": "[\"chain-of-thought-prompting\",1]",
+          "anchor": "chain-of-thought-prompting",
+          "quote": "여러 단계를 거쳐야하는 수학 문제와 같은 복잡한 추론을 통해 문제를 푸는 절차를 연구진은 고려하였음. 이건 전형적인 문제를 하나하나 분해하여 정답에 접근하는 방식임. 이 논문의 목표는 LLM에 유사한 CoT를 생성할 수 있는 기능을 부여하는 것입니다. 일관된 일련의 중간 추론 단계를 생성할 수 있는 능력을 LLM에 부여하는 것입니다.",
+          "hash": "82ac1138b000944e339224661220eee68aa8b30584e7b60c99240027c33e995e"
         }
       }
     ]

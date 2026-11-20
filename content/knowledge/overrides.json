@@ -23,7 +23,8 @@
       "tokenizer-input-troubleshooting"
     ],
     "pip-options": [
-      "vllm-gemma-troubleshooting"
+      "vllm-gemma-troubleshooting",
+      "bard-api-troubleshooting"
     ],
     "polyglot-training-troubleshooting": [
       "regex-preprocessing"
@@ -35,14 +36,18 @@
       "llama"
     ],
     "searchswarm": [
-      "bert"
+      "bert",
+      "langgraph-structured-streaming"
     ],
     "torch-tensor-manipulation-1": [
       "transformer"
     ],
     "vllm-gemma-troubleshooting": [
       "deepspeed-troubleshooting",
-      "inference-server"
+      "inference-server",
+      "developing-daily-06",
+      "finetuning-notes",
+      "model-input-length"
     ],
     "vscode-ssh": [
       "developing-daily-04",

@@ -28,7 +28,7 @@
     "review": []
   },
   "entry": {
-    "inputHash": "f043affc46cc1f9960765423b7ea99704ce129673ee3e022c9d9eebb262afbe6",
+    "inputHash": "25b89794e0cbf013e077a98ac90631da05db47e9c95b95c8a888cdacee520591",
     "status": "verified",
     "candidates": [
       {
@@ -123,19 +123,6 @@
         ]
       },
       {
-        "id": "developing-daily-06",
-        "sourceBlocks": [
-          "[\"조치-2\",2]",
-          "[\"error\",12]",
-          "[\"조치-1\",1]"
-        ],
-        "targetBlocks": [
-          "[\"solution-1\",1]",
-          "[\"solution\",1]",
-          "[\"error2\",2]"
-        ]
-      },
-      {
         "id": "transformers-training-oom",
         "sourceBlocks": [
           "[\"error-2\",17]",
@@ -159,19 +146,6 @@
           "[\"해결\",2]",
           "[\"4bit-quantization\",30]",
           "[\"현상\",1]"
-        ]
-      },
-      {
-        "id": "model-input-length",
-        "sourceBlocks": [
-          "[\"error-2\",8]",
-          "[\"error\",10]",
-          "[\"조치-2\",3]"
-        ],
-        "targetBlocks": [
-          "[\"model-input-sequence-length\",3]",
-          "[\"env\",1]",
-          "[\"model-input-sequence-length\",2]"
         ]
       },
       {
@@ -201,16 +175,16 @@
         ]
       },
       {
-        "id": "finetuning-notes",
+        "id": "polyglot-lora-troubleshooting",
         "sourceBlocks": [
-          "[\"조치-1\",3]",
-          "[\"error-2\",9]",
-          "[\"조치-2\",2]"
+          "[\"error-2\",16]",
+          "[\"env\",3]",
+          "[\"error\",17]"
         ],
         "targetBlocks": [
-          "[\"2\",12]",
-          "[\"increasing-speed-a-llm-serving-inference\",8]",
-          "[\"tensor-parallel\",1]"
+          "[\"issue\",1]",
+          "[\"envs\",8]",
+          "[\"prob\",1]"
         ]
       },
       {
@@ -225,64 +199,90 @@
           "[\"1\",1]",
           "[\"env\",2]"
         ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",5]",
+          "[\"error-2\",8]",
+          "[\"env\",6]"
+        ],
+        "targetBlocks": [
+          "[\"에러\",4]",
+          "[null,1]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"error\",6]",
+          "[\"error-2\",3]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"curiosity\",1]",
+          "[\"answer\",7]",
+          "[\"case-1\",2]"
+        ]
       }
     ],
     "recommendations": [
       {
-        "id": "developing-daily-06",
+        "id": "vllm-tensor-parallel-troubleshooting",
         "relation": "related_method",
-        "reason": "Gemma 계열의 vLLM 오류와 해결에 flashinfer 설치가 필요하다는 내용이 함께 있어 관련 조치를 확인할 수 있습니다.",
+        "reason": "Gemma-2의 logits_soft_cap 오류와 tensor parallel 실행 중 발생한 vLLM worker 오류를 함께 살펴볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "vllm-gemma-troubleshooting",
-          "blockId": "[\"조치-2\",2]",
-          "anchor": "조치-2",
-          "quote": "pip install -U -q vllm",
-          "hash": "c95de0eaf43e97fe01641d763cc2f3c9ea43fd29ef1f6acdaf202d620d7c14ba"
+          "blockId": "[\"error\",12]",
+          "anchor": "error",
+          "quote": "ValueError( [rank0]: ValueError: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2). Otherwise, the output might be wrong. Set Flashinfer backend by export VLLM_ATTENTION_BACKEND=FLASHINFER. (VllmWorkerProcess pid=239160) ERROR 11-15 04:18:31 multiproc_worker_utils.py:226] Exception in worker VllmWorkerProcess while processing method determine_num_available_blocks: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2).",
+          "hash": "aed574f9dc3bc5db21ad19a0acd9a733996c3e62d5e10ea64bcf8242a54d4176"
         },
         "targetEvidence": {
-          "articleId": "developing-daily-06",
-          "blockId": "[\"error2\",2]",
-          "anchor": "error2",
-          "quote": "갑자기 GPU를 인식 못함",
-          "hash": "c2e9486555c735c0a728b49a3f91b1a873be75df67fdfd2b154a33fe50512fbc"
+          "articleId": "vllm-tensor-parallel-troubleshooting",
+          "blockId": "[\"error-message\",9]",
+          "anchor": "error-message",
+          "quote": "/usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown warnings.warn('resource_tracker: There appear to be %d ' /usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown warnings.warn('resource_tracker: There appear to be %d '",
+          "hash": "46793cf76946aabd41f5ea505731a729cf3f4aafecb2cfaa1283575dc4c57726"
         }
       },
       {
-        "id": "finetuning-notes",
+        "id": "vllm-weight-loading",
         "relation": "related_method",
-        "reason": "FlashInfer 설치와 vLLM 업데이트를 통해 Gemma 계열 로딩 오류를 해결하는 방법을 살펴볼 수 있습니다.",
+        "reason": "Gemma-2에서 FlashInfer backend가 필요한 오류와 tensor parallel 설정에서 weight 로딩이 멈추는 문제를 비교해 볼 수 있습니다.",
         "sourceEvidence": {
           "articleId": "vllm-gemma-troubleshooting",
-          "blockId": "[\"조치-1\",3]",
-          "anchor": "조치-1",
-          "quote": "pip install flashinfer -i https://flashinfer.ai/whl/cu118/torch2.3/",
-          "hash": "5e301fa619a726b67f45c4ddbf6fd782f0781df80248fe44672a4f3b4dc88d8d"
+          "blockId": "[\"error\",12]",
+          "anchor": "error",
+          "quote": "ValueError( [rank0]: ValueError: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2). Otherwise, the output might be wrong. Set Flashinfer backend by export VLLM_ATTENTION_BACKEND=FLASHINFER. (VllmWorkerProcess pid=239160) ERROR 11-15 04:18:31 multiproc_worker_utils.py:226] Exception in worker VllmWorkerProcess while processing method determine_num_available_blocks: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2).",
+          "hash": "aed574f9dc3bc5db21ad19a0acd9a733996c3e62d5e10ea64bcf8242a54d4176"
         },
         "targetEvidence": {
-          "articleId": "finetuning-notes",
-          "blockId": "[\"2\",12]",
-          "anchor": "2",
-          "quote": "잘 설치되는 것 같아, pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118를 통해 torch 설치",
-          "hash": "0a54c5152dbb252a1fea9d4339dfc7e8b42195606f2c18582e561e658b60054b"
+          "articleId": "vllm-weight-loading",
+          "blockId": "[\"problem\",1]",
+          "anchor": "problem",
+          "quote": "tensor-parallel-size >= 2 지정시, weight 무한 로딩 문제",
+          "hash": "29a0d56003fe9ab772e0679717c9a3e044c33f84eb347c840ed1557ff0ed44ad"
         }
       },
       {
-        "id": "model-input-length",
+        "id": "lm-evaluation-harness-oom",
         "relation": "related_method",
-        "reason": "두 오류 로그 모두 FlashInfer의 prefill 처리에서 발생하며, 주의할 설정을 비교해볼 수 있습니다.",
+        "reason": "Gemma-2의 backend 설정 오류와 vLLM 평가 실행에서 발생한 OOM 문제를 나란히 확인할 수 있습니다.",
         "sourceEvidence": {
           "articleId": "vllm-gemma-troubleshooting",
-          "blockId": "[\"error-2\",8]",
-          "anchor": "error-2",
-          "quote": "self.prefill_wrapper.begin_forward( [rank0]: File \"/data/envs/llm_test/lib/python3.10/site-packages/flashinfer/prefill.py\", line 832, in plan [rank0]: self._wrapper.plan( [rank0]: RuntimeError: CHECK_EQ(paged_kv_indptr.size(0), batch_size + 1) failed.",
-          "hash": "5ad41915206fc5dde4a162b0ac965c75430c53c027845001a357c0f18cc50123"
+          "blockId": "[\"error\",12]",
+          "anchor": "error",
+          "quote": "ValueError( [rank0]: ValueError: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2). Otherwise, the output might be wrong. Set Flashinfer backend by export VLLM_ATTENTION_BACKEND=FLASHINFER. (VllmWorkerProcess pid=239160) ERROR 11-15 04:18:31 multiproc_worker_utils.py:226] Exception in worker VllmWorkerProcess while processing method determine_num_available_blocks: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2).",
+          "hash": "aed574f9dc3bc5db21ad19a0acd9a733996c3e62d5e10ea64bcf8242a54d4176"
         },
         "targetEvidence": {
-          "articleId": "model-input-length",
-          "blockId": "[\"model-input-sequence-length\",2]",
-          "anchor": "model-input-sequence-length",
-          "quote": "물론 tokenizer의 padding = \"max_length\", truncation = True, max_length = 2048와 같은 옵션을 줘서 문장 길이를 맞춰줄 수도 있지만 backbone 모델의 input sequence length가 맞추려는 길이보다 짧을 경우 다음과 같은 에러 발생",
-          "hash": "5629ab0bfa58ae498e8ac300c4e5f06c74f54d2f72ac258a4ba8a7d58a57f468"
+          "articleId": "lm-evaluation-harness-oom",
+          "blockId": "[\"error\",2]",
+          "anchor": "error",
+          "quote": "OOM 에러 발생!",
+          "hash": "5823691ef56e4d0819eae917b3e76957d28aa576919fc687b530130ecd349fa9"
         }
       }
     ]

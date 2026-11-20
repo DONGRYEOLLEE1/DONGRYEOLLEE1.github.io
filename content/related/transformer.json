@@ -1,0 +1,309 @@
+{
+  "version": 2,
+  "id": "transformer",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "d338970f5aca9d23fda6d78e82258053ab0635da801b87b9106c091cc0096ff0",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "transformer",
+        "role": "about",
+        "evidence": {
+          "articleId": "transformer",
+          "blockId": "[\"trnasformer-의의\",1]",
+          "anchor": "trnasformer-의의",
+          "quote": "Attention 메커니즘만을 사용하는 Transformer라는 새로운 구조를 제안하였다.",
+          "hash": "b68674931cc50c529d66a7bfbe16a60e1f91a5d5b680393015f5e1b5314f150d"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "37c1e866158ac2af7bcdc97305d1f3c6567ced73c328aaf31917c2fb0adfc06b",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"layer-normalization\",2]",
+          "[\"출현배경\",1]"
+        ],
+        "targetBlocks": [
+          "[\"architecture\",1]",
+          "[\"introduction\",1]",
+          "[\"related-work\",1]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"positional-encoding\",1]",
+          "[\"self-attention-1\",14]"
+        ],
+        "targetBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "[\"의의\",2]",
+          "[\"요약\",19]"
+        ]
+      },
+      {
+        "id": "rnn",
+        "sourceBlocks": [
+          "[\"self-attention-1\",26]",
+          "[\"positional-encoding\",1]",
+          "[\"position-wise-ffn\",2]"
+        ],
+        "targetBlocks": [
+          "[\"gradient-vanishing\",4]",
+          "[\"abstract\",1]",
+          "[\"relu함수를-사용하지-않는-이유\",5]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"input-embedding\",1]",
+          "[\"self-attention\",2]"
+        ],
+        "targetBlocks": [
+          "[\"model-architecture\",1]",
+          "[\"inputoutput-representation\",9]",
+          "[\"요약\",1]"
+        ]
+      },
+      {
+        "id": "rtpurbo",
+        "sourceBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"self-attention-1\",30]",
+          "[\"multi-head-attention\",1]"
+        ],
+        "targetBlocks": [
+          "[\"정리\",1]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "[\"adaptive-sparse-attention\",2]"
+        ]
+      },
+      {
+        "id": "fast-r-cnn",
+        "sourceBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"self-attention\",5]",
+          "[\"final-linear-and-softmax-layer\",3]"
+        ],
+        "targetBlocks": [
+          "[\"fast-r-cnn-의의\",2]",
+          "[\"rp-by-selective-search\",2]",
+          "[\"abstract\",3]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"self-attention\",5]",
+          "[\"multi-head-attention\",5]"
+        ],
+        "targetBlocks": [
+          "[\"의의\",1]",
+          "[\"micro-design\",5]",
+          "[\"instruction\",8]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"multi-head-attention\",5]",
+          "[\"final-linear-and-softmax-layer\",3]"
+        ],
+        "targetBlocks": [
+          "[\"curiosity\",1]",
+          "[\"answer\",8]",
+          "[\"case-1\",1]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"self-attention\",5]",
+          "[\"transformer가-기존-모델과-다른점\",2]"
+        ],
+        "targetBlocks": [
+          "[\"의의\",2]",
+          "[\"abstract\",2]",
+          "[\"2-rpnregion-proposal-network\",19]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"final-linear-and-softmax-layer\",3]",
+          "[\"self-attention\",5]",
+          "[\"출현배경\",1]"
+        ],
+        "targetBlocks": [
+          "[\"문제점---내가-필요로하는-것보다-더-많은-otuput-값을-얻는다\",12]",
+          "[\"effecitve-stride-of-a-network\",4]",
+          "[\"overfeat-classification-network\",1]"
+        ]
+      },
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"input-embedding\",2]",
+          "[\"self-attention\",11]",
+          "[\"positional-encoding\",4]"
+        ],
+        "targetBlocks": [
+          "[\"model-input-sequence-length\",1]",
+          "[\"env\",3]",
+          "[\"model-input-sequence-length\",6]"
+        ]
+      },
+      {
+        "id": "lstm",
+        "sourceBlocks": [
+          "[\"positional-encoding\",1]",
+          "[\"출현배경\",1]",
+          "[\"self-attention-1\",27]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",4]",
+          "[\"step-4-output-gate-hidden-state--어떤-출력값을-출력할지-결정하는-과정\",5]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",9]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"transformer\",1]",
+          "[\"transformer가-기존-모델과-다른점\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",10]",
+          "[\"speculative-sampling\",2]",
+          "[\"overview\",3]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"self-attention-1\",5]",
+          "[\"self-attention\",5]",
+          "[\"transformer가-기존-모델과-다른점\",2]"
+        ],
+        "targetBlocks": [
+          "[\"방법2-selective-search\",2]",
+          "[\"end-to-end\",2]",
+          "[\"rpnregions-proposal-network\",4]"
+        ]
+      },
+      {
+        "id": "dflash",
+        "sourceBlocks": [
+          "[\"decoder-block\",2]",
+          "[\"masked-multi-head-attention\",1]",
+          "[\"self-attention-1\",33]"
+        ],
+        "targetBlocks": [
+          "[\"training\",1]",
+          "[\"inference\",7]",
+          "[\"introduction\",9]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "vit",
+        "relation": "related_method",
+        "reason": "이미지를 패치 임베딩 시퀀스로 바꿔 Transformer에 입력하는 비전 적용 방식을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "transformer",
+          "blockId": "[\"trnasformer-의의\",1]",
+          "anchor": "trnasformer-의의",
+          "quote": "Attention 메커니즘만을 사용하는 Transformer라는 새로운 구조를 제안하였다.",
+          "hash": "b68674931cc50c529d66a7bfbe16a60e1f91a5d5b680393015f5e1b5314f150d"
+        },
+        "targetEvidence": {
+          "articleId": "vit",
+          "blockId": "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "anchor": "transformer의-계산-효율성과-scalability를-비전에-활용",
+          "quote": "표준 Transformer를 최대한 변형 없이 직접적으로 이미지에 적용하였다. 이를 위해 이미지를 패치 조각으로 쪼갠다. 그리고 각각의 패치에 대해 선형적인 임베딩의 시퀀스를 제공하여 Transformer에 입력하였다. 이때 이미지의 패치는 마치 NLP에서의 토큰과 같이 다루게 된다. 모델은 이미지 분류 태스크에 대해 지도 학습 방식으로 학습하였다.",
+          "hash": "3c677d0e99eb275ec2794dd5379bab388dafc305a15bb7178ba8d90787fe1481"
+        }
+      },
+      {
+        "id": "bert",
+        "relation": "related_method",
+        "reason": "Transformer 인코더를 쌓은 구조가 BERT의 양방향 인코더 구성에서 어떻게 쓰이는지 알 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "transformer",
+          "blockId": "[\"trnasformer-의의\",1]",
+          "anchor": "trnasformer-의의",
+          "quote": "Attention 메커니즘만을 사용하는 Transformer라는 새로운 구조를 제안하였다.",
+          "hash": "b68674931cc50c529d66a7bfbe16a60e1f91a5d5b680393015f5e1b5314f150d"
+        },
+        "targetEvidence": {
+          "articleId": "bert",
+          "blockId": "[\"model-architecture\",1]",
+          "anchor": "model-architecture",
+          "quote": "multi-layer bidirectional Transformer encoder 구조",
+          "hash": "49c04b002c01a06725f757512322a9544bd2b5c77944cb7a75f00be77d66b8df"
+        }
+      },
+      {
+        "id": "llama",
+        "relation": "related_method",
+        "reason": "Transformer 하위층 입력을 정규화하는 pre-normalization과 RMSNorm의 적용 방식을 알아볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "transformer",
+          "blockId": "[\"trnasformer-의의\",1]",
+          "anchor": "trnasformer-의의",
+          "quote": "Attention 메커니즘만을 사용하는 Transformer라는 새로운 구조를 제안하였다.",
+          "hash": "b68674931cc50c529d66a7bfbe16a60e1f91a5d5b680393015f5e1b5314f150d"
+        },
+        "targetEvidence": {
+          "articleId": "llama",
+          "blockId": "[\"architecture\",1]",
+          "anchor": "architecture",
+          "quote": "Pre-normailization(GPT3), 학습 안정성을 향상시키기 위해 output을 일반화하는 대신에 각각의 transformer sub-layer의 input을 normalize 해줬습니다. 또한 RMSNorm normalizing 함수를 사용하였습니다.",
+          "hash": "60102df00c8ce259b7269391bfc68bae848c47cc20d25cdbf06a5906b184a3a7"
+        }
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "relation": "related_method",
+        "reason": "Transformer 기반 autoregressive decoding을 아키텍처 변경 없이 가속하는 speculative decoding의 접근을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "transformer",
+          "blockId": "[\"transformer\",1]",
+          "anchor": "transformer",
+          "quote": "기존의 RNN처럼 하나씩 처리하는게 아닌 한꺼번에 처리하며, 기존의 Attention 메커니즘을 사용하면서 학습과 병렬화(Parallelize)가 쉽게 되게하는 모델",
+          "hash": "4c6a1af4459f769bd17fc62d6a434c746cf93887d6c0fef59f728dc5844aa951"
+        },
+        "targetEvidence": {
+          "articleId": "speculative-decoding-paper",
+          "blockId": "[\"introduction\",10]",
+          "anchor": "introduction",
+          "quote": "Speculative decoding — 이를 autoregressive decoding에 적용한 메커니즘. 아키텍처 변경 없음, 재학습 없음, 출력 분포 변화 없음(lossless). 기존(off-the-shelf) 모델 조합만으로 동작함.",
+          "hash": "1c3cb1ed0968001c77f0de40750f8a3ea1213cebbdac9b967f030a167208b696"
+        }
+      }
+    ]
+  }
+}

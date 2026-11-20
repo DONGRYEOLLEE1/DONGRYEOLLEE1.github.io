@@ -1,0 +1,263 @@
+{
+  "version": 2,
+  "id": "developing-daily-06",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "f25063249c9e7d37ba502b8b9582a2fe3474fb47ce24057352aaf9eb2ea4f761",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "quantization",
+        "role": "applies",
+        "evidence": {
+          "articleId": "developing-daily-06",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": "$ cd {ENV}/lib/python-3.10/site-packages/bitsandbytes $ cp libbitsandbytes_cuda118.so libbitsandbytes_cpu.so",
+          "hash": "56832f339cb838e82d9dbb16d59be8d5d89c8beb85794454b122d5c61e7cad66"
+        }
+      },
+      {
+        "id": "cuda",
+        "role": "applies",
+        "evidence": {
+          "articleId": "developing-daily-06",
+          "blockId": "[\"solution\",2]",
+          "anchor": "solution",
+          "quote": "cuda 버전에 맞게 파일을 복사해주면 됨",
+          "hash": "779bd9c17b2d24675908211f13a4565ed1411a3f535ed3cac061d77a1be30fbc"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "1e99d85dc919d0cd6bf3089f8a32f4bffbc7a4b54f6a8be9980535f196add660",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "developing-daily-05",
+        "sourceBlocks": [
+          "[\"error2\",1]",
+          "[\"ref\",1]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"sehongt5-large-questiongeneration\",3]",
+          "[\"kobart-questiongeneration\",4]",
+          "[\"정규표현식\",8]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"solution\",2]",
+          "[\"solution-1\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"4bit-quantization\",1]",
+          "[\"현상\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"ref\",1]",
+          "[\"solution-1\",1]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",1]",
+          "[\"tgi\",2]",
+          "[\"docker\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"ref\",1]",
+          "[\"solution-1\",2]",
+          "[\"error2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"translation\",1]",
+          "[\"workflow\",1]",
+          "[\"sbert\",1]"
+        ]
+      },
+      {
+        "id": "netplan-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"error2\",2]",
+          "[\"solution-1\",2]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution-1\",1]",
+          "[\"solution\",1]",
+          "[\"error2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"2️⃣\",1]",
+          "[\"envs\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"ref\",1]",
+          "[\"solution-1\",2]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",1]",
+          "[\"ts\",4]",
+          "[\"gradio\",1]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"error2\",2]",
+          "[\"solution-1\",2]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"원인\",1]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-03",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"error2\",1]",
+          "[\"solution-1\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"error2\",2]",
+          "[\"solution-1\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"원인\",2]",
+          "[\"issue\",5]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution-1\",1]",
+          "[\"solution\",1]",
+          "[\"error2\",1]"
+        ],
+        "targetBlocks": [
+          "[\"envs\",8]",
+          "[\"issue\",2]",
+          "[\"prob\",2]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"solution-1\",1]",
+          "[\"error2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"3️⃣\",8]",
+          "[\"2️⃣\",2]",
+          "[\"1️⃣\",2]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"error2\",2]",
+          "[\"solution-1\",1]"
+        ],
+        "targetBlocks": [
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"cuda-cudnn\",5]",
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",9]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution-1\",1]",
+          "[\"solution\",1]",
+          "[\"error2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"조치-2\",2]",
+          "[\"error\",12]",
+          "[\"조치-1\",1]"
+        ]
+      },
+      {
+        "id": "docker-gpu-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"error2\",2]",
+          "[\"solution-1\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "qlora-troubleshooting",
+        "relation": "related_method",
+        "reason": "bitsandbytes의 CUDA·CPU 라이브러리 파일을 복사하는 조치와 CUDA 버전에 맞춰 파일을 대체하는 해결법을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "developing-daily-06",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": "$ cd {ENV}/lib/python-3.10/site-packages/bitsandbytes $ cp libbitsandbytes_cuda118.so libbitsandbytes_cpu.so",
+          "hash": "56832f339cb838e82d9dbb16d59be8d5d89c8beb85794454b122d5c61e7cad66"
+        },
+        "targetEvidence": {
+          "articleId": "qlora-troubleshooting",
+          "blockId": "[\"해결\",2]",
+          "anchor": "해결",
+          "quote": "cuda 버젼에 상응하는 파일을 복사(대체)해주면 된다",
+          "hash": "5d8db550cf758bf1f42b0c0da0c4b3c25da36bffe67596ec4d9337054b7c40b8"
+        }
+      }
+    ]
+  }
+}

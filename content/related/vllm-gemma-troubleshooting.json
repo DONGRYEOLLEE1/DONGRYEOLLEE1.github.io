@@ -1,0 +1,290 @@
+{
+  "version": 2,
+  "id": "vllm-gemma-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "4d86925e91062d5b2ecdfbf5bc95c5694341ec33159df620ac5deb70591673c6",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "vllm",
+        "role": "applies",
+        "evidence": {
+          "articleId": "vllm-gemma-troubleshooting",
+          "blockId": "[\"error\",12]",
+          "anchor": "error",
+          "quote": "ValueError( [rank0]: ValueError: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2). Otherwise, the output might be wrong. Set Flashinfer backend by export VLLM_ATTENTION_BACKEND=FLASHINFER. (VllmWorkerProcess pid=239160) ERROR 11-15 04:18:31 multiproc_worker_utils.py:226] Exception in worker VllmWorkerProcess while processing method determine_num_available_blocks: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2).",
+          "hash": "aed574f9dc3bc5db21ad19a0acd9a733996c3e62d5e10ea64bcf8242a54d4176"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "25b89794e0cbf013e077a98ac90631da05db47e9c95b95c8a888cdacee520591",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"error\",12]",
+          "[\"error-2\",1]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",1]",
+          "[\"problem\",3]"
+        ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",12]",
+          "[\"error-2\",17]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"script-1\",1]",
+          "[\"error-message\",9]",
+          "[\"environment\",2]"
+        ]
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"error\",12]",
+          "[\"env\",3]",
+          "[\"error-2\",6]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",3]",
+          "[\"error\",2]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "netplan-troubleshooting",
+        "sourceBlocks": [
+          "[\"조치-1\",1]",
+          "[\"error\",5]",
+          "[\"조치-2\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"error-2\",17]",
+          "[\"env\",3]",
+          "[\"error\",5]"
+        ],
+        "targetBlocks": [
+          "[\"error\",2]",
+          "[\"env\",9]",
+          "[\"solution\",12]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"env\",4]",
+          "[\"error\",1]",
+          "[\"error-2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"environment\",1]",
+          "[\"reproduction\",1]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"env\",3]",
+          "[\"error\",1]",
+          "[\"error-2\",8]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",3]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"error-2\",17]",
+          "[\"error\",5]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"error\",3]",
+          "[\"env\",1]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"조치-2\",1]",
+          "[\"error\",5]",
+          "[\"조치-1\",2]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"4bit-quantization\",30]",
+          "[\"현상\",1]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"env\",2]",
+          "[\"조치-2\",1]",
+          "[\"error\",9]"
+        ],
+        "targetBlocks": [
+          "[\"env\",2]",
+          "[\"해결\",5]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"env\",3]",
+          "[\"error\",9]",
+          "[\"error-2\",4]"
+        ],
+        "targetBlocks": [
+          "[\"env\",2]",
+          "[\"issue\",2]",
+          "[\"해결\",2]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"error-2\",16]",
+          "[\"env\",3]",
+          "[\"error\",17]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",1]",
+          "[\"envs\",8]",
+          "[\"prob\",1]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"env\",1]",
+          "[\"조치-2\",1]",
+          "[\"error-2\",2]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"1\",1]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",5]",
+          "[\"error-2\",8]",
+          "[\"env\",6]"
+        ],
+        "targetBlocks": [
+          "[\"에러\",4]",
+          "[null,1]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"error\",6]",
+          "[\"error-2\",3]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"curiosity\",1]",
+          "[\"answer\",7]",
+          "[\"case-1\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "relation": "related_method",
+        "reason": "Gemma-2의 logits_soft_cap 오류와 tensor parallel 실행 중 발생한 vLLM worker 오류를 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vllm-gemma-troubleshooting",
+          "blockId": "[\"error\",12]",
+          "anchor": "error",
+          "quote": "ValueError( [rank0]: ValueError: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2). Otherwise, the output might be wrong. Set Flashinfer backend by export VLLM_ATTENTION_BACKEND=FLASHINFER. (VllmWorkerProcess pid=239160) ERROR 11-15 04:18:31 multiproc_worker_utils.py:226] Exception in worker VllmWorkerProcess while processing method determine_num_available_blocks: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2).",
+          "hash": "aed574f9dc3bc5db21ad19a0acd9a733996c3e62d5e10ea64bcf8242a54d4176"
+        },
+        "targetEvidence": {
+          "articleId": "vllm-tensor-parallel-troubleshooting",
+          "blockId": "[\"error-message\",9]",
+          "anchor": "error-message",
+          "quote": "/usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown warnings.warn('resource_tracker: There appear to be %d ' /usr/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown warnings.warn('resource_tracker: There appear to be %d '",
+          "hash": "46793cf76946aabd41f5ea505731a729cf3f4aafecb2cfaa1283575dc4c57726"
+        }
+      },
+      {
+        "id": "vllm-weight-loading",
+        "relation": "related_method",
+        "reason": "Gemma-2에서 FlashInfer backend가 필요한 오류와 tensor parallel 설정에서 weight 로딩이 멈추는 문제를 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vllm-gemma-troubleshooting",
+          "blockId": "[\"error\",12]",
+          "anchor": "error",
+          "quote": "ValueError( [rank0]: ValueError: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2). Otherwise, the output might be wrong. Set Flashinfer backend by export VLLM_ATTENTION_BACKEND=FLASHINFER. (VllmWorkerProcess pid=239160) ERROR 11-15 04:18:31 multiproc_worker_utils.py:226] Exception in worker VllmWorkerProcess while processing method determine_num_available_blocks: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2).",
+          "hash": "aed574f9dc3bc5db21ad19a0acd9a733996c3e62d5e10ea64bcf8242a54d4176"
+        },
+        "targetEvidence": {
+          "articleId": "vllm-weight-loading",
+          "blockId": "[\"problem\",1]",
+          "anchor": "problem",
+          "quote": "tensor-parallel-size >= 2 지정시, weight 무한 로딩 문제",
+          "hash": "29a0d56003fe9ab772e0679717c9a3e044c33f84eb347c840ed1557ff0ed44ad"
+        }
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "relation": "related_method",
+        "reason": "Gemma-2의 backend 설정 오류와 vLLM 평가 실행에서 발생한 OOM 문제를 나란히 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vllm-gemma-troubleshooting",
+          "blockId": "[\"error\",12]",
+          "anchor": "error",
+          "quote": "ValueError( [rank0]: ValueError: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2). Otherwise, the output might be wrong. Set Flashinfer backend by export VLLM_ATTENTION_BACKEND=FLASHINFER. (VllmWorkerProcess pid=239160) ERROR 11-15 04:18:31 multiproc_worker_utils.py:226] Exception in worker VllmWorkerProcess while processing method determine_num_available_blocks: Please use Flashinfer backend for models with logits_soft_cap (i.e., Gemma-2).",
+          "hash": "aed574f9dc3bc5db21ad19a0acd9a733996c3e62d5e10ea64bcf8242a54d4176"
+        },
+        "targetEvidence": {
+          "articleId": "lm-evaluation-harness-oom",
+          "blockId": "[\"error\",2]",
+          "anchor": "error",
+          "quote": "OOM 에러 발생!",
+          "hash": "5823691ef56e4d0819eae917b3e76957d28aa576919fc687b530130ecd349fa9"
+        }
+      }
+    ]
+  }
+}

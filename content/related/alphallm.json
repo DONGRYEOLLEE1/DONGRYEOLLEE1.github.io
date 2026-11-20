@@ -1,0 +1,301 @@
+{
+  "version": 2,
+  "id": "alphallm",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "16827cb6429ba785a2460734743914eea860af6d9a5f113aad5d0fc2a1844747",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "reinforcement-learning",
+        "role": "about",
+        "evidence": {
+          "articleId": "alphallm",
+          "blockId": "[\"related-work\",3]",
+          "anchor": "related-work",
+          "quote": "이전 연구와는 달리, 우리는 LLM의 자기 개선을 위해 MCTS(Monte Carlo Tree Search)의 감독을 활용할 것을 제안합니다. MCTS의 output을 사용하여 LLM을 계속해서 훈련합니다. MCTS의 output은 기존의 sampling 데이터보다 더 품질이 더 좋기에 가능하며 이 품질의 차이는 LLM이 self-improving을 가능하게 만들어줍니다.",
+          "hash": "6f20c7c4d404228cddf29646d99e69ac40a0dff5c52a8dcb72f0e88b8119c51f"
+        }
+      },
+      {
+        "id": "chain-of-thought",
+        "role": "about",
+        "evidence": {
+          "articleId": "alphallm",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "그러나 LLM이 자신의 출력에 대해 효과적으로 비평하여 응답 품질을 향상시키거나 응답의 품질을 나타내는 scalar reward를 적용할 수 있는지는 특히 복잡한 계획 및 추론을 요구하는 상황에서 지속적인 연구 주제로 남아있었음. MCTS와 reinforcement learning을 통해 모델이 self-play하고 인간과 동등한 성능에 부합하며 심지어 게임과 같은 복잡한 task에서 인간을 능가하는 성능을 보여주었음. 이로 말미암아 self-improving하는 novel paradigm을 접목한 MCTS + LLM이 가능하지 않을까? 라는 자연스러운 질문이 제기되었음.",
+          "hash": "3772fe046da1ac1fc314512f41ef452a582b2a98ab48fbf122ab3013c79a767e"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "a27122ca3813e20c2b66134e5f6a50b937480098bfcbc6d0cad62a649663f3c8",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "thinkingcap",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"related-work\",3]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"conclusion\",1]",
+          "[\"resources\",2]",
+          "[\"tldr\",17]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"introduction\",6]",
+          "[\"related-work\",3]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"the-data-factory\",1]",
+          "[\"baselines\",1]"
+        ]
+      },
+      {
+        "id": "constitutional-ai",
+        "sourceBlocks": [
+          "[\"related-work\",3]",
+          "[\"introduction\",1]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"rl-stage-rlaif\",1]",
+          "[\"introduction\",5]",
+          "[\"method\",1]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",2]"
+        ],
+        "targetBlocks": [
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"introduction\",1]",
+          "[\"symbolic-reasoning\",1]"
+        ]
+      },
+      {
+        "id": "searchswarm",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"related-work\",1]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"정리\",1]",
+          "[\"experiments\",1]"
+        ]
+      },
+      {
+        "id": "prompt-engineering",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",2]"
+        ],
+        "targetBlocks": [
+          "[\"cot-prompting\",1]",
+          "[\"zero-shot-cot-prompting\",7]",
+          "[\"to-do-or-not-to-do\",5]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",3]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[null,2]",
+          "[\"few-shot-learning은-어떻게-작동할까\",1]"
+        ]
+      },
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"problem-formulation\",1]",
+          "[\"introduction\",3]",
+          "[\"related-work\",2]"
+        ],
+        "targetBlocks": [
+          "[\"problem-formulation\",2]",
+          "[\"introduction\",2]",
+          "[\"convnet-efficiency\",1]"
+        ]
+      },
+      {
+        "id": "kodistill",
+        "sourceBlocks": [
+          "[\"related-work\",3]",
+          "[\"introduction\",3]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"3-continue-with-sft-and-verifiable-grpo\",10]",
+          "[null,2]",
+          "[\"at-a-glance\",1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[\"related-work\",2]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",7]",
+          "[\"prompt-tuning\",1]",
+          "[\"interpretability\",1]"
+        ]
+      },
+      {
+        "id": "k-browsecomp",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"정리\",1]",
+          "[\"synthetic-split-100문제--이-논문의-핵심-기여\",2]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"related-work\",2]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"의의\",2]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]"
+        ]
+      },
+      {
+        "id": "dflash",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"preliminary\",7]",
+          "[\"inference\",9]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"introduction\",10]",
+          "[\"related-work\",3]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]",
+          "[\"nas-search\",2]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"related-work\",3]",
+          "[\"problem-formulation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",9]",
+          "[\"speculative-sampling\",1]",
+          "[\"overview\",5]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "constitutional-ai",
+        "relation": "related_method",
+        "reason": "두 방법 모두 모델의 자기 비평을 활용하지만, Constitutional AI는 비평·수정 데이터 생성과 AI 선호 기반 강화학습의 구체적 단계를 설명합니다.",
+        "sourceEvidence": {
+          "articleId": "alphallm",
+          "blockId": "[\"introduction\",1]",
+          "anchor": "introduction",
+          "quote": "Self-correction & self-learning 계열 LLM의 2가지 핵심 전략",
+          "hash": "c8823752c4804e7bccb92ba91476c1bd23b8896c61dcbf5f62a2a3031c0a3a77"
+        },
+        "targetEvidence": {
+          "articleId": "constitutional-ai",
+          "blockId": "[\"method\",1]",
+          "anchor": "method",
+          "quote": "CAI는 크게 두 단계로 구성됨. (1) Supervised stage — 모델의 self-critique·revision으로 SL 데이터를 만들어 초기 정렬을 잡고, (2) RL stage — AI가 만든 선호 라벨로 PM을 학습해 RLAIF로 성능을 끌어올림.",
+          "hash": "9c08f736e54f87525d67a09f1851f9faeeee66ed714dd8c0d89b3fa9bcb7de75"
+        }
+      },
+      {
+        "id": "thinkingcap",
+        "relation": "related_method",
+        "reason": "복잡한 추론에서 보상과 강화학습으로 응답을 개선한다는 맥락을 바탕으로, correctness 조건을 둔 길이 페널티와 GRPO 적용을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "alphallm",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "그러나 LLM이 자신의 출력에 대해 효과적으로 비평하여 응답 품질을 향상시키거나 응답의 품질을 나타내는 scalar reward를 적용할 수 있는지는 특히 복잡한 계획 및 추론을 요구하는 상황에서 지속적인 연구 주제로 남아있었음. MCTS와 reinforcement learning을 통해 모델이 self-play하고 인간과 동등한 성능에 부합하며 심지어 게임과 같은 복잡한 task에서 인간을 능가하는 성능을 보여주었음. 이로 말미암아 self-improving하는 novel paradigm을 접목한 MCTS + LLM이 가능하지 않을까? 라는 자연스러운 질문이 제기되었음.",
+          "hash": "3772fe046da1ac1fc314512f41ef452a582b2a98ab48fbf122ab3013c79a767e"
+        },
+        "targetEvidence": {
+          "articleId": "thinkingcap",
+          "blockId": "[\"conclusion\",1]",
+          "anchor": "conclusion",
+          "quote": "We set out to make a 2B reasoner think less, and found that the base model's real problem was not thinking too much but never stopping. A correctness-gated length penalty, placed only in the reward and optimized with stock GRPO, largely fixes that in distribution, within 200 LoRA updates on one consumer GPU: it cuts thinking by three quarters and doubles strict accuracy. None of the refinements we tried improved on it.",
+          "hash": "019e4430f782fdb8a5f62184597d2d3666cbbf44db79974d8352a390b559e488"
+        }
+      },
+      {
+        "id": "chain-of-thought",
+        "relation": "related_method",
+        "reason": "복잡한 추론을 다룬다는 공통점이 있어, MCTS 기반 자기 개선과 중간 추론 단계를 생성하는 CoT 접근의 차이를 알아볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "alphallm",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "그러나 LLM이 자신의 출력에 대해 효과적으로 비평하여 응답 품질을 향상시키거나 응답의 품질을 나타내는 scalar reward를 적용할 수 있는지는 특히 복잡한 계획 및 추론을 요구하는 상황에서 지속적인 연구 주제로 남아있었음. MCTS와 reinforcement learning을 통해 모델이 self-play하고 인간과 동등한 성능에 부합하며 심지어 게임과 같은 복잡한 task에서 인간을 능가하는 성능을 보여주었음. 이로 말미암아 self-improving하는 novel paradigm을 접목한 MCTS + LLM이 가능하지 않을까? 라는 자연스러운 질문이 제기되었음.",
+          "hash": "3772fe046da1ac1fc314512f41ef452a582b2a98ab48fbf122ab3013c79a767e"
+        },
+        "targetEvidence": {
+          "articleId": "chain-of-thought",
+          "blockId": "[\"chain-of-thought-prompting\",1]",
+          "anchor": "chain-of-thought-prompting",
+          "quote": "여러 단계를 거쳐야하는 수학 문제와 같은 복잡한 추론을 통해 문제를 푸는 절차를 연구진은 고려하였음. 이건 전형적인 문제를 하나하나 분해하여 정답에 접근하는 방식임. 이 논문의 목표는 LLM에 유사한 CoT를 생성할 수 있는 기능을 부여하는 것입니다. 일관된 일련의 중간 추론 단계를 생성할 수 있는 능력을 LLM에 부여하는 것입니다.",
+          "hash": "82ac1138b000944e339224661220eee68aa8b30584e7b60c99240027c33e995e"
+        }
+      }
+    ]
+  }
+}

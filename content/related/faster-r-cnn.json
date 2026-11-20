@@ -1,0 +1,320 @@
+{
+  "version": 2,
+  "id": "faster-r-cnn",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "2451a366cbeb28c9f0dfa0f71814c45a4eb19c1d60fdc0775913c1b12e7a8b88",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "object-detection",
+        "role": "about",
+        "evidence": {
+          "articleId": "faster-r-cnn",
+          "blockId": "[\"preview\",3]",
+          "anchor": "preview",
+          "quote": "RPN에서 RP를 추출하고 이를 Fast R-CNN 네트워크에 전달하여 객체의 class와 위치를 예측한다. 이를 통해 모델의 전체 과정이 GPU상에서 동작하여 bottleneck 현상이 발생하지 않으며, end-to-end로 네트워크를 학습시키는 것이 가능해진다.",
+          "hash": "acf2b3fbc6e03337fb83d165649805cf94494ee777cf43f24e6071865bac4678"
+        }
+      },
+      {
+        "id": "cnn",
+        "role": "about",
+        "evidence": {
+          "articleId": "faster-r-cnn",
+          "blockId": "[\"preview\",4]",
+          "anchor": "preview",
+          "quote": "원본이미지를 pre-trained CNN 모델에 입력해 Feature Map를 얻음 (end-to-end로 학습)",
+          "hash": "0d7862ca3c9fad4598532b02a6cfedd5094f1b6bcef696fa8a3e5b07ce503ed5"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "3b3384cf35ac89d42edcc67db51c7ab7e558774f2f392822c77e8a17b064b180",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "fast-r-cnn",
+        "sourceBlocks": [
+          "[\"preview\",3]",
+          "[\"preview\",4]",
+          "[\"7-max-pooling-by-roi-pooling\",4]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",2]",
+          "[\"preview\",1]",
+          "[\"max-pooling-by-roi-pooling\",3]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"preview\",3]",
+          "[\"preview\",4]",
+          "[\"2-rpnregion-proposal-network\",3]"
+        ],
+        "targetBlocks": [
+          "[\"backbone\",2]",
+          "[\"the-object-detection-task\",1]",
+          "[\"rpnregions-proposal-network\",4]"
+        ]
+      },
+      {
+        "id": "r-cnn",
+        "sourceBlocks": [
+          "[\"preview\",3]",
+          "[\"preview\",4]",
+          "[\"1-사전학습된-vgg16모델로-특징-추출\",4]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"사전학습된-alexnet을-fine-tune\",6]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"preview\",3]",
+          "[\"preview\",4]",
+          "[\"7-max-pooling-by-roi-pooling\",2]"
+        ],
+        "targetBlocks": [
+          "[\"overfeat-intuition\",2]",
+          "[\"overfeat-detection-network\",12]",
+          "[\"training-bounding-box-regressor\",3]"
+        ]
+      },
+      {
+        "id": "yolo-v1",
+        "sourceBlocks": [
+          "[\"preview\",3]",
+          "[\"preview\",4]",
+          "[\"의의\",2]"
+        ],
+        "targetBlocks": [
+          "[\"unified-detection\",1]",
+          "[\"network-design\",1]",
+          "[\"introduction\",2]"
+        ]
+      },
+      {
+        "id": "ohem",
+        "sourceBlocks": [
+          "[\"preview\",3]",
+          "[\"의의\",2]",
+          "[\"1-anchor-box\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",2]",
+          "[\"introduction\",3]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"의의\",2]",
+          "[\"abstract\",2]",
+          "[\"2-rpnregion-proposal-network\",19]"
+        ],
+        "targetBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"self-attention\",5]",
+          "[\"transformer가-기존-모델과-다른점\",2]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"preview\",4]",
+          "[\"의의\",4]",
+          "[\"alternating-training\",1]"
+        ],
+        "targetBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"의의\",2]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"의의\",1]",
+          "[\"1-사전학습된-vgg16모델로-특징-추출\",1]",
+          "[\"3-multi-task-loss\",8]"
+        ],
+        "targetBlocks": [
+          "[\"의의\",2]",
+          "[\"vision-transformervit\",16]",
+          "[\"요약\",9]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"preview\",4]",
+          "[\"의의\",1]",
+          "[\"1-anchor-box\",1]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",6]",
+          "[\"의의\",1]",
+          "[\"modernizing-a-convnet-a-roadmap\",1]"
+        ]
+      },
+      {
+        "id": "resnext",
+        "sourceBlocks": [
+          "[\"preview\",4]",
+          "[\"의의\",2]",
+          "[\"abstract\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"의의\",1]",
+          "[\"related-work\",2]"
+        ]
+      },
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"preview\",4]",
+          "[\"의의\",4]",
+          "[\"1-anchor-box\",2]"
+        ],
+        "targetBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"의의\",1]",
+          "[\"convnet-accuracy\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"5-anchor의-target-layer로부터-rpn을-학습하는-동안-anchor를-선택\",3]",
+          "[\"alternating-training\",1]",
+          "[\"의의\",2]"
+        ],
+        "targetBlocks": [
+          "[\"method-2-triplet-loss\",1]",
+          "[null,2]",
+          "[\"method-1-pairwise-similarity\",1]"
+        ]
+      },
+      {
+        "id": "map-evaluation",
+        "sourceBlocks": [
+          "[\"preview\",3]",
+          "[\"7-max-pooling-by-roi-pooling\",2]",
+          "[\"의의\",2]"
+        ],
+        "targetBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"ap\",4]",
+          "[\"interpolated-ap\",4]"
+        ]
+      },
+      {
+        "id": "rnn",
+        "sourceBlocks": [
+          "[\"abstract\",3]",
+          "[\"2-rpnregion-proposal-network\",5]",
+          "[\"preview\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"구조\",6]",
+          "[\"irnn\",12]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "fast-r-cnn",
+        "relation": "related_method",
+        "reason": "Faster R-CNN은 RPN이 만든 영역 제안을 Fast R-CNN에 전달하고, Fast R-CNN은 RoI pooling과 multi-task loss로 영역별 학습을 처리하는 방식을 설명합니다.",
+        "sourceEvidence": {
+          "articleId": "faster-r-cnn",
+          "blockId": "[\"preview\",3]",
+          "anchor": "preview",
+          "quote": "RPN에서 RP를 추출하고 이를 Fast R-CNN 네트워크에 전달하여 객체의 class와 위치를 예측한다. 이를 통해 모델의 전체 과정이 GPU상에서 동작하여 bottleneck 현상이 발생하지 않으며, end-to-end로 네트워크를 학습시키는 것이 가능해진다.",
+          "hash": "acf2b3fbc6e03337fb83d165649805cf94494ee777cf43f24e6071865bac4678"
+        },
+        "targetEvidence": {
+          "articleId": "fast-r-cnn",
+          "blockId": "[\"preview\",1]",
+          "anchor": "preview",
+          "quote": "R-CNN 모델은 2000장의 RP를 CNN 모델에 입력시켜 각각에 대하여 독립적으로 학습시켜 많은 시간이 소요된다. Fast R-CNN은 이러한 문제를 개선하여 단 1장의 이미지를 입력받으며, RP의 크기를 warp시킬 필요 없이 RoI(Region of Interest) pooling을 통해 고정된 크기의 feature vector를 fully connected layer(이하 fc layer)에 전달한다. 또한 multi-task loss를 사용하여 모델을 개별적으로 학습시킬 필요 없이 한 번에 학습시킨다. 이를 통해 학습 및 탐지 시간이 크게 감소하였다.",
+          "hash": "0540b668dfa6795df8932bc1a55e23a6d81e1cc94f2f390df5e5876dbb0ea14c"
+        }
+      },
+      {
+        "id": "object-detection-basics",
+        "relation": "related_method",
+        "reason": "Faster R-CNN에서 RPN이 영역 제안을 만들고 class-score와 bounding-box 출력을 내는 구체적 과정을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "faster-r-cnn",
+          "blockId": "[\"preview\",3]",
+          "anchor": "preview",
+          "quote": "RPN에서 RP를 추출하고 이를 Fast R-CNN 네트워크에 전달하여 객체의 class와 위치를 예측한다. 이를 통해 모델의 전체 과정이 GPU상에서 동작하여 bottleneck 현상이 발생하지 않으며, end-to-end로 네트워크를 학습시키는 것이 가능해진다.",
+          "hash": "acf2b3fbc6e03337fb83d165649805cf94494ee777cf43f24e6071865bac4678"
+        },
+        "targetEvidence": {
+          "articleId": "object-detection-basics",
+          "blockId": "[\"rpnregions-proposal-network\",4]",
+          "anchor": "rpnregions-proposal-network",
+          "quote": "참고로 위와 같이 RPN에서 2번의 Convolution을 거치는 이유는 1x1 Convolution을 거쳐야 Anchor Box별로 학습된 클래스와 Bounding Box Accordination을 쉽게 추출할 수 있기 때문이다.",
+          "hash": "cfdd4498bce2f81e841eb722d59866079f66060d014289f82ecdd885ac5bf9a5"
+        }
+      },
+      {
+        "id": "r-cnn",
+        "relation": "related_method",
+        "reason": "Faster R-CNN의 이미지 특징 추출과 대비해, R-CNN이 각 영역 제안을 CNN에 넣어 특징 벡터를 얻는 절차를 설명합니다.",
+        "sourceEvidence": {
+          "articleId": "faster-r-cnn",
+          "blockId": "[\"preview\",4]",
+          "anchor": "preview",
+          "quote": "원본이미지를 pre-trained CNN 모델에 입력해 Feature Map를 얻음 (end-to-end로 학습)",
+          "hash": "0d7862ca3c9fad4598532b02a6cfedd5094f1b6bcef696fa8a3e5b07ce503ed5"
+        },
+        "targetEvidence": {
+          "articleId": "r-cnn",
+          "blockId": "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "anchor": "feature-extraction-by-fine-tuned-alexnet",
+          "quote": "다음으로 2000개의 Region Proposal을 Fine Tune된 AlexNet에 입력해 2000(=Number of Region Proposal) x 4096(=Number of Feature Vector) 크기의 Feature vector를 추출한다. 논문의 저자는 Object Detection시, 특정 도메인에 맞는 class를 예측하기 위해서 기존의 ImageNet 데이터셋을 통해, 사전학습된 CNN모델을 도메인에 맞게 fine tune하는 방식을 제안한다. Fine tune된 모델을 사용하면 도메인에 맞게 보다 적합한 feature vector를 추출하는 것이 가능해진다.",
+          "hash": "18118d1c2c75e87b6fdfe76aa5ad1711500d35561a962f5e8a87f64fcb1ce677"
+        }
+      },
+      {
+        "id": "yolo-v1",
+        "relation": "related_method",
+        "reason": "Faster R-CNN은 RPN과 Fast R-CNN을 연결해 검출하며, YOLO는 검출 요소를 하나의 신경망으로 통합하는 방식을 보여줍니다.",
+        "sourceEvidence": {
+          "articleId": "faster-r-cnn",
+          "blockId": "[\"preview\",3]",
+          "anchor": "preview",
+          "quote": "RPN에서 RP를 추출하고 이를 Fast R-CNN 네트워크에 전달하여 객체의 class와 위치를 예측한다. 이를 통해 모델의 전체 과정이 GPU상에서 동작하여 bottleneck 현상이 발생하지 않으며, end-to-end로 네트워크를 학습시키는 것이 가능해진다.",
+          "hash": "acf2b3fbc6e03337fb83d165649805cf94494ee777cf43f24e6071865bac4678"
+        },
+        "targetEvidence": {
+          "articleId": "yolo-v1",
+          "blockId": "[\"unified-detection\",1]",
+          "anchor": "unified-detection",
+          "quote": "YOLO는 object detection의 개별요소를 single neural network로 통합한 모델이다. 각각의 bounding box를 예측하기 위해 이미지 전체의 특징을 활용한다. 이러한 YOLO의 디자인 덕분에 높은 정확성을 유지하면서 end-to-end 학습과 real-time object detection이 가능하다.",
+          "hash": "2f76cb73ddcd4a62802c6767af8d23743790d711debf235a3ab1196457b30497"
+        }
+      }
+    ]
+  }
+}

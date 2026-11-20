@@ -14,12 +14,13 @@ import rehypeKatex from 'rehype-katex';
 import rehypeStringify from 'rehype-stringify';
 import GithubSlugger from 'github-slugger';
 import { createHighlighter } from 'shiki';
+import { prepareCorpus, auditAll, auditSummary, projectRecommendations } from '../knowledge/phase2a.mjs';
+import { readRecords } from '../knowledge/store.mjs';
 import { generateRelated, validateKnowledge } from '../knowledge/related.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const readJson = async path => JSON.parse(await readFile(resolve(ROOT, path), 'utf8'));
 const legacyLinks = await readJson('content/legacy-links.json');
-const exists = async path => { try { return (await stat(path)).isFile(); } catch { return false; } };
 const digest = value => createHash('sha256').update(value).digest('hex');
 const strings = value => value == null ? [] : Array.isArray(value) ? value.map(String) : [String(value)];
 const plain = node => node.type === 'text' || node.type === 'inlineCode' || node.type === 'code' || node.type === 'math' || node.type === 'inlineMath' ? node.value || '' : (node.children || []).map(plain).join('');
@@ -228,7 +229,10 @@ export async function renderMarkdown(source, article, sourceMap = new Map()) {
   return processor.process(normalized);
 }
 
-export async function buildContent() {
+export async function loadPublicCorpus() {
+  for (const value of Object.values(report)) if (Array.isArray(value)) value.length = 0;
+  sourceResources.clear();
+  assetNfc.clear();
   await mkdir(resolve(ROOT,'generated'),{recursive:true});
   const metadata = await readJson('content/article-metadata.json');
   const concepts = await readJson('content/knowledge/concepts.json');
@@ -242,12 +246,12 @@ export async function buildContent() {
     if (!meta) throw new Error(`Missing reviewed metadata: ${sourcePath}`);
     if (data.published === false || (meta.publicationState || data.publicationState || 'published') !== 'published') continue;
     const title = String(meta.title || data.title || '').trim();
-    if (!title || !meta.description?.trim() || !meta.id || !Array.isArray(meta.conceptRefs) || !meta.conceptRefs.length) throw new Error(`Incomplete article metadata: ${sourcePath}`);
+    if (!title || !meta.description?.trim() || !meta.id || (meta.conceptRefs != null && !Array.isArray(meta.conceptRefs))) throw new Error(`Incomplete article metadata: ${sourcePath}`);
     const explicitDate = /^date:\s*["']?(\d{4}-\d{2}-\d{2})/m.exec(source)?.[1];
     const publishedAt = explicitDate || filename.slice(0,10);
     const article = { id:meta.id, sourcePath, path:legacyPath(filename,data), title, description:meta.description,
       publishedAt, language:meta.language || data.lang || 'ko', contentType:meta.contentType,
-      conceptRefs:meta.conceptRefs, featured:Boolean(meta.featured), ...(meta.hero?{hero:meta.hero}:{}),
+      conceptRefs:meta.conceptRefs || [], featured:Boolean(meta.featured), ...(meta.hero?{hero:meta.hero}:{}),
       ...(meta.updatedAt?{updatedAt:meta.updatedAt}:{}), legacyCategories:strings(data.categories ?? data.category),legacyTags:strings(data.tags),
       html:'', headings:[], plainText:'',related:[], publicationState:'published' };
     parsed.push({article,source,content,filename});
@@ -271,9 +275,53 @@ export async function buildContent() {
     const outputPath = article.path.startsWith('/research/') ? article.path.replace(/\/$/,'')+'/index.html' : article.path.endsWith('/') ? article.path+'index.html' : article.path.endsWith('.html') ? article.path : article.path+'.html';
     report.articles.push({id:article.id,sourcePath:article.sourcePath,canonicalPath:article.path,outputPath,sourceDigest:digest(source),headingIds:article.headings.map(h=>h.id),legacyHeadingIds:article.legacyHeadingIds,sourceResources:sourceResources.get(article.id),pathEvidence:source.includes('permalink:')?'explicit front matter permalink':'Jekyll default date/category/filename URL; live verification pending'});
   }
-  const rawArticles=parsed.map(p=>p.article);
+  const articles = parsed.map(item => item.article);
+  const publicIds = new Set(articles.map(article => article.id));
+  const unpublished = new Set(Object.values(metadata).map(item => item.id).filter(id => !publicIds.has(id)));
+  const publicSeries = series.map(item => ({ ...item,
+    orderedArticleIds:item.orderedArticleIds.filter(id => !unpublished.has(id)),
+  })).filter((item, i) => item.orderedArticleIds.length || !series[i].orderedArticleIds.length);
+  const publicOverrides = Object.fromEntries(Object.entries(overrides).map(([kind,table]) => [kind,
+    Object.fromEntries(Object.entries(table).filter(([source]) => !unpublished.has(source))
+      .map(([source,targets]) => [source,targets.filter(id => !unpublished.has(id))])),
+  ]));
+  // Optional sentences the author corrected by hand: { sourceId: { targetId: "이유" } }.
+  const reasons = {};
+  if (await stat(resolve(ROOT,'content/knowledge/reasons.json')).then(() => true, () => false)) {
+    for (const [source,targets] of Object.entries(await readJson('content/knowledge/reasons.json'))) {
+      for (const [target,text] of Object.entries(targets)) {
+        if (typeof text !== 'string' || !text.trim() || text.length > 200) throw new Error(`Invalid reason override: ${source} -> ${target}`);
+        if (publicIds.has(source) && publicIds.has(target)) (reasons[source] ||= {})[target] = text.trim();
+      }
+    }
+  }
+  return { articles, concepts, series: publicSeries, overrides: publicOverrides, reasons };
+}
+
+/**
+ * Project the per-article LLM records in `dir` onto the rule-based `articles`. Each article is
+ * verified on its own: a missing or stale record sends only that article back to the rules.
+ * Without the directory every article keeps its rule-based list and nothing is reported.
+ */
+export async function applyRelated(corpus, articles, dir) {
+  const report = { version:1, directory:false, articles:articles.length, llm:0, rules:articles.length, missing:articles.length, invalid:0, fallback:0, invalidIds:[], fallbackIds:[], orphans:[] };
+  if (!(await stat(dir).then(s => s.isDirectory(), () => false))) return { articles, report };
+  const audit = auditAll(prepareCorpus(corpus), await readRecords(dir));
+  return { articles: projectRecommendations(articles, audit.valid, corpus.overrides, corpus.reasons), report: { ...report, ...auditSummary(audit), directory:true } };
+}
+
+export async function buildContent() {
+  const corpus = await loadPublicCorpus();
+  const { articles: rawArticles, concepts, series, overrides } = corpus;
   validateKnowledge(rawArticles,concepts,series,overrides);
-  const articles=generateRelated(rawArticles,concepts,series,overrides).sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt)||a.id.localeCompare(b.id));
+  const ruled=generateRelated(rawArticles,concepts,series,overrides).sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt)||a.id.localeCompare(b.id));
+  const { articles, report: relatedReport } = await applyRelated(corpus, ruled, resolve(ROOT,'content/related'));
+  if (relatedReport.directory) {
+    console.log(`연관 글: LLM ${relatedReport.llm}편, 규칙 ${relatedReport.rules}편(파일 없음 ${relatedReport.missing}, 무효 ${relatedReport.invalid}${relatedReport.fallback ? `, 추론 실패 ${relatedReport.fallback}` : ''}${relatedReport.noEvidence ? `, 근거 없음 ${relatedReport.noEvidence}` : ''})`);
+    if (relatedReport.invalid) console.warn(`연관 글 추천이 무효여서 규칙 추천을 유지한 글: ${relatedReport.invalidIds.map(({id,reason}) => `${id}(${reason})`).join(', ')}. npm run recommendations:sync 를 실행하세요.`);
+    if (relatedReport.orphans.length) console.warn(`공개 글이 아닌 추천 파일: ${relatedReport.orphans.join(', ')}`);
+  }
+  await writeFile(resolve(ROOT,'generated/related-report.json'),JSON.stringify(relatedReport,null,2)+'\n');
   const registry={articles,concepts,series};
   await writeFile(resolve(ROOT,'generated/registry.json'),JSON.stringify(registry));
   await writeFile(resolve(ROOT,'generated/url-manifest.json'),JSON.stringify({version:1,articles:report.articles.map(({sourceResources,...rest})=>rest)},null,2)+'\n');

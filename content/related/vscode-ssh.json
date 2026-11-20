@@ -1,0 +1,232 @@
+{
+  "version": 2,
+  "id": "vscode-ssh",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "262d894d35fa08cb877b581b3bfd39552f885786e56b35cd3d3e9b74198e469e",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "remote-development",
+        "role": "applies",
+        "evidence": {
+          "articleId": "vscode-ssh",
+          "blockId": "[\"vscode로-서버에-접속하여-개발\",1]",
+          "anchor": "vscode로-서버에-접속하여-개발",
+          "quote": "확장 -> Remote - SSH 설치",
+          "hash": "022bbad33e424388cf1613adfd7ca0050115dd85b483b48f5679e3a5e502985a"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "4a5514ef856f315ddca825bc02b34c8692b9e2320ff83e2eb5094bdd8406a401",
+    "status": "abstained",
+    "candidates": [
+      {
+        "id": "mariadb-connection-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",4]",
+          "[\"vscode로-서버에-접속하여-개발\",5]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"해결\",1]",
+          "[\"issue\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",4]"
+        ],
+        "targetBlocks": [
+          "[\"ts\",2]",
+          "[\"ref\",4]",
+          "[\"gradio\",3]"
+        ]
+      },
+      {
+        "id": "python-venv-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",4]",
+          "[\"vscode로-서버에-접속하여-개발\",5]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",2]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "ollama-docker-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",4]"
+        ],
+        "targetBlocks": [
+          "[\"1-ollama-설치-후-모델-다운로드--openwebui-접속\",3]",
+          "[\"구현-사항\",1]",
+          "[\"2-conda로-실행하면-잘-인식\",1]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",4]",
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"1\",1]",
+          "[\"1\",8]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",4]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",3]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",30]",
+          "[\"해결\",1]",
+          "[\"현상\",1]"
+        ]
+      },
+      {
+        "id": "training-arguments",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",3]",
+          "[\"vscode로-서버에-접속하여-개발\",4]",
+          "[\"vscode로-서버에-접속하여-개발\",1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"usage\",1]",
+          "[\"하이퍼파라미터\",6]"
+        ]
+      },
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",3]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",4]",
+          "[\"vscode로-서버에-접속하여-개발\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",2]",
+          "[\"env\",9]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",3]"
+        ],
+        "targetBlocks": [
+          "[\"3️⃣\",7]",
+          "[\"2️⃣\",3]",
+          "[\"1️⃣\",2]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",4]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",6]",
+          "[\"3️⃣\",1]",
+          "[\"2️⃣\",1]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",5]",
+          "[\"vscode로-서버에-접속하여-개발\",4]"
+        ],
+        "targetBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"폐쇄망-환경구축을-하며-느낀점\",4]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",4]",
+          "[\"vscode로-서버에-접속하여-개발\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"solution-1\",2]",
+          "[\"error2\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",3]",
+          "[\"vscode로-서버에-접속하여-개발\",4]"
+        ],
+        "targetBlocks": [
+          "[\"docker\",6]",
+          "[\"ref\",3]",
+          "[\"tgi\",2]"
+        ]
+      }
+    ],
+    "recommendations": []
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "version": 2,
+  "id": "dflash",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "d361e045be4797bac5a7712429fe7f1cca24a52ddb7fa825d95a7f4096841de9",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "speculative-decoding",
+        "role": "about",
+        "evidence": {
+          "articleId": "dflash",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "DFlash의 아이디어는 이 둘을 결합하는 것임. draft는 diffusion으로 병렬 생성하고, 검증은 고품질 AR target model에게 맡겨 lossless를 보장함. 핵심 인사이트는 \"the target knows best\" — 큰 AR 모델의 hidden feature에는 이미 미래 토큰들에 대한 정보가 암묵적으로 담겨 있으므로, 이 feature를 조건으로 주면 아주 작은 diffusion drafter도 높은 품질의 draft를 만들 수 있다는 것임. draft model이 사실상 target model의 깊은 context feature를 활용하는 diffusion adapter로 동작하게 됨.",
+          "hash": "dd3c99a0e0db007cb33fc899332a2d6036a158a2807a26f5cded6a40df9c561c"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "f476357dc04971eb8686f3ce8aa1fd473055159b3703b98ca538da1bec8035bf",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "inference-server",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"inference\",1]",
+          "[\"serving-framework-sglang\",1]"
+        ],
+        "targetBlocks": [
+          "[\"위치별-수락률\",3]",
+          "[\"모델-구성은-파일-하나로\",2]",
+          "[null,4]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"preliminary\",1]",
+          "[\"inference\",9]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"overview\",5]",
+          "[\"approximation-model의-선택\",5]"
+        ]
+      },
+      {
+        "id": "rtpurbo",
+        "sourceBlocks": [
+          "[\"training\",5]",
+          "[\"introduction\",9]",
+          "[\"inference\",9]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"효율--ultra-long-robustness\",1]",
+          "[\"hardware-aware-top-p-decoding-kernel\",1]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"introduction\",9]",
+          "[\"training\",5]",
+          "[\"ablations\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"unlikelihood-training-and-length-normalization\",1]",
+          "[\"ablation-experiments\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"preliminary\",7]",
+          "[\"training\",5]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"evolution-of-performance-during-training\",1]",
+          "[\"efficient-implementation\",2]"
+        ]
+      },
+      {
+        "id": "searchswarm",
+        "sourceBlocks": [
+          "[\"training\",5]",
+          "[\"main-results-qwen3-thinking-off\",2]",
+          "[\"reasoning-models-thinking-on\",1]"
+        ],
+        "targetBlocks": [
+          "[\"supervised-fine-tuning\",2]",
+          "[\"experiments\",8]",
+          "[\"main-distributes-sub-executes\",2]"
+        ]
+      },
+      {
+        "id": "alphallm",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"preliminary\",7]",
+          "[\"inference\",9]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",3]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"training\",1]",
+          "[\"inference\",7]",
+          "[\"introduction\",9]"
+        ],
+        "targetBlocks": [
+          "[\"decoder-block\",2]",
+          "[\"masked-multi-head-attention\",1]",
+          "[\"self-attention-1\",33]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"training\",5]",
+          "[\"introduction\",9]",
+          "[\"preliminary\",7]"
+        ],
+        "targetBlocks": [
+          "[\"background\",1]",
+          "[\"introduction\",6]",
+          "[\"qlora-finetuning\",2]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"training\",1]",
+          "[\"introduction\",9]",
+          "[\"inference\",1]"
+        ],
+        "targetBlocks": [
+          "[\"task-1-masked-lm-mlm\",3]",
+          "[\"요약\",1]",
+          "[\"hyper-parameter\",5]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"inference\",9]",
+          "[\"training\",8]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"low-rank-parameterized-update-matrices\",4]",
+          "[\"problem-statement\",1]"
+        ]
+      },
+      {
+        "id": "thinkingcap",
+        "sourceBlocks": [
+          "[\"main-results-qwen3-thinking-off\",2]",
+          "[\"reasoning-models-thinking-on\",1]",
+          "[\"training\",5]"
+        ],
+        "targetBlocks": [
+          "[\"results\",1]",
+          "[\"resources\",2]",
+          "[\"followups\",6]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"introduction\",9]",
+          "[\"training\",5]",
+          "[\"inference\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"impace-of-training-time-and-memory-usage\",1]",
+          "[\"scaling-the-number-of-trainable-parameters\",1]"
+        ]
+      },
+      {
+        "id": "constitutional-ai",
+        "sourceBlocks": [
+          "[\"main-results-qwen3-thinking-off\",9]",
+          "[\"introduction\",6]",
+          "[\"preliminary\",7]"
+        ],
+        "targetBlocks": [
+          "[\"rl-stage-rlaif\",3]",
+          "[\"introduction\",3]",
+          "[\"supervised-stage-critique--revision\",2]"
+        ]
+      },
+      {
+        "id": "loftq",
+        "sourceBlocks": [
+          "[\"main-results-qwen3-thinking-off\",2]",
+          "[\"introduction\",10]",
+          "[\"inference\",9]"
+        ],
+        "targetBlocks": [
+          "[\"glue-with-4-bit\",5]",
+          "[\"loftq\",1]",
+          "[\"experiments\",10]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "speculative-decoding-paper",
+        "relation": "related_method",
+        "reason": "작은 초안 모델이 토큰을 제안하고 target model이 병렬 검증해 원래 출력 분포를 보존하는 기본 절차를 DFlash의 diffusion 초안 방식과 비교해 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "dflash",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "DFlash의 아이디어는 이 둘을 결합하는 것임. draft는 diffusion으로 병렬 생성하고, 검증은 고품질 AR target model에게 맡겨 lossless를 보장함. 핵심 인사이트는 \"the target knows best\" — 큰 AR 모델의 hidden feature에는 이미 미래 토큰들에 대한 정보가 암묵적으로 담겨 있으므로, 이 feature를 조건으로 주면 아주 작은 diffusion drafter도 높은 품질의 draft를 만들 수 있다는 것임. draft model이 사실상 target model의 깊은 context feature를 활용하는 diffusion adapter로 동작하게 됨.",
+          "hash": "dd3c99a0e0db007cb33fc899332a2d6036a158a2807a26f5cded6a40df9c561c"
+        },
+        "targetEvidence": {
+          "articleId": "speculative-decoding-paper",
+          "blockId": "[\"introduction\",6]",
+          "anchor": "introduction",
+          "quote": "이 논문은 CPU의 branch prediction으로 익숙한 speculative execution(어떤 작업이 필요한지 검증하는 것과 병렬로 그 작업을 미리 수행하는 최적화)을 확률적(stochastic) 세팅으로 일반화함. 빠른 approximation model $M_q$가 미래 토큰들을 추측 생성하고, 느린 target model $M_p$가 이 추측들을 병렬로 평가·검증함. 여기에 speculative sampling이라는 새로운 샘플링 기법을 결합해, 최종 출력 분포가 $M_p$ 단독 샘플링과 수학적으로 완전히 동일함을 보장함.",
+          "hash": "174a2cf48c5d468b077dbc01e41d87377ebaaf12a738fb5671e1b500b9511480"
+        }
+      }
+    ]
+  }
+}

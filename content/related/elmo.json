@@ -1,0 +1,312 @@
+{
+  "version": 2,
+  "id": "elmo",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "7e386db5c15f9114961dc9f3acbd4c90a60a78aa073032996ee6ac185cfc3188",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "contextual-embeddings",
+        "role": "about",
+        "evidence": {
+          "articleId": "elmo",
+          "blockId": "[\"elmo\",1]",
+          "anchor": "elmo",
+          "quote": "기존 word2vec, Glove 등에 비해 context 정보를 반영하는 Pre-training 방법을 제시합니다. 여러층의 BiLSTM을 이용해 Language Model을 하며, 만들어진 hidden-state를 적절하게 조합해 새로운 word representation을 만들어냅니다.",
+          "hash": "0536e6bb9b159cb5b8c31469299a3fb57f0c2d5b648124df1af19c123e28974b"
+        }
+      },
+      {
+        "id": "recurrent-networks",
+        "role": "about",
+        "evidence": {
+          "articleId": "elmo",
+          "blockId": "[\"elmo\",1]",
+          "anchor": "elmo",
+          "quote": "기존 word2vec, Glove 등에 비해 context 정보를 반영하는 Pre-training 방법을 제시합니다. 여러층의 BiLSTM을 이용해 Language Model을 하며, 만들어진 hidden-state를 적절하게 조합해 새로운 word representation을 만들어냅니다.",
+          "hash": "0536e6bb9b159cb5b8c31469299a3fb57f0c2d5b648124df1af19c123e28974b"
+        }
+      },
+      {
+        "id": "pretraining",
+        "role": "about",
+        "evidence": {
+          "articleId": "elmo",
+          "blockId": "[\"elmo\",1]",
+          "anchor": "elmo",
+          "quote": "기존 word2vec, Glove 등에 비해 context 정보를 반영하는 Pre-training 방법을 제시합니다. 여러층의 BiLSTM을 이용해 Language Model을 하며, 만들어진 hidden-state를 적절하게 조합해 새로운 word representation을 만들어냅니다.",
+          "hash": "0536e6bb9b159cb5b8c31469299a3fb57f0c2d5b648124df1af19c123e28974b"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "974d643403541910d3e674f895e39accad377274984e0ac94a8c23b43736e7ab",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "rnn",
+        "sourceBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",3]",
+          "[\"특징\",3]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",5]",
+          "[\"irnn\",5]",
+          "[\"구조\",11]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",4]",
+          "[\"특징\",1]"
+        ],
+        "targetBlocks": [
+          "[\"pre-training-bert\",1]",
+          "[\"task-1-masked-lm-mlm\",2]",
+          "[\"요약\",1]"
+        ]
+      },
+      {
+        "id": "lstm",
+        "sourceBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",3]",
+          "[\"특징\",3]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",3]",
+          "[\"step-1-forget-gate--과거-정보를-버릴지말지-결정하는-과정\",1]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",11]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"elmo\",3]",
+          "[\"mechanism\",1]",
+          "[\"context-matters\",4]"
+        ],
+        "targetBlocks": [
+          "[\"self-attention\",2]",
+          "[\"input-embedding\",1]",
+          "[\"trnasformer-의의\",1]"
+        ]
+      },
+      {
+        "id": "nlp-terms",
+        "sourceBlocks": [
+          "[\"elmo\",1]",
+          "[\"context-matters\",4]",
+          "[\"mechanism\",2]"
+        ],
+        "targetBlocks": [
+          "[\"glue---general-language-understanding-evaluation\",1]",
+          "[null,1]",
+          "[\"perplexity\",6]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",2]",
+          "[\"context-matters\",4]"
+        ],
+        "targetBlocks": [
+          "[\"pre-training-data\",1]",
+          "[\"introduction\",1]",
+          "[\"related-work\",1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"experiments\",4]",
+          "[\"elmo\",1]",
+          "[\"mechanism\",11]"
+        ],
+        "targetBlocks": [
+          "[\"interpretability\",3]",
+          "[\"introduction\",1]",
+          "[\"prompt-tuning\",1]"
+        ]
+      },
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",3]",
+          "[\"experiments\",4]"
+        ],
+        "targetBlocks": [
+          "[\"a-latent-embedding-approach\",2]",
+          "[\"what-is-zero-shot-learning\",2]",
+          "[null,3]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",11]",
+          "[\"context-matters\",4]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"low-rank-parameterized-update-matrices\",1]",
+          "[\"our-method\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"elmo\",1]",
+          "[\"experiments\",4]",
+          "[\"mechanism\",1]"
+        ],
+        "targetBlocks": [
+          "[\"sbert\",1]",
+          "[\"translation\",2]",
+          "[\"workflow\",1]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",11]",
+          "[\"context-matters\",4]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",5]",
+          "[\"the-architecture-of-ziya2\",2]",
+          "[\"continual-pre-training\",2]"
+        ]
+      },
+      {
+        "id": "semantic-search",
+        "sourceBlocks": [
+          "[\"context-matters\",4]",
+          "[\"experiments\",4]",
+          "[\"elmo\",6]"
+        ],
+        "targetBlocks": [
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"what-is-not-semantic-search\",19]",
+          "[\"using-similarity-to-find-the-best-document\",5]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",11]",
+          "[\"context-matters\",4]"
+        ],
+        "targetBlocks": [
+          "[\"background\",1]",
+          "[\"introduction\",1]",
+          "[\"qlora-finetuning\",2]"
+        ]
+      },
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",11]",
+          "[\"특징\",3]"
+        ],
+        "targetBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"problem-formulation\",2]",
+          "[\"efficientnet-architecture\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",11]",
+          "[\"context-matters\",4]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]",
+          "[null,2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "bert",
+        "relation": "related_method",
+        "reason": "ELMO는 양방향 언어 모델로 사전학습하고, BERT는 마스크된 단어를 예측하는 사전학습 방식을 설명해 두 방법을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "elmo",
+          "blockId": "[\"mechanism\",4]",
+          "anchor": "mechanism",
+          "quote": "ELMO는 Bi-directional LSTM을 통해 학습하기 때문에 Forward LM, Backward LM 둘다 학습합니다.",
+          "hash": "bf05c07eaf95891bd5e7860b44afa6c951e4cb401f96e92c707a0387eb20a7ea"
+        },
+        "targetEvidence": {
+          "articleId": "bert",
+          "blockId": "[\"task-1-masked-lm-mlm\",2]",
+          "anchor": "task-1-masked-lm-mlm",
+          "quote": "Bi-directional한 Transformer Encoder를 쓰되, 실제 Input에 해당하는 단어들을 임의의 비율(15%)로 마스킹을 시키고 모델이 학습을 통해서 실제 가려진 값을 잘 예측하도록 학습시키는 것이 바로 BERT의 pre-training 첫번째 task인 MLM.",
+          "hash": "9792b5e6449cb15bdc0ea16dbe7ccc3e9ead912491a7080d396ba85c93f0dc26"
+        }
+      },
+      {
+        "id": "lstm",
+        "relation": "related_method",
+        "reason": "ELMO의 BiLSTM에서 쓰이는 LSTM이 과거 정보를 다루는 구조와 맥락을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "elmo",
+          "blockId": "[\"mechanism\",3]",
+          "anchor": "mechanism",
+          "quote": "ELMO는 기본적으로 sequence의 단어속에서 다음 단어를 예측하는 언어모델입니다. 각각의 입력 임베딩벡터는 2개의 LSTM layer를 거쳐 10%의 확률값을 가지는 Improvisation을 최종 예측합니다.또한 언어모델이 다음단어의 정보를 가지고 있지않기때문에 step을 통해 BiLSTM을 학습시킬 것입니다.",
+          "hash": "b04feace1ee68726c9bf1e437601adedf0a7169b15ab54ee37cd8d293ff59190"
+        },
+        "targetEvidence": {
+          "articleId": "lstm",
+          "blockId": "[\"step-1-forget-gate--과거-정보를-버릴지말지-결정하는-과정\",1]",
+          "anchor": "step-1-forget-gate--과거-정보를-버릴지말지-결정하는-과정",
+          "quote": "과거의 정보를 통해 맥락을 고려하는것도 중요하지만, 그 정보가 필요하지 않을 경우에는 과감히 버리는 것도 중요합니다. 이전 Input($h_{t-1}$)과 현재 Input($x_t$)을 넣어, cell-state로 가는 과거 정보값이 나옵니다. $h_{t-1}$과 $x_t$를 받아 sigmoid를 취해준 값이 바로 forget gate가 내보내는 값이 됩니다.",
+          "hash": "deaf93fd4a8e2ff27b693f4e9e5cb386c3e497abd74be07f52728cac5a2ec411"
+        }
+      },
+      {
+        "id": "rnn",
+        "relation": "related_method",
+        "reason": "ELMO의 다음 단어 예측 언어 모델과 다음 글자를 정답으로 삼는 RNN 학습을 함께 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "elmo",
+          "blockId": "[\"mechanism\",3]",
+          "anchor": "mechanism",
+          "quote": "ELMO는 기본적으로 sequence의 단어속에서 다음 단어를 예측하는 언어모델입니다. 각각의 입력 임베딩벡터는 2개의 LSTM layer를 거쳐 10%의 확률값을 가지는 Improvisation을 최종 예측합니다.또한 언어모델이 다음단어의 정보를 가지고 있지않기때문에 step을 통해 BiLSTM을 학습시킬 것입니다.",
+          "hash": "b04feace1ee68726c9bf1e437601adedf0a7169b15ab54ee37cd8d293ff59190"
+        },
+        "targetEvidence": {
+          "articleId": "rnn",
+          "blockId": "[\"구조\",11]",
+          "anchor": "구조",
+          "quote": "RNN도 정답을 필요로 하는데, 모델엘 정답을 알려줘야 모델이 parameter를 적절히 갱신해 나갈 것입니다. 이 경우엔 바로 다음 글자가 정답이 될 것입니다. 예를 들어, h의 다음 정답은 e, 그 다음 정답은 l, 그 다음 정답은 l, 그 다음은 e가 될 것입니다.",
+          "hash": "9178691c367a4447dab4dc5caa78e7ccf1dab16197e4574c3b85f053e30b4dae"
+        }
+      }
+    ]
+  }
+}

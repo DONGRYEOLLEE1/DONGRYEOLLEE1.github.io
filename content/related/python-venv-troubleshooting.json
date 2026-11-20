@@ -1,0 +1,230 @@
+{
+  "version": 2,
+  "id": "python-venv-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "ec39e15a4ec5c72dff7c7c17a2d6079f0d752d7b852c016a851a2b6b602253ca",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "python-environment",
+        "role": "applies",
+        "evidence": {
+          "articleId": "python-venv-troubleshooting",
+          "blockId": "[\"해결\",1]",
+          "anchor": "해결",
+          "quote": "$ sudo apt install python3.10-venv $ python3 -m venv test $ source test/bin/activate >>> (test) user@server:~$",
+          "hash": "efe1e5bb6760deebf78d1ca5bf370e0a5841e39d19df46cc211db417b023634b"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "776d55aace324d48fbe8d493db19645533d97303e1f22ac6100d8c9c7319e408",
+    "status": "abstained",
+    "candidates": [
+      {
+        "id": "netplan-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",3]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",2]",
+          "[\"issue\",2]"
+        ],
+        "targetBlocks": [
+          "[\"1️⃣\",2]",
+          "[\"3️⃣\",9]",
+          "[\"2️⃣\",2]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",1]",
+          "[\"issue\",3]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"issue\",2]",
+          "[\"해결\",2]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",4]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"2️⃣\",1]",
+          "[\"envs\",1]"
+        ]
+      },
+      {
+        "id": "vscode-ssh",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",2]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"vscode로-서버에-접속하여-개발\",1]",
+          "[\"vscode로-서버에-접속하여-개발\",4]",
+          "[\"vscode로-서버에-접속하여-개발\",5]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",2]",
+          "[\"issue\",2]"
+        ],
+        "targetBlocks": [
+          "[\"2\",3]",
+          "[\"tensor-parallel\",5]",
+          "[\"increasing-speed-a-llm-serving-inference\",5]"
+        ]
+      },
+      {
+        "id": "pip-options",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",2]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"pip-options\",1]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",1]",
+          "[\"issue\",3]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",1]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"env\",1]",
+          "[\"issue\",3]",
+          "[\"해결\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"error\",7]",
+          "[\"error-2\",8]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",2]",
+          "[\"issue\",2]"
+        ],
+        "targetBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"새로운-이슈\",7]",
+          "[\"파일-무결성-검사-방법\",5]"
+        ]
+      },
+      {
+        "id": "docker-gpu-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "distributed-gpu-training",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",4]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"설치-1\",2]",
+          "[\"설치\",3]",
+          "[\"jupyter-notebook에서-사용하기\",1]"
+        ]
+      },
+      {
+        "id": "mariadb-connection-troubleshooting",
+        "sourceBlocks": [
+          "[\"env\",2]",
+          "[\"issue\",3]",
+          "[\"해결\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",2]",
+          "[\"issue\",2]",
+          "[\"해결\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",2]",
+          "[\"issue\",4]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"solution-1\",1]",
+          "[\"error2\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"issue\",2]",
+          "[\"해결\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"workflow\",1]",
+          "[\"translation\",1]",
+          "[\"sbert\",1]"
+        ]
+      }
+    ],
+    "recommendations": []
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "version": 2,
+  "id": "object-detection-basics",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "f37528419e67161e8c52c1d8fdc362080d69868cda593dad1b01c59687ed5420",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "object-detection",
+        "role": "about",
+        "evidence": {
+          "articleId": "object-detection-basics",
+          "blockId": "[\"the-object-detection-task\",1]",
+          "anchor": "the-object-detection-task",
+          "quote": "Object Detection 에서 물체가 이미지에서 나타날때 우린 물체에 대해 identify, localize 할 것이다. 이는 'image classification'과는 다른 개념인데, 여기엔 많은 객체의 같거나 다른 classes들이 이미지에 나타나기 때문이다. 그리고 객체탐지는 모든 객체에 대해 정확하게 예측하는 것을 추구하기 때문이다.",
+          "hash": "1be77b2ed8cfe444203da351c8f5b64e57fa75e49da8eb29b91bd79396fff12d"
+        }
+      },
+      {
+        "id": "cnn",
+        "role": "about",
+        "evidence": {
+          "articleId": "object-detection-basics",
+          "blockId": "[\"backbone\",2]",
+          "anchor": "backbone",
+          "quote": "Backbone은 등뼈라는 뜻이다. 등뼈는 뇌와 몸의 각 부위의 신경을 이어주는 역할을 한다. 뇌를 통해 입력이 드러온다고 생각하고 팔, 다리 등이 출력이라고 생각한다면 backbone은 입력이 처음 들어와서 출력에 관련된 모듈에 처리된 입력을 보내주는 역할이라고 생각할 수 있다. 여러가지 task가 몸의 각 부분이라고 생각하면 Classification Model은 입력을 받아서 각 task에 맞는 모듈로 전달해주는 역할이다. 결국 객체를 검출하든 영역을 나누든 Neural Network는 입력 이미지로부터 다양한 feature를 추출해야한다. 그 역할을 Backbone Network가 하는 것이다.",
+          "hash": "2990ce85f4c2cfb34ed3cf7551d2e1bf9ac6b1e91ed0e2e7b2f7d6967011151e"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "c634f71fd93df16aa349378b1b8086c514a29955b3513f524cd16394c0a66cbf",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"backbone\",2]",
+          "[\"the-object-detection-task\",1]",
+          "[\"roi-pooling\",3]"
+        ],
+        "targetBlocks": [
+          "[\"nmsnon-max-suppression\",13]",
+          "[\"overfeat-intuition\",2]",
+          "[\"overfeat-detection-network\",12]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"backbone\",2]",
+          "[\"the-object-detection-task\",1]",
+          "[\"rpnregions-proposal-network\",4]"
+        ],
+        "targetBlocks": [
+          "[\"preview\",3]",
+          "[\"preview\",4]",
+          "[\"2-rpnregion-proposal-network\",3]"
+        ]
+      },
+      {
+        "id": "fast-r-cnn",
+        "sourceBlocks": [
+          "[\"backbone\",2]",
+          "[\"the-object-detection-task\",1]",
+          "[\"roi-pooling\",2]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",2]",
+          "[\"preview\",1]",
+          "[\"1-roiregion-of-interest-pooling\",2]"
+        ]
+      },
+      {
+        "id": "r-cnn",
+        "sourceBlocks": [
+          "[\"backbone\",2]",
+          "[\"the-object-detection-task\",1]",
+          "[\"region-proposal-물체가-있을-법한-위치-찾기\",3]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"region-proposal-selective-search\",1]"
+        ]
+      },
+      {
+        "id": "yolo-v1",
+        "sourceBlocks": [
+          "[\"backbone\",2]",
+          "[\"the-object-detection-task\",1]",
+          "[\"end-to-end\",2]"
+        ],
+        "targetBlocks": [
+          "[\"unified-detection\",1]",
+          "[\"network-design\",1]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "ohem",
+        "sourceBlocks": [
+          "[\"the-object-detection-task\",1]",
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"end-to-end\",2]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",1]",
+          "[\"introduction\",2]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"rpns-loss\",3]",
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"the-object-detection-task\",4]"
+        ],
+        "targetBlocks": [
+          "[\"method-2-triplet-loss\",1]",
+          "[null,2]",
+          "[\"few-shot-learning은-어떻게-작동할까\",1]"
+        ]
+      },
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"backbone\",2]",
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"roi-pooling\",8]"
+        ],
+        "targetBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"discussion\",2]",
+          "[\"convnet-efficiency\",1]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"roi-pooling\",5]",
+          "[\"방법2-selective-search\",3]",
+          "[\"rpnregions-proposal-network\",2]"
+        ],
+        "targetBlocks": [
+          "[\"vision-transformervit\",16]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"model\",1]"
+        ]
+      },
+      {
+        "id": "map-evaluation",
+        "sourceBlocks": [
+          "[\"the-object-detection-task\",1]",
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"roi-pooling\",8]"
+        ],
+        "targetBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"iouintersection-over-union---fracintersectionunion\",1]",
+          "[\"ap\",4]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"backbone\",2]",
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"end-to-end\",3]"
+        ],
+        "targetBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"introduction\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"방법2-selective-search\",2]",
+          "[\"end-to-end\",2]",
+          "[\"rpnregions-proposal-network\",4]"
+        ],
+        "targetBlocks": [
+          "[\"self-attention-1\",5]",
+          "[\"self-attention\",5]",
+          "[\"transformer가-기존-모델과-다른점\",2]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"backbone\",2]",
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"end-to-end\",3]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",6]",
+          "[\"modernizing-a-convnet-a-roadmap\",1]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "resnext",
+        "sourceBlocks": [
+          "[\"backbone\",2]",
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"end-to-end\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"template\",1]",
+          "[\"aggregated-transformations\",2]"
+        ]
+      },
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"the-object-detection-task\",4]",
+          "[\"rpns-loss\",4]"
+        ],
+        "targetBlocks": [
+          "[\"what-is-zero-shot-learning\",2]",
+          "[\"when-some-annotated-data-is-available-1\",1]",
+          "[\"classification-as-nli\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "fast-r-cnn",
+        "relation": "related_method",
+        "reason": "RoI Pooling으로 고정 크기의 특징 벡터를 만드는 설명을 통해 객체 검출에서 영역별 특징을 처리하는 과정을 더 알아볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "object-detection-basics",
+          "blockId": "[\"roi-pooling\",2]",
+          "anchor": "roi-pooling",
+          "quote": "Fast R-CNN에서 먼저 입력 이미지는 CNN을 통과하여 Feature Map을 추출한다.",
+          "hash": "04c6704b7847d0c94ef11d8c3beeedb30fb9f9747e5c251bdb49efe8338b4cac"
+        },
+        "targetEvidence": {
+          "articleId": "fast-r-cnn",
+          "blockId": "[\"preview\",1]",
+          "anchor": "preview",
+          "quote": "R-CNN 모델은 2000장의 RP를 CNN 모델에 입력시켜 각각에 대하여 독립적으로 학습시켜 많은 시간이 소요된다. Fast R-CNN은 이러한 문제를 개선하여 단 1장의 이미지를 입력받으며, RP의 크기를 warp시킬 필요 없이 RoI(Region of Interest) pooling을 통해 고정된 크기의 feature vector를 fully connected layer(이하 fc layer)에 전달한다. 또한 multi-task loss를 사용하여 모델을 개별적으로 학습시킬 필요 없이 한 번에 학습시킨다. 이를 통해 학습 및 탐지 시간이 크게 감소하였다.",
+          "hash": "0540b668dfa6795df8932bc1a55e23a6d81e1cc94f2f390df5e5876dbb0ea14c"
+        }
+      },
+      {
+        "id": "faster-r-cnn",
+        "relation": "related_method",
+        "reason": "객체를 식별하고 위치를 찾는 과정을 RPN이 후보 영역과 바운딩 박스 좌표를 산출하는 방식으로 구체화합니다.",
+        "sourceEvidence": {
+          "articleId": "object-detection-basics",
+          "blockId": "[\"the-object-detection-task\",1]",
+          "anchor": "the-object-detection-task",
+          "quote": "Object Detection 에서 물체가 이미지에서 나타날때 우린 물체에 대해 identify, localize 할 것이다. 이는 'image classification'과는 다른 개념인데, 여기엔 많은 객체의 같거나 다른 classes들이 이미지에 나타나기 때문이다. 그리고 객체탐지는 모든 객체에 대해 정확하게 예측하는 것을 추구하기 때문이다.",
+          "hash": "1be77b2ed8cfe444203da351c8f5b64e57fa75e49da8eb29b91bd79396fff12d"
+        },
+        "targetEvidence": {
+          "articleId": "faster-r-cnn",
+          "blockId": "[\"2-rpnregion-proposal-network\",3]",
+          "anchor": "2-rpnregion-proposal-network",
+          "quote": "RPN은 원본 이미지에 RP를 추출하는 네트워크이다. 원본 이미지에서 Anchor box를 생성하면 수많은 RP가 만들어진다. RPN은 RP에 대해 class-score를 매기고, BB coefficient를 출력하는 기능을 한다. RPN의 전체적인 동작과정은 다음과 같다",
+          "hash": "69d223b86aae4bbd6a1a770c486eccdfc994a97c1e490433ca674fefff216577"
+        }
+      },
+      {
+        "id": "r-cnn",
+        "relation": "related_method",
+        "reason": "객체 검출의 위치 지정과 분류를 R-CNN이 후보 영역 추출과 특징 벡터 생성으로 수행하는 과정을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "object-detection-basics",
+          "blockId": "[\"the-object-detection-task\",1]",
+          "anchor": "the-object-detection-task",
+          "quote": "Object Detection 에서 물체가 이미지에서 나타날때 우린 물체에 대해 identify, localize 할 것이다. 이는 'image classification'과는 다른 개념인데, 여기엔 많은 객체의 같거나 다른 classes들이 이미지에 나타나기 때문이다. 그리고 객체탐지는 모든 객체에 대해 정확하게 예측하는 것을 추구하기 때문이다.",
+          "hash": "1be77b2ed8cfe444203da351c8f5b64e57fa75e49da8eb29b91bd79396fff12d"
+        },
+        "targetEvidence": {
+          "articleId": "r-cnn",
+          "blockId": "[\"abstract\",1]",
+          "anchor": "abstract",
+          "quote": "Object Detector는 Object의 coordinate를 찾고(Localization), class를 분류(Classification)하는 작업을 진행한다. R-CNN은 이를 순차적으로 진행하는 2 Stage Detector 로, 딥러닝을 적용한 최초의 Object Detector다. R-CNN모델은 Object Detection 혹은 Inference(추론)시, 아래와 같은 순서에 의해 동작한다.",
+          "hash": "4ae1fc1530ef74e24391b17d1338950c656044da3cb13cb70ce563979e1142ad"
+        }
+      },
+      {
+        "id": "yolo-v1",
+        "relation": "related_method",
+        "reason": "객체의 위치와 클래스를 예측하는 과정을 YOLO가 이미지 전체를 이용하는 단일 신경망으로 통합한 방식을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "object-detection-basics",
+          "blockId": "[\"the-object-detection-task\",1]",
+          "anchor": "the-object-detection-task",
+          "quote": "Object Detection 에서 물체가 이미지에서 나타날때 우린 물체에 대해 identify, localize 할 것이다. 이는 'image classification'과는 다른 개념인데, 여기엔 많은 객체의 같거나 다른 classes들이 이미지에 나타나기 때문이다. 그리고 객체탐지는 모든 객체에 대해 정확하게 예측하는 것을 추구하기 때문이다.",
+          "hash": "1be77b2ed8cfe444203da351c8f5b64e57fa75e49da8eb29b91bd79396fff12d"
+        },
+        "targetEvidence": {
+          "articleId": "yolo-v1",
+          "blockId": "[\"unified-detection\",1]",
+          "anchor": "unified-detection",
+          "quote": "YOLO는 object detection의 개별요소를 single neural network로 통합한 모델이다. 각각의 bounding box를 예측하기 위해 이미지 전체의 특징을 활용한다. 이러한 YOLO의 디자인 덕분에 높은 정확성을 유지하면서 end-to-end 학습과 real-time object detection이 가능하다.",
+          "hash": "2f76cb73ddcd4a62802c6767af8d23743790d711debf235a3ab1196457b30497"
+        }
+      }
+    ]
+  }
+}

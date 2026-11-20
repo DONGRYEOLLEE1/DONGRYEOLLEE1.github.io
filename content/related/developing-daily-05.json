@@ -1,0 +1,282 @@
+{
+  "version": 2,
+  "id": "developing-daily-05",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "5139ffb94a24e6b738dc6eb705ad0b7bc8d8b301a91afad30578c59f8213f9f9",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "data-preparation",
+        "role": "applies",
+        "evidence": {
+          "articleId": "developing-daily-05",
+          "blockId": "[\"data-processing\",1]",
+          "anchor": "data-processing",
+          "quote": "TASK: 언어모델의 성능 향상을 위한 파인튜닝 데이터 re-preprocessing",
+          "hash": "5547c34b500f8ebd7b3be232c09ede2fc4ee6677f522600cfa70ebd7ed0530dc"
+        }
+      },
+      {
+        "id": "finetuning",
+        "role": "about",
+        "evidence": {
+          "articleId": "developing-daily-05",
+          "blockId": "[\"data-processing\",1]",
+          "anchor": "data-processing",
+          "quote": "TASK: 언어모델의 성능 향상을 위한 파인튜닝 데이터 re-preprocessing",
+          "hash": "5547c34b500f8ebd7b3be232c09ede2fc4ee6677f522600cfa70ebd7ed0530dc"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "c17b038f6578b454c6adea031a87567a764d618f7251eec96a38bec876a8b88c",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"data-processing\",1]",
+          "[\"kobart-questiongeneration\",3]",
+          "[\"sehongt5-large-questiongeneration\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",10]",
+          "[\"prob\",3]",
+          "[\"envs\",1]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"sehongt5-large-questiongeneration\",3]",
+          "[\"kobart-questiongeneration\",3]",
+          "[\"t5-end2end-question-generation\",5]"
+        ],
+        "targetBlocks": [
+          "[\"error\",5]",
+          "[\"solution\",4]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"data-processing\",1]",
+          "[\"kobart-questiongeneration\",3]",
+          "[\"t5-end2end-question-generation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"question-generationkor\",1]",
+          "[\"question-generationeng\",1]",
+          "[\"sbert\",1]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"t5-end2end-question-generation\",5]",
+          "[\"sehongt5-large-questiongeneration\",3]",
+          "[\"patil-surajquestion_generation\",10]"
+        ],
+        "targetBlocks": [
+          "[\"merging-lora-weights\",14]",
+          "[\"ref\",2]",
+          "[\"dora-support\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"kobart-questiongeneration\",3]",
+          "[\"t5-end2end-question-generation\",4]",
+          "[\"sehongt5-large-questiongeneration\",3]"
+        ],
+        "targetBlocks": [
+          "[\"gradio\",5]",
+          "[\"ref\",3]",
+          "[\"ts\",6]"
+        ]
+      },
+      {
+        "id": "regex-preprocessing",
+        "sourceBlocks": [
+          "[\"data-processing\",1]",
+          "[\"정규표현식\",1]",
+          "[\"question-generation-영어\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"problem\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"kobart-questiongeneration\",3]",
+          "[\"sehongt5-large-questiongeneration\",1]",
+          "[\"t5-end2end-question-generation\",2]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",3]",
+          "[\"tgi\",2]",
+          "[\"docker\",3]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"data-processing\",1]",
+          "[\"sehongt5-large-questiongeneration\",2]",
+          "[\"question-generation-영어\",1]"
+        ],
+        "targetBlocks": [
+          "[\"dataset\",2]",
+          "[\"training\",1]",
+          "[\"envs\",7]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"data-processing\",1]",
+          "[\"kobart-questiongeneration\",3]",
+          "[\"sehongt5-large-questiongeneration\",1]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"envs\",3]",
+          "[\"issue\",4]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"sehongt5-large-questiongeneration\",3]",
+          "[\"kobart-questiongeneration\",4]",
+          "[\"정규표현식\",8]"
+        ],
+        "targetBlocks": [
+          "[\"error2\",1]",
+          "[\"ref\",1]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[\"data-processing\",1]",
+          "[\"t5-end2end-question-generation\",3]",
+          "[\"sehongt5-large-questiongeneration\",3]"
+        ],
+        "targetBlocks": [
+          "[\"classification-as-nli\",3]",
+          "[\"a-latent-embedding-approach\",3]",
+          "[null,3]"
+        ]
+      },
+      {
+        "id": "developing-daily-04",
+        "sourceBlocks": [
+          "[\"kobart-questiongeneration\",4]",
+          "[\"정규표현식\",8]",
+          "[\"question-generation-영어\",1]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",2]",
+          "[\"gitignore\",2]",
+          "[\"파일-이름-변경\",3]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[\"data-processing\",1]",
+          "[\"t5-end2end-question-generation\",2]",
+          "[\"question-generation-영어\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"does-eda-conserve-true-lables\",4]",
+          "[\"theory\",7]"
+        ]
+      },
+      {
+        "id": "developing-daily-03",
+        "sourceBlocks": [
+          "[\"t5-end2end-question-generation\",4]",
+          "[\"sehongt5-large-questiongeneration\",3]",
+          "[\"kobart-questiongeneration\",3]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"data-processing\",1]",
+          "[\"t5-end2end-question-generation\",2]",
+          "[\"kobart-questiongeneration\",3]"
+        ],
+        "targetBlocks": [
+          "[\"the-data-factory\",1]",
+          "[\"continual-pre-training\",1]",
+          "[\"introduction\",17]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "eda",
+        "relation": "concept_explanation",
+        "reason": "파인튜닝 데이터 재전처리와 문장 수준 데이터 증강이 각각 어떤 데이터 변환을 다루는지 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "developing-daily-05",
+          "blockId": "[\"data-processing\",1]",
+          "anchor": "data-processing",
+          "quote": "TASK: 언어모델의 성능 향상을 위한 파인튜닝 데이터 re-preprocessing",
+          "hash": "5547c34b500f8ebd7b3be232c09ede2fc4ee6677f522600cfa70ebd7ed0530dc"
+        },
+        "targetEvidence": {
+          "articleId": "eda",
+          "blockId": "[\"theory\",7]",
+          "anchor": "theory",
+          "quote": "Data-Augmentation-operations은 기존 문장의 label을 변경하지 않음. 문장 내 단어의 동의어를 삽입하는 것은 context에 연관있으며 문장의 original-label을 유지시킴",
+          "hash": "b0b7ebe5ec3d83f678f11026e8e448a24dbf5c2993c98ca4b0310d9758b87d14"
+        }
+      },
+      {
+        "id": "ziya2",
+        "relation": "concept_explanation",
+        "reason": "재전처리 작업과 함께 데이터 전처리·필터링·중복 제거 등 데이터 품질 관리 절차를 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "developing-daily-05",
+          "blockId": "[\"data-processing\",1]",
+          "anchor": "data-processing",
+          "quote": "TASK: 언어모델의 성능 향상을 위한 파인튜닝 데이터 re-preprocessing",
+          "hash": "5547c34b500f8ebd7b3be232c09ede2fc4ee6677f522600cfa70ebd7ed0530dc"
+        },
+        "targetEvidence": {
+          "articleId": "ziya2",
+          "blockId": "[\"the-data-factory\",1]",
+          "anchor": "the-data-factory",
+          "quote": "데이터는 LLM의 중추적인 초석 역할을 합니다. 데이터의 양과 품질은 모델의 성능에 직접적인 영향을 미칩니다. figure2에 나타난대로 data preprocessing, automatic scoring, rule-based filtering, content de-duplication, data evaluation을 포함한 다수의 공정을 통해 용이하게 만들었습니다. 이러한 절차는 지속적인 사전학습, 데이터 샘플링과 확장을 통해 필요조건을 충족시켰습니다.",
+          "hash": "c2e3b19524a92c221e3913856180695881506ab381a2c662606682e529aea567"
+        }
+      }
+    ]
+  }
+}

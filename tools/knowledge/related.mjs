@@ -39,7 +39,7 @@ export function validateKnowledge(articles, concepts, series, overrides = {}) {
   }
   for (const id of conceptMap.keys()) visit(id);
   for (const article of articles) {
-    if (!Array.isArray(article.conceptRefs) || !article.conceptRefs.length) fail(`article ${article.id} needs a reviewed concept`);
+    if (!Array.isArray(article.conceptRefs)) fail(`article ${article.id} needs a conceptRefs array`);
     const refs = new Set();
     for (const ref of article.conceptRefs) {
       if (!conceptMap.has(ref.id)) fail(`unknown concept ${ref.id} in ${article.id}`);
@@ -80,9 +80,9 @@ export function validateKnowledge(articles, concepts, series, overrides = {}) {
   return true;
 }
 
-function tokenWeights(article) {
+export function tokenWeights(article, bodyLimit = 18000) {
   const title = `${article.title || ''} ${article.description || ''}`.toLowerCase();
-  const body = String(article.plainText || '').slice(0, 18000).toLowerCase();
+  const body = String(article.plainText || '').slice(0, bodyLimit).toLowerCase();
   const map = new Map();
   for (const [text, weight] of [[body, 1], [title, 3]]) {
     const unique = new Set(text.match(/[\p{L}\p{N}][\p{L}\p{N}_+.-]{2,}/gu) || []);
@@ -94,7 +94,7 @@ function tokenWeights(article) {
   }
   return map;
 }
-function weightedJaccard(a, b, idf = () => 1) {
+export function weightedJaccard(a, b, idf = () => 1) {
   let intersection = 0, union = 0;
   for (const term of new Set([...a.keys(), ...b.keys()])) {
     const av = a.get(term) || 0, bv = b.get(term) || 0, weight = idf(term);
@@ -137,7 +137,7 @@ function articleCitations(article, pathToId, ids) {
 }
 
 /** Return a new public Article[]; no input mutation, model calls, or runtime database. */
-export function generateRelated(inputArticles, concepts, series, overrides = {}) {
+export function generateRelated(inputArticles, concepts, series, overrides = {}, limit = 4) {
   validateKnowledge(inputArticles, concepts, series, overrides);
   const articles = publicOnly(inputArticles);
   const ids = new Set(articles.map(a => a.id));
@@ -201,6 +201,6 @@ export function generateRelated(inputArticles, concepts, series, overrides = {})
     }
     ranked.sort((a, b) => b.score - a.score || b.date.localeCompare(a.date) || a.id.localeCompare(b.id));
     const { seriesId: _oldSeries, seriesOrder: _oldOrder, ...cleanSource } = source;
-    return { ...cleanSource, ...(ownSeries ? { seriesId: ownSeries.id, seriesOrder: ownSeries.index + 1 } : {}), related: ranked.slice(0, 4).map(({date, ...result}) => result) };
+    return { ...cleanSource, ...(ownSeries ? { seriesId: ownSeries.id, seriesOrder: ownSeries.index + 1 } : {}), related: ranked.slice(0, limit).map(({date, ...result}) => result) };
   });
 }

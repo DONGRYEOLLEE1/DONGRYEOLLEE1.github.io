@@ -16,3 +16,9 @@ dist-legacy/
 /public/img/
 /public/assets/
 /public/fonts/
+
+# Local embedding cache and the per-build recommendation report
+.cache/
+/generated/related-report.json
+# Temp files of a recommendation sync that is running or was interrupted
+/content/related/*.tmp

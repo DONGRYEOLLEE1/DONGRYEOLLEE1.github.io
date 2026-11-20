@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "id": "beit",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "99bc0219311c5a7c51a55602e06b268d71915efedd3d682565a6def071f8b274",
+    "status": "abstained",
+    "facts": [],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "ef37d085215a940d3f3e6fa448926f39dbdd97fd4f7d7b9ea59e52ebe2bcddbf",
+    "status": "abstained",
+    "candidates": [],
+    "recommendations": []
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "version": 2,
+  "id": "peft-features-0100",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "383ea248fd8ff176a5d70b231fda289ac5bcd0be2f2d217018ebba3a3a03cab3",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "peft",
+        "role": "about",
+        "evidence": {
+          "articleId": "peft-features-0100",
+          "blockId": "[\"peft-v0100\",1]",
+          "anchor": "peft-v0100",
+          "quote": "v0.10.0: Fine-tune larger QLoRA models with DeepSpeed and FSDP, layer replication, enhance DoRA",
+          "hash": "74a9ee3c9673b2d08d39e80a55355a2a6464dbc7c175c13685c7612865740e81"
+        }
+      },
+      {
+        "id": "lora",
+        "role": "about",
+        "evidence": {
+          "articleId": "peft-features-0100",
+          "blockId": "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "anchor": "memory-efficient-layer-replication-with-lora",
+          "quote": "An approach used to improve the performance of models is to expand a model by duplicating layers in the model to build a larger model from a pretrained model of a given size. For example increasing a 7B model to a 10B model as described in the SOLAR paper. PEFT LoRA supports this kind of expansion in a memory efficient manner that supports further fine-tuning using LoRA adapters attached to the layers post replication of the layers.",
+          "hash": "42a36abdfb1c4b53ef93b088c5e56ec5387d018a05b8c5216aed859745a75013"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "5641e5cd1d09d7a3772b1983986f6606693c260951739cfa7e0705d67859832d",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"improving-dora\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"background\",2]",
+          "[\"qlora-vs-standard-finetuning\",4]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "peft-target-modules",
+        "sourceBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"deprecations\",1]"
+        ],
+        "targetBlocks": [
+          "[\"source-code\",5]",
+          "[\"source-code\",6]",
+          "[\"solution\",3]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"improving-dora\",2]"
+        ],
+        "targetBlocks": [
+          "[\"model\",3]",
+          "[\"envs\",7]",
+          "[\"training\",1]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"improving-dora\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"peft-parameter-efficient-fine-tuning\",1]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"deprecations\",1]",
+          "[\"improving-dora\",2]",
+          "[\"memory-efficient-layer-replication-with-lora\",15]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",16]",
+          "[\"ref\",1]",
+          "[\"해결\",1]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"improving-dora\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"low-rank-adaptation-lora\",1]",
+          "[\"method\",1]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"deprecations\",1]",
+          "[\"improving-dora\",2]",
+          "[\"memory-efficient-layer-replication-with-lora\",7]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-or-8bit-quantization\",6]",
+          "[\"increasing-speed-a-llm-serving-inference\",10]",
+          "[\"tensor-parallel\",4]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"improving-dora\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"low-rank-parameterized-update-matrices\",4]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",6]",
+          "[\"improving-dora\",2]"
+        ],
+        "targetBlocks": [
+          "[\"peft\",1]",
+          "[\"peft-with-ia3\",11]",
+          "[\"combining-the-ingredients\",7]"
+        ]
+      },
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"ref\",1]",
+          "[\"improving-dora\",2]"
+        ],
+        "targetBlocks": [
+          "[\"tgi\",2]",
+          "[\"ref\",4]",
+          "[\"docker\",4]"
+        ]
+      },
+      {
+        "id": "ia3-implementation",
+        "sourceBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"ref\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",7]"
+        ],
+        "targetBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",1]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"deprecations\",1]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"deprecations\",1]",
+          "[\"layer-replication\",2]"
+        ],
+        "targetBlocks": [
+          "[\"1\",1]",
+          "[\"env\",1]",
+          "[\"1\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "peft-features-090",
+        "relation": "related_method",
+        "reason": "DoRA의 PEFT 지원과 비양자화 선형층 제한을 확인해 v0.10.0에서의 개선 내용을 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "peft-features-0100",
+          "blockId": "[\"ref\",1]",
+          "anchor": "ref",
+          "quote": "peft-0.10.0",
+          "hash": "fe561204f912c4addc45ea0c76a28437ded1cc2a7ce625127880f951625705a4"
+        },
+        "targetEvidence": {
+          "articleId": "peft-features-090",
+          "blockId": "[\"dora-support\",1]",
+          "anchor": "dora-support",
+          "quote": "We now support Weight-Decomposed Low-Rank Adaptation aka DoRA via #1474. This new method is builds on top of LoRA and has shown very promising results. Especially at lower ranks (e.g. r=8), it should perform much better than LoRA. Right now, only non-quantized nn.Linear layers are supported. If you'd like to give it a try, just pass use_dora=True to your LoraConfig and you're good to go.",
+          "hash": "cf37b6b7a0920f456cf1aef6310a11e7c2b4153d1c6f91a7a2c425de48e6dcb3"
+        }
+      },
+      {
+        "id": "lora",
+        "relation": "related_method",
+        "reason": "LoRA가 낮은 랭크 행렬로 업데이트를 최적화하는 원리를 살펴보며 레이어 복제 후 LoRA를 적용하는 방식을 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "peft-features-0100",
+          "blockId": "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "anchor": "memory-efficient-layer-replication-with-lora",
+          "quote": "An approach used to improve the performance of models is to expand a model by duplicating layers in the model to build a larger model from a pretrained model of a given size. For example increasing a 7B model to a 10B model as described in the SOLAR paper. PEFT LoRA supports this kind of expansion in a memory efficient manner that supports further fine-tuning using LoRA adapters attached to the layers post replication of the layers.",
+          "hash": "42a36abdfb1c4b53ef93b088c5e56ec5387d018a05b8c5216aed859745a75013"
+        },
+        "targetEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "학습된 과도하게 매개변수화된 모델이 실제로 낮은 performance를 낸다는 연구결과에 영감을 받음. 낮은 intrinsic rank를 모델을 적용하는동안 weights가 바뀐다는 가설을 세움. LoRA는 간접적으로 dense layer의 rank decomposition matrix를 최적화함으로써 NN에서 몇몇의 dense layer들을 학습할 수 있게 만들어줌(이 과정에서 weight는 froze).",
+          "hash": "3cba5587203ea62e143ba4ec9ef423450571ae6976433824bbd5b3347210f7ac"
+        }
+      },
+      {
+        "id": "qlora",
+        "relation": "related_method",
+        "reason": "4-bit 사전학습 모델에 소량의 학습 가능한 LoRA 가중치를 추가하는 QLoRA 설명을 통해 양자화 모델 파인튜닝과의 연결을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "peft-features-0100",
+          "blockId": "[\"peft-v0100\",1]",
+          "anchor": "peft-v0100",
+          "quote": "v0.10.0: Fine-tune larger QLoRA models with DeepSpeed and FSDP, layer replication, enhance DoRA",
+          "hash": "74a9ee3c9673b2d08d39e80a55355a2a6464dbc7c175c13685c7612865740e81"
+        },
+        "targetEvidence": {
+          "articleId": "qlora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "이에 연구진은 성능 저하 없이 quantized-4bit model 파인튜닝 하는 방법에 대해 소개. QLoRA는 4-bit로 사전학습된 모델을 양자화하기위해 독특한 high-precision technique를 사용하고 난 후에 학습가능한 LoRa 가중치의 적은 양을 추가함.",
+          "hash": "144cb34aeaeabedd47394aafd42bacd9d03485f0a719ac279c322487f77c7a50"
+        }
+      }
+    ]
+  }
+}

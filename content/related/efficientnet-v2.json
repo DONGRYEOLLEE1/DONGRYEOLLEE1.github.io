@@ -1,0 +1,232 @@
+{
+  "version": 2,
+  "id": "efficientnet-v2",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "c97f2c0ba332d4b2a55e0b3d3c49a71c65a31f9f1c733b82e4d1f60ce9545782",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "cnn",
+        "role": "about",
+        "evidence": {
+          "articleId": "efficientnet-v2",
+          "blockId": "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "anchor": "depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages",
+          "quote": "EfficientNet의 학습 병목현상은 확장된 Depthwise Convolution으로부터 야기되었음. DC는 일반적인 convolution보다 더 적은 파라미터와 FLOPs를 가지고 있음. 그러나 종종 완전히 accelerator에서 활성화 되지 않음. 최근 Fused-MBConv가 Gupta & Tan, 2019 제안되었고 후에 다른 연구에서도 쓰였으며 mobile 또는 서버 accelerator에서 더 잘 활용되어지는 것을 확인했음. MBConv에서의 depthwise conv3x3 + expansion conv1x1 를 단일의 regular Conv3x3으로 대체 할 수 있음. 이 2개의 block을 구조적으로 비교하기위해 EfficientNet-B4에서 orginal MBConv를 Fused-MBConv로 점차 교체하였음.",
+          "hash": "0f174e863d85ec7890c6be00153e09879392ec80c8c81999f7e808426060de3f"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "c9312687a7ab8a89b184054e5f60e1ccccd6d94c923cb72f8008a7132f65bbd8",
+    "status": "abstained",
+    "candidates": [
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"introduction\",1]",
+          "[\"의의\",2]"
+        ],
+        "targetBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"introduction\",2]",
+          "[\"의의\",2]"
+        ]
+      },
+      {
+        "id": "resnext",
+        "sourceBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"introduction\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"aggregated-transformations\",2]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"introduction\",1]",
+          "[\"efficientnetv2-architecture-design\",3]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",6]",
+          "[\"modernizing-a-convnet-a-roadmap\",2]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"의의\",2]",
+          "[\"introduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"preview\",4]",
+          "[\"의의\",4]",
+          "[\"alternating-training\",1]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"의의\",2]",
+          "[\"efficientnetv2-architecture-design\",2]"
+        ],
+        "targetBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"의의\",3]",
+          "[\"요약\",14]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]",
+          "[\"introduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"overfeat-intuition\",2]",
+          "[\"learning\",1]",
+          "[\"overfeat-detection-network\",12]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]",
+          "[\"motivation\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"training-set-sizing\",1]",
+          "[\"how-much-augmentation\",2]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"progressive-learning-with-adaptive-regularization\",5]",
+          "[\"introduction\",1]",
+          "[\"efficientnetv2-architecture-design\",3]"
+        ],
+        "targetBlocks": [
+          "[\"image-classification\",1]",
+          "[\"introduction\",3]",
+          "[\"method\",1]"
+        ]
+      },
+      {
+        "id": "fast-r-cnn",
+        "sourceBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"introduction\",1]",
+          "[\"review-of-efficientnet\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",2]",
+          "[\"rough-요약\",1]",
+          "[\"fast-r-cnn-의의\",2]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"review-of-efficientnet\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"efficient-implementation\",2]",
+          "[\"architecture\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"review-of-efficientnet\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"problem-statement\",1]",
+          "[\"adapter-layers-intorduce-inference-latency\",1]"
+        ]
+      },
+      {
+        "id": "yolo-v1",
+        "sourceBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]",
+          "[\"introduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"network-design\",1]",
+          "[\"introduction\",2]",
+          "[\"training\",3]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"review-of-efficientnet\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"peft\",1]",
+          "[\"pre-training-ia3\",1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"progressive-learning-for-different-networks\",1]",
+          "[\"main-results\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"ablation-study\",1]",
+          "[\"results\",1]"
+        ]
+      },
+      {
+        "id": "r-cnn",
+        "sourceBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]",
+          "[\"introduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"요약\",7]",
+          "[\"사전학습된-alexnet을-fine-tune\",3]"
+        ]
+      }
+    ],
+    "recommendations": []
+  }
+}

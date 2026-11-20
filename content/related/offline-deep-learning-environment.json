@@ -1,0 +1,280 @@
+{
+  "version": 2,
+  "id": "offline-deep-learning-environment",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "3095648aa0d0ca9401cd46d021052d25acf2cb131ce66634aed46ea6da518e31",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "cuda",
+        "role": "applies",
+        "evidence": {
+          "articleId": "offline-deep-learning-environment",
+          "blockId": "[\"파일-무결성-검사-방법\",5]",
+          "anchor": "파일-무결성-검사-방법",
+          "quote": "무결성 테스트를 통과한 CUDA 파일로 설치하려했으나 space 용량 부족으로 설치가 안되었고 df -h 명령어를 통해 디스크용량을 봤는데... root mount가 고작 39GB로 할당되어있었음. 작업 디렉터리는 별도로 마운트된 디스크였으나 CUDA 설치 과정에서 생성되는 임시파일 때문에 space 용량 부족 에러가 발생. 기존 설치되어있는 cuda-11.2 버전을 삭제 후, cuda-11.8 설치 완료",
+          "hash": "143138d76b812035f2d8ddf4d058be32aa1aabf49711c666adb09b62dd318ec8"
+        }
+      },
+      {
+        "id": "python-environment",
+        "role": "applies",
+        "evidence": {
+          "articleId": "offline-deep-learning-environment",
+          "blockId": "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "anchor": "폐쇄망에서의-딥러닝-추론-환경-구축",
+          "quote": "테스트 서버에 CUDA 11.8, 12.1 버전에 따른 독립되고 분리되어 있는 가상환경을 구축하여 pytorch 버전 확인",
+          "hash": "0aac5bc8cf6862b06ff89e54da1e6706678f088af1c94cf94983a38c1aefd5fa"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "96f4f9b497bc58c26406122b6be51560c8f5b812e25ec19d6ec810fdc71315b7",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"cuda-cudnn\",4]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",2]",
+          "[\"env\",4]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",16]",
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"폐쇄망-환경구축을-하며-느낀점\",5]"
+        ],
+        "targetBlocks": [
+          "[\"2\",12]",
+          "[\"increasing-speed-a-llm-serving-inference\",6]",
+          "[\"4bit-or-8bit-quantization\",7]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",4]",
+          "[\"nvidia-driver\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",3]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"cuda-cudnn\",5]"
+        ],
+        "targetBlocks": [
+          "[\"1️⃣\",2]",
+          "[\"3️⃣\",8]",
+          "[\"2️⃣\",3]"
+        ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"cuda-cudnn\",1]",
+          "[\"파일-무결성-검사-방법\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"problem\",2]",
+          "[\"environment\",2]"
+        ]
+      },
+      {
+        "id": "inference-server",
+        "sourceBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",1]",
+          "[\"폐쇄망-환경구축을-하며-느낀점\",3]",
+          "[\"cuda-cudnn\",1]"
+        ],
+        "targetBlocks": [
+          "[null,2]",
+          "[\"참고\",2]",
+          "[\"cuda-버전-필터가-정확-일치였음\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"cuda-cudnn\",5]",
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",9]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"error2\",2]",
+          "[\"solution-1\",1]"
+        ]
+      },
+      {
+        "id": "python-venv-troubleshooting",
+        "sourceBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"새로운-이슈\",7]",
+          "[\"파일-무결성-검사-방법\",5]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",2]",
+          "[\"issue\",2]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"model\",1]",
+          "[\"새로운-이슈\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"1️⃣\",1]",
+          "[\"envs\",1]"
+        ]
+      },
+      {
+        "id": "pytest",
+        "sourceBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"python\",1]",
+          "[\"새로운-이슈\",8]"
+        ],
+        "targetBlocks": [
+          "[\"주요-특징\",2]",
+          "[null,1]",
+          "[\"주요-특징\",7]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"cuda-cudnn\",4]",
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"파일-무결성-검사-방법\",5]"
+        ],
+        "targetBlocks": [
+          "[\"조치-2\",1]",
+          "[\"조치-1\",1]",
+          "[\"error\",9]"
+        ]
+      },
+      {
+        "id": "netplan-troubleshooting",
+        "sourceBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"python-pkg\",1]",
+          "[\"python\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "pip-options",
+        "sourceBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"python-pkg\",1]",
+          "[\"python\",1]"
+        ],
+        "targetBlocks": [
+          "[\"pip-options\",1]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[\"폐쇄망-환경구축을-하며-느낀점\",6]",
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",19]",
+          "[\"model\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"theory\",5]",
+          "[\"discussion-and-limitations\",1]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",9]",
+          "[\"model\",2]",
+          "[\"cuda-cudnn\",4]"
+        ],
+        "targetBlocks": [
+          "[\"envs\",4]",
+          "[\"model\",3]",
+          "[\"dataset\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "python-venv-troubleshooting",
+        "relation": "related_method",
+        "reason": "폐쇄망 추론 환경에서 가상환경을 구성하는 방법과 Python 3.10 가상환경 생성·활성화 문제 해결을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "offline-deep-learning-environment",
+          "blockId": "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "anchor": "폐쇄망에서의-딥러닝-추론-환경-구축",
+          "quote": "테스트 서버에 CUDA 11.8, 12.1 버전에 따른 독립되고 분리되어 있는 가상환경을 구축하여 pytorch 버전 확인",
+          "hash": "0aac5bc8cf6862b06ff89e54da1e6706678f088af1c94cf94983a38c1aefd5fa"
+        },
+        "targetEvidence": {
+          "articleId": "python-venv-troubleshooting",
+          "blockId": "[\"해결\",1]",
+          "anchor": "해결",
+          "quote": "$ sudo apt install python3.10-venv $ python3 -m venv test $ source test/bin/activate >>> (test) user@server:~$",
+          "hash": "efe1e5bb6760deebf78d1ca5bf370e0a5841e39d19df46cc211db417b023634b"
+        }
+      },
+      {
+        "id": "pip-options",
+        "relation": "concept_explanation",
+        "reason": "폐쇄망 환경에 패키지를 설치하는 과정에서 활용할 수 있는 pip 설치 옵션을 알아볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "offline-deep-learning-environment",
+          "blockId": "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "anchor": "폐쇄망에서의-딥러닝-추론-환경-구축",
+          "quote": "테스트 서버에 CUDA 11.8, 12.1 버전에 따른 독립되고 분리되어 있는 가상환경을 구축하여 pytorch 버전 확인",
+          "hash": "0aac5bc8cf6862b06ff89e54da1e6706678f088af1c94cf94983a38c1aefd5fa"
+        },
+        "targetEvidence": {
+          "articleId": "pip-options",
+          "blockId": "[\"pip-options\",1]",
+          "anchor": "pip-options",
+          "quote": "모든 pip 설치 옵션, pip install - Usage",
+          "hash": "873aad2b41b774966b059227e56f3f8f31b682d2f862c3cdde29d8eb06cbb320"
+        }
+      }
+    ]
+  }
+}

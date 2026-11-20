@@ -1,0 +1,271 @@
+{
+  "version": 2,
+  "id": "resnext",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "9314992d13c0bec463af48acf6823a1650ee6c386c00f2274cc859e88427b70e",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "cnn",
+        "role": "about",
+        "evidence": {
+          "articleId": "resnext",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "이 논문에선 VGG-net과 ResNet의 layer를 반복하는 전략과 같은 간단한 구조를 제안함과 동시에 split-transform-merge 전략을 쉽게 적용하는 방식에 대해 제안. ResNeXt의 모듈은 transformation의 set을 나타내며 각 낮은 차원의 임베딩에서의 아웃풋은 합계로 집계됨. 연구진은 집계되어지는 transformation들은 모두 같은 toplogy를 가진다는 단순한 아이디어를 추구함. 이 디자인은 특별한 form 없이 어떠한 transformation의 큰 개수가 확장되어지는 걸 가능케 만들어줌.",
+          "hash": "f1d9565b04589dbb39200958584244f0ba3bef00bad3ef7f540fc5ae3cf32e09"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "66a81896df4219e09afccf41e78d25451f58a760aff8eefeceb07410a936058c",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"aggregated-transformations\",2]",
+          "[\"related-work\",4]"
+        ],
+        "targetBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"introduction\",1]",
+          "[\"scaling-dimensions\",4]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"related-work\",2]",
+          "[\"aggregated-transformations\",2]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",6]",
+          "[\"resnext-ify\",1]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"aggregated-transformations\",2]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"introduction\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"related-work\",2]",
+          "[\"aggregated-transformations\",1]"
+        ],
+        "targetBlocks": [
+          "[\"overfeat-intuition\",2]",
+          "[\"overfeat-classification-network\",4]",
+          "[\"convnets-sliding-window-efficiency\",3]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"의의\",1]",
+          "[\"related-work\",2]"
+        ],
+        "targetBlocks": [
+          "[\"preview\",4]",
+          "[\"의의\",2]",
+          "[\"abstract\",2]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"introduction\",6]",
+          "[\"aggregated-transformations\",2]",
+          "[\"related-work\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"low-rank-parameterized-update-matrices\",1]",
+          "[\"problem-statement\",1]"
+        ]
+      },
+      {
+        "id": "yolo-v1",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"template\",1]",
+          "[\"related-work\",2]"
+        ],
+        "targetBlocks": [
+          "[\"network-design\",1]",
+          "[\"introduction\",2]",
+          "[\"training\",3]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"aggregated-transformations\",3]",
+          "[\"introduction\",4]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[\"residual-connection\",1]",
+          "[\"multi-head-attention\",5]",
+          "[\"trnasformer-의의\",1]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"template\",1]",
+          "[\"aggregated-transformations\",2]"
+        ],
+        "targetBlocks": [
+          "[\"backbone\",2]",
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"end-to-end\",2]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"introduction\",6]",
+          "[\"related-work\",2]",
+          "[\"aggregated-transformations\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"peft\",1]",
+          "[\"combining-the-ingredients\",8]"
+        ]
+      },
+      {
+        "id": "fast-r-cnn",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"related-work\",2]",
+          "[\"template\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",2]",
+          "[\"rough-요약\",1]",
+          "[\"fast-r-cnn-의의\",2]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"introduction\",6]",
+          "[\"의의\",1]",
+          "[\"aggregated-transformations\",2]"
+        ],
+        "targetBlocks": [
+          "[\"요약\",14]",
+          "[\"의의\",2]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]"
+        ]
+      },
+      {
+        "id": "r-cnn",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"의의\",1]",
+          "[\"template\",1]"
+        ],
+        "targetBlocks": [
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"요약\",7]",
+          "[\"region-proposal-selective-search\",3]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"implementation-details\",4]",
+          "[\"introduction\",6]",
+          "[\"aggregated-transformations\",2]"
+        ],
+        "targetBlocks": [
+          "[\"hyper-parameter\",2]",
+          "[\"요약\",1]",
+          "[\"pre-training-bert\",1]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"implementation-details\",6]",
+          "[\"template\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"image-classification\",3]",
+          "[\"ablation-study\",4]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "convnext",
+        "relation": "related_method",
+        "reason": "ResNeXt의 guiding principle인 그룹 수와 폭의 확장을 ConvNeXt가 grouped convolution으로 적용하는 방식을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "resnext",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "이 논문에선 VGG-net과 ResNet의 layer를 반복하는 전략과 같은 간단한 구조를 제안함과 동시에 split-transform-merge 전략을 쉽게 적용하는 방식에 대해 제안. ResNeXt의 모듈은 transformation의 set을 나타내며 각 낮은 차원의 임베딩에서의 아웃풋은 합계로 집계됨. 연구진은 집계되어지는 transformation들은 모두 같은 toplogy를 가진다는 단순한 아이디어를 추구함. 이 디자인은 특별한 form 없이 어떠한 transformation의 큰 개수가 확장되어지는 걸 가능케 만들어줌.",
+          "hash": "f1d9565b04589dbb39200958584244f0ba3bef00bad3ef7f540fc5ae3cf32e09"
+        },
+        "targetEvidence": {
+          "articleId": "convnext",
+          "blockId": "[\"resnext-ify\",1]",
+          "anchor": "resnext-ify",
+          "quote": "이 파트에서 연구진은 vanilla ResNet보단 FLOPs과 정확도에서 더 좋은 성능을 보이는 ResNeXt의 아이디어를 적용시켰습니다. Grouped Convolution 은 메인 구성요소입니다. 또한 ResNeXt의 guiding principle은 더 많은 그룹과 확장된 width를 사용하는 것 입니다.",
+          "hash": "c0fa7e9c3be7a64728b28be27ad5a39c9a3123ea79152269ed1b87403539caa1"
+        }
+      },
+      {
+        "id": "yolo-v1",
+        "relation": "related_method",
+        "reason": "ResNeXt가 같은 topology의 residual block을 쌓는 설계와 YOLO의 CNN 기반 네트워크 설계를 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "resnext",
+          "blockId": "[\"template\",1]",
+          "anchor": "template",
+          "quote": "ResNeXt는 VGG/ResNet을 따르는 매우 모듈화된 디자인을 적용. 또한 residual block을 쌓아 구성하였음. 이 block들은 같은 topology를 가지고 있으며 VGG/ResNet으로부터 영감받은 2개의 단순한 규칙의 대상임.",
+          "hash": "f8a5c0e05d98fe83b738dd935b5fafa0cfbb7703ff5aa529a23cb1efc4856611"
+        },
+        "targetEvidence": {
+          "articleId": "yolo-v1",
+          "blockId": "[\"network-design\",1]",
+          "anchor": "network-design",
+          "quote": "CNN구조의 모델을 사용하고 PASCAL VOC 데이터로 평가를 진행하였다. 초기 convolutional 레이어의 network는 특징들을 표현하는데 이는 FCL가 output에 대한 확률을 예측하는 동안 이루어진다.",
+          "hash": "f416fc94e71a35e0a5509fbf5b55a9d017e66a448806bf7e116757f6ffca2964"
+        }
+      }
+    ]
+  }
+}

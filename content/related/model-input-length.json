@@ -1,0 +1,252 @@
+{
+  "version": 2,
+  "id": "model-input-length",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "5b8bc90f6e23294389dc9536f3ab18b76e3c2e0ad8f7b2eda88dafcae68d0923",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "tokenization",
+        "role": "applies",
+        "evidence": {
+          "articleId": "model-input-length",
+          "blockId": "[\"model-input-sequence-length\",7]",
+          "anchor": "model-input-sequence-length",
+          "quote": "model_name = \"beomi/KcELECTRA-base-v2022\" new_max_len = 2048 tokenizer = AutoTokenizer.from_pretrained(model_name) tokenizer.model_max_length = new_max_len config = ElectraConfig.from_pretrained(model_name) config.max_position_embeddings = new_max_len model = ElectraForSequenceClassification.from_pretrained(model_name, config = config, ignore_mismatched_sizes = True).to('cuda')",
+          "hash": "1d24a832940639af40839fcb9aa7c8423f505ec3b0a20bacc969ece5eb85d470"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "8737882ce2ab0b5a2e75a4146fd940d5760cc0d5f96f9858a51afad50271abcb",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"model-input-sequence-length\",7]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",3]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",6]",
+          "[\"env\",4]"
+        ]
+      },
+      {
+        "id": "tokenizer-input-troubleshooting",
+        "sourceBlocks": [
+          "[\"model-input-sequence-length\",7]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",2]"
+        ],
+        "targetBlocks": [
+          "[\"원인\",2]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"model-input-sequence-length\",1]",
+          "[\"env\",3]",
+          "[\"model-input-sequence-length\",6]"
+        ],
+        "targetBlocks": [
+          "[\"input-embedding\",2]",
+          "[\"self-attention\",11]",
+          "[\"positional-encoding\",4]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"model-input-sequence-length\",7]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",3]"
+        ],
+        "targetBlocks": [
+          "[\"case-2\",1]",
+          "[\"case-1\",2]",
+          "[\"answer\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",2]",
+          "[\"model-input-sequence-length\",3]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"solution\",2]",
+          "[\"source-code\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"model-input-sequence-length\",2]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",3]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"envs\",3]",
+          "[\"prob\",3]"
+        ]
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",3]",
+          "[\"model-input-sequence-length\",2]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"solution\",3]",
+          "[\"error\",2]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",3]",
+          "[\"model-input-sequence-length\",8]"
+        ],
+        "targetBlocks": [
+          "[\"env\",1]",
+          "[\"1\",2]",
+          "[\"1\",3]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"model-input-sequence-length\",3]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error-2\",8]",
+          "[\"error\",10]",
+          "[\"조치-2\",3]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"model-input-sequence-length\",1]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",3]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"error\",5]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"model-input-sequence-length\",1]",
+          "[\"env\",3]",
+          "[\"model-input-sequence-length\",3]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",2]",
+          "[\"gradio\",3]",
+          "[\"ts\",4]"
+        ]
+      },
+      {
+        "id": "developing-daily-05",
+        "sourceBlocks": [
+          "[\"model-input-sequence-length\",3]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",1]"
+        ],
+        "targetBlocks": [
+          "[\"sehongt5-large-questiongeneration\",3]",
+          "[\"t5-end2end-question-generation\",4]",
+          "[\"patil-surajquestion_generation\",10]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"model-input-sequence-length\",2]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",7]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",1]",
+          "[\"envs\",2]",
+          "[\"mission\",2]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"model-input-sequence-length\",2]",
+          "[\"env\",2]",
+          "[\"model-input-sequence-length\",3]"
+        ],
+        "targetBlocks": [
+          "[\"error\",6]",
+          "[\"solution\",4]",
+          "[\"environment\",1]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"model-input-sequence-length\",2]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",7]"
+        ],
+        "targetBlocks": [
+          "[\"model\",1]",
+          "[\"envs\",7]",
+          "[\"dataset\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "transformer",
+        "relation": "related_method",
+        "reason": "입력 시퀀스 길이를 늘리는 설정이 모델에서 어떤 역할을 하는지 positional encoding과 padding 설명을 통해 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "model-input-length",
+          "blockId": "[\"model-input-sequence-length\",6]",
+          "anchor": "model-input-sequence-length",
+          "quote": "이런 case의 경우, model의 input 길이를 동적으로 변경해줘야 사용 가능",
+          "hash": "5c5b0a255a7e8da25ca5b1ef7fd8d8db5701043627e784eb5c643a40eebabe11"
+        },
+        "targetEvidence": {
+          "articleId": "transformer",
+          "blockId": "[\"input-embedding\",2]",
+          "anchor": "input-embedding",
+          "quote": "한 sequence의 길이를 최대 몇으로 가져갈까 결정하는 하이퍼파라미터",
+          "hash": "532f1d1c990acafa0bbef4774ca30c25aa745d3bec6df0c0b415155d6c1aa756"
+        }
+      }
+    ]
+  }
+}

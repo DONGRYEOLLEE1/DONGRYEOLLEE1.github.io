@@ -1,0 +1,14 @@
+{
+  "python-map": {
+    "python-enumerate": "같은 구성으로 쓴 내장 함수 노트로, 두 리스트를 나란히 처리하는 예제를 map과 enumerate·zip으로 각각 풀어 볼 수 있습니다."
+  },
+  "vllm-tensor-parallel-troubleshooting": {
+    "inference-server": "같은 TP2 정지 문제의 원인과, NCCL P2P 비활성화와 custom all-reduce 비활성화를 함께 써야 하는 이유를 설명합니다."
+  },
+  "gpt-3": {
+    "few-shot-learning": "GPT-3의 평가 조건으로 쓰인 few-shot·one-shot·zero-shot과 meta-learning 용어의 정의를 정리한 글입니다."
+  },
+  "gpu-driver-troubleshooting": {
+    "cuda-device-troubleshooting": "같은 A100 서버에서 드라이버를 맞춘 뒤 이어진 CUDA 인식 오류를 fabric-manager 설치로 해결한 후속 기록입니다."
+  }
+}

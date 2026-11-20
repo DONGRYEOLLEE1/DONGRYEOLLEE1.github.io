@@ -1,0 +1,320 @@
+{
+  "version": 2,
+  "id": "prompt-tuning",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "95e9f8e1650b8d23811b89b1fb35706679f8fecee1f149a8af166fcdf680fc6c",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "prompt-tuning",
+        "role": "about",
+        "evidence": {
+          "articleId": "prompt-tuning",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "이번 연구에선, prompt tuning 제안. 사전훈련된 전체 모델을 동결하고 downstream-task당 추가로 K개의 조정 가능한 토큰만 input-text 앞에 붙일 수 있도록 허용함. 이 soft-prompt는 end-to-end 방식으로 학습되었고 완전히 labeled dataset으로부터 signal을 압축할 수 있음. 이러한 방법론을 통해 few-shot prompts의 성능을 향상시키고 model-tuning과의 gap을 줄일 수 있었음. 동시에 단일의 사전학습된 모델은 모든 downstream-task에서 다시사용될 수 있으며 연구진은 동결된 모델들의 효율적인 serving benefits을 재학습시켰음.",
+          "hash": "74471a37f36d116424ed1aabfe097aa4a0d1e8e0b0e18409834babc1e3e51b4c"
+        }
+      },
+      {
+        "id": "peft",
+        "role": "about",
+        "evidence": {
+          "articleId": "prompt-tuning",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "이번 연구에선, prompt tuning 제안. 사전훈련된 전체 모델을 동결하고 downstream-task당 추가로 K개의 조정 가능한 토큰만 input-text 앞에 붙일 수 있도록 허용함. 이 soft-prompt는 end-to-end 방식으로 학습되었고 완전히 labeled dataset으로부터 signal을 압축할 수 있음. 이러한 방법론을 통해 few-shot prompts의 성능을 향상시키고 model-tuning과의 gap을 줄일 수 있었음. 동시에 단일의 사전학습된 모델은 모든 downstream-task에서 다시사용될 수 있으며 연구진은 동결된 모델들의 효율적인 serving benefits을 재학습시켰음.",
+          "hash": "74471a37f36d116424ed1aabfe097aa4a0d1e8e0b0e18409834babc1e3e51b4c"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "3f9b5860067f83f116f624a99e701c58f6bd6849d2c322561802f95b78c735b2",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"ablation-study\",3]",
+          "[\"results\",1]"
+        ],
+        "targetBlocks": [
+          "[\"peft\",1]",
+          "[\"introduction\",6]",
+          "[\"peft-with-ia3\",12]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"prompt-tuning\",1]",
+          "[\"results\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"problem-statement\",1]",
+          "[\"directly-optimizing-the-prompt-is-hard\",1]"
+        ]
+      },
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"resilience-to-domain-shift\",2]",
+          "[\"interpretability\",1]"
+        ],
+        "targetBlocks": [
+          "[null,3]",
+          "[\"what-is-zero-shot-learning\",1]",
+          "[\"when-some-annotated-data-is-available-1\",1]"
+        ]
+      },
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"results\",1]",
+          "[\"interpretability\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",5]",
+          "[\"scaling-laws\",2]",
+          "[\"results\",3]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"prompt-tuning\",1]",
+          "[\"ablation-study\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"peft-parameter-efficient-fine-tuning\",3]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"results\",1]",
+          "[\"ablation-study\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"results\",1]",
+          "[\"results-1\",1]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"ablation-study\",3]",
+          "[\"results\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"ablation-study\",1]",
+          "[\"parameter-efficiency-in-existing-methods\",1]"
+        ]
+      },
+      {
+        "id": "gpt-3",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"prompt-tuning\",1]",
+          "[\"results\",1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[null,8]",
+          "[null,2]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"resilience-to-domain-shift\",2]",
+          "[\"interpretability\",1]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]",
+          "[\"왜-fsl-일까\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"introduction\",7]",
+          "[\"results\",1]",
+          "[\"prompt-tuning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"main-results\",1]",
+          "[\"approach\",1]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"ablation-study\",3]",
+          "[\"introduction\",1]",
+          "[\"results\",1]"
+        ],
+        "targetBlocks": [
+          "[\"ablation-study\",3]",
+          "[\"fine-tuning-bert\",1]",
+          "[\"task-1-masked-lm-mlm\",3]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"introduction\",4]",
+          "[\"prompt-tuning\",1]",
+          "[\"results\",1]"
+        ],
+        "targetBlocks": [
+          "[\"background\",2]",
+          "[\"introduction\",1]",
+          "[\"qlora-vs-standard-finetuning\",4]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"introduction\",7]",
+          "[\"results\",1]",
+          "[\"ablation-study\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"continual-pre-training\",5]",
+          "[\"the-architecture-of-ziya2\",2]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"ablation-study\",1]",
+          "[\"results\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"progressive-learning-for-different-networks\",1]",
+          "[\"main-results\",1]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"interpretability\",2]",
+          "[\"prompt-tuning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"vision-transformer-탐색하기\",7]",
+          "[\"vision-transformervit\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "ia3-paper",
+        "relation": "related_method",
+        "reason": "soft-prompt를 입력에 결합해 학습하는 방식과, prompt tuning을 task별 soft embedding을 붙이는 PEFT로 설명하는 내용을 통해 구현 방식을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "prompt-tuning",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "이번 연구에선, prompt tuning 제안. 사전훈련된 전체 모델을 동결하고 downstream-task당 추가로 K개의 조정 가능한 토큰만 input-text 앞에 붙일 수 있도록 허용함. 이 soft-prompt는 end-to-end 방식으로 학습되었고 완전히 labeled dataset으로부터 signal을 압축할 수 있음. 이러한 방법론을 통해 few-shot prompts의 성능을 향상시키고 model-tuning과의 gap을 줄일 수 있었음. 동시에 단일의 사전학습된 모델은 모든 downstream-task에서 다시사용될 수 있으며 연구진은 동결된 모델들의 효율적인 serving benefits을 재학습시켰음.",
+          "hash": "74471a37f36d116424ed1aabfe097aa4a0d1e8e0b0e18409834babc1e3e51b4c"
+        },
+        "targetEvidence": {
+          "articleId": "ia3-paper",
+          "blockId": "[\"peft\",1]",
+          "anchor": "peft",
+          "quote": "PEFT는 모델을 학습할때 필요 메모리를 급격하게 줄여주는 역할을 함. 추가적으로 PEFT method는 mixed-task batches를 가능하게 만들어 줌. 예를들어, prompt tuning은 단일의 모델을 다양한 task에 단순하게 다른 prompt embedding을 각각의 batch에서 concat함으로써 적용 가능하게 만들어줌. 반면에 re-parameterize하는 PEFT method는 mixed-task batches 작업에 resource가 매우 많이 소모됨.",
+          "hash": "81224be22d9a508bf55075b821a23c6ebeee87a52f69e1d33e61ff58463ff14e"
+        }
+      },
+      {
+        "id": "dora",
+        "relation": "related_method",
+        "reason": "입력에 학습 가능한 soft token을 추가하는 prompt tuning과, 프롬프트 토큰 벡터만 학습하는 방식을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "prompt-tuning",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "이번 연구에선, prompt tuning 제안. 사전훈련된 전체 모델을 동결하고 downstream-task당 추가로 K개의 조정 가능한 토큰만 input-text 앞에 붙일 수 있도록 허용함. 이 soft-prompt는 end-to-end 방식으로 학습되었고 완전히 labeled dataset으로부터 signal을 압축할 수 있음. 이러한 방법론을 통해 few-shot prompts의 성능을 향상시키고 model-tuning과의 gap을 줄일 수 있었음. 동시에 단일의 사전학습된 모델은 모든 downstream-task에서 다시사용될 수 있으며 연구진은 동결된 모델들의 효율적인 serving benefits을 재학습시켰음.",
+          "hash": "74471a37f36d116424ed1aabfe097aa4a0d1e8e0b0e18409834babc1e3e51b4c"
+        },
+        "targetEvidence": {
+          "articleId": "dora",
+          "blockId": "[\"peft-parameter-efficient-fine-tuning\",3]",
+          "anchor": "peft-parameter-efficient-fine-tuning",
+          "quote": "두 번째는 Prompt-based 방법입니다. 이 방법론은 추가적인 extra soft tokens(=prompts)을 초기의 input에 추가하고 파인튜닝할때 이 학습할 수 있는 vector에 집중시키는 방법론입니다. 그러나 이 접근들은 전형적으로 initialization할 때의 민감함으로 인해 종종 어려움을 겪어 전체적인 효과에 영향을 미칩니다.",
+          "hash": "49b7afebe19f17b8de367b1067b0e02a2ba866f7d18565545f0e6e86e9e2c8c4"
+        }
+      },
+      {
+        "id": "lora",
+        "relation": "related_method",
+        "reason": "프롬프트 토큰 임베딩을 학습하는 방식과 task별 소수 파라미터를 저장·불러오는 PEFT의 대안적 접근을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "prompt-tuning",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "이번 연구에선, prompt tuning 제안. 사전훈련된 전체 모델을 동결하고 downstream-task당 추가로 K개의 조정 가능한 토큰만 input-text 앞에 붙일 수 있도록 허용함. 이 soft-prompt는 end-to-end 방식으로 학습되었고 완전히 labeled dataset으로부터 signal을 압축할 수 있음. 이러한 방법론을 통해 few-shot prompts의 성능을 향상시키고 model-tuning과의 gap을 줄일 수 있었음. 동시에 단일의 사전학습된 모델은 모든 downstream-task에서 다시사용될 수 있으며 연구진은 동결된 모델들의 효율적인 serving benefits을 재학습시켰음.",
+          "hash": "74471a37f36d116424ed1aabfe097aa4a0d1e8e0b0e18409834babc1e3e51b4c"
+        },
+        "targetEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "많은 사람들이 일부 매개 변수만 적용하거나 새로운 task를 위해 외부 모듈을 학습하여 이를 완화하려고 했음. 이렇게되면 task-specific한 파라미터의 숫자는 적게 저장되고 불러와짐. 이러한 방법은 Finetuning을 실패하거나 효율성과 모델 품질의 trade-off관계에서 벗어나지 못하였음.",
+          "hash": "f0c82209a5bbf501a166e1ed78190226ba448b1acd9cdc23a3cad6a87669d5e3"
+        }
+      },
+      {
+        "id": "qlora",
+        "relation": "related_method",
+        "reason": "soft prompt의 임베딩만 학습하는 방법과, 적은 학습 파라미터로 메모리 부담을 줄이는 LoRA 방식을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "prompt-tuning",
+          "blockId": "[\"prompt-tuning\",1]",
+          "anchor": "prompt-tuning",
+          "quote": "Prompt-tuning은 prompt $\\theta$로부터 파라미터화된 prompt $P$의 한계를 제거합니다. 대신 프롬프트에는 업데이트할 수 있는 전용 매개 변수인 $\\theta_{P}$가 존재합니다. 프롬프트 디자인에는 고정된 임베딩 어휘에서 프롬프트 토큰을 선택하는 작업이 포함되지만, 프롬프트 튜닝은 특수 토큰으로 구성된 고정 프롬프트를 사용하는 것으로 생각할 수 있으며, 이러한 프롬프트 토큰의 임베딩만 업데이트할 수 있습니다.",
+          "hash": "aefdbc8f6d9a88471c4487ed5bdcea6c483e748206c124a0dd48d026221ea311"
+        },
+        "targetEvidence": {
+          "articleId": "qlora",
+          "blockId": "[\"background\",2]",
+          "anchor": "background",
+          "quote": "Low-rank Adapters Full-finetune model과 달리 LoRA 파인튜닝 방법은 적은 trainable 파라미터를 사용하여 필요 메모리 자체를 줄이는 방법을 의미합니다. Stochastic gradient descent을 수행하는동안의 기울기는 adapter에서 고정된 사전학습모델 기울기를 거칩니다.",
+          "hash": "92f382a4e2188e39e15b010a45aa75d3ef4e2412cd8c1d5ff772185ab6ca7258"
+        }
+      }
+    ]
+  }
+}

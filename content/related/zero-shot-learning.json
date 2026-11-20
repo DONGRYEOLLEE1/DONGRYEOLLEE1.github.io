@@ -1,0 +1,331 @@
+{
+  "version": 2,
+  "id": "zero-shot-learning",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "5366ed3585a9c0e5a40ba81aca30b05e29959abf5eb448130933cb603766c4ec",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "in-context-learning",
+        "role": "about",
+        "evidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"what-is-zero-shot-learning\",1]",
+          "anchor": "what-is-zero-shot-learning",
+          "quote": "전통적으로 ZSL은 대부분 상당히 특정한 유형의 작업을 가리키는 경우가 많았습니다. 1개의 셋에서 분류기를 학습한 후에 다른 셋에서의 평가하는 방식으로요. 최근에 특히 NLP 분야에서 모델이 명시적으로 학습되지 않은 작업을 수행하도록 한다는 의미로 훨씬 더 광범위하게 사용되고 있습니다. 잘 알다시피 GPT-2에서 저자들은 언어모델을 파인튜닝 없이 직접적으로 기계독해와 같은 downstream task에서 평가하였습니다.",
+          "hash": "0a41e41436ab1fea2ff22e01e522f0f279afabfdadd4a1709f4d145acc54957b"
+        }
+      },
+      {
+        "id": "contextual-embeddings",
+        "role": "about",
+        "evidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"a-latent-embedding-approach\",2]",
+          "anchor": "a-latent-embedding-approach",
+          "quote": "text 도메인에선 같은 공간에서 class 이름과 데이터를 embed할 수 있는 단일의 모델을 사용할 수 있다는 장점이 존재하고 데이터 수집 정렬 단계의 필요를 제거할수있습니다. 이게 절대 새로운 기술이 아닌게 연구자와 실무자들은 비슷한 방식으로 단어 벡터를 pool해왔습니다. 그런데 최근에 문장단위의 임베딩 모델의 quality가 급격하게 상승하는 현장을 목도했습니다. 그러므로 Sentence-transformers를 통해 몇가지 실험들을 돌려볼 수 있는 경험을 할 수 있으며 최근 파인튜닝한 pooled BERT와 같은 기술들같은 model을 통해 sequence와 레이블 embedding들을 얻을 수 있습니다.",
+          "hash": "59dba5e76bb591b4a25529eaa5a2dd2a5befbcb432b5bea3600560738582c607"
+        }
+      },
+      {
+        "id": "finetuning",
+        "role": "applies",
+        "evidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"classification-as-nli\",3]",
+          "anchor": "classification-as-nli",
+          "quote": "Yin et al. (2019)에서 제안된 접근법은 사전학습된 MNLI sequence-pair classifier(Zero-shot text classifier)를 사용합니다. 이 아이디어는 우리가 관심있는 순서를 premise로 표시하고 각 후보 레이블을 hypothesis로 바꾸는 것입니다. 만약 NLI 모델이 premise가 hypothesis를 entailment로 예측했다면 우린 true 레이블을 얻을것입니다.",
+          "hash": "52d84e4b1ab77f82c86b6ff70fc105d4a3548ec7926606d9da04591e86f67fcc"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "4d4dc56f4eef903b8625fa27294f390a0ef0b0e381b52cff6cc5407a55e2a002",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "nlp-terms",
+        "sourceBlocks": [
+          "[\"a-latent-embedding-approach\",2]",
+          "[\"classification-as-nli\",1]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"nli---natural-language-inference\",2]",
+          "[null,1]",
+          "[\"glue---general-language-understanding-evaluation\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[null,1]",
+          "[\"when-some-annotated-data-is-available\",1]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[null,1]",
+          "[\"nlp\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[null,5]",
+          "[\"when-some-annotated-data-is-available-1\",1]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",1]",
+          "[\"문제-정의\",3]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "gpt-3",
+        "sourceBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[null,3]",
+          "[\"classification-as-nli\",2]"
+        ],
+        "targetBlocks": [
+          "[null,5]",
+          "[null,10]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[null,3]",
+          "[\"what-is-zero-shot-learning\",1]",
+          "[\"when-some-annotated-data-is-available-1\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"resilience-to-domain-shift\",2]",
+          "[\"interpretability\",1]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"a-latent-embedding-approach\",2]",
+          "[\"classification-as-nli\",2]",
+          "[\"what-is-zero-shot-learning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"task-1-masked-lm-mlm\",2]",
+          "[\"input\",2]",
+          "[\"model-architecture\",8]"
+        ]
+      },
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[\"classification-as-nli\",3]",
+          "[null,3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"introduction\",2]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[null,3]",
+          "[\"when-some-annotated-data-is-available-1\",1]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-in-context-learning-icl\",1]",
+          "[\"introduction\",6]",
+          "[\"performance-on-t0-tasks\",1]"
+        ]
+      },
+      {
+        "id": "elmo",
+        "sourceBlocks": [
+          "[\"a-latent-embedding-approach\",2]",
+          "[\"what-is-zero-shot-learning\",2]",
+          "[null,3]"
+        ],
+        "targetBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",3]",
+          "[\"experiments\",4]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"classification-as-nli\",3]",
+          "[\"a-latent-embedding-approach\",1]",
+          "[null,3]"
+        ],
+        "targetBlocks": [
+          "[\"fine-tuning과-높은-해상도-이미지-다루기\",1]",
+          "[\"vision-transformervit\",9]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"a-latent-embedding-approach\",2]",
+          "[\"classification-as-nli\",4]",
+          "[null,5]"
+        ],
+        "targetBlocks": [
+          "[\"sbert\",1]",
+          "[\"translation\",3]",
+          "[\"question-generationkor\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[null,3]",
+          "[\"what-is-zero-shot-learning\",1]",
+          "[\"when-some-annotated-data-is-available-1\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"related-work\",1]",
+          "[\"main-results\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"classification-as-nli\",3]",
+          "[null,4]",
+          "[\"what-is-zero-shot-learning\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"problem-statement\",1]",
+          "[\"low-rank-parameterized-update-matrices\",1]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[null,3]",
+          "[\"classification-as-nli\",7]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"chain-of-thought-prompting\",5]",
+          "[\"symbolic-reasoning\",1]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[null,5]",
+          "[\"classification-as-nli\",7]",
+          "[\"a-latent-embedding-approach\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"eda-makes-gains\",1]",
+          "[\"discussion-and-limitations\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "flan",
+        "relation": "related_method",
+        "reason": "파인튜닝 없이 미관측 작업을 수행하는 zero-shot 설정과 instruction tuning으로 zero-shot 성능을 높이는 접근을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"what-is-zero-shot-learning\",1]",
+          "anchor": "what-is-zero-shot-learning",
+          "quote": "전통적으로 ZSL은 대부분 상당히 특정한 유형의 작업을 가리키는 경우가 많았습니다. 1개의 셋에서 분류기를 학습한 후에 다른 셋에서의 평가하는 방식으로요. 최근에 특히 NLP 분야에서 모델이 명시적으로 학습되지 않은 작업을 수행하도록 한다는 의미로 훨씬 더 광범위하게 사용되고 있습니다. 잘 알다시피 GPT-2에서 저자들은 언어모델을 파인튜닝 없이 직접적으로 기계독해와 같은 downstream task에서 평가하였습니다.",
+          "hash": "0a41e41436ab1fea2ff22e01e522f0f279afabfdadd4a1709f4d145acc54957b"
+        },
+        "targetEvidence": {
+          "articleId": "flan",
+          "blockId": "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "anchor": "flan--instruction-tuning-improves-zero-shot-learning",
+          "quote": "메인 아이디어로는 지시(supervision)를 사용하여 언어모델에 특정 task에 대해 가르치는 것임. 그 언어모델은 심지어 unseen task 일지라도 잘 작동할 것이며 instruction을 따르기 위해 잘 학습할 것임. 밝혀지지 않은 task에 대해 평가하기 위해 작업 유형별로 데이터 세트를 클러스터로 그룹화하고 각 작업 클러스터를 평가하기 위해 보류하고 나머지 모든 클러스터에서 instruction tuning을 진행함.",
+          "hash": "8e61d4b0359d7e005d690e859cf2c30921b7666b84e49772ef0527d1b8b422e7"
+        }
+      },
+      {
+        "id": "few-shot-learning",
+        "relation": "evaluation_comparison",
+        "reason": "명시적 학습 없이 새 작업을 수행하는 zero-shot과 클래스별 소수 레이블 예시를 이용하는 few-shot의 조건 차이를 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"what-is-zero-shot-learning\",1]",
+          "anchor": "what-is-zero-shot-learning",
+          "quote": "전통적으로 ZSL은 대부분 상당히 특정한 유형의 작업을 가리키는 경우가 많았습니다. 1개의 셋에서 분류기를 학습한 후에 다른 셋에서의 평가하는 방식으로요. 최근에 특히 NLP 분야에서 모델이 명시적으로 학습되지 않은 작업을 수행하도록 한다는 의미로 훨씬 더 광범위하게 사용되고 있습니다. 잘 알다시피 GPT-2에서 저자들은 언어모델을 파인튜닝 없이 직접적으로 기계독해와 같은 downstream task에서 평가하였습니다.",
+          "hash": "0a41e41436ab1fea2ff22e01e522f0f279afabfdadd4a1709f4d145acc54957b"
+        },
+        "targetEvidence": {
+          "articleId": "few-shot-learning",
+          "blockId": "[\"few-shot-learning이-뭘까\",1]",
+          "anchor": "few-shot-learning이-뭘까",
+          "quote": "Few-shot learning (FSL)은 각 class에 대해 오직 몇가지만 레이블된 샘플들을 사용한 데이터의 새로운 카테고리를 사전학습 모델에 이용가능하게 한 머신러닝 framework입니다. 이건 meta-learning의 패러다임에서 파생된 개념입니다.",
+          "hash": "ffa507f2e57a0525bec922e6b18c3e13b6c40db50d211bdfbbfbc141d9e8b4c2"
+        }
+      },
+      {
+        "id": "bert",
+        "relation": "related_method",
+        "reason": "NLI 분류에서 전제와 가설을 별도 입력으로 다루는 방식과 BERT의 사전학습 목표인 MLM을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"classification-as-nli\",2]",
+          "anchor": "classification-as-nli",
+          "quote": "BERT와 같은 transformer 구조를 사용할때 NLI 데이터셋은 전형적으로 sequence-pair classification을 통해 모델링 되어집니다. 즉, 우리는 모델을 통해 전제와 가설을 함께 별개의 세그먼트로 제공하고 [반복, 중립, 수반] 중 하나를 예측하는 classification head를 학습합니다.",
+          "hash": "a0577ec78e848da12df75a7b8838429df864811eb2fdc851330579b5ce3c9468"
+        },
+        "targetEvidence": {
+          "articleId": "bert",
+          "blockId": "[\"task-1-masked-lm-mlm\",2]",
+          "anchor": "task-1-masked-lm-mlm",
+          "quote": "Bi-directional한 Transformer Encoder를 쓰되, 실제 Input에 해당하는 단어들을 임의의 비율(15%)로 마스킹을 시키고 모델이 학습을 통해서 실제 가려진 값을 잘 예측하도록 학습시키는 것이 바로 BERT의 pre-training 첫번째 task인 MLM.",
+          "hash": "9792b5e6449cb15bdc0ea16dbe7ccc3e9ead912491a7080d396ba85c93f0dc26"
+        }
+      },
+      {
+        "id": "gpt-3",
+        "relation": "related_method",
+        "reason": "파인튜닝 없이 작업을 수행하는 zero-shot과 자연어 지시 및 적은 예시를 입력해 작업에 적응하는 in-context learning을 비교할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "zero-shot-learning",
+          "blockId": "[\"what-is-zero-shot-learning\",1]",
+          "anchor": "what-is-zero-shot-learning",
+          "quote": "전통적으로 ZSL은 대부분 상당히 특정한 유형의 작업을 가리키는 경우가 많았습니다. 1개의 셋에서 분류기를 학습한 후에 다른 셋에서의 평가하는 방식으로요. 최근에 특히 NLP 분야에서 모델이 명시적으로 학습되지 않은 작업을 수행하도록 한다는 의미로 훨씬 더 광범위하게 사용되고 있습니다. 잘 알다시피 GPT-2에서 저자들은 언어모델을 파인튜닝 없이 직접적으로 기계독해와 같은 downstream task에서 평가하였습니다.",
+          "hash": "0a41e41436ab1fea2ff22e01e522f0f279afabfdadd4a1709f4d145acc54957b"
+        },
+        "targetEvidence": {
+          "articleId": "gpt-3",
+          "blockId": "[null,5]",
+          "anchor": null,
+          "quote": "이런 문제를 해결하기 위한 잠재적인 루트는 바로 meta learning이다. 언어모델의 context딴에서 학습시간동안 패턴인지능력과 다양한 셋의 스킬을 개발하는 모델을 의미합니다. 그리고 그러고난 후에 inference 할때 이 능력을 원하는 작업에 빠르게 적응하거나 인식합니다 (위 이미지 참고). 최근연구를 통해 이걸 in-context learning이라고 부르기로 했고 task 특성의 특징에 맞게 사전학습된 언어모델의 텍스트 입력값으로 사용하는 것을 일컫습니다. 이 모델은 자연어 지시와 적은 demonstration에 영향을 받습니다. 그리고 다음에 올 단어를 간단하게 예측함으로써 추가적인 예시를 완벽하게 기대하게 만듭니다.",
+          "hash": "48fbd476c085ab36cb78e29fd9a76765d66c03ba983f0977be3cd1e10bb6c66a"
+        }
+      }
+    ]
+  }
+}

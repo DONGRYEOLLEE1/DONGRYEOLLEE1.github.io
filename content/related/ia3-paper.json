@@ -1,0 +1,331 @@
+{
+  "version": 2,
+  "id": "ia3-paper",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "693ec28d9199453de60c0052290a720d7fefaf96376722459680fc928118a85a",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "ia3",
+        "role": "about",
+        "evidence": {
+          "articleId": "ia3-paper",
+          "blockId": "[\"peft-with-ia3\",6]",
+          "anchor": "peft-with-ia3",
+          "quote": "학습된 vector에 대한 모델 활성화함수의 element-wise multiplication에 대해 연구 진행. 특히 학습된 task-specific vector의 적용 양식에 대해 고려하였음. broadcasting notation. 연구진은 트랜스포머 모델에서 활성화 함수의 각 set을 통해 학습된 rescaling vector를 연구하면서 이것이 꼭 필요하지 않을수도 있다는 것을 발견해냈음. 대신, 우리는 self-attention 메커니즘에 key와 value에 대한 self-attention 및 encoder-decoder attention 메커니즘의 key와 value에 vector를 재조정하고 그리고 position-wise fedd-forward의 중간 activation에 rescaling vector를 도입하는 것으로 충분했음. 이에 연구진은 3개의 학습된 vector를 소개합니다.",
+          "hash": "2ed000d00afdb85f83cd558bc628039160e4e3e3d105ae4dab64def273d89ecc"
+        }
+      },
+      {
+        "id": "peft",
+        "role": "about",
+        "evidence": {
+          "articleId": "ia3-paper",
+          "blockId": "[\"peft\",1]",
+          "anchor": "peft",
+          "quote": "PEFT는 모델을 학습할때 필요 메모리를 급격하게 줄여주는 역할을 함. 추가적으로 PEFT method는 mixed-task batches를 가능하게 만들어 줌. 예를들어, prompt tuning은 단일의 모델을 다양한 task에 단순하게 다른 prompt embedding을 각각의 batch에서 concat함으로써 적용 가능하게 만들어줌. 반면에 re-parameterize하는 PEFT method는 mixed-task batches 작업에 resource가 매우 많이 소모됨.",
+          "hash": "81224be22d9a508bf55075b821a23c6ebeee87a52f69e1d33e61ff58463ff14e"
+        }
+      },
+      {
+        "id": "in-context-learning",
+        "role": "about",
+        "evidence": {
+          "articleId": "ia3-paper",
+          "blockId": "[\"few-shot-in-context-learning-icl\",1]",
+          "anchor": "few-shot-in-context-learning-icl",
+          "quote": "ICL은 레이블이 지정되지 않은 쿼리 예제와 함께 연결되고 프롬프트가 표시된 입력 대상 예제(\"샷\"이라고 함)를 레이블이 지정되지 않은 쿼리 예제와 함께 제공함으로써 모델을 유도하는 것을 목표로 합니다. ICL의 이점은 파인튜닝 없이 즉시 많은 task에 단일의 모델을 적용할 수 있는 점입니다. 이는 또한 mixed-task batches를 가능하게 만들어주며 데이터 배치의 여러 예시가 서로 다른 컨텍스트를 사용하여 서로 다른 작업에 해당하는 작업도 가능합니다.",
+          "hash": "5b1f5fc385ccf87fe5e4f88f5564e1e085e3976e8e120a70e87fd851b2644a26"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "98746c956305682ef7abb97b2760b34870ad5795d5b8a8a6d275a1fcc51ded45",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "ia3-implementation",
+        "sourceBlocks": [
+          "[\"peft\",1]",
+          "[\"peft-with-ia3\",6]",
+          "[\"introduction\",7]"
+        ],
+        "targetBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",1]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"peft\",1]",
+          "[\"introduction\",6]",
+          "[\"peft-with-ia3\",16]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"problem-statement\",1]",
+          "[\"low-rank-parameterized-update-matrices\",4]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"peft\",1]",
+          "[\"peft-with-ia3\",6]",
+          "[\"introduction\",6]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"peft\",1]",
+          "[\"introduction\",6]",
+          "[\"peft-with-ia3\",16]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"peft-parameter-efficient-fine-tuning\",1]",
+          "[\"weight-decomposed-low-rank-adaptation\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"few-shot-in-context-learning-icl\",1]",
+          "[\"introduction\",6]",
+          "[\"unlikelihood-training-and-length-normalization\",1]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]",
+          "[null,2]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"peft\",1]",
+          "[\"introduction\",6]",
+          "[\"peft-with-ia3\",12]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"ablation-study\",3]",
+          "[\"results\",1]"
+        ]
+      },
+      {
+        "id": "gpt-3",
+        "sourceBlocks": [
+          "[\"few-shot-in-context-learning-icl\",1]",
+          "[\"introduction\",1]",
+          "[\"peft-with-ia3\",1]"
+        ],
+        "targetBlocks": [
+          "[null,5]",
+          "[null,8]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"introduction\",6]",
+          "[\"의의\",2]",
+          "[\"unlikelihood-training-and-length-normalization\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"instruction-finetuning\",2]",
+          "[\"efficient-implementation\",1]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"peft\",1]",
+          "[\"introduction\",6]",
+          "[\"의의\",3]"
+        ],
+        "targetBlocks": [
+          "[\"background\",2]",
+          "[\"introduction\",1]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"few-shot-in-context-learning-icl\",1]",
+          "[\"introduction\",6]",
+          "[\"unlikelihood-training-and-length-normalization\",1]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",1]",
+          "[\"solution\",1]",
+          "[\"문제-정의\",6]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"few-shot-in-context-learning-icl\",1]",
+          "[\"introduction\",6]",
+          "[\"unlikelihood-training-and-length-normalization\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"symbolic-reasoning\",1]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"peft\",1]",
+          "[\"introduction\",6]",
+          "[\"peft-with-ia3\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"experiments\",1]",
+          "[\"method\",1]"
+        ]
+      },
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[\"few-shot-in-context-learning-icl\",1]",
+          "[\"introduction\",6]",
+          "[\"performance-on-t0-tasks\",1]"
+        ],
+        "targetBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[null,3]",
+          "[\"when-some-annotated-data-is-available-1\",1]"
+        ]
+      },
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[\"few-shot-in-context-learning-icl\",1]",
+          "[\"introduction\",6]",
+          "[\"performance-on-t0-tasks\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "[\"results\",3]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"introduction\",6]",
+          "[\"peft\",1]",
+          "[\"pre-training-ia3\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"review-of-efficientnet\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "ia3-implementation",
+        "relation": "application_example",
+        "reason": "IA3가 key·value와 중간 activation에 rescaling vector를 적용한다는 설명을 바탕으로, PEFT의 IA3 학습 사례를 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "ia3-paper",
+          "blockId": "[\"peft-with-ia3\",6]",
+          "anchor": "peft-with-ia3",
+          "quote": "학습된 vector에 대한 모델 활성화함수의 element-wise multiplication에 대해 연구 진행. 특히 학습된 task-specific vector의 적용 양식에 대해 고려하였음. broadcasting notation. 연구진은 트랜스포머 모델에서 활성화 함수의 각 set을 통해 학습된 rescaling vector를 연구하면서 이것이 꼭 필요하지 않을수도 있다는 것을 발견해냈음. 대신, 우리는 self-attention 메커니즘에 key와 value에 대한 self-attention 및 encoder-decoder attention 메커니즘의 key와 value에 vector를 재조정하고 그리고 position-wise fedd-forward의 중간 activation에 rescaling vector를 도입하는 것으로 충분했음. 이에 연구진은 3개의 학습된 vector를 소개합니다.",
+          "hash": "2ed000d00afdb85f83cd558bc628039160e4e3e3d105ae4dab64def273d89ecc"
+        },
+        "targetEvidence": {
+          "articleId": "ia3-implementation",
+          "blockId": "[\"ia3\",1]",
+          "anchor": "ia3",
+          "quote": "IA3 방식이 peft에 추가되었길래 colab 환경(T4, 14GB)에서 간단하게 50steps만 학습 진행",
+          "hash": "b4d486aa829aed2f529e5cff238a9ffd25538ea67c273895ef3f17d02ca25e52"
+        }
+      },
+      {
+        "id": "few-shot-learning",
+        "relation": "related_method",
+        "reason": "IA3 연구가 few-shot fine-tuning과 in-context learning을 비교하므로, few-shot learning의 기본 개념과 구분을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "ia3-paper",
+          "blockId": "[\"unlikelihood-training-and-length-normalization\",1]",
+          "anchor": "unlikelihood-training-and-length-normalization",
+          "quote": "Few-shot fine-tuning 언어모델의 성능을 향상시키기 위해 2개의 loss term 발견. 연구진은 rank classification을 사용하였고 옳은 선택을 할당하는 모델의 가능성 뿐만 아니라 정답이 아닌 선택을 하는 모델을 할당하는 가능성도 참조하였음. 학습하는 동안 unlikelihood loss를 추가하는것을 고려하였음.",
+          "hash": "3c308a26c581a2d842a341ec797d2bc6176cc5f00bd967a0c51dc5df875ef9d6"
+        },
+        "targetEvidence": {
+          "articleId": "few-shot-learning",
+          "blockId": "[\"few-shot-learning이-뭘까\",1]",
+          "anchor": "few-shot-learning이-뭘까",
+          "quote": "Few-shot learning (FSL)은 각 class에 대해 오직 몇가지만 레이블된 샘플들을 사용한 데이터의 새로운 카테고리를 사전학습 모델에 이용가능하게 한 머신러닝 framework입니다. 이건 meta-learning의 패러다임에서 파생된 개념입니다.",
+          "hash": "ffa507f2e57a0525bec922e6b18c3e13b6c40db50d211bdfbbfbc141d9e8b4c2"
+        }
+      },
+      {
+        "id": "prompt-tuning",
+        "relation": "related_method",
+        "reason": "두 방법 모두 매개변수 효율적 적응을 다루며, prompt tuning은 사전학습 모델을 동결하고 입력 앞에 조정 가능한 토큰을 붙이는 방식입니다.",
+        "sourceEvidence": {
+          "articleId": "ia3-paper",
+          "blockId": "[\"peft\",1]",
+          "anchor": "peft",
+          "quote": "PEFT는 모델을 학습할때 필요 메모리를 급격하게 줄여주는 역할을 함. 추가적으로 PEFT method는 mixed-task batches를 가능하게 만들어 줌. 예를들어, prompt tuning은 단일의 모델을 다양한 task에 단순하게 다른 prompt embedding을 각각의 batch에서 concat함으로써 적용 가능하게 만들어줌. 반면에 re-parameterize하는 PEFT method는 mixed-task batches 작업에 resource가 매우 많이 소모됨.",
+          "hash": "81224be22d9a508bf55075b821a23c6ebeee87a52f69e1d33e61ff58463ff14e"
+        },
+        "targetEvidence": {
+          "articleId": "prompt-tuning",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "이번 연구에선, prompt tuning 제안. 사전훈련된 전체 모델을 동결하고 downstream-task당 추가로 K개의 조정 가능한 토큰만 input-text 앞에 붙일 수 있도록 허용함. 이 soft-prompt는 end-to-end 방식으로 학습되었고 완전히 labeled dataset으로부터 signal을 압축할 수 있음. 이러한 방법론을 통해 few-shot prompts의 성능을 향상시키고 model-tuning과의 gap을 줄일 수 있었음. 동시에 단일의 사전학습된 모델은 모든 downstream-task에서 다시사용될 수 있으며 연구진은 동결된 모델들의 효율적인 serving benefits을 재학습시켰음.",
+          "hash": "74471a37f36d116424ed1aabfe097aa4a0d1e8e0b0e18409834babc1e3e51b4c"
+        }
+      },
+      {
+        "id": "gpt-3",
+        "relation": "related_method",
+        "reason": "IA3의 few-shot ICL 비교를 이해하는 데, 프롬프트 예시로 추론하고 gradient 기반 학습 없이 여러 작업에 적용하는 접근을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "ia3-paper",
+          "blockId": "[\"few-shot-in-context-learning-icl\",1]",
+          "anchor": "few-shot-in-context-learning-icl",
+          "quote": "ICL은 레이블이 지정되지 않은 쿼리 예제와 함께 연결되고 프롬프트가 표시된 입력 대상 예제(\"샷\"이라고 함)를 레이블이 지정되지 않은 쿼리 예제와 함께 제공함으로써 모델을 유도하는 것을 목표로 합니다. ICL의 이점은 파인튜닝 없이 즉시 많은 task에 단일의 모델을 적용할 수 있는 점입니다. 이는 또한 mixed-task batches를 가능하게 만들어주며 데이터 배치의 여러 예시가 서로 다른 컨텍스트를 사용하여 서로 다른 작업에 해당하는 작업도 가능합니다.",
+          "hash": "5b1f5fc385ccf87fe5e4f88f5564e1e085e3976e8e120a70e87fd851b2644a26"
+        },
+        "targetEvidence": {
+          "articleId": "gpt-3",
+          "blockId": "[null,8]",
+          "anchor": null,
+          "quote": "few-shot learning : 소수의 예시들어 in-context learning",
+          "hash": "bb18cfb5353008284836b98c5656ef8077a0c05e8c92f1d7000b4cd2bc7d616c"
+        }
+      }
+    ]
+  }
+}

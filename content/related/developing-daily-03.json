@@ -1,0 +1,263 @@
+{
+  "version": 2,
+  "id": "developing-daily-03",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "a0aa9c816ec9e55ecf09af28415d7c7206f502d6cc12f34b274d4b41133c8159",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "model-serving",
+        "role": "applies",
+        "evidence": {
+          "articleId": "developing-daily-03",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": "$ pwd /mnt/huggingface $ ls opt-125m version.txt $ ls opt-125m/ config.json generation_config.json merges.txt pytorch_model.bin special_tokens_map.json tokenizer_config.json vocab.json $ docker run --gpus all --shm-size 1g -p 8080:80 --volume /mnt/huggingface:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/opt-125m --num-shard 1",
+          "hash": "ab1cf11748bf6d1f44f3e6e3333c9fd6773cd8386181ca19f60a11d3b170db4c"
+        }
+      },
+      {
+        "id": "containers",
+        "role": "applies",
+        "evidence": {
+          "articleId": "developing-daily-03",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": "$ pwd /mnt/huggingface $ ls opt-125m version.txt $ ls opt-125m/ config.json generation_config.json merges.txt pytorch_model.bin special_tokens_map.json tokenizer_config.json vocab.json $ docker run --gpus all --shm-size 1g -p 8080:80 --volume /mnt/huggingface:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/opt-125m --num-shard 1",
+          "hash": "ab1cf11748bf6d1f44f3e6e3333c9fd6773cd8386181ca19f60a11d3b170db4c"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "593bf5654a2dcd80bd9e648f7b19f3950e86ee98c37d4fba05cfb31851130c2e",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"docker\",4]",
+          "[\"tgi\",1]",
+          "[\"ref\",3]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1\",6]",
+          "[\"env\",1]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "ollama-docker-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"4-2-해결방안-open-webui-discussions4376\",2]",
+          "[\"4-2-해결방안-open-webui-discussions4376\",3]",
+          "[\"1-ollama-설치-후-모델-다운로드--openwebui-접속\",3]"
+        ]
+      },
+      {
+        "id": "tokenizer-input-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"원인\",2]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"ts\",6]",
+          "[\"ref\",3]",
+          "[\"gradio\",5]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"error2\",1]",
+          "[\"solution-1\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-04",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"gitignore\",2]",
+          "[\"ref\",3]",
+          "[\"파일-이름-변경\",3]"
+        ]
+      },
+      {
+        "id": "docker-gpu-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-05",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"t5-end2end-question-generation\",4]",
+          "[\"sehongt5-large-questiongeneration\",3]",
+          "[\"kobart-questiongeneration\",3]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",7]",
+          "[\"1️⃣\",1]",
+          "[\"2️⃣\",1]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"envs\",1]",
+          "[\"training\",1]",
+          "[\"dataset\",2]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",1]",
+          "[\"envs\",2]",
+          "[\"prob\",2]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"2️⃣\",2]",
+          "[\"3️⃣\",8]",
+          "[\"env\",4]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",30]",
+          "[\"해결\",1]",
+          "[\"현상\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"translation\",2]",
+          "[\"sbert\",1]",
+          "[\"question-generationeng\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "tgi-implementation",
+        "relation": "related_method",
+        "reason": "로컬 모델 디렉터리를 Docker 볼륨으로 연결해 TGI를 실행하는 명령과 샤드 준비 과정을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "developing-daily-03",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": "$ pwd /mnt/huggingface $ ls opt-125m version.txt $ ls opt-125m/ config.json generation_config.json merges.txt pytorch_model.bin special_tokens_map.json tokenizer_config.json vocab.json $ docker run --gpus all --shm-size 1g -p 8080:80 --volume /mnt/huggingface:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/opt-125m --num-shard 1",
+          "hash": "ab1cf11748bf6d1f44f3e6e3333c9fd6773cd8386181ca19f60a11d3b170db4c"
+        },
+        "targetEvidence": {
+          "articleId": "tgi-implementation",
+          "blockId": "[\"1\",6]",
+          "anchor": "1",
+          "quote": "$ cd model_file $ nohup sudo docker run --gpus all --shm-size 1g -p 8080:80 --volume /DATA:/data ghcr.io/huggingface/text-generation-inference:latest --model-id /data/OUTPUT_DIRECTORY --num-shard {NUMBER_OF_GPUS} --rope-scaling dynamic --rope-factor 2.0 & 2023-10-26T06:37:55.196641Z INFO shard-manager: text_generation_launcher: Shard ready in 12.91406831s rank=1 2023-10-26T06:37:55.292255Z INFO text_generation_launcher: Starting Webserver 2023-10-26T06:37:55.351346Z WARN",
+          "hash": "a216686807489b023a21f034bb1f756f7199c50f63a4b9512aa1d66b052767ee"
+        }
+      }
+    ]
+  }
+}

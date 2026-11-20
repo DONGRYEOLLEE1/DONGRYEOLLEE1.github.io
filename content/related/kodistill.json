@@ -1,0 +1,315 @@
+{
+  "version": 2,
+  "id": "kodistill",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "5a810de0d4cb28063ca812251202dae67f08ab69f42594fb1c09f09f30901507",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "korean-ocr",
+        "role": "about",
+        "evidence": {
+          "articleId": "kodistill",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "Small vision-language models can answer a question about an image without reliably transcribing its Korean text. KoDistill-VL explores that gap: start with a bilingual Qwen3.5-2B fine-tune, add literal Korean text recognition, and measure both Korean gains and English changes.",
+          "hash": "8fbe7ce57d9298606a3fc3d33977c6687eac4da825fec293f7edb8099bd58727"
+        }
+      },
+      {
+        "id": "vlm",
+        "role": "about",
+        "evidence": {
+          "articleId": "kodistill",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "Small vision-language models can answer a question about an image without reliably transcribing its Korean text. KoDistill-VL explores that gap: start with a bilingual Qwen3.5-2B fine-tune, add literal Korean text recognition, and measure both Korean gains and English changes.",
+          "hash": "8fbe7ce57d9298606a3fc3d33977c6687eac4da825fec293f7edb8099bd58727"
+        }
+      },
+      {
+        "id": "reinforcement-learning",
+        "role": "applies",
+        "evidence": {
+          "articleId": "kodistill",
+          "blockId": "[\"3-continue-with-sft-and-verifiable-grpo\",10]",
+          "anchor": "3-continue-with-sft-and-verifiable-grpo",
+          "quote": "GRPO uses an immutable reference made from this run's selected SFT model. For an OCR completion, reward is 0.8 × max(0, 1 − CER) + 0.2 × exact_match. Empty or truncated completions receive zero. Gold and predictions use NFC normalization and outer trimming; case, numbers, punctuation, and internal spaces remain meaningful. General QA replay keeps its existing task-specific verifier and original reward labels.",
+          "hash": "dcbd39d2826524b50f330522e4e82c1e3058ca10c5e5508f8c4936363f741c32"
+        }
+      },
+      {
+        "id": "lora",
+        "role": "applies",
+        "evidence": {
+          "articleId": "kodistill",
+          "blockId": "[\"3-continue-with-sft-and-verifiable-grpo\",1]",
+          "anchor": "3-continue-with-sft-and-verifiable-grpo",
+          "quote": "Both continuation stages use language-side rank-16 LoRA, alpha 32, and zero dropout. Vision weights, input embeddings, and the output head remain frozen. The implementation uses Transformers 5.19.0, PEFT 0.21.2, and TRL 1.15.0 with an atomic resume loop; it does not use verl or Unsloth for these reported runs.",
+          "hash": "ed0487fdfb9605ff857fe7637eff7b4a82ad35ae213342dcfebb12910c6f8473"
+        }
+      },
+      {
+        "id": "finetuning",
+        "role": "about",
+        "evidence": {
+          "articleId": "kodistill",
+          "blockId": "[\"3-continue-with-sft-and-verifiable-grpo\",1]",
+          "anchor": "3-continue-with-sft-and-verifiable-grpo",
+          "quote": "Both continuation stages use language-side rank-16 LoRA, alpha 32, and zero dropout. Vision weights, input embeddings, and the output head remain frozen. The implementation uses Transformers 5.19.0, PEFT 0.21.2, and TRL 1.15.0 with an atomic resume loop; it does not use verl or Unsloth for these reported runs.",
+          "hash": "ed0487fdfb9605ff857fe7637eff7b4a82ad35ae213342dcfebb12910c6f8473"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "799a39e00bff74e1c47a98dc0913e1427b3705940103477a564e1abb88e16df3",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "thinkingcap",
+        "sourceBlocks": [
+          "[\"3-continue-with-sft-and-verifiable-grpo\",10]",
+          "[\"what-the-training-curves-say\",2]",
+          "[null,2]"
+        ],
+        "targetBlocks": [
+          "[\"conclusion\",1]",
+          "[\"followups\",2]",
+          "[\"stop\",1]"
+        ]
+      },
+      {
+        "id": "alphallm",
+        "sourceBlocks": [
+          "[\"3-continue-with-sft-and-verifiable-grpo\",10]",
+          "[null,2]",
+          "[\"at-a-glance\",1]"
+        ],
+        "targetBlocks": [
+          "[\"related-work\",3]",
+          "[\"introduction\",3]",
+          "[\"problem-formulation\",1]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"3-continue-with-sft-and-verifiable-grpo\",1]",
+          "[\"1-preserve-the-bilingual-foundation\",1]",
+          "[\"limits-and-release-scope\",2]"
+        ],
+        "targetBlocks": [
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",19]",
+          "[\"peft-v090\",1]"
+        ]
+      },
+      {
+        "id": "k-browsecomp",
+        "sourceBlocks": [
+          "[\"final-results\",11]",
+          "[\"at-a-glance\",5]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"main-results\",1]",
+          "[\"setup\",2]",
+          "[\"introduction\",4]"
+        ]
+      },
+      {
+        "id": "constitutional-ai",
+        "sourceBlocks": [
+          "[\"3-continue-with-sft-and-verifiable-grpo\",10]",
+          "[\"final-results\",11]",
+          "[\"what-the-training-curves-say\",1]"
+        ],
+        "targetBlocks": [
+          "[\"rl-stage-rlaif\",1]",
+          "[\"supervised-stage-critique--revision\",2]",
+          "[\"method\",1]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"3-continue-with-sft-and-verifiable-grpo\",1]",
+          "[null,2]",
+          "[\"at-a-glance\",1]"
+        ],
+        "targetBlocks": [
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"peft-v0100\",1]",
+          "[\"improving-dora\",1]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"3-continue-with-sft-and-verifiable-grpo\",1]",
+          "[\"at-a-glance\",1]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"imagevideo-text-understanding\",1]",
+          "[\"visual-instruction-tuning\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"3-continue-with-sft-and-verifiable-grpo\",1]",
+          "[null,2]",
+          "[\"at-a-glance\",1]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"envs\",4]",
+          "[\"issue\",4]"
+        ]
+      },
+      {
+        "id": "prompt-engineering",
+        "sourceBlocks": [
+          "[\"1-preserve-the-bilingual-foundation\",7]",
+          "[\"3-continue-with-sft-and-verifiable-grpo\",6]",
+          "[null,2]"
+        ],
+        "targetBlocks": [
+          "[\"cot-prompting\",5]",
+          "[\"zero-shot-cot-prompting\",4]",
+          "[\"the-instruction\",2]"
+        ]
+      },
+      {
+        "id": "rtpurbo",
+        "sourceBlocks": [
+          "[\"final-results\",11]",
+          "[\"1-preserve-the-bilingual-foundation\",3]",
+          "[\"at-a-glance\",2]"
+        ],
+        "targetBlocks": [
+          "[\"정확도--near-lossless\",6]",
+          "[\"low-cost-two-stage-training\",1]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"3-continue-with-sft-and-verifiable-grpo\",1]",
+          "[null,1]",
+          "[\"at-a-glance\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"introduction\",3]",
+          "[\"empirical-experiments\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"3-continue-with-sft-and-verifiable-grpo\",1]",
+          "[null,2]",
+          "[\"1-preserve-the-bilingual-foundation\",3]"
+        ],
+        "targetBlocks": [
+          "[\"source-code\",5]",
+          "[\"env\",9]",
+          "[\"error\",2]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"at-a-glance\",1]",
+          "[\"1-preserve-the-bilingual-foundation\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",9]",
+          "[\"continual-pre-training\",6]",
+          "[\"baselines\",3]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"3-continue-with-sft-and-verifiable-grpo\",1]",
+          "[null,2]",
+          "[\"1-preserve-the-bilingual-foundation\",6]"
+        ],
+        "targetBlocks": [
+          "[\"model\",3]",
+          "[\"training\",1]",
+          "[\"dataset\",2]"
+        ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"how-the-comparison-was-checked\",1]",
+          "[\"3-continue-with-sft-and-verifiable-grpo\",4]",
+          "[null,2]"
+        ],
+        "targetBlocks": [
+          "[\"what-is-disable-custom-all-reduce\",1]",
+          "[\"problem\",1]",
+          "[\"error-message\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "lora",
+        "relation": "concept_explanation",
+        "reason": "LoRA가 가중치를 고정하고 저랭크 분해를 학습하는 방식임을 설명해, KoDistill-VL의 LoRA 설정을 이해하는 데 도움이 됩니다.",
+        "sourceEvidence": {
+          "articleId": "kodistill",
+          "blockId": "[\"3-continue-with-sft-and-verifiable-grpo\",1]",
+          "anchor": "3-continue-with-sft-and-verifiable-grpo",
+          "quote": "Both continuation stages use language-side rank-16 LoRA, alpha 32, and zero dropout. Vision weights, input embeddings, and the output head remain frozen. The implementation uses Transformers 5.19.0, PEFT 0.21.2, and TRL 1.15.0 with an atomic resume loop; it does not use verl or Unsloth for these reported runs.",
+          "hash": "ed0487fdfb9605ff857fe7637eff7b4a82ad35ae213342dcfebb12910c6f8473"
+        },
+        "targetEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "학습된 과도하게 매개변수화된 모델이 실제로 낮은 performance를 낸다는 연구결과에 영감을 받음. 낮은 intrinsic rank를 모델을 적용하는동안 weights가 바뀐다는 가설을 세움. LoRA는 간접적으로 dense layer의 rank decomposition matrix를 최적화함으로써 NN에서 몇몇의 dense layer들을 학습할 수 있게 만들어줌(이 과정에서 weight는 froze).",
+          "hash": "3cba5587203ea62e143ba4ec9ef423450571ae6976433824bbd5b3347210f7ac"
+        }
+      },
+      {
+        "id": "lora-finetuning",
+        "relation": "related_method",
+        "reason": "두 사례의 파인튜닝 모두 LoRA를 사용하며, 설정과 학습 명령을 비교해 구체적인 구현 차이를 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "kodistill",
+          "blockId": "[\"3-continue-with-sft-and-verifiable-grpo\",1]",
+          "anchor": "3-continue-with-sft-and-verifiable-grpo",
+          "quote": "Both continuation stages use language-side rank-16 LoRA, alpha 32, and zero dropout. Vision weights, input embeddings, and the output head remain frozen. The implementation uses Transformers 5.19.0, PEFT 0.21.2, and TRL 1.15.0 with an atomic resume loop; it does not use verl or Unsloth for these reported runs.",
+          "hash": "ed0487fdfb9605ff857fe7637eff7b4a82ad35ae213342dcfebb12910c6f8473"
+        },
+        "targetEvidence": {
+          "articleId": "lora-finetuning",
+          "blockId": "[\"training\",1]",
+          "anchor": "training",
+          "quote": "python finetune.py \\ --base_model '../model_file/polyglot-ko-5.8b' \\ --data_path './ko_alpaca_data.json' \\ --output_dir './output' \\ --batch_size 128 \\ --mircro_batch_size 4 \\ --num_epochs 3 \\ --learning_rate 2e-5 \\ --cutoff_len 512 \\ --val_set_size 2000 \\ --lora_r 8 \\ --lora_alpha 16 \\ --lora_dropout 0.05 \\ --lora_target_modules '[query_key_value]' \\ --train_on_inputs \\ --group_by_length",
+          "hash": "1d3ec647d3fc9aa157a76778d7d0beb955bd87a846aa384701e66384ac2707f9"
+        }
+      }
+    ]
+  }
+}

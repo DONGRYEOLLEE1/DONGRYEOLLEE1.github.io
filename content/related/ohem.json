@@ -1,0 +1,271 @@
+{
+  "version": 2,
+  "id": "ohem",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "b98d1275a47a80db7f1698b5d2cd19ca000bcf081634142093f5a53343962e22",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "object-detection",
+        "role": "about",
+        "evidence": {
+          "articleId": "ohem",
+          "blockId": "[\"abstract\",1]",
+          "anchor": "abstract",
+          "quote": "Object Detection 분야는 region-base ConvNet의 wave에 탑승해 엄청난 진보를 이루었습니다. 그러나 그것들의 학습 절차는 여전히 많은 heuristics과 연구진들이 직접 튜닝한 하이퍼파라미터를 포함하고 있습니다. 이에 본 연구진은 간단하나 놀랍게도 효율적인 region-based ConvNet 감지기인 OHEM 알고리즘을 발표합니다. 우리의 동기부여는 항상 감지 데이터셋들이 압도적으로 많은 쉬운 예의 수와 어려운 예의 적은 수였습니다. 이 어려운 예들의 자동적인 선택은 학습을 좀 더 효율적이고 효과적으로 작동되게 만들었습니다. **OHEM은 간단하며 직관적인 알고리즘이며 몇몇의 heuristic함과 공통으로 사용되는 하이퍼파라미터들을 제거**했습니다. 그러나 더 중요한것으로, PASCAL VOC 2007, 2012에서 OHEM은 일관되고 엄청난 detection 성능을 자랑합니다.",
+          "hash": "00f031a1a5c65e8b9afc39b8a1eedf58d780b6b8801e419dc16eb41162f746c9"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "accc6689059c2f0e2b440bf1034197b18864b620aab8a9a7bb1a1f44a17984be",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",1]",
+          "[\"introduction\",2]"
+        ],
+        "targetBlocks": [
+          "[\"the-object-detection-task\",1]",
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"end-to-end\",2]"
+        ]
+      },
+      {
+        "id": "r-cnn",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",3]",
+          "[\"introduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"hard-negative-mining\",2]",
+          "[\"요약\",10]"
+        ]
+      },
+      {
+        "id": "yolo-v1",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",1]",
+          "[\"introduction\",2]"
+        ],
+        "targetBlocks": [
+          "[\"unified-detection\",1]",
+          "[\"introduction\",2]",
+          "[\"training\",8]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",2]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"preview\",3]",
+          "[\"의의\",2]",
+          "[\"1-anchor-box\",1]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",1]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"overfeat-detection-network\",12]",
+          "[\"learning\",1]",
+          "[\"overfeat-classification-network\",9]"
+        ]
+      },
+      {
+        "id": "fast-r-cnn",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",2]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"preview\",1]",
+          "[\"rough-요약\",1]",
+          "[\"abstract\",3]"
+        ]
+      },
+      {
+        "id": "map-evaluation",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",3]",
+          "[\"abstract\",2]"
+        ],
+        "targetBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"coco-map\",1]",
+          "[\"interpolated-ap\",1]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"abstract\",2]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",5]",
+          "[\"results\",2]",
+          "[\"chain-of-thought-prompting\",1]"
+        ]
+      },
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"abstract\",2]",
+          "[\"introduction\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"efficientnet-architecture\",1]",
+          "[\"problem-formulation\",2]"
+        ]
+      },
+      {
+        "id": "book-spine",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",3]",
+          "[\"introduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"system\",2]",
+          "[\"setup\",1]",
+          "[\"tldr\",1]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"abstract\",2]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]",
+          "[\"의의\",2]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"abstract\",1]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"image-classification-cv\",2]",
+          "[null,2]",
+          "[\"few-shot-learning이-뭘까\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"abstract\",2]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"instruction-finetuning\",2]",
+          "[\"efficient-implementation\",2]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",1]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",1]",
+          "[\"modernizing-a-convnet-a-roadmap\",1]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "resnext",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"abstract\",1]",
+          "[\"introduction\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"template\",1]",
+          "[\"related-work\",4]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "r-cnn",
+        "relation": "related_method",
+        "reason": "OHEM은 어려운 예를 자동으로 골라 학습하며, R-CNN 설명은 모델이 잘못 예측한 false positive를 샘플링하는 hard negative mining을 소개합니다.",
+        "sourceEvidence": {
+          "articleId": "ohem",
+          "blockId": "[\"abstract\",1]",
+          "anchor": "abstract",
+          "quote": "Object Detection 분야는 region-base ConvNet의 wave에 탑승해 엄청난 진보를 이루었습니다. 그러나 그것들의 학습 절차는 여전히 많은 heuristics과 연구진들이 직접 튜닝한 하이퍼파라미터를 포함하고 있습니다. 이에 본 연구진은 간단하나 놀랍게도 효율적인 region-based ConvNet 감지기인 OHEM 알고리즘을 발표합니다. 우리의 동기부여는 항상 감지 데이터셋들이 압도적으로 많은 쉬운 예의 수와 어려운 예의 적은 수였습니다. 이 어려운 예들의 자동적인 선택은 학습을 좀 더 효율적이고 효과적으로 작동되게 만들었습니다. **OHEM은 간단하며 직관적인 알고리즘이며 몇몇의 heuristic함과 공통으로 사용되는 하이퍼파라미터들을 제거**했습니다. 그러나 더 중요한것으로, PASCAL VOC 2007, 2012에서 OHEM은 일관되고 엄청난 detection 성능을 자랑합니다.",
+          "hash": "00f031a1a5c65e8b9afc39b8a1eedf58d780b6b8801e419dc16eb41162f746c9"
+        },
+        "targetEvidence": {
+          "articleId": "r-cnn",
+          "blockId": "[\"hard-negative-mining\",2]",
+          "anchor": "hard-negative-mining",
+          "quote": "예를들어, 이미지에서 사람의 안면의 위치를 탐지하는 모델을 학습시킨다고 할 때, 사람의 안면은 positive sample이며, 그 외의 Background는 Negative Sample이다. 이 때 모델이 Background라고 예측했으면 실제로 Background인 bounding box는 True Negative에 해당하는 sample이다. 반면에 모델이 안면이라고 예측했지만, 실제로 배경인 경우는 False Positive Sample에 해당한다.",
+          "hash": "48696ae51bdf2469fbb6634926a8398a09608174776fab41bc3e664b32c9fd06"
+        }
+      },
+      {
+        "id": "yolo-v1",
+        "relation": "related_method",
+        "reason": "OHEM은 쉬운 예가 많고 어려운 예가 적은 불균형을 다루며, YOLO의 학습 설명도 배경 grid cell이 많아지는 불균형 문제를 다룹니다.",
+        "sourceEvidence": {
+          "articleId": "ohem",
+          "blockId": "[\"abstract\",1]",
+          "anchor": "abstract",
+          "quote": "Object Detection 분야는 region-base ConvNet의 wave에 탑승해 엄청난 진보를 이루었습니다. 그러나 그것들의 학습 절차는 여전히 많은 heuristics과 연구진들이 직접 튜닝한 하이퍼파라미터를 포함하고 있습니다. 이에 본 연구진은 간단하나 놀랍게도 효율적인 region-based ConvNet 감지기인 OHEM 알고리즘을 발표합니다. 우리의 동기부여는 항상 감지 데이터셋들이 압도적으로 많은 쉬운 예의 수와 어려운 예의 적은 수였습니다. 이 어려운 예들의 자동적인 선택은 학습을 좀 더 효율적이고 효과적으로 작동되게 만들었습니다. **OHEM은 간단하며 직관적인 알고리즘이며 몇몇의 heuristic함과 공통으로 사용되는 하이퍼파라미터들을 제거**했습니다. 그러나 더 중요한것으로, PASCAL VOC 2007, 2012에서 OHEM은 일관되고 엄청난 detection 성능을 자랑합니다.",
+          "hash": "00f031a1a5c65e8b9afc39b8a1eedf58d780b6b8801e419dc16eb41162f746c9"
+        },
+        "targetEvidence": {
+          "articleId": "yolo-v1",
+          "blockId": "[\"training\",8]",
+          "anchor": "training",
+          "quote": "또 다른 문제가 있는데, 이미지 내 대부분의 grid cell에는 object가 없다. 배경 영역이 전경 영역보다 더 크기 때문이다. grid cell에 object가 없다면 confidence score = 0 이다. 따라서 대부분의 grid cell의 confidence score = 0이 되도록 학습할 수 밖에 없다. 이는 모델의 불균형을 초래한다.",
+          "hash": "baa62d8c1f14220cd943cd95c1ceaf4154cbfbdf9bd331d38410bf832bc5f63c"
+        }
+      }
+    ]
+  }
+}

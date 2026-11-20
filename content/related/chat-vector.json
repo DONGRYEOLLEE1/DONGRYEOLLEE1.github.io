@@ -1,0 +1,282 @@
+{
+  "version": 2,
+  "id": "chat-vector",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "ed972ae578d16aa3962d986c30e6c4166e78ec30d4594b935fc06c02fe226bff",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "model-alignment",
+        "role": "about",
+        "evidence": {
+          "articleId": "chat-vector",
+          "blockId": "[\"chat-vector\",3]",
+          "anchor": "chat-vector",
+          "quote": "특정 CP(continual pre-training) 모델에 target model의 언어 능력 + SFT 학습된 모델(informative model)의 task-specific한 instruction 능력",
+          "hash": "b0d6ec5317f30f10c70dfbd5d9afa762d000719eb19d5ba8a5c028912d93b901"
+        }
+      },
+      {
+        "id": "pretraining",
+        "role": "about",
+        "evidence": {
+          "articleId": "chat-vector",
+          "blockId": "[\"chat-vector\",9]",
+          "anchor": "chat-vector",
+          "quote": "타겟모델에서의 모델의 이해능력과 생성능력을 강화시켜주기위해 사전학습모델을 초기화하고 타겟모델의 텍스트 데이터와 사전학습을 진행",
+          "hash": "780e2fad6a1accf94e0d10984cdc8ae1e698015cf8d6ba54cd085b924d69cdc2"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "23f14117cd4900caa0edda401af81a9bab916ce7729b7919973ceb0bd0dfa289",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[\"chat-vector\",3]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "[\"role-of-instructions\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[\"problem-statement\",1]",
+          "[\"low-rank-parameterized-update-matrices\",1]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"experiments\",1]",
+          "[\"method-formulation\",1]"
+        ]
+      },
+      {
+        "id": "constitutional-ai",
+        "sourceBlocks": [
+          "[\"chat-vector\",3]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[\"정리\",1]",
+          "[\"method\",1]",
+          "[\"introduction\",2]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"chat-vector\",9]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",5]",
+          "[\"continual-pre-training\",2]",
+          "[\"baselines\",2]"
+        ]
+      },
+      {
+        "id": "loftq",
+        "sourceBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[\"loftq\",1]",
+          "[\"experiments\",2]",
+          "[\"glue-with-4-bit\",1]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"chat-vector\",9]",
+          "[\"의의\",1]",
+          "[\"background\",2]"
+        ],
+        "targetBlocks": [
+          "[\"pre-training-data\",1]",
+          "[\"introduction\",1]",
+          "[\"instruction-finetuning\",2]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[\"background\",2]",
+          "[\"introduction\",1]",
+          "[\"qlora-vs-standard-finetuning\",4]"
+        ]
+      },
+      {
+        "id": "gpt-3",
+        "sourceBlocks": [
+          "[\"chat-vector\",9]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[null,8]",
+          "[null,10]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"의의\",1]",
+          "[\"background\",2]"
+        ],
+        "targetBlocks": [
+          "[\"weight-decomposed-low-rank-adaptation\",1]",
+          "[\"weight-decomposition-analysis\",1]",
+          "[\"introduction\",4]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"chat-vector\",9]",
+          "[\"의의\",1]",
+          "[\"background\",2]"
+        ],
+        "targetBlocks": [
+          "[\"pre-training-bert\",1]",
+          "[\"fine-tuning-bert\",1]",
+          "[\"요약\",1]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"peft-with-ia3\",17]",
+          "[\"의의\",3]"
+        ]
+      },
+      {
+        "id": "alphallm",
+        "sourceBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"problem-formulation\",1]",
+          "[\"related-work\",3]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ],
+        "targetBlocks": [
+          "[\"increasing-speed-a-llm-serving-inference\",8]",
+          "[\"4bit-or-8bit-quantization\",9]",
+          "[\"tensor-parallel\",1]"
+        ]
+      },
+      {
+        "id": "elmo",
+        "sourceBlocks": [
+          "[\"chat-vector\",9]",
+          "[\"의의\",1]",
+          "[\"background\",2]"
+        ],
+        "targetBlocks": [
+          "[\"elmo\",1]",
+          "[\"context-matters\",4]",
+          "[\"mechanism\",11]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "flan",
+        "relation": "related_method",
+        "reason": "Chat Vector가 활용하는 SFT 모델의 지시 수행 능력이 instruction tuning으로 어떻게 학습되는지 알 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "chat-vector",
+          "blockId": "[\"chat-vector\",3]",
+          "anchor": "chat-vector",
+          "quote": "특정 CP(continual pre-training) 모델에 target model의 언어 능력 + SFT 학습된 모델(informative model)의 task-specific한 instruction 능력",
+          "hash": "b0d6ec5317f30f10c70dfbd5d9afa762d000719eb19d5ba8a5c028912d93b901"
+        },
+        "targetEvidence": {
+          "articleId": "flan",
+          "blockId": "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "anchor": "flan--instruction-tuning-improves-zero-shot-learning",
+          "quote": "메인 아이디어로는 지시(supervision)를 사용하여 언어모델에 특정 task에 대해 가르치는 것임. 그 언어모델은 심지어 unseen task 일지라도 잘 작동할 것이며 instruction을 따르기 위해 잘 학습할 것임. 밝혀지지 않은 task에 대해 평가하기 위해 작업 유형별로 데이터 세트를 클러스터로 그룹화하고 각 작업 클러스터를 평가하기 위해 보류하고 나머지 모든 클러스터에서 instruction tuning을 진행함.",
+          "hash": "8e61d4b0359d7e005d690e859cf2c30921b7666b84e49772ef0527d1b8b422e7"
+        }
+      },
+      {
+        "id": "ziya2",
+        "relation": "related_method",
+        "reason": "타겟 텍스트로 사전학습하는 방식과 continual pre-training의 단계별 구성을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "chat-vector",
+          "blockId": "[\"chat-vector\",9]",
+          "anchor": "chat-vector",
+          "quote": "타겟모델에서의 모델의 이해능력과 생성능력을 강화시켜주기위해 사전학습모델을 초기화하고 타겟모델의 텍스트 데이터와 사전학습을 진행",
+          "hash": "780e2fad6a1accf94e0d10984cdc8ae1e698015cf8d6ba54cd085b924d69cdc2"
+        },
+        "targetEvidence": {
+          "articleId": "ziya2",
+          "blockId": "[\"introduction\",5]",
+          "anchor": "introduction",
+          "quote": "이에 따라 이번 연구에선 continual pre-training의 technique과 understanding the intricate relationship between data and model performance에 집중해보고자한다. 연구진은 모델의 필수적인 구조나 사이즈를 유지시키되 높은 품질의 사전학습 데이터를 통해 LLM의 성능을 강화해보고자 한다. 따라서 LLAMA2-13B을 사용한 Ziya2 모델을 backbone 모델로 사용하고 영어와 중국어로된 약 700B 토큰을 사용하여 pre-training을 진행하였다. 특히 학습 process를 3개의 stage를 거쳐 일반적이고 domain-specific한 corpora를 만들어 Ziya2 모델의 다중언어 생성 capabilities를 만들어줬음.",
+          "hash": "63d5e11d75a4b90c9fd57ca0ce64605f8af7209f23702ba5adb7404a6182c27d"
+        }
+      }
+    ]
+  }
+}

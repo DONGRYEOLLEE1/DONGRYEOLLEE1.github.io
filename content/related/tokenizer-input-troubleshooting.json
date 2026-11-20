@@ -1,0 +1,301 @@
+{
+  "version": 2,
+  "id": "tokenizer-input-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "0103744eb8e0b68ab446cfd8516d1369e2c7d23fe307040e706994df6e35d040",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "tokenization",
+        "role": "applies",
+        "evidence": {
+          "articleId": "tokenizer-input-troubleshooting",
+          "blockId": "[\"원인\",2]",
+          "anchor": "원인",
+          "quote": "tokenization 과정에서 오류 발생",
+          "hash": "8bac493d58e566db7cb6d6283a585169750a988e0d3aa887d57b8a98bd95e4c3"
+        }
+      },
+      {
+        "id": "data-preparation",
+        "role": "applies",
+        "evidence": {
+          "articleId": "tokenizer-input-troubleshooting",
+          "blockId": "[\"원인\",3]",
+          "anchor": "원인",
+          "quote": "확인 결과, Data-Augmentation하면서 특정 category의 데이터에 missing values가 발생되어 해당 오류 발생하였음",
+          "hash": "9664d12570208c2ac1521305dbb57d23c18136c6ab43ad4a3fca4d6428ce919b"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "d0cc8712acf157f2b2a44976f1bfab0aa9a80a1a4327c6916b1cba4d753bb4b1",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"원인\",2]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"model-input-sequence-length\",7]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-03",
+        "sourceBlocks": [
+          "[\"원인\",2]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"error\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"원인\",2]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",1]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"원인\",3]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",10]",
+          "[\"prob\",3]",
+          "[\"envs\",4]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"원인\",3]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"dataset\",2]",
+          "[\"envs\",7]",
+          "[\"model\",2]"
+        ]
+      },
+      {
+        "id": "regex-preprocessing",
+        "sourceBlocks": [
+          "[\"원인\",3]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"problem\",1]"
+        ]
+      },
+      {
+        "id": "python-typing",
+        "sourceBlocks": [
+          "[\"원인\",2]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"list-dict-tuple-set\",2]",
+          "[null,1]",
+          "[\"타입-추상화\",3]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"원인\",2]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",8]",
+          "[\"3️⃣\",1]",
+          "[\"1️⃣\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-05",
+        "sourceBlocks": [
+          "[\"원인\",3]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"data-processing\",1]",
+          "[\"sehongt5-large-questiongeneration\",2]",
+          "[\"t5-end2end-question-generation\",2]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"원인\",2]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",1]",
+          "[\"prob\",2]",
+          "[\"mission\",2]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[\"원인\",3]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"theory\",7]",
+          "[\"eda\",2]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"원인\",3]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"the-data-factory\",1]",
+          "[\"the-architecture-of-ziya2\",1]",
+          "[\"continual-pre-training\",5]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"원인\",2]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"에러\",4]",
+          "[null,1]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"원인\",2]",
+          "[\"error\",1]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",17]",
+          "[\"error-2\",2]",
+          "[\"env\",6]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"원인\",2]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",2]",
+          "[\"gradio\",3]",
+          "[\"ts\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "polyglot-training-troubleshooting",
+        "relation": "related_method",
+        "reason": "데이터 처리와 토크나이저를 포함한 파인튜닝 흐름을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "tokenizer-input-troubleshooting",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": "df = pd.read_csv(...) df = df.dropna(axis = 0) df = DA(...) train_sentence = tokenizer(list(train_data[\"text\"]), return_tensors = 'pt', padding = True, truncation = True, add_special_tokens = True) ...",
+          "hash": "8386db12644cbd94dec473a1df32d6b6a6c824b0f6781d7087b0d839cf1666af"
+        },
+        "targetEvidence": {
+          "articleId": "polyglot-training-troubleshooting",
+          "blockId": "[\"prob\",3]",
+          "anchor": "prob",
+          "quote": "그럼 남은건 데이터 뿐.. train 파일의 데이터 처리 부분 코드를 뜯어보기로!",
+          "hash": "c4e9e93a6ba7f58c60c754558f8275e520dacae813c5a73029a4eb69253d6e76"
+        }
+      },
+      {
+        "id": "model-input-length",
+        "relation": "related_method",
+        "reason": "토크나이저의 padding·truncation 설정과 모델 입력 길이를 맞추는 방법을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "tokenizer-input-troubleshooting",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": "df = pd.read_csv(...) df = df.dropna(axis = 0) df = DA(...) train_sentence = tokenizer(list(train_data[\"text\"]), return_tensors = 'pt', padding = True, truncation = True, add_special_tokens = True) ...",
+          "hash": "8386db12644cbd94dec473a1df32d6b6a6c824b0f6781d7087b0d839cf1666af"
+        },
+        "targetEvidence": {
+          "articleId": "model-input-length",
+          "blockId": "[\"model-input-sequence-length\",2]",
+          "anchor": "model-input-sequence-length",
+          "quote": "물론 tokenizer의 padding = \"max_length\", truncation = True, max_length = 2048와 같은 옵션을 줘서 문장 길이를 맞춰줄 수도 있지만 backbone 모델의 input sequence length가 맞추려는 길이보다 짧을 경우 다음과 같은 에러 발생",
+          "hash": "5629ab0bfa58ae498e8ac300c4e5f06c74f54d2f72ac258a4ba8a7d58a57f468"
+        }
+      },
+      {
+        "id": "eda",
+        "relation": "concept_explanation",
+        "reason": "데이터 증강이 문장에 적용되는 방식을 설명해 결측값이 발생한 증강 단계와 관련된 배경을 제공합니다.",
+        "sourceEvidence": {
+          "articleId": "tokenizer-input-troubleshooting",
+          "blockId": "[\"원인\",3]",
+          "anchor": "원인",
+          "quote": "확인 결과, Data-Augmentation하면서 특정 category의 데이터에 missing values가 발생되어 해당 오류 발생하였음",
+          "hash": "9664d12570208c2ac1521305dbb57d23c18136c6ab43ad4a3fca4d6428ce919b"
+        },
+        "targetEvidence": {
+          "articleId": "eda",
+          "blockId": "[\"theory\",7]",
+          "anchor": "theory",
+          "quote": "Data-Augmentation-operations은 기존 문장의 label을 변경하지 않음. 문장 내 단어의 동의어를 삽입하는 것은 context에 연관있으며 문장의 original-label을 유지시킴",
+          "hash": "b0b7ebe5ec3d83f678f11026e8e448a24dbf5c2993c98ca4b0310d9758b87d14"
+        }
+      }
+    ]
+  }
+}

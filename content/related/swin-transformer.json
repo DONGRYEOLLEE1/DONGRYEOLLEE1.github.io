@@ -1,0 +1,219 @@
+{
+  "version": 2,
+  "id": "swin-transformer",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "37e8e0dacc3c7cabe1a9b70a3f7f7f7d0fc99ae634af3830838a366de4f230ee",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "vision-transformer",
+        "role": "about",
+        "evidence": {
+          "articleId": "swin-transformer",
+          "blockId": "[\"swin-transformer\",1]",
+          "anchor": "swin-transformer",
+          "quote": "더 깊은 레이어들에서 이미지 패치를 결합함으로써 계층적인 피쳐맵을 쌓아갈 수 있다",
+          "hash": "3f38c07a7a4eabd1fd18f2c2d5adb144e6e16d03e84fd9f7de2a782036b8b638"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "e648493990aa240c0496e2e77b558e90ecfbc329f1d7fd8494b52eee7e396fda",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"swin-transformer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"sbert\",1]",
+          "[\"translation\",3]",
+          "[\"workflow\",1]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"swin-transformer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",6]",
+          "[\"의의\",1]",
+          "[\"micro-design\",13]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"swin-transformer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",3]",
+          "[\"solution\",1]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"swin-transformer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "[\"vision-transformervit\",16]",
+          "[\"요약\",9]"
+        ]
+      },
+      {
+        "id": "developing-daily-04",
+        "sourceBlocks": [
+          "[\"swin-transformer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"gitignore\",2]",
+          "[\"파일-이름-변경\",3]",
+          "[\"ref\",3]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"swin-transformer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"progressive-learning-with-adaptive-regularization\",2]",
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",2]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"swin-transformer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"self-attention\",5]",
+          "[\"transformer가-기존-모델과-다른점\",2]",
+          "[\"trnasformer-의의\",1]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"swin-transformer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"overfeat-intuition\",3]",
+          "[\"convnets-sliding-window-efficiency\",2]",
+          "[\"문제점---convnet의-input-사이즈-제약\",1]"
+        ]
+      },
+      {
+        "id": "r-cnn",
+        "sourceBlocks": [
+          "[\"swin-transformer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"요약\",7]",
+          "[\"사전학습된-alexnet을-fine-tune\",6]",
+          "[\"abstract\",3]"
+        ]
+      },
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"swin-transformer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"convnet-accuracy\",1]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"swin-transformer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"요약\",1]",
+          "[\"bert\",1]",
+          "[\"model-architecture\",1]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"swin-transformer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"의의\",1]",
+          "[\"1-anchor-box\",1]",
+          "[\"abstract\",1]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"swin-transformer\",1]"
+        ],
+        "targetBlocks": [
+          "[\"low-rank-parameterized-update-matrices\",4]",
+          "[\"applying-lora-to-transformer\",2]",
+          "[\"problem-statement\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "convnext",
+        "relation": "related_method",
+        "reason": "계층적 피처맵을 만드는 Swin과 계층적 vision transformer의 다운샘플링 설계를 비교하며, ConvNet과의 구조적 공통점과 차이를 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "swin-transformer",
+          "blockId": "[\"swin-transformer\",1]",
+          "anchor": "swin-transformer",
+          "quote": "더 깊은 레이어들에서 이미지 패치를 결합함으로써 계층적인 피쳐맵을 쌓아갈 수 있다",
+          "hash": "3f38c07a7a4eabd1fd18f2c2d5adb144e6e16d03e84fd9f7de2a782036b8b638"
+        },
+        "targetEvidence": {
+          "articleId": "convnext",
+          "blockId": "[\"micro-design\",13]",
+          "anchor": "micro-design",
+          "quote": "ResNet에선 공간적인 다운샘플링은 각 stage에서 residual block의 앞단에 붙여졌고, Swin-T에선 분리된 다운샘플링 레이어는 2개의 stage사이에 추가되어졌음",
+          "hash": "909faac55480d1980ac92b61f85f404c9d69c5778bd8449a928cfb19f0f9f583"
+        }
+      },
+      {
+        "id": "vit",
+        "relation": "related_method",
+        "reason": "Swin의 이미지 패치 결합 방식과 ViT의 패치 분할·시퀀스 입력 방식을 비교해 비전 Transformer의 입력 구성 차이를 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "swin-transformer",
+          "blockId": "[\"swin-transformer\",1]",
+          "anchor": "swin-transformer",
+          "quote": "더 깊은 레이어들에서 이미지 패치를 결합함으로써 계층적인 피쳐맵을 쌓아갈 수 있다",
+          "hash": "3f38c07a7a4eabd1fd18f2c2d5adb144e6e16d03e84fd9f7de2a782036b8b638"
+        },
+        "targetEvidence": {
+          "articleId": "vit",
+          "blockId": "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "anchor": "transformer의-계산-효율성과-scalability를-비전에-활용",
+          "quote": "표준 Transformer를 최대한 변형 없이 직접적으로 이미지에 적용하였다. 이를 위해 이미지를 패치 조각으로 쪼갠다. 그리고 각각의 패치에 대해 선형적인 임베딩의 시퀀스를 제공하여 Transformer에 입력하였다. 이때 이미지의 패치는 마치 NLP에서의 토큰과 같이 다루게 된다. 모델은 이미지 분류 태스크에 대해 지도 학습 방식으로 학습하였다.",
+          "hash": "3c677d0e99eb275ec2794dd5379bab388dafc305a15bb7178ba8d90787fe1481"
+        }
+      }
+    ]
+  }
+}

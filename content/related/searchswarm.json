@@ -1,0 +1,304 @@
+{
+  "version": 2,
+  "id": "searchswarm",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "ae8172e5191163718c14f362d0ee0769073b8ba3fbd1b929a9099131c73c8b6a",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "multi-agent",
+        "role": "about",
+        "evidence": {
+          "articleId": "searchswarm",
+          "blockId": "[\"introduction\",2]",
+          "anchor": "introduction",
+          "quote": "이에 대한 더 active한 대안이 main-distributes, sub-executes 패러다임. main agent가 task를 미리 분해하고 bounded subtask를 subagent에 위임한 뒤, subagent의 요약된 실행 결과만 회수함. 이를 잘 수행하려면 delegation intelligence가 필요함: (1) 복잡한 task를 분해하고, (2) 언제 무엇을 위임할지 판단하며, (3) 돌아온 결과를 진행 중인 workflow에 통합하는 능력. 문제는 이런 능력을 학습할 데이터가 자연 텍스트에 거의 없고, 오픈소스 진영에서 이런 데이터를 어떻게 합성하고 학습시킬지가 거의 탐구되지 않았다는 점.",
+          "hash": "a0ce85141510b2bee166d955dd9bd7dc28828be7debeab1f555463275df2e449"
+        }
+      },
+      {
+        "id": "agent-memory",
+        "role": "about",
+        "evidence": {
+          "articleId": "searchswarm",
+          "blockId": "[\"main-distributes-sub-executes\",2]",
+          "anchor": "main-distributes-sub-executes",
+          "quote": "흥미로운 관점은 이 구조가 multi-agent가 아니라 single-agent context management라는 것. subagent는 별도 모델이 아니라 동일 모델을 fresh context로 다시 부른 것이며, brief와 report는 모두 모델이 생성함. 즉 고정 규칙 기반의 truncation/summarization 대신, 모델이 생성한 brief·report를 content-aware compression으로 사용해 스스로 context를 더 똑똑하게 관리하는 셈. 덕분에 기존 context 관리 기법들과 동일 선상에서 공정한 비교가 가능함.",
+          "hash": "5e3ce7553c22a1489d9e82acccab91065d9b6e9600134e5aa33ad8d6a19fc2ba"
+        }
+      },
+      {
+        "id": "agent-evaluation",
+        "role": "about",
+        "evidence": {
+          "articleId": "searchswarm",
+          "blockId": "[\"experiments\",1]",
+          "anchor": "experiments",
+          "quote": "base model은 Tongyi DeepResearch-30B-A3B이며, BrowseComp·BrowseComp-ZH·GAIA·xbench-DeepSearch-2505 네 벤치마크로 평가함. (judge model은 DeepSeek-V4-Flash, 판정은 수기 검증)",
+          "hash": "7814b0ea9aa504324e656a8083505a009feb780fd635ba1c6f27197727784642"
+        }
+      },
+      {
+        "id": "finetuning",
+        "role": "applies",
+        "evidence": {
+          "articleId": "searchswarm",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "연구진은 대표적인 long-horizon task인 deep research를 대상으로, inference 시점에 고품질 delegation 행동을 끌어내는 harness를 설계하고, 그 trajectory를 SFT 데이터로 정제해 모델 가중치에 내재화함. 결과 모델 SearchSwarm-30B-A3B는 BrowseComp 68.1, BrowseComp-ZH 73.3으로 동급 규모 모델 중 최고 성능을 달성함.",
+          "hash": "c862f47f3eae47c59d4ebe77419734f99157d18b11f81df99cc24c16979a9476"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "46d0005b0dd5a649951dfc2c11be1aa4bc57ac0f15d7db2042a750634516ceef",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "message-history",
+        "sourceBlocks": [
+          "[\"main-distributes-sub-executes\",2]",
+          "[\"supervised-fine-tuning\",3]",
+          "[\"experiments\",8]"
+        ],
+        "targetBlocks": [
+          "[\"message-history\",3]",
+          "[\"message-history\",1]",
+          "[\"message-history\",2]"
+        ]
+      },
+      {
+        "id": "dflash",
+        "sourceBlocks": [
+          "[\"supervised-fine-tuning\",2]",
+          "[\"experiments\",8]",
+          "[\"main-distributes-sub-executes\",2]"
+        ],
+        "targetBlocks": [
+          "[\"training\",5]",
+          "[\"main-results-qwen3-thinking-off\",2]",
+          "[\"reasoning-models-thinking-on\",1]"
+        ]
+      },
+      {
+        "id": "k-browsecomp",
+        "sourceBlocks": [
+          "[\"experiments\",1]",
+          "[\"introduction\",3]",
+          "[\"정리\",1]"
+        ],
+        "targetBlocks": [
+          "[\"정리\",1]",
+          "[\"introduction\",4]",
+          "[\"setup\",2]"
+        ]
+      },
+      {
+        "id": "rtpurbo",
+        "sourceBlocks": [
+          "[\"main-distributes-sub-executes\",2]",
+          "[\"introduction\",1]",
+          "[\"정리\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "[\"introduction\",1]",
+          "[\"효율--ultra-long-robustness\",1]"
+        ]
+      },
+      {
+        "id": "alphallm",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"정리\",1]",
+          "[\"experiments\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"related-work\",1]",
+          "[\"problem-formulation\",1]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"experiments\",1]",
+          "[\"supervised-fine-tuning\",2]",
+          "[\"harness의-효과\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",3]",
+          "[\"reproduction\",1]"
+        ]
+      },
+      {
+        "id": "constitutional-ai",
+        "sourceBlocks": [
+          "[\"supervised-fine-tuning\",2]",
+          "[\"정리\",1]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"method\",1]",
+          "[\"정리\",1]",
+          "[\"supervised-stage-critique--revision\",1]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"experiments\",1]",
+          "[\"introduction\",3]",
+          "[\"정리\",1]"
+        ],
+        "targetBlocks": [
+          "[\"evaluation\",1]",
+          "[\"introduction\",9]",
+          "[\"baselines\",2]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"main-distributes-sub-executes\",2]",
+          "[\"experiments\",10]",
+          "[\"introduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"results\",3]",
+          "[\"arithmetic-reasoning\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"supervised-fine-tuning\",2]",
+          "[\"main-distributes-sub-executes\",2]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[null,2]",
+          "[\"nlp\",2]"
+        ]
+      },
+      {
+        "id": "loftq",
+        "sourceBlocks": [
+          "[\"experiments\",8]",
+          "[\"정리\",1]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"experiments\",10]",
+          "[\"loftq\",1]",
+          "[\"glue-with-4-bit\",5]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"supervised-fine-tuning\",3]",
+          "[\"experiments\",1]",
+          "[\"introduction\",1]"
+        ],
+        "targetBlocks": [
+          "[\"combining-the-ingredients\",4]",
+          "[\"unlikelihood-training-and-length-normalization\",1]",
+          "[\"model-and-datasets\",4]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"introduction\",1]",
+          "[\"main-distributes-sub-executes\",2]",
+          "[\"정리\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",10]",
+          "[\"overview\",8]",
+          "[null,2]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"introduction\",3]",
+          "[\"main-distributes-sub-executes\",2]",
+          "[\"supervised-fine-tuning\",2]"
+        ],
+        "targetBlocks": [
+          "[\"fine-tuning과-높은-해상도-이미지-다루기\",1]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"요약\",10]"
+        ]
+      },
+      {
+        "id": "chat-vector",
+        "sourceBlocks": [
+          "[\"정리\",1]",
+          "[\"supervised-fine-tuning\",2]",
+          "[\"introduction\",3]"
+        ],
+        "targetBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "k-browsecomp",
+        "relation": "evaluation_comparison",
+        "reason": "두 글은 웹 탐색형 에이전트를 평가하지만, K-BrowseComp은 한국어 맥락의 별도 벤치마크를 제시해 SearchSwarm의 평가 범위를 비교하는 데 유용합니다.",
+        "sourceEvidence": {
+          "articleId": "searchswarm",
+          "blockId": "[\"experiments\",1]",
+          "anchor": "experiments",
+          "quote": "base model은 Tongyi DeepResearch-30B-A3B이며, BrowseComp·BrowseComp-ZH·GAIA·xbench-DeepSearch-2505 네 벤치마크로 평가함. (judge model은 DeepSeek-V4-Flash, 판정은 수기 검증)",
+          "hash": "7814b0ea9aa504324e656a8083505a009feb780fd635ba1c6f27197727784642"
+        },
+        "targetEvidence": {
+          "articleId": "k-browsecomp",
+          "blockId": "[\"introduction\",4]",
+          "anchor": "introduction",
+          "quote": "Browsing agent는 instruction following·tool calling·multi-turn interaction을 동시에 요구하는 compositional task라, 한국어 agentic 능력을 종합적으로 측정하는 testbed가 됨.",
+          "hash": "0d7ba0566800e2c82c330937c0bb67a8a9ad059e072fccb34065468c9c5e7a3f"
+        }
+      },
+      {
+        "id": "chain-of-thought",
+        "relation": "related_method",
+        "reason": "SearchSwarm은 brief와 report로 긴 맥락을 관리하고, CoT는 복잡한 문제를 중간 추론 단계로 나누어 푸는 방식을 설명합니다.",
+        "sourceEvidence": {
+          "articleId": "searchswarm",
+          "blockId": "[\"main-distributes-sub-executes\",2]",
+          "anchor": "main-distributes-sub-executes",
+          "quote": "흥미로운 관점은 이 구조가 multi-agent가 아니라 single-agent context management라는 것. subagent는 별도 모델이 아니라 동일 모델을 fresh context로 다시 부른 것이며, brief와 report는 모두 모델이 생성함. 즉 고정 규칙 기반의 truncation/summarization 대신, 모델이 생성한 brief·report를 content-aware compression으로 사용해 스스로 context를 더 똑똑하게 관리하는 셈. 덕분에 기존 context 관리 기법들과 동일 선상에서 공정한 비교가 가능함.",
+          "hash": "5e3ce7553c22a1489d9e82acccab91065d9b6e9600134e5aa33ad8d6a19fc2ba"
+        },
+        "targetEvidence": {
+          "articleId": "chain-of-thought",
+          "blockId": "[\"chain-of-thought-prompting\",1]",
+          "anchor": "chain-of-thought-prompting",
+          "quote": "여러 단계를 거쳐야하는 수학 문제와 같은 복잡한 추론을 통해 문제를 푸는 절차를 연구진은 고려하였음. 이건 전형적인 문제를 하나하나 분해하여 정답에 접근하는 방식임. 이 논문의 목표는 LLM에 유사한 CoT를 생성할 수 있는 기능을 부여하는 것입니다. 일관된 일련의 중간 추론 단계를 생성할 수 있는 능력을 LLM에 부여하는 것입니다.",
+          "hash": "82ac1138b000944e339224661220eee68aa8b30584e7b60c99240027c33e995e"
+        }
+      }
+    ]
+  }
+}

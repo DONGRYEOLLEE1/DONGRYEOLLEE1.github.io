@@ -1,0 +1,323 @@
+{
+  "version": 2,
+  "id": "inference-server",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "b65b5676385519a343738b27f2e4be32e1df47be824ec3ed9e7d1074a4a570f1",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "vllm",
+        "role": "applies",
+        "evidence": {
+          "articleId": "inference-server",
+          "blockId": "[\"전체-구성\",1]",
+          "anchor": "전체-구성",
+          "quote": "추론(GPU)과 운영(CPU)을 분리했음. GPU가 필요한 건 vLLM뿐이라 RunPod에는 vLLM만 올리고, 게이트웨이와 인증, 관측, 저장은 전부 노트북 WSL2의 Docker Compose 스택에서 돌림. Compose 서비스는 11개임.",
+          "hash": "dbc844b3af0610e15c1e55489626c714dcb26eb6e85ac14e337550b5563bc733"
+        }
+      },
+      {
+        "id": "model-serving",
+        "role": "applies",
+        "evidence": {
+          "articleId": "inference-server",
+          "blockId": "[\"전체-구성\",1]",
+          "anchor": "전체-구성",
+          "quote": "추론(GPU)과 운영(CPU)을 분리했음. GPU가 필요한 건 vLLM뿐이라 RunPod에는 vLLM만 올리고, 게이트웨이와 인증, 관측, 저장은 전부 노트북 WSL2의 Docker Compose 스택에서 돌림. Compose 서비스는 11개임.",
+          "hash": "dbc844b3af0610e15c1e55489626c714dcb26eb6e85ac14e337550b5563bc733"
+        }
+      },
+      {
+        "id": "speculative-decoding",
+        "role": "applies",
+        "evidence": {
+          "articleId": "inference-server",
+          "blockId": "[\"모델-구성은-파일-하나로\",2]",
+          "anchor": "모델-구성은-파일-하나로",
+          "quote": "# profiles/rtx6000-2x-flash-next-27b.yaml (발췌, 8월 말 기준) gpu_type_ids: - NVIDIA RTX PRO 6000 Blackwell Server Edition - NVIDIA RTX PRO 6000 Blackwell Workstation Edition image: vllm/vllm-openai:qwen38-flash-next slots: FLASH: served_model_name: qwen3.8-flash-next hf_repo_id: RadixArk/Qwen3.8-Flash-Next-NVFP4 port: 8881 gpus: [0, 1] gpu_util: 0.76 max_model_len: 131072 speculative: method: mtp num_speculative_tokens: 3 Q27: served_model_name: qwen3.8-27b hf_repo_id:",
+          "hash": "d04bee954dda0c736271ded101f6fc56269b074ad33ac6aec1c36ce3c23547ba"
+        }
+      },
+      {
+        "id": "quantization",
+        "role": "applies",
+        "evidence": {
+          "articleId": "inference-server",
+          "blockId": "[null,3]",
+          "anchor": null,
+          "quote": "RTX PRO 6000 Blackwell 96GB 2장에 Qwen3.8-Flash-Next(125B MoE)와 Qwen3.8-27B를 둘 다 NVFP4로 올려서 같이 서빙함",
+          "hash": "7fdb680dbfd43a9d80ff3bd117401da2e89cfd854224c9ea6b1e602f0b5d4270"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "b734b44e6410b2f2b9d09810e7cf93d19dcdc37480911bbf448ae40e40cda6e5",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "dflash",
+        "sourceBlocks": [
+          "[\"위치별-수락률\",3]",
+          "[\"모델-구성은-파일-하나로\",2]",
+          "[null,4]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"inference\",1]",
+          "[\"serving-framework-sglang\",1]"
+        ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"전체-구성\",1]",
+          "[\"nccl-초기화에서-무한-대기\",2]",
+          "[\"참고\",2]"
+        ],
+        "targetBlocks": [
+          "[\"script-1\",1]",
+          "[\"solution\",4]",
+          "[\"what-is-disable-custom-all-reduce\",5]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"위치별-수락률\",3]",
+          "[\"모델-구성은-파일-하나로\",2]",
+          "[\"작업-유형별-수락률\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"overview\",5]",
+          "[null,2]"
+        ]
+      },
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"전체-구성\",1]",
+          "[\"nccl-초기화에서-무한-대기\",1]",
+          "[\"vllm-릴리스에는-아직-없었음\",4]"
+        ],
+        "targetBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",1]",
+          "[\"problem\",3]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"전체-구성\",1]",
+          "[\"참고\",2]",
+          "[\"vllm-릴리스에는-아직-없었음\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",12]",
+          "[\"env\",2]",
+          "[\"조치-2\",1]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[null,2]",
+          "[\"참고\",2]",
+          "[\"cuda-버전-필터가-정확-일치였음\",1]"
+        ],
+        "targetBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",1]",
+          "[\"폐쇄망-환경구축을-하며-느낀점\",3]",
+          "[\"cuda-cudnn\",1]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"전체-구성\",1]",
+          "[\"참고\",6]",
+          "[\"처리량과-지연\",7]"
+        ],
+        "targetBlocks": [
+          "[\"increasing-speed-a-llm-serving-inference\",4]",
+          "[\"4bit-or-8bit-quantization\",7]",
+          "[\"tensor-parallel\",2]"
+        ]
+      },
+      {
+        "id": "k-browsecomp",
+        "sourceBlocks": [
+          "[\"벤치마크\",4]",
+          "[\"작업-유형별-수락률\",2]",
+          "[\"위치별-수락률\",1]"
+        ],
+        "targetBlocks": [
+          "[\"k-browsecomp-verified-300문제\",3]",
+          "[\"setup\",2]",
+          "[\"synthetic-split-100문제--이-논문의-핵심-기여\",8]"
+        ]
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"전체-구성\",1]",
+          "[\"참고\",2]",
+          "[\"nccl-초기화에서-무한-대기\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",3]",
+          "[\"error\",2]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "constitutional-ai",
+        "sourceBlocks": [
+          "[\"작업-유형별-수락률\",3]",
+          "[\"위치별-수락률\",1]",
+          "[\"측정의-한계\",2]"
+        ],
+        "targetBlocks": [
+          "[\"rl-stage-rlaif\",3]",
+          "[\"supervised-stage-critique--revision\",2]",
+          "[\"method\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[null,3]",
+          "[\"vllm-릴리스에는-아직-없었음\",2]",
+          "[\"cuda-버전-필터가-정확-일치였음\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"error2\",2]",
+          "[\"solution-1\",1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"참고\",6]",
+          "[\"모델이-큼\",1]",
+          "[\"모델-구성은-파일-하나로\",4]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",7]",
+          "[\"prompt-ensembling\",1]",
+          "[\"interpretability\",5]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[null,3]",
+          "[\"runpod에서는-ple-오프로드가-안-됨\",3]",
+          "[\"모델-구성은-파일-하나로\",6]"
+        ],
+        "targetBlocks": [
+          "[\"merging-lora-weights\",12]",
+          "[\"ref\",1]",
+          "[\"peft-v090\",1]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"참고\",6]",
+          "[\"모델이-큼\",1]",
+          "[\"처리량과-지연\",9]"
+        ],
+        "targetBlocks": [
+          "[\"peft-with-ia3\",1]",
+          "[\"introduction\",6]",
+          "[\"comparing-computational-costs\",4]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[null,3]",
+          "[\"cuda-버전-필터가-정확-일치였음\",1]",
+          "[\"kv-cache-오프로딩은-안-하기로-함\",2]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",1]",
+          "[\"현상\",1]",
+          "[\"section-8\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "speculative-decoding-paper",
+        "relation": "concept_explanation",
+        "reason": "MTP를 speculative decoding 방식으로 서빙하는 구성과, 초안 토큰을 target 모델이 병렬 검증하는 기본 원리를 함께 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "inference-server",
+          "blockId": "[\"위치별-수락률\",3]",
+          "anchor": "위치별-수락률",
+          "quote": "speculative decoding 자체는 예전에 원조 논문과 DFlash를 리뷰하면서 정리한 적이 있음. MTP는 별도 draft 모델 없이 체크포인트에 내장된 헤드가 다음 토큰 여러 개를 한 번에 예측하는 방식이라, draft 모델을 따로 받아 올릴 필요가 없다는 게 운영 입장에서 편했음.",
+          "hash": "1d6accd7f45e8ae1cedb8a00a50d18bbbc46ea0c3fcbf2acd0719efb39111bcb"
+        },
+        "targetEvidence": {
+          "articleId": "speculative-decoding-paper",
+          "blockId": "[\"introduction\",6]",
+          "anchor": "introduction",
+          "quote": "이 논문은 CPU의 branch prediction으로 익숙한 speculative execution(어떤 작업이 필요한지 검증하는 것과 병렬로 그 작업을 미리 수행하는 최적화)을 확률적(stochastic) 세팅으로 일반화함. 빠른 approximation model $M_q$가 미래 토큰들을 추측 생성하고, 느린 target model $M_p$가 이 추측들을 병렬로 평가·검증함. 여기에 speculative sampling이라는 새로운 샘플링 기법을 결합해, 최종 출력 분포가 $M_p$ 단독 샘플링과 수학적으로 완전히 동일함을 보장함.",
+          "hash": "174a2cf48c5d468b077dbc01e41d87377ebaaf12a738fb5671e1b500b9511480"
+        }
+      },
+      {
+        "id": "dflash",
+        "relation": "related_method",
+        "reason": "MTP와 DFlash가 각각 어떤 방식으로 초안 토큰을 만들고 검증하는지 비교해 speculative decoding 계열의 구현 차이를 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "inference-server",
+          "blockId": "[\"위치별-수락률\",3]",
+          "anchor": "위치별-수락률",
+          "quote": "speculative decoding 자체는 예전에 원조 논문과 DFlash를 리뷰하면서 정리한 적이 있음. MTP는 별도 draft 모델 없이 체크포인트에 내장된 헤드가 다음 토큰 여러 개를 한 번에 예측하는 방식이라, draft 모델을 따로 받아 올릴 필요가 없다는 게 운영 입장에서 편했음.",
+          "hash": "1d6accd7f45e8ae1cedb8a00a50d18bbbc46ea0c3fcbf2acd0719efb39111bcb"
+        },
+        "targetEvidence": {
+          "articleId": "dflash",
+          "blockId": "[\"inference\",1]",
+          "anchor": "inference",
+          "quote": "위 그림이 DFlash의 전체 inference 구조임. target model이 prefill/decode 과정에서 만든 hidden feature(파란색)를 융합해 각 draft layer의 KV cache에 주입하고, draft model은 target이 마지막으로 확정한 토큰(노란색) 뒤에 mask 토큰들(초록색)을 붙여 bidirectional attention으로 한 번에 denoise함. 그 결과 나온 draft block을 target LM head가 있는 target model이 병렬 검증하는 구조임.",
+          "hash": "f714d81adeddad9107f4481402b2fe3b083eb18c472226ee13a888e61af08f98"
+        }
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "relation": "related_method",
+        "reason": "GPU 간 P2P 문제에서 NCCL과 custom all-reduce를 조정한 경험을 바탕으로, vLLM의 all-reduce 우회 옵션이 어떻게 쓰이는지 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "inference-server",
+          "blockId": "[\"nccl-초기화에서-무한-대기\",2]",
+          "anchor": "nccl-초기화에서-무한-대기",
+          "quote": "NCCL_P2P_DISABLE=1을 넣으니 통과했고, 나중에 vLLM 이슈 #30682에서 같은 증상을 찾았음. 호스트에서 IOMMU가 꺼져 있으면 PCIe 경유 GPU 간 P2P가 멈춘다는 내용이고, NCCL_P2P_DISABLE=1과 --disable-custom-all-reduce를 같이 쓰라고 돼 있음. 실제로 NCCL만 끄고 올린 27B 슬롯은 custom all-reduce 단계에서 다시 멈췄음.",
+          "hash": "4ce6312b0793801c9ee47f441e156b3d7d06f71fa17f351ee4a92f782cd65c1a"
+        },
+        "targetEvidence": {
+          "articleId": "vllm-tensor-parallel-troubleshooting",
+          "blockId": "[\"what-is-disable-custom-all-reduce\",5]",
+          "anchor": "what-is-disable-custom-all-reduce",
+          "quote": "--disable-custom-all-reduce 플래그의 역할 --disable-custom-all-reduce 플래그는 vLLM이 커스텀 all-reduce 구현을 사용하지 않고, 대신 NCCL의 기본 all-reduce 구현으로 돌아가도록 강제하는 옵션입니다. 이 플래그를 사용하는 주요 이유는 다음과 같습니다: (1) 호환성 문제 해결 NVLink 미지원 환경: 두 개 이상의 GPU가 PCIe로만 연결된 경우, 커스텀 all-reduce가 제대로 동작하지 않거나 성능이 떨어질 수 있습니다. 이 경우 NCCL로 전환하면 안정성이 보장됩니다. P2P 통신 실패: GPU 간 P2P 통신이 하드웨어 또는 드라이버 문제로 지원되지 않을 때, 커스텀 all-reduce가 비활성화되도록 강제할 수 있습니다.",
+          "hash": "fb90432b86a42cdde587ef0918fbe9bd0e3a7f00ed2add1111dd735fa9aca549"
+        }
+      }
+    ]
+  }
+}

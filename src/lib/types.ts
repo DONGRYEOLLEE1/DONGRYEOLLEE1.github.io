@@ -2,7 +2,7 @@ export type ContentType = 'research' | 'paper-review' | 'implementation' | 'trou
 export type ConceptRef = { id: string; role: 'about' | 'applies' };
 export type Hero = { src: string; alt: string; kind?: 'photo' | 'figure' };
 export type Heading = { depth: number; id: string; text: string };
-export type RelatedArticle = { id: string; reason: string; score: number };
+export type RelatedArticle = { id: string; reason: string; score?: number };
 export interface Article {
   id: string; sourcePath: string; path: string; title: string; description: string;
   publishedAt: string; updatedAt?: string; language: 'ko' | 'en'; contentType: ContentType;

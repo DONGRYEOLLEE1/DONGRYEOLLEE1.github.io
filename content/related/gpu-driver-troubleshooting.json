@@ -1,0 +1,271 @@
+{
+  "version": 2,
+  "id": "gpu-driver-troubleshooting",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "69bd2085f3067d9d44c3511413939663093661b0b910268673e8e7e0da82c2cf",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "cuda",
+        "role": "applies",
+        "evidence": {
+          "articleId": "gpu-driver-troubleshooting",
+          "blockId": "[\"해결\",2]",
+          "anchor": "해결",
+          "quote": "sudo apt install nvidia-driver-525 sudo reboot",
+          "hash": "fad661413a04a9975c02227e1af8d61b39d9e79c431bcde87d8d03fde1dc0dd6"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "7c91f1a9f63f791fa776c64f23766a662dc3961cfba8e4b00760a95e24d49c8e",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",5]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"4bit-quantization\",17]",
+          "[\"현상\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"해결\",9]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",9]",
+          "[\"env\",9]",
+          "[\"error\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"원인\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"error2\",2]",
+          "[\"solution-1\",2]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",3]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",4]",
+          "[\"nvidia-driver\",1]"
+        ]
+      },
+      {
+        "id": "docker-gpu-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"env\",2]",
+          "[\"해결\",6]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",3]",
+          "[\"solution\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"3️⃣\",8]",
+          "[\"env\",3]",
+          "[\"2️⃣\",2]"
+        ]
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"env\",2]",
+          "[\"해결\",5]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",2]",
+          "[\"solution\",2]",
+          "[\"error\",2]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"env\",2]",
+          "[\"해결\",5]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",2]",
+          "[\"조치-2\",1]",
+          "[\"error\",9]"
+        ]
+      },
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"해결\",6]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "python-venv-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",1]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",1]",
+          "[\"issue\",3]"
+        ]
+      },
+      {
+        "id": "netplan-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",1]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",1]"
+        ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"해결\",10]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"problem\",2]",
+          "[\"environment\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "cuda-device-troubleshooting",
+        "relation": "related_method",
+        "reason": "두 사례 모두 A100 환경에서 NVIDIA 드라이버 재설치를 다루며, 한쪽은 fabric-manager를 드라이버 버전에 맞춰 설치하는 조치도 설명합니다.",
+        "sourceEvidence": {
+          "articleId": "gpu-driver-troubleshooting",
+          "blockId": "[\"해결\",2]",
+          "anchor": "해결",
+          "quote": "sudo apt install nvidia-driver-525 sudo reboot",
+          "hash": "fad661413a04a9975c02227e1af8d61b39d9e79c431bcde87d8d03fde1dc0dd6"
+        },
+        "targetEvidence": {
+          "articleId": "cuda-device-troubleshooting",
+          "blockId": "[\"해결\",1]",
+          "anchor": "해결",
+          "quote": "fabric-manager 설치 : 그래픽드라이버 버전 맞춰서 설치",
+          "hash": "66ef1721a6dca1d8137865758b0b20d06aacb8458fabf635ad7ace22499a7454"
+        }
+      },
+      {
+        "id": "developing-daily-06",
+        "relation": "related_method",
+        "reason": "두 사례 모두 그래픽 드라이버 버전 문제를 의심하거나 버전을 맞춰 GPU 인식 문제를 해결한 내용을 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "gpu-driver-troubleshooting",
+          "blockId": "[\"원인\",1]",
+          "anchor": "원인",
+          "quote": "그래픽드라이버 버전 문제로 예상",
+          "hash": "634274f6cf2032740013a658a7f3457f0abd836eb2255b547807002241301d37"
+        },
+        "targetEvidence": {
+          "articleId": "developing-daily-06",
+          "blockId": "[\"solution\",2]",
+          "anchor": "solution",
+          "quote": "cuda 버전에 맞게 파일을 복사해주면 됨",
+          "hash": "779bd9c17b2d24675908211f13a4565ed1411a3f535ed3cac061d77a1be30fbc"
+        }
+      }
+    ]
+  }
+}

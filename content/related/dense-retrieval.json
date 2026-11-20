@@ -1,0 +1,282 @@
+{
+  "version": 2,
+  "id": "dense-retrieval",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "c605157dd17420284ef2a7f3ca3e3dfb10e22cb89cc4c61948d370e84bc10bc2",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "dense-retrieval",
+        "role": "about",
+        "evidence": {
+          "articleId": "dense-retrieval",
+          "blockId": "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "anchor": "querying-the-dataset-using-dense-retrieval",
+          "quote": "Dense Retrieval은 query와 유사한 문서를 찾기위해 text embedding을 사용합니다. Embedding은 숫자로 된 긴 리스트 데이터인 vector를 텍스트의 각각(token)에 할당합니다. Embedding에서의 주요 속성 중 하나는 비슷한 텍스트 조각이 비슷한 벡터로 이동한다는 것입니다.",
+          "hash": "f7396af47501ae2109752e37f93113ae64f0e1f15b7a584115a015b911de96bf"
+        }
+      },
+      {
+        "id": "semantic-search",
+        "role": "about",
+        "evidence": {
+          "articleId": "dense-retrieval",
+          "blockId": "[\"dense-retrieval\",3]",
+          "anchor": "dense-retrieval",
+          "quote": "Keyword search를 통해 첫번째 query는 잘 작동했지만 두번째 query는 그렇지 못했습니다. 두번째 query에는 실제로 많은 document에 query에 있는 단어들이 불필요하게 많이 포함되어 있기 때문입니다. 좋은 결과를 얻어내는 방법으론 모델이 '잘 이해할 수 있는' 질문을 하는 것입니다. 바로 이 부분에서 Semantic Search가 기인합니다. Semantic Search는 단순한 키워드 매칭이 아닌 의미를 파악하여 검색합니다. 언어 모델들은 두 가지 주된 semantic search 방법론(Dense Retrieval & Re-ranking)을 활용합니다. 그 중 Dense Retrieval을 살펴봅시다.",
+          "hash": "a3ec66ba0c3617c61a34c9ad411b2c0e30abaa76308bc4087a61ee2d087e3624"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "e3f34b2934e060421576c4fb1ec8973cfa264ced5e43336499c58c736444d9df",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "semantic-search",
+        "sourceBlocks": [
+          "[\"dense-retrieval\",3]",
+          "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "[\"chunking-the-articles\",11]"
+        ],
+        "targetBlocks": [
+          "[\"what-is-not-semantic-search\",20]",
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"using-similarity-to-find-the-best-document\",3]"
+        ]
+      },
+      {
+        "id": "keyword-search",
+        "sourceBlocks": [
+          "[\"dense-retrieval\",1]",
+          "[\"chunking-the-articles\",9]",
+          "[\"querying-the-dataset-using-dense-retrieval\",6]"
+        ],
+        "targetBlocks": [
+          "[\"querying-the-wikipedia-dataset-using-keyword-matching\",1]",
+          "[\"conclusion\",3]",
+          "[\"querying-the-wikipedia-dataset-using-keyword-matching\",2]"
+        ]
+      },
+      {
+        "id": "reranking",
+        "sourceBlocks": [
+          "[\"dense-retrieval\",3]",
+          "[\"chunking-the-articles\",9]",
+          "[\"querying-the-dataset-using-dense-retrieval\",4]"
+        ],
+        "targetBlocks": [
+          "[\"결론\",1]",
+          "[\"using-rerank-to-improve-keyword-search\",1]",
+          "[\"reranking\",1]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"dense-retrieval\",3]",
+          "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "[\"chunking-the-articles\",1]"
+        ],
+        "targetBlocks": [
+          "[\"pre-training-bert\",1]",
+          "[\"task-1-masked-lm-mlm\",3]",
+          "[\"요약\",1]"
+        ]
+      },
+      {
+        "id": "rtpurbo",
+        "sourceBlocks": [
+          "[\"dense-retrieval\",3]",
+          "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "[\"chunking-the-articles\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "[\"low-cost-two-stage-training\",1]",
+          "[\"2-rope가-만드는-압축-가능한-geometry--low-dim-subspace\",1]"
+        ]
+      },
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[\"dense-retrieval\",3]",
+          "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "[\"chunking-the-articles\",1]"
+        ],
+        "targetBlocks": [
+          "[\"a-latent-embedding-approach\",2]",
+          "[\"what-is-zero-shot-learning\",1]",
+          "[\"classification-as-nli\",4]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"dense-retrieval\",3]",
+          "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "[\"chunking-the-articles\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",9]",
+          "[\"the-architecture-of-ziya2\",2]",
+          "[\"the-data-factory\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"dense-retrieval\",3]",
+          "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "[\"chunking-the-articles\",1]"
+        ],
+        "targetBlocks": [
+          "[\"문제-정의\",6]",
+          "[\"solution\",1]",
+          "[\"concept\",3]"
+        ]
+      },
+      {
+        "id": "chat-vector",
+        "sourceBlocks": [
+          "[\"dense-retrieval\",3]",
+          "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "[\"chunking-the-articles\",1]"
+        ],
+        "targetBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "[\"dense-retrieval\",3]",
+          "[\"chunking-the-articles\",1]"
+        ],
+        "targetBlocks": [
+          "[\"요약\",18]",
+          "[\"vision-transformer-탐색하기\",7]",
+          "[\"vision-transformervit\",9]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"dense-retrieval\",3]",
+          "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "[\"chunking-the-articles\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"related-work\",1]",
+          "[\"evolution-of-performance-during-training\",2]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "[\"dense-retrieval\",3]",
+          "[\"chunking-the-articles\",1]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning은-어떻게-작동할까\",1]",
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[null,2]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"dense-retrieval\",3]",
+          "[\"querying-the-dataset-using-dense-retrieval\",2]",
+          "[\"chunking-the-articles\",1]"
+        ],
+        "targetBlocks": [
+          "[\"background\",1]",
+          "[\"introduction\",1]",
+          "[\"qlora-vs-standard-finetuning\",4]"
+        ]
+      },
+      {
+        "id": "elmo",
+        "sourceBlocks": [
+          "[\"dense-retrieval\",3]",
+          "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "[\"chunking-the-articles\",11]"
+        ],
+        "targetBlocks": [
+          "[\"elmo\",1]",
+          "[\"experiments\",4]",
+          "[\"context-matters\",4]"
+        ]
+      },
+      {
+        "id": "python-class-inheritance",
+        "sourceBlocks": [
+          "[\"querying-the-dataset-using-dense-retrieval\",2]",
+          "[\"dense-retrieval\",3]",
+          "[\"chunking-the-articles\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract-class\",2]",
+          "[\"예시-코드\",1]",
+          "[\"examples\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "semantic-search",
+        "relation": "related_method",
+        "reason": "Dense Retrieval이 임베딩 벡터로 유사 문서를 찾는 방식과 의미 검색에서 벡터 유사도를 활용하는 개념을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "dense-retrieval",
+          "blockId": "[\"querying-the-dataset-using-dense-retrieval\",1]",
+          "anchor": "querying-the-dataset-using-dense-retrieval",
+          "quote": "Dense Retrieval은 query와 유사한 문서를 찾기위해 text embedding을 사용합니다. Embedding은 숫자로 된 긴 리스트 데이터인 vector를 텍스트의 각각(token)에 할당합니다. Embedding에서의 주요 속성 중 하나는 비슷한 텍스트 조각이 비슷한 벡터로 이동한다는 것입니다.",
+          "hash": "f7396af47501ae2109752e37f93113ae64f0e1f15b7a584115a015b911de96bf"
+        },
+        "targetEvidence": {
+          "articleId": "semantic-search",
+          "blockId": "[\"how-to-search-using-text-embedding\",1]",
+          "anchor": "how-to-search-using-text-embedding",
+          "quote": "임베딩은 각 문장에 숫자 목록인 벡터를 할당하는 방식입니다. Embedding의 가장 중요한 요소는 바로 텍스트 조각에 더 비슷한 vetor를 할당하는 것입니다. 예를들어 \"Hello, how are you?\" 문장과 \"Hi, what's up?\" 문장을 매우 유사한 수의 리스트 데이터가 할당될 것인데 반해, \"Tomorrow is Friday\" 문장과는 이전 문장과 다르게 꽤 다른 수의 리스트 데이터가 할당될 것입니다.",
+          "hash": "01d74c7cd003fae5b5348d8f7d0d1c57c1086fbe52d87c425f1661db9de991b8"
+        }
+      },
+      {
+        "id": "reranking",
+        "relation": "related_method",
+        "reason": "Dense Retrieval과 Reranking이 의미 기반 검색에서 어떤 방식으로 쓰이고, Reranking이 검색 결과를 관련성 점수로 재정렬하는지 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "dense-retrieval",
+          "blockId": "[\"dense-retrieval\",3]",
+          "anchor": "dense-retrieval",
+          "quote": "Keyword search를 통해 첫번째 query는 잘 작동했지만 두번째 query는 그렇지 못했습니다. 두번째 query에는 실제로 많은 document에 query에 있는 단어들이 불필요하게 많이 포함되어 있기 때문입니다. 좋은 결과를 얻어내는 방법으론 모델이 '잘 이해할 수 있는' 질문을 하는 것입니다. 바로 이 부분에서 Semantic Search가 기인합니다. Semantic Search는 단순한 키워드 매칭이 아닌 의미를 파악하여 검색합니다. 언어 모델들은 두 가지 주된 semantic search 방법론(Dense Retrieval & Re-ranking)을 활용합니다. 그 중 Dense Retrieval을 살펴봅시다.",
+          "hash": "a3ec66ba0c3617c61a34c9ad411b2c0e30abaa76308bc4087a61ee2d087e3624"
+        },
+        "targetEvidence": {
+          "articleId": "reranking",
+          "blockId": "[\"using-rerank-to-improve-keyword-search\",1]",
+          "anchor": "using-rerank-to-improve-keyword-search",
+          "quote": "Reranking은 기존의 search system의 성능을 끌어올려주는 굉장한 방법론입니다. 짧게 말해서, reranking은 query와 response를 받고 그들끼리의 relevance score를 리턴합니다. 이를 통해 어떤 검색 시스템이든 활용하여 query에 대한 답을 포함할 가능성이 있는 여러 문서를 찾아낸 뒤, reranking 엔드포인트를 사용하여 이 문서들을 정렬할 수 있습니다.",
+          "hash": "bd34ba188d485a61e9674aaa5ddb0ac41172d935fd54f83aa981721e4dc36b60"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "version": 2,
+  "id": "pytest",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "08dc579c9ed29fb98b109bf6f6a15d22cf675d6f3a3fb6c2589046a1c538a19f",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "testing",
+        "role": "about",
+        "evidence": {
+          "articleId": "pytest",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "pytest는 Python에서 가장 널리 사용되는 테스트 프레임워크 중 하나로, 유닛테스트, 통합테스트 등 다양한 테스트를 쉽고 유연하게 작성하고 실행할 수 있도록 도와줍니다. 이 패키지는 매우 직관적이고 간결한 문법으로 제공하여, 복잡한 테스트 코드를 단순하게 작성할 수 있습니다. pytest는 기본적으로 python의 내장 unittest 프레임워크보다 더 많은 기능과 유연성을 제공합니다.",
+          "hash": "7364ba69f26bc356ac75a7415a880d4fc7f182c6e10b7eee5e825200097caf91"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "78cff4edbdcb27b5fe2d938804883ff34988ed4aa0bcebbb7ad75c8175bb64ed",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "python-assert",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"주요-특징\",6]",
+          "[\"주요-특징\",8]"
+        ],
+        "targetBlocks": [
+          "[\"가정-설명문assert\",1]",
+          "[\"assert가-필요한-이유\",5]",
+          "[\"assert가-필요한-이유\",2]"
+        ]
+      },
+      {
+        "id": "python-enumerate",
+        "sourceBlocks": [
+          "[\"주요-특징\",11]",
+          "[null,1]",
+          "[\"주요-특징\",23]"
+        ],
+        "targetBlocks": [
+          "[\"enumerate\",1]",
+          "[\"장점\",1]",
+          "[\"예시\",16]"
+        ]
+      },
+      {
+        "id": "python-class-inheritance",
+        "sourceBlocks": [
+          "[\"주요-특징\",12]",
+          "[null,1]",
+          "[\"주요-특징\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract-class\",3]",
+          "[\"장점\",2]",
+          "[\"예시-코드\",1]"
+        ]
+      },
+      {
+        "id": "python-args-kwargs",
+        "sourceBlocks": [
+          "[\"주요-특징\",21]",
+          "[null,1]",
+          "[\"주요-특징\",23]"
+        ],
+        "targetBlocks": [
+          "[\"args-사용\",4]",
+          "[\"argument를-직접-지정한-함수-사용\",1]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]"
+        ]
+      },
+      {
+        "id": "python-map",
+        "sourceBlocks": [
+          "[\"주요-특징\",23]",
+          "[null,1]",
+          "[\"주요-특징\",24]"
+        ],
+        "targetBlocks": [
+          "[\"map\",1]",
+          "[\"예시3-여러-반복-객체-사용\",1]",
+          "[\"예시1-단일-반복-객체-사용\",1]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"주요-특징\",7]",
+          "[null,1]",
+          "[\"주요-특징\",3]"
+        ],
+        "targetBlocks": [
+          "[\"2\",3]",
+          "[\"tensor-parallel\",5]",
+          "[\"4bit-or-8bit-quantization\",7]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"주요-특징\",2]",
+          "[null,1]",
+          "[\"주요-특징\",7]"
+        ],
+        "targetBlocks": [
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"python\",1]",
+          "[\"새로운-이슈\",8]"
+        ]
+      },
+      {
+        "id": "python-typing",
+        "sourceBlocks": [
+          "[\"주요-특징\",22]",
+          "[null,1]",
+          "[\"주요-특징\",23]"
+        ],
+        "targetBlocks": [
+          "[\"파이썬--동적-프로그래밍-언어\",2]",
+          "[\"optional\",2]",
+          "[\"type-annotation\",2]"
+        ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"주요-특징\",9]",
+          "[null,1]",
+          "[\"주요-특징\",8]"
+        ],
+        "targetBlocks": [
+          "[\"problem\",1]",
+          "[\"error-message\",1]",
+          "[\"solution\",3]"
+        ]
+      },
+      {
+        "id": "python-venv-troubleshooting",
+        "sourceBlocks": [
+          "[\"주요-특징\",7]",
+          "[null,1]",
+          "[\"주요-특징\",9]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",4]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "rnn",
+        "sourceBlocks": [
+          "[\"주요-특징\",1]",
+          "[null,1]",
+          "[\"주요-특징\",19]"
+        ],
+        "targetBlocks": [
+          "[\"구조\",1]",
+          "[\"relu함수를-사용하지-않는-이유\",1]",
+          "[\"irnn\",12]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"주요-특징\",11]",
+          "[null,1]",
+          "[\"주요-특징\",23]"
+        ],
+        "targetBlocks": [
+          "[\"dataset\",1]",
+          "[\"envs\",1]",
+          "[\"model\",3]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"주요-특징\",9]",
+          "[null,1]",
+          "[\"주요-특징\",7]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"robustness-of-cot\",1]",
+          "[\"results-1\",1]"
+        ]
+      },
+      {
+        "id": "python-enum",
+        "sourceBlocks": [
+          "[\"주요-특징\",12]",
+          "[null,1]",
+          "[\"주요-특징\",14]"
+        ],
+        "targetBlocks": [
+          "[\"enum\",1]",
+          "[\"특징\",1]",
+          "[\"1-기본-사용법\",1]"
+        ]
+      },
+      {
+        "id": "gpt-3",
+        "sourceBlocks": [
+          "[\"주요-특징\",9]",
+          "[null,1]",
+          "[\"주요-특징\",23]"
+        ],
+        "targetBlocks": [
+          "[null,7]",
+          "[null,11]",
+          "[null,5]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "python-assert",
+        "relation": "related_method",
+        "reason": "pytest 예제에서 assert로 조건을 검사하는 방식을 보고, assert가 값을 보증하고 조건을 확인하는 용도를 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "pytest",
+          "blockId": "[\"주요-특징\",6]",
+          "anchor": "주요-특징",
+          "quote": "def test_failing(): assert 1+1 == 3",
+          "hash": "e3ff76304b873f29ab518ee202f49c20f0b2f0b870efae86d9a93a73c377edbb"
+        },
+        "targetEvidence": {
+          "articleId": "python-assert",
+          "blockId": "[\"assert가-필요한-이유\",5]",
+          "anchor": "assert가-필요한-이유",
+          "quote": "assert문은 단순히 에러를 찾는것이 아니라 값을 보증하기 위해 사용되는데 예를 들어 함수의 입력 값이 어떤 조건의 참임을 보증하기 위해 사용할 수 있고 함수의 반환 값이 어떤 조건에 만족하도록 만들 수 있다. 혹은 변수 값이 변하는 과정에서 특정 부분은 반드시 어떤 영역에 속하는 것을 보증하기 위해 가정 설정문을 통해 확인 할 수도 있다.",
+          "hash": "81994b97bb03be9f5b92a6c1e05f9c3bfc1f4aedad5824bd4e73b8886aecc769"
+        }
+      }
+    ]
+  }
+}

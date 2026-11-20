@@ -1,0 +1,257 @@
+{
+  "version": 2,
+  "id": "developing-daily-07",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "397c6d7ea7ce7af347d26a415d792b7cba4d0230cf7b1396a8bcf77b21bc2425",
+    "status": "abstained",
+    "facts": [],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "2e7c3740c348dc43595fa8ac0515de62a5e0455427a49deb1e862d651da171c6",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"translation\",1]",
+          "[\"workflow\",1]",
+          "[\"question-generationkor\",1]"
+        ],
+        "targetBlocks": [
+          "[\"원인\",1]",
+          "[\"해결\",1]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "swin-transformer",
+        "sourceBlocks": [
+          "[\"sbert\",1]",
+          "[\"translation\",3]",
+          "[\"workflow\",1]"
+        ],
+        "targetBlocks": [
+          "[\"swin-transformer\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-05",
+        "sourceBlocks": [
+          "[\"question-generationkor\",1]",
+          "[\"question-generationeng\",1]",
+          "[\"sbert\",1]"
+        ],
+        "targetBlocks": [
+          "[\"data-processing\",1]",
+          "[\"kobart-questiongeneration\",3]",
+          "[\"t5-end2end-question-generation\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"translation\",1]",
+          "[\"workflow\",1]",
+          "[\"sbert\",1]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",1]",
+          "[\"solution-1\",2]",
+          "[\"error2\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"translation\",2]",
+          "[\"workflow\",1]",
+          "[\"question-generationeng\",1]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",3]",
+          "[\"tgi\",2]",
+          "[\"docker\",6]"
+        ]
+      },
+      {
+        "id": "tokenizer-input-troubleshooting",
+        "sourceBlocks": [
+          "[\"translation\",3]",
+          "[\"question-generationkor\",1]",
+          "[\"question-generationeng\",1]"
+        ],
+        "targetBlocks": [
+          "[\"원인\",3]",
+          "[\"error\",1]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"question-generationeng\",1]",
+          "[\"sbert\",1]",
+          "[\"translation\",3]"
+        ],
+        "targetBlocks": [
+          "[\"ref\",3]",
+          "[\"gradio\",5]",
+          "[\"ts\",4]"
+        ]
+      },
+      {
+        "id": "nlp-terms",
+        "sourceBlocks": [
+          "[\"translation\",3]",
+          "[\"sbert\",1]",
+          "[\"question-generationkor\",1]"
+        ],
+        "targetBlocks": [
+          "[\"nli---natural-language-inference\",15]",
+          "[\"task-on-benchmarks\",1]",
+          "[\"glue---general-language-understanding-evaluation\",1]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"question-generationkor\",1]",
+          "[\"translation\",3]",
+          "[\"sbert\",1]"
+        ],
+        "targetBlocks": [
+          "[\"dataset\",2]",
+          "[\"envs\",7]",
+          "[\"training\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"translation\",3]",
+          "[\"question-generationkor\",1]",
+          "[\"sbert\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",10]",
+          "[\"envs\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"sbert\",1]",
+          "[\"translation\",3]",
+          "[\"question-generationkor\",1]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",1]",
+          "[\"solution\",1]",
+          "[\"문제-정의\",3]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"translation\",3]",
+          "[\"question-generationkor\",1]",
+          "[\"sbert\",1]"
+        ],
+        "targetBlocks": [
+          "[\"envs\",4]",
+          "[\"ref\",1]",
+          "[\"mission\",1]"
+        ]
+      },
+      {
+        "id": "regex-preprocessing",
+        "sourceBlocks": [
+          "[\"translation\",3]",
+          "[\"question-generationkor\",1]",
+          "[\"question-generationeng\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[\"translation\",3]",
+          "[\"sbert\",1]",
+          "[\"question-generationeng\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"theory\",5]",
+          "[\"does-eda-conserve-true-lables\",4]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"question-generationkor\",1]",
+          "[\"question-generationeng\",1]",
+          "[\"translation\",3]"
+        ],
+        "targetBlocks": [
+          "[\"error\",2]",
+          "[\"solution\",4]",
+          "[\"env\",3]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "generation-cuda-assert",
+        "relation": "related_method",
+        "reason": "같은 Sehong 한국어 질문 생성 모델을 사용하므로, 생성 입력 구성과 추론 중 발생한 CUDA 오류 해결 과정을 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "developing-daily-07",
+          "blockId": "[\"translation\",3]",
+          "anchor": "translation",
+          "quote": "KETI-AIR-Downstream/long-ke-t5-base-translation-aihub-bidirection",
+          "hash": "06b8b9cb27c4e78748f2164fdfe4702edff857eddf1b92f3f5e22d4772b4b683"
+        },
+        "targetEvidence": {
+          "articleId": "generation-cuda-assert",
+          "blockId": "[\"solution\",4]",
+          "anchor": "solution",
+          "quote": "for i in tqdm(range(50), desc = 'test'): raw_input_ids = qg_kor_tokenizer.encode(text, max_length = 1024) input_ids = [qg_kor_tokenizer.bos_token_id] + raw_input_ids + [qg_kor_tokenizer.eos_token_id] que_ids = qg_kor_model.generate(torch.tensor([input_ids]).to('cuda'), max_length = 4000) decode = qg_kor_tokenizer.decode(que_ids.squeeze().tolist(), skip_special_tokens = True)",
+          "hash": "4a4ee86cb6563d26cf027ce079b6bd235ea86dd2280661126856c53da084a2b4"
+        }
+      },
+      {
+        "id": "developing-daily-05",
+        "relation": "related_method",
+        "reason": "한국어·영어 질문 생성 모델을 함께 다루므로, 모델 선택과 파인튜닝 데이터 재전처리 및 출력 차이를 비교해볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "developing-daily-07",
+          "blockId": "[\"sbert\",1]",
+          "anchor": "sbert",
+          "quote": "sentence-transformers/all-mpnet-base-v2",
+          "hash": "b269fc93b23279a8f4b8f7d030a32e2b30d3f90323030fded6d2b5fadca35407"
+        },
+        "targetEvidence": {
+          "articleId": "developing-daily-05",
+          "blockId": "[\"data-processing\",1]",
+          "anchor": "data-processing",
+          "quote": "TASK: 언어모델의 성능 향상을 위한 파인튜닝 데이터 re-preprocessing",
+          "hash": "5547c34b500f8ebd7b3be232c09ede2fc4ee6677f522600cfa70ebd7ed0530dc"
+        }
+      }
+    ]
+  }
+}

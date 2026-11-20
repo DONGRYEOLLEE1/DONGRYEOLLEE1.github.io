@@ -1,0 +1,252 @@
+{
+  "version": 2,
+  "id": "python-map",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "7f44a952f798e46675e46e43dbed82c9648fba066767f284efd7e203a8e39253",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "python-language",
+        "role": "about",
+        "evidence": {
+          "articleId": "python-map",
+          "blockId": "[\"map\",1]",
+          "anchor": "map",
+          "quote": "map() 함수는 파이썬에서 반복 가능한 객체의 모든 요소에 대해 지정된 함수를 적용하는 함수. 원본 데이터를 변형하여 새로운 데이터를 생산하는 데 사용. 이 함수는 lazy evaluation을 사용하여 결과를 바로 계산하지 않고 필요할 때만 값을 계산하는 특성을 지니고 있다.",
+          "hash": "b20c954fa596819d6fd342d8947a28e563945c2d66562f880f392ab83aaae789"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "5d0aac495c91079124cb2cefc6fb57aa0e3908ac763a0f65d537d500a1552b1e",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "python-enumerate",
+        "sourceBlocks": [
+          "[\"map\",1]",
+          "[\"예시3-여러-반복-객체-사용\",1]",
+          "[\"장점\",1]"
+        ],
+        "targetBlocks": [
+          "[\"enumerate\",1]",
+          "[\"예시\",16]",
+          "[\"장점\",1]"
+        ]
+      },
+      {
+        "id": "python-assert",
+        "sourceBlocks": [
+          "[\"map\",1]",
+          "[\"예시1-단일-반복-객체-사용\",1]",
+          "[\"예시2-람다-함수-사용\",1]"
+        ],
+        "targetBlocks": [
+          "[\"가정-설명문assert\",1]",
+          "[\"assert가-필요한-이유\",2]",
+          "[\"assert가-필요한-이유\",1]"
+        ]
+      },
+      {
+        "id": "python-args-kwargs",
+        "sourceBlocks": [
+          "[\"map\",1]",
+          "[\"예시3-여러-반복-객체-사용\",1]",
+          "[\"예시1-단일-반복-객체-사용\",1]"
+        ],
+        "targetBlocks": [
+          "[\"args-사용\",4]",
+          "[\"argument를-직접-지정한-함수-사용\",1]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]"
+        ]
+      },
+      {
+        "id": "python-typing",
+        "sourceBlocks": [
+          "[\"map\",1]",
+          "[\"예시1-단일-반복-객체-사용\",1]",
+          "[\"예시2-람다-함수-사용\",1]"
+        ],
+        "targetBlocks": [
+          "[\"파이썬--동적-프로그래밍-언어\",2]",
+          "[\"list-dict-tuple-set\",3]",
+          "[\"타입-추상화\",2]"
+        ]
+      },
+      {
+        "id": "map-evaluation",
+        "sourceBlocks": [
+          "[\"map\",1]",
+          "[\"구문\",1]",
+          "[\"동작-원리\",1]"
+        ],
+        "targetBlocks": [
+          "[\"coco-map\",2]",
+          "[\"precision--recall\",1]",
+          "[\"ap\",1]"
+        ]
+      },
+      {
+        "id": "pytest",
+        "sourceBlocks": [
+          "[\"map\",1]",
+          "[\"예시3-여러-반복-객체-사용\",1]",
+          "[\"예시1-단일-반복-객체-사용\",1]"
+        ],
+        "targetBlocks": [
+          "[\"주요-특징\",23]",
+          "[null,1]",
+          "[\"주요-특징\",24]"
+        ]
+      },
+      {
+        "id": "regex-preprocessing",
+        "sourceBlocks": [
+          "[\"map\",1]",
+          "[\"장점\",1]",
+          "[\"구문\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "python-enum",
+        "sourceBlocks": [
+          "[\"map\",1]",
+          "[\"장점\",1]",
+          "[\"예시1-단일-반복-객체-사용\",1]"
+        ],
+        "targetBlocks": [
+          "[\"enum\",1]",
+          "[\"enum을-사용하는-이유\",1]",
+          "[\"1-기본-사용법\",1]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-1",
+        "sourceBlocks": [
+          "[\"map\",1]",
+          "[\"동작-원리\",1]",
+          "[\"장점\",1]"
+        ],
+        "targetBlocks": [
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchview\",1]",
+          "[\"결론\",1]"
+        ]
+      },
+      {
+        "id": "python-class-inheritance",
+        "sourceBlocks": [
+          "[\"map\",1]",
+          "[\"장점\",1]",
+          "[\"예시1-단일-반복-객체-사용\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract-class\",3]",
+          "[\"장점\",2]",
+          "[\"예시-코드\",1]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"map\",1]",
+          "[\"장점\",1]",
+          "[\"동작-원리\",1]"
+        ],
+        "targetBlocks": [
+          "[\"answer\",8]",
+          "[\"curiosity\",1]",
+          "[\"case-1\",1]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"map\",1]",
+          "[\"동작-원리\",1]",
+          "[\"예시1-단일-반복-객체-사용\",1]"
+        ],
+        "targetBlocks": [
+          "[\"roi-pooling\",5]",
+          "[\"rpnregions-proposal-network\",3]",
+          "[\"end-to-end\",3]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-3",
+        "sourceBlocks": [
+          "[\"map\",1]",
+          "[\"동작-원리\",1]",
+          "[\"예시3-여러-반복-객체-사용\",1]"
+        ],
+        "targetBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",1]",
+          "[\"삼각행렬-triangular-matrix\",1]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"장점\",2]",
+          "[\"map\",1]",
+          "[\"동작-원리\",1]"
+        ],
+        "targetBlocks": [
+          "[\"increasing-speed-a-llm-serving-inference\",10]",
+          "[\"4bit-or-8bit-quantization\",7]",
+          "[\"2\",5]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"예시6-복잡한-객체-반환\",1]",
+          "[\"동작-원리\",1]",
+          "[\"예시1-단일-반복-객체-사용\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",2]",
+          "[\"solution\",3]",
+          "[\"reproduction\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "python-enumerate",
+        "relation": "related_method",
+        "reason": "두 함수가 iterable을 처리하는 예시를 비교하며, map으로 변환한 값을 enumerate로 순회하는 방식을 익힐 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "python-map",
+          "blockId": "[\"예시3-여러-반복-객체-사용\",1]",
+          "anchor": "예시3-여러-반복-객체-사용",
+          "quote": "def add(x, y): return x+y list1 = [1, 2, 3] list2 = [4, 5, 6] print(list(map(add, list1, list2))) # 출력: [5, 7, 9]",
+          "hash": "6ce0436246aa3a354e6cea0e76a17a6545ff591df1b795408bcb7faf0f573836"
+        },
+        "targetEvidence": {
+          "articleId": "python-enumerate",
+          "blockId": "[\"예시\",16]",
+          "anchor": "예시",
+          "quote": "list1 = [10, 20, 30, 40] list2 = [1, 2, 3, 4] for idx, (a, b) in enumerate(zip(list1, list2)): print(f\"Index {idx}: {a} + {b} = {a+b}\")",
+          "hash": "fe7212553784a59e4b9708500ad2baa4356210c17a68b304430622200b6a23d2"
+        }
+      }
+    ]
+  }
+}

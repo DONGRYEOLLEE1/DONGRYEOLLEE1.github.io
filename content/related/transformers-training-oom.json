@@ -1,0 +1,301 @@
+{
+  "version": 2,
+  "id": "transformers-training-oom",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "991bd632475d68534bdf0b1091fa7837f7309e2c7ab50caa09663cf12381a07f",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "gpu-memory",
+        "role": "applies",
+        "evidence": {
+          "articleId": "transformers-training-oom",
+          "blockId": "[\"error\",3]",
+          "anchor": "error",
+          "quote": "GPU allocated memory가 stable 하지 않고 지속적으로 증가하는 memory leakage problem",
+          "hash": "26c7eac5ed259a0dc838a8f227518e1c5fb58edc3d1074caa1ba865cdcb2352b"
+        }
+      },
+      {
+        "id": "finetuning",
+        "role": "applies",
+        "evidence": {
+          "articleId": "transformers-training-oom",
+          "blockId": "[\"error\",1]",
+          "anchor": "error",
+          "quote": "Trainer.train() fine-tuning 진행할때, 몇 스텝 못밟고 OOM error 발생하는 현상",
+          "hash": "6490ec2c4a346c010b0ebb1fadce25a9ed1710e031dbdf4620cf8e5dfe3739f2"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "d7b1d452f2df1f85f08cc16af994801254bfef4f2f28ff4ad399f6b93c334d63",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"error\",3]",
+          "[\"env\",1]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",2]",
+          "[\"env\",1]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"error\",3]",
+          "[\"env\",4]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"env\",4]",
+          "[\"source-code\",1]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",6]",
+          "[\"env\",4]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"에러\",4]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",3]",
+          "[\"env\",5]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"section-8\",1]",
+          "[\"4bit-quantization\",25]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",1]",
+          "[\"env\",5]"
+        ],
+        "targetBlocks": [
+          "[\"increasing-speed-a-llm-serving-inference\",8]",
+          "[\"2\",13]",
+          "[\"4bit-or-8bit-quantization\",10]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",3]",
+          "[\"solution\",1]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",2]",
+          "[\"해결\",6]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"env\",3]",
+          "[\"error\",1]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",3]",
+          "[\"error\",1]",
+          "[\"solution\",3]"
+        ]
+      },
+      {
+        "id": "ia3-implementation",
+        "sourceBlocks": [
+          "[\"error\",6]",
+          "[\"env\",4]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"ia3\",1]",
+          "[\"gpt-neox-example-of-training\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",1]",
+          "[\"env\",6]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"env\",3]",
+          "[\"3️⃣\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"env\",5]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"envs\",8]",
+          "[\"prob\",2]"
+        ]
+      },
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"error\",5]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"model-input-sequence-length\",1]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",3]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",3]",
+          "[\"env\",1]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error-2\",17]",
+          "[\"error\",5]",
+          "[\"env\",3]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",1]",
+          "[\"env\",5]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"qlora-finetuning\",3]",
+          "[\"background\",2]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",3]",
+          "[\"env\",1]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",2]",
+          "[\"원인\",2]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "peft-target-modules",
+        "sourceBlocks": [
+          "[\"env\",4]",
+          "[\"error\",6]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[null,3]",
+          "[null,6]",
+          "[null,1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "qlora",
+        "relation": "concept_explanation",
+        "reason": "Trainer.train()에서 OOM이 발생하는 상황과 QLoRA의 저메모리 파인튜닝 및 CPU 오프로딩 원리를 함께 살펴봅니다.",
+        "sourceEvidence": {
+          "articleId": "transformers-training-oom",
+          "blockId": "[\"error\",1]",
+          "anchor": "error",
+          "quote": "Trainer.train() fine-tuning 진행할때, 몇 스텝 못밟고 OOM error 발생하는 현상",
+          "hash": "6490ec2c4a346c010b0ebb1fadce25a9ed1710e031dbdf4620cf8e5dfe3739f2"
+        },
+        "targetEvidence": {
+          "articleId": "qlora",
+          "blockId": "[\"qlora-finetuning\",3]",
+          "anchor": "qlora-finetuning",
+          "quote": "Paged Optimizers offload-CPU 방식이랑 비슷한 메커니즘. Out-of-memory 에러를 방지하여 CPU RAM에 대신 적재시키는 방법.",
+          "hash": "fd9644f416f9d623a925f6622a3e79a734a8b017a0956824aa67db57713391db"
+        }
+      },
+      {
+        "id": "llama2-training-oom",
+        "relation": "related_method",
+        "reason": "Trainer로 파인튜닝 중 OOM이 발생한 사례와 학습 배치 크기·gradient accumulation 설정을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "transformers-training-oom",
+          "blockId": "[\"error\",3]",
+          "anchor": "error",
+          "quote": "GPU allocated memory가 stable 하지 않고 지속적으로 증가하는 memory leakage problem",
+          "hash": "26c7eac5ed259a0dc838a8f227518e1c5fb58edc3d1074caa1ba865cdcb2352b"
+        },
+        "targetEvidence": {
+          "articleId": "llama2-training-oom",
+          "blockId": "[\"source-code\",1]",
+          "anchor": "source-code",
+          "quote": "@dataclass class ScriptArgument: ## model argument model_name: Optional[str] = field(default = \"beomi/llama-2-ko-70b\", metadata = {\"help\" : \"the model name\"}) ## train arguments batch_size: Optional[int] = field(default = 2, metadata = {\"help\" : \"the batch size\"}) gradient_accumulation_steps: Optional[int] = field(default = 2, metadata = {\"help\" : \"the gradient accumulation steps\"}) num_train_epochs: Optional[int] = field(default = 1, metadata = {\"help\" : \"the number of",
+          "hash": "afecc7cd0846559cae6a7f3264f3ac7a79cb69dce81d993310e43747d70abafe"
+        }
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "relation": "related_method",
+        "reason": "GPU 메모리 누수 사례와 4bit quantization 학습 중 OOM이 보고된 사례를 나란히 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "transformers-training-oom",
+          "blockId": "[\"error\",3]",
+          "anchor": "error",
+          "quote": "GPU allocated memory가 stable 하지 않고 지속적으로 증가하는 memory leakage problem",
+          "hash": "26c7eac5ed259a0dc838a8f227518e1c5fb58edc3d1074caa1ba865cdcb2352b"
+        },
+        "targetEvidence": {
+          "articleId": "qlora-troubleshooting",
+          "blockId": "[\"4bit-quantization\",25]",
+          "anchor": "4bit-quantization",
+          "quote": "결과 : 🚫OOM",
+          "hash": "59c2f9e19eec29e0d44345183cf410e244898ce1f26098f15cbf0dab1509ea8b"
+        }
+      }
+    ]
+  }
+}

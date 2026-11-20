@@ -1,0 +1,347 @@
+{
+  "version": 2,
+  "id": "llama2-training-oom",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "56c7e20c7733c665ec851130b947643e5a3aa12b5cbfb5279c6b8ae1455f988a",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "gpu-memory",
+        "role": "about",
+        "evidence": {
+          "articleId": "llama2-training-oom",
+          "blockId": "[\"error\",1]",
+          "anchor": "error",
+          "quote": "transformer.Trainer로 fine-tuning 작업 진행 시, 몇개의 스텝만 진행되다가 OOM 발생",
+          "hash": "daaab9894e8211822b39db93c7d31a7f26dbd9e74686469e3d75616734b8e408"
+        }
+      },
+      {
+        "id": "peft",
+        "role": "applies",
+        "evidence": {
+          "articleId": "llama2-training-oom",
+          "blockId": "[\"source-code\",6]",
+          "anchor": "source-code",
+          "quote": "task_type = TaskType.CAUSAL_LM ) model = prepare_model_for_kbit_training(model) model = get_peft_model(model, config) model.is_parallelizable = True model.model_parallel = True trainer = Trainer( model = model, train_dataset = data['train'], # eval_dataset = val_data, args = TrainingArguments( per_device_train_batch_size = script_args.batch_size, gradient_accumulation_steps = script_args.gradient_accumulation_steps, learning_rate = script_args.learning_rate, num_train_epochs",
+          "hash": "ac0cd338905f55f04cbb72b1660e9ed8455588f4c8627944b2f76efb2159170c"
+        }
+      },
+      {
+        "id": "lora",
+        "role": "applies",
+        "evidence": {
+          "articleId": "llama2-training-oom",
+          "blockId": "[\"source-code\",5]",
+          "anchor": "source-code",
+          "quote": "script_args.model_name, torch_dtype = torch.float16, device_map = 'auto', trust_remote_code = True ) tokenizer = AutoTokenizer.from_pretrained(script_args.model_name) tokenizer.pad_token = tokenizer.eos_token tokenizer.pad_token_id = (0) # == unk_token_id (<unk>) config = LoraConfig( r = script_args.lora_r, lora_alpha = script_args.lora_alpha, lora_dropout = script_args.lora_dropout, target_modules = [\"q_proj\", \"v_proj\"], ## find_all_linear_names(model) bias = \"none\",",
+          "hash": "a5a710742d194e50e3bf6c72fdb3b628509f31831fb151945f53ad134539bac6"
+        }
+      },
+      {
+        "id": "quantization",
+        "role": "applies",
+        "evidence": {
+          "articleId": "llama2-training-oom",
+          "blockId": "[\"source-code\",4]",
+          "anchor": "source-code",
+          "quote": "{\"help\" : \"lora alpha\"}) lora_dropout: Optional[float] = field(default = 0.05, metadata = {\"help\" : \"lora dropout that is stastically not related the performance as an original paper\"}) script_args = ScriptArgument() if script_args.load_in_8bit: model = AutoModelForCausalLM.from_pretrained( script_args.model_name, torch_dtype = torch.float16, device_map = 'auto', load_in_8bit = True, trust_remote_code = True ) else: model = AutoModelForCausalLM.from_pretrained(",
+          "hash": "3af8adbcdc71f20ed4074538963f07136a6462659ab5c0475d896dd0bd0e4e4a"
+        }
+      }
+    ],
+    "review": [
+      {
+        "id": "gpu-memory",
+        "proposedRole": "about"
+      }
+    ]
+  },
+  "entry": {
+    "inputHash": "176a815efd71ffa7bbba344d4cff6d06ed1b4da96e907937572f415af4ce33e6",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"source-code\",4]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-quantization\",1]",
+          "[\"section-8\",1]",
+          "[\"해결\",1]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"env\",4]",
+          "[\"source-code\",1]"
+        ],
+        "targetBlocks": [
+          "[\"error\",3]",
+          "[\"env\",4]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[\"source-code\",4]",
+          "[\"source-code\",5]",
+          "[\"source-code\",6]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",12]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",9]",
+          "[\"env\",9]",
+          "[\"error\",2]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",9]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "loftq",
+        "sourceBlocks": [
+          "[\"source-code\",4]",
+          "[\"source-code\",5]",
+          "[\"error\",2]"
+        ],
+        "targetBlocks": [
+          "[\"loftq\",1]",
+          "[\"pruning-비교\",2]",
+          "[\"experiments\",17]"
+        ]
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"env\",8]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",2]",
+          "[\"env\",2]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"source-code\",4]",
+          "[\"source-code\",5]",
+          "[\"source-code\",6]"
+        ],
+        "targetBlocks": [
+          "[\"background\",1]",
+          "[\"background\",2]",
+          "[\"qlora-finetuning\",3]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"source-code\",5]",
+          "[\"source-code\",6]",
+          "[\"env\",9]"
+        ],
+        "targetBlocks": [
+          "[\"model\",3]",
+          "[\"envs\",1]",
+          "[\"dataset\",1]"
+        ]
+      },
+      {
+        "id": "training-arguments",
+        "sourceBlocks": [
+          "[\"source-code\",2]",
+          "[\"solution\",2]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"usage\",1]",
+          "[\"하이퍼파라미터\",5]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"error\",2]",
+          "[\"env\",9]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"source-code\",5]",
+          "[\"source-code\",6]",
+          "[\"solution\",3]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"deprecations\",1]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"solution\",3]",
+          "[\"error\",2]",
+          "[\"env\",9]"
+        ],
+        "targetBlocks": [
+          "[\"4bit-or-8bit-quantization\",6]",
+          "[\"increasing-speed-a-llm-serving-inference\",10]",
+          "[\"2\",13]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"source-code\",5]",
+          "[\"source-code\",6]",
+          "[\"env\",9]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"envs\",2]"
+        ]
+      },
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",2]",
+          "[\"env\",9]"
+        ],
+        "targetBlocks": [
+          "[\"env\",4]",
+          "[null,1]",
+          "[\"2️⃣\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"source-code\",4]",
+          "[\"solution\",3]",
+          "[\"env\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"solution-1\",1]",
+          "[\"error2\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "qlora",
+        "relation": "concept_explanation",
+        "reason": "8bit 모델 로딩과 k-bit 학습을 적용한 코드가 QLoRA의 양자화·저메모리 파인튜닝 원리와 OOM 방지용 Paged Optimizers를 설명합니다.",
+        "sourceEvidence": {
+          "articleId": "llama2-training-oom",
+          "blockId": "[\"source-code\",4]",
+          "anchor": "source-code",
+          "quote": "{\"help\" : \"lora alpha\"}) lora_dropout: Optional[float] = field(default = 0.05, metadata = {\"help\" : \"lora dropout that is stastically not related the performance as an original paper\"}) script_args = ScriptArgument() if script_args.load_in_8bit: model = AutoModelForCausalLM.from_pretrained( script_args.model_name, torch_dtype = torch.float16, device_map = 'auto', load_in_8bit = True, trust_remote_code = True ) else: model = AutoModelForCausalLM.from_pretrained(",
+          "hash": "3af8adbcdc71f20ed4074538963f07136a6462659ab5c0475d896dd0bd0e4e4a"
+        },
+        "targetEvidence": {
+          "articleId": "qlora",
+          "blockId": "[\"qlora-finetuning\",3]",
+          "anchor": "qlora-finetuning",
+          "quote": "Paged Optimizers offload-CPU 방식이랑 비슷한 메커니즘. Out-of-memory 에러를 방지하여 CPU RAM에 대신 적재시키는 방법.",
+          "hash": "fd9644f416f9d623a925f6622a3e79a734a8b017a0956824aa67db57713391db"
+        }
+      },
+      {
+        "id": "transformers-training-oom",
+        "relation": "related_method",
+        "reason": "둘 다 Transformers Trainer로 파인튜닝하다가 몇 스텝 후 OOM이 발생하는 문제를 다룹니다.",
+        "sourceEvidence": {
+          "articleId": "llama2-training-oom",
+          "blockId": "[\"error\",1]",
+          "anchor": "error",
+          "quote": "transformer.Trainer로 fine-tuning 작업 진행 시, 몇개의 스텝만 진행되다가 OOM 발생",
+          "hash": "daaab9894e8211822b39db93c7d31a7f26dbd9e74686469e3d75616734b8e408"
+        },
+        "targetEvidence": {
+          "articleId": "transformers-training-oom",
+          "blockId": "[\"error\",3]",
+          "anchor": "error",
+          "quote": "GPU allocated memory가 stable 하지 않고 지속적으로 증가하는 memory leakage problem",
+          "hash": "26c7eac5ed259a0dc838a8f227518e1c5fb58edc3d1074caa1ba865cdcb2352b"
+        }
+      },
+      {
+        "id": "training-arguments",
+        "relation": "related_method",
+        "reason": "OOM 해결책으로 logging_steps와 warmup_steps를 조정한 사례를 TrainingArguments의 설정 및 하이퍼파라미터 설명과 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "llama2-training-oom",
+          "blockId": "[\"solution\",2]",
+          "anchor": "solution",
+          "quote": "logging_steps, warmup_steps 하이퍼파라미터 적은 수로 변경",
+          "hash": "510042d7b89d2cc9c4300b3b2a1b6e7a7c6510560d46ca1a30c2295a55cdcdac"
+        },
+        "targetEvidence": {
+          "articleId": "training-arguments",
+          "blockId": "[\"하이퍼파라미터\",5]",
+          "anchor": "하이퍼파라미터",
+          "quote": "warmup_steps(int, 0) : 0부터 learning_rate 값까지의 linear warmup의 step number",
+          "hash": "f2ed2fee5fc1209dd9fcad47695e424a89f73ee334b38a786c8403a4fbdcd30d"
+        }
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "relation": "related_method",
+        "reason": "Trainer 학습 초기에 발생한 OOM과 QLoRA 학습 초기에 발생한 OOM의 대응 사례를 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "llama2-training-oom",
+          "blockId": "[\"error\",1]",
+          "anchor": "error",
+          "quote": "transformer.Trainer로 fine-tuning 작업 진행 시, 몇개의 스텝만 진행되다가 OOM 발생",
+          "hash": "daaab9894e8211822b39db93c7d31a7f26dbd9e74686469e3d75616734b8e408"
+        },
+        "targetEvidence": {
+          "articleId": "qlora-troubleshooting",
+          "blockId": "[\"section-8\",1]",
+          "anchor": "section-8",
+          "quote": "학습은 진행되나 초기 step(약 5-step) 진행시, OOM 메세지 출력",
+          "hash": "606aad8abe773e560c35f54d5b33b91afd9cfca5a94da9f6ded85060806deedd"
+        }
+      }
+    ]
+  }
+}

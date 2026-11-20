@@ -1,0 +1,320 @@
+{
+  "version": 2,
+  "id": "fast-r-cnn",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "15d7767f3e0219ecda4a8b699ef0f61b518fc9557a79f48db33afa1b13096e0c",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "object-detection",
+        "role": "about",
+        "evidence": {
+          "articleId": "fast-r-cnn",
+          "blockId": "[\"preview\",1]",
+          "anchor": "preview",
+          "quote": "R-CNN 모델은 2000장의 RP를 CNN 모델에 입력시켜 각각에 대하여 독립적으로 학습시켜 많은 시간이 소요된다. Fast R-CNN은 이러한 문제를 개선하여 단 1장의 이미지를 입력받으며, RP의 크기를 warp시킬 필요 없이 RoI(Region of Interest) pooling을 통해 고정된 크기의 feature vector를 fully connected layer(이하 fc layer)에 전달한다. 또한 multi-task loss를 사용하여 모델을 개별적으로 학습시킬 필요 없이 한 번에 학습시킨다. 이를 통해 학습 및 탐지 시간이 크게 감소하였다.",
+          "hash": "0540b668dfa6795df8932bc1a55e23a6d81e1cc94f2f390df5e5876dbb0ea14c"
+        }
+      },
+      {
+        "id": "cnn",
+        "role": "about",
+        "evidence": {
+          "articleId": "fast-r-cnn",
+          "blockId": "[\"abstract\",2]",
+          "anchor": "abstract",
+          "quote": "CNN 특징 추출부터 Classification, Bounding box Regressor까지 모두 하나의 모델에서 학습시키자",
+          "hash": "d5e7b2c93915507962466544d56e6ef61f90bd9aa2c0278c3f0168ca241b4618"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "2573e8235e600f8f6a81e92c95742bffffe142dbe86ef641b5ea22c49ba7c9af",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"abstract\",2]",
+          "[\"preview\",1]",
+          "[\"max-pooling-by-roi-pooling\",3]"
+        ],
+        "targetBlocks": [
+          "[\"preview\",3]",
+          "[\"preview\",4]",
+          "[\"7-max-pooling-by-roi-pooling\",4]"
+        ]
+      },
+      {
+        "id": "r-cnn",
+        "sourceBlocks": [
+          "[\"abstract\",2]",
+          "[\"preview\",1]",
+          "[\"rp-by-selective-search\",3]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"region-proposal-selective-search\",3]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"abstract\",2]",
+          "[\"preview\",1]",
+          "[\"1-roiregion-of-interest-pooling\",2]"
+        ],
+        "targetBlocks": [
+          "[\"backbone\",2]",
+          "[\"the-object-detection-task\",1]",
+          "[\"roi-pooling\",2]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"abstract\",2]",
+          "[\"preview\",1]",
+          "[\"bb-regressor를-통한-세세한-localization\",4]"
+        ],
+        "targetBlocks": [
+          "[\"overfeat-intuition\",2]",
+          "[\"overfeat-detection-network\",12]",
+          "[\"bb-regressor를-통해-추론\",1]"
+        ]
+      },
+      {
+        "id": "yolo-v1",
+        "sourceBlocks": [
+          "[\"abstract\",2]",
+          "[\"preview\",1]",
+          "[\"rough-요약\",1]"
+        ],
+        "targetBlocks": [
+          "[\"unified-detection\",1]",
+          "[\"network-design\",1]",
+          "[\"introduction\",2]"
+        ]
+      },
+      {
+        "id": "ohem",
+        "sourceBlocks": [
+          "[\"preview\",1]",
+          "[\"rough-요약\",1]",
+          "[\"abstract\",3]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",2]",
+          "[\"introduction\",3]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"initializing-pre-trained-network\",1]",
+          "[\"feature-vector-extraction-by-fc-layers\",3]",
+          "[\"abstract\",3]"
+        ],
+        "targetBlocks": [
+          "[\"vision-transformervit\",16]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"의의\",2]"
+        ]
+      },
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"abstract\",2]",
+          "[\"rough-요약\",1]",
+          "[\"3-계층적-샘플링-hierarchical-sampling\",1]"
+        ],
+        "targetBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"convnet-accuracy\",1]",
+          "[\"convnet-efficiency\",1]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"fast-r-cnn-의의\",2]",
+          "[\"rp-by-selective-search\",2]",
+          "[\"abstract\",3]"
+        ],
+        "targetBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"self-attention\",5]",
+          "[\"final-linear-and-softmax-layer\",3]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"abstract\",2]",
+          "[\"rough-요약\",1]",
+          "[\"fast-r-cnn-의의\",2]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",6]",
+          "[\"modernizing-a-convnet-a-roadmap\",1]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"abstract\",2]",
+          "[\"rough-요약\",1]",
+          "[\"fast-r-cnn-의의\",2]"
+        ],
+        "targetBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"introduction\",1]",
+          "[\"review-of-efficientnet\",1]"
+        ]
+      },
+      {
+        "id": "resnext",
+        "sourceBlocks": [
+          "[\"abstract\",2]",
+          "[\"rough-요약\",1]",
+          "[\"fast-r-cnn-의의\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"related-work\",2]",
+          "[\"template\",1]"
+        ]
+      },
+      {
+        "id": "map-evaluation",
+        "sourceBlocks": [
+          "[\"preview\",1]",
+          "[\"끝\",1]",
+          "[\"max-pooling-by-roi-pooling\",3]"
+        ],
+        "targetBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"interpolated-ap\",1]",
+          "[\"refernce\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"rough-요약\",1]",
+          "[\"abstract\",3]",
+          "[\"3-계층적-샘플링-hierarchical-sampling\",1]"
+        ],
+        "targetBlocks": [
+          "[null,2]",
+          "[\"image-classification-cv\",2]",
+          "[\"method-2-triplet-loss\",1]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"abstract\",3]",
+          "[\"rough-요약\",1]",
+          "[\"fast-r-cnn-의의\",2]"
+        ],
+        "targetBlocks": [
+          "[\"요약\",1]",
+          "[\"ouput\",2]",
+          "[\"bert\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "faster-r-cnn",
+        "relation": "related_method",
+        "reason": "Fast R-CNN의 RoI 기반 처리와 Faster R-CNN의 RPN이 RP를 전달하는 과정을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "fast-r-cnn",
+          "blockId": "[\"preview\",1]",
+          "anchor": "preview",
+          "quote": "R-CNN 모델은 2000장의 RP를 CNN 모델에 입력시켜 각각에 대하여 독립적으로 학습시켜 많은 시간이 소요된다. Fast R-CNN은 이러한 문제를 개선하여 단 1장의 이미지를 입력받으며, RP의 크기를 warp시킬 필요 없이 RoI(Region of Interest) pooling을 통해 고정된 크기의 feature vector를 fully connected layer(이하 fc layer)에 전달한다. 또한 multi-task loss를 사용하여 모델을 개별적으로 학습시킬 필요 없이 한 번에 학습시킨다. 이를 통해 학습 및 탐지 시간이 크게 감소하였다.",
+          "hash": "0540b668dfa6795df8932bc1a55e23a6d81e1cc94f2f390df5e5876dbb0ea14c"
+        },
+        "targetEvidence": {
+          "articleId": "faster-r-cnn",
+          "blockId": "[\"preview\",3]",
+          "anchor": "preview",
+          "quote": "RPN에서 RP를 추출하고 이를 Fast R-CNN 네트워크에 전달하여 객체의 class와 위치를 예측한다. 이를 통해 모델의 전체 과정이 GPU상에서 동작하여 bottleneck 현상이 발생하지 않으며, end-to-end로 네트워크를 학습시키는 것이 가능해진다.",
+          "hash": "acf2b3fbc6e03337fb83d165649805cf94494ee777cf43f24e6071865bac4678"
+        }
+      },
+      {
+        "id": "r-cnn",
+        "relation": "related_method",
+        "reason": "R-CNN이 RP별로 CNN 특징을 추출하는 방식과 Fast R-CNN이 이를 개선한 과정을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "fast-r-cnn",
+          "blockId": "[\"preview\",1]",
+          "anchor": "preview",
+          "quote": "R-CNN 모델은 2000장의 RP를 CNN 모델에 입력시켜 각각에 대하여 독립적으로 학습시켜 많은 시간이 소요된다. Fast R-CNN은 이러한 문제를 개선하여 단 1장의 이미지를 입력받으며, RP의 크기를 warp시킬 필요 없이 RoI(Region of Interest) pooling을 통해 고정된 크기의 feature vector를 fully connected layer(이하 fc layer)에 전달한다. 또한 multi-task loss를 사용하여 모델을 개별적으로 학습시킬 필요 없이 한 번에 학습시킨다. 이를 통해 학습 및 탐지 시간이 크게 감소하였다.",
+          "hash": "0540b668dfa6795df8932bc1a55e23a6d81e1cc94f2f390df5e5876dbb0ea14c"
+        },
+        "targetEvidence": {
+          "articleId": "r-cnn",
+          "blockId": "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "anchor": "feature-extraction-by-fine-tuned-alexnet",
+          "quote": "다음으로 2000개의 Region Proposal을 Fine Tune된 AlexNet에 입력해 2000(=Number of Region Proposal) x 4096(=Number of Feature Vector) 크기의 Feature vector를 추출한다. 논문의 저자는 Object Detection시, 특정 도메인에 맞는 class를 예측하기 위해서 기존의 ImageNet 데이터셋을 통해, 사전학습된 CNN모델을 도메인에 맞게 fine tune하는 방식을 제안한다. Fine tune된 모델을 사용하면 도메인에 맞게 보다 적합한 feature vector를 추출하는 것이 가능해진다.",
+          "hash": "18118d1c2c75e87b6fdfe76aa5ad1711500d35561a962f5e8a87f64fcb1ce677"
+        }
+      },
+      {
+        "id": "object-detection-basics",
+        "relation": "related_method",
+        "reason": "Fast R-CNN의 RoI pooling 처리와 객체 검출에서 특징 맵을 추출하는 과정을 연결해 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "fast-r-cnn",
+          "blockId": "[\"preview\",1]",
+          "anchor": "preview",
+          "quote": "R-CNN 모델은 2000장의 RP를 CNN 모델에 입력시켜 각각에 대하여 독립적으로 학습시켜 많은 시간이 소요된다. Fast R-CNN은 이러한 문제를 개선하여 단 1장의 이미지를 입력받으며, RP의 크기를 warp시킬 필요 없이 RoI(Region of Interest) pooling을 통해 고정된 크기의 feature vector를 fully connected layer(이하 fc layer)에 전달한다. 또한 multi-task loss를 사용하여 모델을 개별적으로 학습시킬 필요 없이 한 번에 학습시킨다. 이를 통해 학습 및 탐지 시간이 크게 감소하였다.",
+          "hash": "0540b668dfa6795df8932bc1a55e23a6d81e1cc94f2f390df5e5876dbb0ea14c"
+        },
+        "targetEvidence": {
+          "articleId": "object-detection-basics",
+          "blockId": "[\"roi-pooling\",2]",
+          "anchor": "roi-pooling",
+          "quote": "Fast R-CNN에서 먼저 입력 이미지는 CNN을 통과하여 Feature Map을 추출한다.",
+          "hash": "04c6704b7847d0c94ef11d8c3beeedb30fb9f9747e5c251bdb49efe8338b4cac"
+        }
+      },
+      {
+        "id": "yolo-v1",
+        "relation": "related_method",
+        "reason": "Fast R-CNN의 RP 기반 처리와 YOLO의 단일 신경망 기반 검출 방식을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "fast-r-cnn",
+          "blockId": "[\"preview\",1]",
+          "anchor": "preview",
+          "quote": "R-CNN 모델은 2000장의 RP를 CNN 모델에 입력시켜 각각에 대하여 독립적으로 학습시켜 많은 시간이 소요된다. Fast R-CNN은 이러한 문제를 개선하여 단 1장의 이미지를 입력받으며, RP의 크기를 warp시킬 필요 없이 RoI(Region of Interest) pooling을 통해 고정된 크기의 feature vector를 fully connected layer(이하 fc layer)에 전달한다. 또한 multi-task loss를 사용하여 모델을 개별적으로 학습시킬 필요 없이 한 번에 학습시킨다. 이를 통해 학습 및 탐지 시간이 크게 감소하였다.",
+          "hash": "0540b668dfa6795df8932bc1a55e23a6d81e1cc94f2f390df5e5876dbb0ea14c"
+        },
+        "targetEvidence": {
+          "articleId": "yolo-v1",
+          "blockId": "[\"unified-detection\",1]",
+          "anchor": "unified-detection",
+          "quote": "YOLO는 object detection의 개별요소를 single neural network로 통합한 모델이다. 각각의 bounding box를 예측하기 위해 이미지 전체의 특징을 활용한다. 이러한 YOLO의 디자인 덕분에 높은 정확성을 유지하면서 end-to-end 학습과 real-time object detection이 가능하다.",
+          "hash": "2f76cb73ddcd4a62802c6767af8d23743790d711debf235a3ab1196457b30497"
+        }
+      }
+    ]
+  }
+}

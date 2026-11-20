@@ -1,0 +1,282 @@
+{
+  "version": 2,
+  "id": "few-shot-nlp",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "885e5b5922c22d9cf6c3c25594f44f3df5215e4015c69a03f5bd636876902bf5",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "in-context-learning",
+        "role": "about",
+        "evidence": {
+          "articleId": "few-shot-nlp",
+          "blockId": "[\"concept\",1]",
+          "anchor": "concept",
+          "quote": "\"Human in the loop\"이 있다는 사실은 단순히 라벨이 지정되지 않은 데이터의 잠재적으로 큰 corpus가 있고 사용자가 각 class의 몇 가지 예에 label을 지정해야 한다는 사실을 의미한다.",
+          "hash": "4d74781bf0f61f8dc1979922cd895bcc360eb13c1c944b2bf8833cd6e9abf6ae"
+        }
+      },
+      {
+        "id": "data-preparation",
+        "role": "about",
+        "evidence": {
+          "articleId": "few-shot-nlp",
+          "blockId": "[\"concept\",1]",
+          "anchor": "concept",
+          "quote": "\"Human in the loop\"이 있다는 사실은 단순히 라벨이 지정되지 않은 데이터의 잠재적으로 큰 corpus가 있고 사용자가 각 class의 몇 가지 예에 label을 지정해야 한다는 사실을 의미한다.",
+          "hash": "4d74781bf0f61f8dc1979922cd895bcc360eb13c1c944b2bf8833cd6e9abf6ae"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "853277251cea9cc0afedc2db27c1df283cb512e00ff960da6c2044ddcd220fbc",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"concept\",1]",
+          "[\"문제-정의\",3]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[\"concept\",1]",
+          "[\"문제-정의\",3]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[null,5]",
+          "[\"when-some-annotated-data-is-available-1\",1]"
+        ]
+      },
+      {
+        "id": "gpt-3",
+        "sourceBlocks": [
+          "[\"concept\",1]",
+          "[\"문제-정의\",6]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[null,5]",
+          "[null,9]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[\"concept\",1]",
+          "[\"solution\",1]",
+          "[\"문제-정의\",6]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"discussion-and-limitations\",1]",
+          "[\"does-eda-conserve-true-lables\",1]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"concept\",1]",
+          "[\"solution\",1]",
+          "[\"문제-정의\",3]"
+        ],
+        "targetBlocks": [
+          "[\"the-data-factory\",1]",
+          "[\"introduction\",9]",
+          "[\"the-architecture-of-ziya2\",2]"
+        ]
+      },
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[\"concept\",1]",
+          "[\"문제-정의\",6]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"classification-with-options\",2]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"문제-정의\",3]",
+          "[\"concept\",2]"
+        ],
+        "targetBlocks": [
+          "[\"요약\",19]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"model\",1]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"concept\",1]",
+          "[\"solution\",1]",
+          "[\"문제-정의\",6]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-in-context-learning-icl\",1]",
+          "[\"introduction\",6]",
+          "[\"unlikelihood-training-and-length-normalization\",1]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"concept\",1]",
+          "[\"solution\",3]",
+          "[\"문제-정의\",6]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"symbolic-reasoning\",1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"solution\",3]",
+          "[\"문제-정의\",6]",
+          "[\"concept\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"results\",1]",
+          "[\"resilience-to-domain-shift\",2]"
+        ]
+      },
+      {
+        "id": "regex-preprocessing",
+        "sourceBlocks": [
+          "[\"concept\",1]",
+          "[\"solution\",1]",
+          "[\"문제-정의\",7]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"problem\",4]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"문제-정의\",3]",
+          "[\"concept\",1]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"the-object-detection-task\",4]",
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"rpns-loss\",2]"
+        ]
+      },
+      {
+        "id": "nlp-terms",
+        "sourceBlocks": [
+          "[\"concept\",4]",
+          "[\"문제-정의\",3]",
+          "[\"solution\",1]"
+        ],
+        "targetBlocks": [
+          "[\"nli---natural-language-inference\",2]",
+          "[\"task-on-benchmarks\",1]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"concept\",1]",
+          "[\"문제-정의\",7]",
+          "[\"solution\",5]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",10]",
+          "[\"prob\",1]",
+          "[\"envs\",4]"
+        ]
+      },
+      {
+        "id": "semantic-search",
+        "sourceBlocks": [
+          "[\"concept\",2]",
+          "[\"문제-정의\",6]",
+          "[\"solution\",5]"
+        ],
+        "targetBlocks": [
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"using-similarity-to-find-the-best-document\",5]",
+          "[\"what-is-not-semantic-search\",19]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "few-shot-learning",
+        "relation": "related_method",
+        "reason": "각 클래스의 소수 레이블 예시로 새 범주를 다루는 few-shot learning의 정의와 NLP에서의 맥락을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "few-shot-nlp",
+          "blockId": "[\"concept\",1]",
+          "anchor": "concept",
+          "quote": "\"Human in the loop\"이 있다는 사실은 단순히 라벨이 지정되지 않은 데이터의 잠재적으로 큰 corpus가 있고 사용자가 각 class의 몇 가지 예에 label을 지정해야 한다는 사실을 의미한다.",
+          "hash": "4d74781bf0f61f8dc1979922cd895bcc360eb13c1c944b2bf8833cd6e9abf6ae"
+        },
+        "targetEvidence": {
+          "articleId": "few-shot-learning",
+          "blockId": "[\"few-shot-learning이-뭘까\",1]",
+          "anchor": "few-shot-learning이-뭘까",
+          "quote": "Few-shot learning (FSL)은 각 class에 대해 오직 몇가지만 레이블된 샘플들을 사용한 데이터의 새로운 카테고리를 사전학습 모델에 이용가능하게 한 머신러닝 framework입니다. 이건 meta-learning의 패러다임에서 파생된 개념입니다.",
+          "hash": "ffa507f2e57a0525bec922e6b18c3e13b6c40db50d211bdfbbfbc141d9e8b4c2"
+        }
+      },
+      {
+        "id": "gpt-3",
+        "relation": "related_method",
+        "reason": "소수의 시범 예시를 언어모델 입력에 넣어 작업을 유도하는 in-context learning이 few-shot 예시와 어떻게 연결되는지 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "few-shot-nlp",
+          "blockId": "[\"concept\",1]",
+          "anchor": "concept",
+          "quote": "\"Human in the loop\"이 있다는 사실은 단순히 라벨이 지정되지 않은 데이터의 잠재적으로 큰 corpus가 있고 사용자가 각 class의 몇 가지 예에 label을 지정해야 한다는 사실을 의미한다.",
+          "hash": "4d74781bf0f61f8dc1979922cd895bcc360eb13c1c944b2bf8833cd6e9abf6ae"
+        },
+        "targetEvidence": {
+          "articleId": "gpt-3",
+          "blockId": "[null,5]",
+          "anchor": null,
+          "quote": "이런 문제를 해결하기 위한 잠재적인 루트는 바로 meta learning이다. 언어모델의 context딴에서 학습시간동안 패턴인지능력과 다양한 셋의 스킬을 개발하는 모델을 의미합니다. 그리고 그러고난 후에 inference 할때 이 능력을 원하는 작업에 빠르게 적응하거나 인식합니다 (위 이미지 참고). 최근연구를 통해 이걸 in-context learning이라고 부르기로 했고 task 특성의 특징에 맞게 사전학습된 언어모델의 텍스트 입력값으로 사용하는 것을 일컫습니다. 이 모델은 자연어 지시와 적은 demonstration에 영향을 받습니다. 그리고 다음에 올 단어를 간단하게 예측함으로써 추가적인 예시를 완벽하게 기대하게 만듭니다.",
+          "hash": "48fbd476c085ab36cb78e29fd9a76765d66c03ba983f0977be3cd1e10bb6c66a"
+        }
+      }
+    ]
+  }
+}

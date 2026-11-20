@@ -1,0 +1,271 @@
+{
+  "version": 2,
+  "id": "rnn",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "26442c55b22004e5c91fd315ece9deb866f54e11dd58452169021d28697dfd88",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "recurrent-networks",
+        "role": "about",
+        "evidence": {
+          "articleId": "rnn",
+          "blockId": "[\"abstract\",5]",
+          "anchor": "abstract",
+          "quote": "Hidden layer의 메모리셀은 각각의 시점(Time-step)에서 바로 이전 시점에서의 은닉층의 메모리 셀에서 나온 값을 자신의 입력으로 사용하는 재귀적(Recursive)활동을 하고 있습니다. 즉, 현재 시점 $t$ 에서의 메모리셀이 갖고있는 과거의 메모리 셀들의 값에 영향을 받은 것입니다.",
+          "hash": "b67bb60d56c5544217ba49e4e9aea4f116e81108193dafcd5495262d52763502"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "75f4c23fe340fc0ea00c2cc63bca8ad56e4ebf4337ee8a9c3faa315a114fe4de",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "lstm",
+        "sourceBlocks": [
+          "[\"abstract\",5]",
+          "[\"truncated-bptt\",1]",
+          "[\"gradient-vanishing\",2]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",3]",
+          "[\"bptt를-보완한-truncated-bptt\",1]",
+          "[\"lstm에-relu함수가-잘-어울릴-수-있다\",10]"
+        ]
+      },
+      {
+        "id": "elmo",
+        "sourceBlocks": [
+          "[\"abstract\",5]",
+          "[\"irnn\",5]",
+          "[\"구조\",11]"
+        ],
+        "targetBlocks": [
+          "[\"elmo\",1]",
+          "[\"mechanism\",3]",
+          "[\"특징\",3]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"gradient-vanishing\",4]",
+          "[\"abstract\",1]",
+          "[\"relu함수를-사용하지-않는-이유\",5]"
+        ],
+        "targetBlocks": [
+          "[\"self-attention-1\",26]",
+          "[\"positional-encoding\",1]",
+          "[\"position-wise-ffn\",2]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"abstract\",10]",
+          "[\"구조\",6]",
+          "[\"relu함수를-사용하지-않는-이유\",5]"
+        ],
+        "targetBlocks": [
+          "[\"receptive-field수용층\",4]",
+          "[\"문제점---convnet의-input-사이즈-제약\",3]",
+          "[\"overfeat-intuition\",4]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"relu함수를-사용하지-않는-이유\",1]",
+          "[\"abstract\",1]",
+          "[\"irnn\",3]"
+        ],
+        "targetBlocks": [
+          "[\"micro-design\",1]",
+          "[\"instruction\",1]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"abstract\",9]",
+          "[\"구조\",8]",
+          "[\"long-term-dependency\",1]"
+        ],
+        "targetBlocks": [
+          "[\"siamese-network-샴-네트워크\",1]",
+          "[\"few-shot-learning이-뭘까\",4]",
+          "[null,5]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"구조\",6]",
+          "[\"irnn\",12]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",3]",
+          "[\"2-rpnregion-proposal-network\",5]",
+          "[\"preview\",1]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"gradient-vanishing\",4]",
+          "[\"irnn\",12]",
+          "[\"요-약\",3]"
+        ],
+        "targetBlocks": [
+          "[\"gradient-analysis-of-dora\",1]",
+          "[\"robustness-of-dora-towards-different-rank-settings\",5]",
+          "[\"weight-decomposition-analysis\",2]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"relu함수를-사용하지-않는-이유\",6]",
+          "[\"gradient-vanishing\",4]",
+          "[\"irnn\",3]"
+        ],
+        "targetBlocks": [
+          "[\"answer\",8]",
+          "[\"curiosity\",1]",
+          "[\"case-1\",1]"
+        ]
+      },
+      {
+        "id": "fast-r-cnn",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"truncated-bptt\",1]",
+          "[\"cw-rnn-clockwork-rnn\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",3]",
+          "[\"rough-요약\",1]",
+          "[\"feature-vector-extraction-by-fc-layers\",1]"
+        ]
+      },
+      {
+        "id": "yolo-v1",
+        "sourceBlocks": [
+          "[\"relu함수를-사용하지-않는-이유\",5]",
+          "[\"구조\",9]",
+          "[\"abstract\",1]"
+        ],
+        "targetBlocks": [
+          "[\"training\",5]",
+          "[\"network-design\",8]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "r-cnn",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"구조\",6]",
+          "[\"요-약\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",2]",
+          "[\"요약\",7]",
+          "[\"단점\",4]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"relu함수를-사용하지-않는-이유\",1]",
+          "[\"irnn\",12]",
+          "[\"abstract\",1]"
+        ],
+        "targetBlocks": [
+          "[\"architecture\",2]",
+          "[\"evolution-of-performance-during-training\",2]",
+          "[\"related-work\",1]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"abstract\",10]",
+          "[\"truncated-bptt\",1]",
+          "[\"요-약\",1]"
+        ],
+        "targetBlocks": [
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"rpns-loss\",3]",
+          "[\"end-to-end\",2]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"irnn\",2]",
+          "[\"gradient-vanishing\",4]",
+          "[\"요-약\",2]"
+        ],
+        "targetBlocks": [
+          "[\"low-rank-parameterized-update-matrices\",3]",
+          "[\"introduction\",6]",
+          "[\"empirical-experiments\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "lstm",
+        "relation": "related_method",
+        "reason": "RNN의 재귀적 메모리 전달과 장기 의존성 문제를 살펴보고, LSTM의 네 구조가 이를 어떻게 다루는지 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "rnn",
+          "blockId": "[\"abstract\",5]",
+          "anchor": "abstract",
+          "quote": "Hidden layer의 메모리셀은 각각의 시점(Time-step)에서 바로 이전 시점에서의 은닉층의 메모리 셀에서 나온 값을 자신의 입력으로 사용하는 재귀적(Recursive)활동을 하고 있습니다. 즉, 현재 시점 $t$ 에서의 메모리셀이 갖고있는 과거의 메모리 셀들의 값에 영향을 받은 것입니다.",
+          "hash": "b67bb60d56c5544217ba49e4e9aea4f116e81108193dafcd5495262d52763502"
+        },
+        "targetEvidence": {
+          "articleId": "lstm",
+          "blockId": "[\"abstract\",3]",
+          "anchor": "abstract",
+          "quote": "RNN은 한 개의 tanh레이어를 가지는 매우 간결한 구조. LSTM은 또한 RNN과 같은 chain 구조를 가지긴 하지만, 단일구조 대신에 매우 특별하게 상호작용하는 **4개의 구조**를 가진다",
+          "hash": "69cd541f916150c132a1b504c0258f66d1ba0308bfb5d03b8894bacff5161701"
+        }
+      },
+      {
+        "id": "elmo",
+        "relation": "related_method",
+        "reason": "RNN의 시점별 은닉 상태 개념을 바탕으로, ELMo가 여러 층의 BiLSTM 은닉 상태를 조합해 단어 표현을 만드는 방식을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "rnn",
+          "blockId": "[\"abstract\",5]",
+          "anchor": "abstract",
+          "quote": "Hidden layer의 메모리셀은 각각의 시점(Time-step)에서 바로 이전 시점에서의 은닉층의 메모리 셀에서 나온 값을 자신의 입력으로 사용하는 재귀적(Recursive)활동을 하고 있습니다. 즉, 현재 시점 $t$ 에서의 메모리셀이 갖고있는 과거의 메모리 셀들의 값에 영향을 받은 것입니다.",
+          "hash": "b67bb60d56c5544217ba49e4e9aea4f116e81108193dafcd5495262d52763502"
+        },
+        "targetEvidence": {
+          "articleId": "elmo",
+          "blockId": "[\"elmo\",1]",
+          "anchor": "elmo",
+          "quote": "기존 word2vec, Glove 등에 비해 context 정보를 반영하는 Pre-training 방법을 제시합니다. 여러층의 BiLSTM을 이용해 Language Model을 하며, 만들어진 hidden-state를 적절하게 조합해 새로운 word representation을 만들어냅니다.",
+          "hash": "0536e6bb9b159cb5b8c31469299a3fb57f0c2d5b648124df1af19c123e28974b"
+        }
+      }
+    ]
+  }
+}

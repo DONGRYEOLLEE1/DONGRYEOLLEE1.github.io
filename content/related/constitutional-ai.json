@@ -1,0 +1,263 @@
+{
+  "version": 2,
+  "id": "constitutional-ai",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "16b3c70af3b4c6ef1191faceccd91031a98d1feb04263cc804713468dd2fdb95",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "model-alignment",
+        "role": "about",
+        "evidence": {
+          "articleId": "constitutional-ai",
+          "blockId": "[\"정리\",1]",
+          "anchor": "정리",
+          "quote": "Constitutional AI는 (1) 인간 harmlessness 라벨 없이 자연어 원칙(constitution)만으로 감독을 압축하고, (2) self-critique·revision으로 SL 데이터를 합성하며, (3) AI가 만든 선호 라벨로 RLAIF를 돌려, harmless하면서도 회피하지 않는 assistant를 RLHF에 필적·상회하는 수준으로 학습함. 인간 감독을 \"수만 개의 라벨\"에서 \"몇 개의 원칙\"으로 옮긴 scalable oversight의 대표 사례이며, 이후 RLAIF·self-improvement 계열 연구의 토대가 됨.",
+          "hash": "086c6115a2523cb2c72501f6b1470ad1f6b8ab1b1136335fd601a8c5252ae97d"
+        }
+      },
+      {
+        "id": "reinforcement-learning",
+        "role": "about",
+        "evidence": {
+          "articleId": "constitutional-ai",
+          "blockId": "[\"rl-stage-rlaif\",1]",
+          "anchor": "rl-stage-rlaif",
+          "quote": "RL 단계의 골자는 RLHF의 인간 선호 라벨을 AI 선호 라벨로 대체하는 것. SL-CAI 모델로 각 프롬프트에 응답을 2개 생성한 뒤, feedback 모델에게 constitution 원칙과 함께 \"둘 중 어느 쪽이 덜 해로운가?\"를 객관식으로 물음. 그 답의 로그확률을 정규화해 soft preference label을 만들고, 이 AI harmlessness 라벨을 기존 인간 helpfulness 라벨과 섞어 hybrid PM을 학습함. 마지막으로 그 PM을 보상으로 SL-CAI를 강화학습하면 RL-CAI 모델이 됨. constitution은 모델 행동을 규율하는 자연어 원칙 집합(논문은 16개)으로, SL에선 루프마다·RL에선 비교마다 무작위로 샘플링해 다양성과 robustness를 높임.",
+          "hash": "e0585ad836dfba48ce5e7ee8c44ebf9fe5108cd9211334dabacc8c19330d39ff"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "8f41713c331d13a4422edac554ac531f0bd5b7b4d28ee1df392b0c3bf7ff572b",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "chat-vector",
+        "sourceBlocks": [
+          "[\"정리\",1]",
+          "[\"method\",1]",
+          "[\"introduction\",2]"
+        ],
+        "targetBlocks": [
+          "[\"chat-vector\",3]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"method\",1]",
+          "[\"supervised-stage-critique--revision\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"results\",1]",
+          "[\"ablation-study\",1]"
+        ]
+      },
+      {
+        "id": "alphallm",
+        "sourceBlocks": [
+          "[\"rl-stage-rlaif\",1]",
+          "[\"introduction\",5]",
+          "[\"method\",1]"
+        ],
+        "targetBlocks": [
+          "[\"related-work\",3]",
+          "[\"introduction\",1]",
+          "[\"problem-formulation\",1]"
+        ]
+      },
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[\"정리\",1]",
+          "[\"introduction\",2]",
+          "[\"preliminary--related-work\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"scaling-laws\",2]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]"
+        ]
+      },
+      {
+        "id": "dflash",
+        "sourceBlocks": [
+          "[\"rl-stage-rlaif\",3]",
+          "[\"introduction\",3]",
+          "[\"supervised-stage-critique--revision\",2]"
+        ],
+        "targetBlocks": [
+          "[\"main-results-qwen3-thinking-off\",9]",
+          "[\"introduction\",6]",
+          "[\"preliminary\",7]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"introduction\",7]",
+          "[\"rl-stage-rlaif\",2]",
+          "[\"experiments\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"conclusions\",1]"
+        ]
+      },
+      {
+        "id": "speculative-decoding-paper",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"정리\",1]",
+          "[\"preliminary--related-work\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",8]",
+          "[null,2]",
+          "[\"speculative-sampling\",1]"
+        ]
+      },
+      {
+        "id": "thinkingcap",
+        "sourceBlocks": [
+          "[\"rl-stage-rlaif\",1]",
+          "[\"supervised-stage-critique--revision\",2]",
+          "[\"experiments\",2]"
+        ],
+        "targetBlocks": [
+          "[\"conclusion\",1]",
+          "[\"tldr\",15]",
+          "[\"stop\",1]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"method\",1]",
+          "[\"정리\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",9]",
+          "[\"baselines\",2]",
+          "[\"the-data-factory\",1]"
+        ]
+      },
+      {
+        "id": "kodistill",
+        "sourceBlocks": [
+          "[\"rl-stage-rlaif\",1]",
+          "[\"supervised-stage-critique--revision\",2]",
+          "[\"method\",1]"
+        ],
+        "targetBlocks": [
+          "[\"3-continue-with-sft-and-verifiable-grpo\",10]",
+          "[\"final-results\",11]",
+          "[\"what-the-training-curves-say\",1]"
+        ]
+      },
+      {
+        "id": "searchswarm",
+        "sourceBlocks": [
+          "[\"method\",1]",
+          "[\"정리\",1]",
+          "[\"supervised-stage-critique--revision\",1]"
+        ],
+        "targetBlocks": [
+          "[\"supervised-fine-tuning\",2]",
+          "[\"정리\",1]",
+          "[\"introduction\",3]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"정리\",1]",
+          "[\"preliminary--related-work\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"related-work\",1]",
+          "[\"evolution-of-performance-during-training\",2]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"정리\",1]",
+          "[\"method\",1]"
+        ],
+        "targetBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"요약\",14]",
+          "[\"vision-transformervit\",2]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"introduction\",2]",
+          "[\"method\",1]",
+          "[\"정리\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",6]",
+          "[\"peft-with-ia3\",14]",
+          "[\"model-and-datasets\",4]"
+        ]
+      },
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[\"method\",1]",
+          "[\"introduction\",2]",
+          "[\"rl-stage-rlaif\",2]"
+        ],
+        "targetBlocks": [
+          "[\"when-some-annotated-data-is-available-1\",2]",
+          "[\"classification-as-nli\",7]",
+          "[null,5]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "chain-of-thought",
+        "relation": "related_method",
+        "reason": "AI 피드백 판단에 CoT를 적용하는 방식과 복잡한 추론을 중간 단계로 나누는 CoT prompting을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "constitutional-ai",
+          "blockId": "[\"rl-stage-rlaif\",2]",
+          "anchor": "rl-stage-rlaif",
+          "quote": "여기에 **chain-of-thought(CoT)**를 더함. feedback 모델이 객관식 답을 고르기 전 \"단계적으로 생각해 보자\"며 추론을 쓰게 하면 판단 정확도와 투명성이 함께 올라감. (CoT가 확률을 0이나 1로 극단화하는 문제는 40~60%로 clamp해 완화)",
+          "hash": "7d4bd0bfa2d39eec80184aa7f140ff7ca98cd26879052885242135bdd9ca8f64"
+        },
+        "targetEvidence": {
+          "articleId": "chain-of-thought",
+          "blockId": "[\"chain-of-thought-prompting\",1]",
+          "anchor": "chain-of-thought-prompting",
+          "quote": "여러 단계를 거쳐야하는 수학 문제와 같은 복잡한 추론을 통해 문제를 푸는 절차를 연구진은 고려하였음. 이건 전형적인 문제를 하나하나 분해하여 정답에 접근하는 방식임. 이 논문의 목표는 LLM에 유사한 CoT를 생성할 수 있는 기능을 부여하는 것입니다. 일관된 일련의 중간 추론 단계를 생성할 수 있는 능력을 LLM에 부여하는 것입니다.",
+          "hash": "82ac1138b000944e339224661220eee68aa8b30584e7b60c99240027c33e995e"
+        }
+      }
+    ]
+  }
+}

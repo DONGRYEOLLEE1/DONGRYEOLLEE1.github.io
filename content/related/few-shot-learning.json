@@ -1,0 +1,309 @@
+{
+  "version": 2,
+  "id": "few-shot-learning",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "9809e83af1445011266e83a1efa29fa5a27f5fdaa2fd63dd5c0106c65649f80f",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "in-context-learning",
+        "role": "about",
+        "evidence": {
+          "articleId": "few-shot-learning",
+          "blockId": "[\"few-shot-learning이-뭘까\",1]",
+          "anchor": "few-shot-learning이-뭘까",
+          "quote": "Few-shot learning (FSL)은 각 class에 대해 오직 몇가지만 레이블된 샘플들을 사용한 데이터의 새로운 카테고리를 사전학습 모델에 이용가능하게 한 머신러닝 framework입니다. 이건 meta-learning의 패러다임에서 파생된 개념입니다.",
+          "hash": "ffa507f2e57a0525bec922e6b18c3e13b6c40db50d211bdfbbfbc141d9e8b4c2"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "3608140b1ab504f3854499374d48d2abcb9eb402af8833660aa77743a674a03e",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "gpt-3",
+        "sourceBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[null,5]",
+          "[null,8]",
+          "[null,9]"
+        ]
+      },
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[null,1]",
+          "[\"nlp\",1]"
+        ],
+        "targetBlocks": [
+          "[\"what-is-zero-shot-learning\",1]",
+          "[null,1]",
+          "[\"when-some-annotated-data-is-available\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",1]",
+          "[\"문제-정의\",3]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]",
+          "[null,2]"
+        ],
+        "targetBlocks": [
+          "[\"few-shot-in-context-learning-icl\",1]",
+          "[\"introduction\",6]",
+          "[\"unlikelihood-training-and-length-normalization\",1]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[null,2]",
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",9]",
+          "[\"data-efficiency\",2]",
+          "[\"the-data-factory\",1]"
+        ]
+      },
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]",
+          "[\"왜-fsl-일까\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "[\"evaluation-splits\",1]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[null,2]",
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"image-classification-cv\",2]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",1]",
+          "[\"modernizing-a-convnet-a-roadmap\",1]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]",
+          "[\"왜-fsl-일까\",5]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"chain-of-thought-prompting\",5]",
+          "[\"commonsense-reasoning\",1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"nlp\",1]",
+          "[\"왜-fsl-일까\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"resilience-to-domain-shift\",2]",
+          "[\"interpretability\",1]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[null,2]",
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[\"image-classification-cv\",2]"
+        ],
+        "targetBlocks": [
+          "[\"learning\",1]",
+          "[\"overfeat-detection-network\",12]",
+          "[\"overfeat-intuition\",4]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"method-2-triplet-loss\",1]",
+          "[null,2]",
+          "[\"few-shot-learning은-어떻게-작동할까\",1]"
+        ],
+        "targetBlocks": [
+          "[\"rpns-loss\",3]",
+          "[\"rpnregions-proposal-network\",2]",
+          "[\"the-object-detection-task\",4]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"few-shot-learning이-뭘까\",1]",
+          "[null,2]",
+          "[\"nlp\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"background\",2]",
+          "[\"qlora-vs-standard-finetuning\",4]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"method-2-triplet-loss\",1]",
+          "[null,2]",
+          "[\"method-1-pairwise-similarity\",1]"
+        ],
+        "targetBlocks": [
+          "[\"5-anchor의-target-layer로부터-rpn을-학습하는-동안-anchor를-선택\",3]",
+          "[\"alternating-training\",1]",
+          "[\"의의\",2]"
+        ]
+      },
+      {
+        "id": "semantic-search",
+        "sourceBlocks": [
+          "[\"few-shot-learning은-어떻게-작동할까\",2]",
+          "[\"method-1-pairwise-similarity\",2]",
+          "[\"few-shot-learning이-뭘까\",1]"
+        ],
+        "targetBlocks": [
+          "[\"using-similarity-to-find-the-best-document\",4]",
+          "[\"how-to-search-using-text-embedding\",1]",
+          "[\"what-is-not-semantic-search\",20]"
+        ]
+      },
+      {
+        "id": "rnn",
+        "sourceBlocks": [
+          "[\"siamese-network-샴-네트워크\",1]",
+          "[\"few-shot-learning이-뭘까\",4]",
+          "[null,5]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",9]",
+          "[\"구조\",8]",
+          "[\"long-term-dependency\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "gpt-3",
+        "relation": "related_method",
+        "reason": "Few-shot learning은 제한된 레이블 예시를 활용하고, in-context learning은 적은 demonstration으로 작업에 적응하는 방식을 설명합니다.",
+        "sourceEvidence": {
+          "articleId": "few-shot-learning",
+          "blockId": "[\"few-shot-learning이-뭘까\",1]",
+          "anchor": "few-shot-learning이-뭘까",
+          "quote": "Few-shot learning (FSL)은 각 class에 대해 오직 몇가지만 레이블된 샘플들을 사용한 데이터의 새로운 카테고리를 사전학습 모델에 이용가능하게 한 머신러닝 framework입니다. 이건 meta-learning의 패러다임에서 파생된 개념입니다.",
+          "hash": "ffa507f2e57a0525bec922e6b18c3e13b6c40db50d211bdfbbfbc141d9e8b4c2"
+        },
+        "targetEvidence": {
+          "articleId": "gpt-3",
+          "blockId": "[null,5]",
+          "anchor": null,
+          "quote": "이런 문제를 해결하기 위한 잠재적인 루트는 바로 meta learning이다. 언어모델의 context딴에서 학습시간동안 패턴인지능력과 다양한 셋의 스킬을 개발하는 모델을 의미합니다. 그리고 그러고난 후에 inference 할때 이 능력을 원하는 작업에 빠르게 적응하거나 인식합니다 (위 이미지 참고). 최근연구를 통해 이걸 in-context learning이라고 부르기로 했고 task 특성의 특징에 맞게 사전학습된 언어모델의 텍스트 입력값으로 사용하는 것을 일컫습니다. 이 모델은 자연어 지시와 적은 demonstration에 영향을 받습니다. 그리고 다음에 올 단어를 간단하게 예측함으로써 추가적인 예시를 완벽하게 기대하게 만듭니다.",
+          "hash": "48fbd476c085ab36cb78e29fd9a76765d66c03ba983f0977be3cd1e10bb6c66a"
+        }
+      },
+      {
+        "id": "ia3-paper",
+        "relation": "related_method",
+        "reason": "Few-shot learning의 적은 예시 활용과 ICL의 프롬프트 예시 활용을 비교하며, ICL이 파인튜닝 없이 여러 작업에 적용되는 점을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "few-shot-learning",
+          "blockId": "[\"few-shot-learning이-뭘까\",1]",
+          "anchor": "few-shot-learning이-뭘까",
+          "quote": "Few-shot learning (FSL)은 각 class에 대해 오직 몇가지만 레이블된 샘플들을 사용한 데이터의 새로운 카테고리를 사전학습 모델에 이용가능하게 한 머신러닝 framework입니다. 이건 meta-learning의 패러다임에서 파생된 개념입니다.",
+          "hash": "ffa507f2e57a0525bec922e6b18c3e13b6c40db50d211bdfbbfbc141d9e8b4c2"
+        },
+        "targetEvidence": {
+          "articleId": "ia3-paper",
+          "blockId": "[\"few-shot-in-context-learning-icl\",1]",
+          "anchor": "few-shot-in-context-learning-icl",
+          "quote": "ICL은 레이블이 지정되지 않은 쿼리 예제와 함께 연결되고 프롬프트가 표시된 입력 대상 예제(\"샷\"이라고 함)를 레이블이 지정되지 않은 쿼리 예제와 함께 제공함으로써 모델을 유도하는 것을 목표로 합니다. ICL의 이점은 파인튜닝 없이 즉시 많은 task에 단일의 모델을 적용할 수 있는 점입니다. 이는 또한 mixed-task batches를 가능하게 만들어주며 데이터 배치의 여러 예시가 서로 다른 컨텍스트를 사용하여 서로 다른 작업에 해당하는 작업도 가능합니다.",
+          "hash": "5b1f5fc385ccf87fe5e4f88f5564e1e085e3976e8e120a70e87fd851b2644a26"
+        }
+      },
+      {
+        "id": "few-shot-nlp",
+        "relation": "related_method",
+        "reason": "Few-shot learning의 정의와 사람의 몇 가지 레이블 예시로 학습하는 NLP 맥락을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "few-shot-learning",
+          "blockId": "[\"few-shot-learning이-뭘까\",1]",
+          "anchor": "few-shot-learning이-뭘까",
+          "quote": "Few-shot learning (FSL)은 각 class에 대해 오직 몇가지만 레이블된 샘플들을 사용한 데이터의 새로운 카테고리를 사전학습 모델에 이용가능하게 한 머신러닝 framework입니다. 이건 meta-learning의 패러다임에서 파생된 개념입니다.",
+          "hash": "ffa507f2e57a0525bec922e6b18c3e13b6c40db50d211bdfbbfbc141d9e8b4c2"
+        },
+        "targetEvidence": {
+          "articleId": "few-shot-nlp",
+          "blockId": "[\"concept\",1]",
+          "anchor": "concept",
+          "quote": "\"Human in the loop\"이 있다는 사실은 단순히 라벨이 지정되지 않은 데이터의 잠재적으로 큰 corpus가 있고 사용자가 각 class의 몇 가지 예에 label을 지정해야 한다는 사실을 의미한다.",
+          "hash": "4d74781bf0f61f8dc1979922cd895bcc360eb13c1c944b2bf8833cd6e9abf6ae"
+        }
+      },
+      {
+        "id": "chain-of-thought",
+        "relation": "related_method",
+        "reason": "Few-shot learning이 적은 예시로 학습하는 방식임을 바탕으로, prompting을 통한 in-context FSL과 CoT의 적용 과제를 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "few-shot-learning",
+          "blockId": "[\"few-shot-learning이-뭘까\",1]",
+          "anchor": "few-shot-learning이-뭘까",
+          "quote": "Few-shot learning (FSL)은 각 class에 대해 오직 몇가지만 레이블된 샘플들을 사용한 데이터의 새로운 카테고리를 사전학습 모델에 이용가능하게 한 머신러닝 framework입니다. 이건 meta-learning의 패러다임에서 파생된 개념입니다.",
+          "hash": "ffa507f2e57a0525bec922e6b18c3e13b6c40db50d211bdfbbfbc141d9e8b4c2"
+        },
+        "targetEvidence": {
+          "articleId": "chain-of-thought",
+          "blockId": "[\"introduction\",3]",
+          "anchor": "introduction",
+          "quote": "LLM은 prompting을 통해 in-context FSL의 흥미로운 전망을 제공한다. 매 다른 task를 위한 model checkpoint (FT) 대신에 단조로운 prompt를 모델에 질의할 수 있음. 놀랍게도 단순한 QA task에서 성공적적인 실험을 거뒀음.",
+          "hash": "0779db3ba324e49d34539e6cd03c91f7c4639cb22cc4b1332de76f04dceafa12"
+        }
+      }
+    ]
+  }
+}

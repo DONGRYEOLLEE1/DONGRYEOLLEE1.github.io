@@ -1,0 +1,298 @@
+{
+  "version": 2,
+  "id": "peft-features-090",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "65a470bf0032a7a7ac338e6d255d269d3a1a8c5069a833f46b8c215857ac5fd7",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "peft",
+        "role": "about",
+        "evidence": {
+          "articleId": "peft-features-090",
+          "blockId": "[\"peft-v090\",1]",
+          "anchor": "peft-v090",
+          "quote": "v0.9.0: Merging LoRA weights, new quantization options, DoRA support, and more",
+          "hash": "6d3efcdcffdcb650eef01f5700f6e53e4a616b1a90a1a1fa5ca4c3f5ec325ef8"
+        }
+      },
+      {
+        "id": "lora",
+        "role": "about",
+        "evidence": {
+          "articleId": "peft-features-090",
+          "blockId": "[\"dora-support\",1]",
+          "anchor": "dora-support",
+          "quote": "We now support Weight-Decomposed Low-Rank Adaptation aka DoRA via #1474. This new method is builds on top of LoRA and has shown very promising results. Especially at lower ranks (e.g. r=8), it should perform much better than LoRA. Right now, only non-quantized nn.Linear layers are supported. If you'd like to give it a try, just pass use_dora=True to your LoraConfig and you're good to go.",
+          "hash": "cf37b6b7a0920f456cf1aef6310a11e7c2b4153d1c6f91a7a2c425de48e6dcb3"
+        }
+      },
+      {
+        "id": "quantization",
+        "role": "applies",
+        "evidence": {
+          "articleId": "peft-features-090",
+          "blockId": "[\"merging-lora-weights\",12]",
+          "anchor": "merging-lora-weights",
+          "quote": "# peft/examples/multi_adapter_examples/Lora_Merging.ipynb peft_model_id = \"smangrul/tinyllama_lora_norobots\" onfig = PeftConfig.from_pretrained(peft_model_id) model = AutoModelForCausalLM.from_pretrained(config.base_model_name_or_path, load_in_4bit=True, device_map=\"auto\") tokenizer = AutoTokenizer.from_pretrained(peft_model_id) model.resize_token_embeddings(len(tokenizer)) model = PeftModel.from_pretrained(model, peft_model_id, adapter_name=\"norobots\") _ =",
+          "hash": "73996ebd66f981ef2829fe124916d6ba41ea6dc2095968e9be22c8b6a3f5c863"
+        }
+      }
+    ],
+    "review": [
+      {
+        "id": "quantization",
+        "proposedRole": "applies"
+      }
+    ]
+  },
+  "entry": {
+    "inputHash": "f8836da978cb7bc659a755c3e55cdaeeb6540c511981bf94e93f33758092fb9c",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "loftq",
+        "sourceBlocks": [
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",12]",
+          "[\"peft-v090\",1]"
+        ],
+        "targetBlocks": [
+          "[\"loftq\",1]",
+          "[\"glue-with-4-bit\",1]",
+          "[\"experiments\",9]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",12]"
+        ],
+        "targetBlocks": [
+          "[\"background\",1]",
+          "[\"background\",2]",
+          "[\"qlora-vs-standard-finetuning\",4]"
+        ]
+      },
+      {
+        "id": "tgi-implementation",
+        "sourceBlocks": [
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",3]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1\",1]",
+          "[\"env\",2]",
+          "[\"1\",4]"
+        ]
+      },
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",12]",
+          "[\"ref\",2]"
+        ],
+        "targetBlocks": [
+          "[\"tgi\",2]",
+          "[\"ref\",4]",
+          "[\"docker\",4]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",12]"
+        ],
+        "targetBlocks": [
+          "[\"source-code\",4]",
+          "[\"source-code\",5]",
+          "[\"source-code\",6]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",5]"
+        ],
+        "targetBlocks": [
+          "[\"model\",3]",
+          "[\"envs\",7]",
+          "[\"dataset\",2]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"weight-decomposed-low-rank-adaptation\",2]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",3]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"ref\",2]"
+        ]
+      },
+      {
+        "id": "ia3-implementation",
+        "sourceBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"ref\",1]",
+          "[\"merging-lora-weights\",7]"
+        ],
+        "targetBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",1]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",8]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"low-rank-adaptation-lora\",1]",
+          "[\"it\",3]"
+        ]
+      },
+      {
+        "id": "peft-target-modules",
+        "sourceBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ]
+      },
+      {
+        "id": "developing-daily-02",
+        "sourceBlocks": [
+          "[\"merging-lora-weights\",14]",
+          "[\"ref\",1]",
+          "[\"peft-v090\",1]"
+        ],
+        "targetBlocks": [
+          "[\"gradio\",3]",
+          "[\"ref\",2]",
+          "[\"ts\",6]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"merging-lora-weights\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"low-rank-parameterized-update-matrices\",4]"
+        ]
+      },
+      {
+        "id": "thinkingcap",
+        "sourceBlocks": [
+          "[\"merging-lora-weights\",7]",
+          "[\"dora-support\",1]",
+          "[\"ref\",1]"
+        ],
+        "targetBlocks": [
+          "[\"setup-training\",2]",
+          "[\"motivation\",11]",
+          "[\"tldr\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "dora",
+        "relation": "related_method",
+        "reason": "DoRA가 LoRA에 크기와 방향 요소를 적용하는 방식을 설명해, PEFT의 DoRA 지원 내용과 구현 원리를 함께 이해할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "peft-features-090",
+          "blockId": "[\"dora-support\",1]",
+          "anchor": "dora-support",
+          "quote": "We now support Weight-Decomposed Low-Rank Adaptation aka DoRA via #1474. This new method is builds on top of LoRA and has shown very promising results. Especially at lower ranks (e.g. r=8), it should perform much better than LoRA. Right now, only non-quantized nn.Linear layers are supported. If you'd like to give it a try, just pass use_dora=True to your LoraConfig and you're good to go.",
+          "hash": "cf37b6b7a0920f456cf1aef6310a11e7c2b4153d1c6f91a7a2c425de48e6dcb3"
+        },
+        "targetEvidence": {
+          "articleId": "dora",
+          "blockId": "[\"weight-decomposed-low-rank-adaptation\",2]",
+          "anchor": "weight-decomposed-low-rank-adaptation",
+          "quote": "DoRA의 메인 포인트는 2개입니다. 첫째로, LoRA를 directional adaptation에만 집중하도록 제한하면서 magnitude component도 조정 가능하게 하는 것은, LoRA가 magnitude와 direction 모두에서 조정을 학습해야 하는 기존 접근법에 비해 작업을 단순화합니다. 두번째로, 방향 업데이트를 최적화하는 절차는 행렬분해를 통해 좀 더 안정화되어집니다. DoRA와 weight normalization의 주요 차이점은 훈련 접근법에 있습니다. Weight normalization은 두 가지의 요소들을 처음부터 끝까지 학습하며 이 방법론은 다른 초기화방법에 더 민감하게 만들어줍니다. 반대로 DoRA는 두 가지의 요소들이 사전학습된 가중치와 함께 시작되기에 초기화 문제를 피할 수 있습니다.",
+          "hash": "0da8d5fe502e8f717c8666324cd8bf8a95862b7ac8157f9fb3d684e7ddf86afd"
+        }
+      },
+      {
+        "id": "tgi-implementation",
+        "relation": "application_example",
+        "reason": "PEFT에서 LoRA 가중치 병합을 다루고, TGI 적용을 위해 LoRA 모델을 독립 모델로 변환하는 과정을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "peft-features-090",
+          "blockId": "[\"merging-lora-weights\",3]",
+          "anchor": "merging-lora-weights",
+          "quote": "기존 베이스 모델에서 lora weight를 병합하는게 아닌 로라 모델끼리 병합하는 것을 의미",
+          "hash": "8117a060be8fd0bd91155ac33b335e6e33223091b258505d351a5b5c9a2e6287"
+        },
+        "targetEvidence": {
+          "articleId": "tgi-implementation",
+          "blockId": "[\"1\",4]",
+          "anchor": "1",
+          "quote": "torch.allclose(base_first_weight, lora_first_weight) standalone_model = lora_model.merge_and_unload() standalone_model.save_pretrained(output_dir, safe_serialization = True) tokenizer.save_pretrained(output_dir) if __name__ == \"__main__\": parser = argparse.ArgumentParser(description = \"\") parser.add_argument('--base_model_id', type = 'str', default = \"base_model_id\") parser.add_argument('--lora_model_id', type = str, default = \"lora_model_id\")",
+          "hash": "f423f8478c13a03b2bae74e7c7439cc85ac31292fcfa7990610a06b734633f97"
+        }
+      }
+    ]
+  }
+}

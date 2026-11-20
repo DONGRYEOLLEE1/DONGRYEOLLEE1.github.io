@@ -1,0 +1,263 @@
+{
+  "version": 2,
+  "id": "python-assert",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "fce1586c51b7d9d3c785c787c2e28d9903ed92e01f1403eb9d81ecb6cc78067f",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "testing",
+        "role": "about",
+        "evidence": {
+          "articleId": "python-assert",
+          "blockId": "[\"assert가-필요한-이유\",5]",
+          "anchor": "assert가-필요한-이유",
+          "quote": "assert문은 단순히 에러를 찾는것이 아니라 값을 보증하기 위해 사용되는데 예를 들어 함수의 입력 값이 어떤 조건의 참임을 보증하기 위해 사용할 수 있고 함수의 반환 값이 어떤 조건에 만족하도록 만들 수 있다. 혹은 변수 값이 변하는 과정에서 특정 부분은 반드시 어떤 영역에 속하는 것을 보증하기 위해 가정 설정문을 통해 확인 할 수도 있다.",
+          "hash": "81994b97bb03be9f5b92a6c1e05f9c3bfc1f4aedad5824bd4e73b8886aecc769"
+        }
+      },
+      {
+        "id": "python-language",
+        "role": "about",
+        "evidence": {
+          "articleId": "python-assert",
+          "blockId": "[\"가정-설명문assert\",1]",
+          "anchor": "가정-설명문assert",
+          "quote": "가정 설명문. assert는 assert는 [조건문], [메시지]와 같은 형식으로 사용",
+          "hash": "50a38445f4830f72ffdced42adee9ebda93608151ad2d618714dd8b3cd401d40"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "79eeb397f7e7d949e2a3697a4a7f7ed53862c07fa74ce4ee45e6d40926de39e7",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "pytest",
+        "sourceBlocks": [
+          "[\"가정-설명문assert\",1]",
+          "[\"assert가-필요한-이유\",5]",
+          "[\"assert가-필요한-이유\",2]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"주요-특징\",6]",
+          "[\"주요-특징\",8]"
+        ]
+      },
+      {
+        "id": "python-map",
+        "sourceBlocks": [
+          "[\"가정-설명문assert\",1]",
+          "[\"assert가-필요한-이유\",2]",
+          "[\"assert가-필요한-이유\",1]"
+        ],
+        "targetBlocks": [
+          "[\"map\",1]",
+          "[\"예시1-단일-반복-객체-사용\",1]",
+          "[\"예시2-람다-함수-사용\",1]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-2",
+        "sourceBlocks": [
+          "[\"가정-설명문assert\",2]",
+          "[\"assert가-필요한-이유\",4]",
+          "[\"assert가-필요한-이유\",5]"
+        ],
+        "targetBlocks": [
+          "[\"unsqueeze\",9]",
+          "[\"squeeze\",8]",
+          "[\"unsqueeze\",8]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"가정-설명문assert\",2]",
+          "[\"assert가-필요한-이유\",5]",
+          "[\"assert가-필요한-이유\",2]"
+        ],
+        "targetBlocks": [
+          "[\"error\",6]",
+          "[\"solution\",2]",
+          "[\"env\",4]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-1",
+        "sourceBlocks": [
+          "[\"가정-설명문assert\",2]",
+          "[\"assert가-필요한-이유\",2]",
+          "[\"assert가-필요한-이유\",5]"
+        ],
+        "targetBlocks": [
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchreshape\",5]",
+          "[\"결론\",1]"
+        ]
+      },
+      {
+        "id": "python-typing",
+        "sourceBlocks": [
+          "[\"가정-설명문assert\",1]",
+          "[\"assert가-필요한-이유\",2]",
+          "[\"assert가-필요한-이유\",3]"
+        ],
+        "targetBlocks": [
+          "[\"파이썬--동적-프로그래밍-언어\",2]",
+          "[\"타입-추상화\",2]",
+          "[\"optional\",2]"
+        ]
+      },
+      {
+        "id": "python-enum",
+        "sourceBlocks": [
+          "[\"가정-설명문assert\",1]",
+          "[\"assert가-필요한-이유\",2]",
+          "[\"가정-설명문assert\",2]"
+        ],
+        "targetBlocks": [
+          "[\"enum\",1]",
+          "[\"enum을-사용하는-이유\",2]",
+          "[\"1-기본-사용법\",1]"
+        ]
+      },
+      {
+        "id": "prompt-engineering",
+        "sourceBlocks": [
+          "[\"assert가-필요한-이유\",6]",
+          "[\"가정-설명문assert\",1]",
+          "[\"assert가-필요한-이유\",5]"
+        ],
+        "targetBlocks": [
+          "[\"avoid-impreciseness\",1]",
+          "[\"the-instruction\",3]",
+          "[\"cot-prompting\",5]"
+        ]
+      },
+      {
+        "id": "python-args-kwargs",
+        "sourceBlocks": [
+          "[\"가정-설명문assert\",1]",
+          "[\"assert가-필요한-이유\",1]",
+          "[\"assert가-필요한-이유\",2]"
+        ],
+        "targetBlocks": [
+          "[\"args-사용\",4]",
+          "[\"argument를-직접-지정한-함수-사용\",1]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]"
+        ]
+      },
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"가정-설명문assert\",2]",
+          "[\"assert가-필요한-이유\",5]",
+          "[\"assert가-필요한-이유\",1]"
+        ],
+        "targetBlocks": [
+          "[\"model-input-sequence-length\",3]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",2]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"가정-설명문assert\",2]",
+          "[\"assert가-필요한-이유\",5]",
+          "[\"assert가-필요한-이유\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"chain-of-thought-prompting\",4]",
+          "[\"results\",4]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"가정-설명문assert\",2]",
+          "[\"assert가-필요한-이유\",5]",
+          "[\"assert가-필요한-이유\",1]"
+        ],
+        "targetBlocks": [
+          "[\"answer\",8]",
+          "[\"curiosity\",1]",
+          "[\"case-2\",1]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"assert가-필요한-이유\",2]",
+          "[\"가정-설명문assert\",2]",
+          "[\"assert가-필요한-이유\",5]"
+        ],
+        "targetBlocks": [
+          "[\"dataset\",1]",
+          "[\"model\",3]",
+          "[\"envs\",1]"
+        ]
+      },
+      {
+        "id": "constitutional-ai",
+        "sourceBlocks": [
+          "[\"가정-설명문assert\",2]",
+          "[\"assert가-필요한-이유\",5]",
+          "[\"assert가-필요한-이유\",1]"
+        ],
+        "targetBlocks": [
+          "[\"method\",1]",
+          "[\"introduction\",5]",
+          "[\"supervised-stage-critique--revision\",1]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"assert가-필요한-이유\",5]",
+          "[\"가정-설명문assert\",2]",
+          "[\"assert가-필요한-이유\",2]"
+        ],
+        "targetBlocks": [
+          "[\"refernce\",1]",
+          "[\"solution\",3]",
+          "[\"error\",5]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "pytest",
+        "relation": "related_method",
+        "reason": "assert로 조건 위반을 확인하는 예시와 pytest의 assert 실패 보고를 비교해 테스트에서 오류가 드러나는 방식을 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "python-assert",
+          "blockId": "[\"assert가-필요한-이유\",2]",
+          "anchor": "assert가-필요한-이유",
+          "quote": "list = [1, 3, 6, 3, 8, 7, 13, 23, 13, 2, 3.14, 2, 3, 7] def test(value): assert type(value) is int, '정수가 아닌 값이 존재함' for i in list: test(i) # 결과 AssertionError: 정수가 아닌 값이 존재함",
+          "hash": "5f93952a849c762cb025ef194682fc953bad2be406f3026741cace78859029d8"
+        },
+        "targetEvidence": {
+          "articleId": "pytest",
+          "blockId": "[\"주요-특징\",8]",
+          "anchor": "주요-특징",
+          "quote": "[100%] ===================================================================== FAILURES ====================================================================== ___________________________________________________________________ test_failing ____________________________________________________________________ def test_failing(): > assert 1+1 == 3 E assert (1 + 1) == 3 test_failing.py:2: AssertionError ============================================================== short test",
+          "hash": "2b67aa740f40f8b9aec18ec19b6702072f6281130d21ae0547c7f097f025745e"
+        }
+      }
+    ]
+  }
+}

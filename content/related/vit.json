@@ -1,0 +1,316 @@
+{
+  "version": 2,
+  "id": "vit",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "e19ac050004f7a37ace1c812a9e4080ba498bb955c11a09b0e624059cd4017b2",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "vision-transformer",
+        "role": "about",
+        "evidence": {
+          "articleId": "vit",
+          "blockId": "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "anchor": "transformer의-계산-효율성과-scalability를-비전에-활용",
+          "quote": "표준 Transformer를 최대한 변형 없이 직접적으로 이미지에 적용하였다. 이를 위해 이미지를 패치 조각으로 쪼갠다. 그리고 각각의 패치에 대해 선형적인 임베딩의 시퀀스를 제공하여 Transformer에 입력하였다. 이때 이미지의 패치는 마치 NLP에서의 토큰과 같이 다루게 된다. 모델은 이미지 분류 태스크에 대해 지도 학습 방식으로 학습하였다.",
+          "hash": "3c677d0e99eb275ec2794dd5379bab388dafc305a15bb7178ba8d90787fe1481"
+        }
+      },
+      {
+        "id": "transformer",
+        "role": "about",
+        "evidence": {
+          "articleId": "vit",
+          "blockId": "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "anchor": "transformer의-계산-효율성과-scalability를-비전에-활용",
+          "quote": "표준 Transformer를 최대한 변형 없이 직접적으로 이미지에 적용하였다. 이를 위해 이미지를 패치 조각으로 쪼갠다. 그리고 각각의 패치에 대해 선형적인 임베딩의 시퀀스를 제공하여 Transformer에 입력하였다. 이때 이미지의 패치는 마치 NLP에서의 토큰과 같이 다루게 된다. 모델은 이미지 분류 태스크에 대해 지도 학습 방식으로 학습하였다.",
+          "hash": "3c677d0e99eb275ec2794dd5379bab388dafc305a15bb7178ba8d90787fe1481"
+        }
+      },
+      {
+        "id": "finetuning",
+        "role": "applies",
+        "evidence": {
+          "articleId": "vit",
+          "blockId": "[\"fine-tuning과-높은-해상도-이미지-다루기\",1]",
+          "anchor": "fine-tuning과-높은-해상도-이미지-다루기",
+          "quote": "ViT는 대량의 데이터셋에 대해 사전 학습한 후, 더 작은 다운스트림 태스크에 Fine-tuning하는 방법을 취한다.Fine-tuning시에는 사전 학습된 Prediction head를 제거하고, 0으로 초기화된 $D * K$차원의 FCL를 연결한다.",
+          "hash": "78de063be72eee1772165a48f0aecf68106dc174cbf8e02061b0618a8ac60f30"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "1fa16eb611516ff61f7bf8c657b4a92bdc56a9b94145fa2da9f8eab0b1ffee4b",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "swin-transformer",
+        "sourceBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "[\"vision-transformervit\",16]",
+          "[\"요약\",9]"
+        ],
+        "targetBlocks": [
+          "[\"swin-transformer\",1]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "[\"의의\",2]",
+          "[\"요약\",19]"
+        ],
+        "targetBlocks": [
+          "[\"trnasformer-의의\",1]",
+          "[\"positional-encoding\",1]",
+          "[\"self-attention-1\",14]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "[\"의의\",2]",
+          "[\"요약\",14]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",6]",
+          "[\"의의\",1]",
+          "[\"modernizing-a-convnet-a-roadmap\",1]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "[\"vision-transformervit\",15]",
+          "[\"요약\",16]"
+        ],
+        "targetBlocks": [
+          "[\"model-architecture\",1]",
+          "[\"요약\",1]",
+          "[\"inputoutput-representation\",7]"
+        ]
+      },
+      {
+        "id": "fast-r-cnn",
+        "sourceBlocks": [
+          "[\"vision-transformervit\",16]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"의의\",2]"
+        ],
+        "targetBlocks": [
+          "[\"initializing-pre-trained-network\",1]",
+          "[\"feature-vector-extraction-by-fc-layers\",3]",
+          "[\"abstract\",3]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "[\"요약\",14]",
+          "[\"vision-transformervit\",2]"
+        ],
+        "targetBlocks": [
+          "[\"architecture\",1]",
+          "[\"introduction\",1]",
+          "[\"related-work\",2]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"의의\",3]",
+          "[\"요약\",14]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",1]",
+          "[\"의의\",2]",
+          "[\"efficientnetv2-architecture-design\",2]"
+        ]
+      },
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[\"fine-tuning과-높은-해상도-이미지-다루기\",1]",
+          "[\"vision-transformervit\",9]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]"
+        ],
+        "targetBlocks": [
+          "[\"classification-as-nli\",3]",
+          "[\"a-latent-embedding-approach\",1]",
+          "[null,3]"
+        ]
+      },
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[\"vision-transformervit\",15]",
+          "[\"model\",1]",
+          "[\"요약\",18]"
+        ],
+        "targetBlocks": [
+          "[\"image-classification\",1]",
+          "[\"introduction\",7]",
+          "[\"experiments\",1]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"의의\",2]",
+          "[\"vision-transformervit\",16]",
+          "[\"요약\",9]"
+        ],
+        "targetBlocks": [
+          "[\"의의\",1]",
+          "[\"1-사전학습된-vgg16모델로-특징-추출\",1]",
+          "[\"3-multi-task-loss\",8]"
+        ]
+      },
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"의의\",3]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"요약\",6]"
+        ],
+        "targetBlocks": [
+          "[\"의의\",2]",
+          "[\"convnet-accuracy\",1]",
+          "[\"convnet-efficiency\",1]"
+        ]
+      },
+      {
+        "id": "rtpurbo",
+        "sourceBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "[\"vision-transformer-탐색하기\",15]",
+          "[\"의의\",2]"
+        ],
+        "targetBlocks": [
+          "[\"정리\",1]",
+          "[\"1-head-specialization--일부-head만-retrieval을-담당\",1]",
+          "[\"introduction\",2]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"vision-transformervit\",16]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",2]",
+          "[\"model\",1]"
+        ],
+        "targetBlocks": [
+          "[\"roi-pooling\",5]",
+          "[\"방법2-selective-search\",3]",
+          "[\"rpnregions-proposal-network\",2]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "[\"요약\",14]",
+          "[\"vision-transformervit\",19]"
+        ],
+        "targetBlocks": [
+          "[\"curiosity\",1]",
+          "[\"answer\",7]",
+          "[\"case-1\",2]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "swin-transformer",
+        "relation": "related_method",
+        "reason": "ViT가 패치 시퀀스를 입력하는 방식과 Swin Transformer가 깊은 층에서 패치를 결합해 계층적 피처맵을 만드는 방식을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vit",
+          "blockId": "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "anchor": "transformer의-계산-효율성과-scalability를-비전에-활용",
+          "quote": "표준 Transformer를 최대한 변형 없이 직접적으로 이미지에 적용하였다. 이를 위해 이미지를 패치 조각으로 쪼갠다. 그리고 각각의 패치에 대해 선형적인 임베딩의 시퀀스를 제공하여 Transformer에 입력하였다. 이때 이미지의 패치는 마치 NLP에서의 토큰과 같이 다루게 된다. 모델은 이미지 분류 태스크에 대해 지도 학습 방식으로 학습하였다.",
+          "hash": "3c677d0e99eb275ec2794dd5379bab388dafc305a15bb7178ba8d90787fe1481"
+        },
+        "targetEvidence": {
+          "articleId": "swin-transformer",
+          "blockId": "[\"swin-transformer\",1]",
+          "anchor": "swin-transformer",
+          "quote": "더 깊은 레이어들에서 이미지 패치를 결합함으로써 계층적인 피쳐맵을 쌓아갈 수 있다",
+          "hash": "3f38c07a7a4eabd1fd18f2c2d5adb144e6e16d03e84fd9f7de2a782036b8b638"
+        }
+      },
+      {
+        "id": "transformer",
+        "relation": "related_method",
+        "reason": "ViT가 이미지 패치를 선형 임베딩 시퀀스로 입력하는 배경이 Transformer의 토큰 임베딩과 위치 인코딩 방식과 어떻게 연결되는지 알 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vit",
+          "blockId": "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "anchor": "transformer의-계산-효율성과-scalability를-비전에-활용",
+          "quote": "표준 Transformer를 최대한 변형 없이 직접적으로 이미지에 적용하였다. 이를 위해 이미지를 패치 조각으로 쪼갠다. 그리고 각각의 패치에 대해 선형적인 임베딩의 시퀀스를 제공하여 Transformer에 입력하였다. 이때 이미지의 패치는 마치 NLP에서의 토큰과 같이 다루게 된다. 모델은 이미지 분류 태스크에 대해 지도 학습 방식으로 학습하였다.",
+          "hash": "3c677d0e99eb275ec2794dd5379bab388dafc305a15bb7178ba8d90787fe1481"
+        },
+        "targetEvidence": {
+          "articleId": "transformer",
+          "blockId": "[\"self-attention-1\",14]",
+          "anchor": "self-attention-1",
+          "quote": "Query, Key를 통해 적절한 Value값을 찾아, 연산을 진행",
+          "hash": "471dd9a27e106d2f299329231832f7d6e0b10da111234cb98c43fdb92df5ef6b"
+        }
+      },
+      {
+        "id": "convnext",
+        "relation": "evaluation_comparison",
+        "reason": "ViT의 패치 기반 이미지 분류 방식과 ConvNeXt의 ConvNet 설계 및 Swin-T와 비교하는 연구 관점을 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vit",
+          "blockId": "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "anchor": "transformer의-계산-효율성과-scalability를-비전에-활용",
+          "quote": "표준 Transformer를 최대한 변형 없이 직접적으로 이미지에 적용하였다. 이를 위해 이미지를 패치 조각으로 쪼갠다. 그리고 각각의 패치에 대해 선형적인 임베딩의 시퀀스를 제공하여 Transformer에 입력하였다. 이때 이미지의 패치는 마치 NLP에서의 토큰과 같이 다루게 된다. 모델은 이미지 분류 태스크에 대해 지도 학습 방식으로 학습하였다.",
+          "hash": "3c677d0e99eb275ec2794dd5379bab388dafc305a15bb7178ba8d90787fe1481"
+        },
+        "targetEvidence": {
+          "articleId": "convnext",
+          "blockId": "[\"instruction\",6]",
+          "anchor": "instruction",
+          "quote": "지난 10년간 점진적으로 향상되어진 ConvNet들과는 달리 Vision Transformers의 적용은 큰 변화였습니다. 최근 연구에 의하면 system-level의 비교(e.g. Swin-T vs ResNet)는 2개를 비교할때 종종 비교되어지곤 합니다. ConvNets과 계층적 vision transformer들은 동시에 다르거나 비슷하게 될 수도 있습니다. 이 두 모델은 비슷한 inductive bias를 가지나, 매우 다른 학습 절차나 micro-level의 아키텍쳐 디자인을 가집니다. 본 연구진은 ConvNets과 트랜스포머의 아키텍쳐를 조사하였으며 network의 성능에 대해서도 명확히하는 연구를 진행하였습니다. 우리의 연구는 pure ConvNet의 한계를 테스트할 뿐만 아니라 pre-ViT와 post-ViT 사이의 간극을 연결해주는 의도를 가지고 연구를 진행하였습니다.",
+          "hash": "b9cccb95c60345eb0975c0dfd2d379bf2b76a95e2c6c33aa39d27d2979f2a829"
+        }
+      },
+      {
+        "id": "bert",
+        "relation": "related_method",
+        "reason": "ViT가 이미지 패치를 시퀀스로 다루는 방식과 BERT가 입력 토큰을 Transformer 인코더에 넣는 구성을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "vit",
+          "blockId": "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",1]",
+          "anchor": "transformer의-계산-효율성과-scalability를-비전에-활용",
+          "quote": "표준 Transformer를 최대한 변형 없이 직접적으로 이미지에 적용하였다. 이를 위해 이미지를 패치 조각으로 쪼갠다. 그리고 각각의 패치에 대해 선형적인 임베딩의 시퀀스를 제공하여 Transformer에 입력하였다. 이때 이미지의 패치는 마치 NLP에서의 토큰과 같이 다루게 된다. 모델은 이미지 분류 태스크에 대해 지도 학습 방식으로 학습하였다.",
+          "hash": "3c677d0e99eb275ec2794dd5379bab388dafc305a15bb7178ba8d90787fe1481"
+        },
+        "targetEvidence": {
+          "articleId": "bert",
+          "blockId": "[\"model-architecture\",1]",
+          "anchor": "model-architecture",
+          "quote": "multi-layer bidirectional Transformer encoder 구조",
+          "hash": "49c04b002c01a06725f757512322a9544bd2b5c77944cb7a75f00be77d66b8df"
+        }
+      }
+    ]
+  }
+}

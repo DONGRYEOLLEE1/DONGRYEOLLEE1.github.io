@@ -1,0 +1,278 @@
+{
+  "version": 2,
+  "id": "nlp-terms",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "d6badfba1fcafed44c5ef60a023481ca503a27bc66ef42108bfb59c1cf872316",
+    "status": "abstained",
+    "facts": [],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "f77605fa5152dc7799922037977a54ac6576f392d748fd21c2253edfcbefa8d4",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "zero-shot-learning",
+        "sourceBlocks": [
+          "[\"nli---natural-language-inference\",2]",
+          "[null,1]",
+          "[\"glue---general-language-understanding-evaluation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"a-latent-embedding-approach\",2]",
+          "[\"classification-as-nli\",1]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"nli---natural-language-inference\",14]",
+          "[\"glue---general-language-understanding-evaluation\",1]",
+          "[\"task-on-benchmarks\",1]"
+        ],
+        "targetBlocks": [
+          "[\"task-1-masked-lm-mlm\",2]",
+          "[\"input\",2]",
+          "[\"요약\",2]"
+        ]
+      },
+      {
+        "id": "elmo",
+        "sourceBlocks": [
+          "[\"glue---general-language-understanding-evaluation\",1]",
+          "[null,1]",
+          "[\"perplexity\",6]"
+        ],
+        "targetBlocks": [
+          "[\"elmo\",1]",
+          "[\"context-matters\",4]",
+          "[\"mechanism\",2]"
+        ]
+      },
+      {
+        "id": "flan",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"nli---natural-language-inference\",2]",
+          "[\"glue---general-language-understanding-evaluation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",5]",
+          "[\"flan--instruction-tuning-improves-zero-shot-learning\",1]",
+          "[\"tasks--templates\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"nli---natural-language-inference\",15]",
+          "[\"task-on-benchmarks\",1]",
+          "[\"glue---general-language-understanding-evaluation\",1]"
+        ],
+        "targetBlocks": [
+          "[\"translation\",3]",
+          "[\"sbert\",1]",
+          "[\"question-generationkor\",1]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[\"task-on-benchmarks\",1]",
+          "[\"nli---natural-language-inference\",2]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"benchmark-dataset\",1]",
+          "[\"eda\",2]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"nli---natural-language-inference\",2]",
+          "[\"task-on-benchmarks\",1]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",4]",
+          "[\"문제-정의\",3]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"nli---natural-language-inference\",1]",
+          "[\"task-on-benchmarks\",1]"
+        ],
+        "targetBlocks": [
+          "[\"chain-of-thought-prompting\",1]",
+          "[\"symbolic-reasoning\",1]",
+          "[\"introduction\",5]"
+        ]
+      },
+      {
+        "id": "gpt-3",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"glue---general-language-understanding-evaluation\",1]",
+          "[\"task-on-benchmarks\",1]"
+        ],
+        "targetBlocks": [
+          "[null,8]",
+          "[null,5]",
+          "[null,7]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"glue---general-language-understanding-evaluation\",1]",
+          "[\"task-on-benchmarks\",1]",
+          "[\"perplexity\",6]"
+        ],
+        "targetBlocks": [
+          "[\"related-work\",1]",
+          "[\"introduction\",1]",
+          "[\"evolution-of-performance-during-training\",2]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[null,1]",
+          "[\"task-on-benchmarks\",1]",
+          "[\"nli---natural-language-inference\",1]"
+        ],
+        "targetBlocks": [
+          "[\"nlp\",1]",
+          "[\"fsl과-관련된-중요한-용어\",3]",
+          "[null,1]"
+        ]
+      },
+      {
+        "id": "pytest",
+        "sourceBlocks": [
+          "[\"nli---natural-language-inference\",6]",
+          "[\"glue---general-language-understanding-evaluation\",1]",
+          "[\"task-on-benchmarks\",1]"
+        ],
+        "targetBlocks": [
+          "[\"주요-특징\",2]",
+          "[null,1]",
+          "[\"주요-특징\",6]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[\"glue---general-language-understanding-evaluation\",1]",
+          "[null,1]",
+          "[\"perplexity\",6]"
+        ],
+        "targetBlocks": [
+          "[\"empirical-experiments\",1]",
+          "[\"introduction\",1]",
+          "[\"problem-statement\",1]"
+        ]
+      },
+      {
+        "id": "loftq",
+        "sourceBlocks": [
+          "[\"glue---general-language-understanding-evaluation\",1]",
+          "[\"task-on-benchmarks\",1]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"glue-with-4-bit\",4]",
+          "[\"experiments\",4]",
+          "[\"loftq\",1]"
+        ]
+      },
+      {
+        "id": "prompt-tuning",
+        "sourceBlocks": [
+          "[\"glue---general-language-understanding-evaluation\",1]",
+          "[\"perplexity\",6]",
+          "[\"task-on-benchmarks\",1]"
+        ],
+        "targetBlocks": [
+          "[\"results\",1]",
+          "[\"interpretability\",2]",
+          "[\"introduction\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "bert",
+        "relation": "related_method",
+        "reason": "NLI의 premise와 hypothesis 입력 쌍이 BERT의 entailment 입력으로 쓰이는 구성을 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "nlp-terms",
+          "blockId": "[\"nli---natural-language-inference\",14]",
+          "anchor": "nli---natural-language-inference",
+          "quote": "레이블(gold_label) : entailment",
+          "hash": "5fc0a96e55381da7f86f345fc295fbd055165c19e577e4faa83c235076d7ad9b"
+        },
+        "targetEvidence": {
+          "articleId": "bert",
+          "blockId": "[\"input\",2]",
+          "anchor": "input",
+          "quote": "Entailment의 Hypothesis-Premise pair",
+          "hash": "bfeac7de062ccb2b1558e2521d27300901135f5df2cf4af8b8c3ea0fa14b9b07"
+        }
+      },
+      {
+        "id": "elmo",
+        "relation": "related_method",
+        "reason": "GLUE에서 성능을 보인 ELMo가 문맥 정보를 반영하는 사전학습과 단어 표현을 만드는 방식을 알아볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "nlp-terms",
+          "blockId": "[\"glue---general-language-understanding-evaluation\",1]",
+          "anchor": "glue---general-language-understanding-evaluation",
+          "quote": "사전 학습된 딥러닝 기반 언어 모델인 ELMo, GPT-1, BERT 모두 GLUE benchmark에서 최고의 성능을 보였음",
+          "hash": "75dd75b5184816382854503b87ee6287860c3113c03b5a584d42966c8e6a75c3"
+        },
+        "targetEvidence": {
+          "articleId": "elmo",
+          "blockId": "[\"elmo\",1]",
+          "anchor": "elmo",
+          "quote": "기존 word2vec, Glove 등에 비해 context 정보를 반영하는 Pre-training 방법을 제시합니다. 여러층의 BiLSTM을 이용해 Language Model을 하며, 만들어진 hidden-state를 적절하게 조합해 새로운 word representation을 만들어냅니다.",
+          "hash": "0536e6bb9b159cb5b8c31469299a3fb57f0c2d5b648124df1af19c123e28974b"
+        }
+      },
+      {
+        "id": "lora",
+        "relation": "evaluation_comparison",
+        "reason": "GLUE 성능을 언급한 글과 RoBERTa·DeBERTa의 GLUE 평가를 함께 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "nlp-terms",
+          "blockId": "[\"glue---general-language-understanding-evaluation\",1]",
+          "anchor": "glue---general-language-understanding-evaluation",
+          "quote": "사전 학습된 딥러닝 기반 언어 모델인 ELMo, GPT-1, BERT 모두 GLUE benchmark에서 최고의 성능을 보였음",
+          "hash": "75dd75b5184816382854503b87ee6287860c3113c03b5a584d42966c8e6a75c3"
+        },
+        "targetEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"empirical-experiments\",1]",
+          "anchor": "empirical-experiments",
+          "quote": "연구진은 RoBERTa, DeBERTa, GPT-2의 downstream task performance를 평가하였습니다. 자연어 처리의 다양한 분야의 task에서 실험을 진행하였습니다. 특히 RoBERTa, DeBERTa 모델을 위해 GLUE benchmark dataset을 통해 성능평가를 진행하였습니다. GPU는 Tesla V100을 통해 진행하였음",
+          "hash": "90a8b18fd23a89a95a6262fdbb9921f8a1f3db8e24779b17600df43044ef00f5"
+        }
+      }
+    ]
+  }
+}

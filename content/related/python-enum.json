@@ -1,0 +1,232 @@
+{
+  "version": 2,
+  "id": "python-enum",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "b40486099ab52eb8a341c1fab8471a324a722607205000b14f64f6ef5cf7bc70",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "python-language",
+        "role": "about",
+        "evidence": {
+          "articleId": "python-enum",
+          "blockId": "[\"enum\",1]",
+          "anchor": "enum",
+          "quote": "enum(열거형)은 이름이 있는 상수들의 집합을 정의하는 데 사용됩니다. 보통 특정 값들 중 하나만 선택할 수 있는 상황에서 유용합니다. 예를 들어, 요일이나 색상, 상태와 같은 값을 나타낼 때 사용할 수 있습니다. enum을 사용하면 가독성이 높아지고, 코드에서 잘못된 값이 사용되는 것을 방지할 수 있습니다.",
+          "hash": "0220774c7ee6d69db582046aaa2b16d68e5cf32a659dc23e0a164c3e45bc0ed3"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "cb39a5243e608031529f9ca5f45dae85285994181fd8a236fc6b1c10d836915c",
+    "status": "abstained",
+    "candidates": [
+      {
+        "id": "python-enumerate",
+        "sourceBlocks": [
+          "[\"enum\",1]",
+          "[\"특징\",2]",
+          "[\"enum을-사용하는-이유\",1]"
+        ],
+        "targetBlocks": [
+          "[\"enumerate\",1]",
+          "[\"장점\",2]",
+          "[\"예시\",43]"
+        ]
+      },
+      {
+        "id": "python-class-inheritance",
+        "sourceBlocks": [
+          "[\"enum\",1]",
+          "[\"enum을-사용하는-이유\",3]",
+          "[\"특징\",1]"
+        ],
+        "targetBlocks": [
+          "[\"abstract-class\",3]",
+          "[\"장점\",2]",
+          "[\"examples\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"1-기본-사용법\",1]",
+          "[\"3-fastapi에서-파라미터값-강제하기\",1]",
+          "[\"enum을-사용하는-이유\",3]"
+        ],
+        "targetBlocks": [
+          "[\"문제-정의\",6]",
+          "[\"solution\",1]",
+          "[\"concept\",4]"
+        ]
+      },
+      {
+        "id": "python-typing",
+        "sourceBlocks": [
+          "[\"enum\",1]",
+          "[\"enum을-사용하는-이유\",2]",
+          "[\"특징\",1]"
+        ],
+        "targetBlocks": [
+          "[\"파이썬--동적-프로그래밍-언어\",2]",
+          "[\"type-annotation\",1]",
+          "[\"list-dict-tuple-set\",2]"
+        ]
+      },
+      {
+        "id": "python-args-kwargs",
+        "sourceBlocks": [
+          "[\"enum\",1]",
+          "[\"1-기본-사용법\",1]",
+          "[\"enum을-사용하는-이유\",1]"
+        ],
+        "targetBlocks": [
+          "[\"args-사용\",4]",
+          "[\"args와-kwargs를-같이-사용하는-방법\",1]",
+          "[\"argument를-직접-지정한-함수-사용\",1]"
+        ]
+      },
+      {
+        "id": "message-history",
+        "sourceBlocks": [
+          "[\"3-fastapi에서-파라미터값-강제하기\",1]",
+          "[\"1-기본-사용법\",1]",
+          "[\"2-상태를-나타나는-예제\",1]"
+        ],
+        "targetBlocks": [
+          "[\"message-history\",1]",
+          "[\"message-history\",3]",
+          "[\"message-history\",4]"
+        ]
+      },
+      {
+        "id": "python-map",
+        "sourceBlocks": [
+          "[\"enum\",1]",
+          "[\"enum을-사용하는-이유\",1]",
+          "[\"1-기본-사용법\",1]"
+        ],
+        "targetBlocks": [
+          "[\"map\",1]",
+          "[\"장점\",1]",
+          "[\"예시1-단일-반복-객체-사용\",1]"
+        ]
+      },
+      {
+        "id": "ollama-docker-troubleshooting",
+        "sourceBlocks": [
+          "[\"1-기본-사용법\",1]",
+          "[\"3-fastapi에서-파라미터값-강제하기\",1]",
+          "[\"특징\",4]"
+        ],
+        "targetBlocks": [
+          "[\"1-ollama-설치-후-모델-다운로드--openwebui-접속\",3]",
+          "[\"2-conda로-실행하면-잘-인식\",2]",
+          "[\"구현-사항\",1]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"1-기본-사용법\",1]",
+          "[\"3-fastapi에서-파라미터값-강제하기\",1]",
+          "[\"특징\",4]"
+        ],
+        "targetBlocks": [
+          "[\"2\",3]",
+          "[\"4bit-or-8bit-quantization\",2]",
+          "[\"tensor-parallel\",5]"
+        ]
+      },
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"3-fastapi에서-파라미터값-강제하기\",1]",
+          "[\"1-기본-사용법\",1]",
+          "[\"특징\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",3]",
+          "[\"problem\",2]"
+        ]
+      },
+      {
+        "id": "pytest",
+        "sourceBlocks": [
+          "[\"enum\",1]",
+          "[\"특징\",1]",
+          "[\"1-기본-사용법\",1]"
+        ],
+        "targetBlocks": [
+          "[\"주요-특징\",12]",
+          "[null,1]",
+          "[\"주요-특징\",14]"
+        ]
+      },
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[\"1-기본-사용법\",1]",
+          "[\"enum을-사용하는-이유\",2]",
+          "[\"2-상태를-나타나는-예제\",1]"
+        ],
+        "targetBlocks": [
+          "[\"docker\",4]",
+          "[\"ref\",2]",
+          "[\"tgi\",5]"
+        ]
+      },
+      {
+        "id": "python-assert",
+        "sourceBlocks": [
+          "[\"enum\",1]",
+          "[\"enum을-사용하는-이유\",2]",
+          "[\"1-기본-사용법\",1]"
+        ],
+        "targetBlocks": [
+          "[\"가정-설명문assert\",1]",
+          "[\"assert가-필요한-이유\",2]",
+          "[\"가정-설명문assert\",2]"
+        ]
+      },
+      {
+        "id": "prompt-engineering",
+        "sourceBlocks": [
+          "[\"3-fastapi에서-파라미터값-강제하기\",1]",
+          "[\"enum을-사용하는-이유\",2]",
+          "[\"1-기본-사용법\",1]"
+        ],
+        "targetBlocks": [
+          "[\"conversation\",1]",
+          "[\"the-instruction\",1]",
+          "[\"avoid-impreciseness\",1]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"1-기본-사용법\",1]",
+          "[\"3-fastapi에서-파라미터값-강제하기\",1]",
+          "[\"enum을-사용하는-이유\",2]"
+        ],
+        "targetBlocks": [
+          "[\"2️⃣\",1]",
+          "[\"1️⃣\",1]",
+          "[\"3️⃣\",1]"
+        ]
+      }
+    ],
+    "recommendations": []
+  }
+}

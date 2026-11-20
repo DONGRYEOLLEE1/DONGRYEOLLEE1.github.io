@@ -1,0 +1,306 @@
+{
+  "version": 2,
+  "id": "distributed-gpu-training",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "71d93ac84bc57deb16c38de7521c30942079ca770a5651d747a8c35c9f6772e7",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "distributed-training",
+        "role": "about",
+        "evidence": {
+          "articleId": "distributed-gpu-training",
+          "blockId": "[\"최적화-gradient와-model-sharding\",2]",
+          "anchor": "최적화-gradient와-model-sharding",
+          "quote": "import torch from fairscale.optim.oss import OSS from fairscale.nn.data_parallel import SharededDataParallel as ShardedDDP def train(rank, world_size, epochs): # initializing 과정 dist_init(rank, world_size) # 문제 정의 model = MyModel().to(rank) dataloader = MyDataLoader() loss_ln = MyLossFunction() # optimizer 정의 base_optimizer_arguments = { 'lr' : 1e-4 } # OSS로 base_optimizer를 감싸주자(Wrap) base_optimizer = torch.optim.SGD optimizer = OSS( params = model.parameters(), optim =",
+          "hash": "f2f2f9dc17ab23d1645779226a4e913db2375b793a0095c07888444e806d0733"
+        }
+      },
+      {
+        "id": "python-environment",
+        "role": "applies",
+        "evidence": {
+          "articleId": "distributed-gpu-training",
+          "blockId": "[\"설치-1\",2]",
+          "anchor": "설치-1",
+          "quote": "pip install fairscale",
+          "hash": "e51ed90a6aa0edff1928b7bf4b7346dc3f6691580220f162f372dcd013c85fe7"
+        }
+      }
+    ],
+    "review": [
+      {
+        "id": "distributed-training",
+        "proposedRole": "about"
+      }
+    ]
+  },
+  "entry": {
+    "inputHash": "28b9da26ef9763c59bc06cfd3a5825ce087091c411d5e222c35b20b9b2dd7a6b",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "deepspeed-troubleshooting",
+        "sourceBlocks": [
+          "[\"설치-1\",2]",
+          "[\"최적화-gradient와-model-sharding\",2]",
+          "[\"설치\",1]"
+        ],
+        "targetBlocks": [
+          "[\"1️⃣\",2]",
+          "[\"3️⃣\",2]",
+          "[\"env\",5]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"단일-gpu-사용\",4]",
+          "[\"single-gpu-환경에서-offloadmodel-사용\",8]",
+          "[\"최적화-gradient와-model-sharding\",1]"
+        ],
+        "targetBlocks": [
+          "[\"source-code\",1]",
+          "[\"error\",1]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"최적화-gradient와-model-sharding\",2]",
+          "[\"설치\",3]",
+          "[\"deepspeed\",5]"
+        ],
+        "targetBlocks": [
+          "[\"tensor-parallel\",1]",
+          "[\"2\",12]",
+          "[\"increasing-speed-a-llm-serving-inference\",7]"
+        ]
+      },
+      {
+        "id": "training-arguments",
+        "sourceBlocks": [
+          "[\"jupyter-notebook에서-사용하기\",2]",
+          "[\"설치\",1]",
+          "[\"zero-2에서-많은-기능을-활성화한-ds_configjson-파일\",1]"
+        ],
+        "targetBlocks": [
+          "[\"하이퍼파라미터\",9]",
+          "[\"usage\",2]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "python-venv-troubleshooting",
+        "sourceBlocks": [
+          "[\"설치-1\",2]",
+          "[\"설치\",3]",
+          "[\"jupyter-notebook에서-사용하기\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"issue\",4]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "llama",
+        "sourceBlocks": [
+          "[\"single-gpu-환경에서-offloadmodel-사용\",8]",
+          "[\"deepspeed\",1]",
+          "[\"fairscale\",5]"
+        ],
+        "targetBlocks": [
+          "[\"efficient-implementation\",2]",
+          "[\"introduction\",1]",
+          "[\"optimizer\",1]"
+        ]
+      },
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"단일-gpu-사용\",4]",
+          "[\"설치\",1]",
+          "[\"single-gpu-환경에서-offloadmodel-사용\",8]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",18]",
+          "[\"envs\",5]",
+          "[\"prob\",2]"
+        ]
+      },
+      {
+        "id": "bard-api-troubleshooting",
+        "sourceBlocks": [
+          "[\"설치-1\",2]",
+          "[\"설치\",3]",
+          "[\"단일-gpu-사용\",4]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",4]",
+          "[\"2️⃣\",1]",
+          "[\"envs\",1]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[\"single-gpu-환경에서-offloadmodel-사용\",8]",
+          "[\"fairscale\",5]",
+          "[\"최적화-gradient와-model-sharding\",1]"
+        ],
+        "targetBlocks": [
+          "[\"peft\",1]",
+          "[\"unlikelihood-training-and-length-normalization\",1]",
+          "[\"introduction\",6]"
+        ]
+      },
+      {
+        "id": "netplan-troubleshooting",
+        "sourceBlocks": [
+          "[\"설치-1\",2]",
+          "[\"설치\",3]",
+          "[\"single-gpu-환경에서-offloadmodel-사용\",3]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"issue\",1]",
+          "[\"env\",2]"
+        ]
+      },
+      {
+        "id": "vllm-tensor-parallel-troubleshooting",
+        "sourceBlocks": [
+          "[\"최적화-gradient와-model-sharding\",2]",
+          "[\"단일-gpu-사용\",4]",
+          "[\"설치-1\",3]"
+        ],
+        "targetBlocks": [
+          "[\"what-is-disable-custom-all-reduce\",2]",
+          "[\"solution\",4]",
+          "[\"error-message\",1]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"설치\",2]",
+          "[\"단일-gpu-사용\",4]",
+          "[\"single-gpu-환경에서-offloadmodel-사용\",8]"
+        ],
+        "targetBlocks": [
+          "[\"envs\",4]",
+          "[\"training\",1]",
+          "[\"model\",3]"
+        ]
+      },
+      {
+        "id": "vllm-weight-loading",
+        "sourceBlocks": [
+          "[\"최적화-gradient와-model-sharding\",2]",
+          "[\"설치\",3]",
+          "[\"단일-gpu-사용\",4]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "chain-of-thought",
+        "sourceBlocks": [
+          "[\"단일-gpu-사용\",4]",
+          "[\"deepspeed\",1]",
+          "[\"single-gpu-환경에서-offloadmodel-사용\",8]"
+        ],
+        "targetBlocks": [
+          "[\"experimental-setup\",1]",
+          "[\"introduction\",5]",
+          "[\"chain-of-thought-prompting\",5]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[\"최적화-gradient와-model-sharding\",1]",
+          "[\"single-gpu-환경에서-offloadmodel-사용\",8]",
+          "[\"deepspeed\",1]"
+        ],
+        "targetBlocks": [
+          "[\"background\",2]",
+          "[\"qlora-finetuning\",2]",
+          "[\"introduction\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "polyglot-training-troubleshooting",
+        "relation": "evaluation_comparison",
+        "reason": "ZeRO 설정과 ZeRO3 Offload 적용 사례를 함께 살펴보며 설정한 분산 학습 방식과 실제 GPU·CPU 메모리 활용 결과를 비교할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "distributed-gpu-training",
+          "blockId": "[\"단일-gpu-사용\",4]",
+          "anchor": "단일-gpu-사용",
+          "quote": "ds_config.json { \"zero_optimization\": { \"stage\": 2, \"allgather_partitions\": true, \"allgather_bucket_size\": 2e8, \"reduce_scatter\": true, \"reduce_bucket_size\": 2e8, \"overlap_comm\": true, \"contiguous_gradients\": true, \"cpu_offload\": true } }",
+          "hash": "1e9d88dc3161468479a423250663d41468b7ccadb335e71834c650e49b22ef69"
+        },
+        "targetEvidence": {
+          "articleId": "polyglot-training-troubleshooting",
+          "blockId": "[\"solution\",18]",
+          "anchor": "solution",
+          "quote": "step 잘 밟고 GPU 2장 모두 잘 사용하며 ZeRO3 Offload로 rest of CPU-mem 잘 사용되었음을 확인 할 수 있었음",
+          "hash": "c18bb82376eee6d5b33e4f74ed14eca883203b7de681ab07ac5314d59e5a6880"
+        }
+      },
+      {
+        "id": "llama",
+        "relation": "related_method",
+        "reason": "FairScale의 checkpointing과 메모리 절감 기법을 살펴본 뒤, 학습에서 checkpointing과 sequence parallelism을 활용한 구현 사례를 배울 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "distributed-gpu-training",
+          "blockId": "[\"single-gpu-환경에서-offloadmodel-사용\",8]",
+          "anchor": "single-gpu-환경에서-offloadmodel-사용",
+          "quote": "이 외에도 메모리 cost effencienty를 위해 fairscale.nn.checkpoint_activations.checkpoint_wrapper, fairscale.optim.adascale.AdaScale, fairscale.nn.Pipe 등과 같은 방법이 있음.",
+          "hash": "38fac2e176aaab776ac374681fc7526bed146df35bc34e1eadd86d52d5e4b090"
+        },
+        "targetEvidence": {
+          "articleId": "llama",
+          "blockId": "[\"efficient-implementation\",2]",
+          "anchor": "efficient-implementation",
+          "quote": "첫번째, causal multi-head attention을 사용하여 학습시간과 사용되는 메모리를 줄였습니다. xformers 라이브러리를 사용하여 구현했습니다. 이를 통해 attention weight를 저장하지 않았으며 key/query score를 계산하지 않았습니다. 두번재, 더 높은 학습 효율성을 위해 checkpointing과 함께 backward pass 동안에 계산하여 활성화함수의 양을 줄였습니다. 활성화함수는 선형 레이어의 output딴에서 계산하는데 resource가 굉장히 많이 들기에 우리 연구진은 이를 save하였습니다. optimization 효과를 최대로 보기 위해 모델과 sequence parallelism을 사용하여 모델의 메모리 사용량을 줄였습니다. 게다가 activation의 계산과 network에서의 GPU들의 결합을 통해 이를 가능케 했습니다.",
+          "hash": "b8c8d616eed96e7a93f69a9fb7f8428496ef5c309557134da8350c047a326763"
+        }
+      },
+      {
+        "id": "training-arguments",
+        "relation": "related_method",
+        "reason": "DeepSpeed 설정의 fp16 옵션과 TrainingArguments의 fp16 설명을 함께 보며 혼합 정밀도 학습 설정을 익힐 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "distributed-gpu-training",
+          "blockId": "[\"zero-2에서-많은-기능을-활성화한-ds_configjson-파일\",1]",
+          "anchor": "zero-2에서-많은-기능을-활성화한-ds_configjson-파일",
+          "quote": "{ \"fp16\": { \"enabled\": \"auto\", \"loss_scale\": 0, \"loss_scale_window\": 1000, \"initial_scale_power\": 16, \"hysteresis\": 2, \"min_loss_scale\": 1 }, \"optimizer\": { \"type\": \"AdamW\", \"params\": { \"lr\": \"auto\", \"betas\": \"auto\", \"eps\": \"auto\", \"weight_decay\": \"auto\" } }, \"scheduler\": { \"type\": \"WarmupLR\", \"params\": { \"warmup_min_lr\": \"auto\", \"warmup_max_lr\": \"auto\", \"warmup_num_steps\": \"auto\" } }, \"zero_optimization\": { \"stage\": 2, \"allgather_partitions\": true, \"allgather_bucket_size\":",
+          "hash": "f37f448e90b208467e620b5854622a737ba14bec483b69da0d75e86b8b2d0c48"
+        },
+        "targetEvidence": {
+          "articleId": "training-arguments",
+          "blockId": "[\"하이퍼파라미터\",9]",
+          "anchor": "하이퍼파라미터",
+          "quote": "fp16(bool, False): 32-bit 학습 or 15-bit(mixed) precision 학습",
+          "hash": "4162866bdb372532bbf0f65bc4b770b0dfeea71234a3cd1ad1ba5256d9da967b"
+        }
+      }
+    ]
+  }
+}

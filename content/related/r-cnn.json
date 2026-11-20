@@ -1,0 +1,320 @@
+{
+  "version": 2,
+  "id": "r-cnn",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "9635aedc1955bec3cf18815fdb900cbd363ca11357f3a620f2f844454c31d865",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "object-detection",
+        "role": "about",
+        "evidence": {
+          "articleId": "r-cnn",
+          "blockId": "[\"abstract\",1]",
+          "anchor": "abstract",
+          "quote": "Object Detector는 Object의 coordinate를 찾고(Localization), class를 분류(Classification)하는 작업을 진행한다. R-CNN은 이를 순차적으로 진행하는 2 Stage Detector 로, 딥러닝을 적용한 최초의 Object Detector다. R-CNN모델은 Object Detection 혹은 Inference(추론)시, 아래와 같은 순서에 의해 동작한다.",
+          "hash": "4ae1fc1530ef74e24391b17d1338950c656044da3cb13cb70ce563979e1142ad"
+        }
+      },
+      {
+        "id": "cnn",
+        "role": "about",
+        "evidence": {
+          "articleId": "r-cnn",
+          "blockId": "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "anchor": "feature-extraction-by-fine-tuned-alexnet",
+          "quote": "다음으로 2000개의 Region Proposal을 Fine Tune된 AlexNet에 입력해 2000(=Number of Region Proposal) x 4096(=Number of Feature Vector) 크기의 Feature vector를 추출한다. 논문의 저자는 Object Detection시, 특정 도메인에 맞는 class를 예측하기 위해서 기존의 ImageNet 데이터셋을 통해, 사전학습된 CNN모델을 도메인에 맞게 fine tune하는 방식을 제안한다. Fine tune된 모델을 사용하면 도메인에 맞게 보다 적합한 feature vector를 추출하는 것이 가능해진다.",
+          "hash": "18118d1c2c75e87b6fdfe76aa5ad1711500d35561a962f5e8a87f64fcb1ce677"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "dd90a5a8958731b987b15c56995bab8112753277a62df362d9380c7bc543fe9a",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"nmsnon-maximum-suppression\",10]"
+        ],
+        "targetBlocks": [
+          "[\"nms의-자세한-내용이-궁금하다면\",2]",
+          "[\"overfeat-intuition\",2]",
+          "[\"overfeat-detection-network\",12]"
+        ]
+      },
+      {
+        "id": "faster-r-cnn",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"사전학습된-alexnet을-fine-tune\",6]"
+        ],
+        "targetBlocks": [
+          "[\"preview\",3]",
+          "[\"preview\",4]",
+          "[\"1-사전학습된-vgg16모델로-특징-추출\",4]"
+        ]
+      },
+      {
+        "id": "fast-r-cnn",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"region-proposal-selective-search\",3]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",2]",
+          "[\"preview\",1]",
+          "[\"rp-by-selective-search\",3]"
+        ]
+      },
+      {
+        "id": "object-detection-basics",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"region-proposal-selective-search\",1]"
+        ],
+        "targetBlocks": [
+          "[\"backbone\",2]",
+          "[\"the-object-detection-task\",1]",
+          "[\"region-proposal-물체가-있을-법한-위치-찾기\",3]"
+        ]
+      },
+      {
+        "id": "yolo-v1",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"nmsnon-maximum-suppression\",4]"
+        ],
+        "targetBlocks": [
+          "[\"unified-detection\",1]",
+          "[\"network-design\",1]",
+          "[\"training\",1]"
+        ]
+      },
+      {
+        "id": "ohem",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"hard-negative-mining\",2]",
+          "[\"요약\",10]"
+        ],
+        "targetBlocks": [
+          "[\"abstract\",1]",
+          "[\"introduction\",3]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "map-evaluation",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"nmsnon-maximum-suppression\",17]",
+          "[\"사전학습된-alexnet을-fine-tune\",3]"
+        ],
+        "targetBlocks": [
+          "[\"mapmean-average-precision\",1]",
+          "[\"iouintersection-over-union---fracintersectionunion\",1]",
+          "[\"interpolated-ap\",1]"
+        ]
+      },
+      {
+        "id": "efficientnet-v2",
+        "sourceBlocks": [
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"요약\",7]",
+          "[\"사전학습된-alexnet을-fine-tune\",3]"
+        ],
+        "targetBlocks": [
+          "[\"depthwise-convolutions-are-slow-in-early-layers-but-effective-in-later-stages\",1]",
+          "[\"neural-acrchitecture-search-nas\",1]",
+          "[\"introduction\",1]"
+        ]
+      },
+      {
+        "id": "vit",
+        "sourceBlocks": [
+          "[\"region-proposal-selective-search\",3]",
+          "[\"요약\",7]",
+          "[\"abstract\",2]"
+        ],
+        "targetBlocks": [
+          "[\"vision-transformervit\",15]",
+          "[\"요약\",20]",
+          "[\"transformer의-계산-효율성과-scalability를-비전에-활용\",3]"
+        ]
+      },
+      {
+        "id": "convnext",
+        "sourceBlocks": [
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"요약\",7]",
+          "[\"abstract\",1]"
+        ],
+        "targetBlocks": [
+          "[\"instruction\",6]",
+          "[\"modernizing-a-convnet-a-roadmap\",1]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "efficientnet",
+        "sourceBlocks": [
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"hard-negative-mining\",4]",
+          "[\"요약\",4]"
+        ],
+        "targetBlocks": [
+          "[\"model-scaling\",1]",
+          "[\"convnet-accuracy\",1]",
+          "[\"problem-formulation\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"요약\",7]",
+          "[\"linear-svm을-통한-분류\",1]",
+          "[\"r-cnn에서-학습이-나타나는-곳\",1]"
+        ],
+        "targetBlocks": [
+          "[null,2]",
+          "[\"왜-fsl-일까\",4]",
+          "[\"image-classification-cv\",1]"
+        ]
+      },
+      {
+        "id": "resnext",
+        "sourceBlocks": [
+          "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "[\"요약\",7]",
+          "[\"region-proposal-selective-search\",3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"의의\",1]",
+          "[\"template\",1]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"요약\",4]",
+          "[\"단점\",3]",
+          "[\"hard-negative-mining\",7]"
+        ],
+        "targetBlocks": [
+          "[\"self-attention\",5]",
+          "[\"trnasformer-의의\",1]",
+          "[\"self-attention-1\",5]"
+        ]
+      },
+      {
+        "id": "book-spine",
+        "sourceBlocks": [
+          "[\"abstract\",1]",
+          "[\"region-proposal-selective-search\",3]",
+          "[\"nmsnon-maximum-suppression\",17]"
+        ],
+        "targetBlocks": [
+          "[\"system\",2]",
+          "[\"datasets\",12]",
+          "[\"eval-path\",6]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "faster-r-cnn",
+        "relation": "related_method",
+        "reason": "R-CNN은 후보 영역마다 CNN 특징을 추출하지만, Faster R-CNN은 RPN에서 뽑은 후보를 Fast R-CNN에 전달해 특징 추출과 검출을 잇는 방식을 보여줍니다.",
+        "sourceEvidence": {
+          "articleId": "r-cnn",
+          "blockId": "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "anchor": "feature-extraction-by-fine-tuned-alexnet",
+          "quote": "다음으로 2000개의 Region Proposal을 Fine Tune된 AlexNet에 입력해 2000(=Number of Region Proposal) x 4096(=Number of Feature Vector) 크기의 Feature vector를 추출한다. 논문의 저자는 Object Detection시, 특정 도메인에 맞는 class를 예측하기 위해서 기존의 ImageNet 데이터셋을 통해, 사전학습된 CNN모델을 도메인에 맞게 fine tune하는 방식을 제안한다. Fine tune된 모델을 사용하면 도메인에 맞게 보다 적합한 feature vector를 추출하는 것이 가능해진다.",
+          "hash": "18118d1c2c75e87b6fdfe76aa5ad1711500d35561a962f5e8a87f64fcb1ce677"
+        },
+        "targetEvidence": {
+          "articleId": "faster-r-cnn",
+          "blockId": "[\"preview\",3]",
+          "anchor": "preview",
+          "quote": "RPN에서 RP를 추출하고 이를 Fast R-CNN 네트워크에 전달하여 객체의 class와 위치를 예측한다. 이를 통해 모델의 전체 과정이 GPU상에서 동작하여 bottleneck 현상이 발생하지 않으며, end-to-end로 네트워크를 학습시키는 것이 가능해진다.",
+          "hash": "acf2b3fbc6e03337fb83d165649805cf94494ee777cf43f24e6071865bac4678"
+        }
+      },
+      {
+        "id": "fast-r-cnn",
+        "relation": "related_method",
+        "reason": "R-CNN의 후보 영역별 CNN 학습과 비교해 Fast R-CNN은 이미지 한 장에서 특징을 뽑고 RoI pooling과 multi-task loss로 학습하는 개선을 설명합니다.",
+        "sourceEvidence": {
+          "articleId": "r-cnn",
+          "blockId": "[\"feature-extraction-by-fine-tuned-alexnet\",1]",
+          "anchor": "feature-extraction-by-fine-tuned-alexnet",
+          "quote": "다음으로 2000개의 Region Proposal을 Fine Tune된 AlexNet에 입력해 2000(=Number of Region Proposal) x 4096(=Number of Feature Vector) 크기의 Feature vector를 추출한다. 논문의 저자는 Object Detection시, 특정 도메인에 맞는 class를 예측하기 위해서 기존의 ImageNet 데이터셋을 통해, 사전학습된 CNN모델을 도메인에 맞게 fine tune하는 방식을 제안한다. Fine tune된 모델을 사용하면 도메인에 맞게 보다 적합한 feature vector를 추출하는 것이 가능해진다.",
+          "hash": "18118d1c2c75e87b6fdfe76aa5ad1711500d35561a962f5e8a87f64fcb1ce677"
+        },
+        "targetEvidence": {
+          "articleId": "fast-r-cnn",
+          "blockId": "[\"preview\",1]",
+          "anchor": "preview",
+          "quote": "R-CNN 모델은 2000장의 RP를 CNN 모델에 입력시켜 각각에 대하여 독립적으로 학습시켜 많은 시간이 소요된다. Fast R-CNN은 이러한 문제를 개선하여 단 1장의 이미지를 입력받으며, RP의 크기를 warp시킬 필요 없이 RoI(Region of Interest) pooling을 통해 고정된 크기의 feature vector를 fully connected layer(이하 fc layer)에 전달한다. 또한 multi-task loss를 사용하여 모델을 개별적으로 학습시킬 필요 없이 한 번에 학습시킨다. 이를 통해 학습 및 탐지 시간이 크게 감소하였다.",
+          "hash": "0540b668dfa6795df8932bc1a55e23a6d81e1cc94f2f390df5e5876dbb0ea14c"
+        }
+      },
+      {
+        "id": "object-detection-basics",
+        "relation": "related_method",
+        "reason": "R-CNN의 Selective Search 후보 영역 추출과 워핑 과정을 설명하며, 후보 영역이 어떻게 만들어지는지 이해하는 데 도움이 됩니다.",
+        "sourceEvidence": {
+          "articleId": "r-cnn",
+          "blockId": "[\"region-proposal-selective-search\",1]",
+          "anchor": "region-proposal-selective-search",
+          "quote": "R-CNN 모델은 구체적인 Object의 위치를 추정하기 앞서 Selective Search 알고리즘을 통해 Object가 있을법한 위치인 **Region Proposal(후보 영역)**을 추출한다. Selective Search 알고리즘은 색상, 무늬, 명암 등의 다양한 기준으로 픽셀을 그룹화하고, 점차 통합시켜 Object가 있을법한 위치를 Bounding Box 형태로 추천 한다. 단일 이미지에서 2000개의 Region Proposal을 extraction한 뒤, CNN 모델에 입력하기 위해 227x227 크기로 Warp(=resize)시켜준다.",
+          "hash": "d42b071646081f87bef31b3c9650ceaa0d16aa9585fdb535b0e67cdca6d9cd35"
+        },
+        "targetEvidence": {
+          "articleId": "object-detection-basics",
+          "blockId": "[\"region-proposal-물체가-있을-법한-위치-찾기\",3]",
+          "anchor": "region-proposal-물체가-있을-법한-위치-찾기",
+          "quote": "Selective Search R-CNN은 Selective Search라는 툴 베이스 알고리즘을 적용해 2000개의 물체가 있을법한 박스를 찾는다. Selective Search는 주변 픽셀 간의 유사도를 기준으로 Segmentation을 만들고, 이를 기준으로 물체가 있을법한 박스를 추론한다. 하지만 R-CNN 이후 Region Proposal 과정 역시 Neural Network가 수행하도록 발전하였다.",
+          "hash": "fda1c1e1a1ce2fae986bcad5fa2d0fde27d546842fd1683b2f4bae354c3056e1"
+        }
+      },
+      {
+        "id": "book-spine",
+        "relation": "application_example",
+        "reason": "R-CNN에서 다루는 박스 탐지와 중복 제거가 책등 판독 시스템에서 탐지 박스를 합치고 책 수를 세는 데 적용된 사례를 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "r-cnn",
+          "blockId": "[\"nmsnon-maximum-suppression\",17]",
+          "anchor": "nmsnon-maximum-suppression",
+          "quote": "NMS 알고리즘은 Confidence-score 임계값이 높을수록, IoU 임계값이 낮을수록 많은 box가 제거된다. 위 과정을 통해 겹쳐진 box를 제거하고 최소한의 최적의 B.B를 반환한다. Frankly speaking, 두 박스의 교집합을 합집합으로 나눠준 값이 IoU. 논문에서는 IoU가 0.5보다 크면 동일한 물체를 대상으로 한 박스로 판단하고 NMS를 적용한다.",
+          "hash": "63c2fb237583946957b0b084fed6f0b3af7fe84b336f3a79b47ccbc7fd80c042"
+        },
+        "targetEvidence": {
+          "articleId": "book-spine",
+          "blockId": "[\"system\",2]",
+          "anchor": "system",
+          "quote": "A photo is first downscaled so that its long side is at most 1,600 px. A one-class oriented bounding box (OBB) detector finds the spines. Near-duplicate boxes are merged (Section 3.5), and the number of boxes scoring 0.4 or more is the book count. Each box is then cut out with a margin of 8% of its short side, rotated so that its long side is vertical, and upscaled if its short side is below 96 px.",
+          "hash": "47a6b7f2df9dece4417da0ca5bd70c47f8e2d281e5d4511a6cf0cf29c50c19b1"
+        }
+      }
+    ]
+  }
+}

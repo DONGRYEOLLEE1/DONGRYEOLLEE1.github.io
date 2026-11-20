@@ -1,0 +1,282 @@
+{
+  "version": 2,
+  "id": "regex-preprocessing",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "680f8c17c1426d5fb83f8436d3823b08263501d0b4b7c6c770a2297c040341a1",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "data-preparation",
+        "role": "applies",
+        "evidence": {
+          "articleId": "regex-preprocessing",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": ">>> pattern = r\"\\s\\d{1,2}:\\d{1,2}\" >>> df['text'] = df['text'].apply(lambda x: re.sub(pattern, \"\", x)) >>> df.loc[0].text [홍길동] [오전] 안녕하세요?",
+          "hash": "8a82a2dcd29332089132904cb327e771d4d9e807bdc03420781feaecc3f60e3c"
+        }
+      },
+      {
+        "id": "python-language",
+        "role": "applies",
+        "evidence": {
+          "articleId": "regex-preprocessing",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": ">>> pattern = r\"\\s\\d{1,2}:\\d{1,2}\" >>> df['text'] = df['text'].apply(lambda x: re.sub(pattern, \"\", x)) >>> df.loc[0].text [홍길동] [오전] 안녕하세요?",
+          "hash": "8a82a2dcd29332089132904cb327e771d4d9e807bdc03420781feaecc3f60e3c"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "a5971e8c5e3a29ff653927daa24d2fc953dd69c584551fe59a12bb493cc8ea9d",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "polyglot-training-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"problem\",1]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",10]",
+          "[\"prob\",3]",
+          "[\"envs\",1]"
+        ]
+      },
+      {
+        "id": "python-map",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"map\",1]",
+          "[\"장점\",1]",
+          "[\"구문\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-05",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"problem\",2]"
+        ],
+        "targetBlocks": [
+          "[\"data-processing\",1]",
+          "[\"정규표현식\",1]",
+          "[\"question-generation-영어\",1]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-1",
+        "sourceBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",2]",
+          "[\"problem\",2]"
+        ],
+        "targetBlocks": [
+          "[\"view-reshape-transpose-함수-정리\",1]",
+          "[\"torchview\",11]",
+          "[\"torchtranspose\",9]"
+        ]
+      },
+      {
+        "id": "tokenizer-input-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"problem\",1]"
+        ],
+        "targetBlocks": [
+          "[\"원인\",3]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ]
+      },
+      {
+        "id": "eda",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",3]",
+          "[\"eda\",4]",
+          "[\"theory\",5]"
+        ]
+      },
+      {
+        "id": "python-assert",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"problem\",4]"
+        ],
+        "targetBlocks": [
+          "[\"가정-설명문assert\",1]",
+          "[\"assert가-필요한-이유\",3]",
+          "[\"가정-설명문assert\",2]"
+        ]
+      },
+      {
+        "id": "ziya2",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"problem\",1]"
+        ],
+        "targetBlocks": [
+          "[\"the-data-factory\",1]",
+          "[\"introduction\",9]",
+          "[\"continual-pre-training\",5]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-2",
+        "sourceBlocks": [
+          "[\"problem\",2]",
+          "[\"solution\",2]",
+          "[\"problem\",4]"
+        ],
+        "targetBlocks": [
+          "[\"squeeze\",9]",
+          "[\"unsqueeze\",4]",
+          "[\"squeeze\",1]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"problem\",1]"
+        ],
+        "targetBlocks": [
+          "[\"dataset\",2]",
+          "[\"envs\",2]",
+          "[\"model\",2]"
+        ]
+      },
+      {
+        "id": "chat-vector",
+        "sourceBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",2]",
+          "[\"problem\",4]"
+        ],
+        "targetBlocks": [
+          "[\"chat-vector\",2]",
+          "[\"background\",2]",
+          "[\"의의\",1]"
+        ]
+      },
+      {
+        "id": "bert",
+        "sourceBlocks": [
+          "[\"problem\",4]",
+          "[\"solution\",2]",
+          "[\"problem\",1]"
+        ],
+        "targetBlocks": [
+          "[\"task-1-masked-lm-mlm\",3]",
+          "[\"input\",4]",
+          "[\"inputoutput-representation\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-07",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",4]",
+          "[\"solution\",2]"
+        ],
+        "targetBlocks": [
+          "[\"translation\",3]",
+          "[\"question-generationkor\",1]",
+          "[\"question-generationeng\",1]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-3",
+        "sourceBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",2]",
+          "[\"problem\",2]"
+        ],
+        "targetBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",4]",
+          "[\"삼각행렬-triangular-matrix\",1]"
+        ]
+      },
+      {
+        "id": "few-shot-nlp",
+        "sourceBlocks": [
+          "[\"solution\",1]",
+          "[\"problem\",1]",
+          "[\"problem\",4]"
+        ],
+        "targetBlocks": [
+          "[\"concept\",1]",
+          "[\"solution\",1]",
+          "[\"문제-정의\",7]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "python-map",
+        "relation": "concept_explanation",
+        "reason": "정규식 치환을 각 텍스트에 적용하는 코드와 함께 map()의 반복 객체 처리 방식도 익힐 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "regex-preprocessing",
+          "blockId": "[\"solution\",1]",
+          "anchor": "solution",
+          "quote": ">>> pattern = r\"\\s\\d{1,2}:\\d{1,2}\" >>> df['text'] = df['text'].apply(lambda x: re.sub(pattern, \"\", x)) >>> df.loc[0].text [홍길동] [오전] 안녕하세요?",
+          "hash": "8a82a2dcd29332089132904cb327e771d4d9e807bdc03420781feaecc3f60e3c"
+        },
+        "targetEvidence": {
+          "articleId": "python-map",
+          "blockId": "[\"map\",1]",
+          "anchor": "map",
+          "quote": "map() 함수는 파이썬에서 반복 가능한 객체의 모든 요소에 대해 지정된 함수를 적용하는 함수. 원본 데이터를 변형하여 새로운 데이터를 생산하는 데 사용. 이 함수는 lazy evaluation을 사용하여 결과를 바로 계산하지 않고 필요할 때만 값을 계산하는 특성을 지니고 있다.",
+          "hash": "b20c954fa596819d6fd342d8947a28e563945c2d66562f880f392ab83aaae789"
+        }
+      },
+      {
+        "id": "developing-daily-05",
+        "relation": "related_method",
+        "reason": "시간 문자열 제거와 정규표현식으로 특정 문자열 형태를 찾아 후속 문장을 삭제하는 전처리 사례를 비교할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "regex-preprocessing",
+          "blockId": "[\"problem\",2]",
+          "anchor": "problem",
+          "quote": "위 문자 중, 04:25 문자만 삭제하고싶음. (숫자 정보 앞 공백도 같이!)",
+          "hash": "2efdeb9a48675d76eea760cf28c46d6ee6c43985c48b755f7055375e74a268ab"
+        },
+        "targetEvidence": {
+          "articleId": "developing-daily-05",
+          "blockId": "[\"정규표현식\",1]",
+          "anchor": "정규표현식",
+          "quote": "특정 문자열의 형태를 반복하는 데이터 이후에 나오는 문장을 모두 삭제",
+          "hash": "11c518b02f130eca27ef2459282fcb7c926a47f3d551ee5c7ced2e29b2f68715"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "version": 2,
+  "id": "generation-cuda-assert",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "ff233acbb6251c6531935465696c81d45bfa0bef80f54b5886e36dae031c09a3",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "tokenization",
+        "role": "applies",
+        "evidence": {
+          "articleId": "generation-cuda-assert",
+          "blockId": "[\"solution\",4]",
+          "anchor": "solution",
+          "quote": "for i in tqdm(range(50), desc = 'test'): raw_input_ids = qg_kor_tokenizer.encode(text, max_length = 1024) input_ids = [qg_kor_tokenizer.bos_token_id] + raw_input_ids + [qg_kor_tokenizer.eos_token_id] que_ids = qg_kor_model.generate(torch.tensor([input_ids]).to('cuda'), max_length = 4000) decode = qg_kor_tokenizer.decode(que_ids.squeeze().tolist(), skip_special_tokens = True)",
+          "hash": "4a4ee86cb6563d26cf027ce079b6bd235ea86dd2280661126856c53da084a2b4"
+        }
+      },
+      {
+        "id": "cuda",
+        "role": "applies",
+        "evidence": {
+          "articleId": "generation-cuda-assert",
+          "blockId": "[\"solution\",4]",
+          "anchor": "solution",
+          "quote": "for i in tqdm(range(50), desc = 'test'): raw_input_ids = qg_kor_tokenizer.encode(text, max_length = 1024) input_ids = [qg_kor_tokenizer.bos_token_id] + raw_input_ids + [qg_kor_tokenizer.eos_token_id] que_ids = qg_kor_model.generate(torch.tensor([input_ids]).to('cuda'), max_length = 4000) decode = qg_kor_tokenizer.decode(que_ids.squeeze().tolist(), skip_special_tokens = True)",
+          "hash": "4a4ee86cb6563d26cf027ce079b6bd235ea86dd2280661126856c53da084a2b4"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "7b98d2b063ba1fe8248bfa0b3747a5d0bae4e415f900455461d0fa9912732db0",
+    "status": "abstained",
+    "candidates": [
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",6]",
+          "[\"env\",4]"
+        ],
+        "targetBlocks": [
+          "[\"model-input-sequence-length\",7]",
+          "[\"env\",1]",
+          "[\"model-input-sequence-length\",3]"
+        ]
+      },
+      {
+        "id": "tokenizer-input-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",1]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"원인\",2]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ]
+      },
+      {
+        "id": "bfcl-reasoning-option",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",3]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",3]",
+          "[\"refernce\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-05",
+        "sourceBlocks": [
+          "[\"error\",5]",
+          "[\"solution\",4]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"sehongt5-large-questiongeneration\",3]",
+          "[\"kobart-questiongeneration\",3]",
+          "[\"t5-end2end-question-generation\",5]"
+        ]
+      },
+      {
+        "id": "gpu-driver-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",1]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"env\",2]",
+          "[\"issue\",1]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[\"env\",3]",
+          "[\"error\",1]",
+          "[\"solution\",3]"
+        ],
+        "targetBlocks": [
+          "[\"env\",3]",
+          "[\"error\",1]",
+          "[\"solution\",1]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"env\",1]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",1]",
+          "[\"env\",1]",
+          "[\"원인\",2]"
+        ]
+      },
+      {
+        "id": "lm-evaluation-harness-oom",
+        "sourceBlocks": [
+          "[\"env\",3]",
+          "[\"solution\",3]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",6]",
+          "[\"solution\",1]",
+          "[\"error\",1]"
+        ]
+      },
+      {
+        "id": "llama2-training-oom",
+        "sourceBlocks": [
+          "[\"env\",3]",
+          "[\"solution\",3]",
+          "[\"error\",1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",3]",
+          "[\"solution\",2]",
+          "[\"error\",2]"
+        ]
+      },
+      {
+        "id": "developing-daily-06",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"env\",1]",
+          "[\"error\",7]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"solution-1\",1]",
+          "[\"error2\",1]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-2",
+        "sourceBlocks": [
+          "[\"solution\",2]",
+          "[\"error\",7]",
+          "[\"env\",4]"
+        ],
+        "targetBlocks": [
+          "[\"unsqueeze\",8]",
+          "[\"squeeze\",6]",
+          "[\"unsqueeze\",9]"
+        ]
+      },
+      {
+        "id": "offline-deep-learning-environment",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",1]",
+          "[\"env\",1]"
+        ],
+        "targetBlocks": [
+          "[\"파일-무결성-검사-방법\",5]",
+          "[\"폐쇄망에서의-딥러닝-추론-환경-구축\",12]",
+          "[\"cuda-cudnn\",1]"
+        ]
+      },
+      {
+        "id": "vllm-gemma-troubleshooting",
+        "sourceBlocks": [
+          "[\"error\",1]",
+          "[\"solution\",3]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"env\",3]",
+          "[\"error\",1]",
+          "[\"error-2\",8]"
+        ]
+      },
+      {
+        "id": "qlora-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"error\",1]",
+          "[\"env\",3]"
+        ],
+        "targetBlocks": [
+          "[\"해결\",2]",
+          "[\"4bit-quantization\",30]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "docker-gpu-troubleshooting",
+        "sourceBlocks": [
+          "[\"solution\",4]",
+          "[\"env\",1]",
+          "[\"error\",7]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"env\",1]",
+          "[\"issue\",1]"
+        ]
+      }
+    ],
+    "recommendations": []
+  }
+}

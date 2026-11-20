@@ -1,0 +1,301 @@
+{
+  "version": 2,
+  "id": "peft-target-modules",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "39f10a6fec9eb8ccf854d59883c8657c3a0be8f90e407b62e12c6057becaf5f5",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "peft",
+        "role": "about",
+        "evidence": {
+          "articleId": "peft-target-modules",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "# peft/utils/other.py in line 328 TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING = { \"t5\": [\"q\", \"v\"], \"mt5\": [\"q\", \"v\"], \"bart\": [\"q_proj\", \"v_proj\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"blip-2\": [\"q\", \"v\", \"q_proj\", \"v_proj\"], \"opt\": [\"q_proj\", \"v_proj\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"value\"], \"xlm-roberta\": [\"query\", \"value\"], \"electra\":",
+          "hash": "b0dc93edb070d31e4f57be2457664c20130561af39054733ee01cfb9f5be00be"
+        }
+      },
+      {
+        "id": "lora",
+        "role": "about",
+        "evidence": {
+          "articleId": "peft-target-modules",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "# peft/utils/other.py in line 328 TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING = { \"t5\": [\"q\", \"v\"], \"mt5\": [\"q\", \"v\"], \"bart\": [\"q_proj\", \"v_proj\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"blip-2\": [\"q\", \"v\", \"q_proj\", \"v_proj\"], \"opt\": [\"q_proj\", \"v_proj\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"value\"], \"xlm-roberta\": [\"query\", \"value\"], \"electra\":",
+          "hash": "b0dc93edb070d31e4f57be2457664c20130561af39054733ee01cfb9f5be00be"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "b5c1173d39f517e362fe5118e9b4bb70dec981112a0136382d79959a5c17a922",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "vera",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,6]",
+          "[null,3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",4]",
+          "[\"low-rank-adaptation-lora\",1]",
+          "[\"glue-benchmark\",3]"
+        ]
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ],
+        "targetBlocks": [
+          "[\"mission\",1]",
+          "[\"issue\",7]",
+          "[\"prob\",3]"
+        ]
+      },
+      {
+        "id": "lora-finetuning",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ],
+        "targetBlocks": [
+          "[\"model\",3]",
+          "[\"training\",1]",
+          "[\"envs\",7]"
+        ]
+      },
+      {
+        "id": "dora",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"peft-parameter-efficient-fine-tuning\",2]"
+        ]
+      },
+      {
+        "id": "ia3-implementation",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,2]",
+          "[null,4]"
+        ],
+        "targetBlocks": [
+          "[\"ia3\",1]",
+          "[\"ref\",5]",
+          "[\"gpt-neox-example-of-training\",1]"
+        ]
+      },
+      {
+        "id": "thinkingcap",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,6]",
+          "[null,3]"
+        ],
+        "targetBlocks": [
+          "[\"setup-training\",2]",
+          "[\"setup-conditions\",5]",
+          "[\"resources\",3]"
+        ]
+      },
+      {
+        "id": "lora",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,6]",
+          "[null,3]"
+        ],
+        "targetBlocks": [
+          "[\"introduction\",2]",
+          "[\"introduction\",3]",
+          "[\"applying-lora-to-transformer\",1]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ],
+        "targetBlocks": [
+          "[null,1]",
+          "[\"ref\",2]",
+          "[\"에러\",4]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v0100\",1]",
+          "[\"memory-efficient-layer-replication-with-lora\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "peft-features-090",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ],
+        "targetBlocks": [
+          "[\"peft-v090\",1]",
+          "[\"dora-support\",1]",
+          "[\"ref\",1]"
+        ]
+      },
+      {
+        "id": "developing-daily-01",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,3]",
+          "[null,6]"
+        ],
+        "targetBlocks": [
+          "[\"tgi\",2]",
+          "[\"ref\",4]",
+          "[\"docker\",8]"
+        ]
+      },
+      {
+        "id": "transformers-training-oom",
+        "sourceBlocks": [
+          "[null,3]",
+          "[null,6]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"env\",4]",
+          "[\"error\",6]",
+          "[\"solution\",2]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[null,3]",
+          "[null,6]",
+          "[null,1]"
+        ],
+        "targetBlocks": [
+          "[\"tensor-parallel\",1]",
+          "[\"increasing-speed-a-llm-serving-inference\",10]",
+          "[\"4bit-or-8bit-quantization\",4]"
+        ]
+      },
+      {
+        "id": "ia3-paper",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,2]",
+          "[null,4]"
+        ],
+        "targetBlocks": [
+          "[\"peft\",1]",
+          "[\"peft-with-ia3\",7]",
+          "[\"combining-the-ingredients\",1]"
+        ]
+      },
+      {
+        "id": "qlora",
+        "sourceBlocks": [
+          "[null,1]",
+          "[null,6]",
+          "[null,3]"
+        ],
+        "targetBlocks": [
+          "[\"background\",2]",
+          "[\"qlora-finetuning\",4]",
+          "[\"etc\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "lora-finetuning",
+        "relation": "application_example",
+        "reason": "PEFT 매핑에서 BLOOM의 LoRA 대상 모듈을 확인하고, 실제 파인튜닝 설정에서 query_key_value를 지정하는 방법을 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "peft-target-modules",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "# peft/utils/other.py in line 328 TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING = { \"t5\": [\"q\", \"v\"], \"mt5\": [\"q\", \"v\"], \"bart\": [\"q_proj\", \"v_proj\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"blip-2\": [\"q\", \"v\", \"q_proj\", \"v_proj\"], \"opt\": [\"q_proj\", \"v_proj\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"value\"], \"xlm-roberta\": [\"query\", \"value\"], \"electra\":",
+          "hash": "b0dc93edb070d31e4f57be2457664c20130561af39054733ee01cfb9f5be00be"
+        },
+        "targetEvidence": {
+          "articleId": "lora-finetuning",
+          "blockId": "[\"model\",3]",
+          "anchor": "model",
+          "quote": "# finetune.py line 46 lora_dropout: float = 0.05, lora_target_modules: List[str] = [ \"query_key_value\" ], ... # finetune.py line 111 model = AutoModelForCausalLM.from_pretrained( base_model, load_in_8bit=True, torch_dtype=torch.float16, device_map=device_map, ) tokenizer = AutoTokenizer.from_pretrained(base_model)",
+          "hash": "e6f052c3acf21c2110ce132b28383a9a970cbee6e5bfacfbe40985d2b3a306d8"
+        }
+      },
+      {
+        "id": "polyglot-lora-troubleshooting",
+        "relation": "application_example",
+        "reason": "BLOOM의 LoRA 대상 모듈인 query_key_value가 Polyglot-ko 파인튜닝 코드에서 어떻게 지정되는지 확인할 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "peft-target-modules",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "# peft/utils/other.py in line 328 TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING = { \"t5\": [\"q\", \"v\"], \"mt5\": [\"q\", \"v\"], \"bart\": [\"q_proj\", \"v_proj\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"blip-2\": [\"q\", \"v\", \"q_proj\", \"v_proj\"], \"opt\": [\"q_proj\", \"v_proj\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"value\"], \"xlm-roberta\": [\"query\", \"value\"], \"electra\":",
+          "hash": "b0dc93edb070d31e4f57be2457664c20130561af39054733ee01cfb9f5be00be"
+        },
+        "targetEvidence": {
+          "articleId": "polyglot-lora-troubleshooting",
+          "blockId": "[\"prob\",3]",
+          "anchor": "prob",
+          "quote": "# `finetune.py` line 44 def train( ... lora_target_modules: List[str] = [ \"query_key_value\" ] )",
+          "hash": "59a660c539bec928db614187405a103efcfb15725276f7391e42e8c81fba151c"
+        }
+      },
+      {
+        "id": "lora",
+        "relation": "related_method",
+        "reason": "PEFT의 매핑은 모델별 적용 대상 모듈을 나열하며, LoRA 논문 발췌는 Transformer attention weight를 적용 대상으로 다룹니다.",
+        "sourceEvidence": {
+          "articleId": "peft-target-modules",
+          "blockId": "[null,1]",
+          "anchor": null,
+          "quote": "# peft/utils/other.py in line 328 TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING = { \"t5\": [\"q\", \"v\"], \"mt5\": [\"q\", \"v\"], \"bart\": [\"q_proj\", \"v_proj\"], \"gpt2\": [\"c_attn\"], \"bloom\": [\"query_key_value\"], \"blip-2\": [\"q\", \"v\", \"q_proj\", \"v_proj\"], \"opt\": [\"q_proj\", \"v_proj\"], \"gptj\": [\"q_proj\", \"v_proj\"], \"gpt_neox\": [\"query_key_value\"], \"gpt_neo\": [\"q_proj\", \"v_proj\"], \"bert\": [\"query\", \"value\"], \"roberta\": [\"query\", \"value\"], \"xlm-roberta\": [\"query\", \"value\"], \"electra\":",
+          "hash": "b0dc93edb070d31e4f57be2457664c20130561af39054733ee01cfb9f5be00be"
+        },
+        "targetEvidence": {
+          "articleId": "lora",
+          "blockId": "[\"applying-lora-to-transformer\",1]",
+          "anchor": "applying-lora-to-transformer",
+          "quote": "연구진은 downstream-task를 위한 attention weight를 적용하는 것에만 주제를 국한시켰습니다. 이는 구조의 단순함과 파라미터의 효율성 때문입니다. 다른 방식을 통해 attention weight matrices를 Transformer안에서 적용할때의 효과에 대해서는 WHICH WEIGHT MATRICES IN TRANSFORMER SHOULD WE APPLY LORA TO? 라인에 나타나 있습니다.",
+          "hash": "d96d1e6075ba00605ed4c07cedd3d748efad752c1e8b8ee62aced6fd7942a2c1"
+        }
+      }
+    ]
+  }
+}

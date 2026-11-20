@@ -1,0 +1,290 @@
+{
+  "version": 2,
+  "id": "torch-tensor-manipulation-3",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "b58e0bc60316bdd1c395a0fd262028f21641c5f715d2e15537e5c0b609c7878d",
+    "status": "verified",
+    "facts": [
+      {
+        "id": "pytorch-tensors",
+        "role": "about",
+        "evidence": {
+          "articleId": "torch-tensor-manipulation-3",
+          "blockId": "[\"expand\",5]",
+          "anchor": "expand",
+          "quote": "특정 차원의 텐서를 반복해서 생성해주는 함수이며 특정 차원의 크기가 1인 tensor에만 적용 가능",
+          "hash": "5401d15be60a66455062c9da8ba8836ba99d5d8c2e5d55cebcf5a4dc030ebc56"
+        }
+      }
+    ],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "09b1886345ec88b3ad67c29052236dff6c5ac1af7264d47740ce4994fe3ac0bc",
+    "status": "verified",
+    "candidates": [
+      {
+        "id": "torch-tensor-manipulation-2",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",5]",
+          "[\"triu\",1]"
+        ],
+        "targetBlocks": [
+          "[\"squeeze\",11]",
+          "[\"unsqueeze\",6]",
+          "[\"squeeze\",6]"
+        ]
+      },
+      {
+        "id": "torch-tensor-manipulation-1",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",5]",
+          "[\"삼각행렬-triangular-matrix\",1]"
+        ],
+        "targetBlocks": [
+          "[\"결론\",1]",
+          "[\"torchview\",11]",
+          "[\"torchreshape\",17]"
+        ]
+      },
+      {
+        "id": "activation-functions",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",1]",
+          "[\"triu\",5]"
+        ],
+        "targetBlocks": [
+          "[\"case-1\",1]",
+          "[\"answer\",8]",
+          "[\"case-2\",2]"
+        ]
+      },
+      {
+        "id": "python-map",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",1]",
+          "[\"삼각행렬-triangular-matrix\",1]"
+        ],
+        "targetBlocks": [
+          "[\"map\",1]",
+          "[\"동작-원리\",1]",
+          "[\"예시3-여러-반복-객체-사용\",1]"
+        ]
+      },
+      {
+        "id": "model-input-length",
+        "sourceBlocks": [
+          "[\"expand\",2]",
+          "[\"indexing--slicing\",1]",
+          "[\"tril\",3]"
+        ],
+        "targetBlocks": [
+          "[\"model-input-sequence-length\",5]",
+          "[\"env\",2]",
+          "[\"model-input-sequence-length\",3]"
+        ]
+      },
+      {
+        "id": "regex-preprocessing",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",4]",
+          "[\"삼각행렬-triangular-matrix\",1]"
+        ],
+        "targetBlocks": [
+          "[\"problem\",1]",
+          "[\"solution\",2]",
+          "[\"problem\",2]"
+        ]
+      },
+      {
+        "id": "generation-cuda-assert",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",1]",
+          "[\"tril\",3]"
+        ],
+        "targetBlocks": [
+          "[\"solution\",2]",
+          "[\"env\",4]",
+          "[\"error\",7]"
+        ]
+      },
+      {
+        "id": "cuda-device-troubleshooting",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",1]",
+          "[\"삼각행렬-triangular-matrix\",2]"
+        ],
+        "targetBlocks": [
+          "[\"issue\",2]",
+          "[\"해결\",3]",
+          "[\"원인\",2]"
+        ]
+      },
+      {
+        "id": "finetuning-notes",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",1]",
+          "[\"삼각행렬-triangular-matrix\",2]"
+        ],
+        "targetBlocks": [
+          "[\"2\",12]",
+          "[\"tensor-parallel\",1]",
+          "[\"increasing-speed-a-llm-serving-inference\",10]"
+        ]
+      },
+      {
+        "id": "python-assert",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",5]",
+          "[\"삼각행렬-triangular-matrix\",1]"
+        ],
+        "targetBlocks": [
+          "[\"가정-설명문assert\",2]",
+          "[\"assert가-필요한-이유\",5]",
+          "[\"assert가-필요한-이유\",4]"
+        ]
+      },
+      {
+        "id": "few-shot-learning",
+        "sourceBlocks": [
+          "[\"tril\",3]",
+          "[\"expand\",4]",
+          "[\"indexing--slicing\",3]"
+        ],
+        "targetBlocks": [
+          "[\"method-2-triplet-loss\",4]",
+          "[\"왜-fsl-일까\",1]",
+          "[\"few-shot-learning이-뭘까\",1]"
+        ]
+      },
+      {
+        "id": "transformer",
+        "sourceBlocks": [
+          "[\"삼각행렬-triangular-matrix\",1]",
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",5]"
+        ],
+        "targetBlocks": [
+          "[\"masked-multi-head-attention\",2]",
+          "[\"multi-head-attention\",5]",
+          "[\"positional-encoding\",3]"
+        ]
+      },
+      {
+        "id": "peft-features-0100",
+        "sourceBlocks": [
+          "[\"indexing--slicing\",5]",
+          "[\"expand\",6]",
+          "[\"삼각행렬-triangular-matrix\",2]"
+        ],
+        "targetBlocks": [
+          "[\"memory-efficient-layer-replication-with-lora\",14]",
+          "[\"layer-replication\",2]",
+          "[\"peft-v0100\",1]"
+        ]
+      },
+      {
+        "id": "overfeat",
+        "sourceBlocks": [
+          "[\"expand\",4]",
+          "[\"indexing--slicing\",4]",
+          "[\"삼각행렬-triangular-matrix\",2]"
+        ],
+        "targetBlocks": [
+          "[\"문제점---내가-필요로하는-것보다-더-많은-otuput-값을-얻는다\",7]",
+          "[\"1x1-convolution-and-model-size-of-convnet\",2]",
+          "[\"overfeat-classification-network\",7]"
+        ]
+      },
+      {
+        "id": "lora-dtype-troubleshooting",
+        "sourceBlocks": [
+          "[\"expand\",5]",
+          "[\"indexing--slicing\",1]",
+          "[\"삼각행렬-triangular-matrix\",2]"
+        ],
+        "targetBlocks": [
+          "[\"에러\",4]",
+          "[null,1]",
+          "[\"ref\",1]"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "id": "torch-tensor-manipulation-2",
+        "relation": "related_method",
+        "reason": "차원 확장인 expand와 차원 제거인 squeeze의 동작 및 shape 변화를 함께 익힐 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "torch-tensor-manipulation-3",
+          "blockId": "[\"expand\",5]",
+          "anchor": "expand",
+          "quote": "특정 차원의 텐서를 반복해서 생성해주는 함수이며 특정 차원의 크기가 1인 tensor에만 적용 가능",
+          "hash": "5401d15be60a66455062c9da8ba8836ba99d5d8c2e5d55cebcf5a4dc030ebc56"
+        },
+        "targetEvidence": {
+          "articleId": "torch-tensor-manipulation-2",
+          "blockId": "[\"squeeze\",11]",
+          "anchor": "squeeze",
+          "quote": "x = torch.zeros(2, 1, 3, 1, 8) print(f\"x shape: {x.shape}\") >>> x shape: torch.Size([2, 1, 3, 1, 8]) y = torch.squeeze(x, (1, 2, 3)) print(f\"y shape: {y.shape}\") >>> y shape: torch.Size([2, 3, 8]) z = torch.squeeze(x, (1, 3)) print(f\"z shape: {z.shape}\") >>> z shape: torch.Size([2, 3, 8])",
+          "hash": "e331fb2aaecde8e655425db65bc88334de167ed13ccc47fab6a06ddb3ddc270a"
+        }
+      },
+      {
+        "id": "torch-tensor-manipulation-1",
+        "relation": "related_method",
+        "reason": "expand와 view·reshape가 텐서 차원과 shape을 다루는 서로 다른 방식을 비교해 볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "torch-tensor-manipulation-3",
+          "blockId": "[\"expand\",5]",
+          "anchor": "expand",
+          "quote": "특정 차원의 텐서를 반복해서 생성해주는 함수이며 특정 차원의 크기가 1인 tensor에만 적용 가능",
+          "hash": "5401d15be60a66455062c9da8ba8836ba99d5d8c2e5d55cebcf5a4dc030ebc56"
+        },
+        "targetEvidence": {
+          "articleId": "torch-tensor-manipulation-1",
+          "blockId": "[\"torchview\",11]",
+          "anchor": "torchview",
+          "quote": "중간에 -1을 넣으면 해당 위치에 새로운 차원이 하나 더 생김",
+          "hash": "e097a179899f5310ac403fe4e767f8b21597997cc1daed0c6de87d6e6a26abd8"
+        }
+      },
+      {
+        "id": "model-input-length",
+        "relation": "related_method",
+        "reason": "expand의 크기 제약을 모델 입력 텐서의 길이 불일치 오류 사례와 연결해 살펴볼 수 있습니다.",
+        "sourceEvidence": {
+          "articleId": "torch-tensor-manipulation-3",
+          "blockId": "[\"expand\",2]",
+          "anchor": "expand",
+          "quote": "torch.Size([1, 256, 1])",
+          "hash": "ef6c473669b36cafa142f797120a602718c4a9966d5c9327b13c92d44fef1218"
+        },
+        "targetEvidence": {
+          "articleId": "model-input-length",
+          "blockId": "[\"model-input-sequence-length\",5]",
+          "anchor": "model-input-sequence-length",
+          "quote": "RuntimeError: The expanded size of the tensor (554) must match the existing size (512) at non-singleton dimension 1. Target sizes: [1, 554]. Tensor sizes: [1, 512]",
+          "hash": "39bd95588d2358ddb591095dd22a5cb61a8dd96574e9ccf00564b6fa8069dc01"
+        }
+      }
+    ]
+  }
+}

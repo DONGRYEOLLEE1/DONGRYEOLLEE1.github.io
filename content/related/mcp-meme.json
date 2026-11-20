@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "id": "mcp-meme",
+  "model": "openai/gpt-6-luna",
+  "settings": {
+    "seed": 7,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "embeddingProfile": "f04e459161521d4b",
+  "facts": {
+    "inputHash": "91dcca1cbf66e51ebd8449684f3a45888ed17ae51a63a9839f3cb86d27ffecc1",
+    "status": "abstained",
+    "facts": [],
+    "review": []
+  },
+  "entry": {
+    "inputHash": "99c178f7b469444927d88f764b914056fcb45fccc9b2eeb99fbff85860bcc40f",
+    "status": "abstained",
+    "candidates": [],
+    "recommendations": []
+  }
+}

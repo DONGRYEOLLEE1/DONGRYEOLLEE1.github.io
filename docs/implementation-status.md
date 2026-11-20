@@ -38,7 +38,7 @@ Astro 빌드와 배포는 Vercel에서 진행한다. `main`은 Production으로,
 
 외부 이미지·자료의 원격 생존 상태, iOS·Safari 접근성, Core Web Vitals 실사용 p75는 로컬 HTML 검사만으로 보장하지 않는다. 원문에 있던 잘못된 링크 경고는 새 UI가 만든 경로 오류와 나누어 기록한다.
 
-연관 글 추천 Phase 2A(2026-11-20, `feat/related-embeddings`)는 전체 공개 글을 대상으로 구현했다. 글별 관계 추출, 그래프·어휘·임베딩 후보 검색, 임베딩 기반 근거 블록 선택, LLM 재정렬, 글별 파일(`content/related/<글 ID>.json`) 저장과 증분 갱신, 키 없는 글별 빌드 검증이 `tools/knowledge`와 `tools/sync-recommendations.mjs`에 있다. 모의 모델과 모의 임베딩으로 한 테스트만 통과한 상태이고, 고정 모델(`openai/gpt-6-luna`, `google/gemini-embedding-2`)과 Supabase는 아직 실제로 호출하지 않았다. `content/related/`가 비어 있으므로 운영 추천은 계속 규칙 기반이다. 전체 적용은 [연관 글 그래프 구현 계획](related-articles-implementation-plan.md)의 완료 기준으로 판단한다.
+연관 글 추천 Phase 2A(2026-11-20, `feat/related-embeddings`)는 전체 공개 글을 대상으로 구현했다. 글별 관계 추출, 그래프·어휘·임베딩 후보 검색, 임베딩 기반 근거 블록 선택, LLM 재정렬, 글별 파일(`content/related/<글 ID>.json`) 저장과 증분 갱신, 키 없는 글별 빌드 검증이 `tools/knowledge`와 `tools/sync-recommendations.mjs`에 있다. 고정 모델(`openai/gpt-6-luna`, `google/gemini-embedding-2`)과 Supabase 벡터 캐시를 실제로 호출해 113편 전체에 적용했다. 110편은 모델이 고른 추천을, 근거 블록이 없는 3편은 규칙 추천을 표시한다. 검증 결과와 남은 위험은 [연관 글 그래프 구현 계획](related-articles-implementation-plan.md)에 있다.
 
 ## 최종 통합 검증
 

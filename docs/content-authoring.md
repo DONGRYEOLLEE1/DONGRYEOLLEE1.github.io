@@ -49,6 +49,7 @@ npm run check, npm test, npm run build를 실행한다. npm run preview에서 �
 2. `npm run recommendations:sync -- --dry-run`으로 호출 대상 글과 이유를 먼저 볼 수 있다. LLM은 호출하지 않는다.
 3. `npm run recommendations:sync`를 실행한다. 새 글의 블록만 임베딩하고, 새 글의 관계 추출 1회와 재정렬 1회, 후보나 근거가 바뀐 기존 글의 재정렬만 호출한다. 종료 코드 2는 일부 글이 실패해 `fallback`으로 저장됐다는 뜻이며 다시 실행하면 그 글만 재시도한다. 첫 호출들이 모두 거부되면(키·모델·요청 형식 문제) 파일을 쓰지 않고 공급자 응답과 함께 종료 코드 1로 멈춘다.
 4. `npm run recommendations:check`로 낡은 글이 없는지 확인한다. 빌드가 규칙 추천으로 돌릴 글과 공개 글이 아닌 추천 파일도 여기서 걸린다. 키 없이 저장 파일만 검사할 때는 `npm run recommendations:check -- --offline`을 쓴다.
-5. 원문, metadata와 함께 `content/related/`의 바뀐 파일(삭제된 파일 포함)을 커밋한다. `.cache/`와 `generated/`의 추천 보고서는 커밋하지 않는다.
+5. `content/related/`의 변경분에서 새 추천과 이유 문장을 읽는다. 무관한 연결은 `content/knowledge/overrides.json`의 `excludes`에 `"기준 글 ID": ["대상 글 ID"]`로 넣고 다시 동기화한다. 연결은 맞지만 문장이 틀리면 `content/knowledge/reasons.json`에 `"기준 글 ID": {"대상 글 ID": "고친 문장"}`을 넣는다(동기화 불필요).
+6. 원문, metadata와 함께 `content/related/`의 바뀐 파일(삭제된 파일 포함)을 커밋한다. `.cache/`와 `generated/`의 추천 보고서는 커밋하지 않는다.
 
 동기화를 건너뛰어도 빌드는 성공한다. 추천 파일이 없거나 현재 원문과 맞지 않는 글은 그 글만 규칙 추천을 표시하고, 빌드 로그와 `generated/related-report.json`에 해당 글이 남는다.

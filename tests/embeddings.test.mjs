@@ -695,3 +695,24 @@ test('orphan cleanup leaves a temp file that another sync may still be writing',
   assert.ok((await readFile(join(dir, 'kept.json'), 'utf8')).endsWith('}\n'));
   assert.deepEqual(await removeOrphans(join(dir, 'missing'), []), []);
 });
+
+test('a custom endpoint merges RECOMMENDATIONS_EXTRA_BODY into the request and the hashed settings', async () => {
+  const { chatProvider } = await import('../tools/knowledge/model.mjs');
+  const bodies = [];
+  const fetch = async (url, init) => {
+    bodies.push(JSON.parse(init.body));
+    return new Response(JSON.stringify({ choices: [{ message: { content: '{"facts":[]}' } }] }));
+  };
+  const env = {
+    RECOMMENDATIONS_API_BASE: 'http://127.0.0.1:9/v1',
+    RECOMMENDATIONS_EXTRA_BODY: '{"chat_template_kwargs":{"enable_thinking":false}}',
+  };
+  const provider = chatProvider(env, { fetch });
+  assert.deepEqual(provider.settings, { temperature: 0, chat_template_kwargs: { enable_thinking: false } });
+  await provider.complete('x', { concepts: [['a']], blocks: [[0, '', 'q']] });
+  assert.deepEqual(bodies[0].chat_template_kwargs, { enable_thinking: false });
+  assert.throws(() => chatProvider({ ...env, RECOMMENDATIONS_EXTRA_BODY: '[1]' }, { fetch }), /JSON object/);
+  // OpenRouter ignores it: the fixed model's settings must not drift between servers.
+  const fixed = chatProvider({ OPENROUTER_API_KEY: 'k', RECOMMENDATIONS_EXTRA_BODY: '{"a":1}' }, { fetch });
+  assert.deepEqual(fixed.settings, { seed: 7, reasoning: { effort: 'low' } });
+});

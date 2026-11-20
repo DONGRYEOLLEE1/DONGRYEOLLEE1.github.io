@@ -49,7 +49,7 @@ export function chatProvider(env = process.env, { fetch: request = fetch, requir
   // The output limit is left out: it decides whether a call fails, not what a successful call returns.
   const settings = openrouter
     ? { seed: 7, reasoning: { effort: env.RECOMMENDATIONS_REASONING_EFFORT || 'low' } }
-    : { temperature: 0 };
+    : { temperature: 0, ...extraBody(env.RECOMMENDATIONS_EXTRA_BODY) };
   const maxTokens = Number(env.RECOMMENDATIONS_MAX_TOKENS) || 8000;
   const usage = { requests: 0, promptTokens: 0, completionTokens: 0 };
   return {
@@ -114,6 +114,21 @@ export function chatProvider(env = process.env, { fetch: request = fetch, requir
       }
     },
   };
+}
+
+// A self-hosted server may need its own switches, e.g. {"chat_template_kwargs":{"enable_thinking":false}}.
+// They change the output, so they are part of the hashed settings.
+function extraBody(text) {
+  if (!text) return {};
+  let value;
+  try {
+    value = JSON.parse(text);
+  } catch {
+    throw new Error('RECOMMENDATIONS_EXTRA_BODY is not valid JSON');
+  }
+  if (!value || typeof value !== 'object' || Array.isArray(value))
+    throw new Error('RECOMMENDATIONS_EXTRA_BODY must be a JSON object');
+  return value;
 }
 
 // `rejected` marks an answer that says the request itself is unacceptable (key, model, schema,
